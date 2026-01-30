@@ -1,0 +1,22 @@
+# Bank debit journals
+
+- Scope: 2023-06-01 → 2025-05-31
+- Missing bank debits in scope: 806
+- Posted: 806
+- Unsupported (ignored): 0
+
+## Categories posted
+
+- UNCLASSIFIED: 364
+- EMPLOYEE_PAYROLL: 210
+- REIMBURSEMENT: 180
+- CHANGE_FLOAT: 15
+- RENT_REIMBURSEMENT: 8
+- SHAREHOLDER_PAYROLL: 8
+- BANK_FEE: 5
+- DIVIDEND: 4
+- DUCKS_REVENUE_RETURN: 4
+- GST_HST_REMIT: 4
+- LOAN_ISSUED: 2
+- DEPOSIT_CORRECTION: 1
+- HST_REIMBURSEMENT: 1

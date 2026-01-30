@@ -1,0 +1,41 @@
+Transaction with shareholders, officers, or employees
+Select the type of relationship.
+
+Transaction with shareholders, officers, or employees
+ 
+
+Shareholder
+
+ 
+
+Officer
+
+ 
+
+Employee
+
+ 
+ 
+ Each option gives a plus sign which opens new thing, identical for each category of partner
+ 
+Shareholder
+Please enter the information concerning the shareholder.
+
+
+Name of party involved in transaction (MEMO)
+ 
+
+Type and amount of transaction
+Selection (multiple in a dropdown as seen below, can create multple transactions)
+Reimbursement of Expenses
+Assets sold or purchased
+Payments
+Loans
+$
+
+ 
+
+Was a section 85 or section 518/529 rollover applicable to assets sold or purchased?
+
+
+ 

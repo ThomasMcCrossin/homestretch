@@ -1,0 +1,36 @@
+
+* = This is a required field
+General rate income pool (GRIP)
+Please enter the information concerning the general rate income pool (GRIP) for this corporation.
+
+
+GRIP at the end of the previous tax year
+$
+ 
+
+Amount respecting dividends
+Selection
+$
+
+ 
+
+GRIP adjustment for specified future tax consequences to previous tax years
+
+ 
+
+Amount before specified future tax consequences
+Selection
+$
+
+ 
+
+Amount after specified future tax consequences
+Selection
+$
+
+ 
+ 
+Add Another    Remove 
+
+Elected amount of excessive eligible dividend designation to be treated as ordinary dividends
+$

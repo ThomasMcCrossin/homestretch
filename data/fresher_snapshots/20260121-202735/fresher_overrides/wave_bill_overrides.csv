@@ -1,0 +1,106 @@
+action,source_row,invoice_number,invoice_date,vendor_raw,total_cents,tax_cents,net_cents,notes
+UPDATE,2,,2023-06-01,Town of Amherst - Bill ,80500,10500,70000,auto-sync from current DB
+UPDATE,12,2506676,2023-06-29,Capital Foods - Bill 2506676,120080,15583,104497,manual override
+UPDATE,14,,2023-07-01,Town of Amherst - Bill ,40250,5250,35000,auto-sync from current DB
+UPDATE,19,,2023-07-31,CIBC - Bill july fees,1425,0,1425,auto-sync from current DB
+UPDATE,20,,2023-08-01,Town of Amherst - Bill ,40250,5250,35000,auto-sync from current DB
+UPDATE,32,,2023-08-31,CIBC - Bill August Fees,1100,0,1100,auto-sync from current DB
+UPDATE,43,2520102,2023-09-07,Capital Foods - Bill 2520102,103745,10047,93698,manual override
+UPDATE,73,2523999,2023-09-28,Capital Foods - Bill 2523999,109656,7050,102606,manual override
+UPDATE,87,2526446,2023-10-12,Capital Foods - Bill 2526446,104085,13576,90509,manual override
+UPDATE,95,,2023-10-17,Amazon - Bill ,16785,195,16590,auto-sync from current DB
+UPDATE,107,19963,2023-10-25,Black Cat Importers - Bill 19963,63181,8249,54932,auto-sync from current DB
+UPDATE,132,2530298,2023-11-20,Capital Foods - Bill 2530298,95687,4105,91582,manual override
+UPDATE,152,,2023-12-31,Shopify - Bill canteen order screen,12818,1619,11199,auto-sync from current DB
+UPDATE,210,,2024-02-15,Cafe Archibald - Bill ,5292,585,4707,auto-sync from current DB
+UPDATE,225,9007044619,2024-02-23,GFS - Bill 9007044619,5949,0,5949,manual override
+UPDATE,282,,2024-04-03,Circle K - Bill ,11141,1413,9728,auto-sync from current DB
+UPDATE,615,,2025-02-12,Atlantic Superstore - Bill,103368,330,103038,manual override
+UPDATE,617,,2025-02-13,Costco - Bill,191538,1322,190216,manual override
+UPDATE,628,,2025-02-28,Bell - Bill,13268,1730,11538,manual override
+UPDATE,675,,2025-03-31,Bell - Bill,13268,1730,11538,manual override
+UPDATE,692,,2025-04-30,Bell - Bill,13153,1615,11538,manual override
+UPDATE,696,,2025-04-30,Bell - Late Fee,386,0,386,manual override
+UPDATE,706,,2025-05-31,Bell - Bill,13153,1615,11538,manual override
+UPDATE,281,,2024-04-03,Costco - Bill,81189,0,81189,corrected from $812.89 to $811.89
+UPDATE,677,,2025-03-31,CIBC - Bill Q1 Account Fees,19500,0,19500,corrected from $135 to $195 (3x$65 monthly fees)
+INSERT,,9005357713-CR,2023-12-18,GFS Credit Memo 9005357713,-68034,0,-68034,auto-sync from current DB
+INSERT,,2597723,2024-12-11,Capital Foods - Credit Memo 2597723,-4812,0,-4812,Credit memo missing from Wave - offsets invoice 2596503
+INSERT,,CIBC-FEES-2023-09,2023-09-30,CIBC - Bill September Fees,7925,0,7925,auto-sync from current DB
+INSERT,,FUEL-TRIANGLE-20231206,2023-12-06,Fuel - Triangle,12072,0,12072,auto-sync from current DB
+INSERT,,FUEL-TRIANGLE-20231228,2023-12-28,Fuel - Triangle,12072,0,12072,auto-sync from current DB
+INSERT,,COSTCO-RECEIPT-20240306,2024-03-06,Costco - Receipt,15072,0,15072,auto-sync from current DB
+INSERT,,PHARMASAVE-RECEIPT-20241111,2024-11-11,Pharmasave - Bill,3144,0,3144,auto-sync from current DB
+INSERT,,FUEL-RECEIPT-20241112,2024-11-12,Fuel - Receipt,3011,0,3011,auto-sync from current DB
+INSERT,,FUEL-RECEIPT-20250227,2025-02-27,Fuel - Receipt,5997,0,5997,auto-sync from current DB
+INSERT,,CIBC-FEES-2023-06,2023-06-30,CIBC - Bill June Fees,947,0,947,auto-sync from current DB
+INSERT,,STUB-WALMART-COGS-20230814,2023-08-14,Walmart - Bill ,3447,0,3447,COGS purchase (Interac debit) placeholder; no HST captured in Wave
+INSERT,,STUB-DOLLARAMA-COGS-20230814,2023-08-14,Dollarama - Bill ,5014,0,5014,COGS purchase (Interac debit) placeholder; no HST captured in Wave
+INSERT,,STUB-GFS-CASH-COGS-20231011,2023-10-11,GFS - Bill,40000,0,40000,Cash COGS (frozen) paid from till; never hit bank
+INSERT,,STUB-GFS-CASH-COGS-20241022-1,2024-10-22,GFS Cash - Cheese Curds (COGS) #1,50000,0,50000,"Cash COGS purchase reimbursed to Thomas; part of $3,000 e-transfer on 2024-10-22 (bank_txn_id 909); no HST/ITC"
+INSERT,,STUB-GFS-CASH-COGS-20241022-2,2024-10-22,GFS Cash - Cheese Curds (COGS) #2,50000,0,50000,"Cash COGS purchase reimbursed to Thomas; part of $3,000 e-transfer on 2024-10-22 (bank_txn_id 909); no HST/ITC"
+INSERT,,STUB-WALMART-REIMBURSE-20230905,2023-09-05,Walmart - Bill ,7627,0,7627,auto-sync from current DB
+INSERT,,STUB-GFS-CASH-001,2025-12-10,GFS Cash - Cheese Curds,28000,0,28000,GFS damaged/pallet salvage - paid cash
+INSERT,,STUB-GFS-CASH-002,2025-01-15,GFS Cash - Cheese Curds,20000,0,20000,GFS damaged/pallet salvage - paid cash
+INSERT,,STUB-GFS-CASH-003,2025-03-15,GFS Cash - Chicken,24000,0,24000,GFS damaged/pallet salvage - paid cash
+INSERT,,STUB-GFS-CASH-004,2025-02-15,GFS Cash - Cheese Curds,13000,0,13000,GFS damaged/pallet salvage - paid cash
+INSERT,,FB-MERCH-001,2024-04-23,Facebook Marketplace - Merchandising,3000,0,3000,E-transfer to Charlie for merchandising items
+INSERT,,U9-DONATION-001,2024-12-16,U9 Dev Hockey - Donation,20000,0,20000,Youth hockey sponsorship/donation
+INSERT,,RAMBLERS-LOGO-ICE-20250625,2025-06-25,Amherst Ramblers - Logo on Ice Sponsorship,125000,0,125000,Marketing sponsorship - logo on ice
+INSERT,,RAMBLERS-GOLF-20250625,2025-06-25,Amherst Ramblers - Golf Tournament Sponsorship,15000,0,15000,Marketing sponsorship - golf tournament
+DELETE,54,,2023-09-15,Pharmasave - Bill ,2707,100,2607,auto-sync from current DB
+DELETE,94,,2023-10-16,Walmart - Bill ,24261,2955,21306,auto-sync from current DB
+DELETE,150,9005536027,2023-12-20,GFS - Bill 9005536027,5083,0,5083,auto-sync from current DB
+DELETE,545,,2024-12-31,Bell - Bill ,33161,1724,31437,remove from canteen (belongs to Curlys)
+DELETE,590,,2025-01-24,Bell - Bill ,13269,1731,11538,remove from canteen (belongs to Curlys)
+DELETE,7,48923,2023-06-09,Pacific Distribution Wholesale - Bill 48923,59174,7718,51456,removed from cleaned Wave CSV
+INSERT,,CIBC-GPFS-SVC-20250203,2025-02-03,CIBC - Bill GPFS Service Charge,200,0,200,GPFS service charge Feb 3
+DELETE,617,,2025-02-13,Costco - Bill,191538,1322,190216,not in Wave - phantom entry
+UPDATE,327,,2024-07-30,GFS - Bill 9012388498,19282,0,19282,corrected from $184.79 to $192.82
+INSERT,,2001780129,2024-10-23,GFS Credit Memo 2001780129,-11984,0,-11984,Credit memo for PAD Nov 8
+UPDATE,439,9015480379,2024-10-24,GFS - Bill 9015480379,127554,0,127554,added invoice number
+DELETE,463,9015480379,2024-11-06,GFS - Bill 9015480379,127554,0,127554,duplicate of bill 439 - phantom entry
+INSERT,,9019250185,2025-02-13,GFS - Bill 9019250185,191538,0,191538,Missing from Wave - in PAD Feb 28
+UPDATE,640,9019984354,2025-03-06,GFS - Bill 9019984354,97193,0,97193,corrected from $965.84 to $971.93
+UPDATE,260,95629480,2024-03-14,Webstaurant Store - Bill 95629480,8086,0,8086,corrected from $58.38 USD to $80.86 CAD
+DELETE,387,,2024-09-25,Shell Gas - Bill,2897,0,2897,never paid - remove
+DELETE,521,,2024-12-07,Pharmasave - Bill,2777,0,2777,remove per user
+UPDATE,132,2530298,2023-11-20,Capital Foods - Bill 2530298,92900,0,92900,corrected from $956.87 to $929.00
+INSERT,,STICKERS-001,2024-11-25,Underground Graffix - Stickers,2069,0,2069,Curlys stickers - paid via e-transfer to Shane
+INSERT,,2598264,2024-12-13,Capital Foods - Bill 2598264,82006,9441,72565,Missing from Wave - PAD Jan 2
+INSERT,,DEPOSIT-FEE-001,2023-06-30,CIBC - Cash Deposit Fee,22,0,22,Cash deposit fee - direct bank charge
+INSERT,,DEPOSIT-FEE-002,2023-09-29,CIBC - Cash Deposit Fee,1125,0,1125,Cash deposit fee - direct bank charge
+INSERT,,DEPOSIT-FEE-003,2024-03-28,CIBC - Cash Deposit Fee,58,0,58,Cash deposit fee - direct bank charge
+INSERT,,DEPOSIT-FEE-004,2024-10-31,CIBC - Cash Deposit Fee,2513,0,2513,Cash deposit fee - direct bank charge
+INSERT,,DEPOSIT-FEE-005,2025-01-31,CIBC - Cash Deposit Fee,886,0,886,Cash deposit fee - direct bank charge
+INSERT,,DEPOSIT-FEE-006,2025-02-28,CIBC - Cash Deposit Fee,18,0,18,Cash deposit fee - direct bank charge
+INSERT,,2590104,2024-10-24,Capital Foods - Bill 2590104,93534,6251,87283,Missing from Wave - PAD Nov 13
+INSERT,,XMAS-PARTY-2024,2024-12-20,Bowling Alley - Christmas Party,23000,3000,20000,Staff Christmas party 2024 - reimbursed to Dwayne
+INSERT,,BFL-2024,2024-01-22,BFL Insurance - Bill 2024,185100,0,185100,Insurance payment Jan 2024
+INSERT,,HOCKEY-DONATION-2023,2023-12-12,Hockey Sponsorship - Tim Rich,20000,0,20000,Kids hockey team/jersey sponsorship Dec 2023
+UPDATE,318,,2025-01-16,BFL Insurance - Bill 2025,195100,0,195100,Corrected date from May 27 2024 to Jan 16 2025
+INSERT,,WALMART-DUP-001,2023-10-23,Walmart - Duplicate Reimbursement,10410,0,10410,Erroneous reimbursement to Dwayne - duplicate of Sept 24 interac purchase
+INSERT,,DOLLARAMA-DUP-001,2023-10-23,Dollarama - Duplicate Reimbursement,53875,0,53875,Erroneous reimbursement to Dwayne - duplicate of Sept 24 interac purchase
+INSERT,,DOLLARAMA-1028,2023-10-28,Dollarama - Bill,8880,0,8880,Dwayne paid personally - reimbursed Nov 2
+INSERT,,BEMBRIDGE-SAUCES-001,2023-11-06,Jeff Bembridge - Sauces,2000,0,2000,Thomas paid - part of $95 e-transfer (other $75 was change float)
+INSERT,,1994069,2023-11-16,Curly's Sports and Supplements - Bill 1994069,117102,15274,101828,Order #1994069 from PDF; missed in HST FY2024; reimbursed to Dwayne via bank_txn_id 1503
+INSERT,,1996469,2023-11-16,Curly's Sports and Supplements - Order 1996469,143722,0,143722,Dwayne paid - reimbursed Nov 16
+INSERT,,DOLLARAMA-1117,2023-11-17,Dollarama - Bill,11687,0,11687,Dwayne paid - reimbursed Dec 1
+INSERT,,KEG-STAFF-PARTY,2024-01-04,The Keg - Staff Party,21390,0,21390,Staff party - reimbursed to Dwayne
+INSERT,,MANLEY-FORKS,2024-02-22,John Manley - Plastic Forks,2069,0,2069,Dwayne paid - reimbursed Feb 22
+INSERT,,2548372,2024-02-26,Capital Foods - Bill 2548372,89436,4624,84812,Missing from Wave - PAD Mar 13
+INSERT,,BRIDGE-RAGS-001,2024-10-16,Bridge Workshops - Rags,4000,0,4000,Cash purchase
+INSERT,,BRIDGE-RAGS-002,2024-10-29,Bridge Workshops - Rags,2000,0,2000,Cash purchase
+INSERT,,ELMTREE-STRAWS,2024-08-08,The Elm Tree - Straws,1856,0,1856,Thomas paid - reimbursed Aug 8
+INSERT,,PEPSI-PAD-BT1211,2024-02-29,Pepsico - Bill (AUTO PAD BT1211),158167,,,"Placeholder from bank Pepsi PAD payment (bank_txn_id=1211, paid 2024-03-18)"
+INSERT,,PEPSI-PAD-BT1143,2024-03-31,Pepsico - Bill (AUTO PAD BT1143),123185,,,"Placeholder from bank Pepsi PAD payment (bank_txn_id=1143, paid 2024-04-16)"
+INSERT,,PEPSI-PAD-BT1106,2024-04-30,Pepsico - Bill (AUTO PAD BT1106),58390,,,"Placeholder from bank Pepsi PAD payment (bank_txn_id=1106, paid 2024-05-16)"
+INSERT,,PEPSI-PAD-BT935,2024-09-30,Pepsico - Bill (AUTO PAD BT935),77558,,,"Placeholder from bank Pepsi PAD payment (bank_txn_id=935, paid 2024-10-16)"
+INSERT,,PEPSI-PAD-BT816,2024-10-31,Pepsico - Bill (AUTO PAD BT816),208215,,,"Placeholder from bank Pepsi PAD payment (bank_txn_id=816, paid 2024-11-18)"
+INSERT,,PEPSI-PAD-BT643,2024-12-31,Pepsico - Bill (AUTO PAD BT643),56013,,,"Placeholder from bank Pepsi PAD payment (bank_txn_id=643, paid 2025-01-16)"
+INSERT,,PEPSI-PAD-BT551,2025-01-31,Pepsico - Bill (AUTO PAD BT551),156771,,,"Placeholder from bank Pepsi PAD payment (bank_txn_id=551, paid 2025-02-17)"
+INSERT,,PEPSI-PAD-BT166,2025-09-30,Pepsico - Bill (AUTO PAD BT166),161714,,,"Placeholder from bank Pepsi PAD payment (bank_txn_id=166, paid 2025-10-16)"
+INSERT,,PEPSI-PAD-BT51,2025-10-31,Pepsico - Bill (AUTO PAD BT51),283677,,,"Placeholder from bank Pepsi PAD payment (bank_txn_id=51, paid 2025-11-17)"
+INSERT,,STUB-GFS-DAMAGED-20231012,2023-10-12,GFS Damaged - Oil/Chicken/Cheese Curds (COGS),86250,0,86250,"Damaged/pallet salvage COGS (oil, chicken, cheese curds) reimbursed to Dwayne via 2023-10-12 e-transfer (bank_txn_id 1615); no HST/ITC"
+UPDATE,699,CIBC-CHEQUE-ORDER-20250505,,CIBC - Deluxe Cheque Order,,,,Stable invoice_number for bank PAD cheque order (bank_txn_id=353)
+INSERT,,FB-HOTWATER-HEATER-20240129,2024-01-29,Facebook Marketplace - Hot Water Heater,4000,0,4000,Thomas reimbursement for FB marketplace hot water heater (no tax)

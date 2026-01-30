@@ -1,0 +1,41 @@
+GIFI_Code,Description,Amount
+1001,Cash,12472
+1120,Inventories,10015
+1301,Due from individual shareholder(s),2000
+1480,Other current assets,1490
+2599,Total assets,25977
+2781,Due to individual shareholder(s),5097
+2680,"Taxes payable (GST/HST, etc.)",2663
+2620,Amounts payable and accrued liabilities,10013
+3499,Total liabilities,17773
+3500,Common shares,100
+3600,Retained earnings/deficit,8104
+3620,Total shareholder equity,8204
+3640,Total liabilities and shareholder equity,25977
+8000,Trade sales of goods and services,230907
+8299,Total revenue,230907
+8518,Cost of sales,105698
+8519,Gross profit/loss,125209
+8520,Advertising and promotion,798
+8523,Meals and entertainment,408
+8622,Employer's portion of employee benefits,3610
+8690,Insurance,1951
+8710,Interest and bank charges,6694
+8810,Office expenses,11608
+8860,Professional fees,353
+8911,Real estate rental,7137
+8960,Repairs and maintenance,981
+9060,Salaries and wages,54899
+9220,Utilities,465
+9270,Other expenses,3782
+9281,Vehicle expenses,4038
+9801,Freight and trucking,136
+9367,Total operating expenses,96860
+9368,Total expenses,202558
+9970,Net income/loss before taxes,28349
+9999,Net income/loss after taxes,28349
+3660,Retained earnings/deficit - Start,16656
+3680,Net income/loss,28349
+3700,Dividends declared,36900
+3740,Other items affecting retained earnings (rounding),-1
+3849,Retained earnings/deficit - End,8104

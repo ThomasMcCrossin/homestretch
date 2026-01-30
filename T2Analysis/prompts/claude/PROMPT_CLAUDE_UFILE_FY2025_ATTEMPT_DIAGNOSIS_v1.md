@@ -1,0 +1,210 @@
+You are Claude Code (agentic coding assistant). Work inside the repository at:
+
+- `/home/clarencehub/t2-final-fy2024-fy2025`
+
+This task is a forensic, audit-style diagnosis of a UFile T2 filing attempt for FY2025.
+
+This prompt assumes we use a **parsed evidence bundle** (text + CSV tables) generated from the PDF so the analysis is repeatable and less error-prone.
+Do not treat “reading the PDF directly” as an acceptable substitute for using the parsed bundle.
+
+---
+
+# Non-negotiable safety rules
+
+1) **Read-only** with respect to all existing accounting data and project outputs.
+   - **DO NOT edit, delete, or overwrite** anything under:
+     - `UfileToFill/`
+     - `output/`
+     - `docs/`
+     - `data/`
+     - any DB files
+   - **DO NOT “fix” numbers** to force balancing.
+
+2) You **MAY** run commands and scripts, but **all write outputs must go ONLY** into a dedicated run directory under:
+   - `/home/clarencehub/t2-final-fy2024-fy2025/T2Analysis/`
+
+3) You **MAY** create new files under your run directory (markdown report, extracted text, CSVs, JSONs, scratch scripts, venv, etc.).
+
+4) You **MUST NOT** write anywhere else. If a tool tries to write outside your run directory, stop and choose another approach.
+
+5) Treat **both** UFile output and the project accounting outputs as potentially wrong until reconciled.
+
+---
+
+# Dedicated Claude run directory (prevents mixing with Codex runs)
+
+Create a new run directory (recommended):
+
+- `./T2Analysis/tools/new_run_dirs.sh FY2025 ufile claude`
+
+Use the printed path as `RUN_DIR`. Inside `RUN_DIR`, use:
+- `inputs/`  (copies of evidence files you relied on)
+- `work/`    (intermediate extracted text, scratch scripts)
+- `outputs/` (final report + tables)
+
+Important: keep Claude output isolated under `T2Analysis/.../analyses/claude/...`.
+
+Also create:
+- `RUN_DIR/README.md` summarizing what you ran and how to reproduce.
+
+---
+
+# Evidence (read-only sources)
+
+## Raw UFile export (attempt PDF)
+- `UfileToFill/ufile_packet/years/FY2025/attempts/2025 - 14587430 Canada Inc. - My copy - Tax return.pdf`
+- Frozen copy: `T2Analysis/t2_attempts/FY2025/ufile/exports/latest/ufile_return.pdf`
+
+## UFile “Messages” / warnings (required)
+
+UFile’s own “Messages” output is **first-class evidence** because it tells you which screens/fields are failing validation.
+
+- Prefer (if present):
+  - `T2Analysis/t2_attempts/FY2025/ufile/exports/<ATTEMPT_ID>/messages.txt`
+  - and/or `T2Analysis/t2_attempts/FY2025/ufile/parses/<ATTEMPT_ID>/ufile_messages.txt`
+
+Copy the messages file you relied on into `RUN_DIR/inputs/`.
+
+## Parsed evidence bundle (preferred analysis input)
+- Pick the attempt you are diagnosing and use its parsed bundle:
+  - `T2Analysis/t2_attempts/FY2025/ufile/parses/attempt_001/`
+  - `T2Analysis/t2_attempts/FY2025/ufile/parses/attempt_002/`
+
+Define `ATTEMPT_ID` explicitly at the top of your run (e.g., `attempt_002`) and do not mix files from different attempts.
+
+Parsed bundle contains:
+  - `text/full_text.txt`
+  - `tables/schedule_100.csv`
+  - `tables/schedule_125.csv`
+  - `tables/retained_earnings.csv`
+  - `tables/diagnostics.csv`
+  - `verification_report.md`
+
+This bundle is **pre-generated in this repo**. If it is missing or stale, **stop** and ask for it to be regenerated before continuing. Do not run the parser as part of this analysis.
+
+For traceability, copy the specific parsed artifacts you relied on into `RUN_DIR/inputs/` (do not move originals), at minimum:
+- `meta.json`
+- `verification_report.md`
+- the `tables/*.csv` you used
+- any `page_*.txt` pages you cite
+
+## Project “expected” values (may be wrong; must be tested)
+- `UfileToFill/ufile_packet/years/FY2025/packet.json`
+- `UfileToFill/ufile_packet/packet.json`
+
+## Entry guide (may be wrong; must be tested)
+- `UfileToFill/ufile_packet/years/FY2025/UFILet2_FILL_GUIDE.md`
+
+## UFile GIFI code catalogs / definitions
+- `UfileToFill/GIFI/BalanceSheet.txt`
+- `UfileToFill/GIFI/IncomeStatement.txt`
+- `UfileToFill/GIFI/NetIncome.txt`
+- `UfileToFill/GIFI/TaxOnCapital.txt`
+- `UfileToFill/GIFI/NotesChecklist.txt`
+
+Copy the specific files you rely on into `RUN_DIR/inputs/` for traceability (do not move originals).
+
+---
+
+# Objective
+
+Determine (with explicit arithmetic) why the FY2025 UFile attempt produced diagnostics and non-balancing schedules, and decide whether root cause is:
+
+- **A) UFile entry mechanics / UFile auto-calculation behavior**
+- **B) Wrong underlying numbers from the project (DB/snapshots/scripts/mappings)**
+- **C) A mix**
+
+You are not allowed to fix anything in this run—only diagnose and propose specific next actions.
+
+---
+
+# Method (required)
+
+## 0) Validate the parsed bundle before trusting it
+
+Read `<PARSE_DIR>/verification_report.md`.
+If it shows any “Not OK” rows, treat parse outputs as untrusted and regenerate/adjust parsing before continuing.
+
+## A) Diagnostics catalogue (UFile diagnostics + UFile messages)
+
+Use `tables/diagnostics.csv` (and cross-check against `text/full_text.txt`) to list every diagnostic line:
+- exact text
+- classify: Blocking vs Non-blocking
+
+Also parse `messages.txt` (UFile UI output) and list each distinct message/warning/error with:
+- a short plain-English explanation of what it means
+- the **exact UFile screen** you expect it maps to (e.g., “Retained earnings schedule”, “Dividends paid screen”, “Income source section”)
+- what specific value(s) or checkbox likely need to be entered/cleared
+
+Write to `RUN_DIR/outputs/diagnostics.md`.
+
+## B) Extracted schedules (use the CSVs)
+
+Use the parsed tables to build verbatim extracted tables in your report:
+- Schedule 100 (Balance Sheet): `tables/schedule_100.csv`
+- Schedule 125 (Income Statement): `tables/schedule_125.csv`
+- Retained earnings: `tables/retained_earnings.csv`
+
+Also sanity-check those tables back to the PDF text (spot-check a few lines).
+
+Minimum lines to explicitly include in your extracted tables / comparisons (even if zero):
+- Schedule 100: `1001, 1121/1120, 1301, 1484/1480, 2620, 2680, 2781/2780, 3500, 3600, 2599, 3499, 3620, 3640`
+- Retained earnings: `3660, 3680, 3700 (if present), 3849` (+ any “other items”)
+- Schedule 125: `8000, 8299, 8300, 8320, 8500, 8518, 8519, 9367, 9368` (+ every populated expense line)
+
+## C) Independent recomputation (show-your-work)
+
+Using only parsed attempt amounts:
+1) Operating expenses = sum of detail expense lines (exclude totals like 9367/9368).
+2) COGS from movement: `8300 + 8320 - 8500`, compare to 8518 if present.
+3) Gross profit = total revenue - COGS.
+4) Net income = gross profit - operating expenses.
+5) Equity = 3500 + 3600.
+6) Balance equation: 2599 vs (3499 + 3620) and 3640 consistency.
+
+Write to `RUN_DIR/outputs/recalculations.md`.
+
+## D) Attempt vs project comparison
+
+Create `RUN_DIR/outputs/attempt_vs_project_comparison.csv`:
+- Field (GIFI code / schedule line)
+- Attempt value
+- Project expected value
+- Delta
+- Likely cause: Entry/mechanics vs Project number vs Unknown
+
+## E) Hypothesis testing
+
+For each major mismatch, explicitly test and document:
+1) totals line populated vs internal subtotal mismatch
+2) project double-count/omission (project inconsistency)
+3) wrong UFile line choice (detail vs total)
+4) retained earnings mismatch driven by missing dividends / wrong RE linkage
+5) duplicated classification in attempt
+
+## F) Conclusions + next actions
+
+Conclude A/B/C with evidence and provide:
+- Fix checklist for UFile UI next attempt (exact actions)
+- Fix checklist for project outputs (only if proven)
+
+---
+
+# Final output requirements
+
+Write the primary report:
+- `RUN_DIR/outputs/ATTEMPT_DIAGNOSIS.md`
+
+It must include:
+- Executive summary
+- Evidence index (every file you used)
+- Diagnostics list (blocking vs non-blocking)
+- Extracted Schedule 100/125/retained earnings tables (from parsed CSVs)
+- Recalculations (show your work)
+- Attempt vs project comparison table
+- Hypothesis test results
+- Final conclusion: A/B/C
+- Fix checklists (UFile UI next attempt; project outputs only if proven)
+
+Also create:
+- `RUN_DIR/README.md` at the run root summarizing how to reproduce.

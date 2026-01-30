@@ -1,0 +1,3 @@
+scope_fy,bank_txn_id,txn_date,amount,entity,etransfer_ref,manual_classification,notes,description,linked_wave_bill_ids,linked_bill_vendors,linked_bill_invoice_numbers,linked_bill_total
+OUTSIDE_SCOPE,288,2025-07-15,-34.02,DWAYNE,,,,Internet Banking E-TRANSFER105537222845 Dwayne choose transfer 4506*********695,,,,
+OUTSIDE_SCOPE,5,2025-12-04,-914.18,DWAYNE,,,,Internet Banking E-TRANSFER105728225285 Dwayne choose transfer 4506*********695,,,,

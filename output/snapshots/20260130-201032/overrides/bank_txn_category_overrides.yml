@@ -1,0 +1,48 @@
+version: 1
+
+# Canonical re-classifications for specific bank transactions (Fresher snapshot evidence stays untouched).
+# These are applied by t2-final reporting/journalization scripts when reconciling bank activity.
+#
+# Key: fresher_debits__bank_transactions.id
+bank_txn_category_overrides:
+  "346":
+    txn_date: "2025-05-22"
+    debit_cents: 900000
+    from_category: "OWNER_DRAW"
+    to_category: "DIVIDEND"
+    reason: "Shareholder distribution treated as dividend (see SHAREHOLDER_INFORMATION.txt from prior work)."
+
+  "1085":
+    txn_date: "2024-06-17"
+    debit_cents: 432107
+    from_category: "PAYROLL"
+    to_category: "SHAREHOLDER_PAYROLL"
+    reason: "Cheque payroll payment to Thomas (matches Thomas payroll export net pay for pay period ending 2024-06-17)."
+
+  "364":
+    txn_date: "2025-04-28"
+    debit_cents: 290000
+    from_category: "OWNER_DRAW"
+    to_category: "DIVIDEND"
+    reason: "Shareholder distribution treated as dividend (see SHAREHOLDER_INFORMATION.txt from prior work)."
+
+  "377":
+    txn_date: "2025-04-21"
+    debit_cents: 2000000
+    from_category: "OWNER_DRAW"
+    to_category: "DIVIDEND"
+    reason: "Shareholder distribution treated as dividend (see SHAREHOLDER_INFORMATION.txt from prior work)."
+
+  "676":
+    txn_date: "2025-01-08"
+    debit_cents: 100000
+    from_category: "OWNER_DRAW"
+    to_category: "SHAREHOLDER_PAYROLL"
+    reason: "E-transfer to Thomas that rounds out $4,000 net payroll split across 2024-12-20 ($1,500), 2024-12-31 ($1,500), 2025-01-08 ($1,000)."
+
+  "688":
+    txn_date: "2025-01-06"
+    debit_cents: 500000
+    from_category: "OWNER_DRAW"
+    to_category: "DIVIDEND"
+    reason: "Shareholder distribution treated as dividend (see SHAREHOLDER_INFORMATION.txt from prior work)."

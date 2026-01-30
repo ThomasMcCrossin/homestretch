@@ -1,0 +1,1 @@
+kind,bank_txn_id,txn_date,amount,txn_type,txn_category,verified,entity,manual_classification,cra_code,cra_guess,has_wave_match,has_wave_funding,has_pad_payment,description,notes,explanation

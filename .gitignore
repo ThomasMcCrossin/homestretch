@@ -1,0 +1,7 @@
+# Ignore old snapshots; keep only the latest
+output/snapshots/*
+!output/snapshots/20260130-201032/
+!output/snapshots/20260130-201032/**
+
+# Ignore broken snapshot artifacts if any
+output/snapshots/_broken*/

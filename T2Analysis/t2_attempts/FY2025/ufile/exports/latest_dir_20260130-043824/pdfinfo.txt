@@ -1,0 +1,19 @@
+Title:           2025 - 14587430 Canada Inc. - Copy of tax return
+Subject:         T2 2025
+Creator:         UFile.ca v2025.2901 ï¿½ 2025 - Thomson Reuters DT Tax and Accounting Inc.
+Producer:        PDFlib 10.0.2 (C++/Win32)
+CreationDate:    Thu Jan 29 15:08:37 2026 UTC
+Custom Metadata: no
+Metadata Stream: yes
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           38
+Encrypted:       no
+Page size:       576 x 756 pts
+Page rot:        0
+File size:       266570 bytes
+Optimized:       yes
+PDF version:     1.4

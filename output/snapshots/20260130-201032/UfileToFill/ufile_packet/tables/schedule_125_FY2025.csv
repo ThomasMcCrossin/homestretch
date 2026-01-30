@@ -1,0 +1,25 @@
+GIFI_Code,Description,Amount,Note
+8000,Trade sales of goods and services,230907,
+8299,Total revenue,230907,
+8518,Cost of sales,110284,Includes inventory shrinkage $200
+8519,Gross profit/loss,120623,
+8520,Advertising and promotion,798,
+8523,Meals and entertainment,408,50% add-back = $204
+8622,Employer's portion of employee benefits,3610,
+8690,Insurance,1951,
+8710,Interest and bank charges,6694,
+8810,Office expenses,3903,
+8813,Data processing,1878,Computer hardware + SaaS (under capitalization threshold)
+8860,Professional fees,353,
+8911,Real estate rental,7137,
+8960,Repairs and maintenance,603,
+9060,Salaries and wages,54899,
+9130,Supplies,4629,Packaging + operating supplies
+9131,Small tools,479,
+9225,Telephone and telecommunications,465,Internet
+9270,Other expenses,293,Includes CRA penalties $274 (non-deductible)
+9275,"Delivery, freight and express",136,
+9281,Vehicle expenses,4038,
+9367,Total operating expenses,92274,
+9368,Total expenses,202558,
+9999,Net income/loss after taxes,28349,

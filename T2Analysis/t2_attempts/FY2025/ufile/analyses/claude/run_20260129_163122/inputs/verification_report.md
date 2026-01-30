@@ -1,0 +1,18 @@
+# Parse verification report
+
+## Meta
+```json
+{
+  "parser": "T2Analysis/tools/ufile_pdf_parser/parse_ufile_pdf.py",
+  "parser_version": "1",
+  "source_pdf": "/home/clarencehub/t2-final-fy2024-fy2025/T2Analysis/t2_attempts/FY2025/ufile/exports/latest/ufile_return.pdf",
+  "source_sha256": "82b86987f9547a432ee8dd5736fabca754b500c9e5ddda97a92080bc547a0d0f"
+}
+```
+
+## Summary
+- Rows checked: 50
+- OK: 50
+- Not OK: 0
+
+All parsed codes were found on their recorded pages’ extracted text.

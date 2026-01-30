@@ -1,0 +1,27 @@
+{
+  "vendor_profiles": [
+    {
+      "vendor_normalized": "walmart bill",
+      "profile_key": "WALMART_MANUAL_V1",
+      "notes": "User-provided estimate: 60% COGS (5039), 25% Office Supplies (6600), 5% Janitorial/Supplies (5209), 10% Repairs & Maintenance (6300).",
+      "splits": [
+        { "account_code": "5039", "percent": 0.6 },
+        { "account_code": "6600", "percent": 0.25 },
+        { "account_code": "5209", "percent": 0.05 },
+        { "account_code": "6300", "percent": 0.1 }
+      ]
+    },
+    {
+      "vendor_normalized": "canadian tire bill",
+      "profile_key": "CANADIAN_TIRE_MANUAL_V1",
+      "notes": "User-provided estimate: 25% Repairs & Maintenance (6300), 10% Office Supplies (6600), 40% Janitorial/Supplies (5209), 25% Small Tools & Equipment (6350).",
+      "splits": [
+        { "account_code": "6300", "percent": 0.25 },
+        { "account_code": "6600", "percent": 0.1 },
+        { "account_code": "5209", "percent": 0.4 },
+        { "account_code": "6350", "percent": 0.25 }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,47 @@
+Dividends paid
+Select the type of dividends paid by the corporation.
+
+Dividends paid
+ 
+
+Taxable dividend paid
+
+ 
+
+Capital dividends payable per subsection 83(2)
+
+ 
+
+Capital gains dividend
+
+ What the plus sign creates for each section
+ 
+ Taxable dividend paid
+Please enter the information concerning the taxable dividend paid.
+
+
+Amount of dividends paid by corporation during tax year
+$
+ 
+
+Portion of eligible dividends paid by corporation during tax year
+$
+
+
+
+
+Capital dividends payable per subsection 83(2)
+Please enter the information concerning the Capital dividends payable per subsection 83(2).
+
+
+Amount of dividends paid by corporation during tax year
+$
+
+
+Capital gains dividend
+Please enter the information concerning the capital gains dividend.
+
+
+Amount of dividends paid by corporation during tax year
+$
+

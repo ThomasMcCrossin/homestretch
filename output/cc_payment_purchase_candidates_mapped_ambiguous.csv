@@ -1,0 +1,2 @@
+bank_txn_id,bank_date,bank_amount,bank_card_last4,candidate_cc_txn_id,cc_date,cc_card_last4,merchant,cc_amount,date_diff_days,wave_bill_ids
+350,2025-05-13,408.58,318,387,2025-05-12,0318,BELL ALIANT OBM,408.58,1,674;691;695

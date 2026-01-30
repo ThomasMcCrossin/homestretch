@@ -1,0 +1,5 @@
+action,bank_allocations_deleted,bank_date,bank_txn_id,bill_allocations_deleted,invoice_date,journal_entries_deleted,journal_entry_lines_deleted,reason,split_payments_deleted,status,wave_bill_funding_deleted,wave_bill_id,wave_matches_deleted
+wave_bill_delete,0,,,2,,2,5,Duplicate Canadian Tire Gas bill (same vendor/date/amount as bill 49); both linked to the same CC payment bank_txn_id=1583.,0,deleted,0,50,1
+wave_bill_delete,0,,,8,,2,11,"Duplicate/mislinked Pharmasave bill: only one CC purchase exists ($62.54 Pharmasave cc_txn_id=4095), but this bill was matched to Costco gas cc_txn_id=4082.",0,deleted,0,90,1
+cc_payment_transfer_add,,2023-10-20,1602,,2023-10-14,,,Pharmasave CC purchase (cc_txn_id=4095) reimbursed via CC payment to Mastercard (bank_txn_id=1602) — exact amount match.,,inserted,,89,
+cc_payment_transfer_add,,2024-09-18,1020,,2024-09-12,,,Dollarama split-CC bill total ($321.65) reimbursed via CC payment to Mastercard (bank_txn_id=1020) — exact amount match.,,inserted,,365,

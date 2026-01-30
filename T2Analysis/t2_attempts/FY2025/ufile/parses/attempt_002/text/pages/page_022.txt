@@ -1,0 +1,26 @@
+29 Jan 2026 14587430 Canada Inc. Yr.end: 31-05-2025 Acct.#748003142RC0001
+Protected Bwhen completed
+Refundable portion of Part I tax
+Canadian-controlled private corporations throughout the tax year or substantive CCPCs at any time in the tax year
+Aggregate investment income
+from Schedule 7 . . . . . . . . . . . . 440 × 30 2/3% = . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . A
+Foreign non-business income tax credit from line 632 on page 8 . . . . . . . . . . . . . . . . . . . . . . . . B
+Foreign investment income
+from Schedule 7 . . . . . . . . . . . . 445 × 8% = . . . . . . . . . . . . . . . . . . . C
+Subtotal (amount B minus amount C) (if negative, enter "0") D
+Amount A minus amount D (if negative, enter "0") . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . E
+Taxable income from line 360 on page 3 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28,553 F
+Amount from line 400, 405, 410, or 428 on page 4,
+whichever is the least * . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28,553 G
+Foreign non-business
+income tax credit from
+line 632 on page 8 . . . . . . . . ×75/29= . . H
+Foreign business income
+tax credit from line 636
+on page 8 . . . . . . . . . . . . . . . × 4 = . . I
+Subtotal (add amounts G to I) 28,553 28,553 J
+Subtotal (amount F minus amount J) K×30 2/3% = L
+Part I tax payable minus investment tax credit refund (line 700 minus line 780 from page 9) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2,570 M
+Refundable portion of Part I tax – Amount E, L, or M, whichever is the least . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 450 N
+* This is not applicable to substantive CCPCs.
+T2 E (25) Version 29.01 UF27 Page 6 of 9

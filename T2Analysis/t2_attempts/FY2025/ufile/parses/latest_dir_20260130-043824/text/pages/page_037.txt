@@ -1,0 +1,47 @@
+29 Jan 2026 14587430 Canada Inc. Yr.end: 31-05-2025 Acct.#748003142RC0001
+Protected B when completed
+Part 2 – Income from active business when there is partnership income (continued)
+Column 1 Column 2 Column 3 Column 4
+Amounts from Amounts from column K1 Column 1 minus Lesser of columns 1
+column F1 in Part 4 in Part 4 of Schedule 7 column 2 and 2 (if column 1 is
+of Schedule 7 multiplied by (if negative, enter "0") negative, enter "0")
+700,000
+500,000
+Totals 2H 2I
+Line 370 from Part 4 of Schedule 7 . . . . . . . . . . . 2J
+Line 380 from Part 4 of Schedule 7 . . . . . . . . . . . 2K
+Subtotal (amount 2J plus amount 2K) 2L
+Enter amount 2H or amount 2L, whichever is less . . . . . . . . . . . . . . . . . . . . . 2M
+Specified partnership income (amount 2I plus amount 2M) . . . . . . . . . . . . . . 2N
+Partnership income not eligible for the small business deduction (amount 2G minus amount 2N) . . . . . 2O
+Income from active business (amount 2F minus amount 2O) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2P
+Enter amount 2P at amount 1I in Part 1.
+Part 3 – Nova Scotia tax before credits and Nova Scotia offshore tax
+Tax at the lower rate for Nova Scotia and its offshore area:
+Number of days in the tax year
+Amount 1F 36,258 × before April 1, 2025 304 × 2.5% = 755 3A
+Number of days in the tax year 365
+Number of days in the tax year
+Amount 1M 36,258 × after March 31, 2025 61 × 1.5% = 91 3B
+Number of days in the tax year 365
+Tax at the lower rate for Nova Scotia and its offshore area (amount 3A plus amount 3B) 846 846 3C
+Tax at the higher rate for Nova Scotia and its offshore area:
+Number of days in the tax year
+Amount 1G × before April 1, 2025 304 × 14% = 3D
+Number of days in the tax year 365
+Number of days in the tax year
+Amount 1N × after March 31, 2025 61 × 14% = 3E
+Number of days in the tax year 365
+Tax at the higher rate for Nova Scotia and its offshore area (amount 3D plus amount 3E) 3F
+Total Tax for Nova Scotia and its offshore area (amount 3C plus amount 3F) 846 3G
+Only one jurisdiction
+If your taxable income is allocated only to Nova Scotia or to Nova Scotia offshore, and your corporation is not claiming a Nova Scotia tax credit, enter
+amount 3G on line 760 of the T2 return. If your corporation is claiming a credit, enter amount 3G on line 215 or 220 of Schedule 5, whichever applies.
+Jurisdictions in both Nova Scotia and Nova Scotia offshore
+If your corporation has taxable income allocated to both Nova Scotia and its offshore area, calculate the following:
+Amount 3G × Taxable income for Nova Scotia offshore = 3H
+Taxable income for Nova Scotia plus
+taxable income for Nova Scotia offshore
+Nova Scotia offshore tax before credits – Enter amount 3H on line 220 of Schedule 5.
+Nova Scotia tax before credits (amount 3G minus amount 3H) – Enter amount 3I on line 215 of Schedule 5 . . . . . . . . . . . . . . . . 3I
+T2 SCH 346 E (25) Version 29.01 UF27 Page 2 of 2

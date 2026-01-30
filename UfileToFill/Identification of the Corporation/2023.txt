@@ -1,0 +1,114 @@
+Identification of the corporation
+
+Please enter the identification information for this corporation.
+
+
+Corporation's name
+14587430 Canada Inc.
+*
+ 
+
+Corporation's tax year-end
+dd-mm-yyyy
+31-05-2023
+
+*
+ 
+
+Does the corporation qualify for the one-month extension of the date the balance of tax due?
+
+No
+*
+ 
+ 
+
+Jurisdiction of charter and incorporation date
+Selection
+Federal
+*
+dd-mm-yyyy
+08-12-2022
+
+*
+ 
+
+Beginning date of operations (if different than incorporation date)
+dd-mm-yyyy
+
+ 
+ 
+
+Corporation's business number (NNNNNNNNNRC0001)
+748003142RC0001
+*
+ 
+
+Is this the first federal return?
+
+Yes
+ 
+
+Is this the final federal return?
+
+No
+ 
+ 
+
+Provincial jurisdiction of permanent establishment
+
+Nova Scotia
+*
+ 
+
+Language of correspondence
+
+English
+*
+ 
+
+Corporation's electronic mail address
+tom@curlys.ca
+ 
+
+Is the corporation active or inactive? If active, enter type of activity.
+Selection
+Inactive
+*
+ 
+
+Enter the North American Industrial Classification System code (NAICS) that best describes the corporation's main revenue-generating business activity.
+Search/browse
+722512  Limited-Service Eating Places
+
+ 
+ 
+
+If the corporation is active, specify the principal product(s) or service(s) provided, giving the approximate percentage of the total revenue that each product or service represents (3 max.).
+Description
+%
+
+ 
+
+If the corporation is active and the corporation's major business activity was construction, did the corporation have any sub-contractors during the year?
+
+ 
+
+Does the corporation have balance sheet or income statement information to report? If you answer "No", any information that has been entered within GIFI will be removed.
+
+No
+ 
+Corporation Internet Business Activities
+
+Did the corporation earn income from one or more webpages or websites?
+
+ 
+ 
+ 
+Quarterly instalments
+
+If the corporation qualifies to be a quarterly instalment remitter, does it want to be considered as one?
+
+ 
+
+Does the corporation have a perfect compliance history to be eligible for quarterly instalments?
+

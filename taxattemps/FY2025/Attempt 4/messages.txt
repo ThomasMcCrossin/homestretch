@@ -1,0 +1,31 @@
+ Notes and analysis
+
+
+FEDERAL CORPORATION INTERNET FILING
+
+This corporation's federal return can be filed electronically.
+ 
+ 
+ 
+ 
+ Warnings
+Please review the notes and warning messages below.
+
+
+
+Tax year presumed to be 365 days according to begin date of operations or incorporation date.
+
+ 
+
+
+Taxable dividends paid in current yr; enter eligible dividends paid on the GRIP page.
+
+ 
+
+
+There is no entry in the income source section; all income is considered as active business income.
+
+ 
+
+
+No instalments required since total tax instalments calculated are less than or equal to $3,000.

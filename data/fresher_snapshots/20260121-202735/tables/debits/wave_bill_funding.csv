@@ -1,0 +1,112 @@
+id,wave_bill_id,funding_type,bank_txn_id,amount_cents,notes
+1,2,CASH_REIMBURSE,,45225,Mondoux - paid in cash off-bank
+2,3,CASH_REIMBURSE,,2108,Card 0318; cash reimbursed to Dwayne
+3,11,CASH_REIMBURSE,,120080,Capital Foods - paid via Dwayne personal CIBC VISA debit; cash reimbursed
+4,14,CASH_REIMBURSE,,3319,Card 0318; cash reimbursed to Dwayne
+5,20,CASH_REIMBURSE,,4370,Card 0318; cash from till
+6,27,CASH_REIMBURSE,,2169,Card 0318; cash from till
+7,28,CASH_REIMBURSE,,2451,Card 0318; cash from till
+8,52,CASH_REIMBURSE,,7684,Atlantic Superstore Sep 15 - card 0318; cash reimbursed to Dwayne
+9,72,CASH_REIMBURSE,,109656,Capital Foods - Statement 2523999 +3% card fee; paid via Dwayne personal card; cash reimbursed
+10,95,CASH_REIMBURSE,,1293,Pharmasave - paid by Tom; reimbursed in cash
+11,125,CASH_REIMBURSE,,33135,Mondoux - paid in cash; reimbursed in cash off-bank
+12,158,BANK_SPLIT,1402,29230,Dollarama - split payment $292.30 + $20.10 on Jan 8
+13,158,BANK_SPLIT,1404,2010,Dollarama - split payment $292.30 + $20.10 on Jan 8
+14,185,CASH_REIMBURSE,,8384,Bimbo Canada - paid from till (cash off-bank)
+15,201,CASH_REIMBURSE,,6105,Gov't of Nova Scotia TR1111807; cash reimbursed to Dwayne
+16,232,CASH_REIMBURSE,,30750,We Like Work - paid with cash from till
+17,294,CASH_REIMBURSE,,15260,Atlantic Superstore - paid CIBC visa Apr 16; cash reimbursed
+18,300,CASH_REIMBURSE,,4137,Canadian Tire - card 0318; cash reimbursed
+19,669,CASH_REIMBURSE,,8180,Pharmasave - card 0318; cash reimbursed
+20,685,CASH_REIMBURSE,,4902,Shopify monthly addon; cash reimbursed
+21,723,CASH_REIMBURSE,,28000,GFS Cash - Cheese Curds - paid cash no invoice
+22,724,CASH_REIMBURSE,,20000,GFS Cash - Cheese Curds - paid cash no invoice
+23,725,CASH_REIMBURSE,,24000,GFS Cash - Chicken - paid cash no invoice
+24,726,CASH_REIMBURSE,,13000,GFS Cash - Cheese Curds - paid cash no invoice
+25,727,BANK_DIRECT,1128,3000,Facebook Marketplace merchandising - e-transfer to Charlie
+26,728,BANK_DIRECT,737,20000,U9 youth hockey donation
+27,542,BANK_SPLIT,1123,6500,Q2-Q4 2024 monthly account fees (9 x $65)
+28,542,BANK_SPLIT,1092,6500,Q2-Q4 2024 monthly account fees (9 x $65)
+29,542,BANK_SPLIT,1082,6500,Q2-Q4 2024 monthly account fees (9 x $65)
+30,542,BANK_SPLIT,1076,6500,Q2-Q4 2024 monthly account fees (9 x $65)
+31,542,BANK_SPLIT,1062,6500,Q2-Q4 2024 monthly account fees (9 x $65)
+32,542,BANK_SPLIT,993,6500,Q2-Q4 2024 monthly account fees (9 x $65)
+33,542,BANK_SPLIT,879,6500,Q2-Q4 2024 monthly account fees (9 x $65)
+34,542,BANK_SPLIT,796,6500,Q2-Q4 2024 monthly account fees (9 x $65)
+35,542,BANK_SPLIT,696,6500,Q2-Q4 2024 monthly account fees (9 x $65)
+36,326,BANK_SPLIT,1070,23665,GFS PAD with invoice 9012419964
+37,327,BANK_SPLIT,1070,23665,GFS PAD with invoice 9012388498
+38,438,BANK_SPLIT,853,184643,GFS PAD Nov 8 with 9015554603 and credit
+39,447,BANK_SPLIT,853,184643,GFS PAD Nov 8 with 9015480379 and credit
+40,732,BANK_SPLIT,853,184643,GFS credit memo in PAD Nov 8
+41,275,BANK_DIRECT,1339,6500,Q1 2024 account fee - Jan 31
+42,275,BANK_DIRECT,1264,6500,Q1 2024 account fee - Feb 29
+43,275,BANK_DIRECT,1184,6500,Q1 2024 account fee - Mar 28
+44,694,BANK_DIRECT,361,6500,April 2025 account fee
+45,703,BANK_DIRECT,345,500,May 2025 transfer fee
+46,619,BANK_SPLIT,513,212495,GFS PAD Feb 28 with 9019250185
+47,733,BANK_SPLIT,513,212495,GFS PAD Feb 28 with 9019304169
+48,639,BANK_DIRECT,440,97193,GFS PAD Mar 21
+49,719,CASH_REIMBURSE,,40000,GFS cash COGS (frozen) paid from till; never hit bank
+50,717,BANK_DIRECT,1679,3447,Walmart COGS purchase (Interac debit); no HST captured in Wave
+51,718,BANK_DIRECT,1680,5014,Dollarama COGS purchase (Interac debit); no HST captured in Wave
+52,259,BANK_CC_CHAIN,1098,8086,Webstaurant paid to MC May 27
+53,660,BANK_SPLIT,453,15707,Atlantic Superstore - payment to card 0318
+54,660,BANK_SPLIT,454,123686,Atlantic Superstore - payment to card 0318
+55,522,BANK_CC_CHAIN,729,3144,Pharmasave paid to MC Dec 16
+56,509,BANK_SPLIT,487,24063,Sysco PAD Mar 11
+57,556,BANK_SPLIT,487,24063,Sysco PAD Mar 11
+58,696,BANK_SPLIT,331,83270,May rent - paid with June rent ($832.70 total) via debit Jun 4; June rent outside FY scope
+59,324,BANK_SPLIT,1077,40250,July rent - e-transfer to Dwayne Jul 30
+60,324,BANK_SPLIT,1042,128250,August rent - e-transfer to Thomas Sept 9 (with Sept rent)
+61,345,BANK_SPLIT,1042,128250,September rent - e-transfer to Thomas Sept 9 (with Aug rent)
+62,86,CASH_REIMBURSE,,104085,Capital Foods - cash reimbursement
+63,131,BANK_CC_CHAIN,1517,92900,Capital Foods paid to card 0318 Nov 8
+64,599,BANK_DIRECT,400,147206,Capital Foods PAD Apr 9
+65,610,BANK_DIRECT,588,100396,Capital Foods PAD Feb 5
+66,734,BANK_DIRECT,809,2069,Underground Graffix stickers - e-transfer to Shane
+67,735,BANK_DIRECT,694,82006,Capital Foods PAD Jan 2
+68,736,BANK_DIRECT,1691,22,Cash deposit fee Jun 30 2023
+69,737,BANK_DIRECT,1631,1125,Cash deposit fee Sep 29 2023
+70,738,BANK_DIRECT,1185,58,Cash deposit fee Mar 28 2024
+71,739,BANK_DIRECT,880,2513,Cash deposit fee Oct 31 2024
+72,740,BANK_DIRECT,597,886,Cash deposit fee Jan 31 2025
+73,741,BANK_DIRECT,512,18,Cash deposit fee Feb 28 2025
+74,742,BANK_DIRECT,836,93534,Capital Foods PAD Nov 13
+75,743,BANK_DIRECT,717,23000,Christmas party bowling - reimbursed to Dwayne
+76,744,BANK_DIRECT,1363,185100,BFL Insurance payment Jan 2024
+77,745,BANK_DIRECT,1446,20000,Hockey sponsorship - Tim Rich Dec 2023
+78,746,BANK_DIRECT,1572,10410,Erroneous duplicate reimbursement to Dwayne Oct 23
+79,747,BANK_DIRECT,1576,53875,Erroneous duplicate reimbursement to Dwayne Oct 23
+80,82,CASH_REIMBURSE,,10196,Atlantic Superstore Oct 9 - cash reimbursed
+81,748,BANK_DIRECT,1536,8880,Dollarama Oct 28 - reimbursed to Dwayne Nov 2
+82,749,BANK_SPLIT,1525,9500,Jeff Bembridge sauces - part of $95 e-transfer ($75 was change float)
+83,751,BANK_DIRECT,1504,143722,Curly's Sports and Supplements order 1996469 - reimbursed to Dwayne
+84,752,BANK_DIRECT,1477,11687,Dollarama Nov 17 - reimbursed to Dwayne Dec 1
+85,753,BANK_DIRECT,1408,21390,The Keg staff party - reimbursed to Dwayne Jan 4
+86,754,BANK_DIRECT,1285,2069,John Manley plastic forks - reimbursed to Dwayne Feb 22
+87,755,BANK_DIRECT,1221,89436,Capital Foods PAD Mar 13
+88,756,BANK_DIRECT,937,4000,Bridge Workshops rags - cash withdrawal Oct 16
+89,757,BANK_DIRECT,884,2000,Bridge Workshops rags - cash withdrawal Oct 29
+90,758,BANK_DIRECT,1071,1856,The Elm Tree straws - reimbursed to Thomas Aug 8
+93,190,BANK_CC_CHAIN,1334,4001,Bank payment to card 8154 for Esso
+98,302,BANK_CC_CHAIN,1127,22259,Bank payment to card 0318
+99,665,BANK_CC_CHAIN,447,11658,Bank payment to card 0318
+101,167,BANK_CC_CHAIN,1372,738,Bank payment to card 0318
+102,705,BANK_CC_CHAIN,395,13153,Bell paid in advance Apr 11 to card 0318
+103,676,BANK_DIRECT,596,6500,Jan 31 ACCOUNT FEE
+104,676,BANK_DIRECT,511,6500,Feb 28 ACCOUNT FEE
+105,676,BANK_DIRECT,418,6500,Mar 31 ACCOUNT FEE
+106,678,BANK_DIRECT,416,600,GPFS Service Charge
+107,697,BANK_DIRECT,360,400,GPFS Service Charge
+108,698,BANK_DIRECT,353,16477,DELUXE-CHQ ORDER (1 cent diff)
+109,510,BANK_DIRECT,721,10061,Paid $100.61 after $48.12 credit memo 2597723
+110,280,BANK_CC_CHAIN,1174,81189,Payment to MC Apr 4
+111,693,REVENUE_DEDUCTION,,1704,Nayax vending machine monthly fee - deducted from revenue
+112,706,REVENUE_DEDUCTION,,1704,Nayax vending machine monthly fee - deducted from revenue
+113,543,BANK_CC_CHAIN,501,41283,Amalgamated Shopify subscription charges - paid to Visa Mar 5
+114,541,REVENUE_DEDUCTION,,220804,Shopify 2024 CC fees - deducted from payouts
+116,277,BANK_DIRECT,1182,131100,E-transfer to Markie B
+117,720,BANK_DIRECT,909,50000,"GFS cheese curds cash COGS reimbursed to Thomas (split of $3,000 e-transfer)"
+118,721,BANK_DIRECT,909,50000,"GFS cheese curds cash COGS reimbursed to Thomas (split of $3,000 e-transfer)"
+119,768,BANK_DIRECT,1615,86250,"GFS damaged salvage COGS reimbursed to Dwayne (oil, chicken, cheese curds)"

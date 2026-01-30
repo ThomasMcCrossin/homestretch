@@ -1,0 +1,6 @@
+{
+  "parser": "T2Analysis/tools/ufile_pdf_parser/parse_ufile_pdf.py",
+  "parser_version": "1",
+  "source_pdf": "/home/clarencehub/t2-final-fy2024-fy2025/T2Analysis/t2_attempts/FY2025/ufile/exports/attempt_003/ufile_return.pdf",
+  "source_sha256": "653d23b5262a457f628ddcfd3a342fa857fc49396a56e45e8180901f5d2c74fe"
+}

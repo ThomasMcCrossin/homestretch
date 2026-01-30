@@ -1,0 +1,1 @@
+bank_txn_id,bank_date,bank_amount,card_last4,cc_purchase_txn_id,cc_purchase_date,merchant,cc_purchase_amount,date_diff_days,wave_bill_id,wave_invoice_date,wave_vendor,wave_total

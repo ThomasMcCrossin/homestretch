@@ -1,0 +1,130 @@
+Mailing address of the corporation
+Please enter the mailing address of this corporation.
+
+
+Name of addressee
+Dwayne Ripley
+ 
+
+Street
+125 Victoria St E
+ 
+
+Additional address information of the corporation
+ 
+
+Suite number
+ 
+
+Post office box number
+ 
+
+City
+Amherst
+ 
+
+Province
+Selection
+Nova Scotia
+ 
+
+State
+
+ 
+
+Postal code
+A1A 1A1
+B4H 1X9
+ 
+
+U.S.A. ZIP code
+ 
+
+Foreign postal code
+ 
+
+Country of corporation if other than Canada
+
+ 
+
+Person to contact
+Thomas McCrossin
+ 
+
+Telephone number - day
+(902) 321-6749
+ 
+
+Fax number
+(000) 000-0000
+ 
+ 
+
+Has the mailing address changed since the last time a T2 return was filed?
+
+No Change
+
+
+Location of books and records of the corporation
+Please enter the location of books and records of this corporation.
+
+
+Name of addressee
+Curly's
+ 
+
+Street
+125 Victoria St E
+ 
+
+Additional address information of the corporation
+ 
+
+Suite number
+ 
+
+City
+Amherst
+ 
+
+Province
+Selection
+Nova Scotia
+ 
+
+State
+
+ 
+
+Postal code
+A1A 1A1
+B4H 1X9
+ 
+
+U.S.A. ZIP code
+ 
+
+Foreign postal code
+ 
+
+Country of corporation if other than Canada
+
+ 
+
+Person to contact
+Thomas McCrossin
+ 
+
+Telephone number - day
+(902) 321-6749
+ 
+
+Fax number
+(000) 000-0000
+ 
+ 
+
+Has the location of books and records changed since the last time a T2 return was filed?
+
+No Change
+

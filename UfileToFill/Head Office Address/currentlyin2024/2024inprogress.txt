@@ -1,0 +1,55 @@
+
+* = This is a required field
+Head office address
+Please enter the address for the head office of this corporation.
+
+
+Name of addressee
+Dwayne Ripley
+ 
+
+Street
+125 Victoria St E
+ 
+
+Additional address information of the corporation
+ 
+
+Suite number
+ 
+
+Post office box number
+ 
+
+City
+Amherst
+ 
+
+Province
+Selection
+Nova Scotia
+ 
+
+Postal code
+A1A 1A1
+B4H 1X9
+ 
+
+Person to contact
+Dwayne Ripley
+ 
+
+Telephone number - day
+(902) 667-2875
+ 
+
+Fax number
+(000) 000-0000
+ 
+ 
+ 
+ 
+ 
+
+Has the head office address changed since the last time a T2 return was filed?
+

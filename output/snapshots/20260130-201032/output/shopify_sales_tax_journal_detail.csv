@@ -1,0 +1,3 @@
+fy,entry_date,itc_start_date,effective_start_date,taxes_cents,taxes,basis_shopify_cents,basis_shopify,basis_cash_cents,basis_cash,allocated_shopify_cents,allocated_shopify,allocated_cash_cents,allocated_cash,journal_entry_id
+FY2024,2024-05-31,2024-02-26,2024-02-26,906018,9060.18,4443479,44434.79,2583300,25833.00,572933,5729.33,333085,3330.85,SHOPIFY_SALES_TAX_FY2024
+FY2025,2025-05-31,2024-02-26,2024-06-01,2402344,24023.44,16693806,166938.06,9583585,95835.85,1526189,15261.89,876155,8761.55,SHOPIFY_SALES_TAX_FY2025

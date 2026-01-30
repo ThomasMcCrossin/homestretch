@@ -1,0 +1,24 @@
+30 Jan 2026 14587430 Canada Inc. Yr.end: 31-05-2025 Acct.#748003142RC0001
+Protected Bwhen completed
+Amount A plus line 500 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28,827 B
+Deduct:
+Gain on disposal of assets per financial statements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 401
+Non-taxable dividends under section 83 from Schedule 3 . . . . . . . . . . . . . . . . . . . . . . . . . 402
+Capital cost allowance from Schedule 8 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 403
+Terminal loss from Schedule 8 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 404
+Allowable business investment loss from Schedule 6 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 406
+Foreign non-business tax deduction under subsection 20(12) . . . . . . . . . . . . . . . . . . . . . . 407
+Holdbacks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 408
+Deferred and prepaid expenses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 409
+Depreciation in inventory – end of prior year . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 410
+SR&ED expenditures claimed in the year on line 460 from Form T661 . . . . . . . . . . . . . . . 411
+Other reserves on line 280 from Schedule 13 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 413
+Reserves from financial statements – balance at the beginning of the year . . . . . . . . . . . 414
+Patronage dividend deduction from Schedule 16 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 416
+Contributions to deferred income plans from Schedule 15 . . . . . . . . . . . . . . . . . . . . . . . . 417
+Incorporation expenses under paragraph 20(1)(b) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 418
+Amount E on page 4 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 499
+Total (lines 401 to 499) 510
+Net income (loss) for income tax purposes (amount B minus line 510) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28,827 C
+Enter amount C on line 300 on page 3 of the T2 return.
+T2 SCH 1 E (25) VVeerrssiioonn 2299..0011 UUFF2277 Page 2 of 4

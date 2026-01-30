@@ -1,0 +1,11 @@
+Notes and diagnostics (continued)
+FEDERAL CORPORATION INTERNET FILING
+This return is ineligible for federal efile due to the following reason(s):
+.
+The federal BCR is not being generated.
+FEDERAL AND/OR PROVINCIAL WARNINGS
+Federal
+.
+. Taxation year presumed to be 365 days according to BEGINDATE or INCORPDATE entry.
+Missing entry for INCOMESOURCE; all income is considered as active business income.
+Diagnostics page 3 of 3

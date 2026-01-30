@@ -1,0 +1,5 @@
+due_date,total_net,total_net_cents,transaction_count,file_name,notification_id,notes
+2023-06-09,155.00,15500,1,EFT Notification_4.XLS,9f85a148-d69a-566c-a266-17536cf9df4f,No matching bank PAD debit in imported bank range.
+2023-06-23,265.68,26568,1,EFT Notification_2.XLS,52882265-d98f-56f9-a2e5-146c8955cd6a,No matching bank PAD debit in imported bank range.
+2023-06-30,242.54,24254,2,EFT Notification_3.XLS,bce2e106-cef0-5d53-88ac-4c33ec43e914,No matching bank PAD debit in imported bank range.
+2023-08-25,1281.55,128155,2,EFT Notification_1.XLS,e4cf8b8e-d598-5202-af4f-6fa1d4122bdf,No matching bank PAD debit in imported bank range.

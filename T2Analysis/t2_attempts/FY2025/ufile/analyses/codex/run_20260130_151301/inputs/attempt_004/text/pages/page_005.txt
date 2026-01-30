@@ -1,0 +1,28 @@
+30 Jan 2026 14587430 Canada Inc. Yr.end: 31-05-2025 Acct.#748003142RC0001
+Executive summary
+for 2025 taxation year
+Corporation 14587430 Canada Inc.
+Client number 0
+Tax year-end 31-05-2025
+Jurisdiction (multiple if more than one) Nova Scotia
+Contact name (signing officer) Dwayne Ripley
+Phone number (902) 669-2700
+Fax number
+Email address tom@curlys.ca
+Total balance due (refund) (all jurisdictions) 3,266
+Federal return
+Business number (BN) 748003142RC0001
+Net income (Loss) Line 300 28,827
+Taxable income Line 360 28,827
+Part I tax payable Line 700 2,594
+Part III.1 tax payable Line 710
+Part IV tax payable Line 712
+Provincial / territorial tax payable Line 760 672
+ITC refund Line 780
+Dividend refund Line 784
+Federal balance due (refund) 3,266
+Loss carryforwards available
+NERDTOH - end of year
+ERDTOH - end of year
+Capital dividend account - end of year
+Instalments payable (overpaid) - next tax year

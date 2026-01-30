@@ -1,0 +1,71 @@
+Schedule 200 Summary
+for 2025 taxation year
+2025 2024 2023 2022 2021
+Refundable dividend tax on hand (tax year start after 2018)
+ERDTOH - beginning of year 520
+NERDTOH - beginning of year 535
+Net ERDTOH from pred. corp 525
+ERDTOH dividend refund prev yr 570
+Net NERDTOH from pred. corp 540
+NERDTOH dividend refund prev yr 575
+NERDTOH - end of year 545
+ERDTOH - end of year 530
+Dividend refund (tax year start after 2018)
+Eligible dividend refund
+Non-eligible dividend refund
+Additional non-eligible dividend refund
+Dividend refund
+Part I tax
+Base amount 550 10,850
+Personal services business inc. tax 560
+Banks and life insurers additional tax 565
+Labour requirements addition to tax 580
+Recapture of invest. tax credit 602
+Refundable tax on CCPC's 604
+Subtotal 10,850
+Less: Small business deduction 5,425
+Federal tax abatement 608 2,855
+M&P profits deduction 616
+Invest corp deduction 620
+Fed foreign non-bus credit 632
+Fed foreign business credit 636
+General tax reduct. CCPC 638
+General tax reduct. 639
+Fed logging tax credit 640
+Eligible Can. bank deduction 641
+Fed qual envir trust credit 648
+Investment tax credit 652
+Subtotal 8,280
+Part I tax payable 2,570
+Summary of tax and credits
+Part I Tax payable 700 2,570
+Part II.2 tax payable 705
+Part III.1 tax payable 710
+Part IV Tax payable 712
+Part IV.1 Tax payable 716
+Part VI Tax payable 720
+Part VI.1 Tax payable 724
+Part VI.2 tax payable 725
+Part XII.7 tax payable 726
+Part XIII.1 Tax payable 727
+Part XIV Tax payable 728
+Total federal tax 2,570
+Add: Net prov., terr. tax pay. 760 667
+Total tax payable 770 3,237
+Less: Invest tax credit refund 780
+Dividend refund 784
+Fed cap gains refund 788
+Fed qual env trust credit 792
+Fuel charge proceeds to farmers 795
+Can. film/video prod. 796
+Film or video tax credit 797
+Journalism labour tax credit 798
+Air quality improvement tax credit 799
+Tax withheld at source 800
+Prov. & terr. cap gains refund 808
+Prov. & terr. refund tax credit 812
+Tax instalments paid 840
+Total credits 890
+Balance 3,237
+Overpayment
+Balance unpaid 3,237

@@ -1,0 +1,44 @@
+General rate income pool (GRIP)
+* = This is a required field
+
+Please enter the information concerning the general rate income pool (GRIP) for this corporation.
+
+GRIP at the end of the previous tax year
+$
+
+Amount respecting dividends
+Selection
+$
+
+Options for “Amount respecting dividends” (UFile dropdown):
+- Eligible dividends received - current year
+- Eligible dividends paid - current year
+- Eligible dividends paid - previous year
+- Excessive eligible dividend designations - previous year
+
+GRIP adjustment for specified future tax consequences to previous tax years
+
+Amount before specified future tax consequences
+Selection
+$
+
+Amount after specified future tax consequences
+Selection
+$
+
+Options for “Amount before/after specified future tax consequences” (UFile dropdown):
+- Taxable income
+- Income for small business deduction
+- Aggregate investment income
+
+Add Another / Remove
+
+Elected amount of excessive eligible dividend designation to be treated as ordinary dividends
+$
+
+---
+
+Notes:
+- UFile shows this screen once dividends exist, even if you are paying non-eligible dividends only.
+- If you do not designate eligible dividends, the practical expectation is that GRIP is $0 / not needed (but UFile may still require $0 in the “end of previous year” box).
+- If you do designate eligible dividends, you must complete this screen consistently with the eligible portion declared on the Dividends paid screen.

@@ -1,0 +1,160 @@
+account_code,account_name,account_type,parent_code,gifi_code,t2125_line,is_active,requires_receipt,is_tax_account,created_at,updated_at
+1000,Business Bank - CIBC Chequing,asset,"",1001,"",true,false,false,2025-11-12 01:23:03.593031,2025-12-02 07:55:36.301051
+1010,Business Bank - Savings,asset,"",1060,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+1050,Shopify Payments - Clearing,asset,"",1001,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+1060,External Terminal - Clearing,asset,"",1001,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+1070,Cash on Hand,asset,"",1001,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+1080,Gift Card Clearing,asset,"",1001,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+1100,Accounts Receivable,asset,"",1200,"",true,false,false,2025-11-21 13:45:53.438153,2025-12-02 07:55:36.301051
+1180,Due from Other Entity,asset,"",1080,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+1200,Inventory - Food,asset,"",1420,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+1210,Inventory - Beverage,asset,"",1420,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+1220,Inventory - Supplements,asset,"",1420,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+1230,Inventory - Retail Goods,asset,"",1420,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+1300,Prepaid Expenses,asset,"",1510,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+1400,Security Deposits,asset,"",1540,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+1500,Equipment & Fixtures,asset,"",1620,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+1510,Accumulated Depreciation - Equipment,asset,1500,1625,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+1600,Leasehold Improvements,asset,"",1620,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+1610,Accumulated Amortization - Leasehold,asset,1600,1625,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+1700,Vehicles,asset,"",1620,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+1710,Accumulated Depreciation - Vehicles,asset,1700,1625,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+2000,Accounts Payable,liability,"",2600,"",true,false,false,2025-11-12 01:23:03.593031,2025-12-02 07:55:36.301051
+2010,A/P - Capital Foodservice,liability,2000,2600,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+2020,A/P - GFS,liability,2000,2600,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+2030,A/P - Pepsi,liability,2000,2600,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+2100,Credit Card Payable - Corporate,liability,"",2620,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+2180,Due to Other Entity,liability,"",2180,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+2200,HST Payable,liability,"",2680,"",true,false,true,2025-11-09 09:30:11.922858,2025-12-02 07:55:36.301051
+2210,HST ITC Receivable,liability,"",2680,"",true,false,true,2025-11-09 09:30:11.922858,2025-12-02 07:55:36.301051
+2300,Gift Cards Outstanding,liability,"",2620,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+2310,Tips Payable,liability,"",2620,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+2400,Due to Shareholder - Thomas,liability,"",3200,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+2410,Due to Shareholder - Dwayne,liability,"",3200,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+2500,Due from Shareholder,liability,"",1080,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+2600,Deferred Revenue,liability,"",2680,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+2700,Payroll Liabilities - CPP,liability,"",2620,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+2710,Payroll Liabilities - EI,liability,"",2620,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+2720,Payroll Liabilities - Income Tax,liability,"",2620,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+2740,WCB Payable,liability,"",2620,"",true,false,false,2025-12-02 08:39:18.326057,2025-12-02 08:39:18.326057
+2800,Corporate Income Tax Payable,liability,"",2680,"",true,false,false,2025-12-02 08:39:18.326057,2025-12-02 08:39:18.326057
+3000,Share Capital (Corp only),equity,"",3100,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+3100,Retained Earnings,equity,"",3600,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+3200,Current Year Earnings,equity,"",3600,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+3300,Owner's Equity - Capital (Sole Prop),equity,"",3200,9946,true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+3310,Owner's Equity - Drawings (Sole Prop),equity,"",3200,9943,true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+3400,Dividends Declared,equity,"",3600,"",true,false,false,2025-12-02 08:39:18.326057,2025-12-02 08:39:18.326057
+4000,Sales - Food,revenue,"",8000,8000,true,false,false,2025-11-12 01:23:03.593031,2025-12-02 07:55:36.301051
+4010,Sales - Beverage,revenue,"",8000,8000,true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+4020,Sales - Supplements,revenue,"",8000,8000,true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+4030,Sales - Retail Goods,revenue,"",8000,8000,true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+4090,Income - To Be Reviewed,revenue,"",8000,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+4100,Sales - Online (Shopify),revenue,"",8000,8000,true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+4200,Sales - Shipping Income,revenue,"",8000,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+4300,Sales - Gift Cards Sold,revenue,"",8000,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+4400,Tip Income,revenue,"",8000,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+4500,Gift Card Breakage Revenue,revenue,"",8000,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+4600,Interest & Investment Income,revenue,"",8090,"",true,false,false,2025-12-02 08:39:18.326057,2025-12-02 08:39:18.326057
+4900,Sales Returns & Allowances,revenue,"",8000,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+4910,Discounts Given,revenue,"",8000,"",true,false,false,2025-12-02 08:39:18.326057,2025-12-02 08:39:18.326057
+5000,COGS - Food,expense,"",8300,8518,true,true,false,2025-11-12 01:23:03.593031,2025-12-02 07:55:36.301051
+5001,COGS - Food - Hot Dogs,expense,5000,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5002,COGS - Food - Sandwiches,expense,5000,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5003,COGS - Food - Pizza,expense,5000,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5004,COGS - Food - Frozen,expense,5000,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5005,COGS - Food - Bakery,expense,5000,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5006,COGS - Food - Dairy,expense,5000,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5007,COGS - Food - Meat/Deli,expense,5000,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5008,COGS - Food - Produce,expense,5000,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5009,COGS - Food - Cooking Oil/Fats,expense,5000,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5010,COGS - Beverage,expense,"",8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5011,COGS - Beverage - Soda,expense,5010,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5012,COGS - Beverage - Water,expense,5010,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5013,COGS - Beverage - Energy Drinks,expense,5010,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5014,COGS - Beverage - Sports Drinks,expense,5010,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5015,COGS - Beverage - Juice,expense,5010,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5016,COGS - Beverage - Coffee/Tea,expense,5010,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5017,COGS - Beverage - Milk Products,expense,5010,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5018,COGS - Beverage - Alcohol,expense,5010,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5019,COGS - Beverage - Other,expense,5010,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5020,COGS - Supplements,expense,"",8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5021,COGS - Supplements - Protein,expense,5020,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5022,COGS - Supplements - Vitamins,expense,5020,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5023,COGS - Supplements - Pre-Workout,expense,5020,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5024,COGS - Supplements - Recovery,expense,5020,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5025,COGS - Supplements - Sports Nutrition,expense,5020,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5029,COGS - Supplements - Other,expense,5020,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5030,COGS - Retail Goods,expense,"",8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5031,COGS - Retail - Snacks/Chips,expense,5030,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5032,COGS - Retail - Candy/Chocolate,expense,5030,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5033,COGS - Retail - Health Products,expense,5030,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5034,COGS - Retail - Accessories,expense,5030,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5035,COGS - Retail - Apparel,expense,5030,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5036,COGS - Retail - Pokemon TCG,expense,5030,8320,"",true,true,false,2025-12-04 07:40:29.734724,2025-12-04 07:40:29.734724
+5037,COGS - Retail - Sports Cards,expense,5030,8320,"",true,true,false,2025-12-04 07:40:29.734724,2025-12-04 07:40:29.734724
+5038,COGS - Retail - Collectibles/Funko,expense,5030,8320,"",true,true,false,2025-12-04 07:40:29.734724,2025-12-04 07:40:29.734724
+5039,COGS - Retail - Other,expense,5030,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5099,COGS - Food - Other,expense,5000,8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5100,Freight In,expense,"",8300,8518,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5200,Packaging & Supplies,expense,"",8810,8810,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5201,Packaging - Containers/Cups,expense,5200,8810,8810,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5202,Packaging - Bags/Wrapping,expense,5200,8810,8810,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5203,Packaging - Utensils/Straws,expense,5200,8810,8810,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5204,Supplies - Cleaning,expense,5200,8810,8810,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5205,Supplies - Paper Products,expense,5200,8810,8810,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5206,Supplies - Kitchen,expense,5200,8810,8810,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5209,Supplies - Other,expense,5200,8810,8810,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5300,Merchant Processing Fees,expense,"",8810,8860,true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5310,Shopify Payment Fees,expense,"",8810,8860,true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5320,Chargebacks & Disputes,expense,"",8810,8860,true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+5400,Inventory Shrinkage/Spoilage,expense,"",8300,"",true,true,false,2025-12-02 08:39:18.326057,2025-12-02 08:39:18.326057
+5410,Purchase Returns & Allowances,expense,"",8300,"",true,true,false,2025-12-02 08:39:18.326057,2025-12-02 08:39:18.326057
+6000,Bank Charges & Fees,expense,"",8860,8690,true,false,false,2025-11-21 13:45:53.438153,2025-12-02 07:55:36.301051
+6100,Rent,expense,"",9280,9200,true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+6150,Shipping & Delivery Expense,expense,"",9270,"",true,false,false,2025-12-02 08:26:07.955195,2025-12-02 08:26:07.955195
+6200,Utilities - Electricity,expense,"",9270,9220,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+6210,Payment Processing Fees,expense,"",8710,"",true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+6220,Utilities - Water,expense,"",9270,9220,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+6225,Security/Alarm Monitoring,expense,"",9270,"",true,true,false,2025-12-02 08:39:18.326057,2025-12-02 08:39:18.326057
+6230,Utilities - Internet,expense,"",9270,9136,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+6240,Utilities - Phone,expense,"",9270,9136,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+6300,Repairs & Maintenance,expense,"",9281,9281,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+6350,Small Tools & Equipment,expense,"",8811,"",true,false,false,2025-12-02 08:26:07.955195,2025-12-02 08:26:07.955195
+6400,Insurance - Business,expense,"",9804,9804,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+6410,Insurance - Vehicle,expense,"",9804,9804,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+6500,Advertising & Promotion,expense,"",8520,8521,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+6505,Sponsorships & Product Giveaways,expense,"",8520,8521,true,true,false,2025-12-04 07:48:57.36057,2025-12-04 07:48:57.36057
+6510,Accounting & Bookkeeping Fees,expense,"",8860,"",true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+6520,Legal Fees,expense,"",8860,"",true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+6521,Employee Events,expense,"",8520,8520,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+6530,Travel (100% Deductible),expense,"",9200,"",true,true,false,2025-12-02 08:34:03.842026,2025-12-02 08:34:03.842026
+6550,Shipping & Delivery Expense,expense,"",8810,"",true,true,false,2025-12-02 08:34:03.842026,2025-12-02 08:34:03.842026
+6600,Office Supplies,expense,"",8810,9270,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+6610,Computer Hardware Expense,expense,"",9270,"",true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+6620,Software & SaaS Expense,expense,"",9270,"",true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+6700,Professional Fees - Accounting,expense,"",9060,9060,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+6710,Professional Fees - Legal,expense,"",9060,9060,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+6800,Licenses & Permits,expense,"",8760,8760,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+7000,Salaries & Wages,expense,"",9060,9060,true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+7100,CPP Employer Portion,expense,"",9060,9060,true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+7110,Meals & Entertainment,expense,"",8523,8523,true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+7200,Depreciation Expense (CCA),expense,"",8670,"",true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+7210,Amortization Expense,expense,"",8670,"",true,false,false,2025-12-02 08:26:07.955195,2025-12-02 08:26:07.955195
+7300,Training & Development,expense,"",9060,"",true,true,false,2025-12-02 08:34:03.842026,2025-12-02 08:34:03.842026
+8000,Depreciation Expense - Equipment,expense,"",8670,8670,true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+8010,Depreciation Expense - Vehicles,expense,"",8670,8670,true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+8020,Amortization Expense - Leasehold,expense,"",8670,8670,true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+8100,Interest Expense - Bank,expense,"",8710,8710,true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+8110,Interest Expense - Credit Card,expense,"",8710,8710,true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+8200,Workers Compensation (WCB),expense,"",8360,9060,true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+8300,Training & Development,expense,"",8811,"",true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+8400,Foreign Exchange Gain/Loss,expense,"",8230,"",true,false,false,2025-12-02 08:39:18.326057,2025-12-02 08:39:18.326057
+8500,Corporate Income Tax Expense,expense,"",9990,"",true,false,false,2025-12-02 08:39:18.326057,2025-12-02 08:39:18.326057
+8900,Miscellaneous Expense,expense,"",8810,9270,true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+8950,Cash Over/Short,expense,"",8810,"",true,false,false,2025-12-02 08:39:18.326057,2025-12-02 08:39:18.326057
+9000,Deposits - Bottle/Container,expense,"",8810,8518,true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+9100,Pending Receipt - No ITC,expense,"",8810,"",true,false,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+9200,Fuel Pending Mileage Conversion - No ITC,expense,"",9270,"",true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+9270,Motor Vehicle Expense - Mileage Reimbursement,expense,"",9270,"",true,true,false,2025-12-02 07:55:36.301051,2025-12-02 07:55:36.301051
+9900,Personal Expenses - Non-Business,expense,"",8810,"",true,false,false,2025-12-11 10:10:19.429589,2025-12-11 10:10:19.429589
+9999,Inactive Account,expense,"","","",false,false,false,2025-11-21 13:45:53.438153,2025-11-21 13:45:53.438153

@@ -1,0 +1,37 @@
+30 Jan 2026 14587430 Canada Inc. Yr.end: 31-05-2025 Acct.#748003142RC0001
+Protected B when completed
+Part 2 – Calculation of Part IV tax payable (continued)
+If your tax year begins after 2018, complete the following part to determine the required amount of Part IV taxes payable in order to calculate the
+eligible refundable dividend tax on hand (ERDTOH) at the end of the tax year.
+Part IV tax before deductions on taxable dividends received from connected corporations (total of column L in part 1) . . . . . . . . . . . 2E
+Amount 4A from Schedule 43 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2F
+Part IV tax payable on taxable dividends received from connected corporations
+(amount 2E minus amount 2F, if negative enter "0") . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2G
+(enter at amount C on page 7 of the T2 return)
+Part IV tax on eligible dividends received from non-connected corporations (amount 1J in part 1) . . . . . . . . . . . . . . . . . . . . . . . . . . . 2H
+Amount 4C from Schedule 43 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2I
+Part IV tax payable on taxable dividends received from non-connected corporations
+(amount 2H minus amount 2I, if negative enter "0") . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2J
+(enter at amount D on page 7 of the T2 return)
+Part 3 – Taxable dividends paid in the tax year that qualify for a dividend refund
+If your corporation's tax year-end is different than that of the recipient corporation with which you are connected, your corporation could have paid
+dividends in more than one tax year of the recipient corporation. If so, use a separate line to provide the information according to each tax year of the
+recipient corporation.
+M N O P Q
+Name of recipient corporation with which you are Business number Tax year-end of recipient Taxable dividends Eligible dividends
+connected corporation in which the paid to recipient included in
+dividends in column P were corporations with which column P
+received YYYYMMDD you are connected
+400 410 420 430 440
+(Total of column P) (Total of column Q)
+Total taxable dividends paid in the tax year to other than connected corporations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .450 36,900
+Eligible dividends included in line 450 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .455
+Total taxable dividends paid in the tax year that qualify for a dividend refund (total of column P plus line 450) . . . . . . . . . . . . . .460 36,900
+Total eligible dividends paid in the tax year (total of column Q plus line 455) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .465
+Total non-eligible taxable dividends paid in the tax year (line 460 minus line 465) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .470 36,900
+Complete this part to determine the following amounts in order to calculate the dividend refund.
+Line 465 multiplied by 38 1/3% . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3A
+(enter at amount AA on page 7 of the T2 return)
+Line 470 multiplied by 38 1/3% . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14,145 3B
+(enter at amount DD on page 7 of the T2 return)
+T2 SCH 3 E (22) VVVeeerrrsssiiiooonnn 222999...000111 UUUFFF222777 Page 3 of 4

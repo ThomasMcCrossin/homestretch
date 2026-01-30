@@ -1,0 +1,646 @@
+id,bank_txn_id,entity,txn_category,explanation,wave_bill_ids,verified
+1,377,DWAYNE,OWNER_DRAW,"Owner draw to Dwayne - $20,000",,1
+2,688,DWAYNE,OWNER_DRAW,"Owner draw to Dwayne - $5,000",,1
+3,1085,THOMAS,PAYROLL,"Payroll to Thomas - $4,321.07",,1
+4,1086,DWAYNE,LOAN_ISSUED,"Shareholder loan to Dwayne - $9,000",,1
+5,1090,CORP,DONATION,Donation to Relay for Life (Canadian Cancer Society) - $110.00,,1
+6,1645,UNKNOWN,REIMBURSEMENT,Expense reimbursement (Wave bill 70),70,1
+7,1542,UNKNOWN,REIMBURSEMENT,Expense reimbursement (Wave bill 110),110,1
+8,1478,DWAYNE,REIMBURSEMENT,Expense reimbursement (Wave bill 111),111,1
+9,1447,UNKNOWN,REIMBURSEMENT,Expense reimbursement (Wave bill 145),145,1
+10,1148,THOMAS,REIMBURSEMENT,Expense reimbursement (Wave bill 276),276,1
+11,1074,UNKNOWN,REIMBURSEMENT,Expense reimbursement (Wave bill 328),328,1
+12,782,UNKNOWN,REIMBURSEMENT,Expense reimbursement (Wave bill 495),495,1
+13,683,DWAYNE,REIMBURSEMENT,Expense reimbursement (Wave bill 525),525,1
+14,1669,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $127.50,,1
+15,1658,DWAYNE,REIMBURSEMENT,Linked to Wave bill(s): 25,25,1
+16,1659,DWAYNE,REIMBURSEMENT,Linked to Wave bill(s): 24,24,1
+17,1660,DWAYNE,REIMBURSEMENT,Linked to Wave bill(s): 7,7,1
+18,1661,DWAYNE,REIMBURSEMENT,Linked to Wave bill(s): 8,8,1
+19,1662,DWAYNE,REIMBURSEMENT,Linked to Wave bill(s): 5,5,1
+20,1663,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $222.21,,1
+21,1647,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $118.37,,1
+22,1639,DWAYNE,RENT_REIMBURSEMENT,Rent reimbursement to Dwayne for June 2023 Town of Amherst full rent ($700 + $105 HST = $805),1,1
+23,1640,DWAYNE,REIMBURSEMENT,"Reimbursement for: Walmart - Bill (Sep 5, 2023 placeholder)",,1
+24,1641,DWAYNE,REIMBURSEMENT,Expense reimbursement (Wave bill 42),42,1
+25,1630,CORP,BANK_FEE,CIBC per-transfer fee (account not unlimited at the time),,1
+26,1627,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $263.60,,1
+27,1622,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $266.46,,1
+28,1617,THOMAS,REIMBURSEMENT,Thomas reimbursement for: GFS - Bill (cash off books),,1
+29,1618,DWAYNE,REIMBURSEMENT,Linked to Wave bill(s): 4,4,1
+30,1615,DWAYNE,REIMBURSEMENT,"Reimbursement to Dwayne: GFS damaged oil, chicken, cheese curds salvage COGS $862.50 (no HST placeholder)",768,1
+31,1612,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $170.36,,1
+32,1566,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $266.46,,1
+35,1572,DWAYNE,REIMBURSEMENT,Linked to Wave bill(s): 746,746,1
+36,1576,DWAYNE,REIMBURSEMENT,Linked to Wave bill(s): 747,747,1
+37,1546,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $310.03,,1
+38,1536,DWAYNE,REIMBURSEMENT,Linked to Wave bill(s): 748,748,1
+39,1524,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $352.29,,1
+43,1509,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $271.40,,1
+44,1510,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Maddison Troop - $59.02,,1
+45,1511,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $264.97,,1
+46,1503,DWAYNE,REIMBURSEMENT,Reimbursement for: Curly's Sports and Supplements - Bill 1994069 (PDF; missed HST FY2024),,1
+47,1504,DWAYNE,REIMBURSEMENT,Linked to Wave bill(s): 751,751,1
+48,1498,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $170.36,,1
+49,1487,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Maddison Troop - $77.47,,1
+50,1488,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $211.95,,1
+51,1485,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $372.67,,1
+52,1477,DWAYNE,REIMBURSEMENT,Linked to Wave bill(s): 752,752,1
+53,1465,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $159.96,,1
+54,1448,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $72.25,,1
+55,1449,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $194.62,,1
+59,1444,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $473.50,,1
+60,1446,UNKNOWN,DONATION,Sponsorship of kid's hockey team/jersey (Tim Rich),,1
+61,1438,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $146.10,,1
+62,1430,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $495.00,,1
+64,1423,DWAYNE,REIMBURSEMENT,Linked to Wave bill(s): 64,64,1
+65,1418,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $177.19,,0
+66,1408,DWAYNE,REIMBURSEMENT,Linked to Wave bill(s): 753,753,1
+67,1390,DWAYNE,REIMBURSEMENT,Linked to Wave bill(s): 126,126,1
+68,1382,DWAYNE,RENT_REIMBURSEMENT,Rent reimbursement to Dwayne for Feb 2024 Town of Amherst rent (paid in advance),191,1
+69,1380,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $592.18,,0
+70,1364,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $101.59,,0
+72,1366,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $41.01,,0
+73,1367,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $91.45,,0
+74,1362,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $114.82,,0
+75,1350,THOMAS,REIMBURSEMENT,Reimbursement to Thomas: FB marketplace hot water heater ($40 no tax placeholder),769,1
+76,1352,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $621.34,,0
+77,1353,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $279.05,,0
+78,1329,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $169.75,,0
+79,1323,DWAYNE,REIMBURSEMENT,Linked to Wave bill(s): 166,166,1
+80,1314,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $726.68,,0
+81,1315,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $240.85,,0
+82,1307,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $285.98,,0
+83,1285,DWAYNE,REIMBURSEMENT,Linked to Wave bill(s): 754,754,1
+84,1276,THOMAS,PAYROLL_REIMBURSE,Payroll reimbursement for January (confirmed),,1
+86,1278,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $893.62,,0
+87,1279,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $246.11,,0
+88,1280,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $73.19,,0
+89,1266,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $17.59,,0
+90,1258,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $200.02,,0
+91,1260,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $111.62,,0
+93,1228,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $1305.38,,0
+95,1238,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $388.82,,0
+96,1239,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $223.32,,0
+97,1240,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $168.79,,0
+98,1212,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $169.75,,0
+99,1213,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $189.45,,0
+100,1196,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $79.04,,0
+101,1197,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $1277.17,,0
+102,1198,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $263.63,,0
+103,1199,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $151.02,,0
+104,1182,VENDOR,VENDOR_ETRANSFER,Markis Bus Tours payment (Wave bill 277),,1
+105,1178,THOMAS,PAYROLL_REIMBURSE,"Payroll reimbursement, matches CRA export Payment Mar 2024, received 2024-04-02",,1
+106,1179,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $49.09,,0
+107,1163,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $1065.27,,0
+108,1164,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $73.19,,0
+109,1165,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $119.31,,0
+110,1152,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $257.05,,0
+111,1153,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $233.39,,0
+112,1132,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $844.09,,0
+113,1133,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $178.23,,0
+114,1134,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $297.54,,0
+115,1128,VENDOR,VENDOR_ETRANSFER,Facebook Marketplace merchandising (Wave bill 725),,1
+116,1122,THOMAS,PAYROLL_REIMBURSE,"Payroll reimbursement, matches CRA export Payment Apr 2024, received 2024-05-01",,1
+117,1113,THOMAS,RENT_REIMBURSEMENT,Rent reimbursement to Thomas: $402.50 split payment (1/2) toward $805 full rent (paired with bank_txn_id 1114),323,1
+118,1114,THOMAS,RENT_REIMBURSEMENT,Rent reimbursement to Thomas: $402.50 split payment (2/2) toward $805 full rent (paired with bank_txn_id 1113),323,1
+121,1077,DWAYNE,RENT_REIMBURSEMENT,Rent reimbursement to Dwayne: $402.50 split payment (1/2) toward $805 rent (other half via bank_txn_id 1042 to Thomas),324,1
+122,1071,THOMAS,REIMBURSEMENT,Linked to Wave bill(s): 758,758,1
+125,1051,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kaylee Gallagher - $73.19,,0
+126,1060,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $81.83,,0
+127,1061,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $73.19,,0
+128,1042,THOMAS,RENT_REIMBURSEMENT,"Linked to Wave bill(s): 324,345","324,345",1
+129,1043,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $68.86,,0
+130,1044,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $265.82,,0
+131,1045,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $307.45,,0
+132,1036,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $412.29,,0
+133,1026,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $134.68,,0
+134,1027,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $201.46,,0
+135,1028,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $77.51,,0
+136,1029,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kaylee Gallagher - $78.84,,0
+137,1003,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $73.19,,0
+138,1004,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $409.97,,0
+139,1005,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $198.09,,0
+140,1006,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $142.85,,0
+141,1007,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kaylee Gallagher - $64.43,,0
+144,988,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kaylee Gallagher - $90.49,,0
+145,989,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $318.40,,0
+146,990,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $73.19,,0
+147,991,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $259.25,,0
+148,959,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $737.76,,0
+149,960,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $73.19,,0
+150,961,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $363.34,,0
+151,962,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $178.40,,0
+152,963,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kaylee Gallagher - $63.36,,0
+153,965,THOMAS,PAYROLL_REIMBURSE,"Payroll reimbursement, matches CRA export Payment Sept 2024, received 2024-10-07",,1
+154,946,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $142.36,,0
+155,947,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kaylee Gallagher - $116.42,,0
+156,948,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $253.99,,0
+157,949,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $202.83,,0
+158,925,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $899.45,,0
+159,926,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kaylee Gallagher - $73.19,,0
+160,927,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $174.07,,0
+161,928,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $421.48,,0
+162,929,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $187.05,,0
+164,895,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $329.65,,0
+165,896,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $349.43,,0
+166,897,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kaylee Gallagher - $125.07,,0
+167,898,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $191.37,,0
+168,867,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $389.34,,0
+169,868,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $886.31,,0
+170,869,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $268.46,,0
+171,870,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $240.85,,0
+172,840,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $367.37,,0
+173,845,THOMAS,REIMBURSEMENT,Linked to Wave bill(s): 713,713,1
+174,849,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kaylee Gallagher - $81.83,,0
+175,850,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $212.51,,0
+176,851,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $279.84,,0
+177,817,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $93.62,,0
+178,818,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $421.37,,0
+179,826,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kaylee Gallagher - $176.96,,0
+180,827,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $176.96,,0
+181,828,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $258.37,,0
+182,830,VENDOR,DUCKS_REVENUE_RETURN,Amherst Ducks ticket sales payout (online ticket sales remitted),,1
+183,814,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $779.21,,0
+184,807,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $240.41,,0
+185,808,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $181.77,,0
+186,809,VENDOR,VENDOR_ETRANSFER,Underground Graffix stickers (Wave bill 730),,1
+187,802,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kaylee Gallagher - $63.36,,0
+188,803,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $142.36,,0
+189,791,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $909.59,,0
+190,792,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $449.69,,0
+191,793,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $274.50,,0
+192,794,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $450.67,,0
+194,767,VENDOR,VENDOR_ETRANSFER,Vendor payment to LIL' EM'S - $46.00 (split for Wave bill 514),514,1
+195,768,VENDOR,VENDOR_ETRANSFER,Vendor payment to LIL' EM'S - $46.00 (split for Wave bill 514),514,1
+196,770,VENDOR,DUCKS_REVENUE_RETURN,Amherst Ducks ticket sales payout (online ticket sales remitted),,1
+197,762,THOMAS,RENT_REIMBURSEMENT,"Linked to Wave bill(s): 455,501","455,501",1
+198,748,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $279.84,,0
+199,749,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kaylee Gallagher - $133.72,,0
+200,750,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $282.48,,0
+201,751,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kaylee Gallagher - $29.25,,0
+202,752,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $226.38,,0
+203,757,VENDOR,DUCKS_REVENUE_RETURN,Amherst Ducks ticket sales payout (online ticket sales remitted),,1
+204,731,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $642.34,,0
+205,732,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kaylee Gallagher - $238.53,,0
+206,733,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $380.85,,0
+207,734,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $428.64,,0
+208,735,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $309.90,,0
+209,737,CORP,DONATION,U9 Dev Hockey donation (Wave bill 726),,1
+211,716,DWAYNE,REIMBURSEMENT,Linked to Wave bill(s): 538,538,1
+212,717,DWAYNE,REIMBURSEMENT,Linked to Wave bill(s): 743,743,1
+214,708,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $182.72,,0
+215,709,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $142.36,,0
+216,702,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $388.50,,0
+217,703,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $73.19,,0
+219,690,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $249.23,,0
+220,691,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $196.22,,0
+221,671,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kaylee Gallagher - $93.90,,0
+222,672,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $50.45,,0
+223,673,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $61.44,,0
+224,674,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $230.95,,0
+225,675,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $534.30,,0
+226,676,THOMAS,OWNER_DRAW,"Owner draw to Thomas - $1,000",,1
+227,660,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kaylee Gallagher - $173.15,,0
+228,661,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $242.35,,0
+229,662,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $276.14,,0
+230,663,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $366.92,,0
+231,664,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $431.45,,0
+233,632,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Mary Butcher - $75.52,,0
+234,633,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kaylee Gallagher - $75.52,,0
+235,634,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $228.81,,0
+236,635,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $201.62,,0
+237,636,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $348.37,,0
+238,637,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $388.25,,0
+239,639,VENDOR,DUCKS_REVENUE_RETURN,Amherst Ducks ticket sales payout (online ticket sales remitted),,1
+241,619,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Mary Butcher - $72.07,,0
+242,620,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kaylee Gallagher - $72.07,,0
+243,621,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $169.56,,0
+244,622,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $319.65,,0
+245,623,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $402.44,,0
+246,624,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $370.62,,0
+247,592,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $51.97,,0
+248,593,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $56.30,,0
+249,594,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $251.98,,0
+250,595,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $328.14,,0
+251,579,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Mary Butcher - $69.01,,0
+252,580,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $170.00,,0
+253,581,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $224.56,,0
+254,582,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $375.37,,0
+255,583,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $430.22,,0
+256,546,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $277.27,,0
+257,547,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $245.62,,0
+258,548,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $357.30,,0
+259,549,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $472.74,,0
+260,535,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Mary Butcher - $87.80,,0
+261,536,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $149.88,,0
+262,537,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $144.65,,0
+263,538,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $299.02,,0
+264,539,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $290.18,,0
+265,527,THOMAS,REIMBURSEMENT,Reimbursement to Thomas for Esso bill (row 613),,1
+266,506,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $79.45,,0
+267,507,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $188.44,,0
+268,508,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $201.01,,0
+269,509,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $348.55,,0
+270,489,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $181.69,,0
+271,491,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $208.40,,0
+272,492,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $99.44,,0
+273,493,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $208.40,,0
+274,494,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $342.24,,0
+275,495,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $385.75,,0
+276,482,THOMAS,SHAREHOLDER_PAYROLL,Thomas payroll - $1250.00 (confirmed),,1
+278,476,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Mary Butcher - $81.38,,0
+279,477,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $147.99,,0
+280,478,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $299.05,,0
+281,479,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $336.98,,0
+282,435,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $172.41,,0
+283,436,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Mary Butcher - $103.47,,0
+284,437,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $219.04,,0
+285,438,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $296.37,,0
+286,419,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Mary Butcher - $73.25,,0
+287,420,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $138.30,,0
+288,421,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $152.99,,0
+289,422,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $225.59,,0
+290,408,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $118.54,,0
+291,409,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $302.21,,0
+292,410,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $180.86,,0
+293,388,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $96.26,,0
+294,389,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $319.15,,0
+295,390,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $310.10,,0
+296,384,THOMAS,SHAREHOLDER_PAYROLL,Thomas payroll - $1250.00 (confirmed),,1
+297,378,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $127.02,,0
+298,379,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $219.74,,0
+299,380,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $249.14,,0
+300,364,THOMAS,OWNER_DRAW,"Owner draw to Thomas - $2,900",,1
+301,365,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $80.89,,0
+302,362,THOMAS,LOAN_ISSUED,"Shareholder loan to Thomas - $2,000",,1
+304,358,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $111.64,,0
+305,351,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $65.47,,0
+306,349,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $127.02,,0
+307,329,UNKNOWN,UNKNOWN_ETRANSFER,Unknown e-transfer to 'ONE-TIME CONTACT AUCTIONS' - $783.75,,0
+308,327,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $127.02,,0
+309,328,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $100.35,,0
+310,324,UNKNOWN,UNKNOWN_ETRANSFER,Unknown e-transfer to 'ONE-TIME CONTACT TERRI' - $100.00,,0
+311,314,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $127.02,,0
+312,304,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $65.47,,0
+313,305,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Tyson Ogden - $64.63,,0
+314,299,VENDOR,VENDOR_ETRANSFER,Amherst Ramblers - Marketing: logo on ice sponsorship - $1250.00,729,1
+315,300,VENDOR,VENDOR_ETRANSFER,Amherst Ramblers - Marketing: golf tournament sponsorship - $150.00,730,1
+316,296,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $65.47,,0
+317,293,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $65.47,,0
+318,294,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $50.64,,0
+319,290,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $127.02,,0
+320,288,DWAYNE,SHAREHOLDER_UNMATCHED,Unmatched e-transfer to DWAYNE - $34.02 (needs invoice),,0
+321,287,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $127.02,,0
+322,284,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $134.71,,0
+323,281,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $192.38,,0
+324,275,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $203.90,,0
+325,276,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $65.47,,0
+326,274,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $127.02,,0
+327,258,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $219.28,,0
+328,259,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $88.58,,0
+329,260,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $274.64,,0
+330,255,UNKNOWN,UNKNOWN_ETRANSFER,Unknown e-transfer to 'ONE-TIME CONTACT DEAN TUP' - $100.00,,0
+331,248,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $104.55,,0
+332,249,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Mary Butcher - $88.50,,0
+333,250,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $218.18,,0
+334,251,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $435.36,,0
+335,252,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $614.17,,0
+336,234,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $194.66,,0
+337,235,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $134.08,,0
+338,236,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $172.09,,0
+339,224,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Mary Butcher - $60.67,,0
+340,225,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $128.34,,0
+341,226,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $342.11,,0
+342,227,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $494.27,,0
+343,209,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kensie Atkinson - $175.59,,0
+344,210,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Mary Butcher - $77.14,,0
+345,211,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $227.61,,0
+346,212,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $306.31,,0
+347,213,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $448.11,,0
+348,189,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $283.46,,0
+349,190,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kensie Atkinson - $132.59,,0
+350,191,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $275.29,,0
+351,192,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $405.19,,0
+352,175,UNKNOWN,UNKNOWN_ETRANSFER,Unknown e-transfer to 'ONE-TIME CONTACT MATT SEL' - $300.00,,0
+353,176,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Mary Butcher - $154.70,,0
+354,177,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $388.23,,0
+355,178,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kensie Atkinson - $213.10,,0
+356,179,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $289.17,,0
+357,180,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $388.81,,0
+358,169,VENDOR,VENDOR_ETRANSFER,Vendor payment to COVERED BRIDGE - $933.43 (needs Wave bill),,0
+359,158,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Mary Butcher - $312.58,,0
+360,159,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $490.65,,0
+361,160,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kensie Atkinson - $540.34,,0
+362,161,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $571.76,,0
+363,162,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $637.51,,0
+364,130,UNKNOWN,UNKNOWN_ETRANSFER,Unknown e-transfer to 'ONE-TIME CONTACT AMHERST' - $142.50,,0
+365,113,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Mary Butcher - $192.26,,0
+366,114,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $509.10,,0
+367,115,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kensie Atkinson - $335.82,,0
+368,116,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $407.07,,0
+369,117,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $552.45,,0
+370,100,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Mary Butcher - $142.05,,0
+371,101,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $455.97,,0
+372,102,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kensie Atkinson - $229.48,,0
+373,103,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $470.07,,0
+374,104,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $493.88,,0
+375,87,VENDOR,VENDOR_ETRANSFER,Vendor payment to COVERED BRIDGE - $364.07 (needs Wave bill),,0
+376,74,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Mary Butcher - $70.46,,0
+377,75,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $364.73,,0
+378,76,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kensie Atkinson - $110.87,,0
+379,77,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $333.34,,0
+380,78,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $366.25,,0
+381,80,UNKNOWN,UNKNOWN_ETRANSFER,Unknown e-transfer to 'ONE-TIME CONTACT' - $132.00,,0
+382,52,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kensie Atkinson - $339.16,,0
+383,53,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Mary Butcher - $168.71,,0
+384,54,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $394.90,,0
+385,55,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kensie Atkinson - $238.02,,0
+386,56,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $424.46,,0
+387,57,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $492.35,,0
+388,39,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Amanda Willet - $161.74,,0
+389,40,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $423.42,,0
+390,41,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kensie Atkinson - $295.64,,0
+391,42,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $363.61,,0
+392,43,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $375.55,,0
+393,12,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Amanda Willet - $74.47,,0
+394,13,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kyler Edwards - $345.77,,0
+395,14,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Kensie Atkinson - $199.98,,0
+396,15,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Jesse Goodwin - $305.74,,0
+397,16,EMPLOYEE,EMPLOYEE_PAYROLL,Employee payroll/tips to Anthony MacDonald - $332.12,,0
+398,5,DWAYNE,SHAREHOLDER_UNMATCHED,Unmatched e-transfer to DWAYNE - $914.18 (needs invoice),,0
+399,3,UNKNOWN,UNKNOWN_ETRANSFER,Unknown e-transfer to 'ONE-TIME CONTACT JAMIE MA' - $415.30,,0
+400,10,CORP,PAYROLL_REMIT,CRA payroll remittance - $4.00,,0
+401,27,CORP,PAYROLL_REMIT,CRA payroll remittance for 2025-10,,1
+402,28,CORP,PAYROLL_REMIT,CRA payroll remittance for 2025-09,,1
+403,257,CORP,PAYROLL_REMIT,CRA payroll remittance - $2.00,,0
+404,279,CORP,PAYROLL_REMIT,CRA payroll remittance: Payment July 2025 (CRA received 2025-08-07),,1
+405,295,CORP,PAYROLL_REMIT,CRA payroll remittance - $4.00,,0
+406,298,CORP,GST_HST_REMIT,CRA GST/HST payment for period end 2025-03-31 (posted 2025-07-02),,1
+407,330,CORP,PAYROLL_REMIT,CRA payroll remittance: Payment May 2025 (CRA received 2025-06-04),,1
+408,338,CORP,PAYROLL_REMIT,CRA payroll remittance - $2.00,,0
+409,352,CORP,PAYROLL_REMIT,CRA payroll remittance: Payment Apr 2025 (CRA received 2025-05-06),,1
+410,360,CORP,BANK_FEE,CIBC GPFS service charge,,1
+411,375,CORP,GST_HST_REMIT,CRA GST/HST payment for period end 2024-12-31 (posted 2025-04-25),,1
+412,387,CORP,PAYROLL_REMIT,CRA payroll remittance: Payment Mar 2025 (CRA received 2025-04-14),,1
+413,416,CORP,BANK_FEE,CIBC GPFS service charge,,1
+414,458,CORP,PAYROLL_REMIT,CRA payroll arrears payment (CRA received 2025-03-17),,1
+415,503,CORP,PAYROLL_REMIT,CRA payroll remittance: Payment Feb 2025 (CRA received 2025-03-04),,1
+416,504,CORP,PAYROLL_REMIT,CRA payroll remittance: Late year-end payment 2024 (CRA received 2025-03-04),,1
+417,505,CORP,BANK_FEE,CIBC GPFS service charge,,1
+418,568,CORP,PAYROLL_REMIT,CRA payroll remittance: Payment Jan 2025 (CRA received 2025-02-11),,1
+419,591,CORP,BANK_FEE,CIBC GPFS service charge,,1
+420,657,CORP,PAYROLL_REMIT,CRA payroll remittance: Payment Dec 2024 (CRA received 2025-01-15),,1
+421,689,CORP,BANK_FEE,CIBC GPFS service charge,,1
+422,761,CORP,PAYROLL_REMIT,CRA payroll remittance: Payment Nov 2024 (CRA received 2024-12-05),,1
+423,789,CORP,BANK_FEE,CIBC GPFS service charge,,1
+424,798,CORP,GST_HST_REMIT,CRA GST/HST payment for period end 2024-09-30 (posted 2024-12-04),,1
+425,834,CORP,GST_HST_REMIT,CRA GST/HST payment for period end 2024-06-30 (posted 2024-11-18),,1
+426,835,CORP,GST_HST_REMIT,CRA GST/HST payment for period end 2024-03-31 (posted 2024-11-18),,1
+427,862,CORP,PAYROLL_REMIT,CRA payroll remittance for 2024-10,,1
+428,346,DWAYNE,OWNER_DRAW,Owner draw to Dwayne (transfer),,1
+430,1689,DWAYNE,RENT_REIMBURSEMENT,Rent reimbursement to Dwayne for July 2023 Town of Amherst rent via transfer to 00153/19-23218 ($350 + $52.50 HST = $402.50),13,1
+431,19,CORP,BANK_FEE,Bank service fee - $65.00,,1
+432,105,CORP,BANK_FEE,Bank service fee - $65.00,,1
+433,208,CORP,BANK_FEE,Bank service fee - $65.00,,1
+434,269,CORP,BANK_FEE,Bank service fee - $65.00,,1
+435,282,CORP,BANK_FEE,Bank service fee - $65.00,,1
+436,297,CORP,BANK_FEE,Bank service fee - $65.00,,1
+437,340,CORP,BANK_FEE,Bank service fee - $65.00,,1
+438,345,CORP,BANK_FEE,Bank service fee - $5.00,,1
+439,361,CORP,BANK_FEE,Bank service fee - $65.00,,1
+440,418,CORP,BANK_FEE,Bank service fee - $65.00,,1
+441,511,CORP,BANK_FEE,Bank service fee - $65.00,,1
+442,533,CORP,BANK_FEE,Bank service fee - $5.00,,1
+443,596,CORP,BANK_FEE,Bank service fee - $65.00,,1
+444,696,CORP,BANK_FEE,Bank service fee - $65.00,,1
+445,796,CORP,BANK_FEE,Bank service fee - $65.00,,1
+446,879,CORP,BANK_FEE,Bank service fee - $65.00,,1
+447,993,CORP,BANK_FEE,Bank service fee - $65.00,,1
+448,1062,CORP,BANK_FEE,Bank service fee - $65.00,,1
+449,1076,CORP,BANK_FEE,Bank service fee - $65.00,,1
+450,1082,CORP,BANK_FEE,Bank service fee - $65.00,,1
+451,1092,CORP,BANK_FEE,Bank service fee - $65.00,,1
+452,1123,CORP,BANK_FEE,Bank service fee - $65.00,,1
+453,1184,CORP,BANK_FEE,Bank service fee - $65.00,,1
+454,1264,CORP,BANK_FEE,Bank service fee - $65.00,,1
+455,1339,CORP,BANK_FEE,Bank service fee - $65.00,,1
+456,1419,CORP,BANK_FEE,Bank service fee - $65.00,,1
+457,1481,CORP,BANK_FEE,Bank service fee - $65.00,,1
+458,1543,CORP,BANK_FEE,Bank service fee - $65.00,,1
+459,1629,CORP,BANK_FEE,Bank service fee - $6.00,,1
+460,1632,CORP,BANK_FEE,Bank service fee - $2.50,,1
+461,1633,CORP,BANK_FEE,Bank service fee - $40.00,,1
+462,1676,CORP,BANK_FEE,Bank service fee - $6.00,,1
+463,1677,CORP,BANK_FEE,Bank service fee - $5.00,,1
+464,1683,CORP,BANK_FEE,Bank service fee - $6.00,,1
+465,1684,CORP,BANK_FEE,Bank service fee - $1.25,,1
+466,1685,CORP,BANK_FEE,Bank service fee - $2.00,,1
+467,1688,CORP,BANK_FEE,Bank service fee - $5.00,,1
+468,1690,CORP,BANK_FEE,Bank service fee - $6.00,,1
+469,1692,CORP,BANK_FEE,Bank service fee - $2.00,,1
+470,1693,CORP,BANK_FEE,Bank service fee - $1.25,,1
+471,383,CORP,PAYROLL_REMIT,EFT payroll/deduction remittance,,1
+472,457,CORP,PAYROLL_REMIT,EFT payroll/deduction remittance,,1
+473,487,CORP,VENDOR_PAYMENT,Sysco vendor payment,,1
+475,515,DWAYNE,REIMBURSEMENT,Reimbursement for: Curly's Sports and Supplements - Bill,,1
+476,551,CORP,PAYROLL_REMIT,EFT payroll/deduction remittance,,1
+477,569,CORP,UTILITIES,Bell Aliant phone/internet,,1
+479,643,CORP,PAYROLL_REMIT,EFT payroll/deduction remittance,,1
+480,655,CORP,INSURANCE,BFL Insurance payment,,1
+481,684,DWAYNE,REIMBURSEMENT,Reimbursement for: Curly's Sports and Supplements - Bill,,1
+482,724,CORP,PAYROLL_REMIT,EFT payroll/deduction remittance,,1
+483,781,DWAYNE,REIMBURSEMENT,Reimbursement for: Walmart - Bill,,1
+484,785,DWAYNE,REIMBURSEMENT,Reimbursement for: Dollarama - Bill,,1
+485,787,DWAYNE,REIMBURSEMENT,Reimbursement for: Curly's Sports and Supplements - Bill,,1
+486,790,DWAYNE,REIMBURSEMENT,Reimbursement for: GFS - Bill 9013824877,,1
+487,816,CORP,EFT_PAYMENT,EFT misc payment,,1
+489,884,UNKNOWN,CASH_WITHDRAWAL,ATM/branch cash withdrawal,,1
+490,894,DWAYNE,REIMBURSEMENT,Reimbursement for: Curly's Sports and Supplements - Bill,,1
+491,903,DWAYNE,REIMBURSEMENT,Reimbursement for: Curly's Sports and Supplements - Bill,,1
+492,935,CORP,PAYROLL_REMIT,EFT payroll/deduction remittance,,1
+493,937,UNKNOWN,CASH_WITHDRAWAL,ATM/branch cash withdrawal,,1
+494,953,THOMAS,REIMBURSEMENT,Thomas payment for: Shell Gas - Bill,,1
+495,954,DWAYNE,REIMBURSEMENT,Reimbursement for: Curly's Sports and Supplements - Bill 3110269,,1
+496,1052,THOMAS,REIMBURSEMENT,Thomas payment for: Facebook Marketplace - Bill,,1
+497,1057,DWAYNE,REIMBURSEMENT,Reimbursement for: Atlantic Superstore - Bill,,1
+498,1059,DWAYNE,REIMBURSEMENT,Reimbursement for: Curly's Sports and Supplements - Bill 30000969,,1
+499,1081,CORP,VENDOR_PAYMENT,Sysco vendor payment,,1
+500,1106,CORP,PAYROLL_REMIT,EFT payroll/deduction remittance,,1
+501,1109,THOMAS,REIMBURSEMENT,Thomas payment for: Bridge Workshop - Bill,,1
+502,1131,DWAYNE,REIMBURSEMENT,Reimbursement for: Curly's Sports and Supplements - Bill 25,,1
+503,1143,CORP,PAYROLL_REMIT,EFT payroll/deduction remittance,,1
+504,1151,CORP,SHOPIFY_NEGATIVE_PAYOUT,Shopify negative payout (bank debit) / fee adjustment - handled in credits reconciliation,,1
+506,1211,CORP,EFT_PAYMENT,EFT misc payment,,1
+507,1223,DWAYNE,REIMBURSEMENT,Reimbursement for: Curly's Sports and Supplements - Bill 2425069,,1
+508,1224,DWAYNE,REIMBURSEMENT,Reimbursement for: Curly's Sports and Supplements - Bill 2437469,,1
+509,1225,THOMAS,REIMBURSEMENT,Thomas payment for: Town of Amherst - Bill March Rent,,1
+510,1243,DWAYNE,REIMBURSEMENT,Reimbursement for: Curly's Sports and Supplements - Bill 2423469,,1
+511,1284,DWAYNE,REIMBURSEMENT,Reimbursement for: Curly's Sports and Supplements - Bill 2365969,,1
+512,1286,THOMAS,REIMBURSEMENT,Thomas payment for: Jeff Bembridge - Bill,,1
+513,1287,DWAYNE,REIMBURSEMENT,Reimbursement for: Electric Kitty - Bill,,1
+514,1324,THOMAS,REIMBURSEMENT,Thomas payment for: GFS - Bill,,1
+515,1351,THOMAS,REIMBURSEMENT,Thomas payment for: Town of Amherst - Bill FEbruary REnt,,1
+516,1363,CORP,INSURANCE,BFL Insurance payment,,1
+517,1396,DWAYNE,REIMBURSEMENT,Reimbursement for: Curly's Sports and Supplements - Bill 2220169,,1
+518,1492,DWAYNE,REIMBURSEMENT,Reimbursement for: Town of Amherst - Bill,,1
+519,1521,DWAYNE,REIMBURSEMENT,Reimbursement for: Curly's Sports and Supplements - Bill D1,,1
+520,1559,DWAYNE,REIMBURSEMENT,Reimbursement for: Mondoux - Bill 8100383,,1
+522,1656,VENDOR,VENDOR_PAYMENT,Covered Bridge Chips vendor,,1
+524,347,DWAYNE,LOAN_REPAID,Loan repaid by Dwayne (transfer),,1
+525,309,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+526,312,THOMAS,REIMBURSEMENT,Thomas card payment (NEO) reimbursement.,,1
+527,315,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+528,316,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+529,333,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+530,367,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+531,370,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+532,403,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+533,405,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+534,432,THOMAS,REIMBURSEMENT,Thomas card payment (NEO) reimbursement.,,1
+535,445,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+536,465,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+537,467,THOMAS,REIMBURSEMENT,Thomas card payment (NEO) reimbursement.,,1
+538,473,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+539,474,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+540,518,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+541,521,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+542,522,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+543,561,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+544,563,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+545,566,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+546,571,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+547,572,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+548,573,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+549,574,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+550,575,THOMAS,REIMBURSEMENT,Thomas card payment (NEO) reimbursement.,,1
+551,604,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+552,607,THOMAS,REIMBURSEMENT,Thomas card payment (NEO) reimbursement.,,1
+553,651,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+554,668,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+555,682,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+556,700,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+557,712,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+558,725,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+559,727,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+560,728,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+561,730,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+562,742,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+563,743,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+564,755,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+565,772,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+566,776,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+567,819,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+568,820,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+569,843,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+570,847,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+571,848,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+572,856,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+573,857,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+574,859,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+575,860,THOMAS,REIMBURSEMENT,Thomas card payment (NEO) reimbursement.,,1
+576,864,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+577,875,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+578,876,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+579,888,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+580,890,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+581,893,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+582,904,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+583,905,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+584,910,THOMAS,REIMBURSEMENT,Thomas card payment (NEO) reimbursement.,,1
+585,911,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+586,912,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+587,913,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+588,914,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+589,915,THOMAS,REIMBURSEMENT,Thomas card payment (NEO) reimbursement.,,1
+590,916,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+591,917,THOMAS,REIMBURSEMENT,Thomas card payment (NEO) reimbursement.,,1
+592,922,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+593,923,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+594,942,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+595,943,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+596,944,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+597,969,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+598,970,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+599,976,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+600,977,THOMAS,REIMBURSEMENT,Thomas card payment (NEO) reimbursement.,,1
+601,981,THOMAS,REIMBURSEMENT,Thomas card payment (NEO) reimbursement.,,1
+602,983,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+603,984,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+604,1008,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+605,1012,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+606,1013,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+607,1014,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+608,1015,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+609,1019,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+610,1038,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+611,1041,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+612,1048,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+613,1055,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+614,1058,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+615,1069,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+616,1149,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+617,1166,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+618,1173,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+619,1189,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+620,1190,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+621,1218,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+622,1229,THOMAS,REIMBURSEMENT,Thomas card payment (NEO) reimbursement.,,1
+623,1230,THOMAS,REIMBURSEMENT,Thomas card payment (NEO) reimbursement.,,1
+624,1231,THOMAS,REIMBURSEMENT,Thomas card payment (NEO) reimbursement.,,1
+625,1232,THOMAS,REIMBURSEMENT,Thomas card payment (NEO) reimbursement.,,1
+626,1233,THOMAS,REIMBURSEMENT,Thomas card payment (NEO) reimbursement.,,1
+627,1234,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+628,1247,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+629,1248,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+630,1251,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+631,1253,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+632,1273,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+633,1290,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+634,1291,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+635,1294,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+636,1296,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+637,1297,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+638,1301,THOMAS,REIMBURSEMENT,Thomas card payment (BMO) reimbursement.,,1
+639,1316,THOMAS,REIMBURSEMENT,Thomas card payment (NEO) reimbursement.,,1
+640,1317,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+641,1425,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+642,1461,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+643,1470,THOMAS,REIMBURSEMENT,Thomas card payment (TRIANGLE) reimbursement.,,1
+644,361,,BANK_FEE,April 2025 monthly account fee,,1
+645,345,,BANK_FEE,May 2025 full-service transfer fee,,1
+646,777,DWAYNE,REIMBURSEMENT,Costco split payment reimburse - bill 486,,1
+648,611,DWAYNE,REIMBURSEMENT,Costco split - cash portion reimburse - bill 575,,1
+650,512,CORP,BANK_FEE,Cash deposit fee Feb 28 2025 - $0.18,,1
+651,597,CORP,BANK_FEE,Cash deposit fee Jan 31 2025 - $8.86,,1
+652,880,CORP,BANK_FEE,Cash deposit fee Oct 31 2024 - $25.13,,1
+653,1185,CORP,BANK_FEE,Cash deposit fee Mar 28 2024 - $0.58,,1
+654,1631,CORP,BANK_FEE,Cash deposit fee Sep 29 2023 - $11.25,,1
+655,1691,CORP,BANK_FEE,Cash deposit fee Jun 30 2023 - $0.22,,1
+656,641,DWAYNE,CHANGE_FLOAT,Change float - $500 Jan 2025,,1
+657,483,DWAYNE,CHANGE_FLOAT,Change float - $500 to fund till Mar 2025,,1
+658,998,DWAYNE,CHANGE_FLOAT,Change float - $100 to fund till Sep 2024,,1
+659,997,THOMAS,CHANGE_FLOAT,Change float - $200 to fund till Sep 2024,,1
+660,1064,DWAYNE,CHANGE_FLOAT,Change float - $95 canteen change Aug 2024,,1
+661,1063,THOMAS,CHANGE_FLOAT,Change float - $105 canteen change Aug 2024,,1
+662,1080,DWAYNE,CHANGE_FLOAT,Change float - $125 to fund till Jul 2024,,1
+663,1110,THOMAS,CHANGE_FLOAT,Change float - $70 to fund till May 2024,,1
+664,1508,DWAYNE,CHANGE_FLOAT,Change float - $85 Curlys to canteen Nov 2023,,1
+665,1568,DWAYNE,CHANGE_FLOAT,Change float - $200 Oct 2023,,1
+666,1569,DWAYNE,CHANGE_FLOAT,Change float - $95 Oct 2023,,1
+667,1525,THOMAS,CHANGE_FLOAT,Change float - $75 of $95 (other $20 is Jeff Bembridge sauces bill BEMBRIDGE-SAUCES-001),,1
+668,1526,DWAYNE,CHANGE_FLOAT,Change float - $265 Nov 2023,,1
+669,1450,THOMAS,CHANGE_FLOAT,Change float - $36.50 Dec 2023,,1
+670,1451,DWAYNE,CHANGE_FLOAT,Change float - $148 Dec 2023,,1
+671,1452,DWAYNE,CHANGE_FLOAT,Change float - $100 Dec 2023,,1
+672,909,THOMAS,HST_REIMBURSEMENT,"CRA GST34 HST remittance - paid on personal card, reimbursed $3000",,1
+673,1237,THOMAS,PAYROLL_REIMBURSE,"Feb 2024 CRA payroll remittance - paid on personal card, reimbursed $558.47",,1
+674,1255,THOMAS,PAYROLL_REIMBURSE,"Jan 2024 CRA payroll remittance - paid on personal card, reimbursed $566.16",,1
+675,1365,DWAYNE,PAYROLL_REIMBURSE,"Q3/Q4 2023 CRA payroll remittance - paid on personal card, reimbursed $1541.41",,1
+676,1277,THOMAS,PAYROLL_REIMBURSE,"CRA payroll remittance arrears - paid on personal card, reimbursed $72.02",,1
+677,715,DWAYNE,REIMBURSEMENT,Costco payment correction - $12.21 Dec 2024,,1
+678,540,DWAYNE,DEPOSIT_CORRECTION,Deposit correction - excess cash transferred back to Dwayne's personal account Feb 2025,,1
+679,363,THOMAS,SHAREHOLDER_PAYROLL,Thomas payroll - $610.15 Apr 2025,,1
+680,697,THOMAS,SHAREHOLDER_PAYROLL,Thomas payroll - $1500 Dec 31 2024,,1
+681,718,THOMAS,SHAREHOLDER_PAYROLL,Thomas payroll - $1500 Dec 20 2024,,1
+682,1431,THOMAS,SHAREHOLDER_PAYROLL,Thomas payroll - $2000 Dec 27 2023,,1

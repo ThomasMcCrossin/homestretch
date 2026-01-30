@@ -1,0 +1,261 @@
+Director
+Please enter the information for each Director of the corporation.
+
+
+Officer's first name
+Thomas
+*
+ 
+
+Officer's surname
+McCrossin
+*
+ 
+
+Has there been a change of directors since the last return?
+
+No
+ 
+
+Date the director was elected
+dd-mm-yyyy
+09-12-2022
+
+ 
+
+Date the director was ceased
+dd-mm-yyyy
+09-12-2022
+
+ 
+
+Is the officer a non-resident of Canada?
+
+No
+ 
+
+Is the officer also a shareholder of the corporation?
+
+Yes
+ 
+
+Previous last name of shareholder
+ 
+
+Previous first name of shareholder
+ 
+
+Previous middle name of shareholder
+ 
+
+If the shareholder is a non-resident, enter the class and percentage of shares held
+Description
+%
+
+ 
+
+Percentage of voting shares held by shareholder
+%
+25%
+ 
+
+Percentage of common shares held by shareholder
+%
+25%
+ 
+
+Percentage of preferred shares held by shareholder
+%
+25%
+ 
+
+Social insurance number of corporate officer
+000-000-000
+XXX-XXX-XXX
+ 
+
+Officer title, office or rank
+Selection
+Vice-president
+ 
+
+Officer address
+31 Duckling Dell
+ 
+
+Additional information
+ 
+
+Name of addressee
+Thomas McCrossin
+ 
+
+City
+Amherst
+ 
+
+Province
+
+Nova Scotia
+ 
+
+State
+
+ 
+
+Country if not Canada
+
+ 
+
+Postal code
+A1A 1A1
+B4H 3Y2
+ 
+
+U.S.A. ZIP code
+ 
+
+Foreign postal code
+ 
+ 
+
+Officer's telephone number
+(902) 321-6749
+ 
+
+Officer's fax number
+(000) 000-0000
+
+
+------
+
+
+Director and signing officer
+Please enter the information for each Director and signing officer of the corporation.
+
+
+Officer's first name
+Dwayne
+*
+ 
+
+Officer's surname
+Ripley
+*
+ 
+
+Has there been a change of directors since the last return?
+
+No
+ 
+
+Date the director was elected
+dd-mm-yyyy
+08-12-2022
+
+ 
+
+Is the officer a non-resident of Canada?
+
+No
+ 
+
+Is the officer also a shareholder of the corporation?
+
+Yes
+ 
+
+Previous last name of shareholder
+ 
+
+Previous first name of shareholder
+ 
+
+Previous middle name of shareholder
+ 
+
+If the shareholder is a non-resident, enter the class and percentage of shares held
+Description
+%
+
+ 
+
+Percentage of voting shares held by shareholder
+%
+75%
+ 
+
+Percentage of common shares held by shareholder
+%
+75%
+ 
+
+Percentage of preferred shares held by shareholder
+%
+75%
+ 
+
+Social insurance number of corporate officer
+000-000-000
+XXX-XXX-XXX
+ 
+
+Officer title, office or rank
+Selection
+President
+ 
+ 
+
+Officer address
+28 Charles St
+ 
+
+Additional information
+ 
+
+Name of addressee
+Dwayne Ripley
+ 
+
+City
+Amherst
+ 
+
+Province
+
+Nova Scotia
+ 
+
+State
+
+ 
+
+Country if not Canada
+
+ 
+
+Postal code
+A1A 1A1
+B4H 3P8
+ 
+
+U.S.A. ZIP code
+ 
+
+Foreign postal code
+ 
+ 
+
+Officer's telephone number
+(902) 669-2700
+*
+ 
+
+Officer's fax number
+(000) 000-0000
+ 
+
+Date on which the return is to be signed
+dd-mm-yyyy
+27-01-2024
+

@@ -1,0 +1,88 @@
+version: 1
+
+accounts:
+  bank_account_code: "1000"
+  accounts_payable_code: "2000"
+  credit_card_payable_code: "2100"
+
+payroll:
+  wages_expense_code: "7000"
+  employer_taxes_expense_code: "7100"
+  payroll_liability_cpp_code: "2700"
+  payroll_liability_ei_code: "2710"
+  payroll_liability_tax_code: "2720"
+  tips_payable_code: "2310"
+  wages_payable_code: "2000"
+  due_to_shareholder_thomas_code: "2400"
+  due_to_shareholder_dwayne_code: "2410"
+  remit_unmatched_credit_code: "2400"
+
+revenue:
+  shopify_sales_code: "4100"
+  shopify_returns_code: "4900"
+  shopify_fees_code: "6210"
+  cash_deposit_sales_code: "4000"
+  nayax_sales_code: "4030"
+  income_to_review_code: "4090"
+
+tax:
+  hst_payable_code: "2200"
+  hst_itc_code: "2210"
+  hst_rate: 0.15
+  itc_start_date: "2024-02-26"
+
+shareholders:
+  due_from_shareholder_code: "2500"
+  dividends_declared_code: "3400"
+
+bank_debits:
+  bank_fees_expense_code: "6000"
+  interest_expense_bank_code: "8100"
+  cash_on_hand_code: "1070"
+  cash_float_year_end_target_cents: 30000
+
+journal_sources:
+  wave_bill_accrual:
+    source_system: "t2-final"
+    source_record_type: "wave_bill_accrual"
+    entry_type: "ACCRUAL"
+  wave_bill_payment:
+    source_system: "t2-final"
+    source_record_type: "wave_bill_payment"
+    entry_type: "PAYMENT"
+  payroll_summary:
+    source_system: "t2-final"
+    source_record_type: "payroll_summary"
+    entry_type: "ACCRUAL"
+  bank_inflows:
+    source_system: "t2-final"
+    source_record_type: "bank_inflows"
+    entry_type: "RECEIPT"
+  bank_debits:
+    source_system: "t2-final"
+    source_record_type: "bank_debits"
+    entry_type: "PAYMENT"
+  credit_card_purchases:
+    source_system: "t2-final"
+    source_record_type: "credit_card_purchases"
+    entry_type: "PURCHASE"
+  wave_bill_cc_settlement:
+    source_system: "t2-final"
+    source_record_type: "wave_bill_cc_settlement"
+    entry_type: "SETTLEMENT"
+  shopify_sales_tax:
+    source_system: "t2-final"
+    source_record_type: "shopify_sales_tax"
+    entry_type: "ADJUSTMENT"
+  itc_start_date_adjustment:
+    source_system: "t2-final"
+    source_record_type: "itc_start_date_adjustment"
+    entry_type: "ADJUSTMENT"
+  inventory:
+    source_system: "t2-final"
+    source_record_type: "inventory"
+    entry_type: "ADJUSTMENT"
+  tips_payout:
+    source_system: "t2-final"
+    source_record_type: "tips_payout"
+    entry_type: "ADJUSTMENT"

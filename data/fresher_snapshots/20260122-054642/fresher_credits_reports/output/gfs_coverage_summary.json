@@ -1,0 +1,23 @@
+{
+  "range": {
+    "start": "2023-06-01",
+    "end": "2025-05-31"
+  },
+  "bank_pad_debits_total": 68,
+  "bank_pad_debits_linked_to_notifications": 68,
+  "bank_pad_debits_unmatched": 0,
+  "notifications_total": 74,
+  "notifications_linked_to_bank": 70,
+  "notifications_unmatched": 4,
+  "credit_memo_notifications_unmatched": 0,
+  "invoice_lines_missing_wave": 15,
+  "gfs_credit_memos": 2,
+  "outputs": {
+    "gfs_bank_pad_debits_unmatched": "/home/clarencehub/Fresh/Fresher/credits/output/gfs_bank_pad_debits_unmatched.csv",
+    "gfs_eft_notifications_unmatched": "/home/clarencehub/Fresh/Fresher/credits/output/gfs_eft_notifications_unmatched.csv",
+    "gfs_eft_credit_memo_notifications_unmatched": "/home/clarencehub/Fresh/Fresher/credits/output/gfs_eft_credit_memo_notifications_unmatched.csv",
+    "gfs_invoices_missing_wave": "/home/clarencehub/Fresh/Fresher/credits/output/gfs_invoices_missing_wave.csv",
+    "gfs_credit_memos": "/home/clarencehub/Fresh/Fresher/credits/output/gfs_credit_memos.csv",
+    "summary_json": "/home/clarencehub/Fresh/Fresher/credits/output/gfs_coverage_summary.json"
+  }
+}

@@ -1,0 +1,65 @@
+29 Jan 2026 14587430 Canada Inc. Yr.end: 31-05-2025 Acct.#748003142RC0001
+Protected Bwhen completed
+Attachments (continued)
+Did the corporation have any foreign affiliates in the tax year? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 271 T1134
+Did the corporation own or hold specified foreign property where the total cost amount of all such property, at any time in the year,
+was more than CAN$100,000? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 259 T1135
+Did the corporation transfer or loan property to a non-resident trust? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 260 T1141
+Did the corporation receive a distribution from or was it indebted to a non-resident trust in the year? . . . . . . . . . . . . . . . . . . . . . . . . . . . . 261 T1142
+Has the corporation entered into an agreement to allocate assistance for SR&ED carried out in Canada? . . . . . . . . . . . . . . . . . . . . . . . 262 T1145
+Has the corporation entered into an agreement to transfer qualified expenditures incurred in respect of SR&ED contracts? . . . . . . . . . . 263 T1146
+Has the corporation entered into an agreement with other associated corporations for salary or wages of
+specified employees for SR&ED? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 264 T1174
+Did the corporation pay taxable dividends (other than capital gains dividends) in the tax year? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 265 X 55
+Has the corporation made an election under subsection 89(11) not to be a CCPC? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 266 T2002
+Has the corporation revoked any previous election made under subsection 89(11)? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 267 T2002
+Did the corporation (CCPC or deposit insurance corporation (DIC)) pay eligible dividends, or did its
+general rate income pool (GRIP) change in the tax year? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 268 53
+Did the corporation (other than a CCPC or DIC) pay eligible dividends, or did its low rate income pool (LRIP)
+change in the tax year? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 269 54
+Is the corporation claiming a return of fuel charge proceeds to farmers tax credit? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 273 63
+Are you an employer reporting a non-qualified security agreement under subsection 110(1.9)? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 274 59
+Is the corporation subject to the additional 1.5% tax on banks and life insurers? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 276 68
+Is the corporation a covered entity that redeemed, acquired or cancelled equity of the corporation in the tax year? . . . . . . . . . . . . . . . . . 277 56
+Is the corporation subject to the excessive interest and financing expenses limitation (EIFEL) rules contained primarily
+in sections 18.2 and 18.21, or is it a party to any election under the EIFEL rules? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 278 130
+Additional information
+Did the corporation use the International Financial Reporting Standards (IFRS) when it prepared its financial statements? . 270 Yes No X
+Is the corporation inactive? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 280 Yes No X
+Did the corporation meet the definition of substantive CCPC under subsection 248(1) at any time during the tax year? . . . . 290 Yes No X
+Specify the principal products mined, manufactured,
+284 Stadium Concessions 285 100 %
+sold, constructed, or services provided, giving the
+approximate percentage of the total revenue that 286 287 %
+each product or service represents. 288 289 %
+Did the corporation immigrate to Canada during the tax year? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 291 Yes No X
+Did the corporation emigrate from Canada during the tax year? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 292 Yes No X
+Do you want to be considered as a quarterly instalment remitter if you are eligible? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 293 Yes X No
+Year Month Day
+If the corporation was eligible to remit instalments on a quarterly basis for part of the tax year, provide the date the
+corporation ceased to be eligible . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 294
+If the corporation's major business activity is construction, did you have any subcontractors during the tax year? . . . . . . . . . 295 Yes No
+Taxable income
+Net income or (loss) for income tax purposes from Schedule 1, financial statements, or GIFI . . . . . . . . . . . . . . . . . . . . . . . . . . . 300 28,553 A
+Deduct:
+Charitable donations from Schedule 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 311
+Cultural gifts from Schedule 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 313
+Ecological gifts from Schedule 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 314
+Taxable dividends deductible under section 112 or 113, or subsection 138(6)
+from Schedule 3 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 320
+Part VI.1 tax deduction* . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 325
+Non-capital losses of previous tax years from Schedule 4 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 331
+Net capital losses of previous tax years from Schedule 4 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 332
+Restricted farm losses of previous tax years from Schedule 4 . . . . . . . . . . . . . . . . . . . . . . . . . . 333
+Farm losses of previous tax years from Schedule 4 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 334
+Limited partnership losses of previous tax years from Schedule 4 . . . . . . . . . . . . . . . . . . . . . . 335
+Restricted interest and financing expenses from Schedule 4 . . . . . . . . . . . . . . . . . . . . . . . . . . . 336
+Taxable capital gains or taxable dividends allocated from a central credit union . . . . . . . . . . . . 340
+Prospector's and grubstaker's shares . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 350
+Employer deduction for non-qualified securities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 352
+Subtotal B
+Subtotal (amount A minus amount B) (if negative, enter "0") 28,553 C
+Section 110.5 additions or subparagraph 115(1)(a)(vii) additions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 355 D
+Taxable income (amount C plus amount D) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 360 28,553
+* This amount is equal to 3.5 times the Part VI.1 tax payable at line 724 on page 9.
+T2 E (25) Version 29.01 UF27 Page 3 of 9

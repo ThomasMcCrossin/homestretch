@@ -1,0 +1,55 @@
+vendor,doc_date,doc_number,total_cents,tax_cents,net_cents,document_id,wave_bill_id,is_ignored,vendor_normalized
+wholesale club bill,2023-08-11,,64368,6801,57567,25,26,0,wholesale club bill
+dollarama bill,2023-08-14,STUB-DOLLARAMA-COGS-20230814,5014,0,5014,708,718,0,dollarama bill
+wholesale club bill,2023-09-01,,194291,21915,172376,34,35,0,wholesale club bill
+wholesale club bill,2023-09-03,,30397,1383,29014,38,39,0,wholesale club bill
+dollarama bill,2023-09-08,,13790,1797,11993,45,46,0,dollarama bill
+canadian tire gas bill,2023-09-12,,7010,914,6096,48,49,0,canadian tire gas bill
+canadian tire gas bill,2023-09-12,,7010,914,6096,49,50,1,canadian tire gas bill
+dollarama bill,2023-09-24,,53875,7027,46848,63,65,0,dollarama bill
+dollarama bill,2023-09-25,,5635,735,4900,66,68,0,dollarama bill
+canadian tire bill,2023-09-25,,3771,492,3279,67,69,0,canadian tire bill
+dollarama duplicate reimbursement,2023-10-23,DOLLARAMA-DUP-001,53875,0,53875,737,747,0,dollarama duplicate reimbursement
+dollarama bill,2023-10-28,DOLLARAMA-1028,8880,0,8880,738,748,0,dollarama bill
+dollarama bill 161 21,2023-11-03,161,18539,2418,16121,115,118,0,dollarama bill 161 21
+dollarama bill,2023-11-17,DOLLARAMA-1117,11687,0,11687,742,752,0,dollarama bill
+dollarama bill,2024-01-05,,31240,4075,27165,154,158,0,dollarama bill
+dollarama bill,2024-01-23,,1179,154,1025,173,177,0,dollarama bill
+dollarama bill,2024-02-07,,20593,2686,17907,190,194,0,dollarama bill
+canadian tire gas bill,2024-02-08,,5743,749,4994,192,196,0,canadian tire gas bill
+wholesale club bill,2024-02-15,,96143,8620,87523,202,206,0,wholesale club bill
+dollarama bill,2024-02-17,,36076,4706,31370,210,214,0,dollarama bill
+dollarama bill,2024-03-07,,80755,10531,70224,240,244,0,dollarama bill
+canadian tire bill,2024-04-21,,4137,540,3597,296,300,0,canadian tire bill
+canadian tire bill,2024-05-06,,2008,262,1746,305,309,0,canadian tire bill
+canadian tire bill,2024-08-13,,9538,1244,8294,328,332,0,canadian tire bill
+canadian tire bill,2024-08-21,,4053,529,3524,333,337,0,canadian tire bill
+canadian tire bill,2024-09-06,,2240,292,1948,351,355,0,canadian tire bill
+dollarama bill,2024-09-12,,32165,4130,28035,361,365,0,dollarama bill
+canadian tire bill,2024-09-17,,8622,1125,7497,366,370,0,canadian tire bill
+dollarama bill,2024-09-20,,11270,1470,9800,372,376,0,dollarama bill
+canadian tire bill,2024-09-20,,37681,4915,32766,373,377,0,canadian tire bill
+wholesale club bill,2024-09-25,,111445,13454,97991,380,384,0,wholesale club bill
+dollarama bill,2024-09-28,,33907,4423,29484,389,394,0,dollarama bill
+wholesale club bill,2024-10-05,,93233,10127,83106,401,406,0,wholesale club bill
+canadian tire bill,2024-10-13,,5689,742,4947,414,419,0,canadian tire bill
+canadian tire bill,2024-10-25,,9302,1213,8089,439,444,0,canadian tire bill
+canadian tire bill,2024-10-25,,22032,2874,19158,440,445,0,canadian tire bill
+canadian tire bill,2024-11-10,,10626,1386,9240,464,470,0,canadian tire bill
+wholesale club bill,2024-11-13,,109096,11680,97416,472,478,0,wholesale club bill
+dollarama bill,2024-11-24,,34485,4451,30034,487,493,0,dollarama bill
+canadian tire bill,2024-12-17,,1724,225,1499,528,535,0,canadian tire bill
+canadian tire bill,2025-01-04,,10840,1414,9426,545,553,0,canadian tire bill
+wholesale club bill,2025-01-09,,64289,720,63569,551,559,0,wholesale club bill
+dollarama bill,2025-01-12,,40710,8,40702,559,567,0,dollarama bill
+canadian tire bill,2025-01-18,,7691,419,7272,571,579,0,canadian tire bill
+dollarama bill,2025-01-18,,7970,720,7250,573,581,0,dollarama bill
+canadian tire bill,2025-02-02,,3902,509,3393,589,598,0,canadian tire bill
+canadian tire bill,2025-02-28,,27224,3551,23673,627,637,0,canadian tire bill
+canadian tire bill,2025-03-17,,12068,1574,10494,647,657,0,canadian tire bill
+canadian tire bill,2025-03-18,,2068,270,1798,648,658,0,canadian tire bill
+canadian tire bill,2025-03-19,,3449,450,2999,653,663,0,canadian tire bill
+dollarama bill,2025-03-20,,68218,8898,59320,656,666,0,dollarama bill
+dollarama bill,2025-03-20,,16628,1778,14850,657,667,0,dollarama bill
+canadian tire bill,2025-04-03,,7226,887,6339,671,681,0,canadian tire bill
+canadian tire bill,2025-04-22,,33391,4101,29290,679,689,0,canadian tire bill

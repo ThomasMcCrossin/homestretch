@@ -1,0 +1,60 @@
+29 Jan 2026 14587430 Canada Inc. Yr.end: 31-05-2025 Acct.#748003142RC0001
+Canada Revenue Agence du revenu
+Agency du Canada Worksheet 2
+Calculating your monthly instalment payments for 2026 Protected B when completed
+Use this worksheet to calculate your monthly instalment payments for 2026. If you are eligible to make quarterly instalment payments, use Worksheet 3.
+To find out if you are eligible to make quarterly instalment payments, see canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/
+corporation-payments.
+Use the estimates calculated from Worksheet 1 to complete this worksheet. If you had tax payable for 2025, complete option 2; if you had tax payable for
+2024, complete option 3.
+Instalment payments are due on the last day of every complete month of your corporation's tax year. For more information, see canada.ca/important-
+dates-corporations and select "Instalment due dates".
+This worksheet does not have to be filed with your T2 Corporation Income Tax Return.
+Option 1 – 2026
+Total estimated 2026 federal tax payable* (amount H from Worksheet 1) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1A
+Estimated 2026 net provincial and territorial tax payable before refundable credits** (amount I from Worksheet 1) . . . . . . . . . . . . . 1B
+Total estimated 2026 tax payable (amount 1A plus amount 1B) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1C
+Total estimated refundable tax credits for 2026 (amount J from Worksheet 1) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1D
+Option 1 instalment base amount (amount 1C minus amount 1D) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1E
+12 monthly payments due under option 1 (amount 1E divided by 12) 1F
+Option 2 – 2025
+Total 2025 federal tax payable* (total of lines 700, 720, 724, 727 from your T2 return for 2025) . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,263 2A
+2025 net provincial and territorial tax payable before refundable credits** (line 760 from your T2 return for 2025) . . . . . . . . . . . . . . 846 2B
+Total 2025 tax payable (amount 2A plus amount 2B) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4,109 2C
+Total estimated refundable tax credits for 2026 (amount J from Worksheet 1) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2D
+Option 2 instalment base amount (amount 2C minus amount 2D) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4,109 2E
+12 monthly payments due under option 2 (amount 2E divided by 12) 272 2F
+Option 3 – 2024
+Total 2024 federal tax payable (total of lines 700, 720, 724, 727 from your T2 return for 2024) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3A
+2024 net provincial and territorial tax payable before refundable credits (line 760 from your T2 return for 2024) . . . . . . . . . . . . . . . 3B
+Total 2024 tax payable (amount 3A plus amount 3B) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3C
+Total estimated refundable tax credits for 2026 (amount J from Worksheet 1) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3D
+Option 3 instalment base amount (amount 3C minus amount 3D) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3E
+First two monthly payments due under option 3 (amount 3E divided by 12) 3F
+Option 2 instalment base amount (amount 2E) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3G
+Total of the first two monthly payments (amount 3F multiplied by 2) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3H
+Difference (amount 3G minus amount 3H) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3I
+Remaining 10 monthly payments due under option 3 (amount 3I divided by 10) 3J
+Summary
+Under option 1, $ is due each month of the tax year.
+Under option 2, $ 272 is due each month of the tax year.
+Under option 3, $ is due each month for the first two months of the tax year,
+then $ is due each month for the remaining 10 months of the tax year.
+Note
+You can use the option that results in the least amount payable by instalments. Any remaining unpaid tax is payable on or before
+the balance-due day.
+We will charge interest if you use option 1 and the estimated tax is lower than the year's actual tax and the tax calculated using
+option 2 or 3.
+* If the total of Parts I, VI, VI.1 and XIII.1 tax payable is $3,000 or less for either 2026 (amount 1A) or 2025 (amount 2A), you do not have to make
+instalment payments on this amount for 2026.
+** This amount is net of provincial and territorial non-refundable credits. If the provincial and territorial tax before refundable credits is $3,000 or
+less for either 2026 (amount 1B) or 2025 (amount 2B), you do not have to make instalment payments on this amount for 2026.
+Date of payment Amount Date of payment Amount
+June 30, 2025 272 December 31, 2025 272
+July 31, 2025 272 January 31, 2026 272
+August 31, 2025 272 February 28, 2026 272
+September 30, 2025 272 March 31, 2026 272
+October 31, 2025 272 April 30, 2026 272
+November 30, 2025 272 May 31, 2026 272
+Total recommended instalments for the year 3,264
+T2WS2 E (25)

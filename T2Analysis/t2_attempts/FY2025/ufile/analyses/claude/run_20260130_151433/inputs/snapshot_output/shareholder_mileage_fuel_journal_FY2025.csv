@@ -1,0 +1,7 @@
+Date,Account,Debit,Credit,Description,Reference
+2025-05-31,9270,2901.63,,Motor vehicle expense - mileage reimbursement (Thomas) FY2025,MIL-FUEL-THOMAS-FY2025
+2025-05-31,9200,,2942.99,Clear fuel pending mileage conversion (Thomas-paid fuel) FY2025,MIL-FUEL-THOMAS-FY2025
+2025-05-31,2500,41.36,,Net due from shareholder - Thomas (fuel exceeds mileage) FY2025,MIL-FUEL-THOMAS-FY2025
+,,,,,
+2025-05-31,9270,608.52,,Motor vehicle expense - mileage reimbursement (Dwayne) FY2025,MIL-DWAYNE-FY2025
+2025-05-31,2410,,608.52,Due to shareholder - Dwayne mileage reimbursement FY2025,MIL-DWAYNE-FY2025

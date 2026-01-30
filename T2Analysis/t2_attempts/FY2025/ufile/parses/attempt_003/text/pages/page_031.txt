@@ -1,0 +1,51 @@
+29 Jan 2026 14587430 Canada Inc. Yr.end: 31-05-2025 Acct.#748003142RC0001
+Canada Revenue Agence du revenu Schedule 3
+Agency du Canada
+Code 1904
+Dividends Received, Taxable Dividends Paid, and Protected B
+Part IV Tax Calculation (2019 and later tax years) when completed
+Corporation's name Business number Tax year-end
+Year Month Day
+14587430 Canada Inc. 748003142RC0001 2025-05-31
+Corporations must use this schedule to report:
+–non-taxable dividends under section 83
+–deductible dividends under subsection 138(6)
+–taxable dividends deductible from income under section 112, subsection 113(2) and paragraphs 113(1)(a), (a.1), (b) or (d)
+–taxable dividends paid in the tax year that qualify for a dividend refund (see page 3)
+All legislative references are to the federal Income Tax Act.
+The calculations in this schedule apply only to private or subject corporations (as defined in subsection 186(3)).
+A payer corporation is connected with a recipient corporation at any time in a tax year, if at that time the recipient corporation meets
+either of the following conditions:
+–it controls the payer corporation, other than because of a right referred to in paragraph 251(5)(b)
+–it owns more than 10% of the issued share capital (with full voting rights), and shares that have a fair market value of more than
+10% of the fair market value of all shares of the payer corporation
+If you need more space, continue on a separate schedule.
+File this schedule with your T2 Corporation Income Tax Return.
+Part 1 – Dividends received in the tax year
+Do not include dividends received from foreign non-affiliates.
+Complete columns B, C, D, H and I only if the payer corporation is connected.
+Important instructions to follow if the payer corporation is connected
+If your corporation's tax year-end is different than that of the connected payer corporation, dividends could have been received from more than one
+tax year of the payer corporation. If so, use a separate line to provide the information according to each tax year of the payer corporation.
+When completing columns J and K use the special calculations provided in the notes.
+A B C
+Name of payer corporation Enter 1 if payer Business number of
+(from which the corporation received the dividend) corporation is connected corporation
+connected
+200 205 210
+D E F G
+Tax year-end of the payer corporation in which Non-taxable Taxable dividends deductible from taxable income Eligible dividends included
+the sections 112/113 and subsection 138(6) dividends under under section 112, subsections 113(2) and 138(6), in column F
+dividends in column F were paid YYYYMMDD section 83 and paragraphs 113(1)(a), (a.1), (b), or (d) 1
+220 230 240 242
+Total of column E
+(enter amount on line 402 of Schedule 1)
+Taxable dividends received from connected corporations (total amounts from column F with code 1 in column B) . . . . . . . . . . . . . . 1A
+Taxable dividends received from non-connected corporations (total amounts from column F with no code in column B) . . . . . . . . . . 1B
+Subtotal (amount 1A plus amount 1B, include this amount on line 320 of the T2 return) 1C
+Eligible dividends received from connected corporations (total amounts from column G with code 1 in column B) . . . . . . . . . . . . . . 1D
+Eligible dividends received from non-connected corporations (total amounts from column G with no code in column B) . . . . . . . . . . 1E
+1If taxable dividends are received, enter the amount in column F, but if the corporation is not subject to Part IV tax (such as a public corporation other than
+a subject corporation as defined in subsection 186(3)), enter "0" in column K (and column J, if applicable). Life insurers are not subject to Part IV tax on
+subsection 138(6) dividends.
+T2 SCH 3 E (22) Version 29.01 UF27 Page 1 of 4

@@ -1,0 +1,51 @@
+Field,GIFI_Code,Schedule,Attempt_Value,Project_Value,Delta,Likely_Cause
+Cash,1001,100,12472,12472,0,Match
+Inventory,1121,100,10015,10015,0,Match
+Due from shareholder,1301,100,2000,2000,0,Match
+Prepaid expenses,1484,100,1490,1490,0,Match
+Total current assets,1599,100,25977,25977,0,Match
+Total assets,2599,100,25977,25977,0,Match
+AP and accrued liabilities,2620,100,10013,10013,0,Match
+Taxes payable,2680,100,2663,2663,0,Match
+Due to shareholders,2781,100,5097,5097,0,Match
+Total current liabilities,3139,100,17773,17773,0,Match
+Total liabilities,3499,100,17773,17773,0,Match
+Common shares,3500,100,100,100,0,Match
+Retained earnings (BS),3600,100,45005,8104,36901,Entry/mechanics - Dividends Paid screen not completed
+Total shareholder equity,3620,100,45105,8204,36901,Entry/mechanics - flows from wrong 3600
+Total L+E,3640,100,62878,25977,36901,Entry/mechanics - flows from wrong 3620
+RE Start,3660,100,16656,16656,0,Match
+Net income (RE line),3680,100,28349,28349,0,Match
+Dividends declared,3700,RE,-36900,36900,0,Match (but not processed by UFile)
+Rounding adjustment,3740,RE,-1,-1,0,Match (but not processed by UFile)
+RE End,3849,100,45005,8104,36901,Entry/mechanics - UFile ignored 3700/3740 because Dividends Paid screen not completed
+Trade sales,8000,125,230907,230907,0,Match
+Total sales,8089,125,230907,230907,0,Match
+Total revenue,8299,125,230907,230907,0,Match
+Opening inventory,8300,125,2847,2847,0,Match
+Purchases,8320,125,112866,112866,0,Match
+Closing inventory,8500,125,10015,10015,0,Match
+Cost of sales,8518,125,105698,105698,0,Match
+Gross profit,8519,125,125209,125209,0,Match
+Advertising,8520,125,798,798,0,Match
+Meals and entertainment,8523,125,408,408,0,Match
+Employee benefits,8622,125,3610,3610,0,Match
+Insurance,8690,125,1951,1951,0,Match
+Interest and bank charges,8710,125,6694,6694,0,Match
+Office expenses,8810,125,3903,3903,0,Match
+Data processing,8813,125,1878,1878,0,Match
+Professional fees,8860,125,353,353,0,Match
+Real estate rental,8911,125,7137,7137,0,Match
+Repairs and maintenance,8960,125,981,981,0,Match
+Salaries and wages,9060,125,54899,54899,0,Match
+Supplies,9130,125,5348,5348,0,Match
+Small tools,9131,125,479,479,0,Match
+Telephone,9225,125,465,465,0,Match
+Other expenses,9270,125,3782,3782,0,Match
+Delivery freight,9275,125,136,136,0,Match
+Vehicle expenses,9281,125,4038,4038,0,Match
+Total operating expenses,9367,125,96860,96860,0,Match
+Total expenses,9368,125,202558,202558,0,Match
+Net non-farming income,9369,125,28349,28349,0,Match
+Net income before tax,9970,125,28349,28349,0,Match
+Net income after tax,9999,125,28349,28349,0,Match

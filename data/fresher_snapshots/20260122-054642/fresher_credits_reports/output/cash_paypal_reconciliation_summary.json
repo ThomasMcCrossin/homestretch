@@ -1,0 +1,74 @@
+{
+  "range": {
+    "start": "2023-06-01",
+    "end": "2025-05-31"
+  },
+  "gateway_reports_used": [
+    {
+      "start": "2023-06-01",
+      "end": "2023-09-30",
+      "name": "Net payments by gateway - 2023-06-01 - 2023-09-30.csv"
+    },
+    {
+      "start": "2023-10-01",
+      "end": "2023-12-31",
+      "name": "Net payments by gateway - 2023-10-01 - 2023-12-31.csv"
+    },
+    {
+      "start": "2024-01-01",
+      "end": "2024-03-31",
+      "name": "Net payments by gateway - 2024-01-01 - 2024-03-31.csv"
+    },
+    {
+      "start": "2024-04-01",
+      "end": "2024-05-31",
+      "name": "Net payments by gateway - 2024-04-01 - 2024-05-31.csv"
+    },
+    {
+      "start": "2024-06-01",
+      "end": "2024-09-30",
+      "name": "Net payments by gateway - 2024-06-01 - 2024-09-30.csv"
+    },
+    {
+      "start": "2024-10-01",
+      "end": "2024-12-31",
+      "name": "Net payments by gateway - 2024-10-01 - 2024-12-31.csv"
+    },
+    {
+      "start": "2025-01-01",
+      "end": "2025-03-31",
+      "name": "Net payments by gateway - 2025-01-01 - 2025-03-31.csv"
+    },
+    {
+      "start": "2025-04-01",
+      "end": "2025-05-31",
+      "name": "Net payments by gateway - 2025-04-01 - 2025-05-31.csv"
+    }
+  ],
+  "expected": {
+    "cash_cents": 16114712,
+    "cash": "161147.12",
+    "paypal_cents": 164800,
+    "paypal": "1648.00"
+  },
+  "bank_deposits": {
+    "events": 31,
+    "deposit_groups_upserted": 31,
+    "effective_cash_deposit_cents": 16177180,
+    "effective_cash_deposit": "161771.80"
+  },
+  "reconciliation": {
+    "cash_delta_cents": 62468,
+    "cash_delta": "624.68",
+    "paypal_allocated_from_excess_deposits_cents": 62468,
+    "paypal_allocated_from_excess_deposits": "624.68",
+    "paypal_remaining_not_seen_in_deposits_cents": 102332,
+    "paypal_remaining_not_seen_in_deposits": "1023.32",
+    "excess_after_paypal_cents": 0,
+    "excess_after_paypal": "0.00"
+  },
+  "outputs": {
+    "deposit_events_csv": "/home/clarencehub/Fresh/Fresher/credits/output/cash_deposit_events.csv",
+    "summary_json": "/home/clarencehub/Fresh/Fresher/credits/output/cash_paypal_reconciliation_summary.json"
+  }
+}

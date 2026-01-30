@@ -1,0 +1,10 @@
+arrears_row,arrears_posted,arrears_received,arrears_crdr,arrears_amount,arrears_transactions,bank_txn_id,bank_date,bank_amount,bank_txn_type,bank_manual_classification,bank_category,bank_entity,bank_verified,bank_description,bank_notes,bank_explanation
+2,2025-11-28,,DR,29.23,Assessed late remitting penalty,,,,,,,,,,,
+3,2025-11-28,,DR,14.85,Assessed late remitting penalty,,,,,,,,,,,
+4,2025-03-21,,CR,0.02,Administrative Adjustment 2024,,,,,,,,,,,
+5,2025-03-21,2025-03-10,DR,0.04,Interest charged on              27.27Dr,,,,,,,,,,,
+6,2025-03-20,2025-03-17,CR,27.29,Arrears payment,458,2025-03-17,27.29,PAYROLL_REMIT,CRA_PAYMENT,PAYROLL_REMIT,CORP,0,Electronic Funds Transfer DEBIT MEMO EMPTX-4517739 GPFS-GOVERNMENT PAYMENT,CRA remittance (HST or payroll),CRA payroll remittance - $27.29
+7,2025-03-10,,DR,27.27,Assessed late remitting penalty,,,,,,,,,,,
+8,2024-02-27,2024-01-23,DR,0.67,Interest charged on              71.35Dr,,,,,,,,,,,
+9,2024-02-26,2024-02-26,CR,72.02,Arrears payment,1277,2024-02-26,72.02,E_TRANSFER,PAYROLL_REIMBURSE,PAYROLL_REIMBURSE,THOMAS,1,Internet Banking E-TRANSFER104897933797 Thomas McCrossin 4506*********695,Payroll arrears reimbursement (paid via Thomas) - confirmed,Payroll arrears reimbursement (paid via Thomas) - confirmed
+10,2024-01-23,,DR,71.35,Assessed late remitting penalty,,,,,,,,,,,

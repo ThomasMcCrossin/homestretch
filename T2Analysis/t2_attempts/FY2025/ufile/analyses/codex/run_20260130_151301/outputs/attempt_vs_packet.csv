@@ -1,0 +1,19 @@
+table,code,description_attempt,amount_attempt,description_packet,amount_packet,delta_attempt_minus_packet,notes
+schedule_100,1599,. . . . Total . . . . current . . . . . . assets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . +,25977.00,,,,missing_in_packet
+schedule_100,3139,. . . . Total . . . . current . . . . . . liabilities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . +,17773.00,,,,missing_in_packet
+schedule_100,3660,. . . . Retained . . . . . . . . earnings . . . . . . . / . deficit . . . . . - . start . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . +,16656.00,,,,missing_in_packet
+schedule_100,3680,. . . . Net . . . income . . . . . . . / . loss . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . +,28349.00,,,,missing_in_packet
+schedule_100,3700,. . . . Dividends . . . . . . . . declared . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . +,-36900.00,,,,missing_in_packet
+schedule_100,3740,. . . . Other . . . . . items . . . . . affecting . . . . . . . retained . . . . . . . earnings . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . +,-1.00,,,,missing_in_packet
+schedule_100,3849,. . . . Retained . . . . . . . . earnings . . . . . . . / . deficit . . . . . - . end . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . + =,8104.00,,,,missing_in_packet
+schedule_125,0002,Description of the operation,3.00,,,,missing_in_packet
+schedule_125,8089,. . . . Total . . . . sales . . . . . of . . goods . . . . . and . . . . services . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . +,230907.00,,,,missing_in_packet
+schedule_125,8300,. . . . Opening . . . . . . . inventory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . +,2847.00,,,,missing_in_packet
+schedule_125,8320,. . . . Purchases . . . . . . . . . / . cost . . . . of . . materials . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . +,117452.00,,,,missing_in_packet
+schedule_125,8500,. . . . Closing . . . . . . inventory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . +,-10015.00,,,,missing_in_packet
+schedule_125,9369,Net non-farming income . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . +,28349.00,,,,missing_in_packet
+schedule_125,9970,Net income/loss before taxes and extraordinary items . . . . . . . . . . . . . . . . . . . . . . . . . . . . =,28349.00,,,,missing_in_packet
+retained_earnings_vs_schedule_1,117,,,50% of meals and entertainment,204.00,,missing_in_attempt
+retained_earnings_vs_schedule_1,300,,,Net income per financial statements,28349.00,,missing_in_attempt
+retained_earnings_vs_schedule_1,311,,,Penalties and fines (CRA),274.00,,missing_in_attempt
+retained_earnings_vs_schedule_1,400,,,Net income for tax purposes,28827.00,,missing_in_attempt

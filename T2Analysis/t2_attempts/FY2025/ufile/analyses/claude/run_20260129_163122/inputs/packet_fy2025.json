@@ -1,0 +1,722 @@
+{
+  "meta": {
+    "schema_version": "1.1.0",
+    "generated_at": "2026-01-29T15:18:57.608083+00:00",
+    "generator": "tools/build_year_artifacts.py",
+    "source_packet": "UfileToFill/ufile_packet/packet.json",
+    "snapshot_source": "output/snapshots/final_snapshot_20260128-181411/output/",
+    "fiscal_year": "FY2025"
+  },
+  "entity": {
+    "legal_name": "14587430 Canada Inc.",
+    "operating_name": "Curly's Canteen",
+    "bn": "748003142RC0001",
+    "jurisdiction": "NS",
+    "year_end_month_day": "05-31",
+    "corp_type": "CCPC",
+    "head_office_address": {
+      "street": "125 Victoria St E",
+      "city": "Amherst",
+      "province": "NS",
+      "postal_code": "B4H1X9",
+      "country": "Canada"
+    },
+    "mailing_address_addressee": "Dwayne Ripley",
+    "books_and_records_addressee": "Curly's",
+    "contact": {
+      "signing_officer_name": "Dwayne Ripley",
+      "signing_officer_title": "President",
+      "phone": "(902) 669-2700",
+      "email": "tom@curlys.ca",
+      "alternate_contact_name": "Thomas McCrossin",
+      "alternate_contact_phone": "(902) 321-6749"
+    },
+    "shareholders": [
+      {
+        "name": "Dwayne Ripley",
+        "sin_or_bn": "XXX-XXX-XXX",
+        "common_pct": 75,
+        "preferred_pct": 75
+      },
+      {
+        "name": "Thomas McCrossin",
+        "sin_or_bn": "XXX-XXX-XXX",
+        "common_pct": 25,
+        "preferred_pct": 25
+      }
+    ],
+    "naics_code": "722512",
+    "ufile_screens": {
+      "tax_preparer": {
+        "addressee": "Thomas McCrossin",
+        "position_or_title": "Income Tax Preperation",
+        "contact_first_name": "Thomas",
+        "contact_last_name": "McCrossin",
+        "phone_day": "(902) 321-6749",
+        "fax": "(000) 000-0000",
+        "rep_id": "JC98XW5",
+        "email": "thomas.mccrossin@outlook.com",
+        "street": "31 Duckling Dell",
+        "city": "Amherst",
+        "province": "Nova Scotia",
+        "postal_code": "B4H 3Y2"
+      },
+      "head_office_address": {
+        "addressee": "Dwayne Ripley",
+        "street": "125 Victoria St E",
+        "city": "Amherst",
+        "province": "Nova Scotia",
+        "postal_code": "B4H 1X9",
+        "contact_person": "Dwayne Ripley",
+        "phone_day": "(902) 667-2875",
+        "fax": "(000) 000-0000",
+        "changed_since_last_return": "No Change"
+      },
+      "other_addresses": {
+        "mailing": {
+          "addressee": "Dwayne Ripley",
+          "street": "125 Victoria St E",
+          "city": "Amherst",
+          "province": "Nova Scotia",
+          "postal_code": "B4H 1X9",
+          "contact_person": "Thomas McCrossin",
+          "phone_day": "(902) 321-6749",
+          "fax": "(000) 000-0000",
+          "changed_since_last_return": "No Change"
+        },
+        "books_and_records": {
+          "addressee": "Curly's",
+          "street": "125 Victoria St E",
+          "city": "Amherst",
+          "province": "Nova Scotia",
+          "postal_code": "B4H 1X9",
+          "contact_person": "Thomas McCrossin",
+          "phone_day": "(902) 321-6749",
+          "fax": "(000) 000-0000",
+          "changed_since_last_return": "No Change"
+        }
+      },
+      "corporate_officers": [
+        {
+          "first_name": "Thomas",
+          "last_name": "McCrossin",
+          "title": "Vice-president",
+          "is_signing_officer": false,
+          "elected_date": "2022-12-09",
+          "ceased_date": "2022-12-09",
+          "sin": "XXX-XXX-XXX",
+          "voting_pct": 25,
+          "common_pct": 25,
+          "preferred_pct": 25,
+          "address_street": "31 Duckling Dell",
+          "address_city": "Amherst",
+          "address_province": "Nova Scotia",
+          "address_postal_code": "B4H 3Y2",
+          "phone_day": "(902) 321-6749",
+          "fax": "(000) 000-0000"
+        },
+        {
+          "first_name": "Dwayne",
+          "last_name": "Ripley",
+          "title": "President",
+          "is_signing_officer": true,
+          "elected_date": "2022-12-08",
+          "ceased_date": null,
+          "sin": "XXX-XXX-XXX",
+          "voting_pct": 75,
+          "common_pct": 75,
+          "preferred_pct": 75,
+          "address_street": "28 Charles St",
+          "address_city": "Amherst",
+          "address_province": "Nova Scotia",
+          "address_postal_code": "B4H 3P8",
+          "phone_day": "(902) 669-2700",
+          "fax": "(000) 000-0000"
+        }
+      ]
+    }
+  },
+  "global_positions": {
+    "ifrs": {
+      "value": false,
+      "note": "Financial statements not prepared using IFRS"
+    },
+    "functional_currency": {
+      "value": "CAD",
+      "note": "No functional currency election"
+    },
+    "language_of_correspondence": {
+      "value": "English",
+      "note": "Code 1"
+    },
+    "capital_tax_exempt": {
+      "value": true,
+      "note": "Small private corp; no capital tax payable expected"
+    },
+    "associated_corporations": {
+      "value": false,
+      "note": "No associated corporations"
+    },
+    "hst_registration_date": {
+      "value": "2024-02-26",
+      "note": "Corp began charging/collecting HST on this date"
+    }
+  },
+  "year": {
+    "FY2025": {
+      "fiscal_period": {
+        "start": "2024-06-01",
+        "end": "2025-05-31",
+        "days": 365,
+        "is_first_year": false
+      },
+      "ufile_screens": {
+        "identification_of_corporation": {
+          "one_month_extension_balance_due": false,
+          "charter_jurisdiction": "Federal",
+          "incorporation_date": "2022-12-08",
+          "operations_start_date": "2023-06-10",
+          "is_first_federal_return": false,
+          "is_final_federal_return": false,
+          "permanent_establishment_province": "Nova Scotia",
+          "language_of_correspondence": "English",
+          "email": "tom@curlys.ca",
+          "activity_status": "Regular corp. (specify activity)",
+          "activity_description": "Quick Service Restaurant",
+          "naics_code": "722512",
+          "principal_products": [
+            {
+              "description": "Canteen in an Arena",
+              "percent_of_revenue": 100
+            }
+          ],
+          "has_gifi_financials": true,
+          "internet_business": {
+            "earns_income": true,
+            "number_of_sites": 1,
+            "percent_gross_revenue_from_internet": 4.35,
+            "top_urls": [
+              "curlyscanteen.ca"
+            ]
+          },
+          "quarterly_installments": {
+            "wants_consideration": true,
+            "perfect_compliance_history": false
+          }
+        },
+        "refund_or_balance_owing": {
+          "tax_payment_code": "Full balance for every jurisdiction",
+          "refund_code": null
+        },
+        "dividends_paid": {
+          "has_dividends": true,
+          "taxable_dividends_paid": 36900,
+          "eligible_dividend_portion": 0,
+          "capital_dividends": 0,
+          "capital_gains_dividend": 0,
+          "note": "Dividends declared per retained earnings schedule (GIFI 3700). Confirm eligible vs non-eligible in UFile; default expectation is non-eligible."
+        },
+        "general_rate_income_pool": {
+          "grip_end_prior_year": 0,
+          "note": "Unless you are designating eligible dividends, GRIP is typically $0 / not needed. If you mark any eligible dividends, you must complete this screen."
+        },
+        "transactions_with_shareholders_officers_employees": {
+          "note": "There are transactions with shareholders (dividends, reimbursements, shareholder loan). For T2 disclosure screens, summarize high-level: dividends paid, reimbursements of expenses, shareholder loan receivable (Thomas $2,000) and amounts due to shareholders per Schedule 100 (2781)."
+        },
+        "losses": {
+          "has_loss_carryforwards": false,
+          "note": "No losses to carry forward/back."
+        },
+        "charitable_donations": {
+          "has_donations": false,
+          "note": "No charitable donations claimed."
+        },
+        "reserves": {
+          "has_reserves": false,
+          "note": "No reserves claimed."
+        },
+        "capital_cost_allowance": {
+          "has_cca": false,
+          "note": "No CCA claimed; assets were expensed under capitalization threshold."
+        },
+        "non_depreciable_capital_property": {
+          "has_property": false,
+          "note": "No non-depreciable capital property."
+        },
+        "deferred_income_plans": {
+          "has_plans": false,
+          "note": "No deferred income plans."
+        },
+        "status_change_for_corporation": {
+          "has_status_change": false,
+          "note": "No status change for the corporation."
+        }
+      },
+      "schedule_100": {
+        "1001": {
+          "amount": 12472,
+          "label": "Cash"
+        },
+        "1121": {
+          "amount": 10015,
+          "label": "Inventory of goods for sale",
+          "note": "Physical count 2025-05-16"
+        },
+        "1301": {
+          "amount": 2000,
+          "label": "Due from individual shareholder(s)",
+          "note": "Shareholder loan receivable (Thomas). Review s.15(2) repayment/exception within 1 year after 2025-05-31."
+        },
+        "1484": {
+          "amount": 1490,
+          "label": "Prepaid expenses"
+        },
+        "2599": {
+          "amount": 25977,
+          "label": "Total assets"
+        },
+        "2620": {
+          "amount": 10013,
+          "label": "Amounts payable and accrued liabilities"
+        },
+        "2680": {
+          "amount": 2663,
+          "label": "Taxes payable (GST/HST, etc.)"
+        },
+        "2781": {
+          "amount": 5097,
+          "label": "Due to individual shareholder(s)",
+          "note": "Tie-out: 2400 $3,490.67 (Thomas) + 2410 $1,606.68 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead."
+        },
+        "3499": {
+          "amount": 17773,
+          "label": "Total liabilities"
+        },
+        "3500": {
+          "amount": 100,
+          "label": "Common shares"
+        },
+        "3600": {
+          "amount": 8104,
+          "label": "Retained earnings/deficit"
+        },
+        "3620": {
+          "amount": 8204,
+          "label": "Total shareholder equity"
+        },
+        "3640": {
+          "amount": 25977,
+          "label": "Total liabilities and shareholder equity"
+        }
+      },
+      "schedule_125": {
+        "8000": {
+          "amount": 230907,
+          "label": "Trade sales of goods and services"
+        },
+        "8299": {
+          "amount": 230907,
+          "label": "Total revenue"
+        },
+        "8518": {
+          "amount": 105698,
+          "label": "Cost of sales",
+          "note": "Includes inventory shrinkage $200"
+        },
+        "8519": {
+          "amount": 125209,
+          "label": "Gross profit/loss"
+        },
+        "8520": {
+          "amount": 798,
+          "label": "Advertising and promotion"
+        },
+        "8523": {
+          "amount": 408,
+          "label": "Meals and entertainment",
+          "note": "50% add-back = $204"
+        },
+        "8622": {
+          "amount": 3610,
+          "label": "Employer's portion of employee benefits"
+        },
+        "8690": {
+          "amount": 1951,
+          "label": "Insurance"
+        },
+        "8710": {
+          "amount": 6694,
+          "label": "Interest and bank charges"
+        },
+        "8810": {
+          "amount": 3903,
+          "label": "Office expenses"
+        },
+        "8813": {
+          "amount": 1878,
+          "label": "Data processing",
+          "note": "Computer hardware + SaaS (under capitalization threshold)"
+        },
+        "8860": {
+          "amount": 353,
+          "label": "Professional fees"
+        },
+        "8911": {
+          "amount": 7137,
+          "label": "Real estate rental"
+        },
+        "8960": {
+          "amount": 981,
+          "label": "Repairs and maintenance"
+        },
+        "9060": {
+          "amount": 54899,
+          "label": "Salaries and wages"
+        },
+        "9130": {
+          "amount": 5348,
+          "label": "Supplies",
+          "note": "Packaging + operating supplies"
+        },
+        "9131": {
+          "amount": 479,
+          "label": "Small tools"
+        },
+        "9225": {
+          "amount": 465,
+          "label": "Telephone and telecommunications",
+          "note": "Internet"
+        },
+        "9270": {
+          "amount": 3782,
+          "label": "Other expenses",
+          "note": "Includes CRA penalties $274 (non-deductible)"
+        },
+        "9275": {
+          "amount": 136,
+          "label": "Delivery, freight and express"
+        },
+        "9281": {
+          "amount": 4038,
+          "label": "Vehicle expenses"
+        },
+        "9367": {
+          "amount": 96860,
+          "label": "Total operating expenses"
+        },
+        "9368": {
+          "amount": 202558,
+          "label": "Total expenses"
+        },
+        "9999": {
+          "amount": 28349,
+          "label": "Net income/loss after taxes"
+        }
+      },
+      "retained_earnings": {
+        "3660": {
+          "amount": 16656,
+          "label": "Retained earnings/deficit - Start"
+        },
+        "3680": {
+          "amount": 28349,
+          "label": "Net income/loss"
+        },
+        "3700": {
+          "amount": 36900,
+          "label": "Dividends declared"
+        },
+        "3740": {
+          "amount": -1,
+          "label": "Other items affecting retained earnings (rounding)"
+        },
+        "3849": {
+          "amount": 8104,
+          "label": "Retained earnings/deficit - End"
+        }
+      },
+      "schedule_1": {
+        "300": {
+          "amount": 28349,
+          "label": "Net income per financial statements"
+        },
+        "117": {
+          "amount": 204,
+          "label": "50% of meals and entertainment",
+          "calculation": "408 * 50% = 204"
+        },
+        "311": {
+          "amount": 274,
+          "label": "Penalties and fines (CRA)"
+        },
+        "400": {
+          "amount": 28827,
+          "label": "Net income for tax purposes",
+          "calculation": "28349 + 204 + 274 = 28827"
+        }
+      },
+      "positions": {
+        "ifrs": {
+          "value": false,
+          "note": "Financial statements not prepared using IFRS"
+        },
+        "practitioner_involvement": {
+          "value": "none",
+          "note": "Management-prepared, unaudited"
+        },
+        "hst_registered": {
+          "value": true,
+          "note": "Full year of HST collection"
+        },
+        "inventory_method": {
+          "value": "cost",
+          "note": "Physical count 2025-05-16 (near year-end)"
+        },
+        "cca_required": {
+          "value": false,
+          "note": "No capital assets capitalized in these years (below capitalization threshold; expensed)."
+        },
+        "tips_handling": {
+          "value": "paid_on_top",
+          "note": "FY2025 tips were paid out each pay period: in Dec 2024 tips were embedded into gross+vacation and had deductions taken; in 2025 tips were paid on top of net pay (no deductions)."
+        },
+        "shareholder_loan_s15_2": {
+          "value": true,
+          "note": "Shareholder loan receivable exists at year-end. Review s.15(2) repayment timing and any applicable exceptions."
+        },
+        "first_time_filer_after_incorp_line_070": {
+          "value": false,
+          "note": "2023 stub T2 already filed as first-year after incorporation (Schedule 24). FY2025 should be No."
+        },
+        "internet_income_line_180": {
+          "value": true,
+          "note": "Shopify sales present; likely Yes for internet income/websites (Schedule 88). Confirm store domains in UFile."
+        },
+        "net_income_diff_line_201": {
+          "value": true,
+          "note": "Book vs tax differs due to meals 50% add-back and CRA penalties; Schedule 1 is attached."
+        }
+      },
+      "cross_checks": [
+        {
+          "description": "Total assets (2599) = Total L+E (3640)",
+          "expected": 25977,
+          "actual": 25977,
+          "status": "PASS"
+        },
+        {
+          "description": "RE End (3849) = RE Start + NI - Dividends + Rounding",
+          "expected": 8104,
+          "actual": 8104,
+          "status": "PASS",
+          "note": "16656 + 28349 - 36900 - 1 = 8104"
+        },
+        {
+          "description": "Net income (9999) = Revenue (8299) - Total Expenses (9368)",
+          "expected": 28349,
+          "actual": 28349,
+          "status": "PASS"
+        },
+        {
+          "description": "Dividends <= cumulative RE available",
+          "expected": "36900 <= 45005",
+          "actual": "36900 <= 45005",
+          "status": "PASS",
+          "note": "RE Start $16,656 + NI $28,349 = $45,005 available; $36,900 declared"
+        }
+      ]
+    }
+  },
+  "evidence_index": [
+    {
+      "category": "GIFI",
+      "path": "output/snapshots/final_snapshot_20260128-181411/output/gifi_schedule_100_FY2024.csv",
+      "description": "Balance sheet GIFI codes for FY2024",
+      "fiscal_year": "FY2024"
+    },
+    {
+      "category": "GIFI",
+      "path": "output/snapshots/final_snapshot_20260128-181411/output/gifi_schedule_100_FY2025.csv",
+      "description": "Balance sheet GIFI codes for FY2025",
+      "fiscal_year": "FY2025"
+    },
+    {
+      "category": "GIFI",
+      "path": "output/snapshots/final_snapshot_20260128-181411/output/gifi_schedule_125_FY2024.csv",
+      "description": "Income statement GIFI codes for FY2024",
+      "fiscal_year": "FY2024"
+    },
+    {
+      "category": "GIFI",
+      "path": "output/snapshots/final_snapshot_20260128-181411/output/gifi_schedule_125_FY2025.csv",
+      "description": "Income statement GIFI codes for FY2025",
+      "fiscal_year": "FY2025"
+    },
+    {
+      "category": "GIFI",
+      "path": "output/snapshots/final_snapshot_20260128-181411/output/gifi_retained_earnings_FY2024.csv",
+      "description": "Retained earnings schedule for FY2024",
+      "fiscal_year": "FY2024"
+    },
+    {
+      "category": "GIFI",
+      "path": "output/snapshots/final_snapshot_20260128-181411/output/gifi_retained_earnings_FY2025.csv",
+      "description": "Retained earnings schedule for FY2025",
+      "fiscal_year": "FY2025"
+    },
+    {
+      "category": "GIFI",
+      "path": "output/snapshots/final_snapshot_20260128-181411/output/schedule_1_FY2024.csv",
+      "description": "Schedule 1 net income reconciliation for FY2024",
+      "fiscal_year": "FY2024"
+    },
+    {
+      "category": "GIFI",
+      "path": "output/snapshots/final_snapshot_20260128-181411/output/schedule_1_FY2025.csv",
+      "description": "Schedule 1 net income reconciliation for FY2025",
+      "fiscal_year": "FY2025"
+    },
+    {
+      "category": "payroll",
+      "path": "output/snapshots/final_snapshot_20260128-181411/output/payroll_summary.md",
+      "description": "Payroll summary with T4 amounts and bank overrides",
+      "fiscal_year": null
+    },
+    {
+      "category": "HST",
+      "path": "output/snapshots/final_snapshot_20260128-181411/output/shopify_sales_tax_journal_detail.csv",
+      "description": "HST collected on Shopify sales",
+      "fiscal_year": null
+    },
+    {
+      "category": "inventory",
+      "path": "output/snapshots/final_snapshot_20260128-181411/docs/inventory_estimate_audit_review.md",
+      "description": "Inventory estimate methodology and audit review",
+      "fiscal_year": null
+    },
+    {
+      "category": "shareholder",
+      "path": "output/snapshots/final_snapshot_20260128-181411/docs/SHAREHOLDER_EQUITY_POSITION.md",
+      "description": "Shareholder equity position working paper",
+      "fiscal_year": null
+    },
+    {
+      "category": "shareholder",
+      "path": "output/snapshots/final_snapshot_20260128-181411/output/shareholder_mileage_fuel_summary.md",
+      "description": "Mileage and fuel reimbursements to shareholders",
+      "fiscal_year": null
+    },
+    {
+      "category": "shareholder",
+      "path": "output/snapshots/final_snapshot_20260128-181411/output/shareholder_meals_estimate_summary.md",
+      "description": "Meals estimates for Moncton trips",
+      "fiscal_year": null
+    },
+    {
+      "category": "bank",
+      "path": "output/snapshots/final_snapshot_20260128-181411/output/readiness_report.md",
+      "description": "Bank reconciliation and readiness status",
+      "fiscal_year": null
+    },
+    {
+      "category": "other",
+      "path": "data/2023 - 14587430 Canada Inc..pdf",
+      "description": "Filed 2023 nil T2 return (stub period 2022-12-08 to 2023-05-31)",
+      "fiscal_year": "FY2023"
+    },
+    {
+      "category": "other",
+      "path": "output/snapshots/final_snapshot_20260128-181411/output/UfileToFill/Identification of the Corporation/2024.txt",
+      "description": "UFile identification prefill (includes NAICS 722512 and internet income answers) for the 2024 return data entry",
+      "fiscal_year": "FY2024"
+    },
+    {
+      "category": "other",
+      "path": "output/snapshots/final_snapshot_20260128-181411/output/UfileToFill/Identification of the Corporation/2023.txt",
+      "description": "UFile identification prefill (2023 stub return) used as consistency baseline (incorporation date, BN, NAICS, language)",
+      "fiscal_year": "FY2023"
+    },
+    {
+      "category": "other",
+      "path": "output/snapshots/final_snapshot_20260128-181411/output/UfileToFill/Tax Preparer/2023.txt",
+      "description": "UFile tax preparer screen values (carryforward baseline)",
+      "fiscal_year": "FY2023"
+    },
+    {
+      "category": "other",
+      "path": "output/snapshots/final_snapshot_20260128-181411/output/UfileToFill/Corporate Officers/2023.txt",
+      "description": "UFile corporate officers/directors screen values (carryforward baseline)",
+      "fiscal_year": "FY2023"
+    },
+    {
+      "category": "other",
+      "path": "output/snapshots/final_snapshot_20260128-181411/output/UfileToFill/Head Office Address/2023.txt",
+      "description": "UFile head office address screen values (carryforward baseline)",
+      "fiscal_year": "FY2023"
+    },
+    {
+      "category": "other",
+      "path": "output/snapshots/final_snapshot_20260128-181411/output/UfileToFill/Other Addresses/2023.txt",
+      "description": "UFile other addresses screen values (mailing + books/records addressee; carryforward baseline)",
+      "fiscal_year": "FY2023"
+    }
+  ],
+  "known_judgments": [
+    {
+      "area": "inventory_fy2024",
+      "description": "FY2024 closing inventory is an estimate, not a physical count",
+      "approach": "Management estimate based on purchase patterns and expected turnover. Documented in inventory_estimate_audit_review.md.",
+      "evidence": "output/snapshots/final_snapshot_20260128-181411/docs/inventory_estimate_audit_review.md",
+      "risk_level": "medium"
+    },
+    {
+      "area": "inventory_fy2025",
+      "description": "FY2025 closing inventory based on physical count near year-end",
+      "approach": "Physical count performed 2025-05-16, adjusted for subsequent activity to 2025-05-31.",
+      "evidence": "output/snapshots/final_snapshot_20260128-181411/docs/inventory_estimate_audit_review.md",
+      "risk_level": "low"
+    },
+    {
+      "area": "meals_add_back",
+      "description": "50% meals and entertainment add-back for Schedule 1",
+      "approach": "Standard ITA 67.1 treatment. Full expense deducted on books; 50% added back for tax.",
+      "evidence": "output/snapshots/final_snapshot_20260128-181411/output/schedule_1_FY2024.csv",
+      "risk_level": "low"
+    },
+    {
+      "area": "cra_penalties",
+      "description": "CRA penalties included in Other expenses but non-deductible",
+      "approach": "Penalties recorded on books ($71 FY2024, $274 FY2025) and added back on Schedule 1 line 311.",
+      "evidence": "output/snapshots/final_snapshot_20260128-181411/output/schedule_1_FY2024.csv",
+      "risk_level": "low"
+    },
+    {
+      "area": "shareholder_meals_estimate",
+      "description": "Moncton trip meals for shareholders estimated (not all receipts)",
+      "approach": "Conservative per-diem estimate based on trip frequency. FY2024 $465, FY2025 $390.",
+      "evidence": "output/snapshots/final_snapshot_20260128-181411/output/shareholder_meals_estimate_summary.md",
+      "risk_level": "medium"
+    },
+    {
+      "area": "computer_reclass",
+      "description": "Some computer/tech purchases may have been classified as office supplies vs. capital",
+      "approach": "Reclassed 25% of account 6600 (office supplies) to 6610 (computer hardware) at each year-end for clearer presentation. No net income impact; shifts presentation from GIFI 8810 (Office expenses) to 8813 (Data processing).",
+      "evidence": "overrides/manual_adjustment_journals.yml",
+      "risk_level": "low"
+    },
+    {
+      "area": "gifi_remap_ufile_alignment",
+      "description": "GIFI codes were remapped to align with UFile\u2019s GIFI lists and avoid industry-inappropriate codes",
+      "approach": "Updated GIFI mapping overrides to ensure key expenses land in the correct UFile boxes (e.g., 6550\u21929275, 5200-range\u21929130, 6610/6620\u21928813, 6230\u21929225, inventory\u21921121). No net income impact; reclassification only.",
+      "evidence": "overrides/gifi_code_overrides.yml",
+      "risk_level": "low"
+    },
+    {
+      "area": "gross_margin_swing",
+      "description": "Gross margin increased from 43% to 54% between FY2024 and FY2025",
+      "approach": "Review point: compute from Schedule 125 (Gross profit / Revenue). Drivers include inventory increase and seasonality/purchasing differences.",
+      "evidence": "output/snapshots/final_snapshot_20260128-181411/output/gifi_schedule_125_FY2024.csv",
+      "risk_level": "medium"
+    }
+  ]
+}

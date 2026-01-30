@@ -1,0 +1,175 @@
+NOTE: Shopify Nov 12, 2024 bill (~$479 net) is the POS card reader hardware purchase.
+Not yet capitalized in CCA; keep this as a reminder for Class 8 (or expense if you decide to treat as small tools).
+
+Any class opens up these options
+
+Class 38 - 30% DB
+Please enter the information concerning the capital cost allowance for Class 38 - 30% DB.
+
+
+Opening undepreciated capital cost or cumulative eligible capital
+$
+ 
+
+Description of assets
+ 
+
+Adjusted cost base of asset(s) in class
+Description
+$
+
+ 
+
+Description of asset disposed of
+ 
+
+Gross proceeds from disposition
+$
+ 
+
+Gross proceeds from disposition of the designated immediate expensing property
+Selection
+$
+ 
+
+Adjusted cost base of disposals
+Description
+$
+ 
+
+Expenses associated with disposition of assets
+$
+ 
+
+Date the asset was acquired
+dd-mm-yyyy
+
+ 
+
+Deemed disposal designated per Fed ITA sect. 111(4)(e)
+
+ 
+
+Date of disposition
+dd-mm-yyyy
+
+ 
+
+Property type for capital gains classification purposes
+
+ 
+ 
+Add Another    Remove 
+
+Municipal address (if disposing of real estate depreciable property)
+ 
+
+Additional information
+ 
+
+City
+ 
+
+Province
+
+ 
+
+State
+
+ 
+
+Country if not Canada
+
+ 
+
+Postal code
+A1A 1A1
+ 
+
+U.S.A. ZIP code
+ 
+
+Foreign postal code
+ 
+ 
+
+If the class was liquidated, enter net proceeds
+Selection
+$
+ 
+
+Non-accelerated investment incentive property additions - amount and description
+Description
+$
+
+ 
+
+Accelerated investment incentive property (AIIP) additions after November 20, 2018 - amount and description
+Description
+$
+
+ 
+
+Designated immediate expensing property (DIEP) addition after April 18, 2021 - amount and description
+Description
+$
+
+ 
+
+Half-year CCA applies on non-accelerated investment incentive property additions
+
+ 
+
+Date acquired
+dd-mm-yyyy
+
+ 
+
+Date property became available for use
+dd-mm-yyyy
+
+ 
+
+GST, PST or HST rebate on non-accelerated investment incentive property addition to deduct from UCC
+$
+ 
+
+GST, PST or HST rebate on accelerated investment incentive property (AIIP) addition to deduct from UCC
+$
+ 
+
+GST, PST or HST rebate on designated immediate expensing property (DIEP) addition to deduct from UCC
+$
+ 
+
+Adjustments - amount and description
+Description
+$
+
+ 
+
+Description and amount of assistance received or receivable during yr for a property, after disposition
+Description
+$
+
+ 
+
+Description and amount of repayment during the year for a property, after disposition
+Description
+$
+
+ 
+
+Limit this class to specific CCA/CECA amount
+$
+ 
+
+Relevant factor variable/ov
+ 
+
+Override this class to specific amount of gross proceeds from disposition of the designated immediate expensing property
+$
+ 
+
+Override this class to specific immediate expensing amount
+$

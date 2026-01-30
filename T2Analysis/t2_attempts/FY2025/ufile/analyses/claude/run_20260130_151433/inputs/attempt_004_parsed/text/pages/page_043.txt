@@ -1,0 +1,38 @@
+30 Jan 2026 14587430 Canada Inc. Yr.end: 31-05-2025 Acct.#748003142RC0001
+Canada Revenue Agence du revenu
+Agency du Canada Protected B
+when completed
+Information Return for Corporations Filing Electronically
+Do not send this form to the Canada Revenue Agency (CRA) unless we ask for it. We will not keep or return this form.
+Fill out this return for every initial and amended T2 Corporation Income Tax Return electronically filed with the CRA on your behalf.
+By filling out Part 2 and signing Part 3, you acknowledge that, under the Income Tax Act, you have to keep all records used to prepare your T2
+return and provide this information to us on request.
+Part 4 must be filled out by either you or the electronic transmitter of your T2 return.
+Give the signed original of this return to the transmitter and keep a copy in your own records for six years.
+We are responsible for ensuring the confidentiality of your electronically filed tax information only after we have accepted your return.
+Part 1 – Identification
+Corporation's name Business number
+14587430 Canada Inc. 748003142RC0001 R C
+Year Month Day Year Month Day
+Tax Tax Is this an amended return? . . . . . . . . . . Yes X No
+year start 2024-06-01 year-end 2025-05-31
+Email address: tom@curlys.ca
+Most notices and other correspondence are delivered electronically to My Business Account by default, except when a corporation has changed its delivery
+preference to receive paper mail. By providing an email address, you are registering the corporation to receive email notifications from the CRA. The CRA
+will notify the corporation at the email address provided when new correspondence is available in My Business Account and may require immediate
+attention. For more information, see canada.ca/cra-business-email-notifications.
+Part 2 – Declaration
+Enter the following amounts, if applicable, from the T2 return for the tax year noted in Part 1:
+Net income or loss for income tax purposes from Schedule 1, financial statements, or
+General Index of Financial Information (GIFI) (line 300) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28,827
+Part I tax payable (line 700) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2,594
+Part II.2 tax payable (line 705) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Part III.1 tax payable (line 710) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Part IV tax payable (line 712) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Part IV.1 tax payable (line 716) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Part VI tax payable (line 720) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Part VI.1 tax payable (line 724) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Part XIV tax payable (line 728) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Net provincial and territorial tax payable (line 760) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 672
+Total tax payable (line 770) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,266
+T183 CORP E (24) Version 29.01 UF27 Page 1 of 2

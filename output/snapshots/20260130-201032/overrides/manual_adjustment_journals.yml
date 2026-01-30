@@ -1,0 +1,354 @@
+version: 1
+
+# Manual adjustment journals
+#
+# Purpose:
+# - Capture true accrual/cutoff adjustments as deterministic, repeatable journals
+#   without editing any imported “facts”.
+# - These are posted into `journal_entries`/`journal_entry_lines` in `db/t2_final.db`.
+#
+# Conventions:
+# - Amounts are dollars as strings; script converts to cents.
+# - Debits/credits must balance per journal.
+# - entry_date is ISO (YYYY-MM-DD) and drives FY inclusion.
+#
+# IMPORTANT:
+# - Prefer net-only accruals for multi-period Wave bills; HST/ITC timing is handled
+#   separately by invoice-date-based tax recognition in Wave bill allocations.
+
+accounts:
+  # Non-deductible CRA penalties (kept separate for auditability and Schedule 1 add-back work later).
+  - account_code: "9150"
+    account_name: "Penalties - CRA"
+    account_type: "expense"
+    gifi_code: "9270"
+    t2125_line: ""
+    is_active: 1
+    requires_receipt: 0
+    is_tax_account: 0
+
+  # CRA non-tax amounts that hit the GST/HST account (interest, penalties, admin adjustments).
+  # Kept OUT of 2200 so 2200 can be modeled as net tax payable (per output/cra_hst_summary.md).
+  - account_code: "2250"
+    account_name: "CRA Charges Payable (Interest/Penalties)"
+    account_type: "liability"
+    gifi_code: "2620"
+    t2125_line: ""
+    is_active: 1
+    requires_receipt: 0
+    is_tax_account: 0
+
+adjustments:
+  # Share capital: corporate records indicate 100 shares issued ($100) at incorporation (2023-06-01).
+  # We do NOT assume a matching cash deposit in-scope; this is booked as an equity reclass so Schedule 100
+  # reflects legal share structure without changing cash/bank facts.
+  - id: SHARE_CAPITAL_AT_INCORP
+    entry_date: "2023-06-01"
+    entry_type: "ADJUSTMENT"
+    description: "Recognize $100 share capital at incorporation (equity presentation)."
+    notes: "Source: /home/clarencehub/curlys-books/t2-filing-fy2024-fy2025/output/SHAREHOLDER_INFORMATION.txt (Share Capital: $100.00; incorporation date 2023-06-01). Treated as paid-in via incorporation/setup costs (shareholder-paid, no bank deposit)."
+    lines:
+      - account_code: "6520"
+        debit: "100.00"
+        description: "Incorporation/setup costs paid by shareholders"
+      - account_code: "3000"
+        credit: "100.00"
+        description: "Share capital (100 issued shares)"
+
+  # Town of Amherst rent bill dated 2024-06-30 covers May+June (net $700).
+  # Under accrual, May rent belongs in FY2024 (ends 2024-05-31).
+  - id: RENT_MAY2024_ACCRUAL
+    entry_date: "2024-05-31"
+    entry_type: "ADJUSTMENT"
+    description: "Accrue May 2024 rent (portion of Town of Amherst bill dated 2024-06-30)."
+    notes: "Source: data/wave/wave_bills_final.csv fresher_wave_bill_id=323 (net $700 for May+June). Net-only accrual; ITC remains invoice-date based."
+    lines:
+      - account_code: "6100"
+        debit: "350.00"
+        description: "Rent expense (May 2024 accrual)"
+      - account_code: "2000"
+        credit: "350.00"
+        description: "Accrued rent payable (May 2024)"
+
+  - id: RENT_MAY2024_ACCRUAL_REVERSAL
+    entry_date: "2024-06-01"
+    entry_type: "ADJUSTMENT"
+    description: "Reverse May 2024 rent accrual (opening FY2025)."
+    notes: "Reversal of RENT_MAY2024_ACCRUAL."
+    lines:
+      - account_code: "2000"
+        debit: "350.00"
+        description: "Reverse accrued rent payable"
+      - account_code: "6100"
+        credit: "350.00"
+        description: "Reverse rent expense accrual"
+
+  # Jesse payroll-related adjustments paid outside the payroll export
+  #
+  # In January 2024, Jesse received separate e-transfers that were not represented as net-pay rows
+  # in the per-employee payroll export. Per operator recollection, these represent:
+  # - Online tips paid out directly, and
+  # - A CPP reimbursement (Jesse was under 18; CPP was deducted in error in some periods).
+  #
+  # Accounting intent:
+  # - Ensure the bank debits categorized as payroll clear a corresponding payable (2000) instead of
+  #   distorting accounts payable due to “missing accrual”.
+  # - We treat the full amount as wages/tips expense for conservatism and simplicity (immaterial dollars).
+  - id: JESSE_TIPS_CPP_REFUND_JAN2024
+    entry_date: "2024-01-23"
+    entry_type: "ADJUSTMENT"
+    description: "Accrue Jesse Jan 2024 non-export payouts (online tips + CPP reimbursement)."
+    notes: "Bank txns: 1366 ($41.01), 1367 ($91.45), 1362 ($114.82) total $247.28. These payments were made but were not represented as net-pay rows in the payroll export."
+    lines:
+      - account_code: "7000"
+        debit: "247.28"
+        description: "Wages/tips expense (Jesse online tips + CPP reimbursement)"
+      - account_code: "2000"
+        credit: "247.28"
+        description: "Net pay payable (to be cleared by bank e-transfers)"
+
+  - id: JESSE_TIPS_MISC_FY2024
+    entry_date: "2023-09-13"
+    entry_type: "ADJUSTMENT"
+    description: "Accrue Jesse FY2024 tips paid outside payroll export (misc early-season overage)."
+    notes: "Remainder of FY2024 Jesse bank payroll paid vs export net delta after Jan 2024 explicit payouts: $457.96 - $247.28 = $210.68. Treated as tips/adjustments paid directly (not captured in export net-pay rows)."
+    lines:
+      - account_code: "7000"
+        debit: "210.68"
+        description: "Wages/tips expense (Jesse misc tip payouts not in export)"
+      - account_code: "2000"
+        credit: "210.68"
+        description: "Net pay payable (to be cleared by bank e-transfers)"
+
+  # Credit-card payment gap (Dwayne)
+  #
+  # We run Dwayne’s business purchases through his personal credit cards, and the corp pays the cards from the bank.
+  # When a Wave bill is CC-paid, we post an AP→2410 (Due to Dwayne) settlement credit. When the bank pays the card,
+  # we debit 2410. If the bank payments exceed the CC-settlement credits, then (assuming no personal reimbursements)
+  # the difference is effectively a *credit balance / prepayment* sitting on the card at year-end that will be applied
+  # against future business charges (e.g., the documented Bell “prepay through Nov” behavior).
+  #
+  # We model that as a year-end prepaid asset so that `2410` reflects the intended “only mileage + meals remains owed”
+  # at each FY end, without rewriting any bank facts.
+  - id: DWAYNE_CC_PREPAY_BALANCE_FY2024
+    entry_date: "2024-05-31"
+    entry_type: "ADJUSTMENT"
+    description: "Record Dwayne CC prepayment balance at FY2024 end (bank CC payments exceed CC-settled bills)."
+    notes: "Derived amount: FY2024 sum(cc_payment_clear_due_to_shareholder debits to 2410) - sum(wave_bill_cc_settlement credits to 2410) = $649.16. Treated as prepaid business costs sitting as a credit on Dwayne’s personal card at FY2024 end (to be consumed by future corp charges)."
+    lines:
+      - account_code: "1300"
+        debit: "649.16"
+        description: "Prepaid expenses (credit card prepayment balance) FY2024 end"
+      - account_code: "2410"
+        credit: "649.16"
+        description: "Due to shareholder - Dwayne (restore payable reduced by CC overpayment) FY2024 end"
+
+  - id: DWAYNE_CC_PREPAY_BALANCE_FY2025
+    entry_date: "2025-05-31"
+    entry_type: "ADJUSTMENT"
+    description: "Record incremental Dwayne CC prepayment balance created in FY2025."
+    notes: "Derived amount: FY2025 sum(cc_payment_clear_due_to_shareholder debits to 2410) - sum(wave_bill_cc_settlement credits to 2410) = $840.81. Includes explicit Bell prepayment credit $663.40 (see bank txns 569, 393, 394, 396, 397 notes: 'FY-end Bell prepayment credit $663.40 carried forward to post-FY bills (Jun-Nov 2025)'). Remainder ($177.41) treated as additional CC prepayment pending linkage, under the policy that no personal purchases were reimbursed by the corp."
+    lines:
+      - account_code: "1300"
+        debit: "840.81"
+        description: "Prepaid expenses (credit card prepayment balance) FY2025 end"
+      - account_code: "2410"
+        credit: "840.81"
+        description: "Due to shareholder - Dwayne (restore payable reduced by CC overpayment) FY2025 end"
+
+  # One known unmatched reimbursement to Dwayne: bank txn 715 ($12.21) described as “Costco partial payment correction”.
+  # The bank debit clears 2410; this adjustment recognizes it as a business cost so 2410 remains aligned to mileage+meals.
+  - id: DWAYNE_COSTCO_PARTIAL_PAYMENT_CORRECTION
+    entry_date: "2024-12-20"
+    entry_type: "ADJUSTMENT"
+    description: "Recognize Costco partial payment correction paid to Dwayne (bank_txn_id=715)."
+    notes: "Bank txn 715 (2024-12-20) is an unmatched reimbursement to Dwayne for $12.21 ('Costco partial payment correction'). This books the missing expense to avoid understating 2410."
+    lines:
+      - account_code: "5099"
+        debit: "12.21"
+        description: "Costco - correction (COGS - Food - Other)"
+      - account_code: "2410"
+        credit: "12.21"
+        description: "Due to shareholder - Dwayne (reimbursement correction)"
+
+  # FY2024: known abnormal inventory losses (mid-season), for audit clarity.
+  # This is a PRESENTATION reclass only (no net income change): move amounts from COGS buckets into explicit shrink/spoilage.
+  - id: FY2024_INVENTORY_SHRINKAGE_EVENTS_RECLASS
+    entry_date: "2024-05-31"
+    entry_type: "ADJUSTMENT"
+    description: "FY2024 inventory losses reclass to shrinkage/spoilage (drinks, rodents, freezer failure)."
+    notes: "Management-reported FY2024 losses: $500 drinks, $120 chocolate bars (rodents), $750 food (freezer failure). Mid-season events; assumed already absent from ending counts. Reclass from COGS to 5400 for audit visibility; net income unchanged."
+    lines:
+      - account_code: "5400"
+        debit: "1370.00"
+        description: "Abnormal shrink/spoilage (FY2024) - reclass for visibility"
+      - account_code: "5010"
+        credit: "500.00"
+        description: "Reclass from COGS - Beverage (drinks lost)"
+      - account_code: "5030"
+        credit: "120.00"
+        description: "Reclass from COGS - Retail Goods (chocolate bars lost to rodents)"
+      - account_code: "5000"
+        credit: "750.00"
+        description: "Reclass from COGS - Food (freezer failure loss)"
+
+  # FY2025: minor shrink/spoilage reclass for internal clarity (no net income change).
+  - id: FY2025_INVENTORY_SHRINKAGE_RECLASS
+    entry_date: "2025-05-31"
+    entry_type: "ADJUSTMENT"
+    description: "FY2025 inventory losses reclass to shrinkage/spoilage (management estimate)."
+    notes: "Management-reported FY2025 shrink/spoilage estimate: $200.00. Mid-season; assumed already absent from ending counts. Reclass from COGS to 5400 for visibility; net income unchanged."
+    lines:
+      - account_code: "5400"
+        debit: "200.00"
+        description: "Shrink/spoilage (FY2025) - reclass for visibility"
+      - account_code: "5000"
+        credit: "200.00"
+        description: "Reclass from COGS - Food (shrink/spoilage)"
+
+  # Presentation-only reclass to reflect that a portion of "office supplies" consists of tech spend
+  # (iPad, cables/adapters, accessories, Shopify-related items miscoded to office supplies, etc.).
+  #
+  # This does NOT change net income or tax. Both accounts map to GIFI 8810 (office expenses).
+  - id: FY2024_COMPUTER_RECLASS_FROM_OFFICE_SUPPLIES
+    entry_date: "2024-05-31"
+    entry_type: "ADJUSTMENT"
+    description: "Reclass 25% of office supplies to computer hardware (presentation-only)."
+    notes: "Management estimate: 25% of FY2024 office supplies (account 6600 total $4,026.72) relates to computer hardware/accessories and similar tech items. This reclass is for clearer expense presentation only; no change to net income/tax."
+    lines:
+      - account_code: "6610"
+        debit: "1006.68"
+        description: "Computer hardware/accessories (estimated portion)"
+      - account_code: "6600"
+        credit: "1006.68"
+        description: "Reduce office supplies (reclass portion)"
+
+  - id: FY2025_COMPUTER_RECLASS_FROM_OFFICE_SUPPLIES
+    entry_date: "2025-05-31"
+    entry_type: "ADJUSTMENT"
+    description: "Reclass 25% of office supplies to computer hardware (presentation-only)."
+    notes: "Management estimate: 25% of FY2025 office supplies (account 6600 total $5,203.50) relates to computer hardware/accessories and similar tech items. This reclass is for clearer expense presentation only; no change to net income/tax."
+    lines:
+      - account_code: "6610"
+        debit: "1300.88"
+        description: "Computer hardware/accessories (estimated portion)"
+      - account_code: "6600"
+        credit: "1300.88"
+        description: "Reduce office supplies (reclass portion)"
+
+  # CRA payroll arrears payments are already posted to interest expense (8100) by the payroll remittance journals.
+  # Reclass the penalty portion out of interest so penalties are visible and explainable.
+  - id: CRA_PAYROLL_PENALTY_RECLASS_FY2024
+    entry_date: "2024-02-26"
+    entry_type: "ADJUSTMENT"
+    description: "Reclass CRA payroll late remitting penalty out of interest (FY2024)."
+    notes: "CRA arrears: penalty $71.35, interest $0.67, paid $72.02. Payment journal debits 8100 for full $72.02; reclass $71.35 to penalties."
+    lines:
+      - account_code: "9150"
+        debit: "71.35"
+        description: "CRA payroll late remitting penalty"
+      - account_code: "8100"
+        credit: "71.35"
+        description: "Reclass from interest expense"
+
+  - id: CRA_PAYROLL_PENALTY_RECLASS_FY2025
+    entry_date: "2025-03-17"
+    entry_type: "ADJUSTMENT"
+    description: "Reclass CRA payroll late remitting penalty out of interest (FY2025)."
+    notes: "CRA arrears: penalty $27.27, interest $0.04, admin credit $0.02, net paid $27.29. Payment journal debits 8100 for $27.29; reclass $27.27 to penalties (leaves net interest $0.02)."
+    lines:
+      - account_code: "9150"
+        debit: "27.27"
+        description: "CRA payroll late remitting penalty"
+      - account_code: "8100"
+        credit: "27.27"
+        description: "Reclass from interest expense"
+
+  # CRA GST/HST penalties and interest are embedded in HST payments (bank debits currently posted entirely to 2200).
+  # Reclass penalty/interest components from 2200 into expenses so 2200 better reflects net tax.
+  - id: CRA_HST_PEN_INT_RECLASS_MAR2024
+    entry_date: "2024-11-13"
+    entry_type: "ADJUSTMENT"
+    description: "Reclass CRA HST penalty/interest (period end 2024-03-31) out of HST payable."
+    notes: "Bank payment $3,774.16 includes net tax $3,511.60 + failure-to-file penalty $79.00 + arrears interest $183.56."
+    lines:
+      - account_code: "9150"
+        debit: "79.00"
+        description: "CRA HST failure-to-file penalty"
+      - account_code: "8100"
+        debit: "183.56"
+        description: "CRA HST arrears interest"
+      - account_code: "2200"
+        credit: "262.56"
+        description: "Reclass out of HST payable"
+
+  - id: CRA_HST_PEN_INT_RECLASS_JUN2024
+    entry_date: "2024-11-13"
+    entry_type: "ADJUSTMENT"
+    description: "Reclass CRA HST penalty/interest (period end 2024-06-30) out of HST payable."
+    notes: "Bank payment $3,064.77 includes net tax $2,943.26 + failure-to-file penalty $44.14 + arrears interest $77.37."
+    lines:
+      - account_code: "9150"
+        debit: "44.14"
+        description: "CRA HST failure-to-file penalty"
+      - account_code: "8100"
+        debit: "77.37"
+        description: "CRA HST arrears interest"
+      - account_code: "2200"
+        credit: "121.51"
+        description: "Reclass out of HST payable"
+
+  - id: CRA_HST_INT_RECLASS_SEP2024
+    entry_date: "2024-11-29"
+    entry_type: "ADJUSTMENT"
+    description: "Reclass CRA HST non-tax charges (period end 2024-09-30) out of HST payable."
+    notes: "Bank payment $2,542.18 vs net tax $2,524.74 implies $17.44 of non-tax charges (interest net of adjustments)."
+    lines:
+      - account_code: "8100"
+        debit: "17.44"
+        description: "CRA HST arrears interest (net)"
+      - account_code: "2200"
+        credit: "17.44"
+        description: "Reclass out of HST payable"
+
+  - id: CRA_HST_PEN_INT_RECLASS_DEC2024
+    entry_date: "2025-04-25"
+    entry_type: "ADJUSTMENT"
+    description: "Reclass CRA HST penalty/interest (period end 2024-12-31) out of HST payable."
+    notes: "CRA posted failure-to-file penalty $123.46 and arrears interest $110.59 on 2025-04-25; these were settled via account transfers/credits rather than additional bank payment."
+    lines:
+      - account_code: "9150"
+        debit: "123.46"
+        description: "CRA HST failure-to-file penalty"
+      - account_code: "8100"
+        debit: "110.59"
+        description: "CRA HST arrears interest"
+      - account_code: "2250"
+        credit: "234.05"
+        description: "CRA charges payable (non-tax)"
+
+  - id: CRA_HST_INTEREST_CREDIT_JAN2025
+    entry_date: "2025-01-03"
+    entry_type: "ADJUSTMENT"
+    description: "Recognize CRA HST interest credit (reduces interest expense) for period end 2024-03-31."
+    notes: "CRA HST account shows an Arrears Interest credit of $10.84 posted 2025-01-03 (cr_dr=CR, period_end=2024-03-31). Reclass out of HST payable into interest."
+    lines:
+      - account_code: "2250"
+        debit: "10.84"
+        description: "Reduce CRA charges payable for CRA interest credit"
+      - account_code: "8100"
+        credit: "10.84"
+        description: "Reduce interest expense (CRA interest credit)"
+
+  - id: CRA_HST_REFUND_INTEREST_CREDIT_APR2025
+    entry_date: "2025-04-25"
+    entry_type: "ADJUSTMENT"
+    description: "Recognize CRA HST refund interest credit (reduces interest expense) for period end 2024-03-31."
+    notes: "CRA HST account shows a Refund Interest credit of $4.11 posted 2025-04-25 (cr_dr=CR, period_end=2024-03-31). Reclass out of HST payable into interest."
+    lines:
+      - account_code: "2250"
+        debit: "4.11"
+        description: "Reduce CRA charges payable for CRA refund interest credit"
+      - account_code: "8100"
+        credit: "4.11"
+        description: "Reduce interest expense (CRA refund interest credit)"

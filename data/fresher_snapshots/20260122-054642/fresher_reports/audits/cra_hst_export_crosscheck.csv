@@ -1,0 +1,7 @@
+hst_row,hst_effective_date,hst_period_end,hst_posted_date,hst_amount,bank_txn_id,bank_date,bank_amount,bank_txn_type,bank_manual_classification,bank_category,bank_entity,bank_verified,bank_description,bank_notes,bank_explanation
+7,2024-10-22,Non-reporting period,2024-10-22,2000.00,,,,,,,,,,,
+23,2025-06-26,"March 31, 2025",2025-07-02,2999.56,298,2025-06-26,2999.56,PAYROLL_REMIT,,PAYROLL_REMIT,CORP,0,Electronic Funds Transfer DEBIT MEMO GST34-5478726 GPFS-GOVERNMENT PAYMENT,,CRA payroll remittance - $2999.56
+38,2025-04-22,"December 31, 2024",2025-04-25,8231.53,375,2025-04-22,8231.53,PAYROLL_REMIT,CRA_PAYMENT,PAYROLL_REMIT,CORP,0,Electronic Funds Transfer DEBIT MEMO GST34-1427613 GPFS-GOVERNMENT PAYMENT,CRA remittance (HST or payroll),CRA payroll remittance - $8231.53
+57,2024-11-29,"September 30, 2024",2024-12-04,2542.18,798,2024-11-29,2542.18,PAYROLL_REMIT,CRA_PAYMENT,PAYROLL_REMIT,CORP,0,Electronic Funds Transfer DEBIT MEMO GST-B-8510988 GPFS-GOVERNMENT PAYMENT,CRA remittance (HST or payroll),CRA payroll remittance - $2542.18
+70,2024-11-13,"June 30, 2024",2024-11-18,3064.77,834,2024-11-13,3064.77,PAYROLL_REMIT,CRA_PAYMENT,PAYROLL_REMIT,CORP,0,Electronic Funds Transfer DEBIT MEMO GST-B-2076907 GPFS-GOVERNMENT PAYMENT,CRA remittance (HST or payroll),CRA payroll remittance - $3064.77
+94,2024-11-13,"March 31, 2024",2024-11-18,3774.16,835,2024-11-13,3774.16,PAYROLL_REMIT,CRA_PAYMENT,PAYROLL_REMIT,CORP,0,Electronic Funds Transfer DEBIT MEMO GST-B-2076406 GPFS-GOVERNMENT PAYMENT,CRA remittance (HST or payroll),CRA payroll remittance - $3774.16

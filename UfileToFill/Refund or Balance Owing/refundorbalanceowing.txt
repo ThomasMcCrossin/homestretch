@@ -1,0 +1,35 @@
+Gives option with a plus symbol for either Tax refund information and Tax Payment information 
+
+Tax payment information
+Please enter the information concerning the payment of tax owed. (
+Code for payment of taxes dropdown, options below)
+Full balance for every jurisdiction (our preference)
+Other enclosed amount by jurisdiction
+no payment for any jurisdiction
+
+
+ 
+
+If you selected Other enclosed amount(s), enter the amount of current year tax payment enclosed with the return.
+$
+
+Then there's tax refund information
+Tax refund information
+Please enter the information concerning the refund of taxes.
+
+
+Code for refund of taxes (dropdown, options below)
+Claim Refund
+Future Tax Liability
+Other Tax liability
+ 
+
+If you selected Distribution of the refund, please allocate between the refund types.
+Selection (you can select multiple) options below 
+Transfer to a third party
+Distribution of the refund
+Claim Refund
+Future Tax Liability
+Other Tax Liability
+
+$

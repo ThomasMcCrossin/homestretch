@@ -1,0 +1,225 @@
+date,shareholder,category,amount,bank_description,explanation,wave_bill_ids,verified
+2023-07-05,DWAYNE,RENT_REIMBURSEMENT,402.5,Branch Transaction TRANSFER TO: 00153/19-23218,Rent reimbursement to Dwayne for July 2023 Town of Amherst rent via transfer to 00153/19-23218 ($350 + $52.50 HST = $402.50),13,1
+2023-09-18,DWAYNE,REIMBURSEMENT,123.91,Internet Banking E-TRANSFER104713038019 Dwayne Ripley 4506*********695,Linked to Wave bill(s): 25,25,1
+2023-09-18,DWAYNE,REIMBURSEMENT,1157.64,Internet Banking E-TRANSFER104713033583 Dwayne Ripley 4506*********695,Linked to Wave bill(s): 24,24,1
+2023-09-18,DWAYNE,REIMBURSEMENT,140.04,Internet Banking E-TRANSFER104713030426 Dwayne Ripley 4506*********695,Linked to Wave bill(s): 7,7,1
+2023-09-18,DWAYNE,REIMBURSEMENT,102.5,Internet Banking E-TRANSFER104713027927 Dwayne Ripley 4506*********695,Linked to Wave bill(s): 8,8,1
+2023-09-18,DWAYNE,REIMBURSEMENT,265.68,Internet Banking E-TRANSFER104713027048 Dwayne Ripley 4506*********695,Linked to Wave bill(s): 5,5,1
+2023-09-27,DWAYNE,RENT_REIMBURSEMENT,805.0,Internet Banking E-TRANSFER104722914625 Dwayne Ripley 4506*********695,Rent reimbursement to Dwayne for June 2023 Town of Amherst full rent ($700 + $105 HST = $805),1,1
+2023-09-27,DWAYNE,REIMBURSEMENT,76.27,Internet Banking E-TRANSFER104722913800 Dwayne Ripley 4506*********695,"Reimbursement for: Walmart - Bill (Sep 5, 2023 placeholder)",,1
+2023-09-27,DWAYNE,REIMBURSEMENT,1037.45,Internet Banking E-TRANSFER104722859541 Dwayne Ripley 4506*********695,Expense reimbursement (Wave bill 42),42,1
+2023-10-11,DWAYNE,REIMBURSEMENT,222.59,Internet Banking E-TRANSFER104739947952 Dwayne Ripley 4506*********695,Linked to Wave bill(s): 4,4,1
+2023-10-12,DWAYNE,REIMBURSEMENT,862.5,Internet Banking E-TRANSFER104741458685 Dwayne Ripley 4506*********695,"Reimbursement to Dwayne: GFS damaged oil, chicken, cheese curds salvage COGS $862.50 (no HST placeholder)",768,1
+2023-10-23,DWAYNE,REIMBURSEMENT,104.1,Internet Banking E-TRANSFER104751685374 Dwayne Ripley 4506*********695,Linked to Wave bill(s): 746,746,1
+2023-10-23,DWAYNE,REIMBURSEMENT,538.75,Internet Banking E-TRANSFER104751654653 Dwayne Ripley 4506*********695,Linked to Wave bill(s): 747,747,1
+2023-10-23,DWAYNE,CHANGE_FLOAT,200.0,Internet Banking E-TRANSFER104751693462 Dwayne Ripley 4506*********695,Change float - $200 Oct 2023,,1
+2023-10-23,DWAYNE,CHANGE_FLOAT,95.0,Internet Banking E-TRANSFER104751692640 Dwayne Ripley 4506*********695,Change float - $95 Oct 2023,,1
+2023-10-25,DWAYNE,REIMBURSEMENT,409.19,Internet Banking E-TRANSFER104755637481 Dwayne Ripley 4506*********695,Reimbursement for: Mondoux - Bill 8100383,,1
+2023-11-02,DWAYNE,REIMBURSEMENT,88.8,Internet Banking E-TRANSFER104764668830 Dwayne Ripley 4506*********695,Linked to Wave bill(s): 748,748,1
+2023-11-06,DWAYNE,CHANGE_FLOAT,265.0,Internet Banking E-TRANSFER104768275835 Dwayne Ripley 4506*********695,Change float - $265 Nov 2023,,1
+2023-11-08,DWAYNE,REIMBURSEMENT,1232.52,Internet Banking E-TRANSFER104772599167 Dwayne Ripley 4506*********695,Reimbursement for: Curly's Sports and Supplements - Bill D1,,1
+2023-11-14,DWAYNE,CHANGE_FLOAT,85.0,Internet Banking E-TRANSFER104778542469 Dwayne Ripley 4506*********695,Change float - $85 Curlys to canteen Nov 2023,,1
+2023-11-16,DWAYNE,REIMBURSEMENT,1171.02,Internet Banking E-TRANSFER104781139510 Dwayne Ripley 4506*********695,Reimbursement for: Curly's Sports and Supplements - Bill 1994069 (PDF; missed HST FY2024),,1
+2023-11-16,DWAYNE,REIMBURSEMENT,1437.22,Internet Banking E-TRANSFER104781138294 Dwayne Ripley 4506*********695,Linked to Wave bill(s): 751,751,1
+2023-11-24,DWAYNE,REIMBURSEMENT,862.5,Internet Banking E-TRANSFER104790618580 Dwayne Ripley 4506*********695,Reimbursement for: Town of Amherst - Bill,,1
+2023-12-01,DWAYNE,REIMBURSEMENT,862.5,Internet Banking E-TRANSFER104799503425 Dwayne Ripley 4506*********695,Expense reimbursement (Wave bill 111),111,1
+2023-12-01,DWAYNE,REIMBURSEMENT,116.87,Internet Banking E-TRANSFER104799514923 Dwayne Ripley 4506*********695,Linked to Wave bill(s): 752,752,1
+2023-12-11,DWAYNE,CHANGE_FLOAT,148.0,Internet Banking E-TRANSFER104809509277 Dwayne Ripley 4506*********695,Change float - $148 Dec 2023,,1
+2023-12-11,DWAYNE,CHANGE_FLOAT,100.0,Internet Banking E-TRANSFER104809504902 Dwayne Ripley 4506*********695,Change float - $100 Dec 2023,,1
+2023-12-28,DWAYNE,REIMBURSEMENT,9.88,Internet Banking E-TRANSFER104830192584 Dwayne Ripley 4506*********695,Linked to Wave bill(s): 64,64,1
+2024-01-04,DWAYNE,REIMBURSEMENT,213.9,Internet Banking E-TRANSFER104837987108 Dwayne Ripley 4506*********695,Linked to Wave bill(s): 753,753,1
+2024-01-09,DWAYNE,REIMBURSEMENT,276.0,Internet Banking E-TRANSFER104844359998 Dwayne Ripley 4506*********695,Reimbursement for: Curly's Sports and Supplements - Bill 2220169,,1
+2024-01-10,DWAYNE,REIMBURSEMENT,2000.0,Internet Banking E-TRANSFER104844795812 Dwayne Ripley 4506*********695,Linked to Wave bill(s): 126,126,1
+2024-01-15,DWAYNE,RENT_REIMBURSEMENT,862.5,Internet Banking E-TRANSFER104848611833 Dwayne Ripley 4506*********695,Rent reimbursement to Dwayne for Feb 2024 Town of Amherst rent (paid in advance),191,1
+2024-01-22,DWAYNE,PAYROLL_REIMBURSE,1541.41,Internet Banking E-TRANSFER104858423983 Dwayne Ripley 4506*********695,"Q3/Q4 2023 CRA payroll remittance - paid on personal card, reimbursed $1541.41",,1
+2024-02-07,DWAYNE,REIMBURSEMENT,400.0,Internet Banking E-TRANSFER104877407157 Dwayne Ripley 4506*********695,Linked to Wave bill(s): 166,166,1
+2024-02-22,DWAYNE,REIMBURSEMENT,20.69,Internet Banking E-TRANSFER104893607882 Dwayne Ripley 4506*********695,Linked to Wave bill(s): 754,754,1
+2024-02-22,DWAYNE,REIMBURSEMENT,229.42,Internet Banking E-TRANSFER104893715473 Dwayne Ripley 4506*********695,Reimbursement for: Curly's Sports and Supplements - Bill 2365969,,1
+2024-02-22,DWAYNE,REIMBURSEMENT,1100.0,Internet Banking E-TRANSFER104893574645 Dwayne Ripley 4506*********695,Reimbursement for: Electric Kitty - Bill,,1
+2024-03-08,DWAYNE,REIMBURSEMENT,364.32,Internet Banking E-TRANSFER104912761474 Dwayne Ripley 4506*********695,Reimbursement for: Curly's Sports and Supplements - Bill 2423469,,1
+2024-03-12,DWAYNE,REIMBURSEMENT,172.5,Internet Banking E-TRANSFER104916674857 Dwayne Ripley 4506*********695,Reimbursement for: Curly's Sports and Supplements - Bill 2425069,,1
+2024-03-12,DWAYNE,REIMBURSEMENT,227.7,Internet Banking E-TRANSFER104916674211 Dwayne Ripley 4506*********695,Reimbursement for: Curly's Sports and Supplements - Bill 2437469,,1
+2024-04-22,DWAYNE,REIMBURSEMENT,484.99,Internet Banking E-TRANSFER104965874591 Dwayne Ripley 4506*********695,Reimbursement for: Curly's Sports and Supplements - Bill 25,,1
+2024-06-17,DWAYNE,LOAN_ISSUED,9000.0,CHEQUE 72585461 2,"Shareholder loan to Dwayne - $9,000",,1
+2024-07-09,DWAYNE,CHANGE_FLOAT,125.0,Internet Banking E-TRANSFER105063109848 Dwayne Ripley 4506*********695,Change float - $125 to fund till Jul 2024,,1
+2024-07-30,DWAYNE,RENT_REIMBURSEMENT,402.5,Internet Banking E-TRANSFER105087265345 Dwayne Ripley 4506*********695,Rent reimbursement to Dwayne: $402.50 split payment (1/2) toward $805 rent (other half via bank_txn_id 1042 to Thomas),324,1
+2024-08-30,DWAYNE,CHANGE_FLOAT,95.0,Internet Banking E-TRANSFER105125315169 Dwayne Ripley 4506*********695,Change float - $95 canteen change Aug 2024,,1
+2024-09-03,DWAYNE,REIMBURSEMENT,31.23,Internet Banking E-TRANSFER105131057480 Dwayne Ripley 4506*********695,Reimbursement for: Atlantic Superstore - Bill,,1
+2024-09-03,DWAYNE,REIMBURSEMENT,430.56,Internet Banking E-TRANSFER105131048337 Dwayne Ripley 4506*********695,Reimbursement for: Curly's Sports and Supplements - Bill 30000969,,1
+2024-09-27,DWAYNE,CHANGE_FLOAT,100.0,Internet Banking E-TRANSFER105160459150 Dwayne Ripley 4506*********695,Change float - $100 to fund till Sep 2024,,1
+2024-10-11,DWAYNE,REIMBURSEMENT,1462.8,Internet Banking E-TRANSFER105179102854 Dwayne Ripley 4506*********695,Reimbursement for: Curly's Sports and Supplements - Bill 3110269,,1
+2024-10-24,DWAYNE,REIMBURSEMENT,489.59,Internet Banking E-TRANSFER105194245423 Dwayne Ripley 4506*********695,Reimbursement for: Curly's Sports and Supplements - Bill,,1
+2024-10-28,DWAYNE,REIMBURSEMENT,543.93,Internet Banking E-TRANSFER105199220091 Dwayne Ripley 4506*********695,Reimbursement for: Curly's Sports and Supplements - Bill,,1
+2024-12-02,DWAYNE,REIMBURSEMENT,131.5,Internet Banking E-TRANSFER105245720544 Dwayne Ripley 4506*********695,Reimbursement for: GFS - Bill 9013824877,,1
+2024-12-03,DWAYNE,REIMBURSEMENT,178.86,Internet Banking E-TRANSFER105246967885 Dwayne Ripley 4506*********695,Reimbursement for: Walmart - Bill,,1
+2024-12-03,DWAYNE,REIMBURSEMENT,344.85,Internet Banking E-TRANSFER105246954315 Dwayne Ripley 4506*********695,Reimbursement for: Dollarama - Bill,,1
+2024-12-03,DWAYNE,REIMBURSEMENT,652.05,Internet Banking E-TRANSFER105246766734 Dwayne Ripley 4506*********695,Reimbursement for: Curly's Sports and Supplements - Bill,,1
+2024-12-03,DWAYNE,REIMBURSEMENT,254.74,Internet Banking E-TRANSFER105246974854 Dwayne Ripley 4506*********695,Costco split payment reimburse - bill 486,,1
+2024-12-20,DWAYNE,REIMBURSEMENT,400.0,Internet Banking E-TRANSFER105269379759 Dwayne Ripley 4506*********695,Linked to Wave bill(s): 538,538,1
+2024-12-20,DWAYNE,REIMBURSEMENT,230.0,Internet Banking E-TRANSFER105269378394 Dwayne Ripley 4506*********695,Linked to Wave bill(s): 743,743,1
+2024-12-20,DWAYNE,REIMBURSEMENT,12.21,Internet Banking E-TRANSFER105269380652 Dwayne Ripley 4506*********695,Costco payment correction - $12.21 Dec 2024,,1
+2025-01-06,DWAYNE,OWNER_DRAW,5000.0,CHEQUE 72460628 5,"Owner draw to Dwayne - $5,000",,1
+2025-01-08,DWAYNE,REIMBURSEMENT,182.85,Internet Banking E-TRANSFER105292472150 Dwayne Ripley 4506*********695,Expense reimbursement (Wave bill 525),525,1
+2025-01-08,DWAYNE,REIMBURSEMENT,71.52,Internet Banking E-TRANSFER105292471635 Dwayne Ripley 4506*********695,Reimbursement for: Curly's Sports and Supplements - Bill,,1
+2025-01-17,DWAYNE,CHANGE_FLOAT,500.0,Internet Banking E-TRANSFER105304106630 Dwayne Ripley 4506*********695,Change float - $500 Jan 2025,,1
+2025-01-27,DWAYNE,REIMBURSEMENT,166.01,Internet Banking E-TRANSFER105315810654 Dwayne Ripley 4506*********695,Costco split - cash portion reimburse - bill 575,,1
+2025-02-24,DWAYNE,DEPOSIT_CORRECTION,5070.0,Branch Transaction TRANSFER TO: 00153/19-23218,Deposit correction - excess cash transferred back to Dwayne's personal account Feb 2025,,1
+2025-02-27,DWAYNE,REIMBURSEMENT,1095.18,Internet Banking E-TRANSFER105354336659 Dwayne Ripley 4506*********695,Reimbursement for: Curly's Sports and Supplements - Bill,,1
+2025-03-14,DWAYNE,CHANGE_FLOAT,500.0,Internet Banking E-TRANSFER105374620099 Dwayne Ripley 4506*********695,Change float - $500 to fund till Mar 2025,,1
+2025-04-21,DWAYNE,OWNER_DRAW,20000.0,CHEQUE 83785012 6,"Owner draw to Dwayne - $20,000",,1
+2025-05-22,DWAYNE,OWNER_DRAW,9000.0,Branch Transaction TRANSFER TO: 00153/19-23218,Owner draw to Dwayne (transfer),,1
+2025-05-22,DWAYNE,LOAN_REPAID,,Branch Transaction TRANSFER FROM: 00153/19-23218,Loan repaid by Dwayne (transfer),,1
+2023-10-11,THOMAS,REIMBURSEMENT,400.0,Internet Banking E-TRANSFER104740000760 Thomas McCrossin 4506*********695,Thomas reimbursement for: GFS - Bill (cash off books),,1
+2023-11-06,THOMAS,CHANGE_FLOAT,95.0,Internet Banking E-TRANSFER104768275967 Thomas McCrossin 4506*********695,Change float - $75 of $95 (other $20 is Jeff Bembridge sauces bill BEMBRIDGE-SAUCES-001),,1
+2023-12-01,THOMAS,REIMBURSEMENT,102.3,"Internet Banking INTERNET BILL PMT000000218793 MASTERCARD, TRIANGLE -CDN 4506*********695",Thomas card payment (TRIANGLE) reimbursement.,,1
+2023-12-06,THOMAS,REIMBURSEMENT,120.72,"Internet Banking INTERNET BILL PMT000000223041 MASTERCARD, TRIANGLE -CDN 4506*********695",Thomas card payment (TRIANGLE) reimbursement.,,1
+2023-12-11,THOMAS,CHANGE_FLOAT,36.5,Internet Banking E-TRANSFER104809514896 Thomas McCrossin 4506*********695,Change float - $36.50 Dec 2023,,1
+2023-12-27,THOMAS,SHAREHOLDER_PAYROLL,2000.0,Internet Banking E-TRANSFER104826070509 Thomas McCrossin 4506*********695,Thomas payroll - $2000 Dec 27 2023,,1
+2023-12-28,THOMAS,REIMBURSEMENT,120.72,"Internet Banking INTERNET BILL PMT000000129260 MASTERCARD, TRIANGLE -CDN 4506*********695",Thomas card payment (TRIANGLE) reimbursement.,,1
+2024-01-29,THOMAS,REIMBURSEMENT,40.0,Internet Banking E-TRANSFER104865857496 Thomas McCrossin 4506*********695,Reimbursement to Thomas: FB marketplace hot water heater ($40 no tax placeholder),769,1
+2024-01-29,THOMAS,REIMBURSEMENT,862.5,Internet Banking E-TRANSFER104865856982 Thomas McCrossin 4506*********695,Thomas payment for: Town of Amherst - Bill FEbruary REnt,,1
+2024-02-07,THOMAS,REIMBURSEMENT,200.0,Internet Banking E-TRANSFER104877337253 Thomas McCrossin 4506*********695,Thomas payment for: GFS - Bill,,1
+2024-02-12,THOMAS,REIMBURSEMENT,41.4,"Internet Banking INTERNET BILL PMT000000224908 MASTERCARD, NEO FINANCIAL 4506*********695",Thomas card payment (NEO) reimbursement.,,1
+2024-02-12,THOMAS,REIMBURSEMENT,57.43,"Internet Banking INTERNET BILL PMT000000216344 MASTERCARD, TRIANGLE -CDN 4506*********695",Thomas card payment (TRIANGLE) reimbursement.,,1
+2024-02-22,THOMAS,REIMBURSEMENT,20.0,Internet Banking E-TRANSFER104893576472 Thomas McCrossin 4506*********695,Thomas payment for: Jeff Bembridge - Bill,,1
+2024-02-22,THOMAS,REIMBURSEMENT,133.36,"Internet Banking INTERNET BILL PMT000000231401 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-02-22,THOMAS,REIMBURSEMENT,52.92,"Internet Banking INTERNET BILL PMT000000230629 MASTERCARD, TRIANGLE -CDN 4506*********695",Thomas card payment (TRIANGLE) reimbursement.,,1
+2024-02-22,THOMAS,REIMBURSEMENT,166.63,"Internet Banking INTERNET BILL PMT000000209290 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-02-22,THOMAS,REIMBURSEMENT,360.76,"Internet Banking INTERNET BILL PMT000000209188 MASTERCARD, TRIANGLE -CDN 4506*********695",Thomas card payment (TRIANGLE) reimbursement.,,1
+2024-02-22,THOMAS,REIMBURSEMENT,23.7,"Internet Banking INTERNET BILL PMT000000237646 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-02-22,THOMAS,REIMBURSEMENT,50.61,"Internet Banking INTERNET BILL PMT000000213069 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-02-26,THOMAS,PAYROLL_REIMBURSE,292.23,Internet Banking E-TRANSFER104897934333 Thomas McCrossin 4506*********695,Payroll reimbursement for January (confirmed),,1
+2024-02-26,THOMAS,REIMBURSEMENT,135.76,"Internet Banking INTERNET BILL PMT000000212841 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-02-26,THOMAS,PAYROLL_REIMBURSE,72.02,Internet Banking E-TRANSFER104897933797 Thomas McCrossin 4506*********695,"CRA payroll remittance arrears - paid on personal card, reimbursed $72.02",,1
+2024-03-06,THOMAS,REIMBURSEMENT,804.99,"Internet Banking INTERNET BILL PMT000000215460 MASTERCARD, TRIANGLE -CDN 4506*********695",Thomas card payment (TRIANGLE) reimbursement.,,1
+2024-03-06,THOMAS,REIMBURSEMENT,150.72,"Internet Banking INTERNET BILL PMT000000222808 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-03-06,THOMAS,REIMBURSEMENT,89.54,"Internet Banking INTERNET BILL PMT000000213297 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-03-06,THOMAS,REIMBURSEMENT,298.92,"Internet Banking INTERNET BILL PMT000000212347 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-03-06,THOMAS,PAYROLL_REIMBURSE,566.16,Internet Banking E-TRANSFER104910150312 Thomas McCrossin 4506*********695,"Jan 2024 CRA payroll remittance - paid on personal card, reimbursed $566.16",,1
+2024-03-11,THOMAS,REIMBURSEMENT,48.12,"Internet Banking INTERNET BILL PMT000000230574 MASTERCARD, NEO FINANCIAL 4506*********695",Thomas card payment (NEO) reimbursement.,,1
+2024-03-11,THOMAS,REIMBURSEMENT,31.69,"Internet Banking INTERNET BILL PMT000000230441 MASTERCARD, NEO FINANCIAL 4506*********695",Thomas card payment (NEO) reimbursement.,,1
+2024-03-11,THOMAS,REIMBURSEMENT,8.2,"Internet Banking INTERNET BILL PMT000000209141 MASTERCARD, NEO FINANCIAL 4506*********695",Thomas card payment (NEO) reimbursement.,,1
+2024-03-11,THOMAS,REIMBURSEMENT,20.05,"Internet Banking INTERNET BILL PMT000000230292 MASTERCARD, NEO FINANCIAL 4506*********695",Thomas card payment (NEO) reimbursement.,,1
+2024-03-11,THOMAS,REIMBURSEMENT,9.27,"Internet Banking INTERNET BILL PMT000000208669 MASTERCARD, NEO FINANCIAL 4506*********695",Thomas card payment (NEO) reimbursement.,,1
+2024-03-11,THOMAS,REIMBURSEMENT,55.73,"Internet Banking INTERNET BILL PMT000000213024 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-03-11,THOMAS,PAYROLL_REIMBURSE,558.47,Internet Banking E-TRANSFER104915459750 Thomas McCrossin 4506*********695,"Feb 2024 CRA payroll remittance - paid on personal card, reimbursed $558.47",,1
+2024-03-12,THOMAS,REIMBURSEMENT,862.5,Internet Banking E-TRANSFER104916582105 Thomas McCrossin 4506*********695,Thomas payment for: Town of Amherst - Bill March Rent,,1
+2024-03-14,THOMAS,REIMBURSEMENT,135.51,"Internet Banking INTERNET BILL PMT000000237939 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-03-26,THOMAS,REIMBURSEMENT,134.75,"Internet Banking INTERNET BILL PMT000000119738 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-03-26,THOMAS,REIMBURSEMENT,31.46,"Internet Banking INTERNET BILL PMT000000118536 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-04-02,THOMAS,PAYROLL_REIMBURSE,1249.27,Internet Banking E-TRANSFER104941665380 Thomas McCrossin 4506*********695,"Payroll reimbursement, matches CRA export Payment Mar 2024, received 2024-04-02",,1
+2024-04-04,THOMAS,REIMBURSEMENT,111.41,"Internet Banking INTERNET BILL PMT000000118630 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-04-08,THOMAS,REIMBURSEMENT,50.13,"Internet Banking INTERNET BILL PMT000000234227 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-04-16,THOMAS,REIMBURSEMENT,402.5,Internet Banking E-TRANSFER104958924921 Thomas McCrossin 4506*********695,Expense reimbursement (Wave bill 276),276,1
+2024-04-16,THOMAS,REIMBURSEMENT,123.25,"Internet Banking INTERNET BILL PMT000000126929 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-05-01,THOMAS,PAYROLL_REIMBURSE,732.9,Internet Banking E-TRANSFER104977727931 Thomas McCrossin 4506*********695,"Payroll reimbursement, matches CRA export Payment Apr 2024, received 2024-05-01",,1
+2024-05-07,THOMAS,RENT_REIMBURSEMENT,402.5,Internet Banking E-TRANSFER104985781241 Thomas McCrossin 4506*********695,Rent reimbursement to Thomas: $402.50 split payment (1/2) toward $805 full rent (paired with bank_txn_id 1114),323,1
+2024-05-07,THOMAS,RENT_REIMBURSEMENT,402.5,Internet Banking E-TRANSFER104985772477 Thomas McCrossin 4506*********695,Rent reimbursement to Thomas: $402.50 split payment (2/2) toward $805 full rent (paired with bank_txn_id 1113),323,1
+2024-05-09,THOMAS,CHANGE_FLOAT,70.0,Internet Banking E-TRANSFER104988429975 Thomas McCrossin 4506*********695,Change float - $70 to fund till May 2024,,1
+2024-05-13,THOMAS,REIMBURSEMENT,10.0,Internet Banking E-TRANSFER104992748157 Thomas McCrossin 4506*********695,Thomas payment for: Bridge Workshop - Bill,,1
+2024-06-17,THOMAS,PAYROLL,4321.07,CHEQUE 72594233 1,"Payroll to Thomas - $4,321.07",,1
+2024-08-08,THOMAS,REIMBURSEMENT,18.56,Internet Banking E-TRANSFER105099226309 Thomas McCrossin 4506*********695,Linked to Wave bill(s): 758,758,1
+2024-08-19,THOMAS,REIMBURSEMENT,95.38,"Internet Banking INTERNET BILL PMT000000130781 MASTERCARD, TRIANGLE -CDN 4506*********695",Thomas card payment (TRIANGLE) reimbursement.,,1
+2024-08-30,THOMAS,CHANGE_FLOAT,105.0,Internet Banking E-TRANSFER105125315751 Thomas McCrossin 4506*********695,Change float - $105 canteen change Aug 2024,,1
+2024-09-03,THOMAS,REIMBURSEMENT,115.0,Internet Banking E-TRANSFER105131106131 Thomas McCrossin 4506*********695,Thomas payment for: Facebook Marketplace - Bill,,1
+2024-09-03,THOMAS,REIMBURSEMENT,94.74,"Internet Banking INTERNET BILL PMT000000223389 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-09-03,THOMAS,REIMBURSEMENT,105.91,"Internet Banking INTERNET BILL PMT000000102384 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-09-05,THOMAS,REIMBURSEMENT,82.94,"Internet Banking INTERNET BILL PMT000000208079 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-09-09,THOMAS,RENT_REIMBURSEMENT,1282.5,Internet Banking E-TRANSFER105138610257 Thomas McCrossin 4506*********695,"Linked to Wave bill(s): 324,345","324,345",1
+2024-09-09,THOMAS,REIMBURSEMENT,22.4,"Internet Banking INTERNET BILL PMT000000122251 MASTERCARD, TRIANGLE -CDN 4506*********695",Thomas card payment (TRIANGLE) reimbursement.,,1
+2024-09-09,THOMAS,REIMBURSEMENT,71.78,"Internet Banking INTERNET BILL PMT000000120075 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-09-18,THOMAS,REIMBURSEMENT,86.22,"Internet Banking INTERNET BILL PMT000000135098 MASTERCARD, TRIANGLE -CDN 4506*********695",Thomas card payment (TRIANGLE) reimbursement.,,1
+2024-09-20,THOMAS,REIMBURSEMENT,112.7,"Internet Banking INTERNET BILL PMT000000110161 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-09-20,THOMAS,REIMBURSEMENT,33.14,"Internet Banking INTERNET BILL PMT000000119355 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-09-20,THOMAS,REIMBURSEMENT,376.81,"Internet Banking INTERNET BILL PMT000000119057 MASTERCARD, TRIANGLE -CDN 4506*********695",Thomas card payment (TRIANGLE) reimbursement.,,1
+2024-09-20,THOMAS,REIMBURSEMENT,1742.2,"Internet Banking INTERNET BILL PMT000000117615 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-09-23,THOMAS,REIMBURSEMENT,29.32,"Internet Banking INTERNET BILL PMT000000211839 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-09-27,THOMAS,CHANGE_FLOAT,200.0,Internet Banking E-TRANSFER105160459604 Thomas McCrossin 4506*********695,Change float - $200 to fund till Sep 2024,,1
+2024-10-01,THOMAS,REIMBURSEMENT,86.97,"Internet Banking INTERNET BILL PMT000000127223 MASTERCARD, NEO FINANCIAL 4506*********695",Thomas card payment (NEO) reimbursement.,,1
+2024-10-01,THOMAS,REIMBURSEMENT,83.18,"Internet Banking INTERNET BILL PMT000000119443 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-10-01,THOMAS,REIMBURSEMENT,66.04,"Internet Banking INTERNET BILL PMT000000118835 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-10-02,THOMAS,REIMBURSEMENT,968.58,"Internet Banking INTERNET BILL PMT000000238840 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-10-02,THOMAS,REIMBURSEMENT,183.67,"Internet Banking INTERNET BILL PMT000000202078 MASTERCARD, NEO FINANCIAL 4506*********695",Thomas card payment (NEO) reimbursement.,,1
+2024-10-07,THOMAS,PAYROLL_REIMBURSE,416.18,Internet Banking E-TRANSFER105173064541 Thomas McCrossin 4506*********695,"Payroll reimbursement, matches CRA export Payment Sept 2024, received 2024-10-07",,1
+2024-10-07,THOMAS,REIMBURSEMENT,152.89,"Internet Banking INTERNET BILL PMT000000230322 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-10-07,THOMAS,REIMBURSEMENT,45.5,"Internet Banking INTERNET BILL PMT000000214056 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-10-11,THOMAS,REIMBURSEMENT,118.51,Internet Banking E-TRANSFER105179112679 Thomas McCrossin 4506*********695,Thomas payment for: Shell Gas - Bill,,1
+2024-10-15,THOMAS,REIMBURSEMENT,56.89,"Internet Banking INTERNET BILL PMT000000136617 MASTERCARD, TRIANGLE -CDN 4506*********695",Thomas card payment (TRIANGLE) reimbursement.,,1
+2024-10-15,THOMAS,REIMBURSEMENT,73.13,"Internet Banking INTERNET BILL PMT000000107558 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-10-15,THOMAS,REIMBURSEMENT,34.33,"Internet Banking INTERNET BILL PMT000000135621 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-10-21,THOMAS,REIMBURSEMENT,59.24,"Internet Banking INTERNET BILL PMT000000204301 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-10-21,THOMAS,REIMBURSEMENT,19.43,"Internet Banking INTERNET BILL PMT000000211310 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-10-22,THOMAS,REIMBURSEMENT,169.35,"Internet Banking INTERNET BILL PMT000000203046 MASTERCARD, NEO FINANCIAL 4506*********695",Thomas card payment (NEO) reimbursement.,,1
+2024-10-22,THOMAS,REIMBURSEMENT,23.1,"Internet Banking INTERNET BILL PMT000000202894 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-10-22,THOMAS,REIMBURSEMENT,64.16,"Internet Banking INTERNET BILL PMT000000202773 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-10-22,THOMAS,REIMBURSEMENT,14.93,"Internet Banking INTERNET BILL PMT000000202704 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-10-22,THOMAS,REIMBURSEMENT,42.86,"Internet Banking INTERNET BILL PMT000000223097 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-10-22,THOMAS,REIMBURSEMENT,11.59,"Internet Banking INTERNET BILL PMT000000216813 MASTERCARD, NEO FINANCIAL 4506*********695",Thomas card payment (NEO) reimbursement.,,1
+2024-10-22,THOMAS,REIMBURSEMENT,30.33,"Internet Banking INTERNET BILL PMT000000117219 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-10-22,THOMAS,REIMBURSEMENT,25.28,"Internet Banking INTERNET BILL PMT000000117116 MASTERCARD, NEO FINANCIAL 4506*********695",Thomas card payment (NEO) reimbursement.,,1
+2024-10-22,THOMAS,HST_REIMBURSEMENT,3000.0,Internet Banking E-TRANSFER105192346999 Thomas McCrossin 4506*********695,"CRA GST34 HST remittance - paid on personal card, reimbursed $3000",,1
+2024-10-24,THOMAS,REIMBURSEMENT,1323.47,"Internet Banking INTERNET BILL PMT000000133075 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-10-24,THOMAS,REIMBURSEMENT,200.0,"Internet Banking INTERNET BILL PMT000000102819 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-10-28,THOMAS,REIMBURSEMENT,220.32,"Internet Banking INTERNET BILL PMT000000137394 MASTERCARD, TRIANGLE -CDN 4506*********695",Thomas card payment (TRIANGLE) reimbursement.,,1
+2024-10-28,THOMAS,REIMBURSEMENT,64.19,"Internet Banking INTERNET BILL PMT000000135967 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-10-28,THOMAS,REIMBURSEMENT,73.38,"Internet Banking INTERNET BILL PMT000000110247 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-11-04,THOMAS,REIMBURSEMENT,126.49,"Internet Banking INTERNET BILL PMT000000108449 MASTERCARD, TRIANGLE -CDN 4506*********695",Thomas card payment (TRIANGLE) reimbursement.,,1
+2024-11-04,THOMAS,REIMBURSEMENT,46.25,"Internet Banking INTERNET BILL PMT000000234852 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-11-04,THOMAS,REIMBURSEMENT,123.38,"Internet Banking INTERNET BILL PMT000000234350 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-11-06,THOMAS,REIMBURSEMENT,504.56,"Internet Banking INTERNET BILL PMT000000219442 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-11-06,THOMAS,REIMBURSEMENT,106.99,"Internet Banking INTERNET BILL PMT000000222084 MASTERCARD, TRIANGLE -CDN 4506*********695",Thomas card payment (TRIANGLE) reimbursement.,,1
+2024-11-06,THOMAS,REIMBURSEMENT,56.97,"Internet Banking INTERNET BILL PMT000000104079 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-11-06,THOMAS,REIMBURSEMENT,11.98,"Internet Banking INTERNET BILL PMT000000103598 MASTERCARD, NEO FINANCIAL 4506*********695",Thomas card payment (NEO) reimbursement.,,1
+2024-11-12,THOMAS,REIMBURSEMENT,31.44,Internet Banking E-TRANSFER105219026311 Thomas McCrossin 4506*********695,Linked to Wave bill(s): 713,713,1
+2024-11-12,THOMAS,REIMBURSEMENT,30.11,"Internet Banking INTERNET BILL PMT000000110752 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-11-12,THOMAS,REIMBURSEMENT,101.12,"Internet Banking INTERNET BILL PMT000000117519 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-11-12,THOMAS,REIMBURSEMENT,33.99,"Internet Banking INTERNET BILL PMT000000122066 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-11-18,THOMAS,REIMBURSEMENT,104.98,"Internet Banking INTERNET BILL PMT000000135695 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-11-18,THOMAS,REIMBURSEMENT,117.73,"Internet Banking INTERNET BILL PMT000000111244 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-12-03,THOMAS,REIMBURSEMENT,132.87,"Internet Banking INTERNET BILL PMT000000121156 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-12-03,THOMAS,REIMBURSEMENT,49.68,"Internet Banking INTERNET BILL PMT000000128438 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-12-05,THOMAS,RENT_REIMBURSEMENT,1760.0,Internet Banking E-TRANSFER105249742609 Thomas McCrossin 4506*********695,"Linked to Wave bill(s): 455,501","455,501",1
+2024-12-09,THOMAS,REIMBURSEMENT,120.34,"Internet Banking INTERNET BILL PMT000000102372 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-12-11,THOMAS,REIMBURSEMENT,12.62,"Internet Banking INTERNET BILL PMT000000131684 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-12-11,THOMAS,REIMBURSEMENT,16.08,"Internet Banking INTERNET BILL PMT000000131213 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-12-16,THOMAS,REIMBURSEMENT,62.09,"Internet Banking INTERNET BILL PMT000000237928 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-12-16,THOMAS,REIMBURSEMENT,21.25,"Internet Banking INTERNET BILL PMT000000201989 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-12-16,THOMAS,REIMBURSEMENT,60.0,"Internet Banking INTERNET BILL PMT000000201285 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-12-16,THOMAS,REIMBURSEMENT,43.65,"Internet Banking INTERNET BILL PMT000000200229 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-12-20,THOMAS,REIMBURSEMENT,400.0,"Internet Banking INTERNET BILL PMT000000130426 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2024-12-20,THOMAS,SHAREHOLDER_PAYROLL,1500.0,Internet Banking E-TRANSFER105269341993 Thomas McCrossin 4506*********695,Thomas payroll - $1500 Dec 20 2024,,1
+2024-12-31,THOMAS,REIMBURSEMENT,330.91,"Internet Banking INTERNET BILL PMT000000239253 MASTERCARD, TRIANGLE -CDN 4506*********695",Thomas card payment (TRIANGLE) reimbursement.,,1
+2024-12-31,THOMAS,SHAREHOLDER_PAYROLL,1500.0,Internet Banking E-TRANSFER105282070135 Thomas McCrossin 4506*********695,Thomas payroll - $1500 Dec 31 2024,,1
+2025-01-08,THOMAS,OWNER_DRAW,1000.0,Internet Banking E-TRANSFER105292717715 Thomas McCrossin 4506*********695,"Owner draw to Thomas - $1,000",,1
+2025-01-08,THOMAS,REIMBURSEMENT,49.44,"Internet Banking INTERNET BILL PMT000000208259 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2025-01-09,THOMAS,REIMBURSEMENT,77.48,"Internet Banking INTERNET BILL PMT000000235269 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2025-01-16,THOMAS,REIMBURSEMENT,129.4,"Internet Banking INTERNET BILL PMT000000209957 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2025-01-27,THOMAS,REIMBURSEMENT,118.11,"Internet Banking INTERNET BILL PMT000000220521 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2025-01-27,THOMAS,REIMBURSEMENT,69.59,"Internet Banking INTERNET BILL PMT000000229102 MASTERCARD, NEO FINANCIAL 4506*********695",Thomas card payment (NEO) reimbursement.,,1
+2025-02-10,THOMAS,REIMBURSEMENT,80.11,"Internet Banking INTERNET BILL PMT000000132176 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2025-02-10,THOMAS,REIMBURSEMENT,38.89,"Internet Banking INTERNET BILL PMT000000121415 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2025-02-10,THOMAS,REIMBURSEMENT,42.96,"Internet Banking INTERNET BILL PMT000000130929 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2025-02-10,THOMAS,REIMBURSEMENT,234.46,"Internet Banking INTERNET BILL PMT000000117951 MASTERCARD, TRIANGLE -CDN 4506*********695",Thomas card payment (TRIANGLE) reimbursement.,,1
+2025-02-10,THOMAS,REIMBURSEMENT,77.48,"Internet Banking INTERNET BILL PMT000000125304 MASTERCARD, NEO FINANCIAL 4506*********695",Thomas card payment (NEO) reimbursement.,,1
+2025-02-12,THOMAS,REIMBURSEMENT,79.42,"Internet Banking INTERNET BILL PMT000000213981 MASTERCARD, TRIANGLE -CDN 4506*********695",Thomas card payment (TRIANGLE) reimbursement.,,1
+2025-02-12,THOMAS,REIMBURSEMENT,146.52,"Internet Banking INTERNET BILL PMT000000202110 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2025-02-12,THOMAS,REIMBURSEMENT,85.5,"Internet Banking INTERNET BILL PMT000000236762 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2025-02-27,THOMAS,REIMBURSEMENT,73.64,Internet Banking E-TRANSFER105354218363 Thomas McCrossin 4506*********695,Reimbursement to Thomas for Esso bill (row 613),,1
+2025-02-27,THOMAS,REIMBURSEMENT,137.26,"Internet Banking INTERNET BILL PMT000000129964 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2025-02-27,THOMAS,REIMBURSEMENT,59.97,"Internet Banking INTERNET BILL PMT000000133366 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2025-02-27,THOMAS,REIMBURSEMENT,63.01,"Internet Banking INTERNET BILL PMT000000132835 MASTERCARD, TRIANGLE -CDN 4506*********695",Thomas card payment (TRIANGLE) reimbursement.,,1
+2025-03-14,THOMAS,SHAREHOLDER_PAYROLL,1250.0,Internet Banking E-TRANSFER105374891333 Thomas McCrossin 4506*********695,Thomas payroll - $1250.00 (confirmed),,1
+2025-03-17,THOMAS,REIMBURSEMENT,71.45,"Internet Banking INTERNET BILL PMT000000205037 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2025-03-17,THOMAS,REIMBURSEMENT,129.67,"Internet Banking INTERNET BILL PMT000000230756 MASTERCARD, NEO FINANCIAL 4506*********695",Thomas card payment (NEO) reimbursement.,,1
+2025-03-17,THOMAS,REIMBURSEMENT,50.33,"Internet Banking INTERNET BILL PMT000000223687 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2025-03-17,THOMAS,REIMBURSEMENT,272.24,"Internet Banking INTERNET BILL PMT000000223225 MASTERCARD, TRIANGLE -CDN 4506*********695",Thomas card payment (TRIANGLE) reimbursement.,,1
+2025-03-20,THOMAS,REIMBURSEMENT,204.46,"Internet Banking INTERNET BILL PMT000000232794 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2025-03-26,THOMAS,REIMBURSEMENT,30.0,"Internet Banking INTERNET BILL PMT000000221281 MASTERCARD, NEO FINANCIAL 4506*********695",Thomas card payment (NEO) reimbursement.,,1
+2025-04-08,THOMAS,REIMBURSEMENT,51.9,"Internet Banking INTERNET BILL PMT000000123427 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2025-04-08,THOMAS,REIMBURSEMENT,113.51,"Internet Banking INTERNET BILL PMT000000131945 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2025-04-16,THOMAS,SHAREHOLDER_PAYROLL,1250.0,Internet Banking E-TRANSFER105418123967 Thomas McCrossin 4506*********695,Thomas payroll - $1250.00 (confirmed),,1
+2025-04-24,THOMAS,REIMBURSEMENT,104.99,"Internet Banking INTERNET BILL PMT000000239278 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2025-04-24,THOMAS,REIMBURSEMENT,118.34,"Internet Banking INTERNET BILL PMT000000225017 MASTERCARD, BMO 4506*********695",Thomas card payment (BMO) reimbursement.,,1
+2025-04-28,THOMAS,OWNER_DRAW,2900.0,Internet Banking E-TRANSFER105433258139 Thomas McCrossin 4506*********695,"Owner draw to Thomas - $2,900",,1
+2025-04-29,THOMAS,LOAN_ISSUED,2000.0,Internet Banking E-TRANSFER105434611747 Thomas McCrossin 4506*********695,"Shareholder loan to Thomas - $2,000",,1
+2025-04-29,THOMAS,SHAREHOLDER_PAYROLL,610.15,Internet Banking E-TRANSFER105434605852 Thomas McCrossin 4506*********695,Thomas payroll - $610.15 Apr 2025,,1

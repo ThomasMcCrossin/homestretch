@@ -1,0 +1,82 @@
+wave_row,funding_type,reimbursed_to,bank_txn_ids,amount_cents,notes
+3,CASH_REIMBURSE,,,45225,Mondoux - paid in cash off-bank
+4,CASH_REIMBURSE,DWAYNE,,2108,Card 0318; cash reimbursed to Dwayne
+12,CASH_REIMBURSE,DWAYNE,,120080,Capital Foods - paid via Dwayne personal CIBC VISA debit; cash reimbursed
+15,CASH_REIMBURSE,DWAYNE,,3319,Card 0318; cash reimbursed to Dwayne
+21,CASH_REIMBURSE,DWAYNE,,4370,Card 0318; cash from till
+28,CASH_REIMBURSE,DWAYNE,,2169,Card 0318; cash from till
+29,CASH_REIMBURSE,DWAYNE,,2451,Card 0318; cash from till
+53,CASH_REIMBURSE,DWAYNE,,7684,Atlantic Superstore Sep 15 - card 0318; cash reimbursed to Dwayne
+73,CASH_REIMBURSE,DWAYNE,,109656,Capital Foods - Statement 2523999 +3% card fee; paid via Dwayne personal card; cash reimbursed
+96,CASH_REIMBURSE,THOMAS,,1293,Pharmasave - paid by Tom; reimbursed in cash
+126,CASH_REIMBURSE,,,33135,Mondoux - paid in cash; reimbursed in cash off-bank
+159,BANK_SPLIT,,"1402,1404",31240,Dollarama - split payment $292.30 + $20.10 on Jan 8
+186,CASH_REIMBURSE,,,8384,Bimbo Canada - paid from till (cash off-bank)
+202,CASH_REIMBURSE,DWAYNE,,6105,Gov't of Nova Scotia TR1111807; cash reimbursed to Dwayne
+233,CASH_REIMBURSE,TILL,,30750,We Like Work - paid with cash from till
+295,CASH_REIMBURSE,DWAYNE,,15260,Atlantic Superstore - paid CIBC visa Apr 16; cash reimbursed
+301,CASH_REIMBURSE,DWAYNE,,4137,Canadian Tire - card 0318; cash reimbursed
+670,CASH_REIMBURSE,DWAYNE,,8180,Pharmasave - card 0318; cash reimbursed
+686,CASH_REIMBURSE,DWAYNE,,4902,Shopify monthly addon; cash reimbursed
+INV:STUB-GFS-CASH-001,CASH_REIMBURSE,TILL,,28000,GFS Cash - Cheese Curds - paid cash no invoice
+INV:STUB-GFS-CASH-002,CASH_REIMBURSE,TILL,,20000,GFS Cash - Cheese Curds - paid cash no invoice
+INV:STUB-GFS-CASH-003,CASH_REIMBURSE,TILL,,24000,GFS Cash - Chicken - paid cash no invoice
+INV:STUB-GFS-CASH-004,CASH_REIMBURSE,TILL,,13000,GFS Cash - Cheese Curds - paid cash no invoice
+INV:FB-MERCH-001,BANK_DIRECT,,1128,3000,Facebook Marketplace merchandising - e-transfer to Charlie
+INV:U9-DONATION-001,BANK_DIRECT,,737,20000,U9 youth hockey donation
+543,BANK_SPLIT,,"1123,1092,1082,1076,1062,993,879,796,696",58500,Q2-Q4 2024 monthly account fees (9 x $65)
+327,BANK_SPLIT,,1070,19282,GFS PAD with invoice 9012419964
+328,BANK_SPLIT,,1070,4383,GFS PAD with invoice 9012388498
+439,BANK_SPLIT,,853,127554,GFS PAD Nov 8 with 9015554603 and credit
+448,BANK_SPLIT,,853,69073,GFS PAD Nov 8 with 9015480379 and credit
+INV:2001780129,BANK_SPLIT,,853,-11984,GFS credit memo in PAD Nov 8
+276,BANK_DIRECT,,1339,6500,Q1 2024 account fee - Jan 31
+276,BANK_DIRECT,,1264,6500,Q1 2024 account fee - Feb 29
+276,BANK_DIRECT,,1184,6500,Q1 2024 account fee - Mar 28
+695,BANK_DIRECT,,361,6500,April 2025 account fee
+704,BANK_DIRECT,,345,500,May 2025 transfer fee
+620,BANK_SPLIT,,513,20957,GFS PAD Feb 28 with 9019250185
+INV:9019250185,BANK_SPLIT,,513,191538,GFS PAD Feb 28 with 9019304169
+640,BANK_DIRECT,,440,97193,GFS PAD Mar 21
+INV:STUB-GFS-CASH-COGS-20231011,CASH_REIMBURSE,TILL,,40000,GFS cash COGS (frozen) paid from till; never hit bank
+INV:STUB-WALMART-COGS-20230814,BANK_DIRECT,,1679,3447,Walmart COGS purchase (Interac debit); no HST captured in Wave
+INV:STUB-DOLLARAMA-COGS-20230814,BANK_DIRECT,,1680,5014,Dollarama COGS purchase (Interac debit); no HST captured in Wave
+260,BANK_CC_CHAIN,,1098,8086,Webstaurant paid to MC May 27
+661,BANK_SPLIT,,453,15707,Atlantic Superstore - payment to card 0318
+661,BANK_SPLIT,,454,123686,Atlantic Superstore - payment to card 0318
+523,BANK_CC_CHAIN,,729,3144,Pharmasave paid to MC Dec 16
+510,BANK_SPLIT,,487,8065,Sysco PAD Mar 11
+557,BANK_SPLIT,,487,15998,Sysco PAD Mar 11
+697,BANK_SPLIT,,331,41635,May rent - paid with June rent ($832.70 total) via debit Jun 4; June rent outside FY scope
+325,BANK_SPLIT,,1077,40250,July rent - e-transfer to Dwayne Jul 30
+325,BANK_SPLIT,,1042,40250,August rent - e-transfer to Thomas Sept 9 (with Sept rent)
+346,BANK_SPLIT,,1042,88000,September rent - e-transfer to Thomas Sept 9 (with Aug rent)
+87,CASH_REIMBURSE,,,104085,Capital Foods - cash reimbursement
+132,BANK_CC_CHAIN,,1517,92900,Capital Foods paid to card 0318 Nov 8
+600,BANK_DIRECT,,400,147206,Capital Foods PAD Apr 9
+611,BANK_DIRECT,,588,100396,Capital Foods PAD Feb 5
+INV:STICKERS-001,BANK_DIRECT,,809,2069,Underground Graffix stickers - e-transfer to Shane
+INV:2598264,BANK_DIRECT,,694,82006,Capital Foods PAD Jan 2
+INV:DEPOSIT-FEE-001,BANK_DIRECT,,1691,22,Cash deposit fee Jun 30 2023
+INV:DEPOSIT-FEE-002,BANK_DIRECT,,1631,1125,Cash deposit fee Sep 29 2023
+INV:DEPOSIT-FEE-003,BANK_DIRECT,,1185,58,Cash deposit fee Mar 28 2024
+INV:DEPOSIT-FEE-004,BANK_DIRECT,,880,2513,Cash deposit fee Oct 31 2024
+INV:DEPOSIT-FEE-005,BANK_DIRECT,,597,886,Cash deposit fee Jan 31 2025
+INV:DEPOSIT-FEE-006,BANK_DIRECT,,512,18,Cash deposit fee Feb 28 2025
+INV:2590104,BANK_DIRECT,,836,93534,Capital Foods PAD Nov 13
+INV:XMAS-PARTY-2024,BANK_DIRECT,,717,23000,Christmas party bowling - reimbursed to Dwayne
+INV:BFL-2024,BANK_DIRECT,,1363,185100,BFL Insurance payment Jan 2024
+INV:HOCKEY-DONATION-2023,BANK_DIRECT,,1446,20000,Hockey sponsorship - Tim Rich Dec 2023
+INV:WALMART-DUP-001,BANK_DIRECT,,1572,10410,Erroneous duplicate reimbursement to Dwayne Oct 23
+INV:DOLLARAMA-DUP-001,BANK_DIRECT,,1576,53875,Erroneous duplicate reimbursement to Dwayne Oct 23
+83,CASH_REIMBURSE,,,10196,Atlantic Superstore Oct 9 - cash reimbursed
+INV:DOLLARAMA-1028,BANK_DIRECT,,1536,8880,Dollarama Oct 28 - reimbursed to Dwayne Nov 2
+INV:BEMBRIDGE-SAUCES-001,BANK_SPLIT,,1525,2000,Jeff Bembridge sauces - part of $95 e-transfer ($75 was change float)
+INV:1996469,BANK_DIRECT,,1504,143722,Curly's Sports and Supplements order 1996469 - reimbursed to Dwayne
+INV:DOLLARAMA-1117,BANK_DIRECT,,1477,11687,Dollarama Nov 17 - reimbursed to Dwayne Dec 1
+INV:KEG-STAFF-PARTY,BANK_DIRECT,,1408,21390,The Keg staff party - reimbursed to Dwayne Jan 4
+INV:MANLEY-FORKS,BANK_DIRECT,,1285,2069,John Manley plastic forks - reimbursed to Dwayne Feb 22
+INV:2548372,BANK_DIRECT,,1221,89436,Capital Foods PAD Mar 13
+INV:BRIDGE-RAGS-001,BANK_DIRECT,,937,4000,Bridge Workshops rags - cash withdrawal Oct 16
+INV:BRIDGE-RAGS-002,BANK_DIRECT,,884,2000,Bridge Workshops rags - cash withdrawal Oct 29
+INV:ELMTREE-STRAWS,BANK_DIRECT,,1071,1856,The Elm Tree straws - reimbursed to Thomas Aug 8

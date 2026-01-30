@@ -1,0 +1,62 @@
+30 Jan 2026 14587430 Canada Inc. Yr.end: 31-05-2025 Acct.#748003142RC0001
+Protected Bwhen completed
+Summary of tax and credits
+Federal tax
+Part I tax payable from amount N on page 8 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 700 2,594
+Part II.2 tax payable from Schedule 56 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 705
+Part III.1 tax payable from Schedule 55 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 710
+Part IV tax payable from Schedule 3 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 712
+Part IV.1 tax payable from Schedule 43 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 716
+Part VI tax payable from Schedule 38 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 720
+Part VI.1 tax payable from Schedule 43 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 724
+Part VI.2 tax payable from Schedule 67 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 725
+Part XII.7 tax payable from Schedule 78 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 726
+Part XIII.1 tax payable from Schedule 92 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 727
+Part XIV tax payable from Schedule 20 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 728
+Add provincial or territorial tax: Total federal tax 2,594
+Provincial or territorial jurisdiction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 750 NS
+(if more than one jurisdiction, enter "multiple" and complete Schedule 5)
+Net provincial or territorial tax payable (except Quebec and Alberta) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 760 672
+Deduct other credits: Total tax payable 770 3,266 A
+Investment tax credit refund from Schedule 31 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 780
+Dividend refund from amount JJ on page 7. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 784
+Federal capital gains refund from Schedule 18 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 788
+Federal qualifying environmental trust tax credit refund . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 792
+Return of fuel charge proceeds to farmers tax credit from Schedule 63 . . . . . . . . . . . . . . . . . . . . . . 795
+Canadian film or video production tax credit (Form T1131) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 796
+Film or video production services tax credit (Form T1177) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 797
+Canadian journalism labour tax credit from Schedule 58 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 798
+Tax withheld at source . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 800
+Total payments on which tax has been withheld . . . . . . . . . . . . . . . . . 801
+Provincial and territorial capital gains refund from Schedule 18 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 808
+Provincial and territorial refundable tax credits from Schedule 5 . . . . . . . . . . . . . . . . . . . . . . . . . . . 812
+Tax instalments paid . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 840
+Total credits 890 B
+Balance (amount A minus amount B) 3,266
+If the result is negative, you have a refund. If the result is positive, you have a balance owing.
+Enter the amount below on whichever line applies.
+Generally, the CRA does not charge or refund a difference of $2 or less.
+Refund code 894 Refund Balance owing . . . . . . . . . . . . 3,266
+For information on how to make your payment, go to
+For information on how to enrol for direct deposit, go to canada.ca/cra-direct-deposit.
+canada.ca/payments.
+If the corporation is a Canadian-controlled private corporation throughout the tax year, does it qualify for the
+one-month extension of the date the balance of tax is due? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 896 Yes No X
+If this return was prepared by a tax preparer for a fee, provide their: EFILE number . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 920
+RepID . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 925 JC98XW5
+Certification
+I, 950 Ripley 951 Dwayne 954 President ,
+Last name First name Position, office, or rank
+am an authorized signing officer of the corporation. I certify that I have examined this return, including accompanying schedules and statements, and that
+the information given on this return is, to the best of my knowledge, correct and complete. I also certify that the method of calculating income for this tax
+year is consistent with that of the previous tax year except as specifically disclosed in a statement attached to this return.
+955 2025-05-31 956 (902) 669-2700
+Date (yyyy/mm/dd) Signature of the authorized signing officer of the corporation Telephone number
+Is the contact person the same as the authorized signing officer? If no, complete the information below . . . . . . . . . . . . 957 Yes No X
+958 Thomas McCrossin 959 (902) 321-6749
+Name of other authorized person Telephone number
+Language of correspondence – Langue de correspondance
+Indicate your language of correspondence by entering 1 for English or 2 for French.
+990 1
+Indiquez votre langue de correspondance en inscrivant 1 pour anglais ou 2 pour français.
+T2 E (25) Version 29.01 UF27 Page 9 of 9

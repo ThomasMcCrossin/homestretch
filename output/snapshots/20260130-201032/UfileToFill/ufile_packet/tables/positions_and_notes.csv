@@ -1,0 +1,30 @@
+Key,Value,Note,Applies_To
+IFRS,No,Financial statements not prepared using IFRS,Both
+Practitioner_involvement,None,Management-prepared unaudited,Both
+Functional_currency,CAD,No functional currency election,Both
+Language,English,Code 1,Both
+Corp_type,CCPC,Canadian-controlled private corporation throughout,Both
+Jurisdiction,NS,Nova Scotia,Both
+Year_end,05-31,May 31 fiscal year-end,Both
+NAICS,722512,Limited-Service Eating Places,Both
+Mailing_addressee,Dwayne Ripley,"From UFile prefill: output/UfileToFill/Other Addresses/2023.txt",Both
+Books_and_records_addressee,Curly's,"From UFile prefill: output/UfileToFill/Other Addresses/2023.txt",Both
+HST_registration_date,2024-02-26,Corp began charging/collecting HST,Both
+HST_FY2024,Partial year,HST collection started Feb 26 2024,FY2024
+HST_FY2025,Full year,Full year of HST collection,FY2025
+Inventory_method,Cost,Inventory recorded at cost,Both
+Inventory_FY2024,Estimate,"FY2024 closing inventory is an estimate, not physical count",FY2024
+Inventory_FY2025,Physical count,Physical count performed 2025-05-16,FY2025
+CCA_required,No,"No capital assets capitalized in these years (below capitalization threshold; expensed).",Both
+First_time_filer_after_incorp_line_070_FY2024,No,"2023 stub T2 already filed as first-year after incorporation (Schedule 24).",FY2024
+First_time_filer_after_incorp_line_070_FY2025,No,"2023 stub T2 already filed as first-year after incorporation (Schedule 24).",FY2025
+Internet_income_line_180_FY2024,Yes,"Shopify sales present; likely Yes (Schedule 88). Confirm store domains in UFile.",FY2024
+Internet_income_line_180_FY2025,Yes,"Shopify sales present; likely Yes (Schedule 88). Confirm store domains in UFile.",FY2025
+Net_income_diff_line_201_FY2024,Yes,"Book vs tax differs due to meals 50% add-back and CRA penalties; Schedule 1 attached.",FY2024
+Net_income_diff_line_201_FY2025,Yes,"Book vs tax differs due to meals 50% add-back and CRA penalties; Schedule 1 attached.",FY2025
+Tips_FY2024,N/A,No explicit tips payouts recorded (tips practice changed in later years).,FY2024
+Tips_FY2025,Mixed,"Dec 2024: tips included in taxable gross (deductions applied). 2025 pay periods: tips paid on top of net wages (no deductions).",FY2025
+Shareholder_loan_FY2025,$2000,"Shareholder loan receivable (Thomas). Review s.15(2) repayment/exception within 1 year after 2025-05-31.",FY2025
+Dividends_FY2025,$36900,Dividends declared (type to confirm in UFile/T5).,FY2025
+Associated_corps,No,No associated corporations,Both
+Capital_tax_exempt,Yes,Small private corp - no capital tax payable,Both

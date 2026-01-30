@@ -1,0 +1,47 @@
+Schedule 200 Summary
+for 2025 taxation year
+Corporation 14587430 Canada Inc.
+Business number 748003142RC0001
+Taxation year end 31-05-2025
+2025 2024 2023 2022 2021
+Net income from financial stmts 36,054
+Total additions 204
+Total deductions
+Taxable income
+Net income from fin. stmts. 300 36,258
+Charitable donations 311
+Cultural gifts 313
+Ecological gifts 314
+Gifts of medicine 315
+Taxable dividends deductible 320
+Part VI.1 tax deduction 325
+Prior year non-cap. losses 331
+Prior year net cap. losses 332
+Prior year restricted farm loss 333
+Prior year farm losses 334
+Corp's limited partner. losses 335
+Restricted interest & financing exp. 336
+Taxable cap. gains cr. union 340
+Prosp., grubstaker's shares 350
+Employer ded. non-qualified securities 352
+Total Deductions
+Subtotal 36,258
+Section 110.5 additions 355
+Taxable income 360 36,258
+Small business deduction
+Income from active business 400 36,258
+Tax income modified 405 36,258
+Business limit 410 500,000
+Taxable capital bus. limit reduction
+Passive income bus. limit reduction
+Red. bus. limit (TYS after 2018) 426 500,000
+Subsection 125(3.2)
+Amount 426 - Subsection 125(3.2) 428 500,000
+Small business deduction 430 6,889
+Refundable portion of Part I tax
+Aggregate invest income 440
+Foreign investment income 445
+Amount A - D
+Subtotal of deductions
+Part I tax payable 3,263
+Refundable Part I tax 450

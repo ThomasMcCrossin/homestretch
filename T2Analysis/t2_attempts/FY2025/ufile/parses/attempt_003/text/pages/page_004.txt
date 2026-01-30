@@ -1,0 +1,11 @@
+Notes and diagnostics (continued)
+FEDERAL CORPORATION INTERNET FILING
+This corporation's federal return can be filed electronically.
+FEDERAL AND/OR PROVINCIAL WARNINGS
+Federal
+.
+. Taxation year presumed to be 365 days according to BEGINDATE or INCORPDATE entry.
+. Taxable dividends paid in current yr; enter eligible dividends paid in DIVIDEND-AMT in GRIP-BALANCE group.
+. Missing entry for INCOMESOURCE; all income is considered as active business income.
+No instalments required since total tax instalments calculated are less than or equal to $3,000.
+Diagnostics page 3 of 3

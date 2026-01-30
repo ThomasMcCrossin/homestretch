@@ -1,0 +1,68 @@
+Loss carry forwards and loss carry backs
+Select the type of loss to carry forward or to carry back.
+
+Loss carry forwards and loss carry backs
+ 
+
+Capital property loss
+
+ 
+
+Non capital loss
+
+ 
+ 
+ Capital property loss
+Please enter the information concerning the capital loss to carry forward or to carry back.
+
+
+Amount of unused gross capital losses to carry forward
+$
+A recommended field was left blank.
+*
+
+ 
+ 
+
+Tax year loss to be applied to and desired carryback amount
+Selection
+A recommended field was left blank.
+*
+$
+*
+
+ 
+ 
+
+Amount of loss applied, if you wish to claim less than the maximum loss allowed
+Selection
+A recommended field was left blank.
+*
+$
+*
+
+Non capital loss
+Please enter the information concerning the non-capital loss to carry forward or to carry back.
+
+
+Year and amount of unused non-capital losses to carry forward
+Selection
+$
+
+ 
+ 
+
+Tax year loss to be applied to and desired carryback amount
+Selection
+*
+$
+*
+
+ 
+ 
+
+Amount of loss applied, if you wish to claim less than the maximum loss allowed
+Selection
+*
+$
+*

@@ -1,0 +1,48 @@
+30 Jan 2026 14587430 Canada Inc. Yr.end: 31-05-2025 Acct.#748003142RC0001
+Canada Revenue Agence du revenu Schedule 1
+Agency du Canada
+Code 2301
+Net Income (Loss) for Income Tax Purposes Protected B
+(2023 and later tax years) when completed
+Corporation's name Business number Tax year-end
+Year Month Day
+14587430 Canada Inc. 748003142RC0001 2025-05-31
+Use this schedule to reconcile the corporation's net income (loss) as reported on the financial statements and its net income (loss) for tax purposes. For
+more information, see Guide T4012, T2 Corporation – Income Tax Guide.
+All legislative references are to the Income Tax Act.
+If you need more space, attach additional schedules.
+Net income (loss) after taxes and extraordinary items from line 9999 of Schedule 125 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28,349 A
+Add:
+Provision for income taxes – current . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 101
+Provision for income taxes – deferred . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 102
+Interest and penalties on taxes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 103
+Amortization of tangible assets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 104
+Amortization of natural resource assets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 105
+Amortization of intangible assets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 106
+Recapture of capital cost allowance from Schedule 8 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 107
+Loss in equity of subsidiaries and affiliates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 110
+Loss on disposal of assets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 111
+Charitable donations and gifts from Schedule 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 112
+Taxable capital gains from Schedule 6 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 113
+Political contributions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 114
+Holdbacks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 115
+Deferred and prepaid expenses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 116
+Depreciation in inventory – end of year . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 117
+Scientific research expenditures deducted per financial statements . . . . . . . . . . . . . . . . . 118
+Capitalized interest . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 119
+Non-deductible club dues and fees . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 120
+Non-deductible meals and entertainment expenses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 121 204
+Non-deductible automobile expenses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 122
+Non-deductible life insurance premiums . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 123
+Non-deductible company pension plans . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 124
+Other reserves on lines 270 and 275 from Schedule 13 . . . . . . . . . . . . . . . . . . . . . . . . . . 125
+Reserves from financial statements – balance at the end of the year . . . . . . . . . . . . . . . . 126
+Soft costs on construction and renovation of buildings . . . . . . . . . . . . . . . . . . . . . . . . . . . 127
+Non-deductible fines and penalties under section 67.6 . . . . . . . . . . . . . . . . . . . . . . . . . . . 128 274
+Income or loss for tax purposes – partnerships . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 129
+Amounts calculated under section 34.2 from Schedule 73 . . . . . . . . . . . . . . . . . . . . . . . . 130
+Income shortfall adjustment and additional amount from Schedule 73 . . . . . . . . . . . . . . . 131
+Income or loss for tax purposes – joint ventures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 132
+Amount D on page 3 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 199
+Total (lines 101 to 199) 500 478 478
+T2 SCH 1 E (25) Version 29.01 UF27 Page 1 of 4

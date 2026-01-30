@@ -1,0 +1,13 @@
+category,count,amount
+Bank debits - TOTAL,1000,447461.67
+Bank debits -> Wave (direct),346,243615.76
+Bank debits -> Wave (CC chain),159,47694.59
+Bank debits -> CC payment (no Wave),190,77297.26
+Bank debits -> Non-Wave (classified),312,165629.63
+Bank debits -> UNEXPLAINED,0,0
+,,
+Wave bills - TOTAL,754,292880.94
+Wave bills <- Matched,724,282632.05
+Wave bills <- Cash reimbursement,24,6204.89
+Wave bills <- Bank split (manual),16,16930.28
+Wave bills <- UNMATCHED,0,0

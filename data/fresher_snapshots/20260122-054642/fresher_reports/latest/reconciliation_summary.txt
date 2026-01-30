@@ -1,0 +1,103 @@
+======================================================================
+CURLY'S CANTEEN RECONCILIATION SUMMARY
+Generated: 2026-01-21 17:59:31
+Scope end date: 2025-05-31
+======================================================================
+
+WAVE BILL MATCHING
+----------------------------------------
+Total Wave Bills:        754  $  292,880.94
+Matched:                 724  $  282,632.05
+Unmatched:                30  $   10,248.89
+Match Rate:             96.0%
+
+BELL PREPAYMENT (FY CARRY-FORWARD)
+----------------------------------------
+FY Bell bills:        $    532.28
+FY Bell payments:     $  1,203.51
+Carry-forward credit: $    671.23  (post-FY)
+
+MATCHES BY TYPE
+----------------------------------------
+  CC_PURCHASE                304  $107,726.22
+  PAD_INVOICE                149  $ 99,167.88
+  BILL_PAYMENT               117  $ 17,538.03
+  CC_PAYMENT_TRANSFER         37  $  8,442.27
+  SHAREHOLDER_REIMBURSE       33  $ 15,037.41
+  BANK_DEBIT                  23  $  8,446.77
+  INTERCOMPANY_PURCHASE       18  $  9,825.67
+  SPLIT_PAYMENT               15  $  3,351.18
+  E_TRANSFER_REIMBURSE        15  $  6,238.33
+  CASH_PAID                    9  $  3,747.73
+  VENDOR_ETRANSFER             1  $    378.56
+  E_TRANSFER_VENDOR            1  $  1,311.00
+  E_TRANSFER                   1  $  1,311.00
+  CHEQUE                       1  $    110.00
+
+MATCH CONFIDENCE
+----------------------------------------
+  EXACT             150 ( 20.7%)
+  HIGH              527 ( 72.8%)
+  MEDIUM              8 (  1.1%)
+  UNSPECIFIED        39 (  5.4%)
+
+UNMATCHED BY VENDOR
+----------------------------------------
+  OTHER                  12  $  4,915.40
+  BANK_FEE               11  $  1,031.22
+  GFS                     3  $  1,862.50
+  RENT                    3  $  2,101.35
+  SYSCO                   2  $    240.63
+  INSURANCE               1  $  1,851.00
+  PHARMASAVE              1  $     31.44
+
+BANK DEBIT COVERAGE
+----------------------------------------
+Total Bank Debits:      1000  $  447,461.67
+Labeled (any reason):   1000  (not the same as Wave-linked)
+Wave-linked (direct):    346
+Wave-linked (via CC):    159  (bank_allocations)
+CC payments (any):       364  (cc_payment_links)
+Classifications:         529  (343 verified, 188 unverified)
+No Wave link:            484
+Blank (no label):          0
+Needs review:            188  (see bank_debits_needs_review.csv)
+High-risk review:          0  (see bank_debits_needs_review_high_risk.csv)
+
+CC PAYMENT CHAIN
+----------------------------------------
+Bank → CC Payment Links: 366  $119,703.39
+Bank CC payments with Wave links: 143/364 ($34,503.34; 28.8% of CC payments)
+
+PAD PAYMENTS
+----------------------------------------
+  CAPITAL           20 payments  $ 18,021.29
+  GFS               68 payments  $ 71,571.33
+
+SHAREHOLDER TRANSACTIONS
+----------------------------------------
+
+  DWAYNE:
+    OWNER_DRAW                  3  $34,000.00  (3 verified)
+    REIMBURSEMENT              48  $22,989.33  (48 verified)
+    LOAN_ISSUED                 1  $ 9,000.00  (1 verified)
+    DEPOSIT_CORRECTION          1  $ 5,070.00  (1 verified)
+    RENT_REIMBURSEMENT          4  $ 2,472.50  (4 verified)
+    CHANGE_FLOAT               11  $ 2,213.00  (11 verified)
+    PAYROLL_REIMBURSE           1  $ 1,541.41  (1 verified)
+    LOAN_REPAID                 1  $     0.00  (1 verified)
+
+  THOMAS:
+    REIMBURSEMENT             127  $18,821.58  (127 verified)
+    SHAREHOLDER_PAYROLL         6  $ 8,110.15  (6 verified)
+    PAYROLL                     1  $ 4,321.07  (1 verified)
+    OWNER_DRAW                  2  $ 3,900.00  (2 verified)
+    PAYROLL_REIMBURSE           7  $ 3,887.23  (7 verified)
+    RENT_REIMBURSEMENT          4  $ 3,847.50  (4 verified)
+    HST_REIMBURSEMENT           1  $ 3,000.00  (1 verified)
+    LOAN_ISSUED                 1  $ 2,000.00  (1 verified)
+    CHANGE_FLOAT                5  $   506.50  (5 verified)
+
+======================================================================
+END OF REPORT
+======================================================================

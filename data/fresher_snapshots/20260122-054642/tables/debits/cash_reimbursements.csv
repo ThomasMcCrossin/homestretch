@@ -1,0 +1,26 @@
+id,wave_bill_id,cc_txn_id,reimbursed_to,amount_cents,reimbursement_date,notes
+1,2,,TILL,45225,,Mondoux - paid in cash off-bank
+2,3,,DWAYNE,2108,,Card 0318; cash reimbursed to Dwayne
+3,11,,DWAYNE,120080,,Capital Foods - paid via Dwayne personal CIBC VISA debit; cash reimbursed
+4,14,,DWAYNE,3319,,Card 0318; cash reimbursed to Dwayne
+5,20,,DWAYNE,4370,,Card 0318; cash from till
+6,27,,DWAYNE,2169,,Card 0318; cash from till
+7,28,,DWAYNE,2451,,Card 0318; cash from till
+8,52,,DWAYNE,7684,,Atlantic Superstore Sep 15 - card 0318; cash reimbursed to Dwayne
+9,72,,DWAYNE,109656,,Capital Foods - Statement 2523999 +3% card fee; paid via Dwayne personal card; cash reimbursed
+10,95,,THOMAS,1293,,Pharmasave - paid by Tom; reimbursed in cash
+11,125,,TILL,33135,,Mondoux - paid in cash; reimbursed in cash off-bank
+12,185,,TILL,8384,,Bimbo Canada - paid from till (cash off-bank)
+13,201,,DWAYNE,6105,,Gov't of Nova Scotia TR1111807; cash reimbursed to Dwayne
+14,232,,TILL,30750,,We Like Work - paid with cash from till
+15,294,,DWAYNE,15260,,Atlantic Superstore - paid CIBC visa Apr 16; cash reimbursed
+16,300,,DWAYNE,4137,,Canadian Tire - card 0318; cash reimbursed
+17,669,,DWAYNE,8180,,Pharmasave - card 0318; cash reimbursed
+19,723,,TILL,28000,,GFS Cash - Cheese Curds - paid cash no invoice
+20,724,,TILL,20000,,GFS Cash - Cheese Curds - paid cash no invoice
+21,725,,TILL,24000,,GFS Cash - Chicken - paid cash no invoice
+22,726,,TILL,13000,,GFS Cash - Cheese Curds - paid cash no invoice
+23,719,,TILL,40000,,GFS cash COGS (frozen) paid from till; never hit bank
+24,86,,TILL,104085,,Capital Foods - cash reimbursement
+25,82,,TILL,10196,,Atlantic Superstore Oct 9 - cash reimbursed
+31,685,,DWAYNE,4902,,Shopify monthly addon; cash reimbursed to Dwayne
