@@ -7,9 +7,9 @@ GIFI_Code,Description,Amount,Note
 8523,Meals and entertainment,408,50% add-back = $204
 8622,Employer's portion of employee benefits,3610,
 8690,Insurance,1951,
-8710,Interest and bank charges,4486,
-8810,Office expenses,3903,
-8813,Data processing,1878,Computer hardware + SaaS (under capitalization threshold)
+8710,Interest and bank charges,3928,
+8810,Office expenses,3444,
+8813,Data processing,2915,Computer hardware + SaaS (under capitalization threshold)
 8860,Professional fees,353,
 8911,Real estate rental,7137,
 8960,Repairs and maintenance,603,
@@ -18,7 +18,7 @@ GIFI_Code,Description,Amount,Note
 9131,Small tools,479,
 9225,Telephone and telecommunications,465,Internet
 9270,Other expenses,293,Includes CRA penalties $274 (non-deductible)
-9275,"Delivery, freight and express",136,
+9275,"Delivery, freight and express",116,
 9281,Vehicle expenses,4038,
 9367,Total operating expenses,90066,
 9368,Total expenses,200350,

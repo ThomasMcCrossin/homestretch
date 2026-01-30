@@ -1,0 +1,119 @@
+Net income
+**Items with selection have the ability to make multiple entries. The dropdown options will be provided. 
+
+Please enter the information concerning the net income for this corporation. Note that some fields can be automatically populated from the amounts entered for the GIFI forms.
+
+
+Net income as per financial statements
+$
+$0
+*
+ 
+
+Provision for taxes as per financial statements
+Selection(options found below)
+Provision for Taxes - Current
+Provision for Taxes - Deferred
+
+$
+
+ 
+
+Depreciation and amortization recorded in the books
+Selection(options found below)
+Tangible Assets
+Intangible Assets
+Natural Resource Assets
+
+$
+
+ 
+
+Additions to net income (loss) as per financial statements
+Selection(options found below)
+Capital items expensed
+Capitalized interest
+Capital tax liability
+Contractors' completion method adjustment - previous year
+Correction to supplementary deduction for new investments
+Debt issue expense
+Deemed interest received
+Deemed interest on loans to non-residents
+Deferred and prepaid expenses
+Financing fees deducted in books
+Gain on settlement of debt
+Holdbacks payable
+Income tax interest and penalties
+Interest on leasing-purchase contracts - Qc
+Interest paid on income debentures
+Inventory depreciation - current year
+Loss from disposal of assets
+Loss from disposal of other assets - Qc
+Total meals and entertainment expenses
+Portion meal exp. of truck drivers incurred after 2010
+Portion of meal expenses due to regular travel - Qc
+Portion of meal expenses from sales agencies - Qc
+Non deductible advertising
+Non deductible car loan interest
+Non deductible car leasing expenses
+Non deductible carrying charges for land - Qc
+Non deductible club dues and fees
+Non deductible fines and penalties
+Non deductible interest
+Non deductible legal and accounting fees
+Non deductible life insurance premiums
+Other expenses from financial statements
+Renovations toward access to building - Qc
+Taxable/non-deductible other comprehensive income items
+Sales tax assessments
+Shares issue expense
+Soft costs - building construction, renovation
+Work in progress at end of previous year - Qc
+Write-down of capital property
+Other additions - specify
+$
+
+ 
+
+Deductions from net income (loss) as per financial statements
+Selection(options to pick from below)
+Add. capital cost allowance of a vessel
+Add. CCA - Data processing or manufacturing equipment (35%)
+Add. CCA - Data processing or manufacturing equipment (60%)
+Add. CCA - Data processing or manufacturing equipment (30%)
+Bad debts
+Book gain on debt settlement - Qc
+Contractors' completion method adjustment - current year
+Deferred and prepaid expenses
+Exempt income under ITA 81
+Financial expenses - Qc
+Gain from disposal of assets
+Gain from disposal of other assets - Qc
+Holdbacks receivable
+Incorporation expenses
+Inventory depreciation - prior year
+Non-Canadian advertising - broadcasting
+Non-Canadian advertising - printed materials
+Non-tax./deductible other comprehensive income items
+Other income from financial statements
+Renovations toward access to building - Qc
+Share issue expenses - Qc
+Tax relief for public transport organized by employer - Qc
+Tax relief from transit passes for employers - Qc
+Work in progress at end of current year - Qc
+Other deductions - specify
+
+$
+
+ 
+
+Total sales of corporation during this taxation year
+$
+$0
+*
+ 
+
+Total gross revenues
+$
+$0
+*

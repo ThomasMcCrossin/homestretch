@@ -1,0 +1,57 @@
+Dividends paid
+Select the type of dividends paid by the corporation.
+
+Dividends paid
+ 
+
+Taxable dividend paid
+
+ 
+
+Capital dividends payable per subsection 83(2)
+
+ 
+
+Capital gains dividend
+
+ What the plus sign creates for each section
+ 
+ Taxable dividend paid
+Please enter the information concerning the taxable dividend paid.
+
+
+Amount of dividends paid by corporation during tax year
+$
+ 
+
+Portion of eligible dividends paid by corporation during tax year
+$
+
+
+
+
+Capital dividends payable per subsection 83(2)
+Please enter the information concerning the Capital dividends payable per subsection 83(2).
+
+
+Amount of dividends paid by corporation during tax year
+$
+
+---
+
+FY2025 example for this project (whole dollars)
+- Taxable dividend paid: $36,900 (matches GIFI 3700 “Dividends declared”).
+- Eligible portion: $0 (unless you explicitly decide to designate eligible dividends in UFile).
+
+Notes
+- UFile presents the dividend types as separate expandable (“+”) panels.
+- If dividends are declared (GIFI 3700) but the “Dividends paid” screen is left incomplete, UFile can raise validation messages and/or retained earnings inconsistencies.
+
+
+Capital gains dividend
+Please enter the information concerning the capital gains dividend.
+
+
+Amount of dividends paid by corporation during tax year
+$
+

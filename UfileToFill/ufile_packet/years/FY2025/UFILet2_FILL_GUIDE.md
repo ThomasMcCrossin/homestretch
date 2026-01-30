@@ -270,9 +270,9 @@ Unless you are designating eligible dividends, GRIP is typically $0 / not needed
 | 8523 | Meals and entertainment | 408 | 50% add-back = $204 |
 | 8622 | Employer's portion of employee benefits | 3,610 |  |
 | 8690 | Insurance | 1,951 |  |
-| 8710 | Interest and bank charges | 4,486 |  |
-| 8810 | Office expenses | 3,903 |  |
-| 8813 | Data processing | 1,878 | Computer hardware + SaaS (under capitalization threshold) |
+| 8710 | Interest and bank charges | 3,928 |  |
+| 8810 | Office expenses | 3,444 |  |
+| 8813 | Data processing | 2,915 | Computer hardware + SaaS (under capitalization threshold) |
 | 8860 | Professional fees | 353 |  |
 | 8911 | Real estate rental | 7,137 |  |
 | 8960 | Repairs and maintenance | 603 |  |
@@ -281,7 +281,7 @@ Unless you are designating eligible dividends, GRIP is typically $0 / not needed
 | 9131 | Small tools | 479 |  |
 | 9225 | Telephone and telecommunications | 465 | Internet |
 | 9270 | Other expenses | 293 | Includes CRA penalties $274 (non-deductible) |
-| 9275 | Delivery, freight and express | 136 |  |
+| 9275 | Delivery, freight and express | 116 |  |
 | 9281 | Vehicle expenses | 4,038 |  |
 
 ## Cost of sales tie-check (display-only)

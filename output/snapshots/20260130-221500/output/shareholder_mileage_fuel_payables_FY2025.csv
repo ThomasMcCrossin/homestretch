@@ -1,0 +1,3 @@
+fy,start_date,end_date,shareholder,trips,kilometres,mileage_claim_cents,fuel_cents,net_cents,direction
+FY2025,2024-06-01,2025-05-31,Thomas,276,4095.56,290163,294299,-4136,DUE_FROM_SHAREHOLDER
+FY2025,2024-06-01,2025-05-31,Dwayne,6,869.28,60852,0,60852,DUE_TO_SHAREHOLDER

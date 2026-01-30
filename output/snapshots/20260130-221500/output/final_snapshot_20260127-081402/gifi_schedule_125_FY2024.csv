@@ -1,0 +1,23 @@
+GIFI_Code,Description,Amount
+8000,Trade sales of goods and services,181235
+8299,Total revenue,181235
+8518,Cost of sales,103343
+8519,Gross profit/loss,77892
+8300,Opening inventory,1370
+8520,Advertising and promotion,1606
+8523,Meals and entertainment,518
+8622,Employer's portion of employee benefits,1463
+8690,Insurance,1851
+8710,Interest and bank charges,2218
+8810,Office expenses,10455
+8860,Professional fees,879
+8911,Real estate rental,8235
+8960,Repairs and maintenance,834
+9060,Salaries and wages,23485
+9270,Other expenses,3820
+9281,Vehicle expenses,4403
+9801,Freight and trucking,100
+9367,Total operating expenses,61237
+9368,Total expenses,164580
+9970,Net income/loss before taxes,16655
+9999,Net income/loss after taxes,16655

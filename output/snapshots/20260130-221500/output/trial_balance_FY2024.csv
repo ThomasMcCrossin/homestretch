@@ -1,0 +1,79 @@
+fy,account_code,account_name,account_type,gifi_code,t2125_line,debit,credit,net_cents
+FY2024,1000,Business Bank - CIBC Chequing,asset,1001,,25991.52,0.00,2599152
+FY2024,1070,Cash on Hand,asset,1001,,300.00,0.00,30000
+FY2024,1200,Inventory - Food,asset,1121,,1718.73,0.00,171873
+FY2024,1210,Inventory - Beverage,asset,1121,,312.50,0.00,31250
+FY2024,1230,Inventory - Retail Goods,asset,1121,,816.00,0.00,81600
+FY2024,1300,Prepaid Expenses,asset,1484,,649.16,0.00,64916
+FY2024,2000,Accounts Payable,liability,2620,,0.00,3198.24,-319824
+FY2024,2200,HST Payable,liability,2680,,0.00,9060.18,-906018
+FY2024,2210,HST ITC Receivable,liability,2680,,2293.29,0.00,229329
+FY2024,2400,Due to Shareholder - Thomas,liability,2781,,0.00,2669.99,-266999
+FY2024,2410,Due to Shareholder - Dwayne,liability,2781,,0.00,908.16,-90816
+FY2024,2700,Payroll Liabilities - CPP,liability,2620,,255.61,0.00,25561
+FY2024,2710,Payroll Liabilities - EI,liability,2620,,9.25,0.00,925
+FY2024,2720,Payroll Liabilities - Income Tax,liability,2620,,246.07,0.00,24607
+FY2024,3000,Share Capital (Corp only),equity,3500,,0.00,100.00,-10000
+FY2024,4000,Sales - Food,revenue,8000,8000,0.00,66970.60,-6697060
+FY2024,4090,Income - To Be Reviewed,revenue,8000,,0.00,0.14,-14
+FY2024,4100,Sales - Online (Shopify),revenue,8000,8000,0.00,114419.12,-11441912
+FY2024,4900,Sales Returns & Allowances,revenue,8000,,154.99,0.00,15499
+FY2024,5000,COGS - Food,expense,8518,8518,50351.24,0.00,5035124
+FY2024,5001,COGS - Food - Hot Dogs,expense,8518,8518,135.28,0.00,13528
+FY2024,5002,COGS - Food - Sandwiches,expense,8518,8518,734.28,0.00,73428
+FY2024,5004,COGS - Food - Frozen,expense,8518,8518,18624.45,0.00,1862445
+FY2024,5005,COGS - Food - Bakery,expense,8518,8518,612.32,0.00,61232
+FY2024,5006,COGS - Food - Dairy,expense,8518,8518,388.12,0.00,38812
+FY2024,5007,COGS - Food - Meat/Deli,expense,8518,8518,1686.28,0.00,168628
+FY2024,5008,COGS - Food - Produce,expense,8518,8518,8.50,0.00,850
+FY2024,5010,COGS - Beverage,expense,8518,8518,0.00,636.97,-63697
+FY2024,5011,COGS - Beverage - Soda,expense,8518,8518,664.30,0.00,66430
+FY2024,5012,COGS - Beverage - Water,expense,8518,8518,616.69,0.00,61669
+FY2024,5013,COGS - Beverage - Energy Drinks,expense,8518,8518,1197.36,0.00,119736
+FY2024,5014,COGS - Beverage - Sports Drinks,expense,8518,8518,2850.43,0.00,285043
+FY2024,5015,COGS - Beverage - Juice,expense,8518,8518,13.33,0.00,1333
+FY2024,5016,COGS - Beverage - Coffee/Tea,expense,8518,8518,589.81,0.00,58981
+FY2024,5017,COGS - Beverage - Milk Products,expense,8518,8518,57.70,0.00,5770
+FY2024,5018,COGS - Beverage - Alcohol,expense,8518,8518,3.62,0.00,362
+FY2024,5021,COGS - Supplements - Protein,expense,8518,8518,593.10,0.00,59310
+FY2024,5023,COGS - Supplements - Pre-Workout,expense,8518,8518,27.13,0.00,2713
+FY2024,5030,COGS - Retail Goods,expense,8518,8518,0.00,936.00,-93600
+FY2024,5031,COGS - Retail - Snacks/Chips,expense,8518,8518,135.55,0.00,13555
+FY2024,5032,COGS - Retail - Candy/Chocolate,expense,8518,8518,10788.46,0.00,1078846
+FY2024,5033,COGS - Retail - Health Products,expense,8518,8518,206.95,0.00,20695
+FY2024,5034,COGS - Retail - Accessories,expense,8518,8518,8672.84,0.00,867284
+FY2024,5035,COGS - Retail - Apparel,expense,8518,8518,512.66,0.00,51266
+FY2024,5039,COGS - Retail - Other,expense,8518,8518,1311.65,0.00,131165
+FY2024,5099,COGS - Food - Other,expense,8518,8518,6790.59,0.00,679059
+FY2024,5100,Freight In,expense,8518,8518,1365.17,0.00,136517
+FY2024,5200,Packaging & Supplies,expense,9130,8810,4118.38,0.00,411838
+FY2024,5202,Packaging - Bags/Wrapping,expense,9130,8810,3.62,0.00,362
+FY2024,5204,Supplies - Cleaning,expense,9130,8810,1073.98,0.00,107398
+FY2024,5205,Supplies - Paper Products,expense,9130,8810,307.09,0.00,30709
+FY2024,5206,Supplies - Kitchen,expense,9130,8810,12.10,0.00,1210
+FY2024,5209,Supplies - Other,expense,9130,8810,46.27,0.00,4627
+FY2024,5400,Inventory Shrinkage/Spoilage,expense,8518,,1370.00,0.00,137000
+FY2024,6000,Bank Charges & Fees,expense,8710,8690,516.02,0.00,51602
+FY2024,6100,Rent,expense,8911,9200,8235.00,0.00,823500
+FY2024,6210,Payment Processing Fees,expense,8710,,1701.70,0.00,170170
+FY2024,6300,Repairs & Maintenance,expense,8960,9281,458.21,0.00,45821
+FY2024,6350,Small Tools & Equipment,expense,9131,,22.78,0.00,2278
+FY2024,6400,Insurance - Business,expense,8690,9804,1851.00,0.00,185100
+FY2024,6500,Advertising & Promotion,expense,8520,8521,1391.75,0.00,139175
+FY2024,6510,Accounting & Bookkeeping Fees,expense,8860,,0.00,1.41,-141
+FY2024,6520,Legal Fees,expense,8860,,100.00,0.00,10000
+FY2024,6521,Employee Events,expense,8520,8520,213.90,0.00,21390
+FY2024,6550,Shipping & Delivery Expense,expense,9275,,100.13,0.00,10013
+FY2024,6600,Office Supplies,expense,8810,9270,3020.04,0.00,302004
+FY2024,6610,Computer Hardware Expense,expense,8813,,1006.68,0.00,100668
+FY2024,6620,Software & SaaS Expense,expense,8813,,128.18,0.00,12818
+FY2024,6700,Professional Fees - Accounting,expense,8860,9060,780.33,0.00,78033
+FY2024,7000,Salaries & Wages,expense,9060,9060,23484.96,0.00,2348496
+FY2024,7100,CPP Employer Portion,expense,8622,9060,1463.00,0.00,146300
+FY2024,7110,Meals & Entertainment,expense,8523,8523,517.92,0.00,51792
+FY2024,8100,Interest Expense - Bank,expense,8710,8710,0.67,0.00,67
+FY2024,9000,Deposits - Bottle/Container,expense,8518,8518,543.67,0.00,54367
+FY2024,9100,Pending Receipt - No ITC,expense,9270,,274.54,0.00,27454
+FY2024,9150,Penalties - CRA,expense,9270,,71.35,0.00,7135
+FY2024,9200,Fuel Pending Mileage Conversion - No ITC,expense,9281,,16.72,0.00,1672
+FY2024,9270,Motor Vehicle Expense - Mileage Reimbursement,expense,9281,,4385.89,0.00,438589

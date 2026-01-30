@@ -1,0 +1,128 @@
+a lot of the options to add are either Quebec or Alberta based I will include them all for completeness sake. 
+multiple entries for each can be added
+
+* = This is a required field
+Reserves
+Select the type of reserve.
+
+Reserves
+ 
+
+Capital gains reserve - all jurisdictions
+Capital gains reserve - all jurisdictions
+Please enter the information concerning the capital gains reserve for all jurisdictions.
+
+
+Description of reserve
+*
+ 
+
+Reserve opening balance this year
+$
+ 
+
+Amount of reserve taken into income this year
+$
+ 
+
+Amount of reserve increased/taken in current year
+$
+ 
+
+Reserve closing balance this year
+$
+
+
+ 
+
+Other deductible reserve - Quebec
+
+ 
+
+Other deductible reserve (books) - Quebec
+
+ 
+
+Tax paid, non deductible reserve - Quebec
+
+ 
+
+Doubtful debts - Fed./Alb
+
+Doubtful debts - Fed./Alb
+Please enter the information concerning reserves for doubtful debts for Federal and Alberta.
+
+
+Description of reserve
+*
+ 
+
+Reserve opening balance this year
+$
+ 
+
+Amount of reserve taken into income this year
+$
+ 
+
+Amount of reserve increased/taken in current year
+$
+ 
+
+Reserve closing balance this year
+$
+
+
+ 
+
+Undelivered goods and services not rendered - Fed./Alb
+
+ 
+
+Prepaid rent - Fed./Alb
+
+ 
+
+Returnable containers - Fed./Alb
+
+ 
+
+Unpaid amounts - Fed./Alb
+
+ 
+
+Other tax reserves - Fed./Alb
+
+ 
+
+Insurance corporations policy reserves - Alberta
+
+ 
+
+Bank reserves - Alberta
+
+
+All of them just give the same form to fill out that i've pasted twice in here already and will again 
+
+Prepaid rent - Fed./Alb
+Please enter the information concerning reserves for prepaid rent for Federal and Alberta.
+
+
+Description of reserve
+*
+ 
+
+Reserve opening balance this year
+$
+ 
+
+Amount of reserve taken into income this year
+$
+ 
+
+Amount of reserve increased/taken in current year
+$
+ 
+
+Reserve closing balance this year
+$
