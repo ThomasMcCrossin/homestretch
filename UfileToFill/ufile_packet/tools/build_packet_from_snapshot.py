@@ -85,13 +85,63 @@ def load_schedule_1_labels(path: Path) -> dict[str, str]:
     with path.open(newline="") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            line = (row.get("Line") or row.get("line") or "").strip()
-            if not line:
+            code = (row.get("Code") or row.get("Line") or row.get("line") or "").strip()
+            if not code:
                 continue
-            d = (row.get("Description") or row.get("description") or "").strip()
+            d = (row.get("Label") or row.get("Description") or row.get("description") or "").strip()
             if d:
-                labels[line] = d
+                labels[code] = d
     return labels
+
+
+def load_schedule_8(path: Path) -> dict[str, dict]:
+    if not path.exists():
+        return {}
+    rows: dict[str, dict] = {}
+    with path.open(newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            class_code = str(row.get("Class") or row.get("class") or "").strip()
+            if not class_code:
+                continue
+            rows[class_code] = {
+                "class": class_code,
+                "description": str(row.get("Description") or "").strip(),
+                "rate": float(row.get("Rate") or 0),
+                "opening_ucc": int(row.get("Opening_UCC") or 0),
+                "additions": int(row.get("Additions") or 0),
+                "dispositions": int(row.get("Dispositions") or 0),
+                "half_year_base": int(row.get("Half_year_base") or 0),
+                "cca_claim": int(row.get("CCA_Claim") or 0),
+                "closing_ucc": int(row.get("Closing_UCC") or 0),
+            }
+    return rows
+
+
+def load_cca_assets(path: Path, fy: str) -> list[dict]:
+    if not path.exists():
+        return []
+    out: list[dict] = []
+    with path.open(newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            row_fy = str(row.get("fiscal_year") or "").strip()
+            if row_fy != fy:
+                continue
+            out.append(
+                {
+                    "asset_id": str(row.get("asset_id") or "").strip(),
+                    "description": str(row.get("description") or "").strip(),
+                    "cca_class": str(row.get("cca_class") or "").strip(),
+                    "available_for_use_date": str(row.get("available_for_use_date") or "").strip(),
+                    "total_cost_cents": int(row.get("total_cost_cents") or 0),
+                    "total_cost_dollars": int(row.get("total_cost_dollars") or 0),
+                    "claim_percent_of_max": str(row.get("claim_percent_of_max") or "").strip(),
+                    "half_year_rule": str(row.get("half_year_rule") or "").strip(),
+                    "source_breakdown": str(row.get("source_breakdown") or "").strip(),
+                }
+            )
+    return out
 
 
 def update_year_section(
@@ -121,7 +171,7 @@ def update_year_section(
     sch100 = load_csv_amounts(sch100_path, code_field_candidates=["gifi_code", "GIFI_Code"], amount_field_candidates=["amount", "Amount"])
     sch125 = load_csv_amounts(sch125_path, code_field_candidates=["gifi_code", "GIFI_Code"], amount_field_candidates=["amount", "Amount"])
     retained = load_csv_amounts(re_path, code_field_candidates=["gifi_code", "GIFI_Code"], amount_field_candidates=["amount", "Amount"])
-    sch1_amounts = load_csv_amounts(sch1_path, code_field_candidates=["Line", "line"], amount_field_candidates=["Amount", "amount"])
+    sch1_amounts = load_csv_amounts(sch1_path, code_field_candidates=["Code", "Line", "line"], amount_field_candidates=["Amount", "amount"])
     sch1_labels = load_schedule_1_labels(sch1_path)
 
     def merge_section(existing: dict, amounts: dict[str, int], labels: dict[str, str] | None = None) -> dict:
@@ -145,6 +195,28 @@ def update_year_section(
     year["retained_earnings"] = merge_section(year.get("retained_earnings", {}), retained)
     year["schedule_1"] = merge_section(year.get("schedule_1", {}), sch1_amounts, labels=sch1_labels)
 
+    schedule_8_path = snapshot_dir / f"schedule_8_{fy}.csv"
+    schedule_8_classes = load_schedule_8(schedule_8_path)
+    cca_assets_path = snapshot_dir / "cca_asset_register_resolved.csv"
+    cca_assets = load_cca_assets(cca_assets_path, fy)
+    if schedule_8_classes or cca_assets:
+        classes_used = sorted(schedule_8_classes.keys(), key=lambda x: int(x) if x.isdigit() else 10**9)
+        total_additions = sum(int(v.get("additions") or 0) for v in schedule_8_classes.values())
+        total_cca = sum(int(v.get("cca_claim") or 0) for v in schedule_8_classes.values())
+        schedule_8_note = f"Total CCA claimed: {total_cca}. Classes used: {', '.join(classes_used) if classes_used else 'none'}."
+        year["schedule_8"] = {
+            "classes": schedule_8_classes,
+            "assets": cca_assets,
+            "summary": {
+                "total_additions": int(total_additions),
+                "total_cca_claim": int(total_cca),
+                "classes_used": classes_used,
+            },
+            "note": schedule_8_note,
+        }
+    else:
+        year.pop("schedule_8", None)
+
     # --- Year-specific UFile screens derived from the schedules (no guessing) ---
     year_screens = year.get("ufile_screens", {})
     if not isinstance(year_screens, dict):
@@ -164,7 +236,9 @@ def update_year_section(
     if isinstance(prior_year, dict):
         prior_end = str(prior_year.get("fiscal_period", {}).get("end") or prior_end)
         try:
-            prior_taxable_income = int((prior_year.get("schedule_1", {}).get("400") or {}).get("amount") or 0)
+            prior_taxable_income = int(
+                (prior_year.get("schedule_1", {}).get("C") or prior_year.get("schedule_1", {}).get("400") or {}).get("amount") or 0
+            )
         except Exception:
             prior_taxable_income = 0
         try:
@@ -199,7 +273,7 @@ def update_year_section(
     corp_hist.setdefault(
         "note",
         "UFile Corporate History screen: typically only the 1st prior year row is needed. "
-        "Taxable income should match prior year Schedule 1 line 400; taxable paid-up capital usually matches share capital unless evidence indicates otherwise.",
+        "Taxable income should match prior year Schedule 1 code C; taxable paid-up capital usually matches share capital unless evidence indicates otherwise.",
     )
     year_screens["corporate_history"] = corp_hist
 
@@ -238,6 +312,34 @@ def update_year_section(
         "Unless you are designating eligible dividends, GRIP is typically $0 / not needed. If you mark any eligible dividends, you must complete this screen.",
     )
     year_screens["general_rate_income_pool"] = grip
+
+    # CCA screen + position flags
+    cca_classes_used = []
+    total_cca_claim = 0
+    schedule_8 = year.get("schedule_8", {}) if isinstance(year.get("schedule_8"), dict) else {}
+    if isinstance(schedule_8.get("summary"), dict):
+        cca_classes_used = schedule_8.get("summary", {}).get("classes_used") or []
+        total_cca_claim = int(schedule_8.get("summary", {}).get("total_cca_claim") or 0)
+    has_cca = bool(cca_classes_used)
+
+    cca_screen = year_screens.get("capital_cost_allowance", {})
+    if not isinstance(cca_screen, dict):
+        cca_screen = {}
+    cca_screen["has_cca"] = has_cca
+    if has_cca:
+        cca_screen["note"] = f"CCA claimed per Schedule 8. Total CCA: {total_cca_claim}. Classes: {', '.join(cca_classes_used)}."
+    year_screens["capital_cost_allowance"] = cca_screen
+
+    positions = year.get("positions", {})
+    if not isinstance(positions, dict):
+        positions = {}
+    positions.setdefault("cca_required", {})
+    if not isinstance(positions.get("cca_required"), dict):
+        positions["cca_required"] = {}
+    positions["cca_required"]["value"] = has_cca
+    if has_cca:
+        positions["cca_required"]["note"] = f"CCA claimed per Schedule 8. Total CCA: {total_cca_claim}. Classes: {', '.join(cca_classes_used)}."
+    year["positions"] = positions
 
 
 def main() -> int:

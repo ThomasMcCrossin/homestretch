@@ -28,6 +28,16 @@ def money(n: int) -> str:
     return f"{n:,}"
 
 
+def schedule_1_sort_key(code: str) -> tuple[int, object]:
+    if code == "A":
+        return (-2, 0)
+    if code == "C":
+        return (2, 0)
+    if code.isdigit():
+        return (0, int(code))
+    return (1, code)
+
+
 def build_year_packet(packet: dict, fy: str) -> dict:
     entity = packet["entity"]
     year = packet["years"][fy]
@@ -348,7 +358,9 @@ def build_year_guide(packet: dict, fy: str) -> str:
             prior_year = packet["years"].get(prior_fy)
             if prior_year:
                 prior_end = prior_year["fiscal_period"]["end"]
-                prior_taxable_income = int(prior_year["schedule_1"]["400"]["amount"])
+                prior_taxable_income = int(
+                    (prior_year["schedule_1"].get("C") or prior_year["schedule_1"].get("400") or {"amount": 0}).get("amount") or 0
+                )
                 prior_total_assets = int(prior_year.get("schedule_100", {}).get("2599", {}).get("amount") or 0)
                 # As a CCPC with active business income, prior year generally claims SBD (confirm in UFile).
                 prior_sbd_claimed = "Yes"
@@ -364,7 +376,7 @@ def build_year_guide(packet: dict, fy: str) -> str:
             ["Field", "Value", "Note"],
             [
                 ["1st prior year end date", prior_end, "UFile field: End date of prior tax year"],
-                ["1st prior year taxable income", money(prior_taxable_income), "UFile field: Taxable income (Schedule 1 line 400 of the prior year)"],
+                ["1st prior year taxable income", money(prior_taxable_income), "UFile field: Taxable income (Schedule 1 code C of the prior year)"],
                 [
                     "Eligible RDTOH at prior year-end",
                     money(int((corp_hist.get("eligible_rdtoh_end_prior_year") if isinstance(corp_hist, dict) else 0) or 0)),
@@ -405,7 +417,11 @@ def build_year_guide(packet: dict, fy: str) -> str:
         md_table(
             ["Field", "Value", "Note"],
             [
-                ["Net income as per financial statements", money(int(schedule_1["300"]["amount"])), "Should auto-fill from GIFI; otherwise enter from Schedule 1 line 300."],
+                [
+                    "Net income as per financial statements",
+                    money(int((schedule_1.get("A") or schedule_1.get("300") or {"amount": 0}).get("amount") or 0)),
+                    "Should auto-fill from GIFI; otherwise enter from Schedule 1 code A.",
+                ],
                 ["Total sales of corporation during this taxation year", money(gross_revenue), "Use total revenue (sum of revenue lines; typically matches trade sales 8000)."],
                 ["Total gross revenues", money(gross_revenue), "Usually same as total sales for your file."],
             ],
@@ -755,7 +771,7 @@ def build_year_guide(packet: dict, fy: str) -> str:
                 break
         blank_rows.append([label, yn(has_any) if has_any is not None else "No", str(obj.get("note") or "")])
 
-    parts.append("## Other UFile screens (expected blank / N/A)")
+    parts.append("## Other UFile screens (usually blank / check if applicable)")
     parts.append(md_table(["Screen", "Has entries?", "Note"], blank_rows))
     parts.append("")
 
@@ -836,11 +852,55 @@ def build_year_guide(packet: dict, fy: str) -> str:
     parts.append("## Schedule 1 (tax purposes)")
     parts.append(
         md_table(
-            ["Line", "Description", "Amount", "Calculation"],
-            [[line, obj.get("label", ""), money(int(obj["amount"])), obj.get("calculation","") or ""] for line, obj in sorted(schedule_1.items(), key=lambda kv: int(kv[0]))],
+            ["Code", "Description", "Amount", "Calculation"],
+            [
+                [line, obj.get("label", ""), money(int(obj["amount"])), obj.get("calculation", "") or ""]
+                for line, obj in sorted(schedule_1.items(), key=lambda kv: schedule_1_sort_key(kv[0]))
+            ],
         )
     )
     parts.append("")
+
+    schedule_8 = year.get("schedule_8", {}) if isinstance(year.get("schedule_8"), dict) else {}
+    if schedule_8 and isinstance(schedule_8.get("classes"), dict) and schedule_8["classes"]:
+        parts.append("## Schedule 8 / CCA")
+        classes = schedule_8.get("classes", {}) if isinstance(schedule_8.get("classes"), dict) else {}
+        class_rows = []
+        for class_code, obj in sorted(classes.items(), key=lambda kv: int(kv[0]) if kv[0].isdigit() else 10**9):
+            class_rows.append(
+                [
+                    class_code,
+                    str(obj.get("description") or ""),
+                    money(int(obj.get("opening_ucc") or 0)),
+                    money(int(obj.get("additions") or 0)),
+                    money(int(obj.get("cca_claim") or 0)),
+                    money(int(obj.get("closing_ucc") or 0)),
+                ]
+            )
+        parts.append(
+            md_table(
+                ["Class", "Description", "Opening UCC", "Additions", "CCA claim", "Closing UCC"],
+                class_rows,
+            )
+        )
+        parts.append("")
+
+        assets = schedule_8.get("assets", []) if isinstance(schedule_8.get("assets"), list) else []
+        if assets:
+            asset_rows = []
+            for asset in assets:
+                asset_rows.append(
+                    [
+                        str(asset.get("asset_id") or ""),
+                        str(asset.get("description") or ""),
+                        str(asset.get("available_for_use_date") or ""),
+                        str(asset.get("cca_class") or ""),
+                        money(int(asset.get("total_cost_dollars") or 0)),
+                    ]
+                )
+            parts.append("### Schedule 8 asset additions (audit trail)")
+            parts.append(md_table(["Asset ID", "Description", "Date", "Class", "Cost"], asset_rows))
+            parts.append("")
 
     # High-signal yes/no answers that differ year-to-year
     parts.append("## High-signal yes/no answers")
@@ -889,14 +949,14 @@ def write_year_tables(packet: dict, fy: str) -> None:
     def write_schedule_1(path: Path, schedule_1: dict) -> None:
         with path.open("w", newline="") as f:
             w = csv.writer(f)
-            w.writerow(["Line", "Description", "Amount", "Calculation"])
-            for line, obj in sorted(schedule_1.items(), key=lambda kv: int(kv[0])):
+            w.writerow(["Code", "Description", "Amount", "Calculation"])
+            for line, obj in sorted(schedule_1.items(), key=lambda kv: schedule_1_sort_key(kv[0])):
                 if not isinstance(obj, dict):
                     continue
                 desc = obj.get("label", "") or ""
                 amount = int(obj.get("amount", 0) or 0)
                 calc = obj.get("calculation", "") or ""
-                w.writerow([int(line), desc, amount, calc])
+                w.writerow([str(line), desc, amount, calc])
 
     write_schedule(TABLES_DIR / f"schedule_100_{fy}.csv", year.get("schedule_100", {}))
     write_schedule(TABLES_DIR / f"schedule_125_{fy}.csv", year.get("schedule_125", {}))

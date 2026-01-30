@@ -270,6 +270,56 @@
               }
             }
           },
+          "schedule_8": {
+            "type": "object",
+            "description": "Capital Cost Allowance (Schedule 8)",
+            "properties": {
+              "classes": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "object",
+                  "required": ["class", "opening_ucc", "additions", "cca_claim", "closing_ucc"],
+                  "properties": {
+                    "class": { "type": "string" },
+                    "description": { "type": ["string", "null"] },
+                    "rate": { "type": ["number", "null"] },
+                    "opening_ucc": { "type": "integer" },
+                    "additions": { "type": "integer" },
+                    "dispositions": { "type": "integer" },
+                    "half_year_base": { "type": "integer" },
+                    "cca_claim": { "type": "integer" },
+                    "closing_ucc": { "type": "integer" }
+                  }
+                }
+              },
+              "assets": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "asset_id": { "type": "string" },
+                    "description": { "type": ["string", "null"] },
+                    "cca_class": { "type": ["string", "null"] },
+                    "available_for_use_date": { "type": ["string", "null"], "format": "date" },
+                    "total_cost_cents": { "type": ["integer", "null"] },
+                    "total_cost_dollars": { "type": ["integer", "null"] },
+                    "claim_percent_of_max": { "type": ["string", "null"] },
+                    "half_year_rule": { "type": ["string", "null"] },
+                    "source_breakdown": { "type": ["string", "null"] }
+                  }
+                }
+              },
+              "summary": {
+                "type": "object",
+                "properties": {
+                  "total_additions": { "type": "integer" },
+                  "total_cca_claim": { "type": "integer" },
+                  "classes_used": { "type": "array", "items": { "type": "string" } }
+                }
+              },
+              "note": { "type": ["string", "null"] }
+            }
+          },
           "positions": {
             "type": "object",
             "description": "Key tax positions and accounting policies for this year",

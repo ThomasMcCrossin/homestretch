@@ -447,7 +447,10 @@ def main() -> int:
         if fixed_present:
             f.write("- Depreciation/CCA and any fixed-asset rollforward is not yet modeled here.\n")
         else:
-            f.write("- No fixed-asset balances detected (CCA/depreciation not required).\n")
+            f.write(
+                "- No fixed-asset balances detected on Schedule 100, but CCA must be assessed separately via the tax asset register "
+                "(`overrides/cca_assets.yml`) and Schedule 8 outputs.\n"
+            )
 
     print("READINESS REPORT BUILT")
     print(f"- out: {out_md}")

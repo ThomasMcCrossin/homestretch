@@ -67,9 +67,31 @@ def write_schedule_1_csv(rows: list[tuple[str, str, int]], path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["Line", "Description", "Amount"])
-        for line, desc, amt in rows:
-            w.writerow([line, desc, str(int(amt))])
+        w.writerow(["Code", "Label", "Amount"])
+        for code, desc, amt in rows:
+            w.writerow([code, desc, str(int(amt))])
+
+
+def load_schedule_8_summary(path: Path) -> tuple[int, int, int]:
+    """
+    Returns (additions_total, cca_claim_total, class_rows).
+    If schedule 8 file is missing, returns zeros.
+    """
+
+    if not path.exists():
+        return 0, 0, 0
+    rows = list(csv.DictReader(path.open("r", encoding="utf-8", newline="")))
+    additions_total = 0
+    cca_total = 0
+    class_rows = 0
+    for r in rows:
+        class_val = str(r.get("Class") or r.get("class") or "").strip()
+        if not class_val:
+            continue
+        class_rows += 1
+        additions_total += int(r.get("Additions") or 0)
+        cca_total += int(r.get("CCA_Claim") or r.get("cca_claim") or 0)
+    return additions_total, cca_total, class_rows
 
 
 def load_gifi_descriptions() -> dict[str, str]:
@@ -309,18 +331,29 @@ def main() -> int:
             re_rows.append(("3740", f"{desc('3740', gifi_desc=gifi_desc)} (rounding)", retained_adjust))
         re_rows.append(("3849", desc("3849", gifi_desc=gifi_desc), retained_end))
 
-        # Schedule 1 (Net income for tax purposes): 50% M&E add-back.
+        # Schedule 1 (Net income for tax purposes) aligned to CRA T2SCH1 (2023+).
         meals_cents = meals_cents_from_tb(tb)
         meals_dollars = round_cents_to_dollar(meals_cents)
         meals_addback = round_to_dollar(Decimal(meals_dollars) / Decimal(2))
         penalties_dollars = round_cents_to_dollar(cra_penalties_cents_from_tb(tb))
         penalties_addback = penalties_dollars
-        taxable_income = net_income + meals_addback + penalties_addback
+
+        schedule8_path = args.out_dir / f"schedule_8_{fy.fy}.csv"
+        cca_additions, cca_claim, _ = load_schedule_8_summary(schedule8_path)
+
+        total_additions = meals_addback + penalties_addback + cca_additions
+        total_deductions = cca_claim
+        taxable_income = net_income + total_additions - total_deductions
+
         sch1_rows: list[tuple[str, str, int]] = [
-            ("300", "Net income per financial statements", net_income),
-            ("117", "50% of meals and entertainment", meals_addback),
-            ("311", "Penalties and fines (CRA)", penalties_addback),
-            ("400", "Net income for tax purposes", taxable_income),
+            ("A", "Net income (loss) per financial statements", net_income),
+            ("121", "Non-deductible meals and entertainment (50%)", meals_addback),
+            ("128", "Non-deductible fines and penalties", penalties_addback),
+            ("206", "Capital items expensed", cca_additions),
+            ("500", "Total additions", total_additions),
+            ("403", "Capital cost allowance (Schedule 8)", total_deductions),
+            ("510", "Total deductions", total_deductions),
+            ("C", "Net income (loss) for tax purposes", taxable_income),
         ]
 
         # Write outputs

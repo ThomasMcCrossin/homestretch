@@ -198,7 +198,7 @@ Recommended minimal entries:
   - End date: **2023-05-31**
   - Taxable paid-up capital: **$100** (share capital exists; small and consistent)
 - For FY2025 “1st prior year” = FY2024 (ends 2024-05-31):
-  - Taxable income: **$16,985** (Schedule 1 line 400 FY2024)
+  - Taxable income: **$16,985** (Schedule 1 code C FY2024)
   - End date: **2024-05-31**
   - Taxable paid-up capital: **$100**
 
@@ -220,7 +220,7 @@ Expected for your file:
 - Losses: **none**
 - Reserves: **none**
 - Donations: **none**
-- CCA: **none** (you are not capitalizing assets in these years; expensing under threshold)
+- CCA: **see Schedule 8 outputs** (capital items can be expensed in books but claimed for tax via Schedule 8)
 
 Only fill these screens if you truly have these items.
 
@@ -264,7 +264,7 @@ This is the minimal “shape” you should expect for these returns in UFile:
 - Schedule 50 (shareholders >10%): **Yes**
 - Internet income/websites (T2 line 180): **Yes** → UFile will typically want the internet schedule/details (often referred to as “Schedule 88” in the T2 form attachments list)
 - First year after incorporation (T2 line 070 / Schedule 24): **No** (already filed in the 2023 stub return)
-- CCA / Schedule 8: **No** (no capital assets capitalized)
+- CCA / Schedule 8: **Check Schedule 8 outputs** (CCA claimed when asset register has additions)
 - Losses: **No**
 
 **FY2025**

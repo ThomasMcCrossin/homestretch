@@ -52,7 +52,7 @@ Fix:
 ### Corporate history (prior-year carryforward)
 UFile’s “Corporate History” screen can require a minimal “1st prior year” row:
 - Prior year end date
-- Prior year taxable income (Schedule 1 line 400 of prior year)
+- Prior year taxable income (Schedule 1 code C of prior year)
 - Taxable paid-up capital (generally matches share capital for this file)
 
 The year fill guides include a ready-to-type “Corporate history carryforward” table.
@@ -66,12 +66,12 @@ The packet explicitly models these as “No”, with notes:
 - Loss carryforwards/carrybacks
 - Charitable donations
 - Reserves
-- CCA / depreciable property
+- CCA / depreciable property (check Schedule 8 outputs)
 - Non-depreciable capital property
 - Deferred income plans
 - Status change for the corporation
 
-If UFile forces a yes/no toggle on these screens, answer “No” and leave detail grids empty.
+If UFile forces a yes/no toggle on these screens, answer “No” and leave detail grids empty **unless** Schedule 8 / CCA is present in the packet.
 
 ## 3) Data entry rule that prevents most problems
 
@@ -81,4 +81,3 @@ Enter amounts on **detail lines**, not summary lines:
 - Revenue: enter `8000` (do not enter `8299`)
 - COGS: enter `8300/8320/8500` (let UFile derive `8518`)
 - Shareholder payable: use `2781` (if rejected, use `2780` as a fallback)
-

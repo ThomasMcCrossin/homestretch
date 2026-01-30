@@ -1,6 +1,6 @@
 {
   "meta": {
-    "schema_version": "1.1.0",
+    "schema_version": "1.2.0",
     "generated_at": "2026-01-30T21:16:47Z",
     "snapshot_source": "output/snapshots/20260130-221500/output/",
     "generator": "tools/build_packet_from_snapshot.py",

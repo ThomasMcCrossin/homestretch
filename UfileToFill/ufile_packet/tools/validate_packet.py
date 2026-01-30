@@ -71,19 +71,28 @@ def load_schedule_1_csv(path: Path) -> dict[str, int]:
     with path.open(newline="") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            line = (row.get("Line") or row.get("line") or "").strip()
-            if not line:
+            code = (row.get("Code") or row.get("Line") or row.get("line") or "").strip()
+            if not code:
                 continue
             amount_raw = (row.get("Amount") or row.get("amount") or "").strip()
             if amount_raw == "":
                 continue
-            out[line] = int(Decimal(amount_raw))
+            out[code] = int(Decimal(amount_raw))
     return out
 
 
 def compare_dicts(label: str, a: dict[str, int], b: dict[str, int]) -> list[str]:
+    def sort_key(code: str) -> tuple[int, object]:
+        if code == "A":
+            return (-2, 0)
+        if code == "C":
+            return (2, 0)
+        if code.isdigit():
+            return (0, int(code))
+        return (1, code)
+
     issues: list[str] = []
-    all_keys = sorted(set(a) | set(b), key=lambda x: int(x))
+    all_keys = sorted(set(a) | set(b), key=sort_key)
     for k in all_keys:
         if a.get(k) != b.get(k):
             issues.append(f"{label}: {k}: snapshot={a.get(k)} packet={b.get(k)}")
@@ -166,6 +175,19 @@ def main() -> int:
                         grip = year_screens.get("general_rate_income_pool", {}) if isinstance(year_screens, dict) else {}
                         if not isinstance(grip, dict) or "grip_end_prior_year" not in grip:
                             completeness.append(f"{fy}: eligible dividends portion > 0 but general_rate_income_pool is missing or incomplete.")
+
+            cca_screen = year_screens.get("capital_cost_allowance", {}) if isinstance(year_screens, dict) else {}
+            has_cca = cca_screen.get("has_cca") if isinstance(cca_screen, dict) else None
+            schedule_8 = year.get("schedule_8", {}) if isinstance(year, dict) else {}
+            classes = schedule_8.get("classes", {}) if isinstance(schedule_8, dict) else {}
+            if has_cca is True and not classes:
+                completeness.append(f"{fy}: capital_cost_allowance.has_cca is true but schedule_8 classes are missing/empty.")
+            if classes:
+                sch1 = year.get("schedule_1", {}) if isinstance(year, dict) else {}
+                if "206" not in sch1:
+                    completeness.append(f"{fy}: schedule_8 present but schedule_1 missing code 206 (capital items expensed).")
+                if "403" not in sch1:
+                    completeness.append(f"{fy}: schedule_8 present but schedule_1 missing code 403 (CCA claim).")
 
     for fy in ["FY2024", "FY2025"]:
         snap_100 = load_gifi_csv(snapshot_dir / f"gifi_schedule_100_{fy}.csv")

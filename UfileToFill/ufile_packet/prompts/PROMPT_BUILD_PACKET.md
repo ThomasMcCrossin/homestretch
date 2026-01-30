@@ -73,7 +73,7 @@ Before finalizing, verify:
 1. Total Assets (2599) = Total L+E (3640) for each year
 2. RE End = RE Start + NI - Dividends +/- Other
 3. Net Income (9999) = Revenue (8299) - Expenses (9368)
-4. Schedule 1 line 400 = line 300 + additions - deductions
+4. Schedule 1 code C = code A + additions - deductions
 5. All GIFI codes exist in standard CRA GIFI list
 
 ## DO NOT

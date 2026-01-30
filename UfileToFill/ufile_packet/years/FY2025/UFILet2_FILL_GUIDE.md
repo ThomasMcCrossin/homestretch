@@ -64,7 +64,7 @@
 | Field | Value | Note |
 |---|---|---|
 | 1st prior year end date | 2024-05-31 | UFile field: End date of prior tax year |
-| 1st prior year taxable income | 16,985 | UFile field: Taxable income (Schedule 1 line 400 of the prior year) |
+| 1st prior year taxable income | 16,985 | UFile field: Taxable income (Schedule 1 code C of the prior year) |
 | Eligible RDTOH at prior year-end | 0 | Usually $0 for your file unless you have refundable dividend tax on hand |
 | Non-eligible RDTOH at prior year-end | 0 |  |
 | Eligible dividend refund (prior year) | 0 |  |
@@ -78,7 +78,7 @@
 ## Net income (UFile screen)
 | Field | Value | Note |
 |---|---|---|
-| Net income as per financial statements | 30,557 | Should auto-fill from GIFI; otherwise enter from Schedule 1 line 300. |
+| Net income as per financial statements | 30,557 | Should auto-fill from GIFI; otherwise enter from Schedule 1 code A. |
 | Total sales of corporation during this taxation year | 230,907 | Use total revenue (sum of revenue lines; typically matches trade sales 8000). |
 | Total gross revenues | 230,907 | Usually same as total sales for your file. |
 
@@ -234,13 +234,13 @@ Dividends declared per retained earnings schedule (GIFI 3700). Confirm eligible 
 
 Unless you are designating eligible dividends, GRIP is typically $0 / not needed. If you mark any eligible dividends, you must complete this screen.
 
-## Other UFile screens (expected blank / N/A)
+## Other UFile screens (usually blank / check if applicable)
 | Screen | Has entries? | Note |
 |---|---|---|
 | Loss carryforwards / carrybacks | No | No losses to carry forward/back. |
 | Charitable donations | No | No charitable donations claimed. |
 | Reserves | No | No reserves claimed. |
-| Capital cost allowance (CCA) | No | No CCA claimed; assets were expensed under capitalization threshold. |
+| Capital cost allowance (CCA) | Check | Use Schedule 8 outputs; if CCA is claimed, mark Yes and enter class details. |
 | Non-depreciable capital property | No | No non-depreciable capital property. |
 | Deferred income plans | No | No deferred income plans. |
 | Status change for the corporation | No | No status change for the corporation. |
@@ -307,12 +307,16 @@ Unless you are designating eligible dividends, GRIP is typically $0 / not needed
 | 3849 | Retained earnings/deficit - End | 10,312 | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
 
 ## Schedule 1 (tax purposes)
-| Line | Description | Amount | Calculation |
+| Code | Description | Amount | Calculation |
 |---|---|---|---|
-| 117 | 50% of meals and entertainment | 204 | 408 * 50% = 204 |
-| 300 | Net income per financial statements | 30,557 |  |
-| 311 | Penalties and fines (CRA) | 274 |  |
-| 400 | Net income for tax purposes | 31,035 | 28349 + 204 + 274 = 28827 |
+| A | Net income (loss) per financial statements | 30,557 |  |
+| 121 | Non-deductible meals and entertainment (50%) | 204 | 408 * 50% = 204 |
+| 128 | Non-deductible fines and penalties | 274 |  |
+| 206 | Capital items expensed | 0 |  |
+| 500 | Total additions | 478 | 204 + 274 = 478 |
+| 403 | Capital cost allowance (Schedule 8) | 0 |  |
+| 510 | Total deductions | 0 |  |
+| C | Net income (loss) for tax purposes | 31,035 | 30557 + 478 - 0 = 31035 |
 
 ## High-signal yes/no answers
 | Question | Answer | Note |
@@ -320,4 +324,4 @@ Unless you are designating eligible dividends, GRIP is typically $0 / not needed
 | T2 line 070 (first year after incorporation) | No | 2023 stub T2 already filed as first-year after incorporation (Schedule 24). FY2025 should be No. |
 | T2 line 180 (internet income/websites) | Yes | Shopify sales present; likely Yes for internet income/websites (Schedule 88). Confirm store domains in UFile. |
 | T2 line 201 (book vs tax net income differs) | Yes | Book vs tax differs due to meals 50% add-back and CRA penalties; Schedule 1 is attached. |
-| CCA required / capital assets | No | No capital assets capitalized in these years (below capitalization threshold; expensed). |
+| CCA required / capital assets | Check | CCA is determined by the asset register + Schedule 8 (tax-only layer). |

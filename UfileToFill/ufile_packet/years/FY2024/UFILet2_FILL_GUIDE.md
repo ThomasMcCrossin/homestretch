@@ -63,7 +63,7 @@
 | Field | Value | Note |
 |---|---|---|
 | 1st prior year end date | 2023-05-31 | UFile field: End date of prior tax year |
-| 1st prior year taxable income | 0 | UFile field: Taxable income (Schedule 1 line 400 of the prior year) |
+| 1st prior year taxable income | 0 | UFile field: Taxable income (Schedule 1 code C of the prior year) |
 | Eligible RDTOH at prior year-end | 0 | Usually $0 for your file unless you have refundable dividend tax on hand |
 | Non-eligible RDTOH at prior year-end | 0 |  |
 | Eligible dividend refund (prior year) | 0 |  |
@@ -77,7 +77,7 @@
 ## Net income (UFile screen)
 | Field | Value | Note |
 |---|---|---|
-| Net income as per financial statements | 16,655 | Should auto-fill from GIFI; otherwise enter from Schedule 1 line 300. |
+| Net income as per financial statements | 16,655 | Should auto-fill from GIFI; otherwise enter from Schedule 1 code A. |
 | Total sales of corporation during this taxation year | 181,235 | Use total revenue (sum of revenue lines; typically matches trade sales 8000). |
 | Total gross revenues | 181,235 | Usually same as total sales for your file. |
 
@@ -223,13 +223,13 @@ There are transactions with shareholders (reimbursements/amounts due). For T2 di
 
 No eligible dividends expected; leave GRIP blank/zero unless UFile requires it.
 
-## Other UFile screens (expected blank / N/A)
+## Other UFile screens (usually blank / check if applicable)
 | Screen | Has entries? | Note |
 |---|---|---|
 | Loss carryforwards / carrybacks | No | No losses to carry forward/back. |
 | Charitable donations | No | No charitable donations claimed. |
 | Reserves | No | No reserves claimed. |
-| Capital cost allowance (CCA) | No | No CCA claimed; assets were expensed under capitalization threshold. |
+| Capital cost allowance (CCA) | Check | Use Schedule 8 outputs; if CCA is claimed, mark Yes and enter class details. |
 | Non-depreciable capital property | No | No non-depreciable capital property. |
 | Deferred income plans | No | No deferred income plans. |
 | Status change for the corporation | No | No status change for the corporation. |
@@ -294,12 +294,16 @@ No eligible dividends expected; leave GRIP blank/zero unless UFile requires it.
 | 3849 | Retained earnings/deficit - End | 16,656 | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
 
 ## Schedule 1 (tax purposes)
-| Line | Description | Amount | Calculation |
+| Code | Description | Amount | Calculation |
 |---|---|---|---|
-| 117 | 50% of meals and entertainment | 259 | 518 * 50% = 259 |
-| 300 | Net income per financial statements | 16,655 |  |
-| 311 | Penalties and fines (CRA) | 71 |  |
-| 400 | Net income for tax purposes | 16,985 | 16655 + 259 + 71 = 16985 |
+| A | Net income (loss) per financial statements | 16,655 |  |
+| 121 | Non-deductible meals and entertainment (50%) | 259 | 518 * 50% = 259 |
+| 128 | Non-deductible fines and penalties | 71 |  |
+| 206 | Capital items expensed | 0 |  |
+| 500 | Total additions | 330 | 259 + 71 = 330 |
+| 403 | Capital cost allowance (Schedule 8) | 0 |  |
+| 510 | Total deductions | 0 |  |
+| C | Net income (loss) for tax purposes | 16,985 | 16655 + 330 - 0 = 16985 |
 
 ## High-signal yes/no answers
 | Question | Answer | Note |
@@ -307,4 +311,4 @@ No eligible dividends expected; leave GRIP blank/zero unless UFile requires it.
 | T2 line 070 (first year after incorporation) | No | 2023 stub T2 (2022-12-08 → 2023-05-31) already answered Incorporation=Yes and filed Schedule 24; FY2024 should be No. |
 | T2 line 180 (internet income/websites) | Yes | Shopify sales present; likely Yes for internet income/websites (Schedule 88). Confirm store domains in UFile. |
 | T2 line 201 (book vs tax net income differs) | Yes | Book vs tax differs due to meals 50% add-back and CRA penalties; Schedule 1 is attached. |
-| CCA required / capital assets | No | No capital assets capitalized in these years (below capitalization threshold; expensed). |
+| CCA required / capital assets | Check | CCA is determined by the asset register + Schedule 8 (tax-only layer). |

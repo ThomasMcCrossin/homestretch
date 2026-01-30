@@ -27,7 +27,7 @@ For each fiscal year, verify:
 - [ ] Assets (2599) = Liabilities + Equity (3640)
 - [ ] Retained Earnings flow: Start + NI - Dividends +/- Other = End
 - [ ] Net Income: Revenue - Expenses = Net Income
-- [ ] Schedule 1: Line 300 + Add-backs - Deductions = Line 400
+- [ ] Schedule 1: Code A + Additions - Deductions = Code C
 - [ ] Gross profit: Revenue - COGS = Gross Profit
 
 ### B. Year-over-Year Consistency

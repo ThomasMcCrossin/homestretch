@@ -69,7 +69,7 @@ The 2023 filed return was a **nil return** for the stub period (2022-12-08 to 20
 
 | Field | 2023 Filed Value |
 |-------|------------------|
-| Net income (line 300) | $0 |
+| Net income (Schedule 1 code A) | $0 |
 | Taxable income (line 360) | $0 |
 | Part I tax payable (line 700) | $0 |
 | Business limit (line 410) | $239,726 |
@@ -119,7 +119,7 @@ The 2023 filed return was a **nil return** for the stub period (2022-12-08 to 20
 | First year after incorporation? (T2 line 070) | Yes | No (FY2024/FY2025) | 2023 stub already filed as first-time filer (Schedule 24) |
 | Internet income (line 180)? | No | Yes (implied by Shopify sales) | New activity |
 | Schedule 1 differences (line 201)? | No | Yes (meals add-back, penalties) | Active year has adjustments |
-| Net income (line 300) | $0 | $16,655 (FY2024), $28,349 (FY2025) | Expected: active operations |
+| Net income (Schedule 1 code A) | $0 | $16,655 (FY2024), $28,349 (FY2025) | Expected: active operations |
 | Taxable income (line 360) | $0 | $16,985 (FY2024), $28,827 (FY2025) | Expected: active operations |
 | Schedule 100/125 attached? | No | Yes | Expected: active year requires GIFI |
 | Business limit (line 410) | $239,726 (prorated 175 days) | $500,000 (full year) | Expected: full year limit |

@@ -208,7 +208,7 @@ The mechanical pipeline is strong (bank coverage, deterministic imports, reprodu
 ## 5) Low‑Risk / Mostly Clean Items
 
 - Wave bill payment matching residuals are immaterial (net ~**$‑5.18**) (`output/readiness_report.md`).
-- No fixed‑asset balances appear on Schedule 100; CCA/depreciation is likely not required for these FYs (`output/readiness_report.md`, `output/trial_balance_FY2024.csv`, `output/trial_balance_FY2025.csv`).
+- No fixed‑asset balances appear on Schedule 100, but CCA must still be assessed via the tax asset register (Schedule 8) because capital items can be expensed in books (`overrides/cca_assets.yml`, `output/schedule_8_FY2024.csv`, `output/schedule_8_FY2025.csv`).
 - Cash float logic is explicit and reconciles:
   - float withdrawals total **$2,624.50**
   - float returned via cash deposits **$2,324.50**
