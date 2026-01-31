@@ -859,7 +859,35 @@ def build_year_guide(packet: dict, fy: str) -> str:
             ],
         )
     )
+    parts.append(
+        "Note: If UFile auto-populates Schedule 1 line 403 from Schedule 8, do **not** manually enter 403 in the Schedule 1 grid."
+    )
     parts.append("")
+
+    book_fixed_assets = year.get("book_fixed_assets", []) if isinstance(year.get("book_fixed_assets"), list) else []
+    if book_fixed_assets:
+        parts.append("## Fixed assets (book)")
+        rows = []
+        for asset in book_fixed_assets:
+            rows.append(
+                [
+                    str(asset.get("asset_id") or ""),
+                    str(asset.get("description") or ""),
+                    str(asset.get("book_start_date") or ""),
+                    money(int(asset.get("total_cost_dollars") or 0)),
+                    money(int(asset.get("reclass_total_dollars") or 0)),
+                    money(int(asset.get("amortization_dollars") or 0)),
+                    str(asset.get("book_depr_policy") or ""),
+                    str(asset.get("component_breakdown") or ""),
+                ]
+            )
+        parts.append(
+            md_table(
+                ["Asset ID", "Description", "Book start", "Cost", "Reclass", "Amortization", "Policy", "Components"],
+                rows,
+            )
+        )
+        parts.append("")
 
     schedule_8 = year.get("schedule_8", {}) if isinstance(year.get("schedule_8"), dict) else {}
     if schedule_8 and isinstance(schedule_8.get("classes"), dict) and schedule_8["classes"]:
@@ -910,6 +938,7 @@ def build_year_guide(packet: dict, fy: str) -> str:
         ("internet_income_line_180", "T2 line 180 (internet income/websites)"),
         ("net_income_diff_line_201", "T2 line 201 (book vs tax net income differs)"),
         ("cca_required", "CCA required / capital assets"),
+        ("book_fixed_assets_present", "Book fixed assets present"),
     ]
     rows = []
     for k, label in keys:

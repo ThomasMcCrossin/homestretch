@@ -4,208 +4,32 @@ from __future__ import annotations
 
 import argparse
 import csv
-from dataclasses import dataclass
 from datetime import date
-from decimal import Decimal, ROUND_HALF_UP
+from decimal import Decimal
 from pathlib import Path
 
-from _lib import DB_PATH, PROJECT_ROOT, connect_db, fiscal_years_from_manifest, load_manifest, load_yaml
+from _lib import DB_PATH, PROJECT_ROOT, connect_db, fiscal_years_from_manifest, load_manifest
+from cca_assets_lib import (
+    CCA_CLASS_DESC,
+    CCA_CLASS_RATES,
+    ResolvedAsset,
+    days_in_fy,
+    fy_for_date,
+    half_year_applies,
+    load_assets,
+    resolve_component,
+    round_cents_to_dollar,
+    round_to_dollar,
+)
 
 
 ASSET_REGISTER_PATH = PROJECT_ROOT / "overrides" / "cca_assets.yml"
-
-
-@dataclass(frozen=True)
-class AssetComponent:
-    source_type: str
-    wave_bill_id: int | None
-    account_code: str | None
-    amount_cents: int
-    notes: str | None
-
-
-@dataclass(frozen=True)
-class Asset:
-    asset_id: str
-    description: str
-    cca_class: str
-    available_for_use_date: str
-    source_components: list[AssetComponent]
-    claim_percent_of_max: Decimal
-    half_year_rule: bool
-    notes: str | None
-
-
-@dataclass(frozen=True)
-class ResolvedComponent:
-    source_type: str
-    wave_bill_id: int | None
-    account_code: str | None
-    amount_cents: int
-    invoice_date: str | None
-    vendor_raw: str | None
-    allocation_total_cents: int | None
-    notes: str | None
-
-
-@dataclass(frozen=True)
-class ResolvedAsset:
-    asset: Asset
-    fy: str
-    total_cost_cents: int
-    resolved_components: list[ResolvedComponent]
-
-
-def round_to_dollar(amount: Decimal) -> int:
-    return int(amount.quantize(Decimal("1"), rounding=ROUND_HALF_UP))
-
-
-def round_cents_to_dollar(cents: int) -> int:
-    return round_to_dollar(Decimal(int(cents)) / Decimal(100))
-
-
-def load_assets(path: Path) -> tuple[dict, list[Asset]]:
-    data = load_yaml(path)
-    if not isinstance(data.get("assets"), list):
-        raise SystemExit("overrides/cca_assets.yml must include an assets list")
-
-    policy = data.get("policy") if isinstance(data.get("policy"), dict) else {}
-    default_claim = Decimal(str(policy.get("default_claim_percent_of_max", "1.0")))
-    default_half_year = bool(policy.get("default_half_year_rule", True))
-
-    assets: list[Asset] = []
-    seen_ids: set[str] = set()
-    for raw in data["assets"]:
-        if not isinstance(raw, dict):
-            continue
-        asset_id = str(raw.get("asset_id") or "").strip()
-        if not asset_id:
-            raise SystemExit("Every CCA asset must have asset_id")
-        if asset_id in seen_ids:
-            raise SystemExit(f"Duplicate asset_id in CCA register: {asset_id}")
-        seen_ids.add(asset_id)
-
-        desc = str(raw.get("description") or "").strip()
-        if not desc:
-            raise SystemExit(f"CCA asset {asset_id} missing description")
-
-        cca_class_raw = raw.get("cca_class")
-        if cca_class_raw is None:
-            raise SystemExit(f"CCA asset {asset_id} missing cca_class")
-        cca_class = str(cca_class_raw).strip()
-
-        afu = str(raw.get("available_for_use_date") or "").strip()
-        if not afu:
-            raise SystemExit(f"CCA asset {asset_id} missing available_for_use_date")
-
-        comp_list = raw.get("source_components") or []
-        if not isinstance(comp_list, list) or not comp_list:
-            raise SystemExit(f"CCA asset {asset_id} missing source_components")
-
-        claim_percent = Decimal(str(raw.get("claim_percent_of_max", default_claim)))
-        half_year_rule = bool(raw.get("half_year_rule", default_half_year))
-
-        comps: list[AssetComponent] = []
-        for comp in comp_list:
-            if not isinstance(comp, dict):
-                continue
-            source_type = str(comp.get("source_type") or "").strip()
-            if not source_type:
-                raise SystemExit(f"CCA asset {asset_id} has component missing source_type")
-            wave_bill_id = comp.get("wave_bill_id")
-            account_code = str(comp.get("account_code") or "").strip() or None
-            amount_cents = int(comp.get("amount_cents") or 0)
-            notes = str(comp.get("notes") or "").strip() or None
-            comps.append(
-                AssetComponent(
-                    source_type=source_type,
-                    wave_bill_id=int(wave_bill_id) if wave_bill_id is not None else None,
-                    account_code=account_code,
-                    amount_cents=amount_cents,
-                    notes=notes,
-                )
-            )
-
-        assets.append(
-            Asset(
-                asset_id=asset_id,
-                description=desc,
-                cca_class=cca_class,
-                available_for_use_date=afu,
-                source_components=comps,
-                claim_percent_of_max=claim_percent,
-                half_year_rule=half_year_rule,
-                notes=str(raw.get("notes") or "").strip() or None,
-            )
-        )
-
-    return data, assets
-
-
-def resolve_component(conn, asset_id: str, comp: AssetComponent) -> ResolvedComponent:
-    if comp.source_type == "wave_bill_allocation":
-        if comp.wave_bill_id is None or comp.account_code is None:
-            raise SystemExit(f"CCA asset {asset_id} wave_bill_allocation requires wave_bill_id + account_code")
-        bill = conn.execute(
-            "SELECT id, invoice_date, vendor_raw, total_cents, tax_cents, net_cents FROM wave_bills WHERE id = ?",
-            (int(comp.wave_bill_id),),
-        ).fetchone()
-        if not bill:
-            raise SystemExit(f"CCA asset {asset_id}: missing wave_bill_id={comp.wave_bill_id}")
-
-        alloc_row = conn.execute(
-            "SELECT SUM(CAST(amount_cents AS INTEGER)) AS total_cents FROM bill_allocations WHERE wave_bill_id = ? AND account_code = ?",
-            (int(comp.wave_bill_id), comp.account_code),
-        ).fetchone()
-        alloc_total = int(alloc_row["total_cents"] or 0)
-        if alloc_total < comp.amount_cents:
-            raise SystemExit(
-                "CCA asset {asset_id}: wave_bill_allocation mismatch for bill {bill_id} account {account} "
-                "(expected >= {expected} cents, found {found} cents).".format(
-                    asset_id=asset_id,
-                    bill_id=comp.wave_bill_id,
-                    account=comp.account_code,
-                    expected=comp.amount_cents,
-                    found=alloc_total,
-                )
-            )
-
-        return ResolvedComponent(
-            source_type=comp.source_type,
-            wave_bill_id=comp.wave_bill_id,
-            account_code=comp.account_code,
-            amount_cents=comp.amount_cents,
-            invoice_date=str(bill["invoice_date"] or ""),
-            vendor_raw=str(bill["vendor_raw"] or ""),
-            allocation_total_cents=alloc_total,
-            notes=comp.notes,
-        )
-
-    raise SystemExit(f"CCA asset {asset_id}: unsupported source_type {comp.source_type}")
-
-
-def fy_for_date(fys, dt: date) -> str:
-    for fy in fys:
-        start = date.fromisoformat(fy.start_date)
-        end = date.fromisoformat(fy.end_date)
-        if start <= dt <= end:
-            return fy.fy
-    raise SystemExit(f"Date {dt.isoformat()} does not fall within any fiscal year in manifest")
 
 
 def build_schedule_8(
     resolved_assets: list[ResolvedAsset],
     fys,
 ) -> dict[str, dict[str, dict[str, int | str | float]]]:
-    class_rates = {
-        "8": 0.20,
-        "50": 0.55,
-    }
-    class_desc = {
-        "8": "General equipment",
-        "50": "Computer hardware and systems software",
-    }
-
     assets_by_fy: dict[str, list[ResolvedAsset]] = {}
     for asset in resolved_assets:
         assets_by_fy.setdefault(asset.fy, []).append(asset)
@@ -214,6 +38,7 @@ def build_schedule_8(
     opening_ucc_by_class: dict[str, int] = {}
 
     for fy in fys:
+        days, denom, proration_factor = days_in_fy(fy)
         fy_assets = assets_by_fy.get(fy.fy, [])
         additions_by_class: dict[str, int] = {}
         half_year_additions_by_class: dict[str, Decimal] = {}
@@ -222,7 +47,8 @@ def build_schedule_8(
         for asset in fy_assets:
             class_key = str(asset.asset.cca_class)
             additions_by_class[class_key] = additions_by_class.get(class_key, 0) + asset.total_cost_cents
-            factor = Decimal("0.5") if asset.asset.half_year_rule else Decimal("1.0")
+            apply_half_year = asset.half_year_applied
+            factor = Decimal("0.5") if apply_half_year else Decimal("1.0")
             half_year_additions_by_class[class_key] = half_year_additions_by_class.get(class_key, Decimal("0")) + (
                 Decimal(asset.total_cost_cents) / Decimal(100)
             ) * factor
@@ -236,28 +62,31 @@ def build_schedule_8(
             else:
                 claim_percent_by_class[class_key] = asset.asset.claim_percent_of_max
 
-        classes = sorted(set(opening_ucc_by_class) | set(additions_by_class), key=lambda x: int(x) if str(x).isdigit() else 10**9)
+        classes = sorted(
+            set(opening_ucc_by_class) | set(additions_by_class),
+            key=lambda x: int(x) if str(x).isdigit() else 10**9,
+        )
         fy_rows: dict[str, dict[str, int | str | float]] = {}
         closing_ucc_by_class: dict[str, int] = {}
 
         for class_key in classes:
-            if class_key not in class_rates:
+            if class_key not in CCA_CLASS_RATES:
                 raise SystemExit(f"Unknown CCA class rate for class {class_key}. Add it to the class_rates map.")
             opening = opening_ucc_by_class.get(class_key, 0)
             additions_cents = additions_by_class.get(class_key, 0)
             additions_dollars = round_cents_to_dollar(additions_cents)
             half_year_additions = half_year_additions_by_class.get(class_key, Decimal("0"))
             base = Decimal(opening) + half_year_additions
-            rate = Decimal(str(class_rates[class_key]))
+            rate = CCA_CLASS_RATES[class_key]
             claim_percent = claim_percent_by_class.get(class_key, Decimal("1.0"))
 
-            cca_claim = round_to_dollar(base * rate * claim_percent)
+            cca_claim = round_to_dollar(base * rate * claim_percent * proration_factor)
             closing = opening + additions_dollars - cca_claim
 
             fy_rows[class_key] = {
                 "class": class_key,
-                "description": class_desc.get(class_key, ""),
-                "rate": float(class_rates[class_key]),
+                "description": CCA_CLASS_DESC.get(class_key, ""),
+                "rate": float(CCA_CLASS_RATES[class_key]),
                 "opening_ucc": int(opening),
                 "additions": int(additions_dollars),
                 "dispositions": 0,
@@ -267,6 +96,11 @@ def build_schedule_8(
             }
 
             closing_ucc_by_class[class_key] = closing
+
+        if fy_assets and not fy_rows:
+            raise SystemExit(
+                f"Schedule 8 build failed for {fy.fy}: assets present ({len(fy_assets)}) but no class rows were produced."
+            )
 
         schedule_by_fy[fy.fy] = fy_rows
         opening_ucc_by_class = closing_ucc_by_class
@@ -322,6 +156,7 @@ def write_resolved_assets_csv(resolved: list[ResolvedAsset], path: Path) -> None
                 "total_cost_dollars",
                 "claim_percent_of_max",
                 "half_year_rule",
+                "half_year_applied",
                 "source_breakdown",
             ]
         )
@@ -353,6 +188,7 @@ def write_resolved_assets_csv(resolved: list[ResolvedAsset], path: Path) -> None
                     round_cents_to_dollar(ra.total_cost_cents),
                     str(ra.asset.claim_percent_of_max),
                     "yes" if ra.asset.half_year_rule else "no",
+                    "yes" if ra.half_year_applied else "no",
                     " | ".join(parts),
                 ]
             )
@@ -385,6 +221,7 @@ def main() -> int:
 
             dt = date.fromisoformat(asset.available_for_use_date)
             fy = fy_for_date(fys, dt)
+            apply_half_year = half_year_applies(asset, dt)
 
             resolved.append(
                 ResolvedAsset(
@@ -392,6 +229,7 @@ def main() -> int:
                     fy=fy,
                     total_cost_cents=total_cost,
                     resolved_components=resolved_components,
+                    half_year_applied=apply_half_year,
                 )
             )
     finally:

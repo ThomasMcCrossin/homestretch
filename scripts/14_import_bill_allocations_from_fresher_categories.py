@@ -170,6 +170,12 @@ def main() -> int:
     ap.add_argument("--end-date", default=None, help="Inclusive YYYY-MM-DD (default: manifest FY max end).")
     ap.add_argument("--all", action="store_true", help="Import all rows (ignore date filter).")
     ap.add_argument(
+        "--wave-bill-id",
+        action="append",
+        dest="wave_bill_ids",
+        help="Limit import to specific wave_bill_id values (repeatable).",
+    )
+    ap.add_argument(
         "--reset",
         action="store_true",
         help=f"Delete existing allocations created by this importer (method={METHOD_ALLOC}/{METHOD_TAX_ITC}) before import.",
@@ -219,6 +225,11 @@ def main() -> int:
 
     alloc_rows, sums, invoice_dates = read_allocations_csv(csv_path)
     bill_ids = sorted(sums.keys())
+    if args.wave_bill_ids:
+        allowed = {int(x) for x in args.wave_bill_ids if str(x).strip()}
+        bill_ids = [bid for bid in bill_ids if bid in allowed]
+        if not bill_ids:
+            raise SystemExit("No matching wave_bill_ids found in Fresher categories CSV.")
 
     conn = connect_db(args.db)
     stats = ImportStats(csv_rows_read=len(alloc_rows), csv_distinct_bills=len(bill_ids))

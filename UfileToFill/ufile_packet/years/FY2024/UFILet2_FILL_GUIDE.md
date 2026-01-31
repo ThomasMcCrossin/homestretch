@@ -305,6 +305,8 @@ No eligible dividends expected; leave GRIP blank/zero unless UFile requires it.
 | 510 | Total deductions | 0 |  |
 | C | Net income (loss) for tax purposes | 16,985 | 16655 + 330 - 0 = 16985 |
 
+Note: If UFile auto-populates Schedule 1 line 403 from Schedule 8, do **not** manually enter 403 in the Schedule 1 grid.
+
 ## High-signal yes/no answers
 | Question | Answer | Note |
 |---|---|---|

@@ -74,3 +74,15 @@ Everything else should be generated from those files.
 
 - Vendor profiles are only as good as the curlys-books sample size. `output/vendor_profiles.md` always reports sample counts + sample date ranges (so you can judge reliability).
 - Exclusions: because many Wave ledger descriptions omit the invoice number, prefer excluding by `source_row` (stable row index in the CSV as long as the sha256 stays the same).
+
+## Option 1: Book fixed assets overlay (capitalized in books/GIFI)
+
+Run order (FY2024/FY2025):
+1) `python3 scripts/91b_build_cca_schedule_8.py`
+2) `python3 scripts/91c_build_book_fixed_asset_overlay.py`
+3) `python3 scripts/91_build_t2_schedule_exports.py --book-fixed-assets overlay`
+4) `python3 UfileToFill/ufile_packet/tools/build_packet_from_snapshot.py --snapshot output/snapshots/<stamp>`
+
+Mode toggle:
+- `--book-fixed-assets off` (default) keeps Option 2 behavior (tax-only CCA; capital items remain expensed in books)
+- `--book-fixed-assets overlay` applies the book fixed-asset overlay (Option 1)

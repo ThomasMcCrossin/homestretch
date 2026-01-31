@@ -3,15 +3,17 @@ GIFI_Code,Description,Amount
 1121,Inventory of goods for sale,10015
 1301,Due from individual shareholder(s),2000
 1484,Prepaid expenses,1490
-2599,Total assets,25977
+1740,"Machinery, equipment, furniture and fixtures",2870
+1741,Accum amort - machinery/equip/furn/fixtures,-1368
+2599,Total assets,27479
 2781,Due to individual shareholder(s),5497
 2680,Taxes payable,2663
 2620,Amounts payable and accrued liabilities,7405
 3499,Total liabilities,15565
 3500,Common shares,100
-3600,Retained earnings / deficit,10312
-3620,Total shareholder equity,10412
-3640,Total liabilities and shareholder equity,25977
+3600,Retained earnings / deficit,11814
+3620,Total shareholder equity,11914
+3640,Total liabilities and shareholder equity,27479
 8000,Trade sales of goods and services,230907
 8299,Total revenue,230907
 8518,Cost of sales,110284
@@ -19,9 +21,10 @@ GIFI_Code,Description,Amount
 8520,Advertising and promotion,798
 8523,Meals and entertainment,408
 8622,Employers portion of employee benefits,3610
+8670,Amortization of tangible assets,1038
 8690,Insurance,1951
-8710,Interest and bank charges,3928
-8810,Office expenses,3444
+8710,Interest and bank charges,3371
+8810,Office expenses,2801
 8813,Data processing,2915
 8860,Professional fees,353
 8911,Real estate rental,7137
@@ -31,13 +34,13 @@ GIFI_Code,Description,Amount
 9131,Small tools,479
 9225,Telephone and telecommunications,465
 9270,Other expenses,293
-9275,"Delivery, freight and express",116
+9275,"Delivery, freight and express",96
 9281,Vehicle expenses,4038
-9367,Total operating expenses,90066
-9368,Total expenses,200350
-9999,Net income / loss after taxes/extraord item,30557
-3660,Retained earnings / deficit - start,16656
-3680,Net income / loss,30557
+9367,Total operating expenses,89884
+9368,Total expenses,200168
+9999,Net income / loss after taxes/extraord item,30739
+3660,Retained earnings / deficit - start,17976
+3680,Net income / loss,30739
 3700,Dividends declared,36900
 3740,Other items affecting retained earnings (rounding),-1
-3849,Retained earnings / deficit - end,10312
+3849,Retained earnings / deficit - end,11814

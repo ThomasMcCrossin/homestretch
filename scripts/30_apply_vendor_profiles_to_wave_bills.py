@@ -304,6 +304,8 @@ def main() -> int:
                         invoice_number=invoice_number,
                         vendor_raw=vendor_raw,
                     ):
+                        if args.reset:
+                            bill_ids_to_reset.append(wave_bill_id)
                         skipped_rows.append(
                             {
                                 "fy": fy.fy,

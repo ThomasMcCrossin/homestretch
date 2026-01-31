@@ -94,6 +94,40 @@ def load_schedule_8_summary(path: Path) -> tuple[int, int, int]:
     return additions_total, cca_total, class_rows
 
 
+def load_book_overlay_summary(path: Path) -> dict[str, dict[str, int]]:
+    if not path.exists():
+        return {}
+    rows = list(csv.DictReader(path.open("r", encoding="utf-8", newline="")))
+    out: dict[str, dict[str, int]] = {}
+    for r in rows:
+        fy = str(r.get("fiscal_year") or "").strip()
+        if not fy:
+            continue
+        out[fy] = {
+            "capitalized_additions_dollars": int(r.get("capitalized_additions_dollars") or 0),
+            "expensed_additions_dollars": int(r.get("expensed_additions_dollars") or 0),
+            "book_amortization_dollars": int(r.get("book_amortization_dollars") or 0),
+            "capitalized_asset_count": int(r.get("capitalized_asset_count") or 0),
+            "expensed_asset_count": int(r.get("expensed_asset_count") or 0),
+        }
+    return out
+
+
+def load_book_overlay_lines(path: Path) -> list[dict[str, str | int]]:
+    if not path.exists():
+        return []
+    rows = list(csv.DictReader(path.open("r", encoding="utf-8", newline="")))
+    out: list[dict[str, str | int]] = []
+    for r in rows:
+        gifi_code = str(r.get("gifi_code") or r.get("GIFI_Code") or "").strip()
+        entry_type = str(r.get("entry_type") or "").strip()
+        net_cents = int(r.get("net_cents") or 0)
+        if not gifi_code:
+            continue
+        out.append({"gifi_code": gifi_code, "entry_type": entry_type, "net_cents": net_cents})
+    return out
+
+
 def load_gifi_descriptions() -> dict[str, str]:
     """
     Load CRA GIFI code descriptions from the UFile copy/paste reference lists.
@@ -148,6 +182,12 @@ def dividends_cents_from_tb(tb: list[TbLine]) -> int:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out-dir", type=Path, default=PROJECT_ROOT / "output")
+    ap.add_argument(
+        "--book-fixed-assets",
+        choices=["off", "overlay"],
+        default="off",
+        help="Apply book fixed-asset overlay (Option 1). Requires book_fixed_asset_overlay_* outputs.",
+    )
     args = ap.parse_args()
 
     gifi_desc = load_gifi_descriptions()
@@ -158,6 +198,15 @@ def main() -> int:
         raise SystemExit("No fiscal_years found in manifest/sources.yml")
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
+
+    book_overlay_summary: dict[str, dict[str, int]] = {}
+    if args.book_fixed_assets == "overlay":
+        summary_path = args.out_dir / "book_fixed_asset_overlay_summary.csv"
+        book_overlay_summary = load_book_overlay_summary(summary_path)
+        if not book_overlay_summary:
+            raise SystemExit(
+                f"Missing or empty {summary_path}. Run: python3 scripts/91c_build_book_fixed_asset_overlay.py"
+            )
 
     retained_end_by_fy: dict[str, int] = {}
     retained_start_by_fy: dict[str, int] = {}
@@ -174,6 +223,24 @@ def main() -> int:
 
         tb = load_tb(tb_path)
         gifi_net = load_gifi_totals(gifi_path)
+
+        overlay_lines: list[dict[str, str | int]] = []
+        overlay_asset_codes: set[str] = set()
+        if args.book_fixed_assets == "overlay":
+            overlay_path = args.out_dir / f"book_fixed_asset_overlay_{fy.fy}.csv"
+            if not overlay_path.exists():
+                raise SystemExit(
+                    f"Missing {overlay_path}. Run: python3 scripts/91c_build_book_fixed_asset_overlay.py"
+                )
+            overlay_lines = load_book_overlay_lines(overlay_path)
+            for line in overlay_lines:
+                gifi_code = str(line.get("gifi_code") or "").strip()
+                if not gifi_code:
+                    continue
+                gifi_net[gifi_code] = int(gifi_net.get(gifi_code, 0)) + int(line.get("net_cents") or 0)
+                entry_type = str(line.get("entry_type") or "").strip()
+                if entry_type in ("asset_balance", "accum_amort_balance"):
+                    overlay_asset_codes.add(gifi_code)
 
         # Net income (exact cents)
         net_income_cents = net_income_cents_from_tb(tb)
@@ -193,7 +260,14 @@ def main() -> int:
             if amt != 0:
                 other_assets_by_code[code] = amt
 
-        total_assets = cash + inv + due_from_sh + sum(other_assets_by_code.values())
+        fixed_assets_by_code: dict[str, int] = {}
+        for code in sorted(overlay_asset_codes, key=lambda x: int(x) if x.isdigit() else 10**9):
+            cents = int(gifi_net.get(code, 0))
+            amt = round_cents_to_dollar(cents)
+            if amt != 0:
+                fixed_assets_by_code[code] = amt
+
+        total_assets = cash + inv + due_from_sh + sum(other_assets_by_code.values()) + sum(fixed_assets_by_code.values())
 
         payables = round_cents_to_dollar(abs(int(gifi_net.get("2620", 0))))
         taxes = round_cents_to_dollar(abs(int(gifi_net.get("2680", 0))))
@@ -228,6 +302,8 @@ def main() -> int:
             s100_rows.append(("1301", desc("1301", gifi_desc=gifi_desc), due_from_sh))
         for code in sorted(other_assets_by_code.keys(), key=lambda x: int(x)):
             s100_rows.append((code, desc(code, gifi_desc=gifi_desc), other_assets_by_code[code]))
+        for code in sorted(fixed_assets_by_code.keys(), key=lambda x: int(x) if x.isdigit() else 10**9):
+            s100_rows.append((code, desc(code, gifi_desc=gifi_desc), fixed_assets_by_code[code]))
         s100_rows.append(("2599", desc("2599", gifi_desc=gifi_desc), total_assets))
 
         if due_to_sh:
@@ -282,6 +358,7 @@ def main() -> int:
             "9368",
             "9999",
         }
+        skip_codes.update(fixed_assets_by_code.keys())
         expense_codes = sorted(
             [code for code, cents in gifi_net.items() if code not in skip_codes and int(cents) != 0],
             key=lambda c: int(c) if c.isdigit() else 10**9,
@@ -341,20 +418,34 @@ def main() -> int:
         schedule8_path = args.out_dir / f"schedule_8_{fy.fy}.csv"
         cca_additions, cca_claim, _ = load_schedule_8_summary(schedule8_path)
 
-        total_additions = meals_addback + penalties_addback + cca_additions
+        expensed_additions = cca_additions
+        book_amortization = 0
+        if args.book_fixed_assets == "overlay":
+            summary = book_overlay_summary.get(fy.fy, {})
+            expensed_additions = int(summary.get("expensed_additions_dollars") or 0)
+            book_amortization = int(summary.get("book_amortization_dollars") or 0)
+
+        total_additions = meals_addback + penalties_addback + expensed_additions + book_amortization
         total_deductions = cca_claim
         taxable_income = net_income + total_additions - total_deductions
 
         sch1_rows: list[tuple[str, str, int]] = [
             ("A", "Net income (loss) per financial statements", net_income),
-            ("121", "Non-deductible meals and entertainment (50%)", meals_addback),
-            ("128", "Non-deductible fines and penalties", penalties_addback),
-            ("206", "Capital items expensed", cca_additions),
-            ("500", "Total additions", total_additions),
-            ("403", "Capital cost allowance (Schedule 8)", total_deductions),
-            ("510", "Total deductions", total_deductions),
-            ("C", "Net income (loss) for tax purposes", taxable_income),
         ]
+        if book_amortization:
+            sch1_rows.append(("104", "Accounting amortization", book_amortization))
+
+        sch1_rows.extend(
+            [
+                ("121", "Non-deductible meals and entertainment (50%)", meals_addback),
+                ("128", "Non-deductible fines and penalties", penalties_addback),
+                ("206", "Capital items expensed", expensed_additions),
+                ("500", "Total additions", total_additions),
+                ("403", "Capital cost allowance (Schedule 8)", total_deductions),
+                ("510", "Total deductions", total_deductions),
+                ("C", "Net income (loss) for tax purposes", taxable_income),
+            ]
+        )
 
         # Write outputs
         write_gifi_csv(s100_rows, args.out_dir / f"gifi_schedule_100_{fy.fy}.csv")

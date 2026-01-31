@@ -8,19 +8,19 @@
 - hst_itc_account_code: `2210`
 - scope: `2023-06-01 → 2025-05-31`
 - dry_run: `False`
-- reset: `True`
+- reset: `False`
 - skip_existing: `True`
 
 ## Counts
 
 - csv_rows_read: 1253
-- csv_distinct_bills: 755
-- bills_imported: 424
-- allocation_rows_inserted: 485
-- tax_itc_rows_inserted: 279
-- bills_skipped_out_of_scope: 1
-- bills_skipped_already_allocated: 293
-- bills_skipped_allocation_mismatch: 37
+- csv_distinct_bills: 2
+- bills_imported: 2
+- allocation_rows_inserted: 2
+- tax_itc_rows_inserted: 2
+- bills_skipped_out_of_scope: 0
+- bills_skipped_already_allocated: 0
+- bills_skipped_allocation_mismatch: 0
 - bills_skipped_missing_account_code: 0
 - bills_missing_in_db: 0
 

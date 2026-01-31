@@ -320,6 +320,33 @@
               "note": { "type": ["string", "null"] }
             }
           },
+          "book_fixed_assets": {
+            "type": "array",
+            "description": "Book fixed-asset overlay audit rows",
+            "items": {
+              "type": "object",
+              "properties": {
+                "asset_id": { "type": "string" },
+                "description": { "type": ["string", "null"] },
+                "book_treatment": { "type": ["string", "null"] },
+                "book_depr_policy": { "type": ["string", "null"] },
+                "book_start_date": { "type": ["string", "null"], "format": "date" },
+                "available_for_use_date": { "type": ["string", "null"], "format": "date" },
+                "total_cost_cents": { "type": ["integer", "null"] },
+                "total_cost_dollars": { "type": ["integer", "null"] },
+                "reclass_total_cents": { "type": ["integer", "null"] },
+                "reclass_total_dollars": { "type": ["integer", "null"] },
+                "amortization_cents": { "type": ["integer", "null"] },
+                "amortization_dollars": { "type": ["integer", "null"] },
+                "book_asset_gifi_code": { "type": ["string", "null"] },
+                "book_accum_amort_gifi_code": { "type": ["string", "null"] },
+                "book_amort_expense_gifi_code": { "type": ["string", "null"] },
+                "component_breakdown": { "type": ["string", "null"] },
+                "source_breakdown": { "type": ["string", "null"] },
+                "notes": { "type": ["string", "null"] }
+              }
+            }
+          },
           "positions": {
             "type": "object",
             "description": "Key tax positions and accounting policies for this year",
@@ -503,6 +530,13 @@
                 "type": "object",
                 "properties": {
                   "has_cca": { "type": ["boolean", "null"] },
+                  "note": { "type": ["string", "null"] }
+                }
+              },
+              "book_fixed_assets": {
+                "type": "object",
+                "properties": {
+                  "has_book_fixed_assets": { "type": ["boolean", "null"] },
                   "note": { "type": ["string", "null"] }
                 }
               },

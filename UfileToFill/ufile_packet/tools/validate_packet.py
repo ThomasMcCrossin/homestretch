@@ -81,6 +81,38 @@ def load_schedule_1_csv(path: Path) -> dict[str, int]:
     return out
 
 
+def load_book_fixed_asset_summary(path: Path) -> dict[str, dict[str, int]]:
+    if not path.exists():
+        return {}
+    out: dict[str, dict[str, int]] = {}
+    with path.open(newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            fy = str(row.get("fiscal_year") or "").strip()
+            if not fy:
+                continue
+            out[fy] = {
+                "capitalized_asset_count": int(row.get("capitalized_asset_count") or 0),
+                "expensed_additions_dollars": int(row.get("expensed_additions_dollars") or 0),
+                "book_amortization_dollars": int(row.get("book_amortization_dollars") or 0),
+            }
+    return out
+
+
+def load_book_fixed_asset_audit(path: Path) -> dict[str, list[dict]]:
+    if not path.exists():
+        return {}
+    out: dict[str, list[dict]] = {}
+    with path.open(newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            fy = str(row.get("fiscal_year") or "").strip()
+            if not fy:
+                continue
+            out.setdefault(fy, []).append(row)
+    return out
+
+
 def compare_dicts(label: str, a: dict[str, int], b: dict[str, int]) -> list[str]:
     def sort_key(code: str) -> tuple[int, object]:
         if code == "A":
@@ -121,6 +153,9 @@ def main() -> int:
     issues: list[str] = []
     invalid_codes: list[str] = []
     completeness: list[str] = []
+
+    book_summary = load_book_fixed_asset_summary(snapshot_dir / "book_fixed_asset_overlay_summary.csv")
+    book_audit = load_book_fixed_asset_audit(snapshot_dir / "book_fixed_asset_overlay_audit.csv")
 
     # --- Completeness checks (non-GIFI UFile screens) ---
     entity = packet.get("entity", {})
@@ -184,10 +219,56 @@ def main() -> int:
                 completeness.append(f"{fy}: capital_cost_allowance.has_cca is true but schedule_8 classes are missing/empty.")
             if classes:
                 sch1 = year.get("schedule_1", {}) if isinstance(year, dict) else {}
-                if "206" not in sch1:
-                    completeness.append(f"{fy}: schedule_8 present but schedule_1 missing code 206 (capital items expensed).")
                 if "403" not in sch1:
                     completeness.append(f"{fy}: schedule_8 present but schedule_1 missing code 403 (CCA claim).")
+
+                expensed_additions = book_summary.get(fy, {}).get("expensed_additions_dollars")
+                if expensed_additions is None:
+                    if "206" not in sch1:
+                        completeness.append(f"{fy}: schedule_8 present but schedule_1 missing code 206 (capital items expensed).")
+                elif expensed_additions > 0:
+                    if "206" not in sch1:
+                        completeness.append(
+                            f"{fy}: expensed capital additions present but schedule_1 missing code 206 (expected {expensed_additions})."
+                        )
+                    else:
+                        actual_206 = int((sch1.get("206") or {}).get("amount") or 0)
+                        if actual_206 != expensed_additions:
+                            completeness.append(
+                                f"{fy}: schedule_1 code 206 ({actual_206}) != expensed additions total ({expensed_additions})."
+                            )
+
+            book_amort = book_summary.get(fy, {}).get("book_amortization_dollars") if book_summary else None
+            if book_amort and book_amort > 0:
+                sch1 = year.get("schedule_1", {}) if isinstance(year, dict) else {}
+                if "104" not in sch1:
+                    completeness.append(f"{fy}: book amortization recorded but schedule_1 missing code 104.")
+                else:
+                    actual_104 = int((sch1.get("104") or {}).get("amount") or 0)
+                    if actual_104 != book_amort:
+                        completeness.append(f"{fy}: schedule_1 code 104 ({actual_104}) != book amortization total ({book_amort}).")
+
+            cap_count = book_summary.get(fy, {}).get("capitalized_asset_count") if book_summary else 0
+            if cap_count and cap_count > 0:
+                schedule_100 = year.get("schedule_100", {}) if isinstance(year, dict) else {}
+                asset_codes = set()
+                accum_codes = set()
+                for row in book_audit.get(fy, []):
+                    code = str(row.get("book_asset_gifi_code") or "").strip()
+                    if code:
+                        asset_codes.add(code)
+                    accum = str(row.get("book_accum_amort_gifi_code") or "").strip()
+                    if accum and int(row.get("amortization_dollars") or 0) != 0:
+                        accum_codes.add(accum)
+                if not asset_codes:
+                    asset_codes = {"1740"}
+                has_asset_line = any(int((schedule_100.get(code) or {}).get("amount") or 0) != 0 for code in asset_codes)
+                if not has_asset_line:
+                    completeness.append(f"{fy}: book fixed assets present but schedule_100 missing fixed-asset lines.")
+                if accum_codes:
+                    has_accum = any(int((schedule_100.get(code) or {}).get("amount") or 0) != 0 for code in accum_codes)
+                    if not has_accum:
+                        completeness.append(f"{fy}: book amortization recorded but schedule_100 missing accumulated amortization lines.")
 
     for fy in ["FY2024", "FY2025"]:
         snap_100 = load_gifi_csv(snapshot_dir / f"gifi_schedule_100_{fy}.csv")

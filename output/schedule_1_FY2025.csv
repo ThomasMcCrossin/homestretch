@@ -1,5 +1,10 @@
-Line,Description,Amount
-300,Net income per financial statements,30557
-117,50% of meals and entertainment,204
-311,Penalties and fines (CRA),274
-400,Net income for tax purposes,31035
+Code,Label,Amount
+A,Net income (loss) per financial statements,30739
+104,Accounting amortization,1038
+121,Non-deductible meals and entertainment (50%),204
+128,Non-deductible fines and penalties,274
+206,Capital items expensed,0
+500,Total additions,1516
+403,Capital cost allowance (Schedule 8),1038
+510,Total deductions,1038
+C,Net income (loss) for tax purposes,31217

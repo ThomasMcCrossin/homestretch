@@ -47,7 +47,10 @@ exclude_wave_bills:
   invoice_numbers: []
   vendor_raw_exact: []
   source_rows: []
-  wave_bill_ids: []
+  # Specific bills to leave untouched (e.g., known assets that should stay in their original Wave category).
+  wave_bill_ids:
+    - 256  # Costco freezer (Office Supplies in Wave export)
+    - 371  # Walmart coffee grinder (Office Supplies in Wave export)
 
 # Tax handling when applying profiles.
 tax:

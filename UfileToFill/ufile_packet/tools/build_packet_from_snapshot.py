@@ -144,6 +144,43 @@ def load_cca_assets(path: Path, fy: str) -> list[dict]:
     return out
 
 
+def load_book_fixed_assets(path: Path, fy: str) -> list[dict]:
+    if not path.exists():
+        return []
+    out: list[dict] = []
+    with path.open(newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            row_fy = str(row.get("fiscal_year") or "").strip()
+            if row_fy != fy:
+                continue
+            book_start = str(row.get("book_start_date") or "").strip() or None
+            afu = str(row.get("available_for_use_date") or "").strip() or None
+            out.append(
+                {
+                    "asset_id": str(row.get("asset_id") or "").strip(),
+                    "description": str(row.get("description") or "").strip(),
+                    "book_treatment": str(row.get("book_treatment") or "").strip(),
+                    "book_depr_policy": str(row.get("book_depr_policy") or "").strip(),
+                    "book_start_date": book_start,
+                    "available_for_use_date": afu,
+                    "total_cost_cents": int(row.get("total_cost_cents") or 0),
+                    "total_cost_dollars": int(row.get("total_cost_dollars") or 0),
+                    "reclass_total_cents": int(row.get("reclass_total_cents") or 0),
+                    "reclass_total_dollars": int(row.get("reclass_total_dollars") or 0),
+                    "amortization_cents": int(row.get("amortization_cents") or 0),
+                    "amortization_dollars": int(row.get("amortization_dollars") or 0),
+                    "book_asset_gifi_code": str(row.get("book_asset_gifi_code") or "").strip(),
+                    "book_accum_amort_gifi_code": str(row.get("book_accum_amort_gifi_code") or "").strip(),
+                    "book_amort_expense_gifi_code": str(row.get("book_amort_expense_gifi_code") or "").strip(),
+                    "component_breakdown": str(row.get("component_breakdown") or "").strip(),
+                    "source_breakdown": str(row.get("source_breakdown") or "").strip(),
+                    "notes": str(row.get("notes") or "").strip(),
+                }
+            )
+    return out
+
+
 def update_year_section(
     packet: dict,
     *,
@@ -216,6 +253,13 @@ def update_year_section(
         }
     else:
         year.pop("schedule_8", None)
+
+    book_fixed_assets_path = snapshot_dir / "book_fixed_asset_overlay_audit.csv"
+    book_fixed_assets = load_book_fixed_assets(book_fixed_assets_path, fy)
+    if book_fixed_assets:
+        year["book_fixed_assets"] = book_fixed_assets
+    else:
+        year.pop("book_fixed_assets", None)
 
     # --- Year-specific UFile screens derived from the schedules (no guessing) ---
     year_screens = year.get("ufile_screens", {})
@@ -339,6 +383,25 @@ def update_year_section(
     positions["cca_required"]["value"] = has_cca
     if has_cca:
         positions["cca_required"]["note"] = f"CCA claimed per Schedule 8. Total CCA: {total_cca_claim}. Classes: {', '.join(cca_classes_used)}."
+
+    book_fixed_assets_present = bool(book_fixed_assets)
+    book_assets_screen = year_screens.get("book_fixed_assets", {})
+    if not isinstance(book_assets_screen, dict):
+        book_assets_screen = {}
+    book_assets_screen["has_book_fixed_assets"] = book_fixed_assets_present
+    if book_fixed_assets_present:
+        book_assets_screen.setdefault(
+            "note",
+            "Book fixed assets capitalized in financial statements; see book_fixed_asset_overlay_audit.csv for details.",
+        )
+    year_screens["book_fixed_assets"] = book_assets_screen
+
+    positions.setdefault("book_fixed_assets_present", {})
+    if not isinstance(positions.get("book_fixed_assets_present"), dict):
+        positions["book_fixed_assets_present"] = {}
+    positions["book_fixed_assets_present"]["value"] = book_fixed_assets_present
+    if book_fixed_assets_present:
+        positions["book_fixed_assets_present"]["note"] = "Book fixed assets present (capitalized in GIFI)."
     year["positions"] = positions
 
 

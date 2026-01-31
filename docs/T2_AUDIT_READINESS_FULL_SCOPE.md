@@ -208,7 +208,10 @@ The mechanical pipeline is strong (bank coverage, deterministic imports, reprodu
 ## 5) Low‑Risk / Mostly Clean Items
 
 - Wave bill payment matching residuals are immaterial (net ~**$‑5.18**) (`output/readiness_report.md`).
-- No fixed‑asset balances appear on Schedule 100, but CCA must still be assessed via the tax asset register (Schedule 8) because capital items can be expensed in books (`overrides/cca_assets.yml`, `output/schedule_8_FY2024.csv`, `output/schedule_8_FY2025.csv`).
+- Fixed‑asset balances are **optional** depending on the book overlay mode:
+  - **Option 2 (tax‑only):** no fixed‑asset balances on Schedule 100; CCA is assessed via the tax asset register (Schedule 8).
+  - **Option 1 (book overlay):** fixed assets appear on Schedule 100 (e.g., 1740/1741) and book amortization appears on Schedule 125, while Schedule 8 remains the tax CCA source.
+- AII / half‑year rule precedence (tax layer): if `half_year_rule` is false, no half‑year rule applies; if `half_year_rule` is true and `aii_eligible` is true with available‑for‑use between 2024‑01‑01 and 2027‑12‑31, the half‑year rule is suspended; otherwise the half‑year rule applies.
 - Cash float logic is explicit and reconciles:
   - float withdrawals total **$2,624.50**
   - float returned via cash deposits **$2,324.50**
@@ -289,7 +292,23 @@ Treat this as a “sign‑off checklist” before you finalize journals/T2:
 
 ---
 
-## 8) Evidence Map (quick pointers)
+## 8) How to Run (CCA + Schedule 1)
+
+Run order matters because Schedule 1 pulls from Schedule 8:
+1) `python3 scripts/91b_build_cca_schedule_8.py`
+2) `python3 scripts/91_build_t2_schedule_exports.py`
+3) `python3 scripts/93_snapshot_project_state.py`
+4) `python3 UfileToFill/ufile_packet/tools/build_packet_from_snapshot.py --snapshot output/snapshots/<stamp>`
+5) `python3 UfileToFill/ufile_packet/tools/build_year_artifacts.py`
+
+Inspect these outputs:
+- `output/schedule_8_FY2024.csv`, `output/schedule_8_FY2025.csv`
+- `output/cca_asset_register_resolved.csv` (audit trail, half‑year applied)
+- `output/schedule_1_FY2024.csv`, `output/schedule_1_FY2025.csv`
+
+---
+
+## 9) Evidence Map (quick pointers)
 
 If someone asks “where did that number come from?”, start here:
 - Readiness snapshot: `output/readiness_report.md`

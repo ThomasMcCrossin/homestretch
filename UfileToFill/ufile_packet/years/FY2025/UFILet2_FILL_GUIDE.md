@@ -318,6 +318,8 @@ Unless you are designating eligible dividends, GRIP is typically $0 / not needed
 | 510 | Total deductions | 0 |  |
 | C | Net income (loss) for tax purposes | 31,035 | 30557 + 478 - 0 = 31035 |
 
+Note: If UFile auto-populates Schedule 1 line 403 from Schedule 8, do **not** manually enter 403 in the Schedule 1 grid.
+
 ## High-signal yes/no answers
 | Question | Answer | Note |
 |---|---|---|

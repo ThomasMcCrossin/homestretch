@@ -10,6 +10,37 @@ from pathlib import Path
 from _lib import DB_PATH, PROJECT_ROOT, connect_db, fiscal_years_from_manifest, load_manifest
 
 
+REVIEW_FIELDS = [
+    "include",
+    "asset_id",
+    "asset_description",
+    "available_for_use_date",
+    "cca_class",
+    "book_treatment",
+    "book_depr_policy",
+    "useful_life_years",
+    "book_start_date",
+    "claim_percent_of_max",
+    "half_year_rule",
+    "aii_eligible",
+    "notes",
+]
+
+
+def load_existing_review(path: Path) -> dict[tuple[str, str], dict[str, str]]:
+    if not path.exists():
+        return {}
+    rows = list(csv.DictReader(path.open("r", encoding="utf-8", newline="")))
+    out: dict[tuple[str, str], dict[str, str]] = {}
+    for r in rows:
+        source_type = str(r.get("source_type") or "").strip()
+        record_id = str(r.get("record_id") or "").strip()
+        if not source_type or not record_id:
+            continue
+        out[(source_type, record_id)] = {k: str(r.get(k) or "").strip() for k in REVIEW_FIELDS}
+    return out
+
+
 def cents_to_dollars(cents: int) -> str:
     return f"{Decimal(cents) / Decimal(100):.2f}"
 
@@ -19,6 +50,12 @@ def main() -> int:
     ap.add_argument("--db", type=Path, default=DB_PATH)
     ap.add_argument("--out-dir", type=Path, default=PROJECT_ROOT / "output")
     ap.add_argument("--threshold", type=float, default=300.0, help="Minimum net amount in dollars to list as a candidate (default: 300).")
+    ap.add_argument(
+        "--preserve-review",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Preserve existing review columns (notes/decisions) if output CSV already exists.",
+    )
     args = ap.parse_args()
 
     manifest = load_manifest()
@@ -32,6 +69,7 @@ def main() -> int:
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
     out_csv = args.out_dir / "cca_candidates.csv"
+    existing_review = load_existing_review(out_csv) if args.preserve_review else {}
 
     flag_account_codes = {"5300"}
 
@@ -64,9 +102,9 @@ def main() -> int:
         ).fetchall()
 
         with out_csv.open("w", newline="") as f:
-            w = csv.writer(f)
-            w.writerow(
-                [
+            w = csv.DictWriter(
+                f,
+                fieldnames=[
                     "source_type",
                     "record_id",
                     "date",
@@ -75,8 +113,10 @@ def main() -> int:
                     "total_dollars",
                     "allocation_breakdown",
                     "flags",
-                ]
+                    *REVIEW_FIELDS,
+                ],
             )
+            w.writeheader()
 
             for r in wave_rows:
                 allocs = conn.execute(
@@ -98,18 +138,26 @@ def main() -> int:
                 if "nayax" in vendor_raw.lower():
                     flags.append("vendor_keyword:nayax")
 
-                w.writerow(
-                    [
-                        "wave_bill",
-                        r["id"],
-                        r["invoice_date"],
-                        vendor_raw,
-                        int(r["net_cents"] or 0),
-                        cents_to_dollars(int(r["net_cents"] or 0)),
-                        breakdown,
-                        ",".join(flags),
-                    ]
-                )
+                record_id = str(r["id"])
+                review = existing_review.get(("wave_bill", record_id), {})
+                row = {
+                    "source_type": "wave_bill",
+                    "record_id": record_id,
+                    "date": str(r["invoice_date"] or ""),
+                    "vendor": vendor_raw,
+                    "total_cents": int(r["net_cents"] or 0),
+                    "total_dollars": cents_to_dollars(int(r["net_cents"] or 0)),
+                    "allocation_breakdown": breakdown,
+                    "flags": ",".join(flags),
+                }
+                for k in REVIEW_FIELDS:
+                    if k == "available_for_use_date":
+                        row[k] = review.get(k) or row["date"]
+                    elif k == "asset_description":
+                        row[k] = review.get(k) or vendor_raw
+                    else:
+                        row[k] = review.get(k, "")
+                w.writerow(row)
 
             for r in cc_rows:
                 lines = conn.execute(
@@ -132,18 +180,26 @@ def main() -> int:
                 if "nayax" in desc.lower():
                     flags.append("vendor_keyword:nayax")
 
-                w.writerow(
-                    [
-                        "cc_purchase",
-                        r["id"],
-                        r["entry_date"],
-                        desc,
-                        int(r["debit_cents"] or 0),
-                        cents_to_dollars(int(r["debit_cents"] or 0)),
-                        breakdown,
-                        ",".join(flags),
-                    ]
-                )
+                record_id = str(r["id"])
+                review = existing_review.get(("cc_purchase", record_id), {})
+                row = {
+                    "source_type": "cc_purchase",
+                    "record_id": record_id,
+                    "date": str(r["entry_date"] or ""),
+                    "vendor": desc,
+                    "total_cents": int(r["debit_cents"] or 0),
+                    "total_dollars": cents_to_dollars(int(r["debit_cents"] or 0)),
+                    "allocation_breakdown": breakdown,
+                    "flags": ",".join(flags),
+                }
+                for k in REVIEW_FIELDS:
+                    if k == "available_for_use_date":
+                        row[k] = review.get(k) or row["date"]
+                    elif k == "asset_description":
+                        row[k] = review.get(k) or desc
+                    else:
+                        row[k] = review.get(k, "")
+                w.writerow(row)
     finally:
         conn.close()
 

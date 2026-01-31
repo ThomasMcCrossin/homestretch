@@ -195,6 +195,10 @@ These are “unmatched” because there is no corresponding bank PAD debit for t
 - UFile-style exports (Schedule 100/125 + retained earnings + Schedule 1):
   - `python3 scripts/91_build_t2_schedule_exports.py`
   - Outputs: `output/ufile_gifi_<FY>.csv`, `output/gifi_schedule_100_<FY>.csv`, `output/gifi_schedule_125_<FY>.csv`, `output/gifi_retained_earnings_<FY>.csv`, `output/schedule_1_<FY>.csv`
+- Book fixed-asset overlay (Option 1, capitalized in books):
+  - `python3 scripts/91c_build_book_fixed_asset_overlay.py`
+  - Outputs: `output/book_fixed_asset_overlay_<FY>.csv`, `output/book_fixed_asset_overlay_audit.csv`, `output/book_fixed_asset_overlay_summary.csv`
+  - Apply during schedule export: `python3 scripts/91_build_t2_schedule_exports.py --book-fixed-assets overlay`
 
 ## What is NOT implemented yet (remaining)
 

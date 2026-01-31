@@ -1,0 +1,20 @@
+fiscal_year,asset_id,entry_type,gifi_code,account_code,net_cents,net_dollars,description,component_note
+FY2025,ams_lb9_vending_machine_2024_02_20,accum_amort_balance,1741,,-39600,-396.00,AMS-LB9 vending machine (Electric Kitty),carryforward
+FY2025,ams_lb9_vending_machine_2024_02_20,amort_expense,8670,,17600,176.00,Book amortization: AMS-LB9 vending machine (Electric Kitty),mirror_tax
+FY2025,ams_lb9_vending_machine_2024_02_20,asset_balance,1740,,110000,1100.00,AMS-LB9 vending machine (Electric Kitty),carryforward
+FY2025,costco_freezer_2024_03_13,accum_amort_balance,1741,,-19800,-198.00,Hisense freezer (Costco),carryforward
+FY2025,costco_freezer_2024_03_13,amort_expense,8670,,8800,88.00,Book amortization: Hisense freezer (Costco),mirror_tax
+FY2025,costco_freezer_2024_03_13,asset_balance,1740,,54999,549.99,Hisense freezer (Costco),carryforward
+FY2025,nayax_card_reader_2025_02_24,accum_amort_balance,1741,,-11100,-111.00,Nayax card reader for vending machine,carryforward
+FY2025,nayax_card_reader_2025_02_24,amort_expense,8670,,11100,111.00,Book amortization: Nayax card reader for vending machine,mirror_tax
+FY2025,nayax_card_reader_2025_02_24,asset_balance,1740,,55743,557.43,Nayax card reader for vending machine,carryforward
+FY2025,nayax_card_reader_2025_02_24,reclass_expense_credit,8710,5300,-55743,-557.43,Nayax card reader for vending machine,bill_id=628 vendor=Nayax - Bill
+FY2025,shopify_card_reader_2024_11_12,accum_amort_balance,1741,,-47900,-479.00,Shopify card reader hardware,carryforward
+FY2025,shopify_card_reader_2024_11_12,amort_expense,8670,,47900,479.00,Book amortization: Shopify card reader hardware,mirror_tax
+FY2025,shopify_card_reader_2024_11_12,asset_balance,1740,,47900,479.00,Shopify card reader hardware,carryforward
+FY2025,shopify_card_reader_2024_11_12,reclass_expense_credit,8810,6600,-45900,-459.00,Shopify card reader hardware,bill_id=473 vendor=Shopify - Bill
+FY2025,shopify_card_reader_2024_11_12,reclass_expense_credit,9275,6550,-2000,-20.00,Shopify card reader hardware,bill_id=473 vendor=Shopify - Bill
+FY2025,walmart_coffee_grinder_2024_09_17,accum_amort_balance,1741,,-18400,-184.00,Coffee grinder (Walmart),carryforward
+FY2025,walmart_coffee_grinder_2024_09_17,amort_expense,8670,,18400,184.00,Book amortization: Coffee grinder (Walmart),mirror_tax
+FY2025,walmart_coffee_grinder_2024_09_17,asset_balance,1740,,18367,183.67,Coffee grinder (Walmart),carryforward
+FY2025,walmart_coffee_grinder_2024_09_17,reclass_expense_credit,8810,6600,-18367,-183.67,Coffee grinder (Walmart),bill_id=371 vendor=Walmart - Bill

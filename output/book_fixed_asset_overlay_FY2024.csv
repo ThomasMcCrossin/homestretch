@@ -1,0 +1,9 @@
+fiscal_year,asset_id,entry_type,gifi_code,account_code,net_cents,net_dollars,description,component_note
+FY2024,ams_lb9_vending_machine_2024_02_20,accum_amort_balance,1741,,-22000,-220.00,AMS-LB9 vending machine (Electric Kitty),carryforward
+FY2024,ams_lb9_vending_machine_2024_02_20,amort_expense,8670,,22000,220.00,Book amortization: AMS-LB9 vending machine (Electric Kitty),mirror_tax
+FY2024,ams_lb9_vending_machine_2024_02_20,asset_balance,1740,,110000,1100.00,AMS-LB9 vending machine (Electric Kitty),carryforward
+FY2024,ams_lb9_vending_machine_2024_02_20,reclass_expense_credit,8810,6600,-110000,-1100.00,AMS-LB9 vending machine (Electric Kitty),bill_id=221 vendor=Electric Kitty - Bill
+FY2024,costco_freezer_2024_03_13,accum_amort_balance,1741,,-11000,-110.00,Hisense freezer (Costco),carryforward
+FY2024,costco_freezer_2024_03_13,amort_expense,8670,,11000,110.00,Book amortization: Hisense freezer (Costco),mirror_tax
+FY2024,costco_freezer_2024_03_13,asset_balance,1740,,54999,549.99,Hisense freezer (Costco),carryforward
+FY2024,costco_freezer_2024_03_13,reclass_expense_credit,8810,6600,-54999,-549.99,Hisense freezer (Costco),bill_id=256 vendor=Costco - Bill
