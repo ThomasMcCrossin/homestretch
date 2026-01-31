@@ -111,6 +111,32 @@ def _parse_amount_cell(s: str) -> int:
     return int(ss)
 
 
+def _extract_section(md: str, *, heading: str) -> str:
+    """
+    Extract the body of a markdown section that starts at a heading line and
+    ends at the next heading of the same or higher level.
+
+    heading should be the full heading line, e.g. "## Income source (UFile screen)".
+    """
+    # Determine heading level ("#" count).
+    m = re.match(r"^(#+)\s+", heading.strip())
+    if not m:
+        raise ValueError(f"Invalid heading: {heading!r}")
+    level = len(m.group(1))
+
+    # Find the exact heading line.
+    pat = re.compile(rf"(?m)^{re.escape(heading)}\s*$")
+    hit = pat.search(md)
+    if not hit:
+        return ""
+
+    tail = md[hit.end() :]
+    # Stop at next heading with <= level.
+    stop = re.search(rf"(?m)^#{{1,{level}}}\s+", tail)
+    body = tail[: stop.start()] if stop else tail
+    return body.strip() + "\n"
+
+
 def _load_attempt_table_csv(path: Path) -> dict[str, int]:
     """
     Parse attempt extracted schedule table CSV and sum amounts by 4-digit code.
@@ -145,6 +171,7 @@ class DeltaRow:
     expected: int
     delta: int
     action: str
+    note: str
 
 
 def _compute_deltas(
@@ -167,6 +194,7 @@ def _compute_deltas(
     for code in codes:
         exp_row = expected_by_code.get(code, {})
         desc = str(exp_row.get("Description") or exp_row.get("description") or "").strip()
+        note = str(exp_row.get("Note") or exp_row.get("Entry rule") or "").strip()
         exp_amt = _parse_amount_cell(exp_row.get("Amount") or exp_row.get("amount") or "0")
         att_amt_raw = attempt_amounts.get(code, 0)
         att_amt = _normalize_attempt_for_cogs(code, att_amt_raw)
@@ -186,10 +214,28 @@ def _compute_deltas(
         else:
             action = "OK"
 
-        rows.append(DeltaRow(code=code, description=desc, attempt=att_amt, expected=exp_amt, delta=delta, action=action))
+        rows.append(
+            DeltaRow(
+                code=code,
+                description=desc,
+                attempt=att_amt,
+                expected=exp_amt,
+                delta=delta,
+                action=action,
+                note=note,
+            )
+        )
 
     # Prioritize non-OK items first, then code order.
-    priority = {"ADD (missing in attempt)": 0, "CHANGE (update amount)": 1, "CLEAR / DO NOT ENTER (extra in attempt)": 2, "OK": 3}
+    priority = {
+        "ADD (missing in attempt)": 0,
+        "CHANGE (update amount)": 1,
+        "MOVE (enter 2781; if rejected, keep 2780)": 2,
+        "CLEAR / DO NOT ENTER (extra in attempt)": 3,
+        "AUTO (do not type; ok if printed)": 4,
+        "OK (fallback if 2781 rejected)": 5,
+        "OK": 6,
+    }
     rows.sort(key=lambda r: (priority.get(r.action, 9), int(r.code)))
     return rows
 
@@ -199,24 +245,26 @@ def _render_delta_table(rows: list[DeltaRow], *, limit: int | None = None) -> st
     Render a markdown table.
     """
     shown = rows if limit is None else rows[:limit]
+    has_any_note = any(bool(r.note) for r in shown)
     out: list[str] = []
-    out.append("| Code | Description | Attempt | Expected (current guide) | Delta (expected - attempt) | Action |")
-    out.append("|---|---|---:|---:|---:|---|")
+    if has_any_note:
+        out.append("| Code | Description | Attempt | Expected (current guide) | Delta (expected - attempt) | Action | Guide note |")
+        out.append("|---|---|---:|---:|---:|---|---|")
+    else:
+        out.append("| Code | Description | Attempt | Expected (current guide) | Delta (expected - attempt) | Action |")
+        out.append("|---|---|---:|---:|---:|---|")
     for r in shown:
-        out.append(
-            "| "
-            + " | ".join(
-                [
-                    r.code,
-                    (r.description or "").replace("\n", " ").strip(),
-                    money(r.attempt),
-                    money(r.expected),
-                    money(r.delta),
-                    r.action,
-                ]
-            )
-            + " |"
-        )
+        cells = [
+            r.code,
+            (r.description or "").replace("\n", " ").strip(),
+            money(r.attempt),
+            money(r.expected),
+            money(r.delta),
+            r.action,
+        ]
+        if has_any_note:
+            cells.append((r.note or "").replace("\n", " ").strip())
+        out.append("| " + " | ".join(cells) + " |")
     return "\n".join(out)
 
 
@@ -267,6 +315,9 @@ def main() -> int:
     exp_is = _extract_table(guide_md, heading="## Income statement (GIFI Schedule 125)")
     exp_re = _extract_table(guide_md, heading="### Retained earnings (whole dollars)")
     exp_s8 = _extract_table(guide_md, heading="### Schedule 8 / CCA")
+    must_check_body = _extract_section(guide_md, heading="## Must-check before filing / exporting a PDF copy")
+    income_source_body = _extract_section(guide_md, heading="## Income source (UFile screen)")
+    cca_screen_body = _extract_section(guide_md, heading="## Capital cost allowance (UFile screen)")
 
     # Attempt extracted tables (what was in the exported PDF, i.e. what the attempt "contained").
     att100 = _load_attempt_table_csv(parse_dir / "tables" / "schedule_100.csv")
@@ -332,6 +383,7 @@ def main() -> int:
                             expected=r.expected,
                             delta=r.delta,
                             action="MOVE (enter 2781; if rejected, keep 2780)",
+                            note=r.note,
                         )
                     )
                 elif r.code == "2780":
@@ -343,6 +395,7 @@ def main() -> int:
                             expected=r.expected,
                             delta=r.delta,
                             action="OK (fallback if 2781 rejected)",
+                            note=r.note,
                         )
                     )
                 else:
@@ -379,6 +432,21 @@ def main() -> int:
     out.append("### Income statement")
     out.append(_render_delta_table(summary_is))
     out.append("")
+
+    if must_check_body or income_source_body or cca_screen_body:
+        out.append("## Notes / reminders to apply (from the current guide)")
+        if must_check_body:
+            out.append("### Must-check before filing / exporting")
+            out.append(must_check_body.rstrip())
+            out.append("")
+        if income_source_body:
+            out.append("### Income source screen (clears INCOMESOURCE warning)")
+            out.append(income_source_body.rstrip())
+            out.append("")
+        if cca_screen_body:
+            out.append("### Capital cost allowance screen (Schedule 8 entry + audit)")
+            out.append(cca_screen_body.rstrip())
+            out.append("")
     out.append("## Balance sheet (GIFI Schedule 100) — full delta table")
     out.append(_render_delta_table(deltas_bs))
     out.append("")
