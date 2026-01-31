@@ -78,10 +78,20 @@ Everything else should be generated from those files.
 ## Option 1: Book fixed assets overlay (capitalized in books/GIFI)
 
 Run order (FY2024/FY2025):
+1) `python3 UfileToFill/ufile_packet/tools/refresh_packet_from_current_state.py`
+   - Rebuilds Schedule 8 + book overlay + schedule exports
+   - Creates a fresh project snapshot under `output/snapshots/<stamp>/`
+   - Rebuilds `UfileToFill/ufile_packet/packet.json` from that snapshot
+   - Validates the packet and regenerates per-year fill guides
+
+Manual (equivalent) steps:
 1) `python3 scripts/91b_build_cca_schedule_8.py`
 2) `python3 scripts/91c_build_book_fixed_asset_overlay.py`
 3) `python3 scripts/91_build_t2_schedule_exports.py --book-fixed-assets overlay`
-4) `python3 UfileToFill/ufile_packet/tools/build_packet_from_snapshot.py --snapshot output/snapshots/<stamp>`
+4) `python3 scripts/93_snapshot_project_state.py --name <YYYYMMDD-HHMMSS>`
+5) `python3 UfileToFill/ufile_packet/tools/build_packet_from_snapshot.py --snapshot output/snapshots/<stamp>`
+6) `python3 UfileToFill/ufile_packet/tools/validate_packet.py`
+7) `python3 UfileToFill/ufile_packet/tools/build_year_artifacts.py`
 
 Mode toggle:
 - `--book-fixed-assets off` (default) keeps Option 2 behavior (tax-only CCA; capital items remain expensed in books)

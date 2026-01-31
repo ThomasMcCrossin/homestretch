@@ -863,6 +863,14 @@ def build_year_guide(packet: dict, fy: str) -> str:
     parts.append(
         "Note: If UFile auto-populates Schedule 1 line 403 from Schedule 8, do **not** manually enter 403 in the Schedule 1 grid."
     )
+    schedule_8 = year.get("schedule_8", {}) if isinstance(year.get("schedule_8"), dict) else {}
+    total_cca_claim = 0
+    if isinstance(schedule_8.get("summary"), dict):
+        total_cca_claim = int(schedule_8.get("summary", {}).get("total_cca_claim") or 0)
+    if total_cca_claim:
+        parts.append(
+            f"CCA is entered on the **Capital cost allowance** screen from Schedule 8 (total CCA claimed: {money(total_cca_claim)})."
+        )
     parts.append("")
 
     book_fixed_assets = year.get("book_fixed_assets", []) if isinstance(year.get("book_fixed_assets"), list) else []
@@ -890,7 +898,6 @@ def build_year_guide(packet: dict, fy: str) -> str:
         )
         parts.append("")
 
-    schedule_8 = year.get("schedule_8", {}) if isinstance(year.get("schedule_8"), dict) else {}
     if schedule_8 and isinstance(schedule_8.get("classes"), dict) and schedule_8["classes"]:
         parts.append("## Schedule 8 / CCA")
         classes = schedule_8.get("classes", {}) if isinstance(schedule_8.get("classes"), dict) else {}

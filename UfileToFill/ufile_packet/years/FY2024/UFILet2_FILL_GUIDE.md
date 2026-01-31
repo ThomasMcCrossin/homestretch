@@ -179,26 +179,34 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 | 1001 | Cash | 26,292 |  |
 | 1121 | Inventory of goods for sale | 2,847 |  |
 | 1484 | Prepaid expenses | 649 |  |
+| 1740 | Machinery, equipment, furniture and fixtures | 1,650 |  |
+| 1741 | Accum amort - machinery/equip/furn/fixtures | -330 |  |
 | 2620 | Amounts payable and accrued liabilities | 2,687 |  |
 | 2680 | Taxes payable (GST/HST, etc.) | 6,767 |  |
 | 2781 | Due to individual shareholder(s) | 3,578 | Tie-out: 2400 $2,669.99 (Thomas) + 2410 $908.16 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead. |
 | 3500 | Common shares | 100 |  |
 
+### Fixed assets (book)
+| Asset ID | Description | Book start | Cost | Reclass | Amortization | Policy | Components |
+|---|---|---|---|---|---|---|---|
+| ams_lb9_vending_machine_2024_02_20 | AMS-LB9 vending machine (Electric Kitty) | 2024-02-20 | 1,100 | 1,100 | 220 | mirror_tax | account=6600 gifi=8810 amount_cents=110000 vendor=Electric Kitty - Bill invoice_date=2024-02-20 |
+| costco_freezer_2024_03_13 | Hisense freezer (Costco) | 2024-03-13 | 550 | 550 | 110 | mirror_tax | account=6600 gifi=8810 amount_cents=54999 vendor=Costco - Bill invoice_date=2024-03-13 |
+
 ### Retained earnings (whole dollars)
 | GIFI | Description | Amount | Entry rule |
 |---|---|---|---|
 | 3660 | Retained earnings/deficit - Start | 0 | Enter (opening RE) |
-| 3680 | Net income/loss | 16,655 | Enter (net income/loss) |
+| 3680 | Net income/loss | 17,975 | Enter (net income/loss) |
 | 3700 |  | 0 | Enter (dividends declared) |
 | 3740 | Other items affecting retained earnings (rounding) | 1 | Enter only if needed (rounding/other) |
-| 3849 | Retained earnings/deficit - End | 16,656 | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
+| 3849 | Retained earnings/deficit - End | 17,976 | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
 
 ### Tie-check (display-only totals)
 | GIFI | Description | Amount |
 |---|---|---|
-| 1599 | Total current assets (expected) | 29,788 |
-| 2599 | Total assets | 29,788 |
-| 3640 | Total liabilities and shareholder equity | 29,788 |
+| 1599 | Total current assets (expected) | 31,108 |
+| 2599 | Total assets | 31,108 |
+| 3640 | Total liabilities and shareholder equity | 31,108 |
 
 ## Income statement (GIFI Schedule 125)
 | GIFI | Description | Amount | Note |
@@ -210,9 +218,10 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 | 8520 | Advertising and promotion | 1,606 |  |
 | 8523 | Meals and entertainment | 518 | 50% add-back = $259 |
 | 8622 | Employer's portion of employee benefits | 1,463 |  |
+| 8670 | Amortization of tangible assets | 330 |  |
 | 8690 | Insurance | 1,851 |  |
 | 8710 | Interest and bank charges | 2,218 |  |
-| 8810 | Office expenses | 3,020 |  |
+| 8810 | Office expenses | 1,370 |  |
 | 8813 | Data processing | 1,135 | Computer hardware + SaaS (under capitalization threshold) |
 | 8860 | Professional fees | 879 |  |
 | 8911 | Real estate rental | 8,235 |  |
@@ -247,7 +256,7 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 ## Net income (UFile screen)
 | Field | Value | Note |
 |---|---|---|
-| Net income as per financial statements | 16,655 | Should auto-fill from GIFI; otherwise enter from Schedule 1 code A. |
+| Net income as per financial statements | 17,975 | Should auto-fill from GIFI; otherwise enter from Schedule 1 code A. |
 | Total sales of corporation during this taxation year | 181,235 | Use total revenue (sum of revenue lines; typically matches trade sales 8000). |
 | Total gross revenues | 181,235 | Usually same as total sales for your file. |
 
@@ -257,8 +266,8 @@ If UFile auto-populates these from GIFI, do not add manual “additions/deductio
 | Field | Value | Note |
 |---|---|---|
 | Eligible for capital tax exemption? | Yes | For your file, expect capital tax exemption; confirm if UFile still requests fields. |
-| Total assets at year-end date from financial statements | 29,788 | If required, use Schedule 100 total assets (GIFI 2599). |
-| Retained earnings/deficit at year-end (if required) | 16,656 | If UFile forces a retained earnings element, use Schedule 100 GIFI 3600. |
+| Total assets at year-end date from financial statements | 31,108 | If required, use Schedule 100 total assets (GIFI 2599). |
+| Retained earnings/deficit at year-end (if required) | 17,976 | If UFile forces a retained earnings element, use Schedule 100 GIFI 3600. |
 
 ## Status change for the corporation (UFile screen)
 No status change; leave blank.
@@ -275,11 +284,17 @@ Active business income only (canteen operations). No property/foreign/other inco
 ### Schedule 1 (tax purposes)
 | Code | Description | Amount | Calculation |
 |---|---|---|---|
-| 117 | 50% of meals and entertainment | 259 | 518 * 50% = 259 |
-| 300 | Net income per financial statements | 16,655 |  |
-| 311 | Penalties and fines (CRA) | 71 |  |
-| 400 | Net income for tax purposes | 16,985 | 16655 + 259 + 71 = 16985 |
+| A | Net income (loss) per financial statements | 17,975 |  |
+| 104 | Accounting amortization | 330 |  |
+| 121 | Non-deductible meals and entertainment (50%) | 259 |  |
+| 128 | Non-deductible fines and penalties | 71 |  |
+| 206 | Capital items expensed | 0 |  |
+| 403 | Capital cost allowance (Schedule 8) | 330 |  |
+| 500 | Total additions | 660 |  |
+| 510 | Total deductions | 330 |  |
+| C | Net income (loss) for tax purposes | 18,305 |  |
 Note: If UFile auto-populates Schedule 1 line 403 from Schedule 8, do **not** manually enter 403 in the Schedule 1 grid.
+CCA is entered on the **Capital cost allowance** screen from Schedule 8 (total CCA claimed: 330).
 
 ### High-signal yes/no answers
 | Question | Answer | Note |
@@ -287,7 +302,8 @@ Note: If UFile auto-populates Schedule 1 line 403 from Schedule 8, do **not** ma
 | T2 line 070 (first year after incorporation) | No | 2023 stub T2 (2022-12-08 → 2023-05-31) already answered Incorporation=Yes and filed Schedule 24; FY2024 should be No. |
 | T2 line 180 (internet income/websites) | Yes | Shopify sales present; likely Yes for internet income/websites (Schedule 88). Confirm store domains in UFile. |
 | T2 line 201 (book vs tax net income differs) | Yes | Book vs tax differs due to meals 50% add-back and CRA penalties; Schedule 1 is attached. |
-| CCA required / capital assets | No | No capital assets capitalized in these years (below capitalization threshold; expensed). |
+| CCA required / capital assets | Yes | CCA claimed per Schedule 8. Total CCA: 330. Classes: 8. |
+| Book fixed assets present | Yes | Book fixed assets present (capitalized in GIFI). |
 
 ## Dividends paid (UFile screen)
 No dividends declared or paid.
@@ -308,6 +324,17 @@ No eligible dividends expected; leave GRIP blank/zero unless UFile requires it.
 
 ## Capital cost allowance (UFile screen)
 Use Schedule 8 outputs; enter class details if claiming CCA.
+
+### Schedule 8 / CCA
+| Class | Description | Opening UCC | Additions | CCA claim | Closing UCC |
+|---|---|---|---|---|---|
+| 8 | General equipment | 0 | 1,650 | 330 | 1,320 |
+
+### Schedule 8 asset additions (audit trail)
+| Asset ID | Description | Date | Class | Cost |
+|---|---|---|---|---|
+| costco_freezer_2024_03_13 | Hisense freezer (Costco) | 2024-03-13 | 8 | 550 |
+| ams_lb9_vending_machine_2024_02_20 | AMS-LB9 vending machine (Electric Kitty) | 2024-02-20 | 8 | 1,100 |
 
 ## Loss carry forwards and loss carry backs (UFile screen)
 No losses to carry forward/back.
