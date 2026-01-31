@@ -9,6 +9,7 @@
 - Enter amounts on the **detail lines** listed below (e.g., use `1121` for inventory, `1484` for prepaid).
 - Leave totals like `1599`/`2599`/`3499`/`3640` blank; UFile usually auto-calculates them. If it doesn’t, confirm you used the detail lines (especially `1121`, `1484`, `2781`), then use the tie-check totals below.
 - On Schedule 125, enter **trade sales** on `8000` (and do **not** enter `8299` total revenue). UFile will compute totals from the detail lines.
+
 ## If something looks wrong in UFile (fast troubleshooting)
 - If inventory isn’t included in current assets: ensure it’s entered on **`1121`** (not `1120`).
 - If prepaids aren’t included in current assets: ensure it’s entered on **`1484`** (not `1480`).
@@ -17,6 +18,7 @@
 - If Net income screen totals look inflated: you likely double-entered revenue (e.g., `8000` + `8299`). Only enter `8000` and let UFile total it.
 - If you see diagnostics like “`GIFI-FIELD 9367 does not match internal subtotal calculation`”: a total/subtotal line is being populated inconsistently with the expense detail lines. Clear totals (`9367`/`9368`) and rely on the detail expense lines only.
 - If you see diagnostics like “`GIFI-FIELD 3849 does not match internal subtotal calculation`”: retained earnings end (`3849`) / balance sheet retained earnings (`3600`) does not match the retained earnings rollforward. Enter only the rollforward lines (`3660`, `3680`, `3700`, `3740`) and let UFile compute `3849`/`3600`.
+
 ## Key carryforward fields (match 2023 filing)
 | Field | Value |
 |---|---|
@@ -24,6 +26,7 @@
 | Books & records addressee | Curly's |
 | Head office street | 125 Victoria St E |
 | Head office city/prov/postal | Amherst, NS B4H1X9 |
+
 ## Key positions / elections (high signal)
 | Item | Value | Note |
 |---|---|---|
@@ -38,6 +41,7 @@
 | HST reported this year? | Yes | HST collection started 2024-02-26 (partial year). Note: some Shopify reports show “tax” amounts before registration; those amounts represent sales/pricing and are not HST collected. |
 | Inventory method | cost | FY2024 closing inventory is an ESTIMATE |
 | Tips handling | not_applicable | FY2024 had no explicit tips payouts recorded (tips practice changed in later years). |
+
 ## Identification of the corporation (UFile screen)
 | Field | Value | Note |
 |---|---|---|
@@ -65,6 +69,7 @@
 | Top URL(s) | curlyscanteen.ca |  |
 | Quarterly instalments – wants considered? | Yes |  |
 | Quarterly instalments – perfect compliance? | No |  |
+
 ## Tax preparer (UFile screen)
 | Field | Value |
 |---|---|
@@ -82,6 +87,7 @@
 | Postal code | B4H 3Y2 |
 
 Leave **Notes** and **Override** sections blank unless you intentionally need them.
+
 ## EFILE setup (UFile screen)
 Leave default settings unless you are explicitly instructed to change EFILE options.
 
@@ -100,6 +106,7 @@ Leave default settings unless you are explicitly instructed to change EFILE opti
 | Phone (day) | (902) 667-2875 |
 | Fax | (000) 000-0000 |
 | Changed since last return? | No Change |
+
 ## Other addresses (UFile screen)
 | Field | Value |
 |---|---|
@@ -138,6 +145,7 @@ Leave default settings unless you are explicitly instructed to change EFILE opti
 | Phone (day) | (902) 321-6749 |
 | Fax | (000) 000-0000 |
 | Changed since last return? | No Change |
+
 ## Corporate officers (UFile screen)
 | Name | Title | Signing officer? | Elected | Ceased | Non-resident? | Also shareholder? | SIN | Voting/Common/Pref % | Address | Phone | Fax |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -149,6 +157,7 @@ Leave default settings unless you are explicitly instructed to change EFILE opti
 - Date the return is signed: fill on filing/signing day (do not carry forward stale dates).
 
 **Note:** If a director “ceased date” is a carryforward artifact but the person is still a director, leave the ceased date blank in UFile for the current filing.
+
 ## Director (UFile screen)
 Use the same director details as listed under **Corporate officers**.
 
@@ -174,6 +183,7 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 | 2680 | Taxes payable (GST/HST, etc.) | 6,767 |  |
 | 2781 | Due to individual shareholder(s) | 3,578 | Tie-out: 2400 $2,669.99 (Thomas) + 2410 $908.16 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead. |
 | 3500 | Common shares | 100 |  |
+
 ### Retained earnings (whole dollars)
 | GIFI | Description | Amount | Entry rule |
 |---|---|---|---|
@@ -182,12 +192,14 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 | 3700 |  | 0 | Enter (dividends declared) |
 | 3740 | Other items affecting retained earnings (rounding) | 1 | Enter only if needed (rounding/other) |
 | 3849 | Retained earnings/deficit - End | 16,656 | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
+
 ### Tie-check (display-only totals)
 | GIFI | Description | Amount |
 |---|---|---|
 | 1599 | Total current assets (expected) | 29,788 |
 | 2599 | Total assets | 29,788 |
 | 3640 | Total liabilities and shareholder equity | 29,788 |
+
 ## Income statement (GIFI Schedule 125)
 | GIFI | Description | Amount | Note |
 |---|---|---|---|
@@ -211,11 +223,13 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 | 9270 | Other expenses | 346 | Includes CRA penalties $71 (non-deductible) |
 | 9275 | Delivery, freight and express | 100 |  |
 | 9281 | Vehicle expenses | 4,403 |  |
+
 ### Cost of sales tie-check (display-only)
 | GIFI | Description | Amount |
 |---|---|---|
 | 8518 | Cost of sales (expected) | 109,279 |
 | 8519 | Gross profit/loss (expected) | 71,956 |
+
 ## Notes checklist (UFile screen)
 ### Checklist (recommended minimal)
 | Field | Value | Note |
@@ -238,12 +252,14 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 | Total gross revenues | 181,235 | Usually same as total sales for your file. |
 
 If UFile auto-populates these from GIFI, do not add manual “additions/deductions” here; use Schedule 1 for tax add-backs (meals 50%, penalties, etc.).
+
 ## Tax on capital (UFile screen)
 | Field | Value | Note |
 |---|---|---|
 | Eligible for capital tax exemption? | Yes | For your file, expect capital tax exemption; confirm if UFile still requests fields. |
 | Total assets at year-end date from financial statements | 29,788 | If required, use Schedule 100 total assets (GIFI 2599). |
 | Retained earnings/deficit at year-end (if required) | 16,656 | If UFile forces a retained earnings element, use Schedule 100 GIFI 3600. |
+
 ## Status change for the corporation (UFile screen)
 No status change; leave blank.
 
@@ -259,15 +275,10 @@ Active business income only (canteen operations). No property/foreign/other inco
 ### Schedule 1 (tax purposes)
 | Code | Description | Amount | Calculation |
 |---|---|---|---|
-| A | Net income (loss) per financial statements | 16,655 |  |
-| 121 | Non-deductible meals and entertainment (50%) | 259 | 518 * 50% = 259 |
-| 128 | Non-deductible fines and penalties | 71 |  |
-| 206 | Capital items expensed | 0 |  |
-| 500 | Total additions | 330 | 259 + 71 = 330 |
-| 403 | Capital cost allowance (Schedule 8) | 0 |  |
-| 510 | Total deductions | 0 |  |
-| C | Net income (loss) for tax purposes | 16,985 | 16655 + 330 - 0 = 16985 |
-
+| 117 | 50% of meals and entertainment | 259 | 518 * 50% = 259 |
+| 300 | Net income per financial statements | 16,655 |  |
+| 311 | Penalties and fines (CRA) | 71 |  |
+| 400 | Net income for tax purposes | 16,985 | 16655 + 259 + 71 = 16985 |
 Note: If UFile auto-populates Schedule 1 line 403 from Schedule 8, do **not** manually enter 403 in the Schedule 1 grid.
 
 ### High-signal yes/no answers
@@ -276,7 +287,7 @@ Note: If UFile auto-populates Schedule 1 line 403 from Schedule 8, do **not** ma
 | T2 line 070 (first year after incorporation) | No | 2023 stub T2 (2022-12-08 → 2023-05-31) already answered Incorporation=Yes and filed Schedule 24; FY2024 should be No. |
 | T2 line 180 (internet income/websites) | Yes | Shopify sales present; likely Yes for internet income/websites (Schedule 88). Confirm store domains in UFile. |
 | T2 line 201 (book vs tax net income differs) | Yes | Book vs tax differs due to meals 50% add-back and CRA penalties; Schedule 1 is attached. |
-| CCA required / capital assets | Check | CCA is determined by the asset register + Schedule 8 (tax-only layer). |
+| CCA required / capital assets | No | No capital assets capitalized in these years (below capitalization threshold; expensed). |
 
 ## Dividends paid (UFile screen)
 No dividends declared or paid.
@@ -294,6 +305,7 @@ None.
 | Elected excessive eligible dividend designation as ordinary | 0 |  |
 
 No eligible dividends expected; leave GRIP blank/zero unless UFile requires it.
+
 ## Capital cost allowance (UFile screen)
 Use Schedule 8 outputs; enter class details if claiming CCA.
 
@@ -308,6 +320,7 @@ No deferred income plans.
 
 ## Transaction with shareholders, officers, or employees (UFile screen)
 There are transactions with shareholders (reimbursements/amounts due). For T2 disclosure screens, summarize high-level: reimbursements of expenses and amounts due to shareholders per Schedule 100 line 2781.
+
 ## Annual return (UFile screen)
 Complete if UFile requires it; no special entries in this packet.
 
@@ -319,6 +332,7 @@ Leave blank unless you have instalment records to enter.
 |---|---|
 | Tax payment information (code) | Full balance for every jurisdiction |
 | Tax refund information (code) |  |
+
 ## Capital dividend account (UFile screen)
 No capital dividend account activity.
 

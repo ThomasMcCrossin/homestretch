@@ -1,7 +1,7 @@
 {
   "meta": {
-    "schema_version": "1.1.0",
-    "generated_at": "2026-01-30T21:16:52.165631+00:00",
+    "schema_version": "1.2.0",
+    "generated_at": "2026-01-31T17:45:19.279682+00:00",
     "generator": "tools/build_year_artifacts.py",
     "source_packet": "UfileToFill/ufile_packet/packet.json",
     "snapshot_source": "output/snapshots/20260130-221500/output/",

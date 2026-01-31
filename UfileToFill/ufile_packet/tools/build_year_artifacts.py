@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -949,7 +950,125 @@ def build_year_guide(packet: dict, fy: str) -> str:
     parts.append(md_table(["Question", "Answer", "Note"], rows))
     parts.append("")
 
-    return "\n".join(parts).strip() + "\n"
+    draft = "\n".join(parts).strip() + "\n"
+
+    def section_block(title: str, body: str) -> str:
+        body = body.rstrip()
+        return f"## {title}\n{body}\n\n" if body else f"## {title}\n_(none)_\n\n"
+
+    def split_sections(text: str) -> tuple[str, dict[str, str]]:
+        prefix = text.split("## ", 1)[0]
+        sections: dict[str, str] = {}
+        for m in re.finditer(r"(?ms)^## ([^\n]+)\n(.*?)(?=^## |\Z)", text):
+            heading = m.group(1).strip()
+            body = m.group(2).rstrip() + "\n"
+            sections[heading] = body
+        return prefix, sections
+
+    prefix, sections = split_sections(draft)
+
+    # If we can't find the core sections, fall back to the draft.
+    if "Identification of the corporation (UFile screen)" not in sections:
+        return draft
+
+    gifi_raw = sections.get("GIFI form / notes (UFile screens)", "")
+    if "### Notes checklist" in gifi_raw:
+        gifi_intro, notes_block = gifi_raw.split("### Notes checklist", 1)
+        gifi_intro = gifi_intro.rstrip() + "\n"
+        notes_block = "### Notes checklist" + notes_block
+    else:
+        gifi_intro = gifi_raw
+        notes_block = ""
+    if notes_block.startswith("### Notes checklist"):
+        notes_block = notes_block.replace("### Notes checklist", "### Checklist", 1)
+
+    balance_body = sections.get("Schedule 100 (GIFI) — Balance sheet (enter these lines, whole dollars)", "")
+    retained_body = sections.get("Retained earnings (whole dollars)", "")
+    tie_body = sections.get("Tie-check (display-only totals)", "")
+    fixed_assets_body = sections.get("Fixed assets (book)", "")
+    if fixed_assets_body:
+        balance_body = balance_body.rstrip() + "\n\n### Fixed assets (book)\n" + fixed_assets_body.strip() + "\n"
+    if retained_body:
+        balance_body = balance_body.rstrip() + "\n\n### Retained earnings (whole dollars)\n" + retained_body.strip() + "\n"
+    if tie_body:
+        balance_body = balance_body.rstrip() + "\n\n### Tie-check (display-only totals)\n" + tie_body.strip() + "\n"
+
+    income_body = sections.get("Schedule 125 (GIFI) — Income statement (enter these lines, whole dollars)", "")
+    cogs_body = sections.get("Cost of sales tie-check (display-only)", "")
+    if cogs_body:
+        income_body = income_body.rstrip() + "\n\n### Cost of sales tie-check (display-only)\n" + cogs_body.strip() + "\n"
+
+    income_source_body = "Active business income only (canteen operations). No property/foreign/other income sources.\n\n"
+    schedule_1_body = sections.get("Schedule 1 (tax purposes)", "")
+    if schedule_1_body:
+        income_source_body += "### Schedule 1 (tax purposes)\n" + schedule_1_body.strip() + "\n\n"
+    high_signal_body = sections.get("High-signal yes/no answers", "")
+    if high_signal_body:
+        income_source_body += "### High-signal yes/no answers\n" + high_signal_body.strip() + "\n\n"
+
+    cca_body = "Use Schedule 8 outputs; enter class details if claiming CCA.\n\n"
+    schedule_8_body = sections.get("Schedule 8 / CCA", "")
+    if schedule_8_body:
+        cca_body += "### Schedule 8 / CCA\n" + schedule_8_body.strip() + "\n\n"
+
+    out: list[str] = []
+    out.append(prefix)
+    for heading in [
+        "UFile entry rules (important)",
+        "If something looks wrong in UFile (fast troubleshooting)",
+        "Key carryforward fields (match 2023 filing)",
+        "Key positions / elections (high signal)",
+    ]:
+        out.append(section_block(heading, sections.get(heading, "")))
+
+    out.append(section_block("Identification of the corporation (UFile screen)", sections.get("Identification of the corporation (UFile screen)", "")))
+    out.append(section_block("Tax preparer (UFile screen)", sections.get("Tax preparer (UFile screen)", "")))
+    out.append(section_block("EFILE setup (UFile screen)", "Leave default settings unless you are explicitly instructed to change EFILE options."))
+    out.append(section_block("Head office address (UFile screen)", sections.get("Head office address (UFile screen)", "")))
+    out.append(section_block("Other addresses (UFile screen)", sections.get("Location of books & records (UFile screen)", "")))
+    out.append(section_block("Mailing address of the corporation (UFile screen)", sections.get("Mailing address (UFile screen)", "")))
+    out.append(section_block("Corporate officers (UFile screen)", sections.get("Corporate officers / directors (UFile screen)", "")))
+    out.append(section_block("Director (UFile screen)", "Use the same director details as listed under **Corporate officers**."))
+    out.append(section_block("Director and signing officer (UFile screen)", "Signing officer is **Dwayne Ripley** (see Corporate officers table)."))
+    out.append(section_block("GIFI Import (UFile screen)", "If using a GIFI import file, import once before manual edits; otherwise skip this screen."))
+    out.append(section_block("GIFI (UFile screen)", gifi_intro))
+    out.append(section_block("Balance sheet (GIFI Schedule 100)", balance_body))
+    out.append(section_block("Income statement (GIFI Schedule 125)", income_body))
+    out.append(section_block("Notes checklist (UFile screen)", notes_block))
+    out.append(section_block("Net income (UFile screen)", sections.get("Net income (UFile screen)", "")))
+    out.append(section_block("Tax on capital (UFile screen)", sections.get("Tax on capital (UFile screen)", "")))
+    out.append(section_block("Status change for the corporation (UFile screen)", "No status change; leave blank."))
+    out.append(section_block("Charitable donations (UFile screen)", "No charitable donations claimed."))
+    out.append(section_block("Non-depreciable capital property (UFile screen)", "No non-depreciable capital property."))
+    out.append(section_block("Income source (UFile screen)", income_source_body.strip()))
+    if "Dividends paid (UFile screen)" in sections:
+        out.append(section_block("Dividends paid (UFile screen)", sections.get("Dividends paid (UFile screen)", "")))
+    else:
+        out.append(section_block("Dividends paid (UFile screen)", "No dividends declared or paid."))
+    out.append(section_block("Taxable dividend paid (UFile screen)", "None."))
+    out.append(section_block("General rate income pool (GRIP) (UFile screen)", sections.get("General rate income pool (GRIP) (UFile screen)", "")))
+    out.append(section_block("Capital cost allowance (UFile screen)", cca_body.strip()))
+    out.append(section_block("Loss carry forwards and loss carry backs (UFile screen)", "No losses to carry forward/back."))
+    out.append(section_block("Reserves (UFile screen)", "No reserves claimed."))
+    out.append(section_block("Deferred income plans (UFile screen)", "No deferred income plans."))
+    out.append(
+        section_block(
+            "Transaction with shareholders, officers, or employees (UFile screen)",
+            sections.get("Transactions with shareholders/officers/employees (UFile disclosure)", ""),
+        )
+    )
+    out.append(section_block("Annual return (UFile screen)", "Complete if UFile requires it; no special entries in this packet."))
+    out.append(section_block("Instalments paid (UFile screen)", "Leave blank unless you have instalment records to enter."))
+    out.append(section_block("Refund or balance owing (UFile screen)", sections.get("Refund or balance owing (UFile screen)", "")))
+    out.append(section_block("Capital dividend account (UFile screen)", "No capital dividend account activity."))
+    out.append(
+        section_block(
+            "Corporate history (UFile screen)",
+            sections.get("Corporate history carryforward (UFile screen)", ""),
+        )
+    )
+
+    return "".join(out).rstrip() + "\n"
 
 
 def write_year_tables(packet: dict, fy: str) -> None:
