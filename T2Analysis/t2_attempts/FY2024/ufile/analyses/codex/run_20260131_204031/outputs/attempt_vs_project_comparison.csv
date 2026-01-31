@@ -1,0 +1,30 @@
+schedule,code,attempt_amount,project_amount,delta,note
+schedule_100,1001,26292,26292,0,
+schedule_100,1121,2847,2847,0,
+schedule_100,1484,649,649,0,
+schedule_100,1740,1650,1650,0,
+schedule_100,1741,-330,-330,0,
+schedule_100,2599,31108,31108,0,
+schedule_100,2620,2687,2687,0,
+schedule_100,2680,6767,6767,0,
+schedule_100,2781,,3578,,"UFile quirk: project prefers 2781; if UFile rejects it, enter the amount on 2780 instead (same underlying payable). Present in project exports but not shown on attempt Schedule 100."
+schedule_100,2780,3578,,,"UFile quirk: project prefers 2781; if UFile rejects it, enter the amount on 2780 instead (same underlying payable). Present in attempt PDF but not exported in project Schedule 100."
+schedule_100,3500,100,100,0,
+schedule_100,3600,17976,17976,0,
+schedule_100,3620,18076,18076,0,
+schedule_100,3640,31108,31108,0,
+schedule_125,8000,181235,181235,0,
+schedule_125,8089,181235,,,"Present in attempt PDF, but not exported in project Schedule 125 (often a UFile internal / optional detail line)."
+schedule_125,8299,181235,181235,0,
+schedule_125,8320,112126,,,"Present in attempt PDF, but not exported in project Schedule 125 (often a UFile internal / optional detail line)."
+schedule_125,8500,-2847,,,"Present in attempt PDF, but not exported in project Schedule 125 (often a UFile internal / optional detail line)."
+schedule_125,8518,109279,109279,0,
+schedule_125,8519,71956,71956,0,
+schedule_125,8670,330,330,0,
+schedule_125,8810,1370,1370,0,
+schedule_125,9130,5561,5561,0,
+schedule_125,9270,346,346,0,
+schedule_125,9367,53981,53981,0,
+schedule_125,9368,163260,163260,0,
+schedule_125,9369,17975,,,"Present in attempt PDF, but not exported in project Schedule 125 (often a UFile internal / optional detail line)."
+schedule_125,9999,17975,17975,0,

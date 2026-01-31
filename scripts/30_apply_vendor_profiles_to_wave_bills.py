@@ -21,6 +21,7 @@ from _lib import (
 
 PROFILE_METHOD = "CURB_PG_SAMPLE"
 MANUAL_PROFILE_METHOD = "MANUAL_OVERRIDE"
+COMPONENT_OVERRIDE_METHOD = "BILL_COMPONENT_OVERRIDE"
 
 
 def ensure_output_dir() -> Path:
@@ -143,7 +144,7 @@ def delete_vendor_profile_allocations_for_bills(conn: sqlite3.Connection, wave_b
         f"""
         DELETE FROM bill_allocations
         WHERE wave_bill_id IN ({placeholders})
-          AND method IN ('VENDOR_PROFILE_ESTIMATE', 'TAX_ITC')
+          AND method IN ('VENDOR_PROFILE_ESTIMATE', 'TAX_ITC', '{COMPONENT_OVERRIDE_METHOD}')
         """,
         wave_bill_ids,
     )
@@ -200,6 +201,106 @@ def is_excluded_bill(
             return True
 
     return False
+
+
+def _bill_component_override_cfg(rules: dict, *, vendor_key: str, wave_bill_id: int) -> dict | None:
+    """
+    Returns the per-bill override mapping (if present) for a vendor bill.
+
+    Expected shape in overrides/vendor_profile_rules.yml:
+      bill_component_overrides:
+        COSTCO:
+          "143":
+            label: ...
+            fixed_net_allocations:
+              - {account_code, amount_cents, note}
+            apply_profile_to_remainder: true
+    """
+    root = rules.get("bill_component_overrides")
+    if not isinstance(root, dict):
+        return None
+    by_vendor = root.get(vendor_key)
+    if not isinstance(by_vendor, dict):
+        return None
+    cfg = by_vendor.get(str(wave_bill_id)) or by_vendor.get(int(wave_bill_id) if str(wave_bill_id).isdigit() else str(wave_bill_id))
+    return cfg if isinstance(cfg, dict) else None
+
+
+def _apply_bill_component_override(
+    conn: sqlite3.Connection,
+    *,
+    cfg: dict,
+    fy: str,
+    vendor_key: str,
+    wave_bill_id: int,
+    invoice_date: str,
+    vendor_raw: str,
+    invoice_number: str | None,
+    bill_net_cents: int,
+    detail_rows: list[dict[str, str]],
+    summary: dict[tuple[str, str, str], int],
+) -> int:
+    """
+    Inserts fixed allocations for a bill (net-only), returning total inserted cents.
+
+    These allocations are treated as "manual" for the purpose of later profile application:
+    the vendor profile is applied only to the remaining net amount.
+    """
+    alloc_list = cfg.get("fixed_net_allocations") or cfg.get("allocations") or []
+    if not isinstance(alloc_list, list) or not alloc_list:
+        return 0
+
+    label = str(cfg.get("label") or "").strip()
+    inserted = 0
+    for item in alloc_list:
+        if not isinstance(item, dict):
+            continue
+        account_code = str(item.get("account_code") or "").strip()
+        amount_cents = int(item.get("amount_cents") or 0)
+        note = str(item.get("note") or "").strip()
+        if not account_code or amount_cents <= 0:
+            continue
+
+        inserted += amount_cents
+        if inserted > int(bill_net_cents):
+            raise SystemExit(
+                f"bill_component_overrides {vendor_key} wave_bill_id={wave_bill_id}: "
+                f"fixed allocations exceed bill net (inserted={inserted} net_cents={bill_net_cents})"
+            )
+
+        notes = f"{fy} {label}".strip()
+        if note:
+            notes = (notes + " | " if notes else "") + note
+
+        conn.execute(
+            """
+            INSERT INTO bill_allocations
+              (wave_bill_id, account_code, amount_cents, method, notes)
+            VALUES (?, ?, ?, ?, ?)
+            """,
+            (wave_bill_id, account_code, amount_cents, COMPONENT_OVERRIDE_METHOD, notes),
+        )
+
+        detail_rows.append(
+            {
+                "fy": fy,
+                "vendor_key": vendor_key,
+                "wave_bill_id": str(wave_bill_id),
+                "source_row": "",
+                "invoice_date": invoice_date,
+                "vendor_raw": vendor_raw,
+                "invoice_number": invoice_number or "",
+                "net_amount": f"{bill_net_cents/100:.2f}",
+                "tax_amount": "",
+                "account_code": account_code,
+                "amount": f"{amount_cents/100:.2f}",
+                "method": COMPONENT_OVERRIDE_METHOD,
+                "profile_id": "",
+            }
+        )
+        summary[(fy, vendor_key, account_code)] += int(amount_cents)
+
+    return inserted
 
 
 def main() -> int:
@@ -435,6 +536,23 @@ def main() -> int:
                             vendor_raw=vendor_raw,
                         ):
                             continue
+
+                        # Optional per-bill overrides (e.g., carve out an asset inside a Costco receipt).
+                        override_cfg = _bill_component_override_cfg(rules, vendor_key=vendor_key, wave_bill_id=wave_bill_id)
+                        if override_cfg and bool(override_cfg.get("apply_profile_to_remainder", True)):
+                            _apply_bill_component_override(
+                                conn,
+                                cfg=override_cfg,
+                                fy=fy.fy,
+                                vendor_key=vendor_key,
+                                wave_bill_id=wave_bill_id,
+                                invoice_date=invoice_date,
+                                vendor_raw=vendor_raw,
+                                invoice_number=invoice_number,
+                                bill_net_cents=net_cents,
+                                detail_rows=detail_rows,
+                                summary=summary,
+                            )
 
                         # Preserve any existing manual allocations by allocating only the remaining net.
                         existing_net_cents = fetch_existing_net_allocated_cents(

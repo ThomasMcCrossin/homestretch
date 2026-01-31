@@ -1,10 +1,10 @@
 {
   "meta": {
     "schema_version": "1.2.0",
-    "generated_at": "2026-01-31T20:37:10.440119+00:00",
+    "generated_at": "2026-01-31T22:28:42.247677+00:00",
     "generator": "tools/build_year_artifacts.py",
     "source_packet": "UfileToFill/ufile_packet/packet.json",
-    "snapshot_source": "output/snapshots/20260131-181500/output/",
+    "snapshot_source": "output/snapshots/20260131-cca-ipad/output/",
     "fiscal_year": "FY2024"
   },
   "entity": {
@@ -241,7 +241,7 @@
         },
         "capital_cost_allowance": {
           "has_cca": true,
-          "note": "CCA claimed per Schedule 8. Total CCA: 330. Classes: 8."
+          "note": "CCA claimed per Schedule 8. Total CCA: 508. Classes: 8, 50."
         },
         "non_depreciable_capital_property": {
           "has_property": false,
@@ -288,15 +288,15 @@
           "label": "Prepaid expenses"
         },
         "1740": {
-          "amount": 1650,
+          "amount": 2298,
           "label": "Machinery, equipment, furniture and fixtures"
         },
         "1741": {
-          "amount": -330,
+          "amount": -508,
           "label": "Accum amort - machinery/equip/furn/fixtures"
         },
         "2599": {
-          "amount": 31108,
+          "amount": 31578,
           "label": "Total assets"
         },
         "2781": {
@@ -305,7 +305,7 @@
           "note": "Tie-out: 2400 $2,669.99 (Thomas) + 2410 $908.16 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead."
         },
         "2680": {
-          "amount": 6767,
+          "amount": 6757,
           "label": "Taxes payable (GST/HST, etc.)"
         },
         "2620": {
@@ -313,7 +313,7 @@
           "label": "Amounts payable and accrued liabilities"
         },
         "3499": {
-          "amount": 13032,
+          "amount": 13022,
           "label": "Total liabilities"
         },
         "3500": {
@@ -321,15 +321,15 @@
           "label": "Common shares"
         },
         "3600": {
-          "amount": 17976,
+          "amount": 18456,
           "label": "Retained earnings/deficit"
         },
         "3620": {
-          "amount": 18076,
+          "amount": 18556,
           "label": "Total shareholder equity"
         },
         "3640": {
-          "amount": 31108,
+          "amount": 31578,
           "label": "Total liabilities and shareholder equity"
         }
       },
@@ -343,12 +343,12 @@
           "label": "Total revenue"
         },
         "8518": {
-          "amount": 109279,
+          "amount": 108373,
           "label": "Cost of sales",
           "note": "Includes inventory shrinkage $1,370"
         },
         "8519": {
-          "amount": 71956,
+          "amount": 72862,
           "label": "Gross profit/loss"
         },
         "8520": {
@@ -365,7 +365,7 @@
           "label": "Employer's portion of employee benefits"
         },
         "8670": {
-          "amount": 330,
+          "amount": 508,
           "label": "Amortization of tangible assets"
         },
         "8690": {
@@ -377,7 +377,7 @@
           "label": "Interest and bank charges"
         },
         "8810": {
-          "amount": 1370,
+          "amount": 1998,
           "label": "Office expenses"
         },
         "8813": {
@@ -394,7 +394,7 @@
           "label": "Real estate rental"
         },
         "8960": {
-          "amount": 458,
+          "amount": 429,
           "label": "Repairs and maintenance"
         },
         "9060": {
@@ -402,7 +402,7 @@
           "label": "Salaries and wages"
         },
         "9130": {
-          "amount": 5561,
+          "amount": 5494,
           "label": "Supplies",
           "note": "Packaging + operating supplies"
         },
@@ -411,7 +411,7 @@
           "label": "Small tools"
         },
         "9270": {
-          "amount": 346,
+          "amount": 71,
           "label": "Other expenses",
           "note": "Includes CRA penalties $71 (non-deductible)"
         },
@@ -420,19 +420,19 @@
           "label": "Delivery, freight and express"
         },
         "9281": {
-          "amount": 4403,
+          "amount": 4393,
           "label": "Vehicle expenses"
         },
         "9367": {
-          "amount": 53981,
+          "amount": 54406,
           "label": "Total operating expenses"
         },
         "9368": {
-          "amount": 163260,
+          "amount": 162779,
           "label": "Total expenses"
         },
         "9999": {
-          "amount": 17975,
+          "amount": 18456,
           "label": "Net income/loss after taxes"
         }
       },
@@ -442,25 +442,21 @@
           "label": "Retained earnings/deficit - Start"
         },
         "3680": {
-          "amount": 17975,
+          "amount": 18456,
           "label": "Net income/loss"
         },
-        "3740": {
-          "amount": 1,
-          "label": "Other items affecting retained earnings (rounding)"
-        },
         "3849": {
-          "amount": 17976,
+          "amount": 18456,
           "label": "Retained earnings/deficit - End"
         }
       },
       "schedule_1": {
         "A": {
-          "amount": 17975,
+          "amount": 18456,
           "label": "Net income (loss) per financial statements"
         },
         "104": {
-          "amount": 330,
+          "amount": 508,
           "label": "Accounting amortization"
         },
         "121": {
@@ -476,19 +472,19 @@
           "label": "Capital items expensed"
         },
         "500": {
-          "amount": 660,
+          "amount": 838,
           "label": "Total additions"
         },
         "403": {
-          "amount": 330,
+          "amount": 508,
           "label": "Capital cost allowance (Schedule 8)"
         },
         "510": {
-          "amount": 330,
+          "amount": 508,
           "label": "Total deductions"
         },
         "C": {
-          "amount": 18305,
+          "amount": 18786,
           "label": "Net income (loss) for tax purposes"
         }
       },
@@ -511,7 +507,7 @@
         },
         "cca_required": {
           "value": true,
-          "note": "CCA claimed per Schedule 8. Total CCA: 330. Classes: 8."
+          "note": "CCA claimed per Schedule 8. Total CCA: 508. Classes: 8, 50."
         },
         "tips_handling": {
           "value": "not_applicable",
@@ -567,6 +563,17 @@
             "half_year_base": 1650,
             "cca_claim": 330,
             "closing_ucc": 1320
+          },
+          "50": {
+            "class": "50",
+            "description": "Computer hardware and systems software",
+            "rate": 0.55,
+            "opening_ucc": 0,
+            "additions": 648,
+            "dispositions": 0,
+            "half_year_base": 324,
+            "cca_claim": 178,
+            "closing_ucc": 470
           }
         },
         "assets": [
@@ -591,16 +598,28 @@
             "claim_percent_of_max": "1.0",
             "half_year_rule": "yes",
             "source_breakdown": "wave_bill_allocation: bill_id=221 invoice_date=2024-02-20 vendor=Electric Kitty - Bill account=6600 amount_cents=110000 alloc_total_cents=110000"
+          },
+          {
+            "asset_id": "costco_ipad_air_2023_12_08",
+            "description": "iPad Air 5 64GB (Costco)",
+            "cca_class": "50",
+            "available_for_use_date": "2023-12-08",
+            "total_cost_cents": 64839,
+            "total_cost_dollars": 648,
+            "claim_percent_of_max": "1.0",
+            "half_year_rule": "yes",
+            "source_breakdown": "wave_bill_allocation: bill_id=143 invoice_date=2023-12-08 vendor=Costco - Bill 22134500703182312081530 account=6600 amount_cents=64839 alloc_total_cents=64839"
           }
         ],
         "summary": {
-          "total_additions": 1650,
-          "total_cca_claim": 330,
+          "total_additions": 2298,
+          "total_cca_claim": 508,
           "classes_used": [
-            "8"
+            "8",
+            "50"
           ]
         },
-        "note": "Total CCA claimed: 330. Classes used: 8."
+        "note": "Total CCA claimed: 508. Classes used: 8, 50."
       },
       "book_fixed_assets": [
         {
@@ -642,6 +661,26 @@
           "component_breakdown": "account=6600 gifi=8810 amount_cents=54999 vendor=Costco - Bill invoice_date=2024-03-13",
           "source_breakdown": "wave_bill_allocation: bill_id=256 invoice_date=2024-03-13 vendor=Costco - Bill account=6600 amount_cents=54999 alloc_total_cents=54999",
           "notes": "Spec sheet: /home/clarencehub/t2-final-fy2024-fy2025/Asset Info/Hisense Freezer/FC18D6CWD-Spec-Sheet-Eng.pdf"
+        },
+        {
+          "asset_id": "costco_ipad_air_2023_12_08",
+          "description": "iPad Air 5 64GB (Costco)",
+          "book_treatment": "capitalize",
+          "book_depr_policy": "mirror_tax",
+          "book_start_date": "2023-12-08",
+          "available_for_use_date": "2023-12-08",
+          "total_cost_cents": 64839,
+          "total_cost_dollars": 648,
+          "reclass_total_cents": 64839,
+          "reclass_total_dollars": 648,
+          "amortization_cents": 17800,
+          "amortization_dollars": 178,
+          "book_asset_gifi_code": "1740",
+          "book_accum_amort_gifi_code": "1741",
+          "book_amort_expense_gifi_code": "8670",
+          "component_breakdown": "account=6600 gifi=8810 amount_cents=64839 vendor=Costco - Bill 22134500703182312081530 invoice_date=2023-12-08",
+          "source_breakdown": "wave_bill_allocation: bill_id=143 invoice_date=2023-12-08 vendor=Costco - Bill 22134500703182312081530 account=6600 amount_cents=64839 alloc_total_cents=64839",
+          "notes": "Receipt lines: AIR 5 64GB 768.39 - TPD/IPADAIR discount 120.00 => net 648.39 (Costco 2023-12-08)."
         }
       ]
     }
@@ -649,61 +688,61 @@
   "evidence_index": [
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260131-181500/output/gifi_schedule_100_FY2024.csv",
+      "path": "output/snapshots/20260131-cca-ipad/output/gifi_schedule_100_FY2024.csv",
       "description": "Balance sheet GIFI codes for FY2024",
       "fiscal_year": "FY2024"
     },
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260131-181500/output/gifi_schedule_100_FY2025.csv",
+      "path": "output/snapshots/20260131-cca-ipad/output/gifi_schedule_100_FY2025.csv",
       "description": "Balance sheet GIFI codes for FY2025",
       "fiscal_year": "FY2025"
     },
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260131-181500/output/gifi_schedule_125_FY2024.csv",
+      "path": "output/snapshots/20260131-cca-ipad/output/gifi_schedule_125_FY2024.csv",
       "description": "Income statement GIFI codes for FY2024",
       "fiscal_year": "FY2024"
     },
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260131-181500/output/gifi_schedule_125_FY2025.csv",
+      "path": "output/snapshots/20260131-cca-ipad/output/gifi_schedule_125_FY2025.csv",
       "description": "Income statement GIFI codes for FY2025",
       "fiscal_year": "FY2025"
     },
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260131-181500/output/gifi_retained_earnings_FY2024.csv",
+      "path": "output/snapshots/20260131-cca-ipad/output/gifi_retained_earnings_FY2024.csv",
       "description": "Retained earnings schedule for FY2024",
       "fiscal_year": "FY2024"
     },
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260131-181500/output/gifi_retained_earnings_FY2025.csv",
+      "path": "output/snapshots/20260131-cca-ipad/output/gifi_retained_earnings_FY2025.csv",
       "description": "Retained earnings schedule for FY2025",
       "fiscal_year": "FY2025"
     },
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260131-181500/output/schedule_1_FY2024.csv",
+      "path": "output/snapshots/20260131-cca-ipad/output/schedule_1_FY2024.csv",
       "description": "Schedule 1 net income reconciliation for FY2024",
       "fiscal_year": "FY2024"
     },
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260131-181500/output/schedule_1_FY2025.csv",
+      "path": "output/snapshots/20260131-cca-ipad/output/schedule_1_FY2025.csv",
       "description": "Schedule 1 net income reconciliation for FY2025",
       "fiscal_year": "FY2025"
     },
     {
       "category": "payroll",
-      "path": "output/snapshots/20260131-181500/output/payroll_summary.md",
+      "path": "output/snapshots/20260131-cca-ipad/output/payroll_summary.md",
       "description": "Payroll summary with T4 amounts and bank overrides",
       "fiscal_year": null
     },
     {
       "category": "HST",
-      "path": "output/snapshots/20260131-181500/output/shopify_sales_tax_journal_detail.csv",
+      "path": "output/snapshots/20260131-cca-ipad/output/shopify_sales_tax_journal_detail.csv",
       "description": "HST collected on Shopify sales",
       "fiscal_year": null
     },
@@ -721,19 +760,19 @@
     },
     {
       "category": "shareholder",
-      "path": "output/snapshots/20260131-181500/output/shareholder_mileage_fuel_summary.md",
+      "path": "output/snapshots/20260131-cca-ipad/output/shareholder_mileage_fuel_summary.md",
       "description": "Mileage and fuel reimbursements to shareholders",
       "fiscal_year": null
     },
     {
       "category": "shareholder",
-      "path": "output/snapshots/20260131-181500/output/shareholder_meals_estimate_summary.md",
+      "path": "output/snapshots/20260131-cca-ipad/output/shareholder_meals_estimate_summary.md",
       "description": "Meals estimates for Moncton trips",
       "fiscal_year": null
     },
     {
       "category": "bank",
-      "path": "output/snapshots/20260131-181500/output/readiness_report.md",
+      "path": "output/snapshots/20260131-cca-ipad/output/readiness_report.md",
       "description": "Bank reconciliation and readiness status",
       "fiscal_year": null
     },
@@ -799,21 +838,21 @@
       "area": "meals_add_back",
       "description": "50% meals and entertainment add-back for Schedule 1",
       "approach": "Standard ITA 67.1 treatment. Full expense deducted on books; 50% added back for tax.",
-      "evidence": "output/snapshots/20260131-181500/output/schedule_1_FY2024.csv",
+      "evidence": "output/snapshots/20260131-cca-ipad/output/schedule_1_FY2024.csv",
       "risk_level": "low"
     },
     {
       "area": "cra_penalties",
       "description": "CRA penalties included in Other expenses but non-deductible",
       "approach": "Penalties recorded on books ($71 FY2024, $274 FY2025) and added back on Schedule 1 line 311.",
-      "evidence": "output/snapshots/20260131-181500/output/schedule_1_FY2024.csv",
+      "evidence": "output/snapshots/20260131-cca-ipad/output/schedule_1_FY2024.csv",
       "risk_level": "low"
     },
     {
       "area": "shareholder_meals_estimate",
       "description": "Moncton trip meals for shareholders estimated (not all receipts)",
       "approach": "Conservative per-diem estimate based on trip frequency. FY2024 $465, FY2025 $390.",
-      "evidence": "output/snapshots/20260131-181500/output/shareholder_meals_estimate_summary.md",
+      "evidence": "output/snapshots/20260131-cca-ipad/output/shareholder_meals_estimate_summary.md",
       "risk_level": "medium"
     },
     {
@@ -834,7 +873,7 @@
       "area": "gross_margin_swing",
       "description": "Gross margin increased from 43% to 54% between FY2024 and FY2025",
       "approach": "Review point: compute from Schedule 125 (Gross profit / Revenue). Drivers include inventory increase and seasonality/purchasing differences.",
-      "evidence": "output/snapshots/20260131-181500/output/gifi_schedule_125_FY2024.csv",
+      "evidence": "output/snapshots/20260131-cca-ipad/output/gifi_schedule_125_FY2024.csv",
       "risk_level": "medium"
     }
   ]

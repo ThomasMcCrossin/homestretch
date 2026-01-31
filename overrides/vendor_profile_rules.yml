@@ -101,3 +101,18 @@ manual_vendor_profiles:
 # There is no Wave account code in the cleaned ledger export, so this is an explicit policy switch.
 policy:
   assume_wave_is_pure_cogs_for_eligible_vendors: true
+
+# Per-bill component overrides: carve out a known line item to a fixed account_code,
+# then apply the normal vendor profile weights only to the remaining net amount.
+# This is used when we discover a capital asset embedded inside a multi-item receipt.
+bill_component_overrides:
+  COSTCO:
+    # 2023-12-08 Costco receipt total 1212.36 (wave_bill_id=143).
+    # iPad Air 5 64GB net: 768.39 - 120.00 discount = 648.39.
+    "143":
+      label: "iPad Air 5 64GB (AIR 5 64GB less TPD/IPADAIR discount)"
+      fixed_net_allocations:
+        - account_code: "6600" # Office Supplies (will be reclassed to fixed assets via Option 1 overlay)
+          amount_cents: 64839
+          note: "AIR 5 64GB 768.39 - discount 120.00 = 648.39 net"
+      apply_profile_to_remainder: true

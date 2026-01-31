@@ -7,7 +7,7 @@ FY2025,1230,Inventory - Retail Goods,asset,1121,,4411.06,0.00,441106
 FY2025,1300,Prepaid Expenses,asset,1484,,1490.07,0.00,149007
 FY2025,2000,Accounts Payable,liability,2620,,0.00,7135.87,-713587
 FY2025,2200,HST Payable,liability,2680,,0.00,13913.82,-1391382
-FY2025,2210,HST ITC Receivable,liability,2680,,11250.81,0.00,1125081
+FY2025,2210,HST ITC Receivable,liability,2680,,11260.87,0.00,1126087
 FY2025,2250,CRA Charges Payable (Interest/Penalties),liability,2620,,0.00,219.10,-21910
 FY2025,2400,Due to Shareholder - Thomas,liability,2781,,0.00,3890.67,-389067
 FY2025,2410,Due to Shareholder - Dwayne,liability,2781,,0.00,1606.68,-160668
@@ -16,7 +16,7 @@ FY2025,2700,Payroll Liabilities - CPP,liability,2620,,202.07,0.00,20207
 FY2025,2710,Payroll Liabilities - EI,liability,2620,,20.86,0.00,2086
 FY2025,2720,Payroll Liabilities - Income Tax,liability,2620,,0.00,272.64,-27264
 FY2025,3000,Share Capital (Corp only),equity,3500,,0.00,100.00,-10000
-FY2025,3100,Retained Earnings,equity,3600,,0.00,16655.56,-1665556
+FY2025,3100,Retained Earnings,equity,3600,,0.00,16665.62,-1666562
 FY2025,3400,Dividends Declared,equity,3600,,36900.00,0.00,3690000
 FY2025,4000,Sales - Food,revenue,8000,8000,0.00,80379.30,-8037930
 FY2025,4030,Sales - Retail Goods,revenue,8000,8000,0.00,275.60,-27560
@@ -43,11 +43,11 @@ FY2025,5032,COGS - Retail - Candy/Chocolate,expense,8518,8518,9166.92,0.00,91669
 FY2025,5033,COGS - Retail - Health Products,expense,8518,8518,190.72,0.00,19072
 FY2025,5034,COGS - Retail - Accessories,expense,8518,8518,8583.99,0.00,858399
 FY2025,5035,COGS - Retail - Apparel,expense,8518,8518,500.65,0.00,50065
-FY2025,5039,COGS - Retail - Other,expense,8518,8518,1148.75,0.00,114875
+FY2025,5039,COGS - Retail - Other,expense,8518,8518,1038.55,0.00,103855
 FY2025,5099,COGS - Food - Other,expense,8518,8518,5906.43,0.00,590643
 FY2025,5100,Freight In,expense,8518,8518,1083.57,0.00,108357
 FY2025,5200,Packaging & Supplies,expense,9130,8810,2675.10,0.00,267510
-FY2025,5204,Supplies - Cleaning,expense,9130,8810,1655.96,0.00,165596
+FY2025,5204,Supplies - Cleaning,expense,9130,8810,1646.78,0.00,164678
 FY2025,5205,Supplies - Paper Products,expense,9130,8810,298.11,0.00,29811
 FY2025,5300,Merchant Processing Fees,expense,8710,8860,204.49,0.00,20449
 FY2025,5400,Inventory Shrinkage/Spoilage,expense,8518,,200.00,0.00,20000
@@ -55,14 +55,14 @@ FY2025,6000,Bank Charges & Fees,expense,8710,8690,1122.71,0.00,112271
 FY2025,6100,Rent,expense,8911,9200,7136.98,0.00,713698
 FY2025,6210,Payment Processing Fees,expense,8710,,2227.26,0.00,222726
 FY2025,6230,Utilities - Internet,expense,9225,9136,465.38,0.00,46538
-FY2025,6300,Repairs & Maintenance,expense,8960,9281,603.12,0.00,60312
+FY2025,6300,Repairs & Maintenance,expense,8960,9281,584.75,0.00,58475
 FY2025,6350,Small Tools & Equipment,expense,9131,,479.08,0.00,47908
 FY2025,6400,Insurance - Business,expense,8690,9804,1951.00,0.00,195100
 FY2025,6500,Advertising & Promotion,expense,8520,8521,597.71,0.00,59771
 FY2025,6510,Accounting & Bookkeeping Fees,expense,8860,,284.16,0.00,28416
 FY2025,6521,Employee Events,expense,8520,8520,200.00,0.00,20000
 FY2025,6550,Shipping & Delivery Expense,expense,9275,,115.76,0.00,11576
-FY2025,6600,Office Supplies,expense,8810,9270,3443.62,0.00,344362
+FY2025,6600,Office Supplies,expense,8810,9270,3581.37,0.00,358137
 FY2025,6610,Computer Hardware Expense,expense,8813,,2555.69,0.00,255569
 FY2025,6620,Software & SaaS Expense,expense,8813,,358.98,0.00,35898
 FY2025,6700,Professional Fees - Accounting,expense,8860,9060,68.55,0.00,6855

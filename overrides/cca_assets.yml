@@ -74,6 +74,18 @@ assets:
     book_treatment: capitalize
     book_depr_policy: mirror_tax
     notes: "Model: AMS-LB9. Manual: /home/clarencehub/t2-final-fy2024-fy2025/Asset Info/Vending Machine/ams-manual-sensit3-snack-vcb-vcf-vcbe-lbx-food-lcx-combo.pdf"
+  - asset_id: costco_ipad_air_2023_12_08
+    description: iPad Air 5 64GB (Costco)
+    cca_class: 50
+    available_for_use_date: "2023-12-08"
+    source_components:
+      - source_type: wave_bill_allocation
+        wave_bill_id: 143
+        account_code: "6600"
+        amount_cents: 64839
+    book_treatment: capitalize
+    book_depr_policy: mirror_tax
+    notes: "Receipt lines: AIR 5 64GB 768.39 - TPD/IPADAIR discount 120.00 => net 648.39 (Costco 2023-12-08)."
   - asset_id: shopify_card_reader_2024_11_12
     description: Shopify card reader hardware
     cca_class: 12

@@ -1,3 +1,4 @@
 Class,Description,Rate,Opening_UCC,Additions,Dispositions,Half_year_base,CCA_Claim,Closing_UCC
 8,General equipment,0.2,1320,557,0,1877,375,1502
 12,Tools and utensils under $500,1.0,0,663,0,663,663,0
+50,Computer hardware and systems software,0.55,470,0,0,470,259,211

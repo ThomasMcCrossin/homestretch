@@ -7,3 +7,7 @@ FY2024,costco_freezer_2024_03_13,accum_amort_balance,1741,,-11000,-110.00,Hisens
 FY2024,costco_freezer_2024_03_13,amort_expense,8670,,11000,110.00,Book amortization: Hisense freezer (Costco),mirror_tax
 FY2024,costco_freezer_2024_03_13,asset_balance,1740,,54999,549.99,Hisense freezer (Costco),carryforward
 FY2024,costco_freezer_2024_03_13,reclass_expense_credit,8810,6600,-54999,-549.99,Hisense freezer (Costco),bill_id=256 vendor=Costco - Bill
+FY2024,costco_ipad_air_2023_12_08,accum_amort_balance,1741,,-17800,-178.00,iPad Air 5 64GB (Costco),carryforward
+FY2024,costco_ipad_air_2023_12_08,amort_expense,8670,,17800,178.00,Book amortization: iPad Air 5 64GB (Costco),mirror_tax
+FY2024,costco_ipad_air_2023_12_08,asset_balance,1740,,64839,648.39,iPad Air 5 64GB (Costco),carryforward
+FY2024,costco_ipad_air_2023_12_08,reclass_expense_credit,8810,6600,-64839,-648.39,iPad Air 5 64GB (Costco),bill_id=143 vendor=Costco - Bill 22134500703182312081530
