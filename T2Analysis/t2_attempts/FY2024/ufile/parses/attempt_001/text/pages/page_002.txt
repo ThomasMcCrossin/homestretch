@@ -1,0 +1,25 @@
+Notes and diagnostics
+Corporation 1 4 5 8 7 4 3 0 C a n a d a I n c .
+Business number (BN) 7 4 8 0 0 3 1 4 2 R C 0 0 0 1
+Taxation year end 3 1 - 0 5 - 2 0 2 4
+Time and date calculated: 1 5 :0 3 : 1 4 3 1 - 0 1 - 2 0 2 6
+Program version: 2 8 .1 5
+Based on information available at: 3 1 - 1 0 - 2 0 2 4
+User ID:
+NORTH AMERICAN INDUSTRY CLASSIFICATION SYSTEM (NAICS) CODES
+The integration of NAICS codes requires corporations to pick their main revenue-generating business
+activity. Active corporations that file their T2 returns either by Internet or on paper using 2D bar codes
+must choose the most appropriate code to describe their main revenue-generating business activity.
+It is crucial that the most accurate business activity is selected the first time (using the keyword
+NAICS.ACT in the ACTIVITY keyword group), since the first year's code is carried forward to
+subsequent years, allowing for a simple validation of the description when no change in the
+main business activity occurs.
+Therefore, for subsequent years, the corporation should validate that the business description
+chosen for the last return filed is still accurate. If the last business description is still accurate,
+no further action will be required. The return may be transmitted electronically or printed in bar-
+code format.
+If the last business description is not accurate, the corporation must select an updated business
+activity description.
+Should you have any questions to describe your active corporation's main revenue-generating business
+activity when filing your T2 return, please call the CRA Business Enquiries line at 1-800-959-5525.
+Diagnostics page 1 of 4

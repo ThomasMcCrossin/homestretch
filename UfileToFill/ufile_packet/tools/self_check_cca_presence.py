@@ -36,6 +36,9 @@ def main() -> int:
             failures.append(f"{fy}: schedule_8 exists but positions.cca_required.value is not true")
 
         guide_path = YEARS_DIR / fy / "UFILet2_FILL_GUIDE.md"
+        guide_html_path = YEARS_DIR / fy / "UFILet2_FILL_GUIDE.html"
+        if not guide_html_path.exists():
+            failures.append(f"{fy}: missing UFILet2_FILL_GUIDE.html (run build_year_artifacts.py)")
         if guide_path.exists():
             guide = guide_path.read_text()
             if has_s8 and ("## Capital cost allowance (UFile screen)" not in guide or "Schedule 8 / CCA" not in guide):
@@ -50,4 +53,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

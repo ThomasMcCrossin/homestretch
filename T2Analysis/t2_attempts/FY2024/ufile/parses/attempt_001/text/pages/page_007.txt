@@ -1,0 +1,39 @@
+31 Jan 2026 14587430 Canada Inc. Yr.end: 31-05-2024 Acct.#748003142RC0001
+Assembly instructions
+Name: 14587430 Canada Inc.
+Year end: 2024-05-31
+Business number: 748003142RC0001
+Canada Revenue
+Assembling the federal T2 tax return when Corporation Internet Filing
+Agency
+If a corporation income tax return is being transmitted electronically by someone other than the required filer, an authorized signing
+officer of the corporation must complete and sign Form T183CORP before the tax return is transmitted.
+The amounts entered on Form T183CORP must match the amounts on the electronically filed return. Do not submit the form unless
+it is requested by CRA. Keep a copy for your records.
+A signed Business consent/Cancel business consent confirmation page should also be retained for your records when electronically
+submitting this request.
+Order of attachments:
+Other attachments
+This includes forms, eligibility certificates and other certificates or attestations which are not transmitted for Corporation Internet
+Filing.
+If you have an election that applies to the return that is being filed:
+When an election applies, and there is no authorized form for the election, enter the election details in notes to the financial
+statements (line 100-0001 on the General Index of Financial Information). When there is an authorized election form, such as
+Form T2054, Election for a Capital Dividend under Subsection 83(2), submit a paper copy of the form separately.
+Slips, receipts, and documents
+After the return has been processed, you may be contacted to obtain supporting documents, so remember to keep
+your receipts and information slips for at least six years. This is part of the same verification process that
+applies to all tax returns, whether paper or electronic.
+Refunds
+Refunds for returns filed using the Corporation Internet Filing service will be issued by cheque or by direct deposit.
+Balance due
+If the corporation's balance owing is less than $2, you do not have to make a payment. If you have to make a
+payment to the CRA, a number of options exist.
+Pay electronically
+Many financial institutions let you conveniently pay your business taxes through their telephone and Internet banking services.
+Pay at your financial institution
+You can make your payment at your financial institution in Canada, free of charge. Enter your payment amount on a Remittance
+Voucher, and take this form with you to your financial institution when you make your payment.
+Pay by mail
+You can make your payment by mail. Please use a Remittance Voucher when making your payment.
+Page 1

@@ -18,6 +18,8 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
+from render_year_guide_html import render_year_guide_html
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 PACKET_PATH = PROJECT_ROOT / "UfileToFill" / "ufile_packet" / "packet.json"
@@ -1127,7 +1129,9 @@ def main() -> int:
         year_dir.mkdir(parents=True, exist_ok=True)
 
         (year_dir / "packet.json").write_text(json.dumps(build_year_packet(packet, fy), indent=2, sort_keys=False) + "\n")
-        (year_dir / "UFILet2_FILL_GUIDE.md").write_text(build_year_guide(packet, fy))
+        md_guide = build_year_guide(packet, fy)
+        (year_dir / "UFILet2_FILL_GUIDE.md").write_text(md_guide)
+        (year_dir / "UFILet2_FILL_GUIDE.html").write_text(render_year_guide_html(packet, fy, md_guide=md_guide))
         write_year_tables(packet, fy)
 
     return 0

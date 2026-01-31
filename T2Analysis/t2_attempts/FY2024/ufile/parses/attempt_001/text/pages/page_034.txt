@@ -1,0 +1,39 @@
+31 Jan 2026 14587430 Canada Inc. Yr.end: 31-05-2024 Acct.#748003142RC0001
+Protected Bwhen completed
+Part 4 – Taxable capital employed in Canada
+To be completed by a corporation that was resident in Canada at any time in the year
+Taxable capital for Taxable income earned Taxable capital
+the year (line 500) 18,076 × in Canada 610 18,564 = employed in Canada 690 18,076
+Taxable income 18,564
+Notes: 1. Regulation 8601 gives details on calculating the amount of taxable income earned in Canada.
+2. Where a corporation's taxable income for a tax year is "0," it shall, for the purposes of the above calculation, be deemed to have a taxable
+income for that year of $1,000.
+3. In the case of an airline corporation, Regulation 8601 should be considered when completing the above calculation.
+To be completed by a corporation that was a non-resident of Canada throughout the year
+and carried on a business through a permanent establishment in Canada
+Total of all amounts each of which is the carrying value at the end of the year of an asset of the corporation used in
+the year or held in the year, in the course of carrying on any business during the year through a permanent
+establishment in Canada . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 701
+Deduct the following amounts:
+Corporation's indebtedness at the end of the year [other than indebtedness described in any
+of paragraphs 181.2(3)(c) to (f)] that may reasonably be regarded as relating to a business it
+carried on during the year through a permanent establishment in Canada . . . . . . . . . . . . . . . . . . . 711
+Total of all amounts each of which is the carrying value at the end of year of an asset described in
+subsection 181.2(4) of the corporation that it used in the year, or held in the year, in the course
+of carrying on any business during the year through a permanent establishment in Canada . . . . . 712
+Total of all amounts each of which is the carrying value at the end of year of an asset of the
+corporation that is a ship or aircraft the corporation operated in international traffic, or
+personal or movable property used or held by the corporation in carrying on any business
+during the year through a permanent establishment in Canada (see note below) . . . . . . . . . . . . . . 713
+Total deductions (add lines 711, 712, and 713) E
+Taxable capital employed in Canada (line 701 minus amount E) (if negative, enter "0") . . . . . . . . . . . . . . . . . . . . . . . . . . . . 790
+Note: Complete line 713 only if the country in which the corporation is resident did not impose a capital tax for the year on similar assets, or a tax for the
+year on the income from the operation of a ship or aircraft in international traffic, of any corporation resident in Canada during the year.
+Part 5 – Calculation for purposes of the small business deduction
+This part is applicable to corporations that are not associated in the current year, but were associated in the prior year.
+Taxable capital employed in Canada (amount from line 690) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . F
+Deduct: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . $10,000,000 G
+Excess (amount F minus amount G) (if negative, enter "0") H
+Calculation for purposes of the small business deduction (amount H × 0.225%) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . I
+Enter this amount at line 415 of the T2 return.
+Version 28.01 UF25 Page 3 of 3

@@ -11,6 +11,7 @@ Goals:
 
 - `prompts/`
   - Stored prompts used for explorations (Claude/Codex), versioned by filename and date as needed.
+  - FY-agnostic prompt templates live under `T2Analysis/prompts/templates/` and are rendered into run folders.
 - `t2_attempts/`
   - Per-year attempt artifacts and analysis run folders.
 - `templates/`
@@ -21,4 +22,3 @@ Goals:
 ## Rule of thumb
 
 If a tool/script would write anywhere outside `T2Analysis/`, don’t run it that way—redirect outputs into a run folder under `T2Analysis/t2_attempts/...`.
-

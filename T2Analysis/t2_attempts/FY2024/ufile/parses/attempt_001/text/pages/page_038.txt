@@ -1,0 +1,29 @@
+31 Jan 2026 14587430 Canada Inc. Yr.end: 31-05-2024 Acct.#748003142RC0001
+Protected B when completed
+Part 2 – Income from active business with partnership income
+Fill out this part if your corporation is a member or designated member of a partnership.
+Period after March 31, 2025
+If there are days in the tax year after March 31, 2025, calculate the income from active business as follows:
+Amount Y from Part 6 of Schedule 7 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2A
+Line 530 from Part 6 of Schedule 7 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2B
+Line 540 from Part 6 of Schedule 7 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2C
+Amount AA from Part 6 of Schedule 7 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2D
+Amount CC from Part 6 of Schedule 7 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2E
+Subtotal (amount 2A minus amounts 2B, 2C, and 2D, plus amount 2E) 2F
+Amount Q from Part 5 of Schedule 7 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2G
+Column 1 Column 2 Column 3 Column 4
+Amounts from Amounts from column K1 Column 1 minus Lesser of columns 1
+column F1 in Part 4 in Part 4 of Schedule 7 column 2 and 2 (if column 1 is
+of Schedule 7 multiplied by (if negative, enter "0") negative, enter "0")
+700,000
+500,000
+Totals 2H 2I
+Line 370 from Part 4 of Schedule 7 . . . . . . . . . . . 2J
+Line 380 from Part 4 of Schedule 7 . . . . . . . . . . . 2K
+Subtotal (amount 2J plus amount 2K) 2L
+Enter amount 2H or amount 2L, whichever is less . . . . . . . . . . . . . . . . . . . . . 2M
+Specified partnership income (amount 2I plus amount 2M) . . . . . . . . . . . . . . 2N
+Partnership income not eligible for the small business deduction (amount 2G minus amount 2N) . . . . . 2O
+Income from active business (amount 2F minus amount 2O) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2P
+Enter amount 2P at amount 1I in Part 1.
+T2 SCH 346 E (22) VVeerrssiioonn 2288..0011 UUFF2255 Page 2 of 3

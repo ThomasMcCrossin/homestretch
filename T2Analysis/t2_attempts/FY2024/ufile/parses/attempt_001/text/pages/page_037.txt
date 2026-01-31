@@ -1,0 +1,47 @@
+31 Jan 2026 14587430 Canada Inc. Yr.end: 31-05-2024 Acct.#748003142RC0001
+Canada Revenue Agence du revenu Schedule 346
+Agency du Canada
+Protected B
+Nova Scotia Corporation Tax Calculation
+when completed
+(2022 and later tax years)
+Corporation's name Business number Tax year-end
+Year Month Day
+14587430 Canada Inc. 748003142RC0001 2024-05-31
+Use this schedule if your corporation had a permanent establishment (as defined in section 400 of the federal Income Tax Regulations) in Nova Scotia,
+and had taxable income earned in the year in Nova Scotia and its offshore area.
+This schedule is a worksheet only and does not have to be filed with your T2 Corporation Income Tax Return.
+Part 1 – Income subject to the lower and higher tax rate for Nova Scotia and its offshore area
+Period before April 1, 2025
+If there are days in the tax year before April 1, 2025, calculate the income subject to Nova Scotia lower and higher tax rates as follows:
+Taxable income for Nova Scotia Note 1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18,564 1A
+Income eligible for the lower tax rate for Nova Scotia and its offshore area:
+Line 400 of the T2 return . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18,564 1B
+Line 405 of the T2 return . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18,564 1C
+Line 428 of the T2 return . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 500,000 1D
+Amount 1B, 1C, or 1D, whichever is the least . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18,564 1E
+Amount 1E 18,564 × Taxable income for Nova Scotia Note 1 18,564 . . . . . . . . = 18,564 1F
+Taxable income for all provinces Note 2 18,564
+Income subject to the higher tax rate for Nova Scotia and its offshore area (amount 1A minus amount 1F) . . . . . . . . . . . . . . 1G
+Note 1 If your corporation had a permanent establishment only in Nova Scotia or in the offshore area of Nova Scotia, enter the taxable
+income from line 360 of the T2 return. Otherwise, enter the total of the taxable incomes allocated to both jurisdictions in Nova Scotia
+(the province itself and the offshore area) from column F in Part 1 of Schedule 5, Tax Calculation Supplementary – Corporations.
+Note 2 Includes the territories and the offshore jurisdictions for Nova Scotia and Newfoundland and Labrador.
+Period after March 31, 2025
+If there are days in the tax year after March 31, 2025, calculate the income subject to Nova Scotia lower and higher tax rates as follows:
+Taxable income for Nova Scotia Note 1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1H
+Income eligible for the lower tax rate for Nova Scotia and its offshore area:
+Line 400 of the T2 return Note 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1I
+Line 405 of the T2 return . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1J
+Line 428 of the T2 return . . . . . . . . . . . . . × 700,000 = . . . . . . . . . 1K
+500,000
+Amount 1I, 1J, or 1K, whichever is the least . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1L
+Amount 1L × Taxable income for Nova Scotia Note 1 . . . . . . . . = 1M
+Taxable income for all provinces Note 3
+Income subject to the higher tax rate for Nova Scotia and its offshore area (amount 1H minus amount 1M) . . . . . . . . . . . . . 1N
+Note 1 If your corporation had a permanent establishment only in Nova Scotia or in the offshore area of Nova Scotia, enter the taxable
+income from line 360 of the T2 return. Otherwise, enter the total of the taxable incomes allocated to both jurisdictions in Nova Scotia
+(the province itself and the offshore area) from column F in Part 1 of Schedule 5, Tax Calculation Supplementary – Corporations.
+Note 2 If the corporation is a member of a partnership, complete Part 2 to calculate income from active business.
+Note 3 Includes the territories and the offshore jurisdictions for Nova Scotia and Newfoundland and Labrador.
+T2 SCH 346 E (22) Version 28.01 UF25 Page 1 of 3

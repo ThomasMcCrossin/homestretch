@@ -1,0 +1,16 @@
+ Warnings
+Please review the notes and warning messages below.
+
+
+
+Depreciation has been entered but CCA class is missing - verify.
+
+ 
+
+
+There is no entry in the income source section; all income is considered as active business income.
+
+ 
+
+
+No instalments required since total tax instalments calculated are less than or equal to $3,000.

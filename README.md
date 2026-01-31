@@ -93,6 +93,10 @@ Manual (equivalent) steps:
 6) `python3 UfileToFill/ufile_packet/tools/validate_packet.py`
 7) `python3 UfileToFill/ufile_packet/tools/build_year_artifacts.py`
 
+Outputs:
+- Per-year Markdown guide: `UfileToFill/ufile_packet/years/FY*/UFILet2_FILL_GUIDE.md`
+- Per-year HTML guide (recommended for readability): `UfileToFill/ufile_packet/years/FY*/UFILet2_FILL_GUIDE.html`
+
 Mode toggle:
 - `--book-fixed-assets off` (default) keeps Option 2 behavior (tax-only CCA; capital items remain expensed in books)
 - `--book-fixed-assets overlay` applies the book fixed-asset overlay (Option 1)

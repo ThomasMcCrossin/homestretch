@@ -1,0 +1,41 @@
+31 Jan 2026 14587430 Canada Inc. Yr.end: 31-05-2024 Acct.#748003142RC0001
+Protected Bwhen completed
+Small business deduction
+Canadian-controlled private corporations (CCPCs) throughout the tax year
+Income eligible for the small business deduction from Schedule 7 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 400 18,564 A
+Taxable income from line 360 on page 3, minus 100/28 of the amount on line 632* on page 8, minus 4 times the amount on
+line 636** on page 8, and minus any amount that, because of federal law, is exempt from Part I tax . . . . . . . . . . . . . . . . . . . . 405 18,564 B
+Business limit (see notes 1 and 2 below) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 410 500,000 C
+Notes:
+1. For CCPCs that are not associated, enter $500,000 on line 410. However, if the corporation's tax year is less than 51 weeks,
+prorate this amount by the number of days in the tax year divided by 365, and enter the result on line 410.
+2. For associated CCPCs, use Schedule 23 to calculate the amount to be entered on line 410.
+Business limit reduction
+Taxable capital business limit reduction
+Amount C 500,000 × 415*** D = . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . E
+90,000
+Passive income business limit reduction
+Adjusted aggregate investment income from Schedule 7**** . . . . . . . . . . . . . . . . . . 417 - 50,000 = . . . F
+Amount C 500,000 × Amount F = . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . G
+100,000
+The greater of amount E and amount G 422 H
+Reduced business limit (amount C minus amount H) (if negative, enter "0") . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 426 500,000 I
+Business limit the CCPC assigns under subsection 125(3.2) (from line 515 below) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . J
+Reduced business limit after assignment (amount I minus amount J) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 428 500,000 K
+Small business deduction – Amount A, B, C, or K, whichever is the least . . . . . . . . . . . . . . . 18,564 × 19% = 430 3,527
+Enter amount from line 430 at amount L on page 8.
+* Calculate the amount of foreign non-business income tax credit deductible on line 632 without reference to the refundable tax on the CCPC's
+investment income (line 604) and without reference to the corporate tax reductions under section 123.4.
+** Calculate the amount of foreign business income tax credit deductible on line 636 without reference to the corporation tax reductions under
+section 123.4.
+*** Large corporations
+If the corporation is not associated with any corporations in both the current and previous tax years, the amount to be entered on line 415 is:
+(total taxable capital employed in Canada for the prior year minus $10,000,000) × 0.225%.
+If the corporation is not associated with any corporations in the current tax year, but was associated in the previous tax year, the amount to be
+entered on line 415 is: (total taxable capital employed in Canada for the current year minus $10,000,000) × 0.225%.
+For corporations associated in the current tax year, see Schedule 23 for the special rules that apply.
+**** Enter the total adjusted aggregate investment income of the corporation and all associated corporations for each tax year that ended in the preceding
+calendar year. Each corporation with such income has to file a Schedule 7. For a corporation's first tax year that starts after 2018, this amount is
+reported at line 744 of the corresponding Schedule 7. Otherwise, this amount is the total of all amounts reported at line 745 of the corresponding
+Schedule 7 of the corporation for each tax year that ended in the preceding calendar year.
+T2 E (11/24) Version 28.01 UF25 Page 4 of 9
