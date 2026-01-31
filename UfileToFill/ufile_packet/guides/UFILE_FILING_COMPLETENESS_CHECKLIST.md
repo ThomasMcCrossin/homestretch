@@ -6,6 +6,19 @@ Authoritative year guides:
 - `UfileToFill/ufile_packet/years/FY2024/UFILet2_FILL_GUIDE.md`
 - `UfileToFill/ufile_packet/years/FY2025/UFILet2_FILL_GUIDE.md`
 
+## 0) Exported PDF package: verify schedule forms are actually included
+
+UFile can reference schedules (e.g., “from Schedule 8”) without printing the actual schedule forms in the exported PDF, depending on export/print settings.
+
+After exporting your UFile “package” PDF, run:
+
+```bash
+python3 T2Analysis/tools/check_ufile_export_completeness.py --fy FY2024 --pdf /path/to/ufile_export.pdf
+python3 T2Analysis/tools/check_ufile_export_completeness.py --fy FY2025 --pdf /path/to/ufile_export.pdf
+```
+
+If it fails, re-export the PDF with the missing schedules included (or enter the schedule detail in UFile so it prints).
+
 ## 1) Most common “can’t file / no bar codes” causes (and the fix)
 
 ### A) `GIFI 100 does not balance`

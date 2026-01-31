@@ -166,7 +166,7 @@
       border-radius: 12px;
       text-decoration: none;
       color: var(--ink);
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.2;
       border: 1px solid transparent;
     }
@@ -238,6 +238,22 @@
       word-break: break-word;
       overflow-wrap: anywhere;
     }
+    pre {
+      margin: 10px 0;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(247,240,223,0.55);
+      border: 1px solid rgba(228,216,198,0.95);
+      box-shadow: 0 10px 18px rgba(18,15,10,0.05);
+      white-space: pre-wrap; /* no horizontal scroll */
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    pre code {
+      background: transparent;
+      border: none;
+      padding: 0;
+    }
     strong { font-weight: 800; }
     a { color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 2px; }
     a:hover { color: rgba(11,95,78,0.85); }
@@ -261,7 +277,7 @@
       border-bottom: 1px solid rgba(228,216,198,0.75);
       vertical-align: top;
       text-align: left;
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.35;
       overflow-wrap: anywhere;
       word-break: break-word;
@@ -271,7 +287,7 @@
       font-family: var(--sans);
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      font-size: 11px;
+      font-size: 12px;
       color: rgba(25,23,19,0.70);
       background: rgba(247,240,223,0.70);
       border-bottom: 1px solid rgba(228,216,198,0.95);
@@ -360,6 +376,7 @@
 <a class="nav-item" href="#if-something-looks-wrong-in-ufile-fast-troubleshooting" data-title="if something looks wrong in ufile (fast troubleshooting)">If something looks wrong in UFile (fast troubleshooting)</a>
 <a class="nav-item" href="#key-carryforward-fields-match-2023-filing" data-title="key carryforward fields (match 2023 filing)">Key carryforward fields (match 2023 filing)</a>
 <a class="nav-item" href="#key-positions-elections-high-signal" data-title="key positions / elections (high signal)">Key positions / elections (high signal)</a>
+<a class="nav-item" href="#must-check-before-filing-exporting-a-pdf-copy" data-title="must-check before filing / exporting a pdf copy">Must-check before filing / exporting a PDF copy</a>
 <a class="nav-item" href="#identification-of-the-corporation-ufile-screen" data-title="identification of the corporation (ufile screen)">Identification of the corporation (UFile screen)</a>
 <a class="nav-item" href="#tax-preparer-ufile-screen" data-title="tax preparer (ufile screen)">Tax preparer (UFile screen)</a>
 <a class="nav-item" href="#efile-setup-ufile-screen" data-title="efile setup (ufile screen)">EFILE setup (UFile screen)</a>
@@ -401,6 +418,7 @@
         <article>
           <h1>UFile T2 Fill Guide — FY2025</h1>
 <p><strong>Entity:</strong> 14587430 Canada Inc. (Curly&#x27;s Canteen) <strong>BN:</strong> 748003142RC0001 <strong>Tax year:</strong> 2024-06-01 → 2025-05-31 (year-end 05-31) <strong>NAICS:</strong> 722512</p>
+<p><strong>Readable view:</strong> open <code>UFILet2_FILL_GUIDE.html</code> (bigger text + no horizontal scroll).</p>
           <section class="sec" id="ufile-entry-rules-important"><h2>UFile entry rules (important)</h2>
 <ul>
 <li>Enter amounts on the <strong>detail lines</strong> listed below (e.g., use <code>1121</code> for inventory, <code>1484</code> for prepaid).</li>
@@ -516,6 +534,16 @@
 </tbody>
 </table>
 </div>
+</section><section class="sec" id="must-check-before-filing-exporting-a-pdf-copy"><h2>Must-check before filing / exporting a PDF copy</h2>
+<ul>
+<li>Confirm the UFile tax year dates are <strong>exactly</strong> <code>2024-06-01</code> to <code>2025-05-31</code>.</li>
+<li>Confirm the T2 jacket address fields are filled (Head office + Mailing if different).</li>
+<li>On Schedule 125, fill the business/operation description fields if UFile leaves them blank.</li>
+<li>If you are claiming CCA: enter Schedule 8 via <strong>Capital cost allowance</strong> (do not rely on Schedule 1 alone).</li>
+<li>When you export/print a &quot;package&quot; PDF from UFile, make sure the export includes required schedule forms.</li>
+</ul>
+<p>After exporting, run this completeness check (fails if required schedule forms like 8/88 are missing from the PDF):</p>
+<p>``<code>bash python3 T2Analysis/tools/check_ufile_export_completeness.py --fy FY2025 --pdf /path/to/ufile_export.pdf </code>``</p>
 </section><section class="sec" id="identification-of-the-corporation-ufile-screen"><h2>Identification of the corporation (UFile screen)</h2>
 <div class="table-wrap">
 <table>
@@ -1483,7 +1511,14 @@
 </section><section class="sec" id="non-depreciable-capital-property-ufile-screen"><h2>Non-depreciable capital property (UFile screen)</h2>
 <p>No non-depreciable capital property.</p>
 </section><section class="sec" id="income-source-ufile-screen"><h2>Income source (UFile screen)</h2>
-<p>Active business income only (canteen operations). No property/foreign/other income sources.</p>
+<p>Goal: avoid the UFile warning <code>INCOMESOURCE</code> and make the return explicit.</p>
+<ul>
+<li>In UFile → <strong>Income source</strong> screen:</li>
+<li>Select <strong>Active business income</strong>.</li>
+<li>Leave <strong>property</strong>, <strong>foreign</strong>, and other income sources unchecked unless you have real amounts.</li>
+<li>Save and re-run diagnostics to confirm the warning clears.</li>
+</ul>
+<p>Expected source for this file: <strong>active business income only</strong> (canteen operations).</p>
 <h3>Schedule 1 (tax purposes)</h3>
 <div class="table-wrap">
 <table>
@@ -1664,6 +1699,7 @@
 <p>Unless you are designating eligible dividends, GRIP is typically $0 / not needed. If you mark any eligible dividends, you must complete this screen.</p>
 </section><section class="sec" id="capital-cost-allowance-ufile-screen"><h2>Capital cost allowance (UFile screen)</h2>
 <p>Use Schedule 8 outputs; enter class details if claiming CCA.</p>
+<p>If this section is missing/empty in the guide, the packet was likely built from a snapshot that did not include <code>schedule_8_*.csv</code>. Rebuild via: <code>python3 UfileToFill/ufile_packet/tools/refresh_packet_from_current_state.py</code></p>
 <h3>Schedule 8 / CCA</h3>
 <div class="table-wrap">
 <details class="fold" open>

@@ -5,6 +5,8 @@
 **Tax year:** 2024-06-01 → 2025-05-31 (year-end 05-31)
 **NAICS:** 722512
 
+**Readable view:** open `UFILet2_FILL_GUIDE.html` (bigger text + no horizontal scroll).
+
 ## UFile entry rules (important)
 - Enter amounts on the **detail lines** listed below (e.g., use `1121` for inventory, `1484` for prepaid).
 - Leave totals like `1599`/`2599`/`3499`/`3640` blank; UFile usually auto-calculates them. If it doesn’t, confirm you used the detail lines (especially `1121`, `1484`, `2781`), then use the tie-check totals below.
@@ -42,6 +44,19 @@
 | Inventory method | cost | Physical count 2025-05-16 (near year-end) |
 | Tips handling | paid_on_top | FY2025 tips were paid out each pay period: in Dec 2024 tips were embedded into gross+vacation and had deductions taken; in 2025 tips were paid on top of net pay (no deductions). |
 | Shareholder loan at year-end? | Yes | Shareholder loan receivable exists at year-end. Review s.15(2) repayment timing and any applicable exceptions. |
+
+## Must-check before filing / exporting a PDF copy
+- Confirm the UFile tax year dates are **exactly** `2024-06-01` to `2025-05-31`.
+- Confirm the T2 jacket address fields are filled (Head office + Mailing if different).
+- On Schedule 125, fill the business/operation description fields if UFile leaves them blank.
+- If you are claiming CCA: enter Schedule 8 via **Capital cost allowance** (do not rely on Schedule 1 alone).
+- When you export/print a "package" PDF from UFile, make sure the export includes required schedule forms.
+
+After exporting, run this completeness check (fails if required schedule forms like 8/88 are missing from the PDF):
+
+```bash
+python3 T2Analysis/tools/check_ufile_export_completeness.py --fy FY2025 --pdf /path/to/ufile_export.pdf
+```
 
 ## Identification of the corporation (UFile screen)
 | Field | Value | Note |
@@ -286,7 +301,14 @@ No charitable donations claimed.
 No non-depreciable capital property.
 
 ## Income source (UFile screen)
-Active business income only (canteen operations). No property/foreign/other income sources.
+Goal: avoid the UFile warning `INCOMESOURCE` and make the return explicit.
+
+- In UFile → **Income source** screen:
+  - Select **Active business income**.
+  - Leave **property**, **foreign**, and other income sources unchecked unless you have real amounts.
+  - Save and re-run diagnostics to confirm the warning clears.
+
+Expected source for this file: **active business income only** (canteen operations).
 
 ### Schedule 1 (tax purposes)
 | Code | Description | Amount | Calculation |
@@ -338,6 +360,10 @@ Unless you are designating eligible dividends, GRIP is typically $0 / not needed
 
 ## Capital cost allowance (UFile screen)
 Use Schedule 8 outputs; enter class details if claiming CCA.
+
+If this section is missing/empty in the guide, the packet was likely built from a snapshot that did not include
+`schedule_8_*.csv`. Rebuild via:
+`python3 UfileToFill/ufile_packet/tools/refresh_packet_from_current_state.py`
 
 ### Schedule 8 / CCA
 | Class | Description | Opening UCC | Additions | CCA claim | Closing UCC |

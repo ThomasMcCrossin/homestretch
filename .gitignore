@@ -11,3 +11,6 @@ output/snapshots/_broken*/
 # Python caches
 __pycache__/
 *.pyc
+
+# Local / ad-hoc filing attempt exports (do not commit duplicates of CRA packages)
+taxattemps/

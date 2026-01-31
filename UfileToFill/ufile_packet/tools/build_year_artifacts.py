@@ -182,6 +182,8 @@ def build_year_guide(packet: dict, fy: str) -> str:
     if entity.get("naics_code"):
         parts.append(f"**NAICS:** {entity['naics_code']}")
     parts.append("")
+    parts.append("**Readable view:** open `UFILet2_FILL_GUIDE.html` (bigger text + no horizontal scroll).")
+    parts.append("")
 
     parts.append("## UFile entry rules (important)")
     parts.append("- Enter amounts on the **detail lines** listed below (e.g., use `1121` for inventory, `1484` for prepaid).")
@@ -303,6 +305,24 @@ def build_year_guide(packet: dict, fy: str) -> str:
         )
 
     parts.append(md_table(["Item", "Value", "Note"], pos_rows))
+    parts.append("")
+
+    parts.append("## Must-check before filing / exporting a PDF copy")
+    parts.append(
+        "\n".join(
+            [
+                f"- Confirm the UFile tax year dates are **exactly** `{period['start']}` to `{period['end']}`.",
+                "- Confirm the T2 jacket address fields are filled (Head office + Mailing if different).",
+                "- On Schedule 125, fill the business/operation description fields if UFile leaves them blank.",
+                "- If you are claiming CCA: enter Schedule 8 via **Capital cost allowance** (do not rely on Schedule 1 alone).",
+                "- When you export/print a \"package\" PDF from UFile, make sure the export includes required schedule forms.",
+                "",
+                "After exporting, run this completeness check (fails if required schedule forms like 8/88 are missing from the PDF):",
+                "",
+                f"```bash\npython3 T2Analysis/tools/check_ufile_export_completeness.py --fy {fy} --pdf /path/to/ufile_export.pdf\n```",
+            ]
+        )
+    )
     parts.append("")
 
     # GIFI form + notes checklist + notes to financial statements (UFile screens)
@@ -1007,7 +1027,14 @@ def build_year_guide(packet: dict, fy: str) -> str:
     if cogs_body:
         income_body = income_body.rstrip() + "\n\n### Cost of sales tie-check (display-only)\n" + cogs_body.strip() + "\n"
 
-    income_source_body = "Active business income only (canteen operations). No property/foreign/other income sources.\n\n"
+    income_source_body = (
+        "Goal: avoid the UFile warning `INCOMESOURCE` and make the return explicit.\n\n"
+        "- In UFile \u2192 **Income source** screen:\n"
+        "  - Select **Active business income**.\n"
+        "  - Leave **property**, **foreign**, and other income sources unchecked unless you have real amounts.\n"
+        "  - Save and re-run diagnostics to confirm the warning clears.\n\n"
+        "Expected source for this file: **active business income only** (canteen operations).\n\n"
+    )
     schedule_1_body = sections.get("Schedule 1 (tax purposes)", "")
     if schedule_1_body:
         income_source_body += "### Schedule 1 (tax purposes)\n" + schedule_1_body.strip() + "\n\n"
@@ -1015,7 +1042,12 @@ def build_year_guide(packet: dict, fy: str) -> str:
     if high_signal_body:
         income_source_body += "### High-signal yes/no answers\n" + high_signal_body.strip() + "\n\n"
 
-    cca_body = "Use Schedule 8 outputs; enter class details if claiming CCA.\n\n"
+    cca_body = (
+        "Use Schedule 8 outputs; enter class details if claiming CCA.\n\n"
+        "If this section is missing/empty in the guide, the packet was likely built from a snapshot that did not include\n"
+        "`schedule_8_*.csv`. Rebuild via:\n"
+        "`python3 UfileToFill/ufile_packet/tools/refresh_packet_from_current_state.py`\n\n"
+    )
     schedule_8_body = sections.get("Schedule 8 / CCA", "")
     if schedule_8_body:
         cca_body += "### Schedule 8 / CCA\n" + schedule_8_body.strip() + "\n\n"
@@ -1027,6 +1059,7 @@ def build_year_guide(packet: dict, fy: str) -> str:
         "If something looks wrong in UFile (fast troubleshooting)",
         "Key carryforward fields (match 2023 filing)",
         "Key positions / elections (high signal)",
+        "Must-check before filing / exporting a PDF copy",
     ]:
         out.append(section_block(heading, sections.get(heading, "")))
 

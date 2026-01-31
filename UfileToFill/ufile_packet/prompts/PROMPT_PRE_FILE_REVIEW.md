@@ -45,7 +45,16 @@ Verify these are addressed:
 - [ ] Schedule 50 (if private corp with >10% shareholders)
 - [ ] Schedule 100/125 (GIFI schedules - always required)
 - [ ] Schedule 3 (if dividends received or paid)
+- [ ] Schedule 7 (CCPC small business deduction - typically required when taxable income is positive)
 - [ ] Schedule 8 (if CCA claimed - check if assets exist)
+- [ ] Schedule 88 (internet income / website disclosure - if applicable)
+
+Also: if you are reviewing a **UFile-exported PDF package**, confirm required schedule *forms* are present (UFile can reference schedules without printing them depending on export settings). Use:
+
+```bash
+python3 T2Analysis/tools/check_ufile_export_completeness.py --fy FY2024 --pdf /path/to/ufile_export.pdf
+python3 T2Analysis/tools/check_ufile_export_completeness.py --fy FY2025 --pdf /path/to/ufile_export.pdf
+```
 
 ### D. Common Red Flags
 Check for:

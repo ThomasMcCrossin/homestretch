@@ -469,7 +469,7 @@ def render_year_guide_html(packet: dict, fy: str, *, md_guide: str) -> str:
       border-radius: 12px;
       text-decoration: none;
       color: var(--ink);
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.2;
       border: 1px solid transparent;
     }}
@@ -541,6 +541,22 @@ def render_year_guide_html(packet: dict, fy: str, *, md_guide: str) -> str:
       word-break: break-word;
       overflow-wrap: anywhere;
     }}
+    pre {{
+      margin: 10px 0;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(247,240,223,0.55);
+      border: 1px solid rgba(228,216,198,0.95);
+      box-shadow: 0 10px 18px rgba(18,15,10,0.05);
+      white-space: pre-wrap; /* no horizontal scroll */
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }}
+    pre code {{
+      background: transparent;
+      border: none;
+      padding: 0;
+    }}
     strong {{ font-weight: 800; }}
     a {{ color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 2px; }}
     a:hover {{ color: rgba(11,95,78,0.85); }}
@@ -564,7 +580,7 @@ def render_year_guide_html(packet: dict, fy: str, *, md_guide: str) -> str:
       border-bottom: 1px solid rgba(228,216,198,0.75);
       vertical-align: top;
       text-align: left;
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.35;
       overflow-wrap: anywhere;
       word-break: break-word;
@@ -574,7 +590,7 @@ def render_year_guide_html(packet: dict, fy: str, *, md_guide: str) -> str:
       font-family: var(--sans);
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      font-size: 11px;
+      font-size: 12px;
       color: rgba(25,23,19,0.70);
       background: rgba(247,240,223,0.70);
       border-bottom: 1px solid rgba(228,216,198,0.95);

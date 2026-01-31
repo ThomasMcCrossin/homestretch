@@ -120,6 +120,20 @@ For FY2024 Attempt1, pay special attention to:
 
 Write to: `RUN_DIR/outputs/messages_mapping.md`
 
+## PDF package completeness (schedule forms vs references)
+UFile can reference schedules without printing the actual schedule forms in the exported PDF (depending on export/print settings and whether the schedule has entered detail).
+
+For the attempt PDF, verify whether the PDF actually contains the **schedule form headers** (e.g., `T2 SCH 8`) for schedules that should be present:
+- Schedule 8 (CCA) if any CCA is being claimed / depreciation is referenced
+- Schedule 7 (SBD) if CCPC with taxable income / SBD claims
+- Schedule 3 (dividends) if dividends/Part IV tax is present
+- Schedule 88 if internet income disclosure is present
+
+Prefer to use the automated check and paste its output into your report:
+`python3 T2Analysis/tools/check_ufile_export_completeness.py --fy {FY} --pdf {EXPORT_PDF}`
+
+Write to: `RUN_DIR/outputs/pdf_completeness.md`
+
 ---
 
 # Method (required)
@@ -230,4 +244,3 @@ It must include:
 
 Also create:
 - `RUN_DIR/README.md` at the run root summarizing how to reproduce.
-
