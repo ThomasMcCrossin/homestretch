@@ -122,6 +122,8 @@ def _md_fragment_to_html(md: str) -> str:
     i = 0
     out: list[str] = []
     in_ul = False
+    in_code = False
+    code_lines: list[str] = []
 
     def _close_ul() -> None:
         nonlocal in_ul
@@ -133,6 +135,27 @@ def _md_fragment_to_html(md: str) -> str:
         line = lines[i].rstrip("\n")
         stripped = line.strip()
 
+        # Fenced code blocks (```).
+        if stripped.startswith("```"):
+            _close_ul()
+            if not in_code:
+                in_code = True
+                code_lines = []
+            else:
+                # Close code block.
+                in_code = False
+                code = "\n".join(code_lines).rstrip("\n")
+                out.append(f"<pre><code>{_html.escape(code)}</code></pre>")
+                code_lines = []
+            i += 1
+            continue
+
+        if in_code:
+            # Preserve raw lines inside the fenced block.
+            code_lines.append(line)
+            i += 1
+            continue
+
         if not stripped:
             _close_ul()
             i += 1
@@ -142,6 +165,11 @@ def _md_fragment_to_html(md: str) -> str:
         if stripped.startswith("### "):
             _close_ul()
             out.append(f"<h3>{_format_inline(stripped[4:])}</h3>")
+            i += 1
+            continue
+        if stripped.startswith("#### "):
+            _close_ul()
+            out.append(f"<h4>{_format_inline(stripped[5:])}</h4>")
             i += 1
             continue
         if stripped.startswith("## "):
@@ -188,6 +216,10 @@ def _md_fragment_to_html(md: str) -> str:
         i = j
 
     _close_ul()
+    # If the markdown had an unclosed code fence, render what we have.
+    if in_code and code_lines:
+        code = "\n".join(code_lines).rstrip("\n")
+        out.append(f"<pre><code>{_html.escape(code)}</code></pre>")
     return "\n".join(out)
 
 
@@ -527,6 +559,11 @@ def render_year_guide_html(packet: dict, fy: str, *, md_guide: str) -> str:
       font-size: 18px;
       margin: 14px 0 8px;
       color: rgba(25,23,19,0.92);
+    }}
+    h4 {{
+      font-size: 16px;
+      margin: 12px 0 6px;
+      color: rgba(25,23,19,0.88);
     }}
     p {{ margin: 10px 0; }}
     ul {{ margin: 10px 0 10px 22px; padding: 0; }}

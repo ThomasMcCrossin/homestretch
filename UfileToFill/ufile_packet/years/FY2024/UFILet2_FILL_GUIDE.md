@@ -291,6 +291,37 @@ UFile entry tip: do not enter both `2780` and `2781` for the same payable; that 
 - Inventory is stated at cost. FY2025 closing inventory is based on a physical count near year-end; FY2024 closing inventory is an estimate based on available records.
 - GST/HST registration became effective 2024-02-26; no GST/HST was collected prior to that date. Some Shopify reports may label pre-registration amounts as “tax”; these amounts are treated as sales/pricing, not GST/HST.
 
+### Notes to financial statements (copy/paste)
+```text
+14587430 Canada Inc. (Curly's Canteen)
+Notes to the financial statements
+Year ended May 31, 2024
+
+1. Nature of operations
+The corporation carries on Quick Service Restaurant.
+
+2. Basis of presentation
+These financial statements have been prepared on the accrual basis of accounting using the historical cost basis.
+
+3. Revenue recognition
+Revenue is recognized at the time goods are sold and services are rendered. Amounts are presented net of refunds and discounts.
+
+4. Inventory
+Inventory consists of food and beverage inventory held for resale and is valued at the lower of cost and net realizable value. Cost is determined using a method consistent with prior periods.
+
+5. Property and equipment
+Property and equipment are recorded at cost. Amortization is provided on a basis intended to approximate the decline in service potential of the related assets. For internal consistency, this file mirrors book amortization to the tax CCA claim where applicable.
+
+6. Income taxes and government remittances
+The corporation is a Canadian-controlled private corporation. Income tax expense comprises current tax. Taxes payable on the balance sheet may include GST/HST and other government remittances.
+
+7. Related party transactions and balances
+The corporation is controlled by its shareholders. Amounts due to/from shareholders relate to shareholder-paid expenses, reimbursements, and temporary advances. These balances are non-interest-bearing and due on demand unless otherwise agreed.
+
+8. Subsequent events
+There have been no subsequent events requiring adjustment to these financial statements.
+```
+
 ## Net income (UFile screen)
 | Field | Value | Note |
 |---|---|---|

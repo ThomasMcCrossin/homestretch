@@ -1193,6 +1193,59 @@ def build_year_guide(packet: dict, fy: str) -> str:
     if notes_block.startswith("### Notes checklist"):
         notes_block = notes_block.replace("### Notes checklist", "### Checklist", 1)
 
+    # Provide paste-ready notes to financial statements (working-paper friendly).
+    # UFile's "Notes checklist" screen doesn't require text entry, but having a standard notes draft
+    # prevents follow-up questions when a reviewer expects basic disclosures (inventory, shareholder balances, cap assets).
+    end_date_str = period["end"]
+    try:
+        end_date_pretty = datetime.strptime(end_date_str, "%Y-%m-%d").strftime("%B %d, %Y")
+    except Exception:
+        end_date_pretty = end_date_str
+    legal_name = entity.get("legal_name") or ""
+    operating_name = entity.get("operating_name") or ""
+    activity = ""
+    ident = ufile_screens.get("identification_of_corporation", {}) if isinstance(ufile_screens, dict) else {}
+    if isinstance(ident, dict) and ident.get("activity_description"):
+        activity = str(ident.get("activity_description") or "")
+    if not activity:
+        # Keep this generic if not explicitly provided in the packet.
+        activity = "canteen / concession operations"
+
+    fs_notes = f"""```text
+{legal_name}{' (' + operating_name + ')' if operating_name else ''}
+Notes to the financial statements
+Year ended {end_date_pretty}
+
+1. Nature of operations
+The corporation carries on {activity}.
+
+2. Basis of presentation
+These financial statements have been prepared on the accrual basis of accounting using the historical cost basis.
+
+3. Revenue recognition
+Revenue is recognized at the time goods are sold and services are rendered. Amounts are presented net of refunds and discounts.
+
+4. Inventory
+Inventory consists of food and beverage inventory held for resale and is valued at the lower of cost and net realizable value. Cost is determined using a method consistent with prior periods.
+
+5. Property and equipment
+Property and equipment are recorded at cost. Amortization is provided on a basis intended to approximate the decline in service potential of the related assets. For internal consistency, this file mirrors book amortization to the tax CCA claim where applicable.
+
+6. Income taxes and government remittances
+The corporation is a Canadian-controlled private corporation. Income tax expense comprises current tax. Taxes payable on the balance sheet may include GST/HST and other government remittances.
+
+7. Related party transactions and balances
+The corporation is controlled by its shareholders. Amounts due to/from shareholders relate to shareholder-paid expenses, reimbursements, and temporary advances. These balances are non-interest-bearing and due on demand unless otherwise agreed.
+
+8. Subsequent events
+There have been no subsequent events requiring adjustment to these financial statements.
+```"""
+
+    if notes_block:
+        notes_block = notes_block.rstrip() + "\n\n### Notes to financial statements (copy/paste)\n" + fs_notes + "\n"
+    else:
+        notes_block = "### Notes to financial statements (copy/paste)\n" + fs_notes + "\n"
+
     balance_body = sections.get("Schedule 100 (GIFI) — Balance sheet (enter these lines, whole dollars)", "")
     retained_body = sections.get("Retained earnings (whole dollars)", "")
     tie_body = sections.get("Tie-check (display-only totals)", "")

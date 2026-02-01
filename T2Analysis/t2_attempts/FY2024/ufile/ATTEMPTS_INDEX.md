@@ -24,6 +24,17 @@
     - `tables/diagnostics.csv`
     - `text/full_text.txt`
 
+- `attempt_003`
+  - Export PDF: `T2Analysis/t2_attempts/FY2024/ufile/exports/attempt_003/ufile_return.pdf`
+  - Messages: `T2Analysis/t2_attempts/FY2024/ufile/exports/attempt_003/messages.txt`
+  - Parsed bundle: `T2Analysis/t2_attempts/FY2024/ufile/parses/attempt_003/`
+    - `verification_report.md`
+    - `tables/schedule_100.csv`
+    - `tables/schedule_125.csv`
+    - `tables/retained_earnings.csv`
+    - `tables/diagnostics.csv`
+    - `text/full_text.txt`
+
 When you create a FY2024 attempt export, place it in:
 - `taxattemps/FY2024/` (local scratch; gitignored)
 and copy it into:

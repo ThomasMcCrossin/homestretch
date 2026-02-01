@@ -225,6 +225,11 @@
       margin: 14px 0 8px;
       color: rgba(25,23,19,0.92);
     }
+    h4 {
+      font-size: 16px;
+      margin: 12px 0 6px;
+      color: rgba(25,23,19,0.88);
+    }
     p { margin: 10px 0; }
     ul { margin: 10px 0 10px 22px; padding: 0; }
     li { margin: 6px 0; }
@@ -543,7 +548,7 @@
 <li>When you export/print a &quot;package&quot; PDF from UFile, make sure the export includes required schedule forms.</li>
 </ul>
 <p>After exporting, run this completeness check (fails if required schedule forms like 8/88 are missing from the PDF):</p>
-<p>``<code>bash python3 T2Analysis/tools/check_ufile_export_completeness.py --fy FY2025 --pdf /path/to/ufile_export.pdf </code>``</p>
+<pre><code>python3 T2Analysis/tools/check_ufile_export_completeness.py --fy FY2025 --pdf /path/to/ufile_export.pdf</code></pre>
 </section><section class="sec" id="identification-of-the-corporation-ufile-screen"><h2>Identification of the corporation (UFile screen)</h2>
 <div class="table-wrap">
 <table>
@@ -1217,7 +1222,7 @@
 <li><code>output/manual_adjustment_journal_detail.csv</code> (any year-end shareholder payable adjustments)</li>
 </ul>
 <p>Year-end summary (from Schedule 100): Due from shareholder (GIFI 1301) = 2,000; Due to shareholder (GIFI 2781) = 5,497.</p>
-<p>#### Loan events in this fiscal year (from <code>output/due_from_shareholder_breakdown.csv</code>)</p>
+<h4>Loan events in this fiscal year (from <code>output/due_from_shareholder_breakdown.csv</code>)</h4>
 <div class="table-wrap">
 <table>
 <thead><tr>
@@ -1257,7 +1262,7 @@
 </table>
 </div>
 <p>Note: a loan can be fully repaid within the year (netting to $0 at year-end) and still needs documentation.</p>
-<p>#### Other due-from-shareholder components in this fiscal year</p>
+<h4>Other due-from-shareholder components in this fiscal year</h4>
 <div class="table-wrap">
 <table>
 <thead><tr>
@@ -1280,7 +1285,7 @@
 </tbody>
 </table>
 </div>
-<p>#### Year-end shareholder-related balances (from trial balance)</p>
+<h4>Year-end shareholder-related balances (from trial balance)</h4>
 <div class="table-wrap">
 <table>
 <thead><tr>
@@ -1558,6 +1563,34 @@
 <li>Inventory is stated at cost. FY2025 closing inventory is based on a physical count near year-end; FY2024 closing inventory is an estimate based on available records.</li>
 <li>GST/HST registration became effective 2024-02-26; no GST/HST was collected prior to that date. Some Shopify reports may label pre-registration amounts as “tax”; these amounts are treated as sales/pricing, not GST/HST.</li>
 </ul>
+<h3>Notes to financial statements (copy/paste)</h3>
+<pre><code>14587430 Canada Inc. (Curly&#x27;s Canteen)
+Notes to the financial statements
+Year ended May 31, 2025
+
+1. Nature of operations
+The corporation carries on Quick Service Restaurant.
+
+2. Basis of presentation
+These financial statements have been prepared on the accrual basis of accounting using the historical cost basis.
+
+3. Revenue recognition
+Revenue is recognized at the time goods are sold and services are rendered. Amounts are presented net of refunds and discounts.
+
+4. Inventory
+Inventory consists of food and beverage inventory held for resale and is valued at the lower of cost and net realizable value. Cost is determined using a method consistent with prior periods.
+
+5. Property and equipment
+Property and equipment are recorded at cost. Amortization is provided on a basis intended to approximate the decline in service potential of the related assets. For internal consistency, this file mirrors book amortization to the tax CCA claim where applicable.
+
+6. Income taxes and government remittances
+The corporation is a Canadian-controlled private corporation. Income tax expense comprises current tax. Taxes payable on the balance sheet may include GST/HST and other government remittances.
+
+7. Related party transactions and balances
+The corporation is controlled by its shareholders. Amounts due to/from shareholders relate to shareholder-paid expenses, reimbursements, and temporary advances. These balances are non-interest-bearing and due on demand unless otherwise agreed.
+
+8. Subsequent events
+There have been no subsequent events requiring adjustment to these financial statements.</code></pre>
 </section><section class="sec" id="net-income-ufile-screen"><h2>Net income (UFile screen)</h2>
 <div class="table-wrap">
 <table>
