@@ -185,6 +185,14 @@ def _normalize_attempt_for_cogs(code: str, amount: int) -> int:
     return amount
 
 
+def _normalize_attempt_for_retained_earnings(code: str, amount: int) -> int:
+    # UFile often prints dividends declared (3700) as a negative number in the retained earnings rollforward.
+    # For entry purposes, the operator enters dividends declared as a positive amount.
+    if code == "3700":
+        return abs(amount)
+    return amount
+
+
 def _read_schedule_1_code_c(fy: str) -> int | None:
     """
     Read output/schedule_1_<FY>.csv and return Schedule 1 code C (whole dollars), if present.
@@ -381,9 +389,15 @@ def main() -> int:
     att100 = _load_attempt_table_csv(parse_dir / "tables" / "schedule_100.csv")
     att125 = _load_attempt_table_csv(parse_dir / "tables" / "schedule_125.csv")
 
+    # UFile exports sometimes include retained earnings rollforward lines inside the Schedule 100 table.
+    # These belong on the "Retained earnings" screen, so we exclude them from the Schedule 100 delta
+    # (we handle them in the retained earnings delta section below).
+    rollforward_codes = {"3660", "3680", "3700", "3740", "3849"}
+    att100_bs = {k: v for k, v in att100.items() if k not in rollforward_codes}
+
     # Retained earnings rows aren't always extracted cleanly; fall back to Schedule 100 values for the key codes.
     # (The guide wants you to enter the rollforward, not 3600 directly.)
-    att_re = {k: att100.get(k, 0) for k in ("3660", "3680", "3700", "3740", "3849")}
+    att_re = {k: _normalize_attempt_for_retained_earnings(k, att100.get(k, 0)) for k in ("3660", "3680", "3700", "3740", "3849")}
 
     # PDF schedule forms presence (based on parsed full_text).
     full_text_path = parse_dir / "text" / "full_text.txt"
@@ -425,7 +439,7 @@ def main() -> int:
         "9999",
     }
 
-    deltas_bs = _compute_deltas(expected_rows=exp_bs, attempt_amounts=att100, code_col="GIFI", auto_calculated_codes=auto_sch100)
+    deltas_bs = _compute_deltas(expected_rows=exp_bs, attempt_amounts=att100_bs, code_col="GIFI", auto_calculated_codes=auto_sch100)
     deltas_is = _compute_deltas(expected_rows=exp_is, attempt_amounts=att125, code_col="GIFI", auto_calculated_codes=auto_sch125)
     deltas_re = _compute_deltas(expected_rows=exp_re, attempt_amounts=att_re, code_col="GIFI", auto_calculated_codes=set())
 

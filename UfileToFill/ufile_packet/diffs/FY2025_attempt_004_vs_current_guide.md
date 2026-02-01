@@ -14,8 +14,6 @@ This report compares your **previous UFile attempt** (from the exported PDF pars
 ### Balance sheet / fixed assets
 | Code | Description | Attempt | Expected (current guide) | Delta (expected - attempt) | Action | Guide note |
 |---|---|---:|---:|---:|---|---|
-| 3700 |  | -36,900 | 0 | 36,900 | CLEAR / DO NOT ENTER (extra in attempt) |  |
-| 3660 |  | 16,656 | 0 | -16,656 | CLEAR / DO NOT ENTER (extra in attempt) |  |
 | 1740 | Machinery, equipment, furniture and fixtures | 0 | 3,518 | 3,518 | ADD (missing in attempt) |  |
 | 2620 | Amounts payable and accrued liabilities | 10,013 | 7,405 | -2,608 | CHANGE (update amount) |  |
 | 1741 | Accum amort - machinery/equip/furn/fixtures | 0 | -1,805 | -1,805 | ADD (missing in attempt) |  |
@@ -167,9 +165,6 @@ If this section is missing/empty in the guide, the packet was likely built from 
 | 2620 | Amounts payable and accrued liabilities | 10,013 | 7,405 | -2,608 | CHANGE (update amount) |  |
 | 2680 | Taxes payable (GST/HST, etc.) | 2,663 | 2,653 | -10 | CHANGE (update amount) |  |
 | 2781 | Due to individual shareholder(s) | 5,097 | 5,011 | -86 | CHANGE (update amount) | Tie-out: 2400 $3,490.67 (Thomas) + 2410 $1,606.68 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead. |
-| 3660 |  | 16,656 | 0 | -16,656 | CLEAR / DO NOT ENTER (extra in attempt) |  |
-| 3700 |  | -36,900 | 0 | 36,900 | CLEAR / DO NOT ENTER (extra in attempt) |  |
-| 3740 |  | -1 | 0 | 1 | CLEAR / DO NOT ENTER (extra in attempt) |  |
 | 1599 |  | 25,977 | 0 | -25,977 | AUTO (do not type; ok if printed) |  |
 | 2599 |  | 25,977 | 0 | -25,977 | AUTO (do not type; ok if printed) |  |
 | 3139 |  | 17,773 | 0 | -17,773 | AUTO (do not type; ok if printed) |  |
@@ -177,8 +172,6 @@ If this section is missing/empty in the guide, the packet was likely built from 
 | 3600 |  | 8,104 | 0 | -8,104 | AUTO (do not type; ok if printed) |  |
 | 3620 |  | 8,204 | 0 | -8,204 | AUTO (do not type; ok if printed) |  |
 | 3640 |  | 25,977 | 0 | -25,977 | AUTO (do not type; ok if printed) |  |
-| 3680 |  | 28,349 | 0 | -28,349 | AUTO (do not type; ok if printed) |  |
-| 3849 |  | 8,104 | 0 | -8,104 | AUTO (do not type; ok if printed) |  |
 | 1001 | Cash | 12,472 | 12,472 | 0 | OK |  |
 | 1121 | Inventory of goods for sale | 10,015 | 10,015 | 0 | OK | Physical count 2025-05-16 |
 | 1484 | Prepaid expenses | 1,490 | 1,490 | 0 | OK |  |
@@ -189,8 +182,8 @@ If this section is missing/empty in the guide, the packet was likely built from 
 |---|---|---:|---:|---:|---|---|
 | 3660 | Retained earnings/deficit - Start | 16,656 | 18,456 | 1,800 | CHANGE (update amount) | Enter (opening RE) |
 | 3680 | Net income/loss | 28,349 | 31,007 | 2,658 | CHANGE (update amount) | Enter (net income/loss) |
-| 3700 | Dividends declared | -36,900 | 36,900 | 73,800 | CHANGE (update amount) | Enter (dividends declared) |
 | 3849 | Retained earnings/deficit - End | 8,104 | 12,562 | 4,458 | CHANGE (update amount) | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
+| 3700 | Dividends declared | 36,900 | 36,900 | 0 | OK | Enter (dividends declared) |
 | 3740 | Other items affecting retained earnings (rounding) | -1 | -1 | 0 | OK | Enter only if needed (rounding/other) |
 
 ## Income statement (GIFI Schedule 125) — full delta table
