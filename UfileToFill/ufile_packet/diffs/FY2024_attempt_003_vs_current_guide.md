@@ -2,9 +2,13 @@
 
 This report compares your **previous UFile attempt** (from the exported PDF parse bundle) to the **current fill guide** (authoritative enter-this source).
 
+## Filing blockers (from your exported PDF package)
+- **Schedule 8 missing from the PDF** (but current outputs claim CCA of 508). In UFile, enter assets on **Capital cost allowance** and re-export the package.
+- **Schedule 7 missing from the PDF** (typical when there is taxable income and the small business deduction applies). In UFile, complete the SBD/GRIP section so SCH 7 is generated, then re-export the package.
+
 ## Quick answer
 - Yes: the current guides are updated to reflect the latest asset + CCA/book overlay work.
-- Your prior attempt differs materially from the current guide (most importantly: the **Costco iPad** is now treated as a **book fixed asset** with **book amortization mirroring tax CCA**).
+- Your prior attempt differs materially from the current guide: CCA is expected (Schedule 8 claim 508); ensure Schedule 8 is entered in UFile.
 
 ## Highest-signal changes (what you will actually feel in UFile)
 ### Balance sheet / fixed assets
@@ -55,6 +59,12 @@ Expected source for this file: **active business income only** (canteen operatio
 | C | Net income (loss) for tax purposes | 18,725 |  |
 Note: If UFile auto-populates Schedule 1 line 403 from Schedule 8, do **not** manually enter 403 in the Schedule 1 grid.
 CCA is entered on the **Capital cost allowance** screen from Schedule 8 (total CCA claimed: 508).
+
+### Small business deduction (Schedule 7)
+For a CCPC with active business income and positive taxable income, Schedule 7 is typically expected.
+
+- In UFile, make sure the **small business deduction** section is completed (CCPC = Yes, no associated corps unless real).
+- After your next PDF export, confirm the package includes **T2 SCH 7** (run the completeness checker in the Must-check section).
 
 ### High-signal yes/no answers
 | Question | Answer | Note |

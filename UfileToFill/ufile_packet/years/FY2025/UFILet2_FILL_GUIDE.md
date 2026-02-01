@@ -339,7 +339,7 @@ These financial statements have been prepared on the accrual basis of accounting
 Revenue is recognized at the time goods are sold and services are rendered. Amounts are presented net of refunds and discounts.
 
 4. Inventory
-Inventory consists of food and beverage inventory held for resale and is valued at the lower of cost and net realizable value. For FY2024, a formal physical inventory count process was implemented in the subsequent fiscal year; accordingly, the inventory balance at May 31, 2024 was estimated by management using an itemized schedule at cost.
+Inventory consists of food and beverage inventory held for resale and is valued at the lower of cost and net realizable value. The inventory balance at May 31, 2025 is based on a physical count performed near year-end (May 16, 2025) and management adjustments for immaterial movements through year-end.
 
 5. Property and equipment
 Property and equipment are recorded at cost. Amortization is provided on a basis intended to approximate the decline in service potential of the related assets.
@@ -403,6 +403,12 @@ Expected source for this file: **active business income only** (canteen operatio
 | C | Net income (loss) for tax purposes | 31,485 |  |
 Note: If UFile auto-populates Schedule 1 line 403 from Schedule 8, do **not** manually enter 403 in the Schedule 1 grid.
 CCA is entered on the **Capital cost allowance** screen from Schedule 8 (total CCA claimed: 1,297).
+
+### Small business deduction (Schedule 7)
+For a CCPC with active business income and positive taxable income, Schedule 7 is typically expected.
+
+- In UFile, make sure the **small business deduction** section is completed (CCPC = Yes, no associated corps unless real).
+- After your next PDF export, confirm the package includes **T2 SCH 7** (run the completeness checker in the Must-check section).
 
 ### High-signal yes/no answers
 | Question | Answer | Note |

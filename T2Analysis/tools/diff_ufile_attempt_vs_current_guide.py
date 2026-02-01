@@ -179,6 +179,38 @@ def _normalize_attempt_for_cogs(code: str, amount: int) -> int:
     return amount
 
 
+def _read_schedule_1_code_c(fy: str) -> int | None:
+    """
+    Read output/schedule_1_<FY>.csv and return Schedule 1 code C (whole dollars), if present.
+    """
+    p = PROJECT_ROOT / "output" / f"schedule_1_{fy}.csv"
+    if not p.exists():
+        return None
+    with p.open(newline="", encoding="utf-8") as f:
+        r = csv.DictReader(f)
+        for row in r:
+            if str(row.get("Code") or "").strip() == "C":
+                return _parse_amount_cell(row.get("Amount") or "0")
+    return None
+
+
+def _read_schedule_8_total_claim(fy: str) -> int | None:
+    """
+    Read output/schedule_8_<FY>.csv and return total CCA claim (whole dollars), if present.
+    """
+    p = PROJECT_ROOT / "output" / f"schedule_8_{fy}.csv"
+    if not p.exists():
+        return None
+    with p.open(newline="", encoding="utf-8") as f:
+        r = csv.DictReader(f)
+        total = 0
+        seen = False
+        for row in r:
+            seen = True
+            total += _parse_amount_cell(row.get("CCA_Claim") or "0")
+        return total if seen else None
+
+
 @dataclass(frozen=True)
 class DeltaRow:
     code: str
@@ -352,6 +384,12 @@ def main() -> int:
     has_s8_form = bool(re.search(r"\bT2\s+SCH\s*8\b", full_text, flags=re.IGNORECASE))
     has_s7_form = bool(re.search(r"\bT2\s+SCH\s*7\b", full_text, flags=re.IGNORECASE))
 
+    # Filing-signal: what the *current outputs* say is present/claimed (not what the attempt export contained).
+    sch1_c = _read_schedule_1_code_c(fy)
+    sch8_claim = _read_schedule_8_total_claim(fy)
+    requires_s8 = bool(sch8_claim and sch8_claim > 0)
+    requires_s7 = bool(sch1_c and sch1_c > 0)
+
     auto_sch100 = {
         # balance sheet totals/subtotals + auto-calculated retained earnings fields
         "1599",
@@ -435,14 +473,45 @@ def main() -> int:
     summary_bs = top_changes(deltas_bs)
     summary_is = top_changes(deltas_is)
 
+    # Dynamic quick-answer headline: pick the thing the operator will actually care about.
+    attempt_has_fixed_assets = (att100.get("1740", 0) != 0) or (att100.get("1741", 0) != 0)
+    attempt_has_amort = att125.get("8670", 0) != 0
+    expected_fixed_assets = next((r for r in exp_bs if str(r.get("GIFI") or "").strip() == "1740"), None)
+    expected_accum = next((r for r in exp_bs if str(r.get("GIFI") or "").strip() == "1741"), None)
+    expected_amort = next((r for r in exp_is if str(r.get("GIFI") or "").strip() == "8670"), None)
+
+    headline = ""
+    if expected_fixed_assets and _parse_amount_cell(expected_fixed_assets.get("Amount")) != 0 and not attempt_has_fixed_assets:
+        headline = "the return now includes **book fixed assets** (GIFI 1740/1741) — your attempt export did not."
+    elif expected_amort and _parse_amount_cell(expected_amort.get("Amount")) != 0 and not attempt_has_amort:
+        headline = "the return now includes **book amortization** (GIFI 8670) — your attempt export did not."
+    elif requires_s8:
+        headline = f"CCA is expected (Schedule 8 claim {money(int(sch8_claim or 0))}); ensure Schedule 8 is entered in UFile."
+
     out: list[str] = []
     out.append(f"# UFile attempt vs current guide — {fy} ({attempt_id})")
     out.append("")
     out.append("This report compares your **previous UFile attempt** (from the exported PDF parse bundle) to the **current fill guide** (authoritative enter-this source).")
     out.append("")
+    if (requires_s8 and not has_s8_form) or (requires_s7 and not has_s7_form):
+        out.append("## Filing blockers (from your exported PDF package)")
+        if requires_s8 and not has_s8_form:
+            out.append(
+                f"- **Schedule 8 missing from the PDF** (but current outputs claim CCA of {money(int(sch8_claim or 0))}). "
+                "In UFile, enter assets on **Capital cost allowance** and re-export the package."
+            )
+        if requires_s7 and not has_s7_form:
+            out.append(
+                "- **Schedule 7 missing from the PDF** (typical when there is taxable income and the small business deduction applies). "
+                "In UFile, complete the SBD/GRIP section so SCH 7 is generated, then re-export the package."
+            )
+        out.append("")
     out.append("## Quick answer")
     out.append("- Yes: the current guides are updated to reflect the latest asset + CCA/book overlay work.")
-    out.append("- Your prior attempt differs materially from the current guide (most importantly: the **Costco iPad** is now treated as a **book fixed asset** with **book amortization mirroring tax CCA**).")
+    if headline:
+        out.append(f"- Your prior attempt differs materially from the current guide: {headline}")
+    else:
+        out.append("- Your prior attempt differs materially from the current guide; follow the delta tables below to update the UFile file.")
     out.append("")
     out.append("## Highest-signal changes (what you will actually feel in UFile)")
     out.append("### Balance sheet / fixed assets")

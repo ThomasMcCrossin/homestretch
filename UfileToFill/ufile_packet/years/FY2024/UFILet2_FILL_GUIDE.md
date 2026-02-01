@@ -386,6 +386,12 @@ Expected source for this file: **active business income only** (canteen operatio
 Note: If UFile auto-populates Schedule 1 line 403 from Schedule 8, do **not** manually enter 403 in the Schedule 1 grid.
 CCA is entered on the **Capital cost allowance** screen from Schedule 8 (total CCA claimed: 508).
 
+### Small business deduction (Schedule 7)
+For a CCPC with active business income and positive taxable income, Schedule 7 is typically expected.
+
+- In UFile, make sure the **small business deduction** section is completed (CCPC = Yes, no associated corps unless real).
+- After your next PDF export, confirm the package includes **T2 SCH 7** (run the completeness checker in the Must-check section).
+
 ### High-signal yes/no answers
 | Question | Answer | Note |
 |---|---|---|
