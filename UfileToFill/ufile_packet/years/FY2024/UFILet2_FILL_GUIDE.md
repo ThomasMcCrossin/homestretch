@@ -365,6 +365,13 @@ If this section is missing/empty in the guide, the packet was likely built from 
 | ams_lb9_vending_machine_2024_02_20 | AMS-LB9 vending machine (Electric Kitty) | 2024-02-20 | 8 | 1,100 |
 | costco_ipad_air_2023_12_08 | iPad Air 5 64GB (Costco) | 2023-12-08 | 50 | 648 |
 
+### UFile Schedule 8 entry lines (per asset)
+| Class | Addition description | Date acquired/available | Cost | Proceeds (if disposed) | Disposed description (if any) |
+|---|---|---|---|---|---|
+| 8 | Hisense freezer (Costco) | 2024-03-13 | 550 | 0 |  |
+| 8 | AMS-LB9 vending machine (Electric Kitty) | 2024-02-20 | 1,100 | 0 |  |
+| 50 | iPad Air 5 64GB (Costco) | 2023-12-08 | 648 | 0 |  |
+
 ## Loss carry forwards and loss carry backs (UFile screen)
 No losses to carry forward/back.
 

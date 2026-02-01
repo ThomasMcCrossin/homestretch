@@ -315,6 +315,8 @@ def main() -> int:
     exp_is = _extract_table(guide_md, heading="## Income statement (GIFI Schedule 125)")
     exp_re = _extract_table(guide_md, heading="### Retained earnings (whole dollars)")
     exp_s8 = _extract_table(guide_md, heading="### Schedule 8 / CCA")
+    exp_s8_assets = _extract_table(guide_md, heading="### Schedule 8 asset additions (audit trail)")
+    exp_s8_lines = _extract_table(guide_md, heading="### UFile Schedule 8 entry lines (per asset)")
     must_check_body = _extract_section(guide_md, heading="## Must-check before filing / exporting a PDF copy")
     income_source_body = _extract_section(guide_md, heading="## Income source (UFile screen)")
     cca_screen_body = _extract_section(guide_md, heading="## Capital cost allowance (UFile screen)")
@@ -480,6 +482,45 @@ def main() -> int:
     else:
         out.append("_(No Schedule 8 table found in the guide.)_")
     out.append("")
+    if exp_s8_assets:
+        out.append("Expected asset additions (audit list):")
+        out.append("| Asset ID | Description | Date | Class | Cost |")
+        out.append("|---|---|---|---|---:|")
+        for r in exp_s8_assets:
+            out.append(
+                "| "
+                + " | ".join(
+                    [
+                        str(r.get("Asset ID") or "").strip(),
+                        str(r.get("Description") or "").strip(),
+                        str(r.get("Date") or "").strip(),
+                        str(r.get("Class") or "").strip(),
+                        str(r.get("Cost") or "").strip(),
+                    ]
+                )
+                + " |"
+            )
+        out.append("")
+    if exp_s8_lines:
+        out.append("UFile entry lines (per asset):")
+        out.append("| Class | Addition description | Date acquired/available | Cost | Proceeds (if disposed) | Disposed description (if any) |")
+        out.append("|---|---|---|---:|---:|---|")
+        for r in exp_s8_lines:
+            out.append(
+                "| "
+                + " | ".join(
+                    [
+                        str(r.get("Class") or "").strip(),
+                        str(r.get("Addition description") or "").strip(),
+                        str(r.get("Date acquired/available") or "").strip(),
+                        str(r.get("Cost") or "").strip(),
+                        str(r.get("Proceeds (if disposed)") or "").strip(),
+                        str(r.get("Disposed description (if any)") or "").strip(),
+                    ]
+                )
+                + " |"
+            )
+        out.append("")
     out.append("PDF package form presence (from the attempt export):")
     out.append(f"- Schedule 8 form header present in PDF? **{'Yes' if has_s8_form else 'No'}**")
     out.append(f"- Schedule 7 form header present in PDF? **{'Yes' if has_s7_form else 'No'}**")

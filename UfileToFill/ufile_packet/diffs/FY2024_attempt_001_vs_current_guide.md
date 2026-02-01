@@ -96,6 +96,13 @@ If this section is missing/empty in the guide, the packet was likely built from 
 | ams_lb9_vending_machine_2024_02_20 | AMS-LB9 vending machine (Electric Kitty) | 2024-02-20 | 8 | 1,100 |
 | costco_ipad_air_2023_12_08 | iPad Air 5 64GB (Costco) | 2023-12-08 | 50 | 648 |
 
+### UFile Schedule 8 entry lines (per asset)
+| Class | Addition description | Date acquired/available | Cost | Proceeds (if disposed) | Disposed description (if any) |
+|---|---|---|---|---|---|
+| 8 | Hisense freezer (Costco) | 2024-03-13 | 550 | 0 |  |
+| 8 | AMS-LB9 vending machine (Electric Kitty) | 2024-02-20 | 1,100 | 0 |  |
+| 50 | iPad Air 5 64GB (Costco) | 2023-12-08 | 648 | 0 |  |
+
 ## Balance sheet (GIFI Schedule 100) — full delta table
 | Code | Description | Attempt | Expected (current guide) | Delta (expected - attempt) | Action | Guide note |
 |---|---|---:|---:|---:|---|---|
@@ -171,6 +178,20 @@ Expected classes (from the current guide):
 |---|---|---:|---:|---:|---:|
 | 8 | General equipment | 0 | 1,650 | 330 | 1,320 |
 | 50 | Computer hardware and systems software | 0 | 648 | 178 | 470 |
+
+Expected asset additions (audit list):
+| Asset ID | Description | Date | Class | Cost |
+|---|---|---|---|---:|
+| costco_freezer_2024_03_13 | Hisense freezer (Costco) | 2024-03-13 | 8 | 550 |
+| ams_lb9_vending_machine_2024_02_20 | AMS-LB9 vending machine (Electric Kitty) | 2024-02-20 | 8 | 1,100 |
+| costco_ipad_air_2023_12_08 | iPad Air 5 64GB (Costco) | 2023-12-08 | 50 | 648 |
+
+UFile entry lines (per asset):
+| Class | Addition description | Date acquired/available | Cost | Proceeds (if disposed) | Disposed description (if any) |
+|---|---|---|---:|---:|---|
+| 8 | Hisense freezer (Costco) | 2024-03-13 | 550 | 0 |  |
+| 8 | AMS-LB9 vending machine (Electric Kitty) | 2024-02-20 | 1,100 | 0 |  |
+| 50 | iPad Air 5 64GB (Costco) | 2023-12-08 | 648 | 0 |  |
 
 PDF package form presence (from the attempt export):
 - Schedule 8 form header present in PDF? **No**

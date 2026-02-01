@@ -379,6 +379,13 @@ If this section is missing/empty in the guide, the packet was likely built from 
 | walmart_coffee_grinder_2024_09_17 | Coffee grinder (Walmart) | 2024-09-17 | 12 | 184 |
 | shopify_card_reader_2024_11_12 | Shopify card reader hardware | 2024-11-12 | 12 | 479 |
 
+### UFile Schedule 8 entry lines (per asset)
+| Class | Addition description | Date acquired/available | Cost | Proceeds (if disposed) | Disposed description (if any) |
+|---|---|---|---|---|---|
+| 8 | Nayax card reader for vending machine | 2025-02-24 | 557 | 0 |  |
+| 12 | Coffee grinder (Walmart) | 2024-09-17 | 184 | 0 |  |
+| 12 | Shopify card reader hardware | 2024-11-12 | 479 | 0 |  |
+
 ## Loss carry forwards and loss carry backs (UFile screen)
 No losses to carry forward/back.
 

@@ -960,6 +960,29 @@ def build_year_guide(packet: dict, fy: str) -> str:
             parts.append(md_table(["Asset ID", "Description", "Date", "Class", "Cost"], asset_rows))
             parts.append("")
 
+            # UFile's CCA UI is class-based, but the operator often enters additions per asset line.
+            # Keep a tiny copy/paste checklist with the exact data we have (no dispositions expected).
+            ufile_rows = []
+            for asset in assets:
+                ufile_rows.append(
+                    [
+                        str(asset.get("cca_class") or ""),
+                        str(asset.get("description") or ""),
+                        str(asset.get("available_for_use_date") or ""),
+                        money(int(asset.get("total_cost_dollars") or 0)),
+                        "0",
+                        "",
+                    ]
+                )
+            parts.append("### UFile Schedule 8 entry lines (per asset)")
+            parts.append(
+                md_table(
+                    ["Class", "Addition description", "Date acquired/available", "Cost", "Proceeds (if disposed)", "Disposed description (if any)"],
+                    ufile_rows,
+                )
+            )
+            parts.append("")
+
     # High-signal yes/no answers that differ year-to-year
     parts.append("## High-signal yes/no answers")
     pos = year.get("positions", {})
