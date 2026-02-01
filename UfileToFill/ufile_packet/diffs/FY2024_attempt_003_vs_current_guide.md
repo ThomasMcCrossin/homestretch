@@ -148,8 +148,6 @@ If this section is missing/empty in the guide, the packet was likely built from 
 | 3600 |  | 18,456 | 0 | -18,456 | AUTO (do not type; ok if printed) |  |
 | 3620 |  | 18,556 | 0 | -18,556 | AUTO (do not type; ok if printed) |  |
 | 3640 |  | 31,578 | 0 | -31,578 | AUTO (do not type; ok if printed) |  |
-| 3680 |  | 18,456 | 0 | -18,456 | AUTO (do not type; ok if printed) |  |
-| 3849 |  | 18,456 | 0 | -18,456 | AUTO (do not type; ok if printed) |  |
 | 1001 | Cash | 26,292 | 26,292 | 0 | OK |  |
 | 1121 | Inventory of goods for sale | 2,847 | 2,847 | 0 | OK |  |
 | 1484 | Prepaid expenses | 649 | 649 | 0 | OK |  |
