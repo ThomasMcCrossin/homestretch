@@ -1,0 +1,47 @@
+01 Feb 2026 14587430 Canada Inc. Yr.end: 31-05-2024 Acct.#748003142RC0001
+Protected Bwhen completed
+Part I tax
+Base amount Part I tax – Taxable income (from line 360 on page 3) multiplied by 38% . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 550 7,305 A
+Additional tax on personal services business income (section 123.5)
+Taxable income from a personal services business . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 555 ×5% = 560 B
+Additional tax on banks and life insurers from Schedule 68 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 565 C
+Total labour requirements addition to tax . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 580 D
+Recapture of investment tax credit from Schedule 31 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 602 E
+Calculation for the refundable tax on the Canadian-controlled private corporation's (CCPC) or substantive CCPC's investment income
+(if it was a CCPC throughout the tax year or a substantive CCPC at any time in the tax year)
+Aggregate investment income from line 440 on page 6 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . F
+Taxable income from line 360 on page 3 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19,223 G
+Deduct:
+Amount from line 400, 405, 410, or 428 on page 4, whichever
+is the least* . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19,223 H
+Net amount (amount G minus amount H) I
+Refundable tax on CCPC's or substantive CCPC's investment income – 10 2/3% of whichever is less: amount F or amount I . 604 J
+Subtotal (add amounts A to E and J) 7,305 K
+Deduct:
+Small business deduction from line 430 on page 4 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,652 L
+Federal tax abatement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 608 1,922
+Manufacturing and processing profits deduction and zero-emission technology manufacturing
+deduction from Schedule 27 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 616
+Investment corporation deduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 620
+Taxed capital gains 624
+Federal foreign non-business income tax credit from Schedule 21 . . . . . . . . . . . . . . . . . . . . . . . . . . 632
+Federal foreign business income tax credit from Schedule 21 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 636
+General tax reduction for CCPCs from amount I on page 5 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 638
+General tax reduction from amount P on page 5 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 639
+Federal logging tax credit from Schedule 21 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 640
+Eligible Canadian bank deduction under section 125.21 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 641
+Federal qualifying environmental trust tax credit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 648
+Investment tax credit from Schedule 31 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 652
+Subtotal 5,574 5,574 M
+Part I tax payable – Amount K minus amount M . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,731 N
+Enter amount N on line 700 on page 9.
+* This is not applicable to substantive CCPCs.
+Privacy notice
+Personal information (including the SIN) is collected to administer or enforce the Income Tax Act and related programs and activities including administering
+tax, benefits, audit, compliance, and collection. The information collected may be used or disclosed for the purposes of other federal acts that provide for the
+imposition and collection of a tax or duty. It may also be disclosed to other federal, provincial, territorial, or foreign government institutions to the extent
+authorized by law. Failure to provide this information may result in paying interest or penalties, or in other actions. Under the Privacy Act, individuals have a
+right of protection, access to and correction of their personal information, or to file a complaint with the Privacy Commissioner of Canada regarding the
+handling of their personal information. Refer to Personal Information Bank CRA PPU 047 on Information about Programs and Information Holdings at
+canada.ca/cra-information-about-programs.
+T2 E (11/24) Version 28.01 UF25 Page 8 of 9

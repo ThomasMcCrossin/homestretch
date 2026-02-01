@@ -1,0 +1,42 @@
+01 Feb 2026 14587430 Canada Inc. Yr.end: 31-05-2024 Acct.#748003142RC0001
+Assembly instructions
+Name: 14587430 Canada Inc.
+Year end: 2024-05-31
+Business number: 748003142RC0001
+Canada Revenue
+Assembling the federal T2 tax return when paper filing
+Agency
+When filing a tax return, the attachments should be arranged in the order in which they are processed by the department (see the
+appropriate order in the list below). This will accelerate processing of the returns. Also, if you are making an election, note it
+prominently in the relevant area of the return and schedules, or attach a note.
+Order of attachments (as per IC97-2):
+T2 Bar Code Return with the pages in the order DT Max prints it (this includes the GIFI component of the T2 return)
+Please note that for tax years ending after December 31, 2008, corporations are no longer required to file federal T2 RSI's
+(Return and Schedule Information) when filing returns in paper form, as they are obsolete.
+Other attachments
+This includes forms, eligibility certificates and other certificates or attestations which are not captured within the Bar Code Return.
+If you have an election that applies to the return that is being filed:
+If the election has a prescribed form, such as Form T2054, Election for a Capital Dividend under Subsection 83(2),
+complete a paper copy and file it separately.
+If the election does not have a prescribed form, send your notes on a separate piece of paper with the T2 Bar Code
+Return.
+Slips, receipts, and documents
+Although all slips and receipts do not have to be sent to CRA, keep all corporation information slips, receipts, and papers
+for at least 6 years. CRA may ask to see them at a later date.
+Resident corporations
+Mail your T2 return to one of the following tax centres in your area:
+Alberta, Manitoba, Northwest Territories, London, Saskatoon, Thunder Bay, Winnipeg Tax Centre
+and Windsor 66 Stapon Road
+Winnipeg MB R3C 3M2
+Toronto Centre, Toronto East, Toronto North, Toronto West, and Sudbury Sudbury Tax Centre
+(Sudbury/Nickel Belt only*) Post Office Box 20000, Station A
+Sudbury ON P3A 5C1
+British Columbia, New Brunswick, Newfoundland and Labrador, Nova Scotia, Prince Edward Island Tax Centre
+Prince Edward Island, Quebec, Nunavut, Yukon, Belleville, Hamilton, Kingston, 275 Pope Road
+Kitchener/Waterloo, Ottawa, Peterborough, Regina, St. Catharines, and Summerside PE C1N 6A2
+Sudbury (North-Eastern Ontario only**)
+* Sudbury/Nickel Belt areas includes all postal codes beginning with P3A, P3B, P3C, P3E, P3G, P3L, P3N, P3P, P3Y,
+and all postal codes beginning with P0M and ending with 1A0, 1B0, 1A0, 1E0, 1H0, 1J0, 1K0, 1L0, 1M0, 1N0, 1P0,
+1R0, 1S0, 1T0, 1V0, 1W0, 1Y0, 2C0, 2E0, 2M0, 2R0, 2S0, 2X0, 2Y0, 3A0, 3B0, 3C0, 3E0 and 3H0.
+** North-Eastern Ontario includes all areas outside of Sudbury/Nickel Belt that are served by the Sudbury Tax Services Office.
+Page 1

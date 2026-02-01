@@ -1,0 +1,17 @@
+Bar Code Return (BCR) validity checks failed
+No bar codes were generated
+Tax return cannot be filed with CRA
+These tax calculations failed the validity checks for bar codes. Therefore, no bar codes were generated and you
+will not be able to file this return with the CRA.
+The CRA imposes certain validity checks on approved software to ensure that it can process BCR's accurately
+and quickly. Tax returns containing BCR's that fail these checks are re-routed by the CRA to a manual assessment
+process which results in potential delays of several months and increased communication between the CRA and
+the taxpayer.
+BCR validity checks relate mainly to incomplete or inconsistent data entry. Review the error and warning messages
+shown on the diagnostics report and in the data editor, then make the required changes and recalculate.
+Forcing the generation of the Bar Code Return
+In a situation where you are unable to resolve all the problems encountered, you may use the keyword BCR-OV
+to force the generation of the Bar Code Return.
+Note however that this alternative should only be used in rare and exceptional cases.
+A tax return that fails the DT Max validity checks will also fail the CRA checks, and will therefore be delayed
+and re-routed to the manual assessment process.
