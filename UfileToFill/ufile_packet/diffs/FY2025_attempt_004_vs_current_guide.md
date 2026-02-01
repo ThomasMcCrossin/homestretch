@@ -89,6 +89,14 @@ For a CCPC with active business income and positive taxable income, Schedule 7 i
 | CCA required / capital assets | Yes | CCA claimed per Schedule 8. Total CCA: 1297. Classes: 8, 12, 50. |
 | Book fixed assets present | Yes | Book fixed assets present (capitalized in GIFI). |
 
+### Taxable dividend paid (UFile screen)
+Enter the taxable dividends paid details so Schedule 3 / Schedule 55 match the retained earnings rollforward.
+
+- Total taxable dividends paid in the tax year: **36,900**
+- Eligible portion: **0** (default expectation: $0 = non-eligible)
+
+If UFile asks you to split between connected vs non-connected corporations, and these dividends were paid to individuals (shareholders), treat them as **other than connected corporations**.
+
 ### Notes to financial statements (copy/paste)
 Paste into UFile (Notes checklist screen) if you are including notes with the filing copy:
 

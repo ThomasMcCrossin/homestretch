@@ -153,6 +153,12 @@ def _extract_first_fenced_block(md: str, *, heading: str) -> str:
         return ""
     return m.group(0).strip() + "\n"
 
+def _extract_section_if_present(md: str, *, heading: str) -> str:
+    """
+    Best-effort section extraction that returns "" when the heading isn't present.
+    """
+    body = _extract_section(md, heading=heading)
+    return body if body and body.strip() else ""
 def _load_attempt_table_csv(path: Path) -> dict[str, int]:
     """
     Parse attempt extracted schedule table CSV and sum amounts by 4-digit code.
@@ -369,6 +375,7 @@ def main() -> int:
     income_source_body = _extract_section(guide_md, heading="## Income source (UFile screen)")
     cca_screen_body = _extract_section(guide_md, heading="## Capital cost allowance (UFile screen)")
     notes_fs_block = _extract_first_fenced_block(guide_md, heading="### Notes to financial statements (copy/paste)")
+    taxable_dividend_body = _extract_section_if_present(guide_md, heading="## Taxable dividend paid (UFile screen)")
 
     # Attempt extracted tables (what was in the exported PDF, i.e. what the attempt "contained").
     att100 = _load_attempt_table_csv(parse_dir / "tables" / "schedule_100.csv")
@@ -521,7 +528,7 @@ def main() -> int:
     out.append(_render_delta_table(summary_is))
     out.append("")
 
-    if must_check_body or income_source_body or cca_screen_body or notes_fs_block:
+    if must_check_body or income_source_body or cca_screen_body or notes_fs_block or taxable_dividend_body:
         out.append("## Notes / reminders to apply (from the current guide)")
         if must_check_body:
             out.append("### Must-check before filing / exporting")
@@ -530,6 +537,10 @@ def main() -> int:
         if income_source_body:
             out.append("### Income source screen (clears INCOMESOURCE warning)")
             out.append(income_source_body.rstrip())
+            out.append("")
+        if taxable_dividend_body:
+            out.append("### Taxable dividend paid (UFile screen)")
+            out.append(taxable_dividend_body.rstrip())
             out.append("")
         if notes_fs_block:
             out.append("### Notes to financial statements (copy/paste)")
