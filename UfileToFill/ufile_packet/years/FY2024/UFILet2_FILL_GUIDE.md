@@ -2,10 +2,11 @@
 
 **Entity:** 14587430 Canada Inc. (Curly's Canteen)
 **BN:** 748003142RC0001
-**Tax year:** 2023-06-01 → 2024-05-31 (year-end 05-31)
+**Tax year:** 2023-06-10 → 2024-05-31 (year-end 05-31)
 **NAICS:** 722512
 
 **Readable view:** open `UFILet2_FILL_GUIDE.html` (bigger text + no horizontal scroll).
+**Audit package (working papers):** open `audit_packages/FY2024/index.html`.
 
 ## UFile entry rules (important)
 - Enter amounts on the **detail lines** listed below (e.g., use `1121` for inventory, `1484` for prepaid).
@@ -80,7 +81,7 @@ python3 T2Analysis/tools/check_ufile_export_completeness.py --fy FY2024 --pdf /p
 | Construction subcontractors? |  | UFile asks this only if your major business activity is construction; not applicable for a canteen/restaurant. |
 | Internet income from websites? | Yes |  |
 | # of websites | 1 |  |
-| % gross revenue from internet | 4.35 | This % is easy to misinterpret with Shopify POS; keep consistent year-to-year unless you have a better basis. |
+| % gross revenue from internet | 4.33 | Computed from Shopify “Net payments by gateway” by sales channel: (Online Store + Shop) / (all channels). |
 | Top URL(s) | curlyscanteen.ca |  |
 | Quarterly instalments – wants considered? | Yes |  |
 | Quarterly instalments – perfect compliance? | No |  |

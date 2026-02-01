@@ -6,6 +6,7 @@
 **NAICS:** 722512
 
 **Readable view:** open `UFILet2_FILL_GUIDE.html` (bigger text + no horizontal scroll).
+**Audit package (working papers):** open `audit_packages/FY2025/index.html`.
 
 ## UFile entry rules (important)
 - Enter amounts on the **detail lines** listed below (e.g., use `1121` for inventory, `1484` for prepaid).
@@ -81,7 +82,7 @@ python3 T2Analysis/tools/check_ufile_export_completeness.py --fy FY2025 --pdf /p
 | Construction subcontractors? |  | UFile asks this only if your major business activity is construction; not applicable for a canteen/restaurant. |
 | Internet income from websites? | Yes |  |
 | # of websites | 1 |  |
-| % gross revenue from internet | 4.35 | This % is easy to misinterpret with Shopify POS; keep consistent year-to-year unless you have a better basis. |
+| % gross revenue from internet | 4.78 | Computed from Shopify “Net payments by gateway” by sales channel: (Online Store + Shop) / (all channels). |
 | Top URL(s) | curlyscanteen.ca |  |
 | Quarterly instalments – wants considered? | Yes |  |
 | Quarterly instalments – perfect compliance? | No |  |

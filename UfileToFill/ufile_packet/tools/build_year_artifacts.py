@@ -210,11 +210,23 @@ def build_year_guide(packet: dict, fy: str) -> str:
     parts.append("")
     parts.append(f"**Entity:** {entity.get('legal_name')} ({entity.get('operating_name')})")
     parts.append(f"**BN:** {entity.get('bn')}")
-    parts.append(f"**Tax year:** {period['start']} → {period['end']} (year-end {entity.get('year_end_month_day')})")
+    # FY2024 is a first-year after operations start; show the actual filing start date if later than the FY roll start.
+    tax_start = str(period.get("start") or "")
+    header_screens = year.get("ufile_screens", {})
+    ident = header_screens.get("identification_of_corporation", {}) if isinstance(header_screens, dict) else {}
+    ops_start = str(ident.get("operations_start_date") or "").strip() if isinstance(ident, dict) else ""
+    if ops_start:
+        try:
+            if parse_ymd(ops_start) > parse_ymd(tax_start):
+                tax_start = ops_start
+        except Exception:
+            pass
+    parts.append(f"**Tax year:** {tax_start} → {period['end']} (year-end {entity.get('year_end_month_day')})")
     if entity.get("naics_code"):
         parts.append(f"**NAICS:** {entity['naics_code']}")
     parts.append("")
     parts.append("**Readable view:** open `UFILet2_FILL_GUIDE.html` (bigger text + no horizontal scroll).")
+    parts.append(f"**Audit package (working papers):** open `audit_packages/{fy}/index.html`.")
     parts.append("")
 
     parts.append("## UFile entry rules (important)")
@@ -552,7 +564,7 @@ def build_year_guide(packet: dict, fy: str) -> str:
                     [
                         "% gross revenue from internet",
                         str(internet.get("percent_gross_revenue_from_internet") or ""),
-                        "This % is easy to misinterpret with Shopify POS; keep consistent year-to-year unless you have a better basis.",
+                        "Computed from Shopify “Net payments by gateway” by sales channel: (Online Store + Shop) / (all channels).",
                     ],
                     ["Top URL(s)", urls_str, ""],
                     ["Quarterly instalments – wants considered?", yn((ident.get("quarterly_installments") or {}).get("wants_consideration") if isinstance(ident.get("quarterly_installments"), dict) else None), ""],

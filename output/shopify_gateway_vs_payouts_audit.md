@@ -27,6 +27,22 @@ Gateway totals (selected reports only):
 - paypal: tx=43 gross=$1161.82 refunded=$-84.00 net=$1077.82
 - gift_card: tx=6 gross=$32.47 refunded=$0.00 net=$32.47
 
+Sales channel totals (selected reports only):
+
+- point of sale: tx=19679 gross=$184349.34 refunded=$-114.45 net=$184234.89
+- online store: tx=351 gross=$8312.06 refunded=$-206.98 net=$8105.08
+- draft orders: tx=3 gross=$1307.87 refunded=$0.00 net=$1307.87
+- shop: tx=19 gross=$292.84 refunded=$0.00 net=$292.84
+- shopify mobile for android: tx=1 gross=$91.76 refunded=$0.00 net=$91.76
+- unknown: tx=6 gross=$15.52 refunded=$-15.52 net=$0.00
+
+Internet revenue % (from gateway exports):
+
+- Online channels (treated as internet): online store, shop
+- Online net payments: $8397.92
+- Total net payments (all channels): $194032.44
+- % gross revenue from internet (Online Store + Shop): 4.33
+
 Payout totals in FY (payout_date, deposit-date):
 
 - Payout count: 157
@@ -66,6 +82,22 @@ Gateway totals (selected reports only):
 - paypal: tx=23 gross=$570.18 refunded=$0.00 net=$570.18
 - gift_card: tx=12 gross=$166.51 refunded=$0.00 net=$166.51
 - manual: tx=1 gross=$20.00 refunded=$0.00 net=$20.00
+
+Sales channel totals (selected reports only):
+
+- point of sale: tx=25382 gross=$244857.18 refunded=$-212.80 net=$244644.38
+- online store: tx=543 gross=$11274.55 refunded=$-19.50 net=$11255.05
+- shop: tx=49 gross=$1019.20 refunded=$0.00 net=$1019.20
+- draft orders: tx=3 gross=$224.00 refunded=$-160.00 net=$64.00
+- shopify mobile for iphone: tx=1 gross=$20.00 refunded=$0.00 net=$20.00
+- shopify mobile for android: tx=1 gross=$10.40 refunded=$0.00 net=$10.40
+
+Internet revenue % (from gateway exports):
+
+- Online channels (treated as internet): online store, shop
+- Online net payments: $12274.25
+- Total net payments (all channels): $257013.03
+- % gross revenue from internet (Online Store + Shop): 4.78
 
 Payout totals in FY (payout_date, deposit-date):
 

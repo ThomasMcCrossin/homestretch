@@ -1,0 +1,8 @@
+fy,date,source_file,journal_entry_id,category,subcategory,amount_cents,amount,description
+FY2024,2023-12-27,bank_debit_journal_detail.csv,BANK_DEBIT_1431,SHAREHOLDER_PAYROLL,SHAREHOLDER_PAYROLL,200000,"$2,000.00",clear_net_pay_payable_match:Thomas McCrossin:2023-12-31
+FY2024,2024-02-26,payroll_cra_account_matches.csv,,PAYROLL_REIMBURSE,Payment Jan 2024,29223,$292.23,Internet Banking E-TRANSFER104897934333 Thomas McCrossin 4506*********695
+FY2024,2024-02-26,payroll_cra_account_matches.csv,,PAYROLL_REIMBURSE,Arrears payment,7202,$72.02,Internet Banking E-TRANSFER104897933797 Thomas McCrossin 4506*********695
+FY2024,2024-03-06,payroll_cra_account_matches.csv,,PAYROLL_REIMBURSE,Payment Feb 2024,56616,$566.16,Internet Banking E-TRANSFER104910150312 Thomas McCrossin 4506*********695
+FY2024,2024-03-11,payroll_cra_account_matches.csv,,PAYROLL_REIMBURSE,Payment Feb 2024,55847,$558.47,Internet Banking E-TRANSFER104915459750 Thomas McCrossin 4506*********695
+FY2024,2024-04-02,payroll_cra_account_matches.csv,,PAYROLL_REIMBURSE,Payment Mar 2024,124927,"$1,249.27",Internet Banking E-TRANSFER104941665380 Thomas McCrossin 4506*********695
+FY2024,2024-05-01,payroll_cra_account_matches.csv,,PAYROLL_REIMBURSE,Payment Apr 2024,73290,$732.90,Internet Banking E-TRANSFER104977727931 Thomas McCrossin 4506*********695

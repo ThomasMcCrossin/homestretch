@@ -64,6 +64,7 @@ def main() -> int:
     stamp = str(args.name or default_stamp())
 
     if not args.skip_build_outputs:
+        run(["python3", "scripts/83_audit_shopify_gateway_vs_payouts.py"])
         run(["python3", "scripts/91b_build_cca_schedule_8.py"])
         run(["python3", "scripts/91c_build_book_fixed_asset_overlay.py"])
         run(["python3", "scripts/91_build_t2_schedule_exports.py", "--book-fixed-assets", "overlay"])
@@ -93,4 +94,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

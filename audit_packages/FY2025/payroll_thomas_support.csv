@@ -1,0 +1,3 @@
+fy,date,source_file,journal_entry_id,category,subcategory,amount_cents,amount,description
+FY2025,2024-06-17,bank_debit_journal_detail.csv,BANK_DEBIT_1085,SHAREHOLDER_PAYROLL,PAYROLL,432107,"$4,321.07",clear_net_pay_payable_match:Thomas McCrossin:2024-06-17
+FY2025,2024-10-07,payroll_cra_account_matches.csv,,PAYROLL_REIMBURSE,Payment Sept 2024,41618,$416.18,Internet Banking E-TRANSFER105173064541 Thomas McCrossin 4506*********695

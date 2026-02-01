@@ -1,0 +1,9 @@
+fy,date,shareholder,category,amount,journal_entry_id,description,evidence_file
+FY2025,2024-06-17,Dwayne,LOAN_ISSUED,9000.00,BANK_DEBIT_1086,,due_from_shareholder_breakdown.csv
+FY2025,2025-04-29,Thomas,LOAN_ISSUED,2000.00,BANK_DEBIT_362,,due_from_shareholder_breakdown.csv
+FY2025,2025-05-22,Dwayne,LOAN_REPAID,-9000.00,BANK_INFLOW_SHAREHOLDER_LOAN_REPAYMENT_347,,due_from_shareholder_breakdown.csv
+FY2025,2025-05-31,Thomas,MILEAGE_FUEL_NET,-41.36,MILEAGE_FUEL_REIMBURSEMENT_FY2025,Net mileage/fuel reimbursement position for the fiscal year,shareholder_mileage_fuel_payables_FY2025.csv
+FY2025,2025-05-31,Dwayne,MILEAGE_FUEL_NET,608.52,MILEAGE_FUEL_REIMBURSEMENT_FY2025,Net mileage/fuel reimbursement position for the fiscal year,shareholder_mileage_fuel_payables_FY2025.csv
+FY2025,2025-05-31,Thomas,YEAR_END_BALANCE,-3403.90,trial_balance_FY2025.csv,2400 Due to Shareholder - Thomas,trial_balance_FY2025.csv
+FY2025,2025-05-31,Dwayne,YEAR_END_BALANCE,-1606.68,trial_balance_FY2025.csv,2410 Due to Shareholder - Dwayne,trial_balance_FY2025.csv
+FY2025,2025-05-31,Shareholder,YEAR_END_BALANCE,2041.36,trial_balance_FY2025.csv,2500 Due from Shareholder,trial_balance_FY2025.csv

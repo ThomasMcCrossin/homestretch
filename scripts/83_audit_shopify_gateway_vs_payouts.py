@@ -5,7 +5,7 @@ from __future__ import annotations
 import argparse
 import csv
 from dataclasses import dataclass
-from decimal import Decimal
+from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
 
 from _lib import DB_PATH, PROJECT_ROOT, FiscalYear, connect_db, fiscal_years_from_manifest, load_manifest
@@ -21,6 +21,9 @@ class GatewayReport:
 
 def cents_to_dollars(cents: int) -> str:
     return f"{cents / 100:.2f}"
+
+def round_percent(value: Decimal) -> Decimal:
+    return value.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
 
 
 def select_non_overlapping_reports(reports: list[GatewayReport]) -> list[GatewayReport]:
@@ -62,6 +65,8 @@ def main() -> int:
     out_md = args.out_dir / "shopify_gateway_vs_payouts_audit.md"
     out_selected_reports_csv = args.out_dir / "shopify_gateway_reports_selected.csv"
     out_gateway_totals_csv = args.out_dir / "shopify_gateway_totals_by_fy.csv"
+    out_sales_channel_totals_csv = args.out_dir / "shopify_sales_channel_totals_by_fy.csv"
+    out_internet_percent_csv = args.out_dir / "shopify_internet_sales_percent_by_fy.csv"
 
     conn = connect_db(args.db)
     try:
@@ -99,9 +104,12 @@ def main() -> int:
 
         by_report_gateway: dict[str, dict[str, dict[str, int]]] = {}
         # by_report_gateway[report_id][gateway] -> sums across channels
+        by_report_channel: dict[str, dict[str, dict[str, int]]] = {}
+        # by_report_channel[report_id][order_sales_channel] -> sums across gateways
         for r in gateway_rows:
             report_id = str(r["report_id"])
             gateway = str(r["payment_gateway"] or "unknown")
+            channel = str(r["order_sales_channel"] or "unknown")
             d = by_report_gateway.setdefault(report_id, {}).setdefault(
                 gateway, {"tx_count": 0, "gross_cents": 0, "refunded_cents": 0, "net_cents": 0}
             )
@@ -109,6 +117,14 @@ def main() -> int:
             d["gross_cents"] += int(r["gross_cents"] or 0)
             d["refunded_cents"] += int(r["refunded_cents"] or 0)
             d["net_cents"] += int(r["net_cents"] or 0)
+
+            c = by_report_channel.setdefault(report_id, {}).setdefault(
+                channel, {"tx_count": 0, "gross_cents": 0, "refunded_cents": 0, "net_cents": 0}
+            )
+            c["tx_count"] += int(r["tx_count"] or 0)
+            c["gross_cents"] += int(r["gross_cents"] or 0)
+            c["refunded_cents"] += int(r["refunded_cents"] or 0)
+            c["net_cents"] += int(r["net_cents"] or 0)
 
         # Payout consistency checks (does not try to align to gateway timing).
         payout_rows = conn.execute(
@@ -130,6 +146,8 @@ def main() -> int:
     # Output CSVs first for easy diffing.
     selected_rows: list[dict[str, str]] = []
     gateway_totals_rows: list[dict[str, str]] = []
+    channel_totals_rows: list[dict[str, str]] = []
+    internet_percent_rows: list[dict[str, str]] = []
 
     with out_md.open("w", encoding="utf-8") as f:
         f.write("# Shopify audit: gateway exports vs payout-based GL\n\n")
@@ -171,6 +189,14 @@ def main() -> int:
                     for k in ("tx_count", "gross_cents", "refunded_cents", "net_cents"):
                         t[k] += int(sums.get(k) or 0)
 
+            totals_by_channel: dict[str, dict[str, int]] = {}
+            for r in selected:
+                by_ch = by_report_channel.get(r.id, {})
+                for ch, sums in by_ch.items():
+                    t = totals_by_channel.setdefault(ch, {"tx_count": 0, "gross_cents": 0, "refunded_cents": 0, "net_cents": 0})
+                    for k in ("tx_count", "gross_cents", "refunded_cents", "net_cents"):
+                        t[k] += int(sums.get(k) or 0)
+
             if totals_by_gateway:
                 f.write("Gateway totals (selected reports only):\n\n")
                 top = sorted(totals_by_gateway.items(), key=lambda kv: abs(kv[1]["net_cents"]), reverse=True)
@@ -195,6 +221,52 @@ def main() -> int:
                 f.write("\n")
             else:
                 f.write("Gateway totals: none (no selected reports).\n\n")
+
+            if totals_by_channel:
+                f.write("Sales channel totals (selected reports only):\n\n")
+                top_ch = sorted(totals_by_channel.items(), key=lambda kv: abs(kv[1]["net_cents"]), reverse=True)
+                for ch, sums in top_ch:
+                    channel_totals_rows.append(
+                        {
+                            "fy": fy.fy,
+                            "order_sales_channel": ch,
+                            "tx_count": str(sums["tx_count"]),
+                            "gross_payments": cents_to_dollars(sums["gross_cents"]),
+                            "refunded_payments": cents_to_dollars(sums["refunded_cents"]),
+                            "net_payments": cents_to_dollars(sums["net_cents"]),
+                            "gross_cents": str(sums["gross_cents"]),
+                            "refunded_cents": str(sums["refunded_cents"]),
+                            "net_cents": str(sums["net_cents"]),
+                        }
+                    )
+                    f.write(
+                        f"- {ch}: tx={sums['tx_count']} gross=${cents_to_dollars(sums['gross_cents'])} "
+                        f"refunded=${cents_to_dollars(sums['refunded_cents'])} net=${cents_to_dollars(sums['net_cents'])}\n"
+                    )
+                f.write("\n")
+
+                online_channels = {"online store", "shop"}
+                online_net = sum(int(v.get("net_cents") or 0) for ch, v in totals_by_channel.items() if ch in online_channels)
+                total_net = sum(int(v.get("net_cents") or 0) for v in totals_by_channel.values())
+                percent = Decimal("0")
+                if total_net:
+                    percent = round_percent(Decimal(online_net) * Decimal(100) / Decimal(total_net))
+                internet_percent_rows.append(
+                    {
+                        "fy": fy.fy,
+                        "online_channels": ",".join(sorted(online_channels)),
+                        "online_net_payments": cents_to_dollars(online_net),
+                        "total_net_payments": cents_to_dollars(total_net),
+                        "online_net_cents": str(int(online_net)),
+                        "total_net_cents": str(int(total_net)),
+                        "percent_gross_revenue_from_internet": str(percent),
+                    }
+                )
+                f.write("Internet revenue % (from gateway exports):\n\n")
+                f.write(f"- Online channels (treated as internet): {', '.join(sorted(online_channels))}\n")
+                f.write(f"- Online net payments: ${cents_to_dollars(online_net)}\n")
+                f.write(f"- Total net payments (all channels): ${cents_to_dollars(total_net)}\n")
+                f.write(f"- % gross revenue from internet (Online Store + Shop): {percent}\n\n")
 
             # Payout totals in FY (deposit-date).
             charges = refunds = adjustments = fees = total = 0
@@ -267,6 +339,36 @@ def main() -> int:
         w.writeheader()
         w.writerows(gateway_totals_rows)
 
+    with out_sales_channel_totals_csv.open("w", encoding="utf-8", newline="") as f:
+        fieldnames = [
+            "fy",
+            "order_sales_channel",
+            "tx_count",
+            "gross_payments",
+            "refunded_payments",
+            "net_payments",
+            "gross_cents",
+            "refunded_cents",
+            "net_cents",
+        ]
+        w = csv.DictWriter(f, fieldnames=fieldnames)
+        w.writeheader()
+        w.writerows(channel_totals_rows)
+
+    with out_internet_percent_csv.open("w", encoding="utf-8", newline="") as f:
+        fieldnames = [
+            "fy",
+            "online_channels",
+            "online_net_payments",
+            "total_net_payments",
+            "online_net_cents",
+            "total_net_cents",
+            "percent_gross_revenue_from_internet",
+        ]
+        w = csv.DictWriter(f, fieldnames=fieldnames)
+        w.writeheader()
+        w.writerows(internet_percent_rows)
+
     print("SHOPIFY GATEWAY VS PAYOUTS AUDIT BUILT")
     print(f"- out: {out_md}")
     return 0
@@ -274,4 +376,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

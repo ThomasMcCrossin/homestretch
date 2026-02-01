@@ -1,0 +1,5 @@
+fy,date,shareholder,category,amount,journal_entry_id,description,evidence_file
+FY2024,2024-05-31,Thomas,MILEAGE_FUEL_NET,2320.81,MILEAGE_FUEL_REIMBURSEMENT_FY2024,Net mileage/fuel reimbursement position for the fiscal year,shareholder_mileage_fuel_payables_FY2024.csv
+FY2024,2024-05-31,Dwayne,MILEAGE_FUEL_NET,788.16,MILEAGE_FUEL_REIMBURSEMENT_FY2024,Net mileage/fuel reimbursement position for the fiscal year,shareholder_mileage_fuel_payables_FY2024.csv
+FY2024,2024-05-31,Thomas,YEAR_END_BALANCE,-2669.99,trial_balance_FY2024.csv,2400 Due to Shareholder - Thomas,trial_balance_FY2024.csv
+FY2024,2024-05-31,Dwayne,YEAR_END_BALANCE,-908.16,trial_balance_FY2024.csv,2410 Due to Shareholder - Dwayne,trial_balance_FY2024.csv
