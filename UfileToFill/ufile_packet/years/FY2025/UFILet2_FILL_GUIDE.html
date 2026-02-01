@@ -1458,7 +1458,7 @@
 <td>8710</td>
 <td>Interest and bank charges</td>
 <td>3,371</td>
-<td></td>
+<td>Includes bank charges + payment processing fees. In Option 1 (book fixed assets), capitalized items originally expensed here are removed via the book overlay (see breakdown below).</td>
 </tr>
 <tr>
 <td>8810</td>
@@ -1531,6 +1531,86 @@
 <td>Vehicle expenses</td>
 <td>3,510</td>
 <td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Interest and bank charges (8710) — breakdown (working-paper)</h3>
+<p>This is informational only (UFile entry is the whole-dollar amount shown on Schedule 125). It helps explain why your UFile attempt may differ after the book fixed-asset overlay.</p>
+<div class="table-wrap">
+<table>
+<thead><tr>
+<th>Account</th>
+<th>Name</th>
+<th>Base amount</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>5300</td>
+<td>Merchant Processing Fees</td>
+<td>$204.49</td>
+</tr>
+<tr>
+<td>6000</td>
+<td>Bank Charges &amp; Fees</td>
+<td>$1,122.71</td>
+</tr>
+<tr>
+<td>6210</td>
+<td>Payment Processing Fees</td>
+<td>$2,227.26</td>
+</tr>
+<tr>
+<td>8100</td>
+<td>Interest Expense - Bank</td>
+<td>$374.03</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Overlay adjustments affecting 8710 (capitalized items removed from expense):</p>
+<div class="table-wrap">
+<table>
+<thead><tr>
+<th>Asset</th>
+<th>Entry</th>
+<th>Account</th>
+<th>Overlay amount</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>nayax_card_reader_2025_02_24</td>
+<td>reclass_expense_credit</td>
+<td>5300</td>
+<td>$-557.43</td>
+<td>Nayax card reader for vending machine</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-wrap">
+<table>
+<thead><tr>
+<th>Component</th>
+<th>Amount</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Base trial balance (sum of accounts mapped to GIFI 8710)</td>
+<td>$3,928.49</td>
+</tr>
+<tr>
+<td>Book fixed-asset overlay net impact on 8710</td>
+<td>$-557.43</td>
+</tr>
+<tr>
+<td>Final (base + overlay) (rounded in Schedule 125)</td>
+<td>$3,371.06</td>
+</tr>
+<tr>
+<td>Schedule 125 line 8710 (whole dollars to enter in UFile)</td>
+<td>3,371</td>
 </tr>
 </tbody>
 </table>

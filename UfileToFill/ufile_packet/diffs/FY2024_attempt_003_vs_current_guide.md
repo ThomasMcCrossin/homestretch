@@ -188,7 +188,7 @@ If this section is missing/empty in the guide, the packet was likely built from 
 | 8622 | Employer's portion of employee benefits | 1,463 | 1,463 | 0 | OK |  |
 | 8670 | Amortization of tangible assets | 508 | 508 | 0 | OK |  |
 | 8690 | Insurance | 1,851 | 1,851 | 0 | OK |  |
-| 8710 | Interest and bank charges | 2,218 | 2,218 | 0 | OK |  |
+| 8710 | Interest and bank charges | 2,218 | 2,218 | 0 | OK | Includes bank charges + payment processing fees. In Option 1 (book fixed assets), capitalized items originally expensed here are removed via the book overlay (see breakdown below). |
 | 8810 | Office expenses | 1,998 | 1,998 | 0 | OK |  |
 | 8813 | Data processing | 1,135 | 1,135 | 0 | OK | Computer hardware + SaaS (under capitalization threshold) |
 | 8860 | Professional fees | 879 | 879 | 0 | OK |  |

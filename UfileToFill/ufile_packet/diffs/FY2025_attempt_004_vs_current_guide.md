@@ -24,7 +24,7 @@ This report compares your **previous UFile attempt** (from the exported PDF pars
 ### Income statement
 | Code | Description | Attempt | Expected (current guide) | Delta (expected - attempt) | Action | Guide note |
 |---|---|---:|---:|---:|---|---|
-| 8710 | Interest and bank charges | 6,694 | 3,371 | -3,323 | CHANGE (update amount) |  |
+| 8710 | Interest and bank charges | 6,694 | 3,371 | -3,323 | CHANGE (update amount) | Includes bank charges + payment processing fees. In Option 1 (book fixed assets), capitalized items originally expensed here are removed via the book overlay (see breakdown below). |
 | 8670 | Amortization of tangible assets | 0 | 1,297 | 1,297 | ADD (missing in attempt) |  |
 | 8813 | Data processing | 1,878 | 2,915 | 1,037 | CHANGE (update amount) | Computer hardware + SaaS (under capitalization threshold) |
 | 8810 | Office expenses | 3,903 | 2,939 | -964 | CHANGE (update amount) |  |
@@ -191,7 +191,7 @@ If this section is missing/empty in the guide, the packet was likely built from 
 |---|---|---:|---:|---:|---|---|
 | 8670 | Amortization of tangible assets | 0 | 1,297 | 1,297 | ADD (missing in attempt) |  |
 | 8320 | Purchases / cost of materials | 117,452 | 117,342 | -110 | CHANGE (update amount) | If UFile auto-calculates 8320, do NOT type it; use as a tie-check only. Otherwise enter it. Computation: purchases = 8518 - 8300 + 8500. |
-| 8710 | Interest and bank charges | 6,694 | 3,371 | -3,323 | CHANGE (update amount) |  |
+| 8710 | Interest and bank charges | 6,694 | 3,371 | -3,323 | CHANGE (update amount) | Includes bank charges + payment processing fees. In Option 1 (book fixed assets), capitalized items originally expensed here are removed via the book overlay (see breakdown below). |
 | 8810 | Office expenses | 3,903 | 2,939 | -964 | CHANGE (update amount) |  |
 | 8813 | Data processing | 1,878 | 2,915 | 1,037 | CHANGE (update amount) | Computer hardware + SaaS (under capitalization threshold) |
 | 8960 | Repairs and maintenance | 603 | 585 | -18 | CHANGE (update amount) |  |

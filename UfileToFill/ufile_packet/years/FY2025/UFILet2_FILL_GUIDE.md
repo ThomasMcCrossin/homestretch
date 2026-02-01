@@ -289,7 +289,7 @@ UFile entry tip: do not enter both `2780` and `2781` for the same payable; that 
 | 8622 | Employer's portion of employee benefits | 3,610 |  |
 | 8670 | Amortization of tangible assets | 1,297 |  |
 | 8690 | Insurance | 1,951 |  |
-| 8710 | Interest and bank charges | 3,371 |  |
+| 8710 | Interest and bank charges | 3,371 | Includes bank charges + payment processing fees. In Option 1 (book fixed assets), capitalized items originally expensed here are removed via the book overlay (see breakdown below). |
 | 8810 | Office expenses | 2,939 |  |
 | 8813 | Data processing | 2,915 | Computer hardware + SaaS (under capitalization threshold) |
 | 8860 | Professional fees | 353 |  |
@@ -302,6 +302,29 @@ UFile entry tip: do not enter both `2780` and `2781` for the same payable; that 
 | 9270 | Other expenses | 293 | Includes CRA penalties $274 (non-deductible) |
 | 9275 | Delivery, freight and express | 96 |  |
 | 9281 | Vehicle expenses | 3,510 |  |
+
+### Interest and bank charges (8710) — breakdown (working-paper)
+This is informational only (UFile entry is the whole-dollar amount shown on Schedule 125). It helps explain why your UFile attempt may differ after the book fixed-asset overlay.
+
+| Account | Name | Base amount |
+|---|---|---|
+| 5300 | Merchant Processing Fees | $204.49 |
+| 6000 | Bank Charges & Fees | $1,122.71 |
+| 6210 | Payment Processing Fees | $2,227.26 |
+| 8100 | Interest Expense - Bank | $374.03 |
+
+Overlay adjustments affecting 8710 (capitalized items removed from expense):
+
+| Asset | Entry | Account | Overlay amount | Description |
+|---|---|---|---|---|
+| nayax_card_reader_2025_02_24 | reclass_expense_credit | 5300 | $-557.43 | Nayax card reader for vending machine |
+
+| Component | Amount |
+|---|---|
+| Base trial balance (sum of accounts mapped to GIFI 8710) | $3,928.49 |
+| Book fixed-asset overlay net impact on 8710 | $-557.43 |
+| Final (base + overlay) (rounded in Schedule 125) | $3,371.06 |
+| Schedule 125 line 8710 (whole dollars to enter in UFile) | 3,371 |
 
 ### Cost of sales tie-check (display-only)
 | GIFI | Description | Amount |

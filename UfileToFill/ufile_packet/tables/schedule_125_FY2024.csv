@@ -8,7 +8,7 @@ GIFI_Code,Description,Amount,Note
 8622,Employer's portion of employee benefits,1463,
 8670,Amortization of tangible assets,508,
 8690,Insurance,1851,
-8710,Interest and bank charges,2218,
+8710,Interest and bank charges,2218,"Includes bank charges + payment processing fees. In Option 1 (book fixed assets), capitalized items originally expensed here are removed via the book overlay (see breakdown below)."
 8810,Office expenses,1998,
 8813,Data processing,1135,Computer hardware + SaaS (under capitalization threshold)
 8860,Professional fees,879,

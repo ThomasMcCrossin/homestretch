@@ -67,6 +67,7 @@ def build_year_guide(packet: dict, fy: str) -> str:
     year = packet["years"][fy]
     period = year["fiscal_period"]
     global_positions = packet.get("global_positions", {})
+    snapshot_dir = PROJECT_ROOT / str(packet.get("meta", {}).get("snapshot_source") or "").strip()
 
     schedule_100 = year["schedule_100"]
     schedule_125 = year["schedule_125"]
@@ -193,6 +194,15 @@ def build_year_guide(packet: dict, fy: str) -> str:
             return []
         with path.open(newline="") as f:
             return list(csv.DictReader(f))
+
+    def dollars_from_cents(cents: int) -> str:
+        return f"${cents/100:,.2f}"
+
+    def read_snapshot_csv_rows(filename: str) -> list[dict[str, str]]:
+        # Prefer snapshot-evidence files so the guide always matches the packet's snapshot source.
+        if snapshot_dir and snapshot_dir.exists():
+            return read_csv_rows(snapshot_dir / filename)
+        return read_csv_rows(ACCOUNTING_OUTPUT_DIR / filename)
 
     # Header
     parts: list[str] = []
@@ -837,6 +847,13 @@ def build_year_guide(packet: dict, fy: str) -> str:
     parts.append("")
 
     parts.append("## Schedule 125 (GIFI) — Income statement (enter these lines, whole dollars)")
+    # Add contextual notes for lines that frequently surprise during reclass overlays.
+    if "8710" in schedule_125 and "note" not in schedule_125["8710"]:
+        schedule_125["8710"]["note"] = (
+            "Includes bank charges + payment processing fees. In Option 1 (book fixed assets), "
+            "capitalized items originally expensed here are removed via the book overlay (see breakdown below)."
+        )
+
     # Insert cost-of-sales breakdown rows first so the operator fills opening/purchases/closing.
     cogs_rows = build_cogs_entry_rows()
     schedule_125_rows = rows_from_schedule(schedule_125)
@@ -849,6 +866,97 @@ def build_year_guide(packet: dict, fy: str) -> str:
         )
     )
     parts.append("")
+
+    # Helpful breakdown for GIFI 8710 (merchant/bank fees) because it often contains both true bank
+    # charges and payment processing fees, and can be reduced by book capitalization overlays.
+    if "8710" in schedule_125:
+        tb_rows = read_snapshot_csv_rows(f"trial_balance_{fy}.csv")
+        overlay_rows = read_snapshot_csv_rows(f"book_fixed_asset_overlay_{fy}.csv")
+
+        by_account: dict[str, dict[str, object]] = {}
+        base_total_cents = 0
+        for r in tb_rows:
+            if (r.get("fy") or "").strip() != fy:
+                continue
+            if (r.get("gifi_code") or "").strip() != "8710":
+                continue
+            acct = (r.get("account_code") or "").strip()
+            if not acct:
+                continue
+            try:
+                cents = int(r.get("net_cents") or 0)
+            except Exception:
+                cents = 0
+            base_total_cents += cents
+            if acct not in by_account:
+                by_account[acct] = {"name": (r.get("account_name") or "").strip(), "cents": 0}
+            by_account[acct]["cents"] = int(by_account[acct]["cents"]) + cents
+
+        overlay_total_cents = 0
+        overlay_lines: list[dict[str, str]] = []
+        for r in overlay_rows:
+            if (r.get("fiscal_year") or "").strip() != fy:
+                continue
+            if (r.get("gifi_code") or "").strip() != "8710":
+                continue
+            try:
+                cents = int(r.get("net_cents") or 0)
+            except Exception:
+                cents = 0
+            overlay_total_cents += cents
+            overlay_lines.append(
+                {
+                    "asset_id": (r.get("asset_id") or "").strip(),
+                    "entry_type": (r.get("entry_type") or "").strip(),
+                    "account_code": (r.get("account_code") or "").strip(),
+                    "amount": dollars_from_cents(cents),
+                    "desc": (r.get("description") or "").strip(),
+                }
+            )
+
+        if base_total_cents or overlay_total_cents:
+            parts.append("### Interest and bank charges (8710) — breakdown (working-paper)")
+            parts.append(
+                "This is informational only (UFile entry is the whole-dollar amount shown on Schedule 125). "
+                "It helps explain why your UFile attempt may differ after the book fixed-asset overlay."
+            )
+            parts.append("")
+            acct_rows: list[list[str]] = []
+            for acct in sorted(by_account.keys(), key=lambda x: int(x) if x.isdigit() else x):
+                obj = by_account[acct]
+                acct_rows.append([acct, str(obj.get("name") or ""), dollars_from_cents(int(obj.get("cents") or 0))])
+            if acct_rows:
+                parts.append(md_table(["Account", "Name", "Base amount"], acct_rows))
+                parts.append("")
+            if overlay_lines:
+                ov_rows = []
+                for ln in overlay_lines:
+                    ov_rows.append(
+                        [
+                            ln.get("asset_id", ""),
+                            ln.get("entry_type", ""),
+                            ln.get("account_code", ""),
+                            ln.get("amount", ""),
+                            ln.get("desc", ""),
+                        ]
+                    )
+                parts.append("Overlay adjustments affecting 8710 (capitalized items removed from expense):")
+                parts.append("")
+                parts.append(md_table(["Asset", "Entry", "Account", "Overlay amount", "Description"], ov_rows))
+                parts.append("")
+            final_cents = base_total_cents + overlay_total_cents
+            parts.append(
+                md_table(
+                    ["Component", "Amount"],
+                    [
+                        ["Base trial balance (sum of accounts mapped to GIFI 8710)", dollars_from_cents(base_total_cents)],
+                        ["Book fixed-asset overlay net impact on 8710", dollars_from_cents(overlay_total_cents)],
+                        ["Final (base + overlay) (rounded in Schedule 125)", dollars_from_cents(final_cents)],
+                        ["Schedule 125 line 8710 (whole dollars to enter in UFile)", money(int(schedule_125.get("8710", {}).get("amount") or 0))],
+                    ],
+                )
+            )
+            parts.append("")
 
     # Cost of sales tie-check (display-only)
     if "8518" in schedule_125 and "8519" in schedule_125:
@@ -899,7 +1007,7 @@ def build_year_guide(packet: dict, fy: str) -> str:
     sch100_due_to = int(schedule_100.get("2781", {}).get("amount") or 0)
     due_from_breakdown_rows = [
         r
-        for r in read_csv_rows(ACCOUNTING_OUTPUT_DIR / "due_from_shareholder_breakdown.csv")
+        for r in read_snapshot_csv_rows("due_from_shareholder_breakdown.csv")
         if date_in_fy((r.get("entry_date") or "").strip())
     ]
     if sch100_due_from or sch100_due_to or due_from_breakdown_rows:
