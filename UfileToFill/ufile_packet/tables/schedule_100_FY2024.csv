@@ -7,9 +7,9 @@ GIFI_Code,Description,Amount,Note
 2599,Total assets,31578,
 2620,Amounts payable and accrued liabilities,2687,
 2680,"Taxes payable (GST/HST, etc.)",6757,
-2781,Due to individual shareholder(s),3639,"Tie-out: 2400 $2,669.99 (Thomas) + 2410 $908.16 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead."
-3499,Total liabilities,13083,
+2781,Due to individual shareholder(s),3578,"Tie-out: 2400 $2,669.99 (Thomas) + 2410 $908.16 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead."
+3499,Total liabilities,13022,
 3500,Common shares,100,
-3600,Retained earnings/deficit,18395,
-3620,Total shareholder equity,18495,
+3600,Retained earnings/deficit,18456,
+3620,Total shareholder equity,18556,
 3640,Total liabilities and shareholder equity,31578,

@@ -19,8 +19,8 @@ This report compares your **previous UFile attempt** (from the exported PDF pars
 | 1740 | Machinery, equipment, furniture and fixtures | 0 | 3,518 | 3,518 | ADD (missing in attempt) |  |
 | 2620 | Amounts payable and accrued liabilities | 10,013 | 7,405 | -2,608 | CHANGE (update amount) |  |
 | 1741 | Accum amort - machinery/equip/furn/fixtures | 0 | -1,805 | -1,805 | ADD (missing in attempt) |  |
+| 2781 | Due to individual shareholder(s) | 5,097 | 5,011 | -86 | CHANGE (update amount) | Tie-out: 2400 $3,490.67 (Thomas) + 2410 $1,606.68 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead. |
 | 1301 | Due from individual shareholder(s) | 2,000 | 2,041 | 41 | CHANGE (update amount) | Shareholder loan receivable (Thomas). Review s.15(2) repayment/exception within 1 year after 2025-05-31. |
-| 2781 | Due to individual shareholder(s) | 5,097 | 5,072 | -25 | CHANGE (update amount) | Tie-out: 2400 $3,490.67 (Thomas) + 2410 $1,606.68 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead. |
 | 2680 | Taxes payable (GST/HST, etc.) | 2,663 | 2,653 | -10 | CHANGE (update amount) |  |
 
 ### Income statement
@@ -166,7 +166,7 @@ If this section is missing/empty in the guide, the packet was likely built from 
 | 1301 | Due from individual shareholder(s) | 2,000 | 2,041 | 41 | CHANGE (update amount) | Shareholder loan receivable (Thomas). Review s.15(2) repayment/exception within 1 year after 2025-05-31. |
 | 2620 | Amounts payable and accrued liabilities | 10,013 | 7,405 | -2,608 | CHANGE (update amount) |  |
 | 2680 | Taxes payable (GST/HST, etc.) | 2,663 | 2,653 | -10 | CHANGE (update amount) |  |
-| 2781 | Due to individual shareholder(s) | 5,097 | 5,072 | -25 | CHANGE (update amount) | Tie-out: 2400 $3,490.67 (Thomas) + 2410 $1,606.68 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead. |
+| 2781 | Due to individual shareholder(s) | 5,097 | 5,011 | -86 | CHANGE (update amount) | Tie-out: 2400 $3,490.67 (Thomas) + 2410 $1,606.68 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead. |
 | 3660 |  | 16,656 | 0 | -16,656 | CLEAR / DO NOT ENTER (extra in attempt) |  |
 | 3700 |  | -36,900 | 0 | 36,900 | CLEAR / DO NOT ENTER (extra in attempt) |  |
 | 3740 |  | -1 | 0 | 1 | CLEAR / DO NOT ENTER (extra in attempt) |  |
@@ -187,10 +187,10 @@ If this section is missing/empty in the guide, the packet was likely built from 
 ## Retained earnings rollforward — delta table
 | Code | Description | Attempt | Expected (current guide) | Delta (expected - attempt) | Action | Guide note |
 |---|---|---:|---:|---:|---|---|
-| 3660 | Retained earnings/deficit - Start | 16,656 | 18,395 | 1,739 | CHANGE (update amount) | Enter (opening RE) |
+| 3660 | Retained earnings/deficit - Start | 16,656 | 18,456 | 1,800 | CHANGE (update amount) | Enter (opening RE) |
 | 3680 | Net income/loss | 28,349 | 31,007 | 2,658 | CHANGE (update amount) | Enter (net income/loss) |
 | 3700 | Dividends declared | -36,900 | 36,900 | 73,800 | CHANGE (update amount) | Enter (dividends declared) |
-| 3849 | Retained earnings/deficit - End | 8,104 | 12,501 | 4,397 | CHANGE (update amount) | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
+| 3849 | Retained earnings/deficit - End | 8,104 | 12,562 | 4,458 | CHANGE (update amount) | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
 | 3740 | Other items affecting retained earnings (rounding) | -1 | -1 | 0 | OK | Enter only if needed (rounding/other) |
 
 ## Income statement (GIFI Schedule 125) — full delta table

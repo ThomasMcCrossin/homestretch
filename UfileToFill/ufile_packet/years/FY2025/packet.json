@@ -1,10 +1,10 @@
 {
   "meta": {
     "schema_version": "1.2.0",
-    "generated_at": "2026-02-01T13:33:18.580322+00:00",
+    "generated_at": "2026-02-01T16:56:01.836296+00:00",
     "generator": "tools/build_year_artifacts.py",
     "source_packet": "UfileToFill/ufile_packet/packet.json",
-    "snapshot_source": "output/snapshots/20260201-085031/output/",
+    "snapshot_source": "output/snapshots/20260201-165601/output/",
     "fiscal_year": "FY2025"
   },
   "entity": {
@@ -258,7 +258,7 @@
         "corporate_history": {
           "has_entries": true,
           "prior_year_end_date": "2024-05-31",
-          "prior_year_taxable_income": 18725,
+          "prior_year_taxable_income": 18786,
           "prior_year_claimed_sbd": true,
           "prior_year_large_corp_amount_line_415": 0,
           "prior_year_taxable_paid_up_capital": 100,
@@ -306,7 +306,7 @@
           "label": "Total assets"
         },
         "2781": {
-          "amount": 5072,
+          "amount": 5011,
           "label": "Due to individual shareholder(s)",
           "note": "Tie-out: 2400 $3,490.67 (Thomas) + 2410 $1,606.68 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead."
         },
@@ -319,7 +319,7 @@
           "label": "Amounts payable and accrued liabilities"
         },
         "3499": {
-          "amount": 15130,
+          "amount": 15069,
           "label": "Total liabilities"
         },
         "3500": {
@@ -327,11 +327,11 @@
           "label": "Common shares"
         },
         "3600": {
-          "amount": 12501,
+          "amount": 12562,
           "label": "Retained earnings/deficit"
         },
         "3620": {
-          "amount": 12601,
+          "amount": 12662,
           "label": "Total shareholder equity"
         },
         "3640": {
@@ -449,7 +449,7 @@
       },
       "retained_earnings": {
         "3660": {
-          "amount": 18395,
+          "amount": 18456,
           "label": "Retained earnings/deficit - Start"
         },
         "3680": {
@@ -465,7 +465,7 @@
           "label": "Other items affecting retained earnings (rounding)"
         },
         "3849": {
-          "amount": 12501,
+          "amount": 12562,
           "label": "Retained earnings/deficit - End"
         }
       },
@@ -790,61 +790,61 @@
   "evidence_index": [
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260201-085031/output/gifi_schedule_100_FY2024.csv",
+      "path": "output/snapshots/20260201-165601/output/gifi_schedule_100_FY2024.csv",
       "description": "Balance sheet GIFI codes for FY2024",
       "fiscal_year": "FY2024"
     },
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260201-085031/output/gifi_schedule_100_FY2025.csv",
+      "path": "output/snapshots/20260201-165601/output/gifi_schedule_100_FY2025.csv",
       "description": "Balance sheet GIFI codes for FY2025",
       "fiscal_year": "FY2025"
     },
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260201-085031/output/gifi_schedule_125_FY2024.csv",
+      "path": "output/snapshots/20260201-165601/output/gifi_schedule_125_FY2024.csv",
       "description": "Income statement GIFI codes for FY2024",
       "fiscal_year": "FY2024"
     },
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260201-085031/output/gifi_schedule_125_FY2025.csv",
+      "path": "output/snapshots/20260201-165601/output/gifi_schedule_125_FY2025.csv",
       "description": "Income statement GIFI codes for FY2025",
       "fiscal_year": "FY2025"
     },
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260201-085031/output/gifi_retained_earnings_FY2024.csv",
+      "path": "output/snapshots/20260201-165601/output/gifi_retained_earnings_FY2024.csv",
       "description": "Retained earnings schedule for FY2024",
       "fiscal_year": "FY2024"
     },
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260201-085031/output/gifi_retained_earnings_FY2025.csv",
+      "path": "output/snapshots/20260201-165601/output/gifi_retained_earnings_FY2025.csv",
       "description": "Retained earnings schedule for FY2025",
       "fiscal_year": "FY2025"
     },
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260201-085031/output/schedule_1_FY2024.csv",
+      "path": "output/snapshots/20260201-165601/output/schedule_1_FY2024.csv",
       "description": "Schedule 1 net income reconciliation for FY2024",
       "fiscal_year": "FY2024"
     },
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260201-085031/output/schedule_1_FY2025.csv",
+      "path": "output/snapshots/20260201-165601/output/schedule_1_FY2025.csv",
       "description": "Schedule 1 net income reconciliation for FY2025",
       "fiscal_year": "FY2025"
     },
     {
       "category": "payroll",
-      "path": "output/snapshots/20260201-085031/output/payroll_summary.md",
+      "path": "output/snapshots/20260201-165601/output/payroll_summary.md",
       "description": "Payroll summary with T4 amounts and bank overrides",
       "fiscal_year": null
     },
     {
       "category": "HST",
-      "path": "output/snapshots/20260201-085031/output/shopify_sales_tax_journal_detail.csv",
+      "path": "output/snapshots/20260201-165601/output/shopify_sales_tax_journal_detail.csv",
       "description": "HST collected on Shopify sales",
       "fiscal_year": null
     },
@@ -862,19 +862,19 @@
     },
     {
       "category": "shareholder",
-      "path": "output/snapshots/20260201-085031/output/shareholder_mileage_fuel_summary.md",
+      "path": "output/snapshots/20260201-165601/output/shareholder_mileage_fuel_summary.md",
       "description": "Mileage and fuel reimbursements to shareholders",
       "fiscal_year": null
     },
     {
       "category": "shareholder",
-      "path": "output/snapshots/20260201-085031/output/shareholder_meals_estimate_summary.md",
+      "path": "output/snapshots/20260201-165601/output/shareholder_meals_estimate_summary.md",
       "description": "Meals estimates for Moncton trips",
       "fiscal_year": null
     },
     {
       "category": "bank",
-      "path": "output/snapshots/20260201-085031/output/readiness_report.md",
+      "path": "output/snapshots/20260201-165601/output/readiness_report.md",
       "description": "Bank reconciliation and readiness status",
       "fiscal_year": null
     },
@@ -940,21 +940,21 @@
       "area": "meals_add_back",
       "description": "50% meals and entertainment add-back for Schedule 1",
       "approach": "Standard ITA 67.1 treatment. Full expense deducted on books; 50% added back for tax.",
-      "evidence": "output/snapshots/20260201-085031/output/schedule_1_FY2024.csv",
+      "evidence": "output/snapshots/20260201-165601/output/schedule_1_FY2024.csv",
       "risk_level": "low"
     },
     {
       "area": "cra_penalties",
       "description": "CRA penalties included in Other expenses but non-deductible",
       "approach": "Penalties recorded on books ($71 FY2024, $274 FY2025) and added back on Schedule 1 line 311.",
-      "evidence": "output/snapshots/20260201-085031/output/schedule_1_FY2024.csv",
+      "evidence": "output/snapshots/20260201-165601/output/schedule_1_FY2024.csv",
       "risk_level": "low"
     },
     {
       "area": "shareholder_meals_estimate",
       "description": "Moncton trip meals for shareholders estimated (not all receipts)",
       "approach": "Conservative per-diem estimate based on trip frequency. FY2024 $465, FY2025 $390.",
-      "evidence": "output/snapshots/20260201-085031/output/shareholder_meals_estimate_summary.md",
+      "evidence": "output/snapshots/20260201-165601/output/shareholder_meals_estimate_summary.md",
       "risk_level": "medium"
     },
     {
@@ -975,7 +975,7 @@
       "area": "gross_margin_swing",
       "description": "Gross margin increased from 43% to 54% between FY2024 and FY2025",
       "approach": "Review point: compute from Schedule 125 (Gross profit / Revenue). Drivers include inventory increase and seasonality/purchasing differences.",
-      "evidence": "output/snapshots/20260201-085031/output/gifi_schedule_125_FY2024.csv",
+      "evidence": "output/snapshots/20260201-165601/output/gifi_schedule_125_FY2024.csv",
       "risk_level": "medium"
     }
   ]

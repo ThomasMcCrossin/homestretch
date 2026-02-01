@@ -198,7 +198,7 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 | 1741 | Accum amort - machinery/equip/furn/fixtures | -508 |  |
 | 2620 | Amounts payable and accrued liabilities | 2,687 |  |
 | 2680 | Taxes payable (GST/HST, etc.) | 6,757 |  |
-| 2781 | Due to individual shareholder(s) | 3,639 | Tie-out: 2400 $2,669.99 (Thomas) + 2410 $908.16 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead. |
+| 2781 | Due to individual shareholder(s) | 3,578 | Tie-out: 2400 $2,669.99 (Thomas) + 2410 $908.16 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead. |
 | 3500 | Common shares | 100 |  |
 
 ### Fixed assets (book)
@@ -212,10 +212,10 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 | GIFI | Description | Amount | Entry rule |
 |---|---|---|---|
 | 3660 | Retained earnings/deficit - Start | 0 | Enter (opening RE) |
-| 3680 | Net income/loss | 18,395 | Enter (net income/loss) |
+| 3680 | Net income/loss | 18,456 | Enter (net income/loss) |
 | 3700 |  | 0 | Enter (dividends declared) |
 | 3740 |  | 0 | Enter only if needed (rounding/other) |
-| 3849 | Retained earnings/deficit - End | 18,395 | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
+| 3849 | Retained earnings/deficit - End | 18,456 | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
 
 ### Shareholder loans / balances support (working papers)
 CRA frequently asks for support for any due-from-shareholder / due-to-shareholder amounts. Keep the continuity below with your filing package.
@@ -226,7 +226,7 @@ Evidence / working papers:
 - `output/trial_balance_FY2024.csv` (year-end balances by GL account)
 - `output/manual_adjustment_journal_detail.csv` (any year-end shareholder payable adjustments)
 
-Year-end summary (from Schedule 100): Due from shareholder (GIFI 1301) = 0; Due to shareholder (GIFI 2781) = 3,639.
+Year-end summary (from Schedule 100): Due from shareholder (GIFI 1301) = 0; Due to shareholder (GIFI 2781) = 3,578.
 
 #### Loan events in this fiscal year
 _(none)_
@@ -234,7 +234,7 @@ _(none)_
 #### Year-end shareholder-related balances (from trial balance)
 | Account | Name | Debit | Credit | Net (approx) |
 |---|---|---|---|---|
-| 2400 | Due to Shareholder - Thomas | 0.00 | 2730.95 | 2,731 CR |
+| 2400 | Due to Shareholder - Thomas | 0.00 | 2669.99 | 2,670 CR |
 | 2410 | Due to Shareholder - Dwayne | 0.00 | 908.16 | 908 CR |
 
 #### Shareholder mileage reimbursement (working papers)
@@ -248,7 +248,7 @@ Evidence / working papers:
 
 | Shareholder | Mileage | Fuel offset | Net | Direction |
 |---|---|---|---|---|
-| Thomas | $3,597.73 | $1,215.96 | $2,381.77 | due to Thomas |
+| Thomas | $3,597.73 | $1,276.92 | $2,320.81 | due to Thomas |
 | Dwayne | $788.16 | $0.00 | $788.16 | due to Dwayne |
 
 UFile entry tip: do not enter both `2780` and `2781` for the same payable; that double-counts and can break Schedule 100 totals.
@@ -283,7 +283,7 @@ UFile entry tip: do not enter both `2780` and `2781` for the same payable; that 
 | 9131 | Small tools | 23 |  |
 | 9270 | Other expenses | 71 | Includes CRA penalties $71 (non-deductible) |
 | 9275 | Delivery, freight and express | 100 |  |
-| 9281 | Vehicle expenses | 4,454 |  |
+| 9281 | Vehicle expenses | 4,393 |  |
 
 ### Cost of sales tie-check (display-only)
 | GIFI | Description | Amount |
@@ -339,7 +339,7 @@ There have been no subsequent events requiring adjustment to these financial sta
 ## Net income (UFile screen)
 | Field | Value | Note |
 |---|---|---|
-| Net income as per financial statements | 18,395 | Should auto-fill from GIFI; otherwise enter from Schedule 1 code A. |
+| Net income as per financial statements | 18,456 | Should auto-fill from GIFI; otherwise enter from Schedule 1 code A. |
 | Total sales of corporation during this taxation year | 181,235 | Use total revenue (sum of revenue lines; typically matches trade sales 8000). |
 | Total gross revenues | 181,235 | Usually same as total sales for your file. |
 
@@ -350,7 +350,7 @@ If UFile auto-populates these from GIFI, do not add manual “additions/deductio
 |---|---|---|
 | Eligible for capital tax exemption? | Yes | For your file, expect capital tax exemption; confirm if UFile still requests fields. |
 | Total assets at year-end date from financial statements | 31,578 | If required, use Schedule 100 total assets (GIFI 2599). |
-| Retained earnings/deficit at year-end (if required) | 18,395 | If UFile forces a retained earnings element, use Schedule 100 GIFI 3600. |
+| Retained earnings/deficit at year-end (if required) | 18,456 | If UFile forces a retained earnings element, use Schedule 100 GIFI 3600. |
 
 ## Status change for the corporation (UFile screen)
 No status change; leave blank.
@@ -374,7 +374,7 @@ Expected source for this file: **active business income only** (canteen operatio
 ### Schedule 1 (tax purposes)
 | Code | Description | Amount | Calculation |
 |---|---|---|---|
-| A | Net income (loss) per financial statements | 18,395 |  |
+| A | Net income (loss) per financial statements | 18,456 |  |
 | 104 | Accounting amortization | 508 |  |
 | 121 | Non-deductible meals and entertainment (50%) | 259 |  |
 | 128 | Non-deductible fines and penalties | 71 |  |
@@ -382,7 +382,7 @@ Expected source for this file: **active business income only** (canteen operatio
 | 403 | Capital cost allowance (Schedule 8) | 508 |  |
 | 500 | Total additions | 838 |  |
 | 510 | Total deductions | 508 |  |
-| C | Net income (loss) for tax purposes | 18,725 |  |
+| C | Net income (loss) for tax purposes | 18,786 |  |
 Note: If UFile auto-populates Schedule 1 line 403 from Schedule 8, do **not** manually enter 403 in the Schedule 1 grid.
 CCA is entered on the **Capital cost allowance** screen from Schedule 8 (total CCA claimed: 508).
 

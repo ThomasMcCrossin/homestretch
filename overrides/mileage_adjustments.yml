@@ -20,9 +20,13 @@ version: 1
 adjustments:
   FY2024:
     thomas_additional_mileage_claim_cents: 51527
+    # FY2024: manual fuel offset used to reconcile the FY2024 UFile attempt.
+    # This is a working-paper item (receipt missing) and should not be pasted into Notes to FS.
+    # Value chosen to align with the final UFile FY2024 export totals (whole-dollar rounding).
+    thomas_additional_fuel_offset_cents: 6096
     note: "Post-hoc Dartmouth/Halifax-area mileage add-on (kept for FY2024; FY2024 reimbursement already settled)."
 
   FY2025:
     thomas_additional_mileage_claim_cents: 0
+    thomas_additional_fuel_offset_cents: 0
     note: "No Dartmouth/Halifax add-on for FY2025."
-

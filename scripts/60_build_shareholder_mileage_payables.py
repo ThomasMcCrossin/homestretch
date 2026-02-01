@@ -65,6 +65,20 @@ def thomas_adjustment_note(fy: str, adjustments: dict[str, dict[str, object]]) -
     note = obj.get("note")
     return str(note).strip() if note is not None else ""
 
+def thomas_additional_fuel_offset_cents(fy: str, adjustments: dict[str, dict[str, object]]) -> int:
+    """
+    Optional FY-scoped fuel offset overlay for Thomas mileage netting.
+
+    This exists to keep the filing deterministic when a fuel amount is supported by
+    working-paper reconciliation but is not represented in the Wave bill allocation stream.
+    """
+    obj = adjustments.get(fy, {})
+    raw = obj.get("thomas_additional_fuel_offset_cents", 0)
+    try:
+        return int(raw or 0)
+    except Exception:
+        return 0
+
 
 def read_mileage_log(path: Path, *, start_date: str, end_date: str) -> FyTotals:
     start = date.fromisoformat(start_date)
@@ -316,6 +330,8 @@ def upsert_mileage_fuel_journal_entry(
     thomas_adjustment_cents: int,
     dwayne_mileage_cents: int,
     fuel_cents: int,
+    fuel_base_cents: int,
+    fuel_adjustment_cents: int,
     thomas_log: Path,
     dwayne_log: Path,
 ) -> None:
@@ -329,7 +345,8 @@ def upsert_mileage_fuel_journal_entry(
         f"thomas_log={thomas_log}; dwayne_log={dwayne_log}; "
         f"fuel_account_code={FUEL_ACCOUNT_CODE}; fuel_assumed_thomas_only=true; "
         f"thomas_mileage_base_cents={thomas_base_mileage_cents}; thomas_mileage_adjustment_cents={thomas_adjustment_cents}; "
-        f"thomas_mileage_cents={thomas_mileage_cents}; dwayne_mileage_cents={dwayne_mileage_cents}; fuel_cents={fuel_cents}; "
+        f"thomas_mileage_cents={thomas_mileage_cents}; dwayne_mileage_cents={dwayne_mileage_cents}; "
+        f"fuel_base_cents={fuel_base_cents}; fuel_adjustment_cents={fuel_adjustment_cents}; fuel_cents={fuel_cents}; "
         f"mileage_adjustments={MILEAGE_ADJUSTMENTS_PATH.relative_to(PROJECT_ROOT) if MILEAGE_ADJUSTMENTS_PATH.exists() else '(none)'}"
     )
 
@@ -555,7 +572,9 @@ def main() -> int:
             for fy in fys:
                 thomas = read_mileage_log(thomas_log, start_date=fy.start_date, end_date=fy.end_date)
                 dwayne = read_mileage_log(dwayne_log, start_date=fy.start_date, end_date=fy.end_date)
-                fuel_cents = fuel_total_cents(conn, start_date=fy.start_date, end_date=fy.end_date)
+                fuel_base_cents = fuel_total_cents(conn, start_date=fy.start_date, end_date=fy.end_date)
+                fuel_adj_cents = thomas_additional_fuel_offset_cents(fy.fy, adjustments)
+                fuel_cents = fuel_base_cents + fuel_adj_cents
                 thomas_base_cents = thomas.mileage_claim_cents
                 thomas_adj_cents = thomas_additional_mileage_claim_cents(fy.fy, adjustments)
                 if thomas_adj_cents:
@@ -593,6 +612,8 @@ def main() -> int:
                     thomas_adjustment_cents=thomas_adj_cents,
                     dwayne_mileage_cents=dwayne.mileage_claim_cents,
                     fuel_cents=fuel_cents,
+                    fuel_base_cents=fuel_base_cents,
+                    fuel_adjustment_cents=fuel_adj_cents,
                     thomas_log=thomas_log,
                     dwayne_log=dwayne_log,
                 )
@@ -615,14 +636,19 @@ def main() -> int:
                     "base_mileage_claim_cents",
                     "adjustment_cents",
                     "adjusted_mileage_claim_cents",
+                    "base_fuel_cents",
+                    "fuel_adjustment_cents",
+                    "adjusted_fuel_cents",
                     "note",
                 ]
             )
             for fy_key, _start_date, _end_date, thomas, _dwayne, _fuel_cents in fy_rows:
                 base = read_mileage_log(thomas_log, start_date=_start_date, end_date=_end_date).mileage_claim_cents
                 adj = thomas_additional_mileage_claim_cents(fy_key, adjustments)
+                fuel_base = fuel_total_cents(conn, start_date=_start_date, end_date=_end_date)
+                fuel_adj = thomas_additional_fuel_offset_cents(fy_key, adjustments)
                 note = thomas_adjustment_note(fy_key, adjustments)
-                w.writerow([fy_key, "Thomas", base, adj, base + adj, note])
+                w.writerow([fy_key, "Thomas", base, adj, base + adj, fuel_base, fuel_adj, fuel_base + fuel_adj, note])
 
         md_lines: list[str] = []
         md_lines.append("# Mileage adjustments (overlay audit)")
@@ -635,8 +661,8 @@ def main() -> int:
         md_lines.append("## Thomas mileage claim overlays")
         md_lines.append("")
         # Re-read audit CSV for a stable presentation.
-        md_lines.append("| FY | Base claim | Adjustment | Final claim | Note |")
-        md_lines.append("|---|---:|---:|---:|---|")
+        md_lines.append("| FY | Base mileage | Mileage adj | Final mileage | Base fuel | Fuel adj | Final fuel | Note |")
+        md_lines.append("|---|---:|---:|---:|---:|---:|---:|---|")
         with out_adj_csv.open("r", encoding="utf-8", newline="") as f:
             rr = csv.DictReader(f)
             for r in rr:
@@ -646,8 +672,11 @@ def main() -> int:
                 base = cents_to_dollars(int(r.get("base_mileage_claim_cents") or 0))
                 adj = cents_to_dollars(int(r.get("adjustment_cents") or 0))
                 total = cents_to_dollars(int(r.get("adjusted_mileage_claim_cents") or 0))
+                fuel_base = cents_to_dollars(int(r.get("base_fuel_cents") or 0))
+                fuel_adj = cents_to_dollars(int(r.get("fuel_adjustment_cents") or 0))
+                fuel_total = cents_to_dollars(int(r.get("adjusted_fuel_cents") or 0))
                 note = (r.get("note") or "").strip()
-                md_lines.append(f"| {fy_key} | ${base} | ${adj} | ${total} | {note} |")
+                md_lines.append(f"| {fy_key} | ${base} | ${adj} | ${total} | ${fuel_base} | ${fuel_adj} | ${fuel_total} | {note} |")
         md_lines.append("")
         out_adj_md.write_text("\n".join(md_lines) + "\n", encoding="utf-8")
 

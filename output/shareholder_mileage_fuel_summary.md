@@ -8,8 +8,8 @@ This report uses:
 ## FY2024 (2023-06-01 → 2024-05-31)
 
 - Thomas mileage: $3597.73
-- Thomas fuel (9200): $1215.96
-- Thomas net: $2381.77 due to Thomas
+- Thomas fuel (9200): $1276.92
+- Thomas net: $2320.81 due to Thomas
 
 - Dwayne mileage: $788.16 due to Dwayne
 
@@ -23,7 +23,7 @@ This report uses:
 
 ## Totals (FY2024 + FY2025)
 
-- Thomas due to: $2381.77
+- Thomas due to: $2320.81
 - Thomas due from: $41.36
 - Dwayne due to: $1396.68
 

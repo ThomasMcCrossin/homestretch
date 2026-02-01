@@ -200,7 +200,7 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 | 1741 | Accum amort - machinery/equip/furn/fixtures | -1,805 |  |
 | 2620 | Amounts payable and accrued liabilities | 7,405 |  |
 | 2680 | Taxes payable (GST/HST, etc.) | 2,653 |  |
-| 2781 | Due to individual shareholder(s) | 5,072 | Tie-out: 2400 $3,490.67 (Thomas) + 2410 $1,606.68 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead. |
+| 2781 | Due to individual shareholder(s) | 5,011 | Tie-out: 2400 $3,490.67 (Thomas) + 2410 $1,606.68 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead. |
 | 3500 | Common shares | 100 |  |
 
 ### Fixed assets (book)
@@ -216,11 +216,11 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 ### Retained earnings (whole dollars)
 | GIFI | Description | Amount | Entry rule |
 |---|---|---|---|
-| 3660 | Retained earnings/deficit - Start | 18,395 | Enter (opening RE) |
+| 3660 | Retained earnings/deficit - Start | 18,456 | Enter (opening RE) |
 | 3680 | Net income/loss | 31,007 | Enter (net income/loss) |
 | 3700 | Dividends declared | 36,900 | Enter (dividends declared) |
 | 3740 | Other items affecting retained earnings (rounding) | -1 | Enter only if needed (rounding/other) |
-| 3849 | Retained earnings/deficit - End | 12,501 | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
+| 3849 | Retained earnings/deficit - End | 12,562 | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
 
 ### Shareholder loans / balances support (working papers)
 CRA frequently asks for support for any due-from-shareholder / due-to-shareholder amounts. Keep the continuity below with your filing package.
@@ -231,7 +231,7 @@ Evidence / working papers:
 - `output/trial_balance_FY2025.csv` (year-end balances by GL account)
 - `output/manual_adjustment_journal_detail.csv` (any year-end shareholder payable adjustments)
 
-Year-end summary (from Schedule 100): Due from shareholder (GIFI 1301) = 2,041; Due to shareholder (GIFI 2781) = 5,072.
+Year-end summary (from Schedule 100): Due from shareholder (GIFI 1301) = 2,041; Due to shareholder (GIFI 2781) = 5,011.
 
 #### Loan events in this fiscal year (from `output/due_from_shareholder_breakdown.csv`)
 | Date | Shareholder | Type | Net | Journal entry id | Description |
@@ -250,7 +250,7 @@ Note: a loan can be fully repaid within the year (netting to $0 at year-end) and
 #### Year-end shareholder-related balances (from trial balance)
 | Account | Name | Debit | Credit | Net (approx) |
 |---|---|---|---|---|
-| 2400 | Due to Shareholder - Thomas | 0.00 | 3464.86 | 3,465 CR |
+| 2400 | Due to Shareholder - Thomas | 0.00 | 3403.90 | 3,404 CR |
 | 2410 | Due to Shareholder - Dwayne | 0.00 | 1606.68 | 1,607 CR |
 | 2500 | Due from Shareholder | 2041.36 | 0.00 | 2,041 DR |
 
@@ -368,7 +368,7 @@ If UFile auto-populates these from GIFI, do not add manual “additions/deductio
 |---|---|---|
 | Eligible for capital tax exemption? | Yes | For your file, expect capital tax exemption; confirm if UFile still requests fields. |
 | Total assets at year-end date from financial statements | 27,731 | If required, use Schedule 100 total assets (GIFI 2599). |
-| Retained earnings/deficit at year-end (if required) | 12,501 | If UFile forces a retained earnings element, use Schedule 100 GIFI 3600. |
+| Retained earnings/deficit at year-end (if required) | 12,562 | If UFile forces a retained earnings element, use Schedule 100 GIFI 3600. |
 
 ## Status change for the corporation (UFile screen)
 No status change; leave blank.
@@ -507,7 +507,7 @@ No capital dividend account activity.
 | Field | Value | Note |
 |---|---|---|
 | 1st prior year end date | 2024-05-31 | UFile field: End date of prior tax year |
-| 1st prior year taxable income | 18,725 | UFile field: Taxable income (Schedule 1 code C of the prior year) |
+| 1st prior year taxable income | 18,786 | UFile field: Taxable income (Schedule 1 code C of the prior year) |
 | Eligible RDTOH at prior year-end | 0 | Usually $0 for your file unless you have refundable dividend tax on hand |
 | Non-eligible RDTOH at prior year-end | 0 |  |
 | Eligible dividend refund (prior year) | 0 |  |

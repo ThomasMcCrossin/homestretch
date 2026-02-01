@@ -9,14 +9,14 @@ FY2025,2000,Accounts Payable,liability,2620,,0.00,7135.87,-713587
 FY2025,2200,HST Payable,liability,2680,,0.00,13913.82,-1391382
 FY2025,2210,HST ITC Receivable,liability,2680,,11260.87,0.00,1126087
 FY2025,2250,CRA Charges Payable (Interest/Penalties),liability,2620,,0.00,219.10,-21910
-FY2025,2400,Due to Shareholder - Thomas,liability,2781,,0.00,3464.86,-346486
+FY2025,2400,Due to Shareholder - Thomas,liability,2781,,0.00,3403.90,-340390
 FY2025,2410,Due to Shareholder - Dwayne,liability,2781,,0.00,1606.68,-160668
 FY2025,2500,Due from Shareholder,liability,1301,,2041.36,0.00,204136
 FY2025,2700,Payroll Liabilities - CPP,liability,2620,,202.07,0.00,20207
 FY2025,2710,Payroll Liabilities - EI,liability,2620,,20.86,0.00,2086
 FY2025,2720,Payroll Liabilities - Income Tax,liability,2620,,0.00,272.64,-27264
 FY2025,3000,Share Capital (Corp only),equity,3500,,0.00,100.00,-10000
-FY2025,3100,Retained Earnings,equity,3600,,0.00,16604.66,-1660466
+FY2025,3100,Retained Earnings,equity,3600,,0.00,16665.62,-1666562
 FY2025,3400,Dividends Declared,equity,3600,,36900.00,0.00,3690000
 FY2025,4000,Sales - Food,revenue,8000,8000,0.00,80379.30,-8037930
 FY2025,4030,Sales - Retail Goods,revenue,8000,8000,0.00,275.60,-27560
