@@ -423,7 +423,7 @@
         <article>
           <h1>UFile T2 Fill Guide — FY2024</h1>
 <p><strong>Entity:</strong> 14587430 Canada Inc. (Curly&#x27;s Canteen) <strong>BN:</strong> 748003142RC0001 <strong>Tax year:</strong> 2023-06-10 → 2024-05-31 (year-end 05-31) <strong>NAICS:</strong> 722512</p>
-<p><strong>Readable view:</strong> open <code>UFILet2_FILL_GUIDE.html</code> (bigger text + no horizontal scroll). <strong>Audit package (working papers):</strong> open <code>audit_packages/FY2024/index.html</code>.</p>
+<p><strong>Readable view:</strong> open <code>UFILet2_FILL_GUIDE.html</code> (bigger text + no horizontal scroll). <strong>Audit package (working papers):</strong> open <code>audit_packages/FY2024/index.html</code>. <strong>Review remediation pack (memos):</strong> <code>audit_packages/FY2024/inventory_margin_memo.html</code>, <code>audit_packages/FY2024/fixed_asset_cca_continuity.html</code>, <code>audit_packages/FY2024/payables_breakdown.html</code>.</p>
           <section class="sec" id="ufile-entry-rules-important"><h2>UFile entry rules (important)</h2>
 <ul>
 <li>Enter amounts on the <strong>detail lines</strong> listed below (e.g., use <code>1121</code> for inventory, <code>1484</code> for prepaid).</li>
@@ -1552,7 +1552,7 @@ These financial statements have been prepared on the accrual basis of accounting
 Revenue is recognized at the time goods are sold and services are rendered. Amounts are presented net of refunds and discounts.
 
 4. Inventory
-Inventory consists of food and beverage inventory held for resale and is valued at the lower of cost and net realizable value. For FY2024, a formal physical inventory count process was implemented in the subsequent fiscal year; accordingly, the inventory balance at May 31, 2024 was estimated by management using an itemized schedule at cost.
+Inventory consists of food and beverage inventory held for resale and is valued at the lower of cost and net realizable value. Cost is determined using a method applied consistently by management. For FY2024, a formal physical inventory count process was implemented in the subsequent fiscal year; accordingly, the inventory balance at May 31, 2024 was estimated by management using an itemized schedule at cost.
 
 5. Property and equipment
 Property and equipment are recorded at cost. Amortization is provided on a basis intended to approximate the decline in service potential of the related assets.
@@ -1792,6 +1792,12 @@ There have been no subsequent events requiring adjustment to these financial sta
 <p>Use Schedule 8 outputs; enter class details if claiming CCA.</p>
 <p>If this section is missing/empty in the guide, the packet was likely built from a snapshot that did not include <code>schedule_8_*.csv</code>. Rebuild via: <code>python3 UfileToFill/ufile_packet/tools/refresh_packet_from_current_state.py</code></p>
 <h3>Schedule 8 / CCA</h3>
+<h3>Schedule 8 printing checklist (UFile)</h3>
+<ul>
+<li>If the exported PDF package is missing Schedule 8, it usually means you did not complete the <strong>Capital cost allowance</strong> screen for the year/class.</li>
+<li>Recommended workflow when filing FY2024 and FY2025 together: create/finish FY2024 first, then <strong>carryforward</strong> into FY2025 so opening UCC values and classes come through cleanly.</li>
+<li>If you cannot carryforward: in FY2025, manually enter the <strong>opening UCC</strong> per class to match FY2024 closing UCC, and enter the current-year additions. Re-export the package and re-check completeness.</li>
+</ul>
 <div class="table-wrap">
 <details class="fold" open>
   <summary>Table (click to collapse)</summary>

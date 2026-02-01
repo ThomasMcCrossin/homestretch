@@ -79,6 +79,8 @@ def main() -> int:
     build_packet = TOOLS_DIR / "build_packet_from_snapshot.py"
     validate = TOOLS_DIR / "validate_packet.py"
     build_year = TOOLS_DIR / "build_year_artifacts.py"
+    build_shareholder_audit = TOOLS_DIR / "build_shareholder_audit_packages.py"
+    build_review_pack = TOOLS_DIR / "build_review_remediation_pack.py"
 
     cmd = ["python3", str(build_packet), "--snapshot", str(snapshot_root)]
     for fy in args.fys or []:
@@ -86,6 +88,8 @@ def main() -> int:
     run(cmd)
     run(["python3", str(validate)])
     run(["python3", str(build_year)])
+    run(["python3", str(build_shareholder_audit)])
+    run(["python3", str(build_review_pack)])
 
     print("UFILE PACKET REFRESH COMPLETE")
     print(f"- snapshot_source: {snapshot_root}")

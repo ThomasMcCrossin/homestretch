@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shareholder audit package — FY2024</title>
+  <title>Fixed assets and CCA continuity — FY2025</title>
   <style>
     :root {
       --paper: #fbf6ea;
@@ -361,11 +361,11 @@
         <h1>14587430 Canada Inc.</h1>
         <div class="meta">
           <span><strong>BN</strong> 748003142RC0001</span>
-          <span><strong>Period</strong> 2023-06-01 → 2024-05-31</span>
+          <span><strong>Period</strong> 2024-06-01 → 2025-05-31</span>
         </div>
       </div>
       <div class="badges">
-        <span class="badge fy">FY2024</span><span class="badge cca">CCA</span><span class="badge book">Book fixed assets</span>
+        <span class="badge fy">FY2025</span><span class="badge cca">CCA</span><span class="badge book">Book fixed assets</span>
       </div>
     </div>
   </header>
@@ -377,117 +377,105 @@
         <input class="search" id="search" type="search" placeholder="Search sections…  (press /)" />
       </div>
       <div class="nav-body" id="nav">
-        <a class="nav-item" href="#year-end-highlights" data-title="year-end highlights">Year-end highlights</a>
-<a class="nav-item" href="#dividends" data-title="dividends">Dividends</a>
-<a class="nav-item" href="#loans-due-to-due-from-shareholder-continuity" data-title="loans / due-to / due-from (shareholder continuity)">Loans / due-to / due-from (shareholder continuity)</a>
-<a class="nav-item" href="#mileage-fuel-reimbursement-support" data-title="mileage / fuel reimbursement support">Mileage / fuel reimbursement support</a>
-<a class="nav-item" href="#payroll-related-transactions-involving-thomas-mccrossin-defensive" data-title="payroll-related transactions involving thomas mccrossin (defensive)">Payroll-related transactions involving Thomas McCrossin (defensive)</a>
-<a class="nav-item" href="#related-review-memos-same-fy" data-title="related review memos (same fy)">Related review memos (same FY)</a>
+        <a class="nav-item" href="#key-point" data-title="key point">Key point</a>
+<a class="nav-item" href="#schedule-8-continuity-by-class" data-title="schedule 8 continuity (by class)">Schedule 8 continuity (by class)</a>
+<a class="nav-item" href="#asset-additions-by-invoice-asset" data-title="asset additions (by invoice / asset)">Asset additions (by invoice / asset)</a>
       </div>
     </aside>
 
     <main class="doc">
       <div class="doc-inner" id="doc">
         <article>
-          <h1>Shareholder audit package — FY2024</h1>
-<p>Entity: <strong>14587430 Canada Inc. (Curly&#x27;s Canteen)</strong> BN: <strong>748003142RC0001</strong> Period: <strong>2023-06-10 to 2024-05-31</strong> Snapshot source: <code>output/snapshots/20260201-183000/output/</code> Packet generated at: <code>2026-02-01T18:35:36Z</code> This folder is <strong>working-paper support</strong>. It is not necessarily entered into UFile unless a screen explicitly asks.</p>
-          <section class="sec" id="year-end-highlights"><h2>Year-end highlights</h2>
+          <h1>Fixed assets and CCA continuity — FY2025</h1>
+<p>Period: <strong>2024-06-01 to 2025-05-31</strong> Snapshot source: <code>output/snapshots/20260201-183000/output/</code></p>
+          <section class="sec" id="key-point"><h2>Key point</h2>
+<ul>
+<li>Book fixed assets (GIFI 1740/1741/8670) and tax CCA (Schedule 8) are reconciled using the same asset register.</li>
+<li>If a UFile-exported PDF appears to show missing additions, the usual cause is that the <strong>Capital cost allowance</strong> screen was not completed for that class (UFile may omit the schedule from the package).</li>
+</ul>
+</section><section class="sec" id="schedule-8-continuity-by-class"><h2>Schedule 8 continuity (by class)</h2>
 <div class="table-wrap">
 <table>
 <thead><tr>
-<th>Item</th>
-<th>Amount (dollars)</th>
+<th>Class</th>
+<th>Description</th>
+<th>Opening UCC</th>
+<th>Additions</th>
+<th>CCA claim</th>
+<th>Closing UCC</th>
 </tr></thead>
 <tbody>
 <tr>
-<td>Schedule 100 due from shareholder (GIFI 1301)</td>
+<td>8</td>
+<td>General equipment</td>
+<td>1320</td>
+<td>557</td>
+<td>375</td>
+<td>1502</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Tools and utensils under $500</td>
+<td>0</td>
+<td>663</td>
+<td>663</td>
 <td>0</td>
 </tr>
 <tr>
-<td>Schedule 100 due to shareholders (GIFI 2781)</td>
-<td>3,578</td>
-</tr>
-<tr>
-<td>Dividends declared (retained earnings rollforward 3700)</td>
+<td>50</td>
+<td>Computer hardware and systems software</td>
+<td>470</td>
 <td>0</td>
+<td>259</td>
+<td>211</td>
 </tr>
 </tbody>
 </table>
 </div>
-</section><section class="sec" id="dividends"><h2>Dividends</h2>
-<p>Tie-out:</p>
-<ul>
-<li>Trial balance: account <code>3400</code> (dividends declared)</li>
-<li>Retained earnings rollforward: <code>GIFI 3700</code></li>
-<li>UFile screens:</li>
-<li>Retained earnings rollforward: enter <code>3700</code></li>
-<li>Dividends paid: enter taxable dividends paid (eligible = 0 unless you have eligible dividends)</li>
-</ul>
-<p>Evidence:</p>
-<ul>
-<li><code>dividends_support.csv</code></li>
-</ul>
-</section><section class="sec" id="loans-due-to-due-from-shareholder-continuity"><h2>Loans / due-to / due-from (shareholder continuity)</h2>
-<p>This captures dated loan events (if any), the FY mileage/fuel net position, and year-end balances.</p>
-<p>Evidence:</p>
-<ul>
-<li><code>shareholder_continuity.csv</code></li>
-</ul>
-<p>Year-end TB balances (for reference):</p>
+</section><section class="sec" id="asset-additions-by-invoice-asset"><h2>Asset additions (by invoice / asset)</h2>
 <div class="table-wrap">
 <table>
 <thead><tr>
-<th>Account</th>
-<th>Name</th>
-<th>Net</th>
+<th>Asset ID</th>
+<th>Description</th>
+<th>Available for use</th>
+<th>Class</th>
+<th>Cost</th>
+<th>Source breakdown</th>
 </tr></thead>
 <tbody>
 <tr>
-<td>2400</td>
-<td>Due to Shareholder - Thomas</td>
-<td>$-2,669.99</td>
+<td>nayax_card_reader_2025_02_24</td>
+<td>Nayax card reader for vending machine</td>
+<td>2025-02-24</td>
+<td>8</td>
+<td>557</td>
+<td>wave_bill_allocation: bill_id=628 invoice_date=2025-02-24 vendor=Nayax - Bill account=5300 amount_cents=55743 alloc_total_cents=55743</td>
 </tr>
 <tr>
-<td>2410</td>
-<td>Due to Shareholder - Dwayne</td>
-<td>$-908.16</td>
+<td>shopify_card_reader_2024_11_12</td>
+<td>Shopify card reader hardware</td>
+<td>2024-11-12</td>
+<td>12</td>
+<td>479</td>
+<td>wave_bill_allocation: bill_id=473 invoice_date=2024-11-12 vendor=Shopify - Bill account=6600 amount_cents=45900 alloc_total_cents=45900</td>
+<td>wave_bill_allocation: bill_id=473 invoice_date=2024-11-12 vendor=Shopify - Bill account=6550 amount_cents=2000 alloc_total_cents=2000</td>
+</tr>
+<tr>
+<td>walmart_coffee_grinder_2024_09_17</td>
+<td>Coffee grinder (Walmart)</td>
+<td>2024-09-17</td>
+<td>12</td>
+<td>184</td>
+<td>wave_bill_allocation: bill_id=371 invoice_date=2024-09-17 vendor=Walmart - Bill account=6600 amount_cents=18367 alloc_total_cents=18367</td>
 </tr>
 </tbody>
 </table>
 </div>
-</section><section class="sec" id="mileage-fuel-reimbursement-support"><h2>Mileage / fuel reimbursement support</h2>
 <p>Evidence:</p>
 <ul>
-<li><code>mileage_fuel_support.csv</code></li>
-</ul>
-<p>FY-scoped overlays applied (defensive disclosure for working papers only):</p>
-<div class="table-wrap">
-<table>
-<thead><tr>
-<th>Shareholder</th>
-<th>Fuel adjustment (cents)</th>
-<th>Notes</th>
-</tr></thead>
-<tbody>
-<tr>
-<td>Thomas</td>
-<td>6096</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section><section class="sec" id="payroll-related-transactions-involving-thomas-mccrossin-defensive"><h2>Payroll-related transactions involving Thomas McCrossin (defensive)</h2>
-<p>Evidence:</p>
-<ul>
-<li><code>payroll_thomas_support.csv</code></li>
-</ul>
-<p>Note: These are payroll-related reimbursements / funding transactions involving Thomas (e.g., payroll remittance payments/reimbursements). This does <strong>not</strong> necessarily mean wages were paid to Thomas as an employee.</p>
-</section><section class="sec" id="related-review-memos-same-fy"><h2>Related review memos (same FY)</h2>
-<ul>
-<li><code>inventory_margin_memo.html</code> (inventory/margin support)</li>
-<li><code>fixed_asset_cca_continuity.html</code> (book vs tax CCA continuity)</li>
-<li><code>payables_breakdown.html</code> (A/P + HST/payroll breakdown)</li>
+<li><code>output/snapshots/20260201-183000/output/schedule_8_FY2025.csv</code></li>
+<li><code>output/snapshots/20260201-183000/output/cca_asset_register_resolved.csv</code></li>
 </ul>
 </section>
         </article>

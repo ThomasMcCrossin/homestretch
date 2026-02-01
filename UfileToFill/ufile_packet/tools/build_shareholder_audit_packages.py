@@ -564,6 +564,12 @@ def main() -> int:
             idx.append("- `payroll_thomas_none_found.md`")
         idx.append("")
 
+        idx.append("## Related review memos (same FY)")
+        idx.append("- `inventory_margin_memo.html` (inventory/margin support)")
+        idx.append("- `fixed_asset_cca_continuity.html` (book vs tax CCA continuity)")
+        idx.append("- `payables_breakdown.html` (A/P + HST/payroll breakdown)")
+        idx.append("")
+
         index_md = "\n".join(idx).strip() + "\n"
         (out_dir / "index.md").write_text(index_md, encoding="utf-8")
         (out_dir / "index.html").write_text(render_year_guide_html(packet, fy, md_guide=index_md), encoding="utf-8")

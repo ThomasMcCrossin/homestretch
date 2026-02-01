@@ -7,6 +7,7 @@
 
 **Readable view:** open `UFILet2_FILL_GUIDE.html` (bigger text + no horizontal scroll).
 **Audit package (working papers):** open `audit_packages/FY2024/index.html`.
+**Review remediation pack (memos):** `audit_packages/FY2024/inventory_margin_memo.html`, `audit_packages/FY2024/fixed_asset_cca_continuity.html`, `audit_packages/FY2024/payables_breakdown.html`.
 
 ## UFile entry rules (important)
 - Enter amounts on the **detail lines** listed below (e.g., use `1121` for inventory, `1484` for prepaid).
@@ -338,7 +339,7 @@ These financial statements have been prepared on the accrual basis of accounting
 Revenue is recognized at the time goods are sold and services are rendered. Amounts are presented net of refunds and discounts.
 
 4. Inventory
-Inventory consists of food and beverage inventory held for resale and is valued at the lower of cost and net realizable value. For FY2024, a formal physical inventory count process was implemented in the subsequent fiscal year; accordingly, the inventory balance at May 31, 2024 was estimated by management using an itemized schedule at cost.
+Inventory consists of food and beverage inventory held for resale and is valued at the lower of cost and net realizable value. Cost is determined using a method applied consistently by management. For FY2024, a formal physical inventory count process was implemented in the subsequent fiscal year; accordingly, the inventory balance at May 31, 2024 was estimated by management using an itemized schedule at cost.
 
 5. Property and equipment
 Property and equipment are recorded at cost. Amortization is provided on a basis intended to approximate the decline in service potential of the related assets.
@@ -443,6 +444,11 @@ If this section is missing/empty in the guide, the packet was likely built from 
 `python3 UfileToFill/ufile_packet/tools/refresh_packet_from_current_state.py`
 
 ### Schedule 8 / CCA
+### Schedule 8 printing checklist (UFile)
+- If the exported PDF package is missing Schedule 8, it usually means you did not complete the **Capital cost allowance** screen for the year/class.
+- Recommended workflow when filing FY2024 and FY2025 together: create/finish FY2024 first, then **carryforward** into FY2025 so opening UCC values and classes come through cleanly.
+- If you cannot carryforward: in FY2025, manually enter the **opening UCC** per class to match FY2024 closing UCC, and enter the current-year additions. Re-export the package and re-check completeness.
+
 | Class | Description | Opening UCC | Additions | CCA claim | Closing UCC |
 |---|---|---|---|---|---|
 | 8 | General equipment | 0 | 1,650 | 330 | 1,320 |

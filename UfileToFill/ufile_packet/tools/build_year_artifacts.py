@@ -227,6 +227,7 @@ def build_year_guide(packet: dict, fy: str) -> str:
     parts.append("")
     parts.append("**Readable view:** open `UFILet2_FILL_GUIDE.html` (bigger text + no horizontal scroll).")
     parts.append(f"**Audit package (working papers):** open `audit_packages/{fy}/index.html`.")
+    parts.append(f"**Review remediation pack (memos):** `audit_packages/{fy}/inventory_margin_memo.html`, `audit_packages/{fy}/fixed_asset_cca_continuity.html`, `audit_packages/{fy}/payables_breakdown.html`.")
     parts.append("")
 
     parts.append("## UFile entry rules (important)")
@@ -1248,6 +1249,19 @@ def build_year_guide(packet: dict, fy: str) -> str:
 
     if schedule_8 and isinstance(schedule_8.get("classes"), dict) and schedule_8["classes"]:
         parts.append("## Schedule 8 / CCA")
+        parts.append(
+            "### Schedule 8 printing checklist (UFile)"
+        )
+        parts.append(
+            "- If the exported PDF package is missing Schedule 8, it usually means you did not complete the **Capital cost allowance** screen for the year/class."
+        )
+        parts.append(
+            "- Recommended workflow when filing FY2024 and FY2025 together: create/finish FY2024 first, then **carryforward** into FY2025 so opening UCC values and classes come through cleanly."
+        )
+        parts.append(
+            "- If you cannot carryforward: in FY2025, manually enter the **opening UCC** per class to match FY2024 closing UCC, and enter the current-year additions. Re-export the package and re-check completeness."
+        )
+        parts.append("")
         classes = schedule_8.get("classes", {}) if isinstance(schedule_8.get("classes"), dict) else {}
         class_rows = []
         for class_code, obj in sorted(classes.items(), key=lambda kv: int(kv[0]) if kv[0].isdigit() else 10**9):
@@ -1408,7 +1422,7 @@ These financial statements have been prepared on the accrual basis of accounting
 Revenue is recognized at the time goods are sold and services are rendered. Amounts are presented net of refunds and discounts.
 
 4. Inventory
-Inventory consists of food and beverage inventory held for resale and is valued at the lower of cost and net realizable value.{inventory_note}
+Inventory consists of food and beverage inventory held for resale and is valued at the lower of cost and net realizable value. Cost is determined using a method applied consistently by management.{inventory_note}
 
 5. Property and equipment
 Property and equipment are recorded at cost. Amortization is provided on a basis intended to approximate the decline in service potential of the related assets.
