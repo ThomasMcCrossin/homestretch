@@ -430,7 +430,12 @@ For a CCPC with active business income and positive taxable income, Schedule 7 i
 Dividends declared per retained earnings schedule (GIFI 3700). Confirm eligible vs non-eligible in UFile; default expectation is non-eligible.
 
 ## Taxable dividend paid (UFile screen)
-None.
+Enter the taxable dividends paid details so Schedule 3 / Schedule 55 match the retained earnings rollforward.
+
+- Total taxable dividends paid in the tax year: **36,900**
+- Eligible portion: **0** (default expectation: $0 = non-eligible)
+
+If UFile asks you to split between connected vs non-connected corporations, and these dividends were paid to individuals (shareholders), treat them as **other than connected corporations**.
 
 ## General rate income pool (GRIP) (UFile screen)
 | Field | Value | Note |

@@ -1393,7 +1393,23 @@ There have been no subsequent events requiring adjustment to these financial sta
         out.append(section_block("Dividends paid (UFile screen)", sections.get("Dividends paid (UFile screen)", "")))
     else:
         out.append(section_block("Dividends paid (UFile screen)", "No dividends declared or paid."))
-    out.append(section_block("Taxable dividend paid (UFile screen)", "None."))
+    # In UFile, "Taxable dividend paid" is a child screen under Dividends paid and is where
+    # Schedule 3 / Schedule 55 are actually driven. Only show it as "None" when there are
+    # no dividends; otherwise, provide explicit entry guidance.
+    dividends_screen = ufile_screens.get("dividends_paid", {}) if isinstance(ufile_screens, dict) else {}
+    if isinstance(dividends_screen, dict) and dividends_screen.get("has_dividends"):
+        taxable_div_amt = money(int(dividends_screen.get("taxable_dividends_paid") or 0))
+        eligible_amt = money(int(dividends_screen.get("eligible_dividend_portion") or 0))
+        taxable_div_body = (
+            "Enter the taxable dividends paid details so Schedule 3 / Schedule 55 match the retained earnings rollforward.\n\n"
+            f"- Total taxable dividends paid in the tax year: **{taxable_div_amt}**\n"
+            f"- Eligible portion: **{eligible_amt}** (default expectation: $0 = non-eligible)\n\n"
+            "If UFile asks you to split between connected vs non-connected corporations, "
+            "and these dividends were paid to individuals (shareholders), treat them as **other than connected corporations**.\n"
+        )
+        out.append(section_block("Taxable dividend paid (UFile screen)", taxable_div_body))
+    else:
+        out.append(section_block("Taxable dividend paid (UFile screen)", "None."))
     out.append(section_block("General rate income pool (GRIP) (UFile screen)", sections.get("General rate income pool (GRIP) (UFile screen)", "")))
     out.append(section_block("Capital cost allowance (UFile screen)", cca_body.strip()))
     out.append(section_block("Loss carry forwards and loss carry backs (UFile screen)", "No losses to carry forward/back."))
