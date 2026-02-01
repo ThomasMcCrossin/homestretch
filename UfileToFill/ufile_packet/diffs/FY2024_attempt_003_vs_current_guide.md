@@ -8,12 +8,14 @@ This report compares your **previous UFile attempt** (from the exported PDF pars
 
 ## Highest-signal changes (what you will actually feel in UFile)
 ### Balance sheet / fixed assets
-| Code | Description | Attempt | Expected (current guide) | Delta (expected - attempt) | Action |
-|---|---|---:|---:|---:|---|
+| Code | Description | Attempt | Expected (current guide) | Delta (expected - attempt) | Action | Guide note |
+|---|---|---:|---:|---:|---|---|
+| 2781 | Due to individual shareholder(s) | 3,578 | 3,639 | 61 | CHANGE (update amount) | Tie-out: 2400 $2,669.99 (Thomas) + 2410 $908.16 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead. |
 
 ### Income statement
 | Code | Description | Attempt | Expected (current guide) | Delta (expected - attempt) | Action |
 |---|---|---:|---:|---:|---|
+| 9281 | Vehicle expenses | 4,393 | 4,454 | 61 | CHANGE (update amount) |
 
 ## Notes / reminders to apply (from the current guide)
 ### Must-check before filing / exporting
@@ -42,7 +44,7 @@ Expected source for this file: **active business income only** (canteen operatio
 ### Schedule 1 (tax purposes)
 | Code | Description | Amount | Calculation |
 |---|---|---|---|
-| A | Net income (loss) per financial statements | 18,456 |  |
+| A | Net income (loss) per financial statements | 18,395 |  |
 | 104 | Accounting amortization | 508 |  |
 | 121 | Non-deductible meals and entertainment (50%) | 259 |  |
 | 128 | Non-deductible fines and penalties | 71 |  |
@@ -50,7 +52,7 @@ Expected source for this file: **active business income only** (canteen operatio
 | 403 | Capital cost allowance (Schedule 8) | 508 |  |
 | 500 | Total additions | 838 |  |
 | 510 | Total deductions | 508 |  |
-| C | Net income (loss) for tax purposes | 18,786 |  |
+| C | Net income (loss) for tax purposes | 18,725 |  |
 Note: If UFile auto-populates Schedule 1 line 403 from Schedule 8, do **not** manually enter 403 in the Schedule 1 grid.
 CCA is entered on the **Capital cost allowance** screen from Schedule 8 (total CCA claimed: 508).
 
@@ -62,6 +64,39 @@ CCA is entered on the **Capital cost allowance** screen from Schedule 8 (total C
 | T2 line 201 (book vs tax net income differs) | Yes | Book vs tax differs due to meals 50% add-back and CRA penalties; Schedule 1 is attached. |
 | CCA required / capital assets | Yes | CCA claimed per Schedule 8. Total CCA: 508. Classes: 8, 50. |
 | Book fixed assets present | Yes | Book fixed assets present (capitalized in GIFI). |
+
+### Notes to financial statements (copy/paste)
+Paste into UFile (Notes checklist screen) if you are including notes with the filing copy:
+
+```text
+14587430 Canada Inc. (Curly's Canteen)
+Notes to the financial statements
+Year ended May 31, 2024
+
+1. Nature of operations
+The corporation carries on Quick Service Restaurant.
+
+2. Basis of presentation
+These financial statements have been prepared on the accrual basis of accounting using the historical cost basis.
+
+3. Revenue recognition
+Revenue is recognized at the time goods are sold and services are rendered. Amounts are presented net of refunds and discounts.
+
+4. Inventory
+Inventory consists of food and beverage inventory held for resale and is valued at the lower of cost and net realizable value. For FY2024, a formal physical inventory count process was implemented in the subsequent fiscal year; accordingly, the inventory balance at May 31, 2024 was estimated by management using an itemized schedule at cost.
+
+5. Property and equipment
+Property and equipment are recorded at cost. Amortization is provided on a basis intended to approximate the decline in service potential of the related assets.
+
+6. Income taxes and government remittances
+The corporation is a Canadian-controlled private corporation. Income tax expense comprises current tax. Taxes payable on the balance sheet may include GST/HST and other government remittances.
+
+7. Related party transactions and balances
+The corporation is controlled by its shareholders. Amounts due to/from shareholders relate primarily to shareholder-paid business expenses and reimbursements and other amounts payable to shareholders. These balances are non-interest-bearing and due on demand unless otherwise agreed.
+
+8. Subsequent events
+There have been no subsequent events requiring adjustment to these financial statements.
+```
 
 ### Capital cost allowance screen (Schedule 8 entry + audit)
 Use Schedule 8 outputs; enter class details if claiming CCA.
@@ -93,6 +128,7 @@ If this section is missing/empty in the guide, the packet was likely built from 
 ## Balance sheet (GIFI Schedule 100) — full delta table
 | Code | Description | Attempt | Expected (current guide) | Delta (expected - attempt) | Action | Guide note |
 |---|---|---:|---:|---:|---|---|
+| 2781 | Due to individual shareholder(s) | 3,578 | 3,639 | 61 | CHANGE (update amount) | Tie-out: 2400 $2,669.99 (Thomas) + 2410 $908.16 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead. |
 | 1599 |  | 29,788 | 0 | -29,788 | AUTO (do not type; ok if printed) |  |
 | 2008 |  | 2,298 | 0 | -2,298 | AUTO (do not type; ok if printed) |  |
 | 2009 |  | -508 | 0 | 508 | AUTO (do not type; ok if printed) |  |
@@ -111,21 +147,21 @@ If this section is missing/empty in the guide, the packet was likely built from 
 | 1741 | Accum amort - machinery/equip/furn/fixtures | -508 | -508 | 0 | OK |  |
 | 2620 | Amounts payable and accrued liabilities | 2,687 | 2,687 | 0 | OK |  |
 | 2680 | Taxes payable (GST/HST, etc.) | 6,757 | 6,757 | 0 | OK |  |
-| 2781 | Due to individual shareholder(s) | 3,578 | 3,578 | 0 | OK | Tie-out: 2400 $2,669.99 (Thomas) + 2410 $908.16 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead. |
 | 3500 | Common shares | 100 | 100 | 0 | OK |  |
 
 ## Retained earnings rollforward — delta table
 | Code | Description | Attempt | Expected (current guide) | Delta (expected - attempt) | Action | Guide note |
 |---|---|---:|---:|---:|---|---|
+| 3680 | Net income/loss | 18,456 | 18,395 | -61 | CHANGE (update amount) | Enter (net income/loss) |
+| 3849 | Retained earnings/deficit - End | 18,456 | 18,395 | -61 | CHANGE (update amount) | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
 | 3660 | Retained earnings/deficit - Start | 0 | 0 | 0 | OK | Enter (opening RE) |
-| 3680 | Net income/loss | 18,456 | 18,456 | 0 | OK | Enter (net income/loss) |
 | 3700 |  | 0 | 0 | 0 | OK | Enter (dividends declared) |
 | 3740 |  | 0 | 0 | 0 | OK | Enter only if needed (rounding/other) |
-| 3849 | Retained earnings/deficit - End | 18,456 | 18,456 | 0 | OK | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
 
 ## Income statement (GIFI Schedule 125) — full delta table
 | Code | Description | Attempt | Expected (current guide) | Delta (expected - attempt) | Action | Guide note |
 |---|---|---:|---:|---:|---|---|
+| 9281 | Vehicle expenses | 4,393 | 4,454 | 61 | CHANGE (update amount) |  |
 | 8089 |  | 181,235 | 0 | -181,235 | AUTO (do not type; ok if printed) |  |
 | 8299 |  | 181,235 | 0 | -181,235 | AUTO (do not type; ok if printed) |  |
 | 8518 |  | 108,373 | 0 | -108,373 | AUTO (do not type; ok if printed) |  |
@@ -155,7 +191,6 @@ If this section is missing/empty in the guide, the packet was likely built from 
 | 9131 | Small tools | 23 | 23 | 0 | OK |  |
 | 9270 | Other expenses | 71 | 71 | 0 | OK | Includes CRA penalties $71 (non-deductible) |
 | 9275 | Delivery, freight and express | 100 | 100 | 0 | OK |  |
-| 9281 | Vehicle expenses | 4,393 | 4,393 | 0 | OK |  |
 
 ## Schedule 8 / CCA (UFile Capital cost allowance screen)
 Expected classes (from the current guide):

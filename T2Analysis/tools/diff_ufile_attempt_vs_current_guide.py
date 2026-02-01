@@ -137,6 +137,22 @@ def _extract_section(md: str, *, heading: str) -> str:
     return body.strip() + "\n"
 
 
+def _extract_first_fenced_block(md: str, *, heading: str) -> str:
+    """
+    Extract the first fenced code block (```...```) that occurs inside the section
+    starting at `heading`.
+
+    Used for copy/paste chunks (e.g. Notes to the financial statements), so the
+    diff report can include them explicitly.
+    """
+    body = _extract_section(md, heading=heading)
+    if not body:
+        return ""
+    m = re.search(r"(?s)```[^\n]*\n.*?\n```", body)
+    if not m:
+        return ""
+    return m.group(0).strip() + "\n"
+
 def _load_attempt_table_csv(path: Path) -> dict[str, int]:
     """
     Parse attempt extracted schedule table CSV and sum amounts by 4-digit code.
@@ -320,6 +336,7 @@ def main() -> int:
     must_check_body = _extract_section(guide_md, heading="## Must-check before filing / exporting a PDF copy")
     income_source_body = _extract_section(guide_md, heading="## Income source (UFile screen)")
     cca_screen_body = _extract_section(guide_md, heading="## Capital cost allowance (UFile screen)")
+    notes_fs_block = _extract_first_fenced_block(guide_md, heading="### Notes to financial statements (copy/paste)")
 
     # Attempt extracted tables (what was in the exported PDF, i.e. what the attempt "contained").
     att100 = _load_attempt_table_csv(parse_dir / "tables" / "schedule_100.csv")
@@ -435,7 +452,7 @@ def main() -> int:
     out.append(_render_delta_table(summary_is))
     out.append("")
 
-    if must_check_body or income_source_body or cca_screen_body:
+    if must_check_body or income_source_body or cca_screen_body or notes_fs_block:
         out.append("## Notes / reminders to apply (from the current guide)")
         if must_check_body:
             out.append("### Must-check before filing / exporting")
@@ -444,6 +461,12 @@ def main() -> int:
         if income_source_body:
             out.append("### Income source screen (clears INCOMESOURCE warning)")
             out.append(income_source_body.rstrip())
+            out.append("")
+        if notes_fs_block:
+            out.append("### Notes to financial statements (copy/paste)")
+            out.append("Paste into UFile (Notes checklist screen) if you are including notes with the filing copy:")
+            out.append("")
+            out.append(notes_fs_block.rstrip())
             out.append("")
         if cca_screen_body:
             out.append("### Capital cost allowance screen (Schedule 8 entry + audit)")

@@ -225,6 +225,11 @@
       margin: 14px 0 8px;
       color: rgba(25,23,19,0.92);
     }
+    h4 {
+      font-size: 16px;
+      margin: 12px 0 6px;
+      color: rgba(25,23,19,0.88);
+    }
     p { margin: 10px 0; }
     ul { margin: 10px 0 10px 22px; padding: 0; }
     li { margin: 6px 0; }
@@ -403,7 +408,19 @@
 <th>Expected (current guide)</th>
 <th>Delta (expected - attempt)</th>
 <th>Action</th>
+<th>Guide note</th>
 </tr></thead>
+<tbody>
+<tr>
+<td>2781</td>
+<td>Due to individual shareholder(s)</td>
+<td>3,578</td>
+<td>3,639</td>
+<td>61</td>
+<td>CHANGE (update amount)</td>
+<td>Tie-out: 2400 $2,669.99 (Thomas) + 2410 $908.16 (Dwayne); source: readiness_report.md. If UFile doesn&#x27;t accept 2781, enter this amount on 2780 instead.</td>
+</tr>
+</tbody>
 </table>
 </div>
 <h3>Income statement</h3>
@@ -417,6 +434,16 @@
 <th>Delta (expected - attempt)</th>
 <th>Action</th>
 </tr></thead>
+<tbody>
+<tr>
+<td>9281</td>
+<td>Vehicle expenses</td>
+<td>4,393</td>
+<td>4,454</td>
+<td>61</td>
+<td>CHANGE (update amount)</td>
+</tr>
+</tbody>
 </table>
 </div>
 </section><section class="sec" id="notes-reminders-to-apply-from-the-current-guide"><h2>Notes / reminders to apply (from the current guide)</h2>
@@ -429,7 +456,7 @@
 <li>When you export/print a &quot;package&quot; PDF from UFile, make sure the export includes required schedule forms.</li>
 </ul>
 <p>After exporting, run this completeness check (fails if required schedule forms like 8/88 are missing from the PDF):</p>
-<p>``<code>bash python3 T2Analysis/tools/check_ufile_export_completeness.py --fy FY2024 --pdf /path/to/ufile_export.pdf </code>``</p>
+<pre><code>python3 T2Analysis/tools/check_ufile_export_completeness.py --fy FY2024 --pdf /path/to/ufile_export.pdf</code></pre>
 <h3>Income source screen (clears INCOMESOURCE warning)</h3>
 <p>Goal: avoid the UFile warning <code>INCOMESOURCE</code> and make the return explicit.</p>
 <ul>
@@ -452,7 +479,7 @@
 <tr>
 <td>A</td>
 <td>Net income (loss) per financial statements</td>
-<td>18,456</td>
+<td>18,395</td>
 <td></td>
 </tr>
 <tr>
@@ -500,7 +527,7 @@
 <tr>
 <td>C</td>
 <td>Net income (loss) for tax purposes</td>
-<td>18,786</td>
+<td>18,725</td>
 <td></td>
 </tr>
 </tbody>
@@ -544,6 +571,35 @@
 </tbody>
 </table>
 </div>
+<h3>Notes to financial statements (copy/paste)</h3>
+<p>Paste into UFile (Notes checklist screen) if you are including notes with the filing copy:</p>
+<pre><code>14587430 Canada Inc. (Curly&#x27;s Canteen)
+Notes to the financial statements
+Year ended May 31, 2024
+
+1. Nature of operations
+The corporation carries on Quick Service Restaurant.
+
+2. Basis of presentation
+These financial statements have been prepared on the accrual basis of accounting using the historical cost basis.
+
+3. Revenue recognition
+Revenue is recognized at the time goods are sold and services are rendered. Amounts are presented net of refunds and discounts.
+
+4. Inventory
+Inventory consists of food and beverage inventory held for resale and is valued at the lower of cost and net realizable value. For FY2024, a formal physical inventory count process was implemented in the subsequent fiscal year; accordingly, the inventory balance at May 31, 2024 was estimated by management using an itemized schedule at cost.
+
+5. Property and equipment
+Property and equipment are recorded at cost. Amortization is provided on a basis intended to approximate the decline in service potential of the related assets.
+
+6. Income taxes and government remittances
+The corporation is a Canadian-controlled private corporation. Income tax expense comprises current tax. Taxes payable on the balance sheet may include GST/HST and other government remittances.
+
+7. Related party transactions and balances
+The corporation is controlled by its shareholders. Amounts due to/from shareholders relate primarily to shareholder-paid business expenses and reimbursements and other amounts payable to shareholders. These balances are non-interest-bearing and due on demand unless otherwise agreed.
+
+8. Subsequent events
+There have been no subsequent events requiring adjustment to these financial statements.</code></pre>
 <h3>Capital cost allowance screen (Schedule 8 entry + audit)</h3>
 <p>Use Schedule 8 outputs; enter class details if claiming CCA.</p>
 <p>If this section is missing/empty in the guide, the packet was likely built from a snapshot that did not include <code>schedule_8_*.csv</code>. Rebuild via: <code>python3 UfileToFill/ufile_packet/tools/refresh_packet_from_current_state.py</code></p>
@@ -665,6 +721,15 @@
 <th>Guide note</th>
 </tr></thead>
 <tbody>
+<tr>
+<td>2781</td>
+<td>Due to individual shareholder(s)</td>
+<td>3,578</td>
+<td>3,639</td>
+<td>61</td>
+<td>CHANGE (update amount)</td>
+<td>Tie-out: 2400 $2,669.99 (Thomas) + 2410 $908.16 (Dwayne); source: readiness_report.md. If UFile doesn&#x27;t accept 2781, enter this amount on 2780 instead.</td>
+</tr>
 <tr>
 <td>1599</td>
 <td></td>
@@ -828,15 +893,6 @@
 <td></td>
 </tr>
 <tr>
-<td>2781</td>
-<td>Due to individual shareholder(s)</td>
-<td>3,578</td>
-<td>3,578</td>
-<td>0</td>
-<td>OK</td>
-<td>Tie-out: 2400 $2,669.99 (Thomas) + 2410 $908.16 (Dwayne); source: readiness_report.md. If UFile doesn&#x27;t accept 2781, enter this amount on 2780 instead.</td>
-</tr>
-<tr>
 <td>3500</td>
 <td>Common shares</td>
 <td>100</td>
@@ -862,6 +918,24 @@
 </tr></thead>
 <tbody>
 <tr>
+<td>3680</td>
+<td>Net income/loss</td>
+<td>18,456</td>
+<td>18,395</td>
+<td>-61</td>
+<td>CHANGE (update amount)</td>
+<td>Enter (net income/loss)</td>
+</tr>
+<tr>
+<td>3849</td>
+<td>Retained earnings/deficit - End</td>
+<td>18,456</td>
+<td>18,395</td>
+<td>-61</td>
+<td>CHANGE (update amount)</td>
+<td>Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740)</td>
+</tr>
+<tr>
 <td>3660</td>
 <td>Retained earnings/deficit - Start</td>
 <td>0</td>
@@ -869,15 +943,6 @@
 <td>0</td>
 <td>OK</td>
 <td>Enter (opening RE)</td>
-</tr>
-<tr>
-<td>3680</td>
-<td>Net income/loss</td>
-<td>18,456</td>
-<td>18,456</td>
-<td>0</td>
-<td>OK</td>
-<td>Enter (net income/loss)</td>
 </tr>
 <tr>
 <td>3700</td>
@@ -897,15 +962,6 @@
 <td>OK</td>
 <td>Enter only if needed (rounding/other)</td>
 </tr>
-<tr>
-<td>3849</td>
-<td>Retained earnings/deficit - End</td>
-<td>18,456</td>
-<td>18,456</td>
-<td>0</td>
-<td>OK</td>
-<td>Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740)</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -922,6 +978,15 @@
 <th>Guide note</th>
 </tr></thead>
 <tbody>
+<tr>
+<td>9281</td>
+<td>Vehicle expenses</td>
+<td>4,393</td>
+<td>4,454</td>
+<td>61</td>
+<td>CHANGE (update amount)</td>
+<td></td>
+</tr>
 <tr>
 <td>8089</td>
 <td></td>
@@ -1183,15 +1248,6 @@
 <td>OK</td>
 <td></td>
 </tr>
-<tr>
-<td>9281</td>
-<td>Vehicle expenses</td>
-<td>4,393</td>
-<td>4,393</td>
-<td>0</td>
-<td>OK</td>
-<td></td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -1308,7 +1364,7 @@
 </ul>
 <p>If a schedule form is missing from the exported PDF, it usually means UFile didn’t include it in the export/print package settings (or the schedule detail wasn’t entered).</p>
 <p>Run the checker after your next export:</p>
-<p>``<code>bash python3 T2Analysis/tools/check_ufile_export_completeness.py --fy FY2024 --pdf /path/to/ufile_export.pdf </code>``</p>
+<pre><code>python3 T2Analysis/tools/check_ufile_export_completeness.py --fy FY2024 --pdf /path/to/ufile_export.pdf</code></pre>
 </section>
         </article>
       </div>
