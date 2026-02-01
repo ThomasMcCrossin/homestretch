@@ -217,6 +217,28 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 | 3740 |  | 0 | Enter only if needed (rounding/other) |
 | 3849 | Retained earnings/deficit - End | 18,456 | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
 
+### Shareholder loans / balances support (working papers)
+CRA frequently asks for support for any due-from-shareholder / due-to-shareholder amounts. Keep the continuity below with your filing package.
+
+Evidence / working papers:
+- `output/due_from_shareholder_breakdown.md` (loan events + net due-from support)
+- `output/due_from_shareholder_breakdown.csv` (same data, machine-readable)
+- `output/trial_balance_FY2024.csv` (year-end balances by GL account)
+- `output/manual_adjustment_journal_detail.csv` (any year-end shareholder payable adjustments)
+
+Year-end summary (from Schedule 100): Due from shareholder (GIFI 1301) = 0; Due to shareholder (GIFI 2781) = 3,578.
+
+#### Loan events in this fiscal year
+_(none)_
+
+#### Year-end shareholder-related balances (from trial balance)
+| Account | Name | Debit | Credit | Net (approx) |
+|---|---|---|---|---|
+| 2400 | Due to Shareholder - Thomas | 0.00 | 2669.99 | 2,670 CR |
+| 2410 | Due to Shareholder - Dwayne | 0.00 | 908.16 | 908 CR |
+
+UFile entry tip: do not enter both `2780` and `2781` for the same payable; that double-counts and can break Schedule 100 totals.
+
 ### Tie-check (display-only totals)
 | GIFI | Description | Amount |
 |---|---|---|

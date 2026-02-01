@@ -25,6 +25,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 PACKET_PATH = PROJECT_ROOT / "UfileToFill" / "ufile_packet" / "packet.json"
 OUT_DIR = PROJECT_ROOT / "UfileToFill" / "ufile_packet" / "years"
 TABLES_DIR = PROJECT_ROOT / "UfileToFill" / "ufile_packet" / "tables"
+ACCOUNTING_OUTPUT_DIR = PROJECT_ROOT / "output"
 
 
 def money(n: int) -> str:
@@ -171,6 +172,27 @@ def build_year_guide(packet: dict, fy: str) -> str:
         for r in rows:
             out.append("| " + " | ".join(r) + " |")
         return "\n".join(out)
+
+    def parse_ymd(s: str) -> datetime:
+        # Dates in the packet and most outputs are stored as YYYY-MM-DD.
+        return datetime.strptime(s, "%Y-%m-%d")
+
+    def date_in_fy(date_ymd: str) -> bool:
+        if not date_ymd:
+            return False
+        try:
+            d = parse_ymd(date_ymd).date()
+        except Exception:
+            return False
+        start = parse_ymd(period["start"]).date()
+        end = parse_ymd(period["end"]).date()
+        return start <= d <= end
+
+    def read_csv_rows(path: Path) -> list[dict[str, str]]:
+        if not path.exists():
+            return []
+        with path.open(newline="") as f:
+            return list(csv.DictReader(f))
 
     # Header
     parts: list[str] = []
@@ -871,6 +893,143 @@ def build_year_guide(packet: dict, fy: str) -> str:
         )
     )
     parts.append("")
+
+    # Shareholder balances / loans support (working papers)
+    sch100_due_from = int(schedule_100.get("1301", {}).get("amount") or 0)
+    sch100_due_to = int(schedule_100.get("2781", {}).get("amount") or 0)
+    due_from_breakdown_rows = [
+        r
+        for r in read_csv_rows(ACCOUNTING_OUTPUT_DIR / "due_from_shareholder_breakdown.csv")
+        if date_in_fy((r.get("entry_date") or "").strip())
+    ]
+    if sch100_due_from or sch100_due_to or due_from_breakdown_rows:
+        # Keep as a sub-heading so it stays inside the retained earnings section
+        # (the final guide reorders sections and would otherwise drop unknown top-level headings).
+        parts.append("### Shareholder loans / balances support (working papers)")
+        parts.append(
+            "CRA frequently asks for support for any due-from-shareholder / due-to-shareholder amounts. "
+            "Keep the continuity below with your filing package."
+        )
+        parts.append("")
+        parts.append("Evidence / working papers:")
+        parts.append("- `output/due_from_shareholder_breakdown.md` (loan events + net due-from support)")
+        parts.append("- `output/due_from_shareholder_breakdown.csv` (same data, machine-readable)")
+        parts.append(f"- `output/trial_balance_{fy}.csv` (year-end balances by GL account)")
+        parts.append("- `output/manual_adjustment_journal_detail.csv` (any year-end shareholder payable adjustments)")
+        parts.append("")
+        parts.append(
+            f"Year-end summary (from Schedule 100): Due from shareholder (GIFI 1301) = {money(sch100_due_from)}; "
+            f"Due to shareholder (GIFI 2781) = {money(sch100_due_to)}."
+        )
+        parts.append("")
+
+        if due_from_breakdown_rows:
+            loan_rows = [
+                r
+                for r in due_from_breakdown_rows
+                if (r.get("bank_txn_category") or "").strip() in ("LOAN_ISSUED", "LOAN_REPAID")
+            ]
+            other_rows = [r for r in due_from_breakdown_rows if r not in loan_rows]
+
+            parts.append("#### Loan events in this fiscal year (from `output/due_from_shareholder_breakdown.csv`)")
+            if loan_rows:
+                loan_event_table_rows: list[list[str]] = []
+                for r in loan_rows:
+                    net = (r.get("net") or "").strip()
+                    try:
+                        net_amt = float(net) if net else 0.0
+                    except Exception:
+                        net_amt = 0.0
+                    loan_event_table_rows.append(
+                        [
+                            (r.get("entry_date") or "").strip(),
+                            (r.get("shareholder") or "").strip(),
+                            (r.get("bank_txn_category") or "").strip(),
+                            f"{net_amt:,.2f}",
+                            (r.get("journal_entry_id") or "").strip(),
+                            (r.get("line_description") or r.get("bank_txn_explanation") or "").strip(),
+                        ]
+                    )
+                parts.append(
+                    md_table(
+                        ["Date", "Shareholder", "Type", "Net", "Journal entry id", "Description"],
+                        loan_event_table_rows,
+                    )
+                )
+                parts.append("")
+                parts.append(
+                    "Note: a loan can be fully repaid within the year (netting to $0 at year-end) and still needs documentation."
+                )
+                parts.append("")
+            else:
+                parts.append("_(none)_")
+                parts.append("")
+
+            if other_rows:
+                parts.append("#### Other due-from-shareholder components in this fiscal year")
+                other_table_rows: list[list[str]] = []
+                for r in other_rows:
+                    net = (r.get("net") or "").strip()
+                    try:
+                        net_amt = float(net) if net else 0.0
+                    except Exception:
+                        net_amt = 0.0
+                    other_table_rows.append(
+                        [
+                            (r.get("entry_date") or "").strip(),
+                            (r.get("shareholder") or "").strip(),
+                            (r.get("bank_txn_category") or "").strip(),
+                            f"{net_amt:,.2f}",
+                            (r.get("journal_entry_id") or "").strip(),
+                            (r.get("line_description") or r.get("bank_txn_explanation") or "").strip(),
+                        ]
+                    )
+                parts.append(
+                    md_table(
+                        ["Date", "Shareholder", "Type", "Net", "Journal entry id", "Description"],
+                        other_table_rows,
+                    )
+                )
+                parts.append("")
+        else:
+            parts.append("#### Loan events in this fiscal year")
+            parts.append("_(none)_")
+            parts.append("")
+
+        # Provide year-end balances for the shareholder-related GL accounts (2400/2410/2500).
+        tb_rows = read_csv_rows(ACCOUNTING_OUTPUT_DIR / f"trial_balance_{fy}.csv")
+        shareholder_accts = {"2400": "Due to Shareholder - Thomas", "2410": "Due to Shareholder - Dwayne", "2500": "Due from shareholder"}
+        tb_keep = [r for r in tb_rows if (r.get("account_code") or "").strip() in shareholder_accts]
+        if tb_keep:
+            parts.append("#### Year-end shareholder-related balances (from trial balance)")
+            bal_rows: list[list[str]] = []
+            for r in sorted(tb_keep, key=lambda x: (x.get("account_code") or "")):
+                code = (r.get("account_code") or "").strip()
+                debit = (r.get("debit") or "0").strip()
+                credit = (r.get("credit") or "0").strip()
+                net_cents = (r.get("net_cents") or "").strip()
+                # Render as signed whole dollars for quick tie-back to Schedule 100.
+                amt = 0
+                try:
+                    amt = int(round(int(net_cents) / 100)) if net_cents else 0
+                except Exception:
+                    amt = 0
+                bal_rows.append(
+                    [
+                        code,
+                        (r.get("account_name") or shareholder_accts.get(code) or "").strip(),
+                        debit,
+                        credit,
+                        money(abs(amt)) + (" DR" if amt >= 0 else " CR"),
+                    ]
+                )
+            parts.append(md_table(["Account", "Name", "Debit", "Credit", "Net (approx)"], bal_rows))
+            parts.append("")
+
+        parts.append(
+            "UFile entry tip: do not enter both `2780` and `2781` for the same payable; that double-counts and can break Schedule 100 totals."
+        )
+        parts.append("")
 
     parts.append("## Schedule 1 (tax purposes)")
     parts.append(

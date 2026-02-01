@@ -222,6 +222,40 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 | 3740 |  | 0 | Enter only if needed (rounding/other) |
 | 3849 | Retained earnings/deficit - End | 12,035 | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
 
+### Shareholder loans / balances support (working papers)
+CRA frequently asks for support for any due-from-shareholder / due-to-shareholder amounts. Keep the continuity below with your filing package.
+
+Evidence / working papers:
+- `output/due_from_shareholder_breakdown.md` (loan events + net due-from support)
+- `output/due_from_shareholder_breakdown.csv` (same data, machine-readable)
+- `output/trial_balance_FY2025.csv` (year-end balances by GL account)
+- `output/manual_adjustment_journal_detail.csv` (any year-end shareholder payable adjustments)
+
+Year-end summary (from Schedule 100): Due from shareholder (GIFI 1301) = 2,000; Due to shareholder (GIFI 2781) = 5,497.
+
+#### Loan events in this fiscal year (from `output/due_from_shareholder_breakdown.csv`)
+| Date | Shareholder | Type | Net | Journal entry id | Description |
+|---|---|---|---|---|---|
+| 2024-06-17 | Dwayne | LOAN_ISSUED | 9,000.00 | BANK_DEBIT_1086 | Shareholder loan to Dwayne - $9,000 |
+| 2025-04-29 | Thomas | LOAN_ISSUED | 2,000.00 | BANK_DEBIT_362 | Shareholder loan to Thomas - $2,000 |
+| 2025-05-22 | Dwayne | LOAN_REPAID | -9,000.00 | BANK_INFLOW_SHAREHOLDER_LOAN_REPAYMENT_347 | Shareholder loan repayment |
+
+Note: a loan can be fully repaid within the year (netting to $0 at year-end) and still needs documentation.
+
+#### Other due-from-shareholder components in this fiscal year
+| Date | Shareholder | Type | Net | Journal entry id | Description |
+|---|---|---|---|---|---|
+| 2025-05-31 | Thomas |  | 41.36 | MILEAGE_FUEL_REIMBURSEMENT_FY2025 | Net due from shareholder - Thomas (fuel exceeds mileage) FY2025 |
+
+#### Year-end shareholder-related balances (from trial balance)
+| Account | Name | Debit | Credit | Net (approx) |
+|---|---|---|---|---|
+| 2400 | Due to Shareholder - Thomas | 0.00 | 3890.67 | 3,891 CR |
+| 2410 | Due to Shareholder - Dwayne | 0.00 | 1606.68 | 1,607 CR |
+| 2500 | Due from Shareholder | 2000.00 | 0.00 | 2,000 DR |
+
+UFile entry tip: do not enter both `2780` and `2781` for the same payable; that double-counts and can break Schedule 100 totals.
+
 ### Tie-check (display-only totals)
 | GIFI | Description | Amount |
 |---|---|---|
