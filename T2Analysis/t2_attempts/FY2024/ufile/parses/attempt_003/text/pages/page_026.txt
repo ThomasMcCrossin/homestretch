@@ -1,0 +1,11 @@
+T2 BAR CODE RETURN
+Name: 14587430 Canada Inc. For Agency use
+[ 055 ]
+BN: 74800 3142 RC 0001
+Tax Year Start: 2023-06-01
+Tax Year End: 2024-05-31 For Agency use
+[ 095 ]
+[ 096 ]
+[ 898 ]
+This page must be sent to the Canada Revenue Agency
+Version 28.01 UF25 Page 1 of 2

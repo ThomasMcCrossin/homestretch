@@ -1026,6 +1026,53 @@ def build_year_guide(packet: dict, fy: str) -> str:
             parts.append(md_table(["Account", "Name", "Debit", "Credit", "Net (approx)"], bal_rows))
             parts.append("")
 
+        # Mileage reimbursement support (working papers) — do not include in Notes to FS.
+        payables_rows = read_csv_rows(ACCOUNTING_OUTPUT_DIR / f"shareholder_mileage_fuel_payables_{fy}.csv")
+        thomas_row = None
+        dwayne_row = None
+        for r in payables_rows:
+            if (r.get("shareholder") or "").strip() == "Thomas":
+                thomas_row = r
+            if (r.get("shareholder") or "").strip() == "Dwayne":
+                dwayne_row = r
+        if thomas_row or dwayne_row:
+            parts.append("#### Shareholder mileage reimbursement (working papers)")
+            parts.append("Keep this as working-paper support. Do **not** paste mileage details into Notes to the financial statements.")
+            parts.append("")
+            parts.append("Evidence / working papers:")
+            parts.append("- `output/shareholder_mileage_fuel_summary.md` (human summary)")
+            parts.append(f"- `output/shareholder_mileage_fuel_payables_{fy}.csv` (FY totals: mileage, fuel, net)")
+            parts.append("- `output/fuel_9200_wave_bills.csv` (fuel detail by bill)")
+            parts.append("- `output/mileage_adjustment_summary.md` (documents FY-scoped overlays, if any)")
+            parts.append("")
+            rows: list[list[str]] = []
+            if thomas_row:
+                try:
+                    th_mileage = int(thomas_row.get("mileage_claim_cents") or 0)
+                    th_fuel = int(thomas_row.get("fuel_cents") or 0)
+                    th_net = int(thomas_row.get("net_cents") or 0)
+                    th_dir = (thomas_row.get("direction") or "").strip()
+                except Exception:
+                    th_mileage = th_fuel = th_net = 0
+                    th_dir = ""
+                rows.append(
+                    [
+                        "Thomas",
+                        f"${th_mileage/100:,.2f}",
+                        f"${th_fuel/100:,.2f}",
+                        f"${abs(th_net)/100:,.2f}",
+                        "due to Thomas" if th_dir == "DUE_TO_SHAREHOLDER" else "due from Thomas" if th_dir == "DUE_FROM_SHAREHOLDER" else "",
+                    ]
+                )
+            if dwayne_row:
+                try:
+                    dw_mileage = int(dwayne_row.get("mileage_claim_cents") or 0)
+                except Exception:
+                    dw_mileage = 0
+                rows.append(["Dwayne", f"${dw_mileage/100:,.2f}", "$0.00", f"${dw_mileage/100:,.2f}", "due to Dwayne"])
+            parts.append(md_table(["Shareholder", "Mileage", "Fuel offset", "Net", "Direction"], rows))
+            parts.append("")
+
         parts.append(
             "UFile entry tip: do not enter both `2780` and `2781` for the same payable; that double-counts and can break Schedule 100 totals."
         )
@@ -1226,16 +1273,16 @@ These financial statements have been prepared on the accrual basis of accounting
 Revenue is recognized at the time goods are sold and services are rendered. Amounts are presented net of refunds and discounts.
 
 4. Inventory
-Inventory consists of food and beverage inventory held for resale and is valued at the lower of cost and net realizable value. Cost is determined using a method consistent with prior periods.
+Inventory consists of food and beverage inventory held for resale and is valued at the lower of cost and net realizable value. For FY2024, a formal physical inventory count process was implemented in the subsequent fiscal year; accordingly, the inventory balance at May 31, 2024 was estimated by management using an itemized schedule at cost.
 
 5. Property and equipment
-Property and equipment are recorded at cost. Amortization is provided on a basis intended to approximate the decline in service potential of the related assets. For internal consistency, this file mirrors book amortization to the tax CCA claim where applicable.
+Property and equipment are recorded at cost. Amortization is provided on a basis intended to approximate the decline in service potential of the related assets.
 
 6. Income taxes and government remittances
 The corporation is a Canadian-controlled private corporation. Income tax expense comprises current tax. Taxes payable on the balance sheet may include GST/HST and other government remittances.
 
 7. Related party transactions and balances
-The corporation is controlled by its shareholders. Amounts due to/from shareholders relate to shareholder-paid expenses, reimbursements, and temporary advances. These balances are non-interest-bearing and due on demand unless otherwise agreed.
+The corporation is controlled by its shareholders. Amounts due to/from shareholders relate primarily to shareholder-paid business expenses and reimbursements and other amounts payable to shareholders. These balances are non-interest-bearing and due on demand unless otherwise agreed.
 
 8. Subsequent events
 There have been no subsequent events requiring adjustment to these financial statements.

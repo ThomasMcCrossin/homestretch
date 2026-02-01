@@ -1068,7 +1068,7 @@
 <tr>
 <td>2781</td>
 <td>Due to individual shareholder(s)</td>
-<td>3,578</td>
+<td>3,639</td>
 <td>Tie-out: 2400 $2,669.99 (Thomas) + 2410 $908.16 (Dwayne); source: readiness_report.md. If UFile doesn&#x27;t accept 2781, enter this amount on 2780 instead.</td>
 </tr>
 <tr>
@@ -1146,7 +1146,7 @@
 <tr>
 <td>3680</td>
 <td>Net income/loss</td>
-<td>18,456</td>
+<td>18,395</td>
 <td>Enter (net income/loss)</td>
 </tr>
 <tr>
@@ -1164,7 +1164,7 @@
 <tr>
 <td>3849</td>
 <td>Retained earnings/deficit - End</td>
-<td>18,456</td>
+<td>18,395</td>
 <td>Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740)</td>
 </tr>
 </tbody>
@@ -1179,7 +1179,7 @@
 <li><code>output/trial_balance_FY2024.csv</code> (year-end balances by GL account)</li>
 <li><code>output/manual_adjustment_journal_detail.csv</code> (any year-end shareholder payable adjustments)</li>
 </ul>
-<p>Year-end summary (from Schedule 100): Due from shareholder (GIFI 1301) = 0; Due to shareholder (GIFI 2781) = 3,578.</p>
+<p>Year-end summary (from Schedule 100): Due from shareholder (GIFI 1301) = 0; Due to shareholder (GIFI 2781) = 3,639.</p>
 <h4>Loan events in this fiscal year</h4>
 <p><em>(none)</em></p>
 <h4>Year-end shareholder-related balances (from trial balance)</h4>
@@ -1197,8 +1197,8 @@
 <td>2400</td>
 <td>Due to Shareholder - Thomas</td>
 <td>0.00</td>
-<td>2669.99</td>
-<td>2,670 CR</td>
+<td>2730.95</td>
+<td>2,731 CR</td>
 </tr>
 <tr>
 <td>2410</td>
@@ -1206,6 +1206,42 @@
 <td>0.00</td>
 <td>908.16</td>
 <td>908 CR</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4>Shareholder mileage reimbursement (working papers)</h4>
+<p>Keep this as working-paper support. Do <strong>not</strong> paste mileage details into Notes to the financial statements.</p>
+<p>Evidence / working papers:</p>
+<ul>
+<li><code>output/shareholder_mileage_fuel_summary.md</code> (human summary)</li>
+<li><code>output/shareholder_mileage_fuel_payables_FY2024.csv</code> (FY totals: mileage, fuel, net)</li>
+<li><code>output/fuel_9200_wave_bills.csv</code> (fuel detail by bill)</li>
+<li><code>output/mileage_adjustment_summary.md</code> (documents FY-scoped overlays, if any)</li>
+</ul>
+<div class="table-wrap">
+<table>
+<thead><tr>
+<th>Shareholder</th>
+<th>Mileage</th>
+<th>Fuel offset</th>
+<th>Net</th>
+<th>Direction</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Thomas</td>
+<td>$3,597.73</td>
+<td>$1,215.96</td>
+<td>$2,381.77</td>
+<td>due to Thomas</td>
+</tr>
+<tr>
+<td>Dwayne</td>
+<td>$788.16</td>
+<td>$0.00</td>
+<td>$788.16</td>
+<td>due to Dwayne</td>
 </tr>
 </tbody>
 </table>
@@ -1377,7 +1413,7 @@
 <tr>
 <td>9281</td>
 <td>Vehicle expenses</td>
-<td>4,393</td>
+<td>4,454</td>
 <td></td>
 </tr>
 </tbody>
@@ -1462,16 +1498,16 @@ These financial statements have been prepared on the accrual basis of accounting
 Revenue is recognized at the time goods are sold and services are rendered. Amounts are presented net of refunds and discounts.
 
 4. Inventory
-Inventory consists of food and beverage inventory held for resale and is valued at the lower of cost and net realizable value. Cost is determined using a method consistent with prior periods.
+Inventory consists of food and beverage inventory held for resale and is valued at the lower of cost and net realizable value. For FY2024, a formal physical inventory count process was implemented in the subsequent fiscal year; accordingly, the inventory balance at May 31, 2024 was estimated by management using an itemized schedule at cost.
 
 5. Property and equipment
-Property and equipment are recorded at cost. Amortization is provided on a basis intended to approximate the decline in service potential of the related assets. For internal consistency, this file mirrors book amortization to the tax CCA claim where applicable.
+Property and equipment are recorded at cost. Amortization is provided on a basis intended to approximate the decline in service potential of the related assets.
 
 6. Income taxes and government remittances
 The corporation is a Canadian-controlled private corporation. Income tax expense comprises current tax. Taxes payable on the balance sheet may include GST/HST and other government remittances.
 
 7. Related party transactions and balances
-The corporation is controlled by its shareholders. Amounts due to/from shareholders relate to shareholder-paid expenses, reimbursements, and temporary advances. These balances are non-interest-bearing and due on demand unless otherwise agreed.
+The corporation is controlled by its shareholders. Amounts due to/from shareholders relate primarily to shareholder-paid business expenses and reimbursements and other amounts payable to shareholders. These balances are non-interest-bearing and due on demand unless otherwise agreed.
 
 8. Subsequent events
 There have been no subsequent events requiring adjustment to these financial statements.</code></pre>
@@ -1486,7 +1522,7 @@ There have been no subsequent events requiring adjustment to these financial sta
 <tbody>
 <tr>
 <td>Net income as per financial statements</td>
-<td>18,456</td>
+<td>18,395</td>
 <td>Should auto-fill from GIFI; otherwise enter from Schedule 1 code A.</td>
 </tr>
 <tr>
@@ -1524,7 +1560,7 @@ There have been no subsequent events requiring adjustment to these financial sta
 </tr>
 <tr>
 <td>Retained earnings/deficit at year-end (if required)</td>
-<td>18,456</td>
+<td>18,395</td>
 <td>If UFile forces a retained earnings element, use Schedule 100 GIFI 3600.</td>
 </tr>
 </tbody>
@@ -1558,7 +1594,7 @@ There have been no subsequent events requiring adjustment to these financial sta
 <tr>
 <td>A</td>
 <td>Net income (loss) per financial statements</td>
-<td>18,456</td>
+<td>18,395</td>
 <td></td>
 </tr>
 <tr>
@@ -1606,7 +1642,7 @@ There have been no subsequent events requiring adjustment to these financial sta
 <tr>
 <td>C</td>
 <td>Net income (loss) for tax purposes</td>
-<td>18,786</td>
+<td>18,725</td>
 <td></td>
 </tr>
 </tbody>

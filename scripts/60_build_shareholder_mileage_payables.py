@@ -10,7 +10,7 @@ from datetime import date
 from decimal import Decimal
 from pathlib import Path
 
-from _lib import DB_PATH, PROJECT_ROOT, connect_db, fiscal_years_from_manifest, get_source, load_manifest, sha256_file
+from _lib import DB_PATH, PROJECT_ROOT, connect_db, fiscal_years_from_manifest, get_source, load_manifest, load_yaml, sha256_file
 
 
 FUEL_ACCOUNT_CODE = "9200"
@@ -18,6 +18,7 @@ MILEAGE_EXPENSE_ACCOUNT_CODE = "9270"
 THOMAS_PAYABLE_ACCOUNT_CODE = "2400"
 DWAYNE_PAYABLE_ACCOUNT_CODE = "2410"
 DUE_FROM_SHAREHOLDER_ACCOUNT_CODE = "2500"
+MILEAGE_ADJUSTMENTS_PATH = PROJECT_ROOT / "overrides" / "mileage_adjustments.yml"
 
 
 @dataclass(frozen=True)
@@ -29,6 +30,40 @@ class FyTotals:
 
 def cents_to_dollars(cents: int) -> str:
     return f"{Decimal(cents) / Decimal(100):.2f}"
+
+def load_mileage_adjustments() -> dict[str, dict[str, object]]:
+    """
+    Load FY-scoped mileage adjustments (overlay) from overrides/.
+
+    We keep this separate from the base mileage logs so the filing can:
+    - remain reproducible/deterministic, and
+    - explicitly scope one-off add-ons to a specific fiscal year (e.g., FY2024 only).
+    """
+    if not MILEAGE_ADJUSTMENTS_PATH.exists():
+        return {}
+    data = load_yaml(MILEAGE_ADJUSTMENTS_PATH)
+    adj = data.get("adjustments")
+    if not isinstance(adj, dict):
+        return {}
+    out: dict[str, dict[str, object]] = {}
+    for fy, obj in adj.items():
+        if not isinstance(fy, str) or not isinstance(obj, dict):
+            continue
+        out[fy.strip()] = obj
+    return out
+
+def thomas_additional_mileage_claim_cents(fy: str, adjustments: dict[str, dict[str, object]]) -> int:
+    obj = adjustments.get(fy, {})
+    raw = obj.get("thomas_additional_mileage_claim_cents", 0)
+    try:
+        return int(raw or 0)
+    except Exception:
+        return 0
+
+def thomas_adjustment_note(fy: str, adjustments: dict[str, dict[str, object]]) -> str:
+    obj = adjustments.get(fy, {})
+    note = obj.get("note")
+    return str(note).strip() if note is not None else ""
 
 
 def read_mileage_log(path: Path, *, start_date: str, end_date: str) -> FyTotals:
@@ -277,6 +312,8 @@ def upsert_mileage_fuel_journal_entry(
     fy: str,
     fy_end_date: str,
     thomas_mileage_cents: int,
+    thomas_base_mileage_cents: int,
+    thomas_adjustment_cents: int,
     dwayne_mileage_cents: int,
     fuel_cents: int,
     thomas_log: Path,
@@ -291,7 +328,9 @@ def upsert_mileage_fuel_journal_entry(
     notes = (
         f"thomas_log={thomas_log}; dwayne_log={dwayne_log}; "
         f"fuel_account_code={FUEL_ACCOUNT_CODE}; fuel_assumed_thomas_only=true; "
-        f"thomas_mileage_cents={thomas_mileage_cents}; dwayne_mileage_cents={dwayne_mileage_cents}; fuel_cents={fuel_cents}"
+        f"thomas_mileage_base_cents={thomas_base_mileage_cents}; thomas_mileage_adjustment_cents={thomas_adjustment_cents}; "
+        f"thomas_mileage_cents={thomas_mileage_cents}; dwayne_mileage_cents={dwayne_mileage_cents}; fuel_cents={fuel_cents}; "
+        f"mileage_adjustments={MILEAGE_ADJUSTMENTS_PATH.relative_to(PROJECT_ROOT) if MILEAGE_ADJUSTMENTS_PATH.exists() else '(none)'}"
     )
 
     conn.execute("DELETE FROM journal_entry_lines WHERE journal_entry_id = ?", (je_id,))
@@ -426,6 +465,7 @@ def write_summary_md(
     fuel_detail_csv: Path,
     thomas_log: Path,
     dwayne_log: Path,
+    mileage_adjust_audit_csv: Path,
 ) -> None:
     lines: list[str] = []
     lines.append("# Shareholder mileage reimbursement (net of fuel)")
@@ -433,6 +473,7 @@ def write_summary_md(
     lines.append("This report uses:")
     lines.append(f"- Mileage logs: `{thomas_log}` and `{dwayne_log}`")
     lines.append(f"- Fuel total: account `{FUEL_ACCOUNT_CODE}` from `db/t2_final.db` allocations (see `{fuel_detail_csv}`)")
+    lines.append(f"- Mileage adjustments overlay: `{mileage_adjust_audit_csv}` (FY-scoped add-ons)")
     lines.append("")
 
     total_due_to_thomas_cents = 0
@@ -505,6 +546,8 @@ def main() -> int:
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
 
+    adjustments = load_mileage_adjustments()
+
     conn = connect_db(args.db)
     try:
         fy_rows: list[tuple[str, str, str, FyTotals, FyTotals, int]] = []
@@ -513,6 +556,11 @@ def main() -> int:
                 thomas = read_mileage_log(thomas_log, start_date=fy.start_date, end_date=fy.end_date)
                 dwayne = read_mileage_log(dwayne_log, start_date=fy.start_date, end_date=fy.end_date)
                 fuel_cents = fuel_total_cents(conn, start_date=fy.start_date, end_date=fy.end_date)
+                thomas_base_cents = thomas.mileage_claim_cents
+                thomas_adj_cents = thomas_additional_mileage_claim_cents(fy.fy, adjustments)
+                if thomas_adj_cents:
+                    # Keep km/trip counts from the base log; the add-on is a working-paper overlay on the claim dollars.
+                    thomas = FyTotals(trips=thomas.trips, kilometres=thomas.kilometres, mileage_claim_cents=thomas_base_cents + thomas_adj_cents)
                 fy_rows.append((fy.fy, fy.start_date, fy.end_date, thomas, dwayne, fuel_cents))
 
                 out_payables_csv = args.out_dir / f"shareholder_mileage_fuel_payables_{fy.fy}.csv"
@@ -541,6 +589,8 @@ def main() -> int:
                     fy=fy.fy,
                     fy_end_date=fy.end_date,
                     thomas_mileage_cents=thomas.mileage_claim_cents,
+                    thomas_base_mileage_cents=thomas_base_cents,
+                    thomas_adjustment_cents=thomas_adj_cents,
                     dwayne_mileage_cents=dwayne.mileage_claim_cents,
                     fuel_cents=fuel_cents,
                     thomas_log=thomas_log,
@@ -553,6 +603,54 @@ def main() -> int:
         out_fuel_csv = args.out_dir / "fuel_9200_wave_bills.csv"
         export_fuel_bills(conn, start_date=scope_start, end_date=scope_end, out_csv=out_fuel_csv)
 
+        # Audit trail of mileage overlays (explicit, FY-scoped).
+        out_adj_csv = args.out_dir / "mileage_adjustment_audit.csv"
+        out_adj_md = args.out_dir / "mileage_adjustment_summary.md"
+        with out_adj_csv.open("w", encoding="utf-8", newline="") as f:
+            w = csv.writer(f)
+            w.writerow(
+                [
+                    "fy",
+                    "shareholder",
+                    "base_mileage_claim_cents",
+                    "adjustment_cents",
+                    "adjusted_mileage_claim_cents",
+                    "note",
+                ]
+            )
+            for fy_key, _start_date, _end_date, thomas, _dwayne, _fuel_cents in fy_rows:
+                base = read_mileage_log(thomas_log, start_date=_start_date, end_date=_end_date).mileage_claim_cents
+                adj = thomas_additional_mileage_claim_cents(fy_key, adjustments)
+                note = thomas_adjustment_note(fy_key, adjustments)
+                w.writerow([fy_key, "Thomas", base, adj, base + adj, note])
+
+        md_lines: list[str] = []
+        md_lines.append("# Mileage adjustments (overlay audit)")
+        md_lines.append("")
+        md_lines.append("This file documents explicit FY-scoped overlays applied to mileage claims.")
+        md_lines.append("These are working-paper support items and should not be pasted into financial statement notes.")
+        md_lines.append("")
+        md_lines.append(f"Source: `{MILEAGE_ADJUSTMENTS_PATH.relative_to(PROJECT_ROOT)}`")
+        md_lines.append("")
+        md_lines.append("## Thomas mileage claim overlays")
+        md_lines.append("")
+        # Re-read audit CSV for a stable presentation.
+        md_lines.append("| FY | Base claim | Adjustment | Final claim | Note |")
+        md_lines.append("|---|---:|---:|---:|---|")
+        with out_adj_csv.open("r", encoding="utf-8", newline="") as f:
+            rr = csv.DictReader(f)
+            for r in rr:
+                if (r.get("shareholder") or "") != "Thomas":
+                    continue
+                fy_key = r.get("fy") or ""
+                base = cents_to_dollars(int(r.get("base_mileage_claim_cents") or 0))
+                adj = cents_to_dollars(int(r.get("adjustment_cents") or 0))
+                total = cents_to_dollars(int(r.get("adjusted_mileage_claim_cents") or 0))
+                note = (r.get("note") or "").strip()
+                md_lines.append(f"| {fy_key} | ${base} | ${adj} | ${total} | {note} |")
+        md_lines.append("")
+        out_adj_md.write_text("\n".join(md_lines) + "\n", encoding="utf-8")
+
         out_md = args.out_dir / "shareholder_mileage_fuel_summary.md"
         write_summary_md(
             out_md,
@@ -560,6 +658,7 @@ def main() -> int:
             fuel_detail_csv=out_fuel_csv,
             thomas_log=thomas_log,
             dwayne_log=dwayne_log,
+            mileage_adjust_audit_csv=out_adj_csv,
         )
 
     finally:

@@ -1,0 +1,28 @@
+version: 1
+
+# Mileage adjustments are explicit, FY-scoped overlays.
+#
+# Why this exists:
+# - The base shareholder mileage logs are reconstructed working papers.
+# - FY2024 had a post-hoc “Dartmouth/Halifax-area Costco trips” adjustment added on top of the initial estimate.
+# - We want that adjustment to be deterministic, documented, and FY-scoped (do NOT leak into FY2025+).
+#
+# IMPORTANT:
+# - These adjustments are working-paper support and should NOT be pasted into “Notes to FS”.
+# - Keep the rationale/evidence in repo docs/outputs; the financial statement notes should remain high-level.
+#
+# Structure:
+#   adjustments:
+#     FY2024:
+#       thomas_additional_mileage_claim_cents: 51527   # adds $515.27 to Thomas FY2024 mileage claim
+#       note: "..."
+#
+adjustments:
+  FY2024:
+    thomas_additional_mileage_claim_cents: 51527
+    note: "Post-hoc Dartmouth/Halifax-area mileage add-on (kept for FY2024; FY2024 reimbursement already settled)."
+
+  FY2025:
+    thomas_additional_mileage_claim_cents: 0
+    note: "No Dartmouth/Halifax add-on for FY2025."
+

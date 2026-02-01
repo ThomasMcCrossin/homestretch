@@ -8,7 +8,7 @@ FY2024,1300,Prepaid Expenses,asset,1484,,649.16,0.00,64916
 FY2024,2000,Accounts Payable,liability,2620,,0.00,3198.24,-319824
 FY2024,2200,HST Payable,liability,2680,,0.00,9060.18,-906018
 FY2024,2210,HST ITC Receivable,liability,2680,,2303.35,0.00,230335
-FY2024,2400,Due to Shareholder - Thomas,liability,2781,,0.00,2669.99,-266999
+FY2024,2400,Due to Shareholder - Thomas,liability,2781,,0.00,2730.95,-273095
 FY2024,2410,Due to Shareholder - Dwayne,liability,2781,,0.00,908.16,-90816
 FY2024,2700,Payroll Liabilities - CPP,liability,2620,,255.61,0.00,25561
 FY2024,2710,Payroll Liabilities - EI,liability,2620,,9.25,0.00,925
@@ -67,5 +67,5 @@ FY2024,8100,Interest Expense - Bank,expense,8710,8710,0.67,0.00,67
 FY2024,9000,Deposits - Bottle/Container,expense,8518,8518,524.38,0.00,52438
 FY2024,9100,Pending Receipt - No ITC,expense,9270,,0.09,0.00,9
 FY2024,9150,Penalties - CRA,expense,9270,,71.35,0.00,7135
-FY2024,9200,Fuel Pending Mileage Conversion - No ITC,expense,9281,,7.58,0.00,758
+FY2024,9200,Fuel Pending Mileage Conversion - No ITC,expense,9281,,68.54,0.00,6854
 FY2024,9270,Motor Vehicle Expense - Mileage Reimbursement,expense,9281,,4385.89,0.00,438589

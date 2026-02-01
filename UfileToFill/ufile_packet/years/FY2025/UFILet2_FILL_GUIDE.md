@@ -194,13 +194,13 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 |---|---|---|---|
 | 1001 | Cash | 12,472 |  |
 | 1121 | Inventory of goods for sale | 10,015 | Physical count 2025-05-16 |
-| 1301 | Due from individual shareholder(s) | 2,000 | Shareholder loan receivable (Thomas). Review s.15(2) repayment/exception within 1 year after 2025-05-31. |
+| 1301 | Due from individual shareholder(s) | 2,041 | Shareholder loan receivable (Thomas). Review s.15(2) repayment/exception within 1 year after 2025-05-31. |
 | 1484 | Prepaid expenses | 1,490 |  |
 | 1740 | Machinery, equipment, furniture and fixtures | 3,518 |  |
 | 1741 | Accum amort - machinery/equip/furn/fixtures | -1,805 |  |
 | 2620 | Amounts payable and accrued liabilities | 7,405 |  |
 | 2680 | Taxes payable (GST/HST, etc.) | 2,653 |  |
-| 2781 | Due to individual shareholder(s) | 5,497 | Tie-out: 2400 $3,490.67 (Thomas) + 2410 $1,606.68 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead. |
+| 2781 | Due to individual shareholder(s) | 5,072 | Tie-out: 2400 $3,490.67 (Thomas) + 2410 $1,606.68 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead. |
 | 3500 | Common shares | 100 |  |
 
 ### Fixed assets (book)
@@ -216,11 +216,11 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 ### Retained earnings (whole dollars)
 | GIFI | Description | Amount | Entry rule |
 |---|---|---|---|
-| 3660 | Retained earnings/deficit - Start | 18,456 | Enter (opening RE) |
-| 3680 | Net income/loss | 30,479 | Enter (net income/loss) |
+| 3660 | Retained earnings/deficit - Start | 18,395 | Enter (opening RE) |
+| 3680 | Net income/loss | 31,007 | Enter (net income/loss) |
 | 3700 | Dividends declared | 36,900 | Enter (dividends declared) |
-| 3740 |  | 0 | Enter only if needed (rounding/other) |
-| 3849 | Retained earnings/deficit - End | 12,035 | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
+| 3740 | Other items affecting retained earnings (rounding) | -1 | Enter only if needed (rounding/other) |
+| 3849 | Retained earnings/deficit - End | 12,501 | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
 
 ### Shareholder loans / balances support (working papers)
 CRA frequently asks for support for any due-from-shareholder / due-to-shareholder amounts. Keep the continuity below with your filing package.
@@ -231,7 +231,7 @@ Evidence / working papers:
 - `output/trial_balance_FY2025.csv` (year-end balances by GL account)
 - `output/manual_adjustment_journal_detail.csv` (any year-end shareholder payable adjustments)
 
-Year-end summary (from Schedule 100): Due from shareholder (GIFI 1301) = 2,000; Due to shareholder (GIFI 2781) = 5,497.
+Year-end summary (from Schedule 100): Due from shareholder (GIFI 1301) = 2,041; Due to shareholder (GIFI 2781) = 5,072.
 
 #### Loan events in this fiscal year (from `output/due_from_shareholder_breakdown.csv`)
 | Date | Shareholder | Type | Net | Journal entry id | Description |
@@ -250,18 +250,32 @@ Note: a loan can be fully repaid within the year (netting to $0 at year-end) and
 #### Year-end shareholder-related balances (from trial balance)
 | Account | Name | Debit | Credit | Net (approx) |
 |---|---|---|---|---|
-| 2400 | Due to Shareholder - Thomas | 0.00 | 3890.67 | 3,891 CR |
+| 2400 | Due to Shareholder - Thomas | 0.00 | 3464.86 | 3,465 CR |
 | 2410 | Due to Shareholder - Dwayne | 0.00 | 1606.68 | 1,607 CR |
-| 2500 | Due from Shareholder | 2000.00 | 0.00 | 2,000 DR |
+| 2500 | Due from Shareholder | 2041.36 | 0.00 | 2,041 DR |
+
+#### Shareholder mileage reimbursement (working papers)
+Keep this as working-paper support. Do **not** paste mileage details into Notes to the financial statements.
+
+Evidence / working papers:
+- `output/shareholder_mileage_fuel_summary.md` (human summary)
+- `output/shareholder_mileage_fuel_payables_FY2025.csv` (FY totals: mileage, fuel, net)
+- `output/fuel_9200_wave_bills.csv` (fuel detail by bill)
+- `output/mileage_adjustment_summary.md` (documents FY-scoped overlays, if any)
+
+| Shareholder | Mileage | Fuel offset | Net | Direction |
+|---|---|---|---|---|
+| Thomas | $2,901.63 | $2,942.99 | $41.36 | due from Thomas |
+| Dwayne | $608.52 | $0.00 | $608.52 | due to Dwayne |
 
 UFile entry tip: do not enter both `2780` and `2781` for the same payable; that double-counts and can break Schedule 100 totals.
 
 ### Tie-check (display-only totals)
 | GIFI | Description | Amount |
 |---|---|---|
-| 1599 | Total current assets (expected) | 27,690 |
-| 2599 | Total assets | 27,690 |
-| 3640 | Total liabilities and shareholder equity | 27,690 |
+| 1599 | Total current assets (expected) | 27,731 |
+| 2599 | Total assets | 27,731 |
+| 3640 | Total liabilities and shareholder equity | 27,731 |
 
 ## Income statement (GIFI Schedule 125)
 | GIFI | Description | Amount | Note |
@@ -287,7 +301,7 @@ UFile entry tip: do not enter both `2780` and `2781` for the same payable; that 
 | 9225 | Telephone and telecommunications | 465 | Internet |
 | 9270 | Other expenses | 293 | Includes CRA penalties $274 (non-deductible) |
 | 9275 | Delivery, freight and express | 96 |  |
-| 9281 | Vehicle expenses | 4,038 |  |
+| 9281 | Vehicle expenses | 3,510 |  |
 
 ### Cost of sales tie-check (display-only)
 | GIFI | Description | Amount |
@@ -325,16 +339,16 @@ These financial statements have been prepared on the accrual basis of accounting
 Revenue is recognized at the time goods are sold and services are rendered. Amounts are presented net of refunds and discounts.
 
 4. Inventory
-Inventory consists of food and beverage inventory held for resale and is valued at the lower of cost and net realizable value. Cost is determined using a method consistent with prior periods.
+Inventory consists of food and beverage inventory held for resale and is valued at the lower of cost and net realizable value. For FY2024, a formal physical inventory count process was implemented in the subsequent fiscal year; accordingly, the inventory balance at May 31, 2024 was estimated by management using an itemized schedule at cost.
 
 5. Property and equipment
-Property and equipment are recorded at cost. Amortization is provided on a basis intended to approximate the decline in service potential of the related assets. For internal consistency, this file mirrors book amortization to the tax CCA claim where applicable.
+Property and equipment are recorded at cost. Amortization is provided on a basis intended to approximate the decline in service potential of the related assets.
 
 6. Income taxes and government remittances
 The corporation is a Canadian-controlled private corporation. Income tax expense comprises current tax. Taxes payable on the balance sheet may include GST/HST and other government remittances.
 
 7. Related party transactions and balances
-The corporation is controlled by its shareholders. Amounts due to/from shareholders relate to shareholder-paid expenses, reimbursements, and temporary advances. These balances are non-interest-bearing and due on demand unless otherwise agreed.
+The corporation is controlled by its shareholders. Amounts due to/from shareholders relate primarily to shareholder-paid business expenses and reimbursements and other amounts payable to shareholders. These balances are non-interest-bearing and due on demand unless otherwise agreed.
 
 8. Subsequent events
 There have been no subsequent events requiring adjustment to these financial statements.
@@ -343,7 +357,7 @@ There have been no subsequent events requiring adjustment to these financial sta
 ## Net income (UFile screen)
 | Field | Value | Note |
 |---|---|---|
-| Net income as per financial statements | 30,479 | Should auto-fill from GIFI; otherwise enter from Schedule 1 code A. |
+| Net income as per financial statements | 31,007 | Should auto-fill from GIFI; otherwise enter from Schedule 1 code A. |
 | Total sales of corporation during this taxation year | 230,907 | Use total revenue (sum of revenue lines; typically matches trade sales 8000). |
 | Total gross revenues | 230,907 | Usually same as total sales for your file. |
 
@@ -353,8 +367,8 @@ If UFile auto-populates these from GIFI, do not add manual “additions/deductio
 | Field | Value | Note |
 |---|---|---|
 | Eligible for capital tax exemption? | Yes | For your file, expect capital tax exemption; confirm if UFile still requests fields. |
-| Total assets at year-end date from financial statements | 27,690 | If required, use Schedule 100 total assets (GIFI 2599). |
-| Retained earnings/deficit at year-end (if required) | 12,035 | If UFile forces a retained earnings element, use Schedule 100 GIFI 3600. |
+| Total assets at year-end date from financial statements | 27,731 | If required, use Schedule 100 total assets (GIFI 2599). |
+| Retained earnings/deficit at year-end (if required) | 12,501 | If UFile forces a retained earnings element, use Schedule 100 GIFI 3600. |
 
 ## Status change for the corporation (UFile screen)
 No status change; leave blank.
@@ -378,7 +392,7 @@ Expected source for this file: **active business income only** (canteen operatio
 ### Schedule 1 (tax purposes)
 | Code | Description | Amount | Calculation |
 |---|---|---|---|
-| A | Net income (loss) per financial statements | 30,479 |  |
+| A | Net income (loss) per financial statements | 31,007 |  |
 | 104 | Accounting amortization | 1,297 |  |
 | 121 | Non-deductible meals and entertainment (50%) | 204 |  |
 | 128 | Non-deductible fines and penalties | 274 |  |
@@ -386,7 +400,7 @@ Expected source for this file: **active business income only** (canteen operatio
 | 403 | Capital cost allowance (Schedule 8) | 1,297 |  |
 | 500 | Total additions | 1,775 |  |
 | 510 | Total deductions | 1,297 |  |
-| C | Net income (loss) for tax purposes | 30,957 |  |
+| C | Net income (loss) for tax purposes | 31,485 |  |
 Note: If UFile auto-populates Schedule 1 line 403 from Schedule 8, do **not** manually enter 403 in the Schedule 1 grid.
 CCA is entered on the **Capital cost allowance** screen from Schedule 8 (total CCA claimed: 1,297).
 
@@ -482,7 +496,7 @@ No capital dividend account activity.
 | Field | Value | Note |
 |---|---|---|
 | 1st prior year end date | 2024-05-31 | UFile field: End date of prior tax year |
-| 1st prior year taxable income | 18,786 | UFile field: Taxable income (Schedule 1 code C of the prior year) |
+| 1st prior year taxable income | 18,725 | UFile field: Taxable income (Schedule 1 code C of the prior year) |
 | Eligible RDTOH at prior year-end | 0 | Usually $0 for your file unless you have refundable dividend tax on hand |
 | Non-eligible RDTOH at prior year-end | 0 |  |
 | Eligible dividend refund (prior year) | 0 |  |

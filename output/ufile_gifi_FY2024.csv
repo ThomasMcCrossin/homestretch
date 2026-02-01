@@ -5,13 +5,13 @@ GIFI_Code,Description,Amount
 1740,"Machinery, equipment, furniture and fixtures",2298
 1741,Accum amort - machinery/equip/furn/fixtures,-508
 2599,Total assets,31578
-2781,Due to individual shareholder(s),3578
+2781,Due to individual shareholder(s),3639
 2680,Taxes payable,6757
 2620,Amounts payable and accrued liabilities,2687
-3499,Total liabilities,13022
+3499,Total liabilities,13083
 3500,Common shares,100
-3600,Retained earnings / deficit,18456
-3620,Total shareholder equity,18556
+3600,Retained earnings / deficit,18395
+3620,Total shareholder equity,18495
 3640,Total liabilities and shareholder equity,31578
 8000,Trade sales of goods and services,181235
 8299,Total revenue,181235
@@ -33,10 +33,10 @@ GIFI_Code,Description,Amount
 9131,Small tools,23
 9270,Other expenses,71
 9275,"Delivery, freight and express",100
-9281,Vehicle expenses,4393
-9367,Total operating expenses,54406
-9368,Total expenses,162779
-9999,Net income / loss after taxes/extraord item,18456
+9281,Vehicle expenses,4454
+9367,Total operating expenses,54467
+9368,Total expenses,162840
+9999,Net income / loss after taxes/extraord item,18395
 3660,Retained earnings / deficit - start,0
-3680,Net income / loss,18456
-3849,Retained earnings / deficit - end,18456
+3680,Net income / loss,18395
+3849,Retained earnings / deficit - end,18395

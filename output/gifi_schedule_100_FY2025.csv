@@ -1,16 +1,16 @@
 GIFI_Code,Description,Amount
 1001,Cash,12472
 1121,Inventory of goods for sale,10015
-1301,Due from individual shareholder(s),2000
+1301,Due from individual shareholder(s),2041
 1484,Prepaid expenses,1490
 1740,"Machinery, equipment, furniture and fixtures",3518
 1741,Accum amort - machinery/equip/furn/fixtures,-1805
-2599,Total assets,27690
-2781,Due to individual shareholder(s),5497
+2599,Total assets,27731
+2781,Due to individual shareholder(s),5072
 2680,Taxes payable,2653
 2620,Amounts payable and accrued liabilities,7405
-3499,Total liabilities,15555
+3499,Total liabilities,15130
 3500,Common shares,100
-3600,Retained earnings / deficit,12035
-3620,Total shareholder equity,12135
-3640,Total liabilities and shareholder equity,27690
+3600,Retained earnings / deficit,12501
+3620,Total shareholder equity,12601
+3640,Total liabilities and shareholder equity,27731

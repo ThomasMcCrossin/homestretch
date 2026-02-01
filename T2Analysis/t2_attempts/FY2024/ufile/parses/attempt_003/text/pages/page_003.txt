@@ -1,0 +1,48 @@
+Notes and diagnostics (continued)
+FEDERAL CORPORATION INTERNET FILING
+Corporations can sign up for "Email notifications" when filing their T2 return through the Internet.
+The ability to register for "Email notifications" is only applicable for initial assessments (IAS). The
+service cannot be updated when a corporation is submitting a reassessment.
+My Business Account should be specified to register for the Canada Revenue Agency's email notification
+service.
+If you register, the Canada Revenue Agency will send you an email when changes to the account have been
+made, or when eligible notices, letters, or statements are available for viewing in My Business Account
+(separate registration is required). The Canada Revenue Agency will not send these eligible notices, letters,
+or statements to you through Canada Post.
+https://www.canada.ca/en/revenue-agency/services/e-services/e-services-businesses/business-account/help-terms-email.html
+Corporations that provide their email address must register fully and sign into the My Business Account
+portal to view their output and manage their email notifications. Correspondence will not be delivered
+electronically until you are registered.
+The terms of use for email notifications:
+The Canada Revenue Agency (CRA) will send email notifications to the email address you have provided in
+order to notify you of any CRA mail available in My Business Account, and to notify you of certain changes
+to the account information, and other important information about the account. The notifications that are
+eligible for this service may change. As new types of notifications are added or removed from this service,
+you may not be notified of each change. To view CRA mail online, you must be registered for My Business
+Account, or if you are a representative then you must be registered for Represent a Client and be authorized
+on this account. All CRA mail available in My Business Account will be presumed to have been received
+on the date that the email notification is sent. Any mail that is eligible for electronic delivery will no
+longer be printed and mailed.
+It is your responsibility to ensure that the email address provided to the CRA is accurate, and to update
+it when there is any change to that email address. CRA email notifications are subject to the terms of any
+agreement with your mobile carrier or Internet Service Provider. You are responsible for any fees imposed
+by them.
+These email notifications are sent unencrypted and unsecured. The email notifications could be lost or
+intercepted, or could be viewed or altered by others who have access to your email account. You accept
+this risk and acknowledge that the CRA will not be liable if you are unable to access or receive the
+email notifications, nor for any delay or inability to deliver notifications.
+These terms of use may be changed from time to time. The CRA will provide notice in advance of the effective
+date of the new terms. You agree that the CRA may notify you of these changes by emailing the new terms or
+notice of where the new terms can be found, to the email address that you provided. You agree that your
+use of the service after the effective date of any change to these terms constitutes your agreement to the
+new terms.
+Email notifications – Privacy notice:
+Personal information is collected under the authority of subsection 220(1) of the Income Tax Act and sub-
+section 275(1) of the Excise Tax Act and is used for the purpose of sending notices electronically. Information
+is described in personal information banks CRA PPU 047 Business Returns and Payment Processing and
+CRA PPU 005 Individual Returns and Payment Processing in the Canada Revenue Agency (CRA) chapter of
+Info Source. Personal information is protected under the Privacy Act and individuals have a right to access,
+correct, or notate their personal information and to have their personal information protected. More details about
+requests for personal information at the CRA and the CRA's Info Source chapter can be found at
+Access to information and privacy at the Canada Revenue Agency.
+Diagnostics page 2 of 4
