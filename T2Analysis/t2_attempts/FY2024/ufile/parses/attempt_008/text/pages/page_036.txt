@@ -1,0 +1,50 @@
+02
+Feb
+2026
+14587430
+Canada
+Inc.
+Yr.end:
+31-05-2024
+Acct.#748003142RC0001
+Part 2 – CCA calculation (continued)
+Note 8: Include all amounts you have repaid during the year for any legally required repayment, made after the disposition of a corresponding property, of:
+assistance that would have otherwise increased the capital cost of the property under paragraph 13(7.1)(d) and
+an inducement, assistance, or any other amount contemplated in paragraph 12(1)(x) received, that otherwise would have increased the capital cost of the property under paragraph 13(7.4)(b)
+Include the UCC of each property of a prescribed class acquired in the course of a corporate reorganization described under paragraph 55(3)(b) (also known as "butterfly reorganization") or
+include property acquired in a non-arm's length transaction [other than by virtue of a right referred to in paragraph 251(5)(b)] if the property was a depreciable property acquired by the transferor
+less than 364 days before the end of your tax year and continuously owned by the transferor until it was acquired by you.
+Note 9: For each property disposed of during the year, deduct from the proceeds of disposition any outlays and expenses to the extent that they were made or incurred for the purpose of making the
+disposition(s). The amount reported in respect of the property cannot exceed the property's capital cost, unless that property is a timber resource property as defined in subsection 13(21).
+If the cost of a zero-emission passenger vehicle (or a passenger vehicle that was, at any time, a DIEP) exceeds the prescribed amount and it is disposed of to a person or partnership with
+which you deal at arm's length, the proceeds of disposition will be adjusted based on a factor equal to the prescribed amount as a proportion of the actual cost of the vehicle. The actual cost
+of the vehicle will be adjusted for payment or repayment of government assistance.
+Note 10:If the amount in column 5 (as shown in brackets) reduces the undepreciated capital cost, you must subtract it for the purposes of the calculation. Otherwise, add the amount in column 5 for the
+purposes of the calculation.
+Note 11:The amount to enter in column 11 must not exceed the amount in column 10. If it does, enter in column 11 the amount from column 10. If the amount determined in column 10 is zero or a
+negative amount, enter "0". The only amounts incurred before April 19, 2021, to be included in this column are certain inventory purchases from arm's length persons or partnerships
+where the conditions in paragraphs 1100(0.3)(a) to (c) of the Regulations are met.
+Note 12:Immediate expensing applies to a DIEP included in column 11. The total immediate expensing for the tax year (total of column 12) should not exceed the lesser of:
+Immediate expensing limit: it is equal to one of the following five amounts, whichever is applicable:
+$1.5 million, if you are not associated with any other EPOP in the tax year
+amount from line 125, if you are associated in the tax year with one or more EPOPs
+nil, if the total of the percentages assigned in Part 1 is more than 100% or you are associated in the tax year with one or more EPOPs and have not filed an agreement in prescribed form as
+required under subsection 1104(3.3) of the Regulations
+the amount determined under subsection 1104(3.5) of the Regulations for any second or subsequent tax years ending in a calendar year, if you have two or more tax years ending in the
+calendar year in which you are associated with another EPOP that has a tax year ending in that calendar year
+any amount allocated by the minister under subsection 1104(3.4) of the Regulations
+The immediate expensing limit has to be prorated if your tax year is less than 365 days. You cannot carry forward any unused amount of the immediate expensing limit.
+UCC of the DIEP: total of column 11
+You have to maintain the CCPC status throughout the relevant tax year in order to claim the immediate expensing.
+Note 13:An AIIP is a property (other than property included in Classes 54 to 56) that you acquired after November 20, 2018, and that became available for use before 2028.
+Classes 54 and 55 include zero-emission vehicles that you acquired after March 18, 2019, and that became available for use before 2028.
+Class 56 applies to eligible zero-emission automotive equipment and vehicles (other than motor vehicles) that are acquired after March 1, 2020, and that became available for use before 2028.
+See Guide T4012 for more information.
+Note 14:The relevant factors for property of a class in Schedule II, that is an AIIP or included in Classes 54 to 56, available for use respectively before 2024 or in 2024 are:
+2 1/3 or 1 1/2 for property in Classes 43.1, 54, and 56
+1 1/2 or 7/8 for property in Class 55
+1 or 1/2 for property in Classes 43.2 and 53
+0 for property in Classes 12, 13, 14, 15, and 59, as well as properties that are Canadian vessels included in paragraph 1100(1)(v) of the Regulations (see note 19 for additional information) and
+0.5 or 0 for all other property that is an AIIP
+If the tax year begins in 2023 and ends in 2024, the relevant factor is determined under paragraph 1100(2.01)(a) of the Regulations.
+T2 SCH 8 E (24) VVVVeeeerrrrssssiiiioooonnnn 22228888....00001111 UUUUFFFF22225555 Page 4 of 5

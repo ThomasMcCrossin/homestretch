@@ -1,0 +1,109 @@
+Messages
+Please review this information carefully
+
+Click the Interview tab on the toolbar to make any changes to your data. Click the Tax return tab to preview or print your complete, detailed tax return. If you are filing electronically, click the EFILE tab.
+
+ GIFI Errors
+Errors have been detected with respect to the GIFI data entered. These errors must be rectified in order to paper-file the federal bar code return (BCR) or efile the federal or Quebec return.
+
+
+
+GIFI 100 does not balance (GIFI field 2599 does not equal GIFI fields 3499+3620).
+
+Click here to fix.
+ 
+ 
+ 
+ 
+ Errors that prevent filing
+A tax return was generated. However, the errors below prevent the transmission of your declaration.
+
+ 
+
+
+BAR CODE RETURN (BCR) VALIDITY CHECKS FAILED
+No bar codes were generated
+
+These tax calculations failed the validity check for bar codes. Therefore, no bar codes were generated and you will not be able to file this return with the CRA.
+BCR validity checks relate mainly to incomplete or inconsistent data entry. Review the error and warning messages, then make the required changes and recalculate.
+The CRA imposes certain validity checks on approved software to ensure that it can process BCR's accurately and quickly. Tax returns containing BCR's that fail these checks are re-routed by the CRA to a manual assessment process which results in potential delays of several months and increased communication between the CRA and the taxpayer.
+ 
+ You cannot currently EFILE your federal return. Please review the following reasons, and make corrections when possible.
+
+ 
+
+
+The federal BCR is not being generated.
+
+ 
+ 
+ 
+ 
+ Warnings
+Please review the notes and warning messages below.
+
+
+
+If gross proceeds not entered then UFile will use zero for proceeds.
+
+Click here to review your data.
+ 
+
+
+Missing date of disposition for the disposal - UFile will use the fiscal year-end.
+
+Click here to review your data.
+ 
+
+
+If gross proceeds not entered then UFile will use zero for proceeds.
+
+Click here to review your data.
+ 
+
+
+Missing date of disposition for the disposal - UFile will use the fiscal year-end.
+
+Click here to review your data.
+ 
+
+
+If gross proceeds not entered then UFile will use zero for proceeds.
+
+Click here to review your data.
+ 
+
+
+Missing date of disposition for the disposal - UFile will use the fiscal year-end.
+
+Click here to review your data.
+ 
+
+
+There is no entry in the income source section; all income is considered as active business income.
+
+ 
+
+
+No instalments required since total tax instalments calculated are less than or equal to $3,000.
+
+ 
+
+
+GIFI sch. 100 - total assets does not equal total liabilities plus shareholder equity.
+
+ 
+
+
+GIFI-Field 2599:$33860 (GIFI-Field 3499 + GIFI-Field 3620): $31578 Difference:$2282
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+This tax return was calculated at
+2026-02-02 5:12:42 PM (2024:28.15 - )

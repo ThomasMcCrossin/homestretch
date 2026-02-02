@@ -1,0 +1,39 @@
+02 Feb 2026 14587430 Canada Inc. Yr.end: 31-05-2024 Acct.#748003142RC0001
+Protected Bwhen completed
+Deduct:
+Accounts payable and accruals for cash basis – opening . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 300
+Accounts receivable and prepaid for cash basis – closing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 301
+Accrual inventory – closing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 302
+Accrued dividends – current year . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 303
+Bad debt . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 304
+Equity in income from subsidiaries or affiliates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 306
+Exempt income under section 81 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 307
+Mandatory inventory adjustment – included in prior year . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 309
+Contributions to a qualifying environmental trust . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 310
+Non-Canadian advertising expenses – broadcasting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 311
+Non-Canadian advertising expenses – printed materials . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 312
+Optional value of inventory – included in prior year . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 313
+Other income from financial statements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 314
+Payments made for allocations in proportion to borrowing and bonus interest payments from Schedule 17 . . . . . . . . . . . . 315
+Contractors' completion method adjustment: revenue net of costs on contracts under two years – current year . . . . . . . . . 316
+Non-taxable/deductible other comprehensive income items . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 347
+Book income of joint venture . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 348
+Book income of partnership . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 349
+Adjustment for hybrid mismatch amount under paragraph 20(1)(yy) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 350
+Resource deductions:
+Canadian development expenses from Schedule 12 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 340
+Canadian exploration expenses from Schedule 12 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 341
+Canadian oil and gas property expenses from Schedule 12 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 342
+Depletion from Schedule 12 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 344
+Foreign exploration and development expenses from Schedule 12 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 345
+Other deductions:
+Description Amount
+705 395
+1.
+2.
+3.
+4.
+If you need more space, attach additional schedules. Total of column 2 396
+Total of lines 300 to 350 and line 396 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . E
+Enter amount E at line 499 on page 2.
+T2 SCH 1 E (24) VVVVeeeerrrrssssiiiioooonnnn 22228888....00001111 UUUUFFFF22225555 Page 4 of 4

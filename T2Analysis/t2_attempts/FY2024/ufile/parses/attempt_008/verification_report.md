@@ -1,0 +1,18 @@
+# Parse verification report
+
+## Meta
+```json
+{
+  "parser": "T2Analysis/tools/ufile_pdf_parser/parse_ufile_pdf.py",
+  "parser_version": "1",
+  "source_pdf": "/home/clarencehub/t2-final-fy2024-fy2025/taxattempts/FY2024/1/2024 - 14587430 Canada Inc. - My copy - Tax return (8).pdf",
+  "source_sha256": "394f649a454a330a1ce153394f5edc79beee89fed1714f13cedf137471441887"
+}
+```
+
+## Summary
+- Rows checked: 50
+- OK: 50
+- Not OK: 0
+
+All parsed codes were found on their recorded pages’ extracted text.

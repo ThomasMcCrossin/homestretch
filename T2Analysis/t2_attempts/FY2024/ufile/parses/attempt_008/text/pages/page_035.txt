@@ -1,0 +1,52 @@
+02
+Feb
+2026
+14587430
+Canada
+Inc.
+Yr.end:
+31-05-2024
+Acct.#748003142RC0001
+Protected B when completed
+Part 2 – CCA calculation (continued)
+17 18 19 20 21 22 23 24
+Net capital cost UCC adjustment for UCC adjustment for property acquired CCA rate % Recapture of CCA Terminal loss CCA UCC at the end of the
+additions of AIIP and AIIP and property during the year other than AIIP and (for declining balance method, year (column 10 minus
+property included in included in Classes property included in Classes 54 to 56 Note 16 Note 17 Note 18 the result of column 15 plus column 23)
+Classes 54 to 56 54 to 56 acquired (0.5 multiplied by the result of column 18 minus column 19,
+acquired during the during the year column 13 minus column 14 minus multiplied by column 20, or a
+year (column 14 (column 17 column 6 plus column 7 minus lower amount, plus column 12)
+minus column 16) multiplied by the column 8)
+(if negative, enter "0") relevant factor) (if negative, enter "0") Note 19
+Note 14 Note 15
+224 212 213 215 217 220
+1. 1,100 20 220 880
+2. 550 20 110 440
+3. 648 324 55 535 113
+4.
+5.
+6.
+7.
+8.
+Totals 865
+Enter the total of column 21 on line 107 of Form T2 SCH 1, Net Income (Loss) for Income Tax Purposes.
+Enter the total of column 22 on line 404 of Form T2 SCH 1.
+Enter the total of column 23 on line 403 of Form T2 SCH 1.
+Note 3: If a class number has not been provided in Schedule II of the Income Tax Regulations for a particular class of property, use the subsection provided in Regulation 1101.
+Note 4: Include any property acquired in previous years that has now become available for use, net of any government assistance received or entitled to be received in the year from a government,
+municipality or other public authority, or a reduction of capital cost after the application of section 80. This property would have been previously excluded from column 3. List separately any
+acquisitions of property in the class that are not subject to the 50% rule. See Income Tax Folio S3-F4-C1, General Discussion of Capital Cost Allowance, for exceptions to the 50% rule. Do not
+include any amount in column 3 in respect of property included in column 5 (see note 6). See Guide T4012 for more information about the cost of acquisitions during the year.
+Note 5: A DIEP reported in column 4 is a property acquired after April 18, 2021, by a corporation that was a Canadian-controlled private corporation (CCPC) throughout the year, which became available
+for use in the tax year (before 2024) and was designated as such on or before the day that is 12 months after the filing-due date for the tax year to which the designation relates. It includes all
+capital property subject to the CCA rules, if certain conditions are met, other than property included in Classes 1 to 6, 14.1, 17, 47, 49, and 51. A property can only qualify as DIEP in the year in
+which it becomes available for use. See subsection 1104(3.1) of the Regulations for more information.
+Note 6: Enter in column 5, "Adjustments and transfers," amounts that increase or reduce the UCC (column 10). Items that increase the UCC include amounts transferred under section 85, or transferred
+on amalgamation or winding-up of a subsidiary. Items that reduce the UCC (show amounts that reduce the UCC in brackets) include assistance received or receivable during the year for a
+property, subsequent to its disposition, if such assistance would have decreased the capital cost of the property by virtue of paragraph 13(7.1)(f). See Guide T4012 for other examples of
+adjustments and transfers to include in column 5.
+Also include property acquired in a non-arm's length transaction [other than by virtue of a right referred to in paragraph 251(5)(b)] if the property was a depreciable property acquired by the
+transferor at least 364 days before the end of your tax year and continuously owned by the transferor until it was acquired by you.
+Note 7: Include all amounts of assistance you received (or were entitled to receive) after the disposition of a depreciable property that would have decreased the capital cost of the property by virtue of
+paragraph 13(7.1)(f) if received before the disposition.
+T2 SCH 8 E (24) VVVeeerrrsssiiiooonnn 222888...000111 UUUFFF222555 Page 3 of 5

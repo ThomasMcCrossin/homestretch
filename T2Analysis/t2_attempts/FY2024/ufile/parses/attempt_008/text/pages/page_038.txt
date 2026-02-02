@@ -1,0 +1,53 @@
+02 Feb 2026 14587430 Canada Inc. Yr.end: 31-05-2024 Acct.#748003142RC0001
+Canada Revenue Agence du revenu
+Agency du Canada Schedule 33
+Code 1402
+Taxable Capital Employed in Canada – Large Corporations
+Protected B
+(2014 and later tax years)
+when completed
+Corporation's name Business number Tax year-end
+Year Month Day
+14587430 Canada Inc. 748003142RC0001 2024-05-31
+Use this schedule in determining if the total taxable capital employed in Canada of the corporation (other than a financial institution or an insurance
+corporation) and its related corporations is greater than $10,000,000.
+If the total taxable capital employed in Canada of the corporation and its related corporations is greater than $10,000,000, file a completed Schedule 33
+with your T2 Corporation Income Tax Return no later than six months from the end of the tax year.
+Unless otherwise noted, all legislative references are to the Income Tax Act and the Income Tax Regulations.
+Subsection 181(1) defines the terms financial institution, long-term debt, and reserves.
+Subsection 181(3) provides the basis to determine the carrying value of a corporation's assets or any other amount under Part I.3 for its capital, investment
+allowance, taxable capital, or taxable capital employed in Canada, or for a partnership in which it has an interest.
+If the corporation was a non-resident of Canada throughout the year and carried on a business through a permanent establishment in Canada, go to Part 4,
+Taxable capital employed in Canada.
+Part 1 – Capital
+Add the following year-end amounts:
+Reserves that have not been deducted in calculating income for the year under Part I . . . . . . . . 101
+Capital stock (or members' contributions if incorporated without share capital) . . . . . . . . . . . . . . 103 100
+Retained earnings . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 104 18,456
+Contributed surplus . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 105
+Any other surpluses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 106
+Deferred unrealized foreign exchange gains . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 107
+All loans and advances to the corporation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 108
+All indebtedness of the corporation represented by bonds, debentures, notes, mortgages,
+hypothecary claims, bankers' acceptances, or similar obligations . . . . . . . . . . . . . . . . . . . . . . . . . 109
+Any dividends declared but not paid by the corporation before the end of the year . . . . . . . . . . . 110
+All other indebtedness of the corporation (other than any indebtedness for a lease) that has
+been outstanding for more than 365 days before the end of the year . . . . . . . . . . . . . . . . . . . . . . 111
+The total of all amounts, each of which is the amount, if any, in respect of a partnership in which
+the corporation held a membership interest at the end of the year, either directly or indirectly
+through another partnership (see note below) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 112
+Subtotal (add lines 101 to 112) 18,556 18,556 A
+Note:
+Line 112 is determined by the formula (A – B) x C/D (as per paragraph 181.2(3)(g)) where:
+A is the total of all amounts that would be determined for lines 101, 107, 108, 109, and 111 in respect of the partnership for its last fiscal period that
+ends at or before the end of the year if
+(a) those lines applied to partnerships in the same manner that they apply to corporations, and
+(b) those amounts were computed without reference to amounts owing by the partnership
+(i) to any corporation that held a membership interest in the partnership either directly or indirectly through another partnership, or
+(ii)to any partnership in which a corporation described in subparagraph (i) held a membership interest either directly or indirectly through
+another partnership.
+B is the partnership's deferred unrealized foreign exchange losses at the end of the period,
+C is the share of the partnership's income or loss for the period to which the corporation is entitled either directly or indirectly through another
+partnership, and
+D is the partnership's income or loss for the period.
+T2 SCH33 E (15) Version 28.01 UF25 Page 1 of 3

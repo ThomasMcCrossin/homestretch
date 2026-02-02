@@ -1,0 +1,42 @@
+02 Feb 2026 14587430 Canada Inc. Yr.end: 31-05-2024 Acct.#748003142RC0001
+Protected Bwhen completed
+Part 1 – Capital (continued)
+Subtotal A (from page 1) 18,556 A
+Deduct the following amounts:
+Deferred tax debit balance at the end of the year . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 121
+Any deficit deducted in calculating its shareholders' equity (including, for this purpose, the
+amount of any provision for the redemption of preferred shares) at the end of the year . . . . . . . . 122
+To the extent that the amount may reasonably be regarded as being included in any of lines
+101 to 112 above for the year, any amount deducted under subsection 135(1) in calculating
+income under Part I for the year. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 123
+Deferred unrealized foreign exchange losses at the end of the year . . . . . . . . . . . . . . . . . . . . . . . 124
+Subtotal (add lines 121 to 124) B
+Capital for the year (amount A minus amount B) (if negative, enter "0") . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 190 18,556
+Part 2 – Investment allowance
+Add the carrying value at the end of the year of the following assets of the corporation:
+A share of another corporation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 401
+A loan or advance to another corporation (other than a financial institution) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 402
+A bond, debenture, note, mortgage, hypothecary claim, or similar obligation of another corporation
+(other than a financial institution) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 403
+Long-term debt of a financial institution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 404
+A dividend payable on a share of the capital stock of another corporation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 405
+A loan or advance to, or a bond, debenture, note, mortgage, hypothecary claim or similar obligation of, a partnership each
+member of which was, throughout the year, another corporation (other than a financial institution) that was not exempt
+from tax under this Part (otherwise than because of paragraph 181.1(3)(d)), or another partnership described in
+paragraph 181.2(4)(d.1). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 406
+An interest in a partnership (see note 2 below) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 407
+Investment allowance for the year (add lines 401 to 407) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 490
+Notes:
+1. Lines 401 to 405 should not include the carrying value of a share of the capital stock of, a dividend payable by, or indebtedness of a corporation that is
+exempt from tax under Part I.3 (other than a non-resident corporation that at no time in the year carried on business in Canada through a permanent
+establishment).
+2. Where the corporation has an interest in a partnership held either directly or indirectly through another partnership, refer to subsection 181.2(5) for
+additional rules regarding the carrying value of an interest in a partnership.
+3. Where a trust is used as a conduit for loaning money from a corporation to another related corporation (other than a financial institution), the loan will be
+considered to have been made directly from the lending corporation to the borrowing corporation. Refer to subsection 181.2(6) for special rules that
+may apply.
+Part 3 – Taxable capital
+Capital for the year (line 190) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18,556 C
+Deduct: Investment allowance for the year (line 490) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . D
+Taxable capital for the year (amount C minus amount D) (if negative, enter "0") . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 500 18,556
+Version 28.01 UF25 Page 2 of 3

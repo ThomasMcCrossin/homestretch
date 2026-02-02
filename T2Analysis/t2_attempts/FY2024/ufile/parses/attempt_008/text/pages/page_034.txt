@@ -1,0 +1,49 @@
+02
+Feb
+2026
+14587430
+Canada
+Inc.
+Yr.end:
+31-05-2024
+Acct.#748003142RC0001
+Protected B when completed
+Part 2 – CCA calculation
+1 2 3 4 5 6 7 8
+Class Undepreciated capital Cost of acquisitions Cost of acquisitions from Adjustments and transfers (show Amount from column 5 Amount from column 5 Proceeds of
+number cost (UCC) at the during the year (new column 3 that are amounts that will reduce the that is assistance that is repaid during the dispositions
+beginning of the year property must be designated immediate undepreciated capital cost in received or receivable year for a property,
+Note 3 available for use) expensing property (DIEP) brackets) during the year for a subsequent to its Note 9
+property, subsequent to disposition
+Note 4 Note 5 Note 6 its disposition
+Note 8
+Note 7
+200 201 203 232 205 221 222 207
+1. 8 1,100
+2. 8 550
+3. 50 648
+4.
+5.
+6.
+7.
+8.
+9 10 11 12 13 14 15 16
+Proceeds of UCC UCC of the DIEP Immediate expensing Cost of acquisitions on Cost of acquisitions from Remaining UCC Proceeds of disposition available
+dispositions of the (column 2 plus (enter the UCC remainder of Class column 13 that are (column 10 minus to reduce the UCC of AIIP and
+DIEP (enter amount column 3 plus or amount that relates to Note 12 (column 3 minus accelerated investment column 12) property included in Classes 54
+from column 8 that minus column 5 the DIEP reported in column 12) incentive properties (AIIP) (if negative, enter "0") to 56 (column 8 plus column 6
+relates to the DIEP minus column 8) column 4) or properties included in minus column 13 plus
+reported in column 4) Classes 54 to 56 column 14 minus column 7)
+Note 10 Note 11 (if negative, enter "0")
+Note 13
+234 236 238 225
+1. 1,100 1,100 1,100 1,100
+2. 550 550 550 550
+3. 648 648 648 648
+4.
+5.
+6.
+7.
+8.
+Totals
+T2 SCH 8 E (24) VVeerrssiioonn 2288..0011 UUFF2255 Page 2 of 5

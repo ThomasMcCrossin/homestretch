@@ -1,0 +1,40 @@
+Notes and diagnostics (continued)
+FEDERAL CORPORATION INTERNET FILING REQUIREMENTS
+File your return electronically. It's secure, convenient and faster than mailing a bar code return –
+95% of corporation returns filed electronically are processed within 6 weeks.
+A corporation cannot use Corporation Internet Filing to send:
+A return for any year prior to the 2009 tax year.
+A corporation cannot use Corporation Internet Filing to change the corporation's:
+Name;
+Head office or mailing addresses;
+Taxation year beginning in 2024 or later
+All corporations who are eligible for Corporation Internet Filing and that are filing a return with a tax year
+beginning in 2024 or subsequent will be required to Internet file their return.
+The only exceptions are:
+Amended returns;
+Insurance corporations;
+Non-resident corporations;
+Corporations reporting in a functional currency;
+Corporations that are exempt from tax under section 149 of the Income Tax Act.
+Taxation year beginning in 2023 or prior
+All corporations who are eligible for Corporation Internet Filing, with gross revenue in excess of $1 million,
+and that are filing a return with a tax year beginning before 2024 will be required to Internet file their return.
+The only exceptions are:
+Amended returns;
+Insurance corporations;
+Non-resident corporations;
+Corporations reporting in a functional currency;
+Corporations that are exempt from tax under section 149 of the Income Tax Act.
+Gross revenue in excess of $1 million will be determined by the total of lines 8299 (Total Revenue) and 9659
+(Total Farm Revenue) of Schedule 125.
+Please also note that any corporation which has undergone a change in:
+Name;
+Head office or mailing addresses;
+and which includes:
+A taxation year beginning in 2024 or later;
+A taxation year beginning in 2023 or prior with gross revenue in excess of $1 million;
+must remove the applicable status change and register the change with the Canada Revenue Agency
+before proceeding with Corporation Internet Filing. Failure to do so will result in a penalty for non-
+compliance being levied by the Canada Revenue Agency. The change can be registered by letter,
+online, or by phone when contacting the Business Enquiries line.
+Diagnostics page 3 of 4

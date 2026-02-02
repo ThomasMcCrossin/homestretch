@@ -1,0 +1,83 @@
+02 Feb 2026 14587430 Canada Inc. Yr.end: 31-05-2024 Acct.#748003142RC0001
+Canada Revenue Agence du revenu T2 Corporation Income Tax Return 200
+Agency du Canada
+(2024 and later tax years) Code 2402
+Protected B
+This form serves as a federal, provincial, and territorial corporation income tax return, unless the corporation is located in
+when completed
+Quebec or Alberta. If the corporation is located in one of these provinces, you have to file a separate provincial
+corporation return. A shorter version of the return, the T2SHORT, is available for eligible corporations. 055 Do not use this area
+All legislative references on this return are to the federal Income Tax Act and Income Tax Regulations. This return may
+contain changes that had not yet become law at the time of publication.
+Send one completed copy of this return, including schedules and the General Index of Financial Information (GIFI), to your
+tax centre. You have to file the return within six months after the end of the corporation's tax year.
+For more information see canada.ca/taxes or Guide T4012, T2 Corporation – Income Tax Guide.
+Identification
+Business number (BN) . . . . . . . . . . . 001 748003142RC0001 R C
+Corporation's name To which tax year does this return apply?
+002 14587430 Canada Inc. Tax year start Tax year-end
+Year Month Day Year Month Day
+060 2023 06 01 061 2024 05 31
+Address of head office
+Has this address changed since the Has there been an acquisition of control
+last time the CRA was notified? . . . . . . 010 Yes No X resulting in the application of
+If yes, complete lines 011 to 018. subsection 249(4) since the tax year
+011 start on line 060? . . . . . . . . . . . . . . . . . . . 063 Yes No X
+012 If yes, provide the date control was Year Month Day
+City Province, territory, or state acquired . . . . . . . . . . . . . . . . . . . . . . . . . . . 065
+015 016
+Is the date on line 061 a deemed
+Country (other than Canada) Postal or ZIP code
+tax year-end according to
+017 018 subsection 249(3.1)? . . . . . . . . . . . . . . . . 066 Yes No X
+Mailing address (if different from head office address)
+Is the corporation a professional
+Has this address changed since the
+corporation that is a member of a
+last time the CRA was notified? . . . . . . 020 Yes No X partnership? . . . . . . . . . . . . . . . . . . . . . . . 067 Yes No X
+If yes, complete lines 021 to 028.
+Is this the first year of filing after:
+021c/o
+Incorporation? . . . . . . . . . . . . . . . . . . . . . 070 Yes No X
+022
+Amalgamation? . . . . . . . . . . . . . . . . . . . . 071 Yes No X
+023
+If yes, complete lines 030 to 038 and attach Schedule 24.
+City Province, territory, or state
+025 026 Has there been a wind-up of a
+Country (other than Canada) Postal or ZIP code subsidiary under section 88 during the
+current tax year? . . . . . . . . . . . . . . . . . . . 072 Yes No X
+027 028
+If yes, complete and attach Schedule 24.
+Location of books and records (if different from head office address)
+Is this the final tax year before
+Has this address changed since the amalgamation? . . . . . . . . . . . . . . . . . . . . 076 Yes No X
+last time the CRA was notified? . . . . . . 030 Yes No X
+If yes, complete lines 031 to 038. Is this the final return up to
+dissolution? . . . . . . . . . . . . . . . . . . . . . . . 078 Yes No X
+031
+032 If an election was made under section 261,
+state the functional currency used . . . . . . . . . 079
+City Province, territory, or state
+035 036 Is the corporation a resident of Canada? 080 Yes X No
+Country (other than Canada) Postal or ZIP code If no, give the country of residence on line 081 and complete and attach
+Schedule 97.
+037 038
+081
+040Type of corporation at the end of the tax year (tick one)
+Is the non-resident corporation claiming
+an exemption under an income tax
+X 1 Canadian-controlled private corporation (CCPC) treaty? . . . . . . . . . . . . . . . . . . . . . . . . . . . . 082 Yes No X
+2 Other private corporation If yes, complete and attach Schedule 91.
+3 Public corporation
+4 Corporation controlled by a public corporation If the corporation is exempt from tax under section 149, tick one of the
+following boxes:
+5 Other corporation (specify)
+085 1 Exempt under paragraph 149(1)(e) or (l)
+If the type of corporation changed
+Year Month Day 2 Exempt under paragraph 149(1)(j)
+during the tax year, provide the
+effective date of the change . . . . . . . . 043 4 Exempt under other paragraphs of section 149
+Do not use this area
+095 096 898
+T2 E (11/24) Version 28.01 UF25 Page 1 of 9

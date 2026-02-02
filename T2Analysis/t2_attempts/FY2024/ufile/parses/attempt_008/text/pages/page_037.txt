@@ -1,0 +1,41 @@
+02
+Feb
+2026
+14587430
+Canada
+Inc.
+Yr.end:
+31-05-2024
+Acct.#748003142RC0001
+Part 2 – CCA calculation (continued)
+Note 15:The UCC adjustment for property acquired during the year (also known as the half-year rule or 50% rule) does not apply to certain property (including AIIP and property included in Classes 54 to
+56).
+For special rules and exceptions, see Income Tax Folio S3-F4-C1, General Discussion of Capital Cost Allowance.
+Note 16:Enter a rate only if you are using the declining balance method. For any other method (for example, the straight-line method, where calculations are always based on the cost of acquisitions),
+enter "N/A". Then enter the amount you are claiming in column 23.
+Note 17:If the amount in column 10 is negative, you have a recapture of CCA. If applicable, enter the negative amount from column 10 in column 21 as a positive. The recapture rules do not apply to
+passenger vehicles in Class 10.1. However, they do apply to a passenger vehicle that was, at any time, a DIEP.
+Note 18:If no property is left in the class at the end of the tax year and there is still a positive amount in the column 10, you have a terminal loss. If applicable, enter the positive amount from column 10 in
+column 22. The terminal loss rules do not apply to:
+passenger vehicles in Class 10.1
+property in Class 14.1, unless you have ceased carrying on the business to which it relates
+limited-period franchises, concessions, or licences in Class 14 if, at the time of acquisition, the property was a former property of the transferor or any similar property attributable to the same
+fixed place of business, and you had jointly elected with the transferor to have the replacement property rules apply, unless certain conditions are met
+Note 19:If the tax year is shorter than 365 days, prorate the CCA claim. Some classes of property do not have to be prorated. See Guide T4012 for more information.
+For property in Class 10.1 disposed of during the year, deduct a maximum of 50% of the regular CCA deduction if you owned the property at the beginning of the tax year.
+For AIIP listed below, the maximum first year allowance you can claim is determined as follows:
+Class 13: if the capital cost of the property was incurred before 2024, the lesser of 150% of the amount calculated in Schedule III of the Regulations and the UCC at the end of the tax year
+(before any CCA deduction), and in any other case, the amount for the year calculated in accordance with Schedule III of the Regulations
+Class 14: the lesser of 150% (if the property becomes available for use in the year and before 2024) or 125% (if the property becomes available for use in the year and after 2023) of the
+allocation for the year of the capital cost of the property apportioned over the remaining life of the property (at the time the cost was incurred) and the UCC at the end of the tax year (before
+any CCA deduction)
+Class 15: the lesser of 150% (if the property is acquired in the year and before 2024) or 125% (if the property is acquired in the year and after 2023) of an amount calculated on the basis of a
+rate per cord, board foot, or cubic metre cut in the tax year and the UCC at the end of the tax year (before any CCA deduction)
+Canadian vessels described under paragraph 1100(1)(v) of the Regulations: the lesser of 50% (for property acquired in the year and before 2024) or 33 1/3% (in any other case) of the capital
+cost of the property and the UCC at the end of the tax year (before any CCA deduction)
+Class 41.2: use a 25% CCA rate. The additional allowance under paragraphs 1100(1)(y.2) (for single mine properties) and 1100(1)(ya.2) (for multiple mine properties) of the Regulations is not
+eligible for the accelerated investment incentive. The additional allowance in respect of natural gas liquefaction under paragraph 1100(1)(yb) of the Regulations is eligible for the accelerated
+investment incentive
+The AIIP provisions also apply to property (other than a timber resource property) that is a timber limit or a right to cut timber from a limit as well as to an industrial mineral mine or a right to remove
+minerals from an industrial mineral mine. See the Income Tax Regulations for more details.
+T2 SCH 8 E (24) VVVVVeeeeerrrrrsssssiiiiiooooonnnnn 2222288888.....0000011111 UUUUUFFFFF2222255555 Page 5 of 5

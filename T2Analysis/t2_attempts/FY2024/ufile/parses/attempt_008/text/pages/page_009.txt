@@ -1,0 +1,61 @@
+Schedule 200 Summary
+for 2024 taxation year
+Corporation 14587430 Canada Inc.
+Business number 748003142RC0001
+Taxation year end 31-05-2024
+2024 2023 2022 2021 2020
+Net income from financial stmts 18,456
+Total additions 767
+Total deductions 865
+Taxable income
+Net income from fin. stmts. 300 18,358
+Charitable donations 311
+Cultural gifts 313
+Ecological gifts 314
+Gifts of medicine 315
+Taxable dividends deductible 320
+Part VI.1 tax deduction 325
+Prior year non-cap. losses 331
+Prior year net cap. losses 332
+Prior year restricted farm loss 333
+Prior year farm losses 334
+Corp's limited partner. losses 335
+Taxable cap. gains cr. union 340
+Prosp., grubstaker's shares 350
+Employer ded. non-qualified securities 352
+Total Deductions
+Subtotal 18,358
+Section 110.5 additions 355
+Taxable income 360 18,358
+Income exempt (149 (1) (t)) 370
+Taxable income modified
+Small business deduction
+Income from active business 400 18,358
+Tax income modified 405 18,358
+Business limit 410 500,000
+Taxable capital bus. limit reduction
+Passive income bus. limit reduction
+Red. bus. limit (TYS before 2019) 425
+Red. bus. limit (TYS after 2018) 426 500,000
+Subsection 125(3.2)
+Amount 425 - Subsection 125(3.2) 427
+Amount 426 - Subsection 125(3.2) 428 500,000
+Small business deduction 430 3,488
+Refundable portion of Part I tax
+Aggregate invest income 440
+Foreign investment income 445
+Amount A - D
+Subtotal of deductions
+Part I tax payable 1,652
+Refundable Part I tax 450
+Refundable dividend tax on hand (tax year start before 2019)
+RDTOH - beginning of year 460
+Dividend refund prev yr 465
+Refundable Part I tax
+Total Part IV tax pay.
+Net RDTOH from pred. corp 480
+RDTOH - end of year 485
+Dividend refund (tax year start before 2019)
+Taxable dividends paid
+Ref. div. tax on hand -year end
+Dividend refund
