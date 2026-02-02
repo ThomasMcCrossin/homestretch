@@ -7,7 +7,7 @@
 
 **Readable view:** open `UFILet2_FILL_GUIDE.html` (bigger text + no horizontal scroll).
 **Audit package (working papers):** open `audit_packages/FY2024/index.html`.
-**Review remediation pack (memos):** `audit_packages/FY2024/inventory_margin_memo.html`, `audit_packages/FY2024/fixed_asset_cca_continuity.html`, `audit_packages/FY2024/payables_breakdown.html`.
+**Review remediation pack (memos):** `audit_packages/FY2024/inventory_margin_memo.html`, `audit_packages/FY2024/fixed_asset_cca_continuity.html`, `audit_packages/FY2024/payables_breakdown.html`, `audit_packages/FY2024/inventory_estimate_plausibility_note.html`.
 
 ## UFile entry rules (important)
 - Enter amounts on the **detail lines** listed below (e.g., use `1121` for inventory, `1484` for prepaid).

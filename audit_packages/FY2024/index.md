@@ -53,5 +53,6 @@ Note: These are payroll-related reimbursements / funding transactions involving 
 
 ## Related review memos (same FY)
 - `inventory_margin_memo.html` (inventory/margin support)
+- `inventory_estimate_plausibility_note.html` (FY2024 only; explores why inventory may feel higher)
 - `fixed_asset_cca_continuity.html` (book vs tax CCA continuity)
 - `payables_breakdown.html` (A/P + HST/payroll breakdown)

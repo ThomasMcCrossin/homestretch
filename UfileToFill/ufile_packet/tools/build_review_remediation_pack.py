@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import csv
 import json
+import sys
 from dataclasses import dataclass
 from datetime import datetime
 from decimal import Decimal, ROUND_HALF_UP
@@ -25,6 +26,10 @@ from render_year_guide_html import render_year_guide_html
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 PACKET_PATH = PROJECT_ROOT / "UfileToFill" / "ufile_packet" / "packet.json"
 OUT_ROOT = PROJECT_ROOT / "audit_packages"
+
+# Reuse manifest helpers from scripts/_lib.py (scripts isn't a package, so add it to sys.path).
+sys.path.insert(0, str(PROJECT_ROOT / "scripts"))
+from _lib import load_manifest, get_source  # type: ignore  # noqa: E402
 
 
 def round_to_dollar(amount: Decimal) -> int:
@@ -84,6 +89,39 @@ def snapshot_dir_from_packet(packet: dict) -> Path:
     return p
 
 
+def parse_inventory_sheet_total_and_categories(path: Path) -> tuple[Decimal, dict[str, Decimal]]:
+    """
+    Parses the inventory sheet format used in this project:
+    - Grand total is the first row where Category and Product are blank and Total is set.
+    - Category subtotals are rows where Category is set, Product is blank, and Total is set.
+    """
+    rows = read_csv_rows(path)
+    total = Decimal("0")
+    by_cat: dict[str, Decimal] = {}
+    for r in rows:
+        cat = str(r.get("Category") or "").strip()
+        prod = str(r.get("Product") or "").strip()
+        tot = str(r.get("Total") or "").strip().replace(",", "")
+        if not cat and not prod and tot:
+            try:
+                total = Decimal(tot)
+            except Exception:
+                total = Decimal("0")
+            break
+    for r in rows:
+        cat = str(r.get("Category") or "").strip()
+        prod = str(r.get("Product") or "").strip()
+        tot = str(r.get("Total") or "").strip().replace(",", "")
+        if not cat or prod or not tot:
+            continue
+        try:
+            amt = Decimal(tot)
+        except Exception:
+            continue
+        by_cat[cat] = by_cat.get(cat, Decimal("0")) + amt
+    return total, by_cat
+
+
 def main() -> int:
     packet = json.loads(PACKET_PATH.read_text(encoding="utf-8"))
     snapshot_dir = snapshot_dir_from_packet(packet)
@@ -99,6 +137,8 @@ def main() -> int:
     # For each FY, write memos and continuity tables into audit_packages/FYxxxx/
     fy_keys = sorted(years.keys())
     first_fy = fy_keys[0] if fy_keys else ""
+
+    manifest = load_manifest()
 
     for fy in fy_keys:
         year = years[fy]
@@ -211,6 +251,79 @@ def main() -> int:
         inv_md = "\n".join(inv_memo).strip() + "\n"
         write_text(out_dir / "inventory_margin_memo.md", inv_md)
         write_text(out_dir / "inventory_margin_memo.html", render_year_guide_html(packet, fy, md_guide=inv_md))
+
+        # --- FY2024 only: plausibility note for "inventory feels higher than sheet total" ---
+        if fy == "FY2024":
+            src = get_source(manifest, "inventory_count_fy2024_may31_estimated_csv")
+            sheet_path = Path(str(src.get("path") or "")).expanduser()
+            sheet_total = Decimal("0")
+            by_cat: dict[str, Decimal] = {}
+            if sheet_path.exists():
+                sheet_total, by_cat = parse_inventory_sheet_total_and_categories(sheet_path)
+
+            # Explore what would have to be missing to reach the user's mental range.
+            low_target = Decimal("4500")
+            high_target = Decimal("5500")
+            low_gap = (low_target - sheet_total) if sheet_total else Decimal("0")
+            high_gap = (high_target - sheet_total) if sheet_total else Decimal("0")
+
+            plaus = []
+            plaus.append("# FY2024 inventory estimate plausibility note (exploration only)")
+            plaus.append("")
+            plaus.append("Purpose: document reasonable explanations for why management believes FY2024 ending inventory could be higher than the recorded estimate.")
+            plaus.append("This note does **not** change any filed numbers by itself.")
+            plaus.append("")
+            plaus.append(f"Period: **{ctx.filing_start} to {ctx.end}**")
+            plaus.append(f"Snapshot source: `{snapshot_source}`")
+            plaus.append("")
+            plaus.append("## What is currently used in the filing package")
+            plaus.append(f"- FY2024 closing inventory used: **${closing_inv:,.0f}** (GIFI 1121; journal `INVENTORY_CLOSE_FY2024`).")
+            if sheet_total:
+                plaus.append(f"- Source estimate sheet total: **${sheet_total:,.2f}** (`{sheet_path}`).")
+            plaus.append("")
+            if by_cat:
+                rows = [[k, f"${v:,.2f}"] for k, v in sorted(by_cat.items(), key=lambda kv: kv[0].lower())]
+                plaus.append("### Category totals in the FY2024 estimate sheet")
+                plaus.append(md_table(["Category", "Total"], rows))
+                plaus.append("")
+
+            plaus.append("## How could the true on-hand inventory be ~$4.5k–$5.5k?")
+            if sheet_total:
+                plaus.append(
+                    f"- To reach **$4,500**, the estimate would need to be understated by about **${low_gap:,.2f}**."
+                )
+                plaus.append(
+                    f"- To reach **$5,500**, the estimate would need to be understated by about **${high_gap:,.2f}**."
+                )
+            plaus.append("")
+            plaus.append("Plausible mechanisms (non-exclusive):")
+            plaus.append("- **Missing stock location**: inventory held in a satellite canteen / offsite storage not fully included in the estimate sheet.")
+            plaus.append("- **Conservative scaling**: the estimate sheet notes indicate it was \"scaled down\" vs later year; broad conservatism can understate materially.")
+            plaus.append("- **Omitted categories**: entire buckets (e.g., additional disposables, snacks, frozen, beverages) may not have been captured in the estimate.")
+            plaus.append("")
+            plaus.append("## Disposables policy note (why this matters)")
+            plaus.append(
+                "- In this project’s FY2024 estimate sheet, **disposables are treated as inventory** (they map into Inventory - Food)."
+            )
+            plaus.append(
+                "- If you conceptually treat disposables as \"supplies\" rather than inventory, that would tend to **reduce** the inventory number, not increase it."
+            )
+            plaus.append(
+                "- Therefore, a higher FY2024 inventory belief is most consistent with **missing items/locations** rather than a disposables policy mismatch."
+            )
+            plaus.append("")
+            plaus.append("## Evidence pointers")
+            plaus.append(f"- Estimate sheet: `{sheet_path}`")
+            plaus.append(f"- Inventory JE evidence: `{snapshot_source}inventory_journal_detail.csv` and `{snapshot_source}inventory_journal_detail.csv`")
+            plaus.append("")
+            plaus.append("## If you choose to restate later (not tonight)")
+            plaus.append("- Update the FY2024 estimate sheet total and category subtotals to reflect the missing stock, update the manifest hash, and regenerate outputs.")
+            plaus.append("- This will cascade deterministically into FY2025 opening inventory (carryforward consistency).")
+            plaus.append("")
+
+            plaus_md = "\n".join(plaus).strip() + "\n"
+            write_text(out_dir / "inventory_estimate_plausibility_note.md", plaus_md)
+            write_text(out_dir / "inventory_estimate_plausibility_note.html", render_year_guide_html(packet, fy, md_guide=plaus_md))
 
         # --- Payables breakdown memo (2620 and 2680) ---
         tb_rows = read_csv_rows(snapshot_dir / f"trial_balance_{fy}.csv")
@@ -340,4 +453,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

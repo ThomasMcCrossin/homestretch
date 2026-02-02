@@ -566,6 +566,8 @@ def main() -> int:
 
         idx.append("## Related review memos (same FY)")
         idx.append("- `inventory_margin_memo.html` (inventory/margin support)")
+        if fy == "FY2024":
+            idx.append("- `inventory_estimate_plausibility_note.html` (FY2024 only; explores why inventory may feel higher)")
         idx.append("- `fixed_asset_cca_continuity.html` (book vs tax CCA continuity)")
         idx.append("- `payables_breakdown.html` (A/P + HST/payroll breakdown)")
         idx.append("")

@@ -227,7 +227,13 @@ def build_year_guide(packet: dict, fy: str) -> str:
     parts.append("")
     parts.append("**Readable view:** open `UFILet2_FILL_GUIDE.html` (bigger text + no horizontal scroll).")
     parts.append(f"**Audit package (working papers):** open `audit_packages/{fy}/index.html`.")
-    parts.append(f"**Review remediation pack (memos):** `audit_packages/{fy}/inventory_margin_memo.html`, `audit_packages/{fy}/fixed_asset_cca_continuity.html`, `audit_packages/{fy}/payables_breakdown.html`.")
+    extra = ""
+    if fy == "FY2024":
+        extra = f", `audit_packages/{fy}/inventory_estimate_plausibility_note.html`"
+    parts.append(
+        f"**Review remediation pack (memos):** `audit_packages/{fy}/inventory_margin_memo.html`, "
+        f"`audit_packages/{fy}/fixed_asset_cca_continuity.html`, `audit_packages/{fy}/payables_breakdown.html`{extra}."
+    )
     parts.append("")
 
     parts.append("## UFile entry rules (important)")
