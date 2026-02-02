@@ -12,26 +12,9 @@ output/snapshots/_broken*/
 __pycache__/
 *.pyc
 
-# Local / ad-hoc filing attempt exports (do not commit duplicates of CRA packages)
-taxattemps/
-
-# UFile attempts / exports / parses / artifacts (keep local, never commit)
-UfileToFill/ufile_packet/years/*/attempts/
-T2Analysis/t2_attempts/**/exports/
-T2Analysis/t2_attempts/**/parses/
-T2Analysis/t2_attempts/**/attempt_*/
-T2Analysis/diffs/*attempt*
-
-# Large binary artifacts
-*.pdf
-!Asset Info/**
-
 # Legacy archived artifacts (kept local, not committed)
 legacy/**
 !legacy/README.md
 
-# Local UFile export attempts (keep local)
-taxattempts/
-
-# Local diff outputs (keep local)
-legacy/ufile_diffs/
+# Keep tracked asset spec PDFs
+!Asset Info/**
