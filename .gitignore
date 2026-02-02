@@ -32,3 +32,6 @@ legacy/**
 
 # Local UFile export attempts (keep local)
 taxattempts/
+
+# Local diff outputs (keep local)
+legacy/ufile_diffs/
