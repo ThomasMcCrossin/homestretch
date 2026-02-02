@@ -75,9 +75,9 @@ sources:
 
   inventory_count_fy2025_may16_csv:
     kind: csv
-    path: /home/clarencehub/curlys-books/t2-filing-fy2024-fy2025/data/Canteen Inventory May 16 2025 - Sheet1.csv
+    path: /home/clarencehub/t2-final-fy2024-fy2025/data/inventory/Canteen Inventory May 16 2025 - Physical Count.csv
     sha256: 53d0732438560d8a958f22d84b6c26a42568580ba316d878c39f4e010a98097b
-    semantics: "Inventory count/value near FY2025 year-end (May 16, 2025). Used as the closing inventory input for FY2025 unless superseded."
+    semantics: "Inventory physical count/value near FY2025 year-end (May 16, 2025). Repo-local copy to avoid external dependencies; used as the closing inventory input for FY2025 unless superseded."
 
   # Shareholder mileage logs (standalone T2 working papers in curlys-books).
   curlys_books_thomas_mileage_log_csv:

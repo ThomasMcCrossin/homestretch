@@ -198,6 +198,17 @@ def build_year_guide(packet: dict, fy: str) -> str:
     def dollars_from_cents(cents: int) -> str:
         return f"${cents/100:,.2f}"
 
+    def extract_invoice_date_from_source_breakdown(source_breakdown: str) -> str:
+        """
+        Our resolved asset rows include a source_breakdown string like:
+          "... invoice_date=2024-03-13 vendor=Costco ..."
+        Use that as the best-available proxy for "Date acquired" in UFile.
+        """
+        if not source_breakdown:
+            return ""
+        m = re.search(r"\\binvoice_date=(\\d{4}-\\d{2}-\\d{2})\\b", str(source_breakdown))
+        return m.group(1) if m else ""
+
     def read_snapshot_csv_rows(filename: str) -> list[dict[str, str]]:
         # Prefer snapshot-evidence files so the guide always matches the packet's snapshot source.
         if snapshot_dir and snapshot_dir.exists():
@@ -1307,23 +1318,43 @@ def build_year_guide(packet: dict, fy: str) -> str:
             parts.append("")
 
             # UFile's CCA UI is class-based, but the operator often enters additions per asset line.
-            # Keep a tiny copy/paste checklist with the exact data we have (no dispositions expected).
+            # Keep a copy/paste checklist with the exact data we have (no dispositions expected).
+            #
+            # NOTE (important UFile behavior):
+            # - UFile uses separate fields for "Date acquired" and "Date available for use".
+            # - Entering dates in the *disposition* sub-fields can accidentally treat an addition as a disposition.
+            # - In some UFile builds, additions don't "register" unless you fill the Non-accelerated / AIIP / DIEP section.
             ufile_rows = []
             for asset in assets:
+                cost = int(asset.get("total_cost_dollars") or 0)
+                avail = str(asset.get("available_for_use_date") or "")
+                acquired = extract_invoice_date_from_source_breakdown(str(asset.get("source_breakdown") or "")) or avail
                 ufile_rows.append(
                     [
                         str(asset.get("cca_class") or ""),
                         str(asset.get("description") or ""),
-                        str(asset.get("available_for_use_date") or ""),
-                        money(int(asset.get("total_cost_dollars") or 0)),
+                        acquired,
+                        avail,
+                        money(cost),
+                        # Default: treat post-2018 acquisitions as AIIP additions for the purpose of UFile registering additions.
+                        # Operator can override to DIEP if they intentionally designate immediate expensing.
+                        money(cost),
+                        "0",
+                        "0",
                         "0",
                         "",
                     ]
                 )
             parts.append("### UFile Schedule 8 entry lines (per asset)")
             parts.append(
+                "UFile fields to use (avoid accidental dispositions):"
+                "\n- Use **Date acquired** and **Date property became available for use** (these are addition fields)."
+                "\n- Do **not** enter the date into any *disposition* date fields unless you are actually disposing of property."
+                "\n- For additions to show up, enter the cost under the appropriate additions bucket: **AIIP** (default for these assets), or **Non-accelerated**, or **DIEP** if intentionally designated."
+            )
+            parts.append(
                 md_table(
-                    ["Class", "Addition description", "Date acquired/available", "Cost", "Proceeds (if disposed)", "Disposed description (if any)"],
+                    ["Class", "Addition description", "Date acquired", "Available for use", "Cost", "AIIP additions", "Non-accelerated additions", "DIEP additions", "Proceeds (if disposed)", "Disposed description (if any)"],
                     ufile_rows,
                 )
             )

@@ -500,11 +500,15 @@ If this section is missing/empty in the guide, the packet was likely built from 
 | shopify_card_reader_2024_11_12 | Shopify card reader hardware | 2024-11-12 | 12 | 479 |
 
 ### UFile Schedule 8 entry lines (per asset)
-| Class | Addition description | Date acquired/available | Cost | Proceeds (if disposed) | Disposed description (if any) |
-|---|---|---|---|---|---|
-| 8 | Nayax card reader for vending machine | 2025-02-24 | 557 | 0 |  |
-| 12 | Coffee grinder (Walmart) | 2024-09-17 | 184 | 0 |  |
-| 12 | Shopify card reader hardware | 2024-11-12 | 479 | 0 |  |
+UFile fields to use (avoid accidental dispositions):
+- Use **Date acquired** and **Date property became available for use** (these are addition fields).
+- Do **not** enter the date into any *disposition* date fields unless you are actually disposing of property.
+- For additions to show up, enter the cost under the appropriate additions bucket: **AIIP** (default for these assets), or **Non-accelerated**, or **DIEP** if intentionally designated.
+| Class | Addition description | Date acquired | Available for use | Cost | AIIP additions | Non-accelerated additions | DIEP additions | Proceeds (if disposed) | Disposed description (if any) |
+|---|---|---|---|---|---|---|---|---|---|
+| 8 | Nayax card reader for vending machine | 2025-02-24 | 2025-02-24 | 557 | 557 | 0 | 0 | 0 |  |
+| 12 | Coffee grinder (Walmart) | 2024-09-17 | 2024-09-17 | 184 | 184 | 0 | 0 | 0 |  |
+| 12 | Shopify card reader hardware | 2024-11-12 | 2024-11-12 | 479 | 479 | 0 | 0 | 0 |  |
 
 ## Loss carry forwards and loss carry backs (UFile screen)
 No losses to carry forward/back.

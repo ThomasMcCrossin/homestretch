@@ -3,7 +3,7 @@
 Purpose: document how FY2024 ending inventory was estimated for this filing.
 
 Period: **2023-06-10 to 2024-05-31**
-Snapshot source: `output/snapshots/20260202-231500/output/`
+Snapshot source: `output/snapshots/20260202-235500/output/`
 
 ## What this file does (in plain English)
 - FY2024 did not have a physical inventory count.
@@ -60,8 +60,8 @@ For context, the implied days-on-hand at a few inventory totals is:
 - Estimate sheet: `/home/clarencehub/t2-final-fy2024-fy2025/data/inventory/Canteen Inventory May 31 2024 - Estimate from FY2025 Items.csv`
 - Generator script: `scripts/90a_generate_inventory_estimate_fy2024_from_fy2025.py`
 - Generator audit: `/home/clarencehub/t2-final-fy2024-fy2025/output/inventory_estimate_fy2024_from_fy2025_audit.csv`
-- Inventory JE evidence: `output/snapshots/20260202-231500/output/inventory_journal_detail.csv` and `output/snapshots/20260202-231500/output/inventory_journal_detail.csv`
-- Override audit (if/when used): `output/snapshots/20260202-231500/output/inventory_override_audit.csv`
+- Inventory JE evidence: `output/snapshots/20260202-235500/output/inventory_journal_detail.csv` and `output/snapshots/20260202-235500/output/inventory_journal_detail.csv`
+- Override audit (if/when used): `output/snapshots/20260202-235500/output/inventory_override_audit.csv`
 
 ## If you choose to restate later (operator-controlled)
 - Re-run the generator with a different target center/tolerance, update the manifest sha256, and refresh.
