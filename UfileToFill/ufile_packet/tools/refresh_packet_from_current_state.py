@@ -64,6 +64,11 @@ def main() -> int:
     stamp = str(args.name or default_stamp())
 
     if not args.skip_build_outputs:
+        # Rebuild journals + trial balance first so downstream schedules are always based on current numbers.
+        run(["python3", "scripts/90_build_inventory_journals.py", "--reset"])
+        run(["python3", "scripts/80_build_trial_balance.py"])
+        run(["python3", "scripts/82_build_readiness_report.py"])
+
         run(["python3", "scripts/83_audit_shopify_gateway_vs_payouts.py"])
         run(["python3", "scripts/91b_build_cca_schedule_8.py"])
         run(["python3", "scripts/91c_build_book_fixed_asset_overlay.py"])

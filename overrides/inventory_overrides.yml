@@ -1,0 +1,29 @@
+version: 1
+
+# Inventory overrides (optional)
+# ------------------------------
+# This file lets you override inventory totals used for the inventory journal entries
+# without editing the upstream inventory CSVs (which live outside this repo).
+#
+# IMPORTANT:
+# - Overrides are DISABLED by default (enabled: false).
+# - When enabled, the override affects:
+#     * FY2024 closing inventory journal (end date)
+#     * FY2025 opening inventory reversal (start date) - carryforward consistency
+# - The override only changes totals; the journal still posts into the same inventory
+#   account buckets. Allocation is done deterministically by the chosen strategy.
+#
+# allocation_strategy:
+# - "proportional_to_source" (default): scale the FY's parsed bucket totals to match
+#   the override total, preserving the relative distribution from the source sheet.
+# - "use_fy2025_mix": allocate using FY2025's parsed bucket distribution (useful
+#   when FY2024 estimate sheet is unreliable and FY2025 physical count mix is a
+#   better proxy).
+
+fiscal_years:
+  FY2024:
+    enabled: false
+    closing_inventory_total_cents: 498723 # $4,987.23 (example within the requested $4.5k–$5.5k range)
+    allocation_strategy: proportional_to_source
+    note: "Example only. Enable only after confirming management estimate."
+

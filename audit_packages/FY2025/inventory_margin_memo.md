@@ -1,7 +1,7 @@
 # Inventory and gross margin memo — FY2025
 
 Period: **2024-06-01 to 2025-05-31**
-Snapshot source: `output/snapshots/20260201-183000/output/`
+Snapshot source: `output/snapshots/20260202-213000/output/`
 
 ## Computation (GIFI tie-out)
 | Item | Amount (dollars) |
@@ -21,5 +21,5 @@ Snapshot source: `output/snapshots/20260201-183000/output/`
 - FY2025 inventory support is based on a physical count performed near year-end (May 16, 2025) plus management adjustments for immaterial movements through May 31, 2025.
 
 ## Evidence (snapshot files)
-- `output/snapshots/20260201-183000/output/inventory_journal_detail.csv`
-- `output/snapshots/20260201-183000/output/inventory_journal_summary.md`
+- `output/snapshots/20260202-213000/output/inventory_journal_detail.csv`
+- `output/snapshots/20260202-213000/output/inventory_journal_summary.md`

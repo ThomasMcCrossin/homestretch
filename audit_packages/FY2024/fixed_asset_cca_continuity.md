@@ -1,7 +1,7 @@
 # Fixed assets and CCA continuity — FY2024
 
 Period: **2023-06-10 to 2024-05-31**
-Snapshot source: `output/snapshots/20260201-183000/output/`
+Snapshot source: `output/snapshots/20260202-213000/output/`
 
 ## Key point
 - Book fixed assets (GIFI 1740/1741/8670) and tax CCA (Schedule 8) are reconciled using the same asset register.
@@ -21,5 +21,5 @@ Snapshot source: `output/snapshots/20260201-183000/output/`
 | costco_ipad_air_2023_12_08 | iPad Air 5 64GB (Costco) | 2023-12-08 | 50 | 648 | wave_bill_allocation: bill_id=143 invoice_date=2023-12-08 vendor=Costco - Bill 22134500703182312081530 account=6600 amount_cents=64839 alloc_total_cents=64839 |
 
 Evidence:
-- `output/snapshots/20260201-183000/output/schedule_8_FY2024.csv`
-- `output/snapshots/20260201-183000/output/cca_asset_register_resolved.csv`
+- `output/snapshots/20260202-213000/output/schedule_8_FY2024.csv`
+- `output/snapshots/20260202-213000/output/cca_asset_register_resolved.csv`

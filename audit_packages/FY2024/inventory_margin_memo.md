@@ -1,7 +1,7 @@
 # Inventory and gross margin memo — FY2024
 
 Period: **2023-06-10 to 2024-05-31**
-Snapshot source: `output/snapshots/20260201-183000/output/`
+Snapshot source: `output/snapshots/20260202-213000/output/`
 
 ## Computation (GIFI tie-out)
 | Item | Amount (dollars) |
@@ -18,5 +18,5 @@ Snapshot source: `output/snapshots/20260201-183000/output/`
 - FY2024 ending inventory was estimated by management using an itemized schedule at cost (no formal physical count process in FY2024).
 
 ## Evidence (snapshot files)
-- `output/snapshots/20260201-183000/output/inventory_journal_detail.csv`
-- `output/snapshots/20260201-183000/output/inventory_journal_summary.md`
+- `output/snapshots/20260202-213000/output/inventory_journal_detail.csv`
+- `output/snapshots/20260202-213000/output/inventory_journal_summary.md`

@@ -301,6 +301,89 @@ def main() -> int:
             plaus.append("- **Conservative scaling**: the estimate sheet notes indicate it was \"scaled down\" vs later year; broad conservatism can understate materially.")
             plaus.append("- **Omitted categories**: entire buckets (e.g., additional disposables, snacks, frozen, beverages) may not have been captured in the estimate.")
             plaus.append("")
+
+            # A more concrete, CRA-defensible way to think about the number is "days of cost-of-sales on hand".
+            # This doesn't prove the exact amount, but it provides a coherent framework for a management estimate.
+            try:
+                period_days = (datetime.strptime(ctx.end, "%Y-%m-%d") - datetime.strptime(ctx.filing_start, "%Y-%m-%d")).days + 1
+            except Exception:
+                period_days = 0
+
+            daily_cogs = Decimal("0")
+            if period_days and cogs:
+                daily_cogs = (Decimal(cogs) / Decimal(period_days)).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+
+            plaus.append("## A defensible estimation framework (days of COGS on hand)")
+            if daily_cogs:
+                plaus.append(f"- FY2024 cost of sales (GIFI 8518): **${cogs:,.0f}** across **{period_days}** days.")
+                plaus.append(f"- Average daily COGS: **${daily_cogs:,.2f}/day**.")
+                plaus.append("")
+                plaus.append("If ending inventory is estimated as a certain number of days of typical cost of sales:")
+                rows = []
+                for tgt in (Decimal("4500"), Decimal("5000"), Decimal("5500")):
+                    days_on_hand = (tgt / daily_cogs).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP) if daily_cogs else Decimal("0")
+                    rows.append([f"${tgt:,.0f}", f"{days_on_hand} days"])
+                plaus.append(md_table(["Target ending inventory", "Implied days of COGS on hand"], rows))
+                plaus.append("")
+                plaus.append(
+                    "- For a canteen/concession operation, **~15–18 days of stock** is a coherent management-estimate range, "
+                    "especially if ordering is done in bulk and there is some seasonality."
+                )
+                plaus.append("")
+                plaus.append("### Impact on FY2024 profit (pure inventory re-estimate)")
+                plaus.append(
+                    "- If the only change is raising FY2024 closing inventory, **COGS decreases dollar-for-dollar** and **net income increases dollar-for-dollar**."
+                )
+                impact_rows = []
+                base_inv = Decimal(int(closing_inv))
+                base_gp = Decimal(int(gp))
+                base_cogs = Decimal(int(cogs))
+                base_sales = Decimal(int(sales))
+                for tgt in (Decimal("4500"), Decimal("5000"), Decimal("5500")):
+                    delta = tgt - base_inv
+                    new_cogs = base_cogs - delta
+                    new_gp = base_gp + delta
+                    new_gm = Decimal("0")
+                    if base_sales:
+                        new_gm = (new_gp * Decimal(100) / base_sales).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+                    impact_rows.append([f"${tgt:,.0f}", f"{delta:+,.0f}", f"${new_cogs:,.0f}", f"${new_gp:,.0f}", f"{new_gm}%"])
+                plaus.append(md_table(["Target inv", "Delta vs current", "Implied COGS", "Implied gross profit", "Implied GM%"], impact_rows))
+            else:
+                plaus.append("- (Could not compute daily COGS; missing Schedule 125 values.)")
+            plaus.append("")
+
+            # Reference FY2025 physical count context for why the FY2024 estimate could reasonably be below FY2025.
+            try:
+                fy2025 = years.get("FY2025", {})
+                sch125_25 = fy2025.get("schedule_125", {}) if isinstance(fy2025, dict) else {}
+                sch100_25 = fy2025.get("schedule_100", {}) if isinstance(fy2025, dict) else {}
+                cogs25 = int(sch125_25.get("8518", {}).get("amount") or 0)
+                inv25 = int(sch100_25.get("1121", {}).get("amount") or 0) or int(sch100_25.get("1120", {}).get("amount") or 0)
+            except Exception:
+                cogs25 = 0
+                inv25 = 0
+
+            if cogs25 and inv25:
+                try:
+                    period_days25 = (datetime.strptime(years["FY2025"]["fiscal_period"]["end"], "%Y-%m-%d") - datetime.strptime(years["FY2025"]["fiscal_period"]["start"], "%Y-%m-%d")).days + 1
+                except Exception:
+                    period_days25 = 0
+                daily_cogs25 = Decimal("0")
+                if period_days25:
+                    daily_cogs25 = (Decimal(cogs25) / Decimal(period_days25)).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+                if daily_cogs25:
+                    days25 = (Decimal(inv25) / daily_cogs25).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP)
+                    plaus.append("## FY2025 physical count context (sanity check)")
+                    plaus.append(
+                        f"- FY2025 ending inventory (physical count based): **${inv25:,.0f}**; FY2025 COGS: **${cogs25:,.0f}**."
+                    )
+                    plaus.append(f"- Implied FY2025 days of inventory on hand: **{days25} days**.")
+                    plaus.append(
+                        "- FY2025 was impacted by a known overbuy scenario; therefore a lower FY2024 days-on-hand assumption "
+                        "(e.g., roughly half of FY2025) can still be coherent."
+                    )
+                    plaus.append("")
+
             plaus.append("## Disposables policy note (why this matters)")
             plaus.append(
                 "- In this project’s FY2024 estimate sheet, **disposables are treated as inventory** (they map into Inventory - Food)."
@@ -315,9 +398,17 @@ def main() -> int:
             plaus.append("## Evidence pointers")
             plaus.append(f"- Estimate sheet: `{sheet_path}`")
             plaus.append(f"- Inventory JE evidence: `{snapshot_source}inventory_journal_detail.csv` and `{snapshot_source}inventory_journal_detail.csv`")
+            plaus.append(f"- Override audit (if/when used): `{snapshot_source}inventory_override_audit.csv`")
             plaus.append("")
-            plaus.append("## If you choose to restate later (not tonight)")
-            plaus.append("- Update the FY2024 estimate sheet total and category subtotals to reflect the missing stock, update the manifest hash, and regenerate outputs.")
+            plaus.append("## If you choose to restate later (operator-controlled)")
+            plaus.append(
+                "- Prefer the repo-local override mechanism (no edits to external CSVs): set `enabled: true` and "
+                "`closing_inventory_total_cents` in `overrides/inventory_overrides.yml`, then rerun the refresh workflow."
+            )
+            plaus.append(
+                "- The inventory journal builder will scale bucket allocations deterministically and emit an audit file "
+                "showing source totals vs used totals."
+            )
             plaus.append("- This will cascade deterministically into FY2025 opening inventory (carryforward consistency).")
             plaus.append("")
 

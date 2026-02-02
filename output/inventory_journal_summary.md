@@ -5,3 +5,4 @@
 - Journal entries posted: 3
 - FY2024 closing inventory total: $2847.23
 - FY2025 closing inventory total: $10015.47
+- Override audit: `/home/clarencehub/t2-final-fy2024-fy2025/output/inventory_override_audit.csv`

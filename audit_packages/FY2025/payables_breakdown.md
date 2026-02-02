@@ -1,7 +1,7 @@
 # Payables breakdown — FY2025
 
 Period: **2024-06-01 to 2025-05-31**
-Snapshot source: `output/snapshots/20260201-183000/output/`
+Snapshot source: `output/snapshots/20260202-213000/output/`
 
 ## What this is
 - This memo explains what is included in Schedule 100 lines **2620 (A/P and accruals)** and **2680 (taxes payable)** in this file.
@@ -21,4 +21,4 @@ Snapshot source: `output/snapshots/20260201-183000/output/`
 | 2680 |  | TOTAL (net) | $-2,652.95 |
 
 Evidence:
-- `output/snapshots/20260201-183000/output/trial_balance_FY2025.csv`
+- `output/snapshots/20260202-213000/output/trial_balance_FY2025.csv`

@@ -22,12 +22,86 @@ from _lib import (
 
 
 DEFAULT_CONFIG_PATH = PROJECT_ROOT / "overrides" / "journalization_config.yml"
+DEFAULT_INVENTORY_OVERRIDES_PATH = PROJECT_ROOT / "overrides" / "inventory_overrides.yml"
 
 
 def load_config(path: Path) -> dict:
     if not path.exists():
         return {}
     return load_yaml(path)
+
+
+def load_inventory_overrides(path: Path) -> dict:
+    """
+    Optional repo-local overrides for inventory totals.
+
+    This lets us avoid editing upstream inventory CSVs (which are external to this repo),
+    while still producing deterministic journals + an audit trail.
+    """
+    if not path.exists():
+        return {}
+    data = load_yaml(path)
+    if not isinstance(data, dict):
+        return {}
+    return data
+
+
+def get_fy_override_total_cents(overrides: dict, *, fy: str) -> tuple[bool, int | None, str]:
+    """
+    Returns (enabled, closing_inventory_total_cents, allocation_strategy).
+    """
+    fy_cfg = {}
+    if isinstance(overrides.get("fiscal_years"), dict):
+        fy_cfg = overrides["fiscal_years"].get(fy) or {}
+    if not isinstance(fy_cfg, dict):
+        fy_cfg = {}
+
+    enabled = bool(fy_cfg.get("enabled") is True)
+    total = fy_cfg.get("closing_inventory_total_cents")
+    try:
+        total_cents = int(total) if total is not None else None
+    except Exception:
+        total_cents = None
+    strategy = str(fy_cfg.get("allocation_strategy") or "proportional_to_source").strip() or "proportional_to_source"
+    return enabled, total_cents, strategy
+
+
+def scale_allocation_to_total(by_inv: dict[str, int], *, target_total_cents: int) -> dict[str, int]:
+    """
+    Deterministically scale an existing allocation dict to a new total.
+
+    Uses integer math, floors each scaled bucket, and assigns any remainder to 1200.
+    """
+    if target_total_cents <= 0:
+        return {}
+    base_total = sum(int(v) for v in by_inv.values())
+    if base_total <= 0:
+        return {"1200": int(target_total_cents)}
+
+    out: dict[str, int] = {}
+    running = 0
+    for inv_acct, cents in sorted(by_inv.items()):
+        # floor to cents to avoid floating point drift
+        scaled = (int(cents) * int(target_total_cents)) // int(base_total)
+        if scaled:
+            out[inv_acct] = int(scaled)
+            running += int(scaled)
+
+    remainder = int(target_total_cents) - running
+    if remainder:
+        out["1200"] = out.get("1200", 0) + remainder
+
+    # Drop any zeros after remainder adjustment.
+    return {k: v for k, v in out.items() if v != 0}
+
+
+def allocation_from_fy2025_mix(
+    inv25_by_inv: dict[str, int], *, target_total_cents: int
+) -> dict[str, int]:
+    """
+    Allocate using FY2025 bucket distribution as a proxy mix.
+    """
+    return scale_allocation_to_total(inv25_by_inv, target_total_cents=target_total_cents)
 
 
 def cents_to_dollars(cents: int) -> str:
@@ -166,6 +240,7 @@ def main() -> int:
     ap.add_argument("--db", type=Path, default=DB_PATH)
     ap.add_argument("--out-dir", type=Path, default=PROJECT_ROOT / "output")
     ap.add_argument("--config", type=Path, default=DEFAULT_CONFIG_PATH)
+    ap.add_argument("--inventory-overrides", type=Path, default=DEFAULT_INVENTORY_OVERRIDES_PATH)
     ap.add_argument("--reset", action="store_true", help="Delete existing inventory journals before insert.")
     ap.add_argument("--inv-fy2024-source-key", default="inventory_count_fy2024_may31_estimated_csv")
     ap.add_argument("--inv-fy2025-source-key", default="inventory_count_fy2025_may16_csv")
@@ -194,9 +269,28 @@ def main() -> int:
     inv24_total, inv24_by_inv = parse_inventory_category_totals(inv24_path)
     inv25_total, inv25_by_inv = parse_inventory_category_totals(inv25_path)
 
+    inv_overrides = load_inventory_overrides(args.inventory_overrides)
+    inv24_override_enabled, inv24_override_total, inv24_override_strategy = get_fy_override_total_cents(
+        inv_overrides, fy=fy2024.fy
+    )
+    inv24_used_total = inv24_total
+    inv24_used_by_inv = dict(inv24_by_inv)
+
+    if inv24_override_enabled:
+        if not inv24_override_total or inv24_override_total <= 0:
+            raise SystemExit(
+                f"Inventory override enabled for {fy2024.fy}, but closing_inventory_total_cents is missing/invalid"
+            )
+        inv24_used_total = int(inv24_override_total)
+        if inv24_override_strategy == "use_fy2025_mix":
+            inv24_used_by_inv = allocation_from_fy2025_mix(inv25_by_inv, target_total_cents=inv24_used_total)
+        else:
+            inv24_used_by_inv = scale_allocation_to_total(inv24_by_inv, target_total_cents=inv24_used_total)
+
     args.out_dir.mkdir(parents=True, exist_ok=True)
     out_summary_md = args.out_dir / "inventory_journal_summary.md"
     out_detail_csv = args.out_dir / "inventory_journal_detail.csv"
+    out_override_audit_csv = args.out_dir / "inventory_override_audit.csv"
 
     conn = connect_db(args.db)
     try:
@@ -210,16 +304,18 @@ def main() -> int:
         posted = 0
 
         # FY2024 closing inventory (asset up / COGS down)
-        if inv24_total > 0:
+        if inv24_used_total > 0:
             lines: list[tuple[str, int, int, str]] = []
-            for inv_acct, cents in sorted(inv24_by_inv.items()):
+            for inv_acct, cents in sorted(inv24_used_by_inv.items()):
                 cogs = inventory_account_to_cogs_account(inv_acct)
                 if cents > 0:
                     lines.append((inv_acct, cents, 0, "Closing inventory (FY2024)"))
                     lines.append((cogs, 0, cents, "COGS adjustment for closing inventory (FY2024)"))
 
             je_id = "INVENTORY_CLOSE_FY2024"
-            notes = f"source={inv24_path}; inventory_total_cents={inv24_total}"
+            notes = f"source={inv24_path}; inventory_total_cents={inv24_used_total}"
+            if inv24_override_enabled:
+                notes += f"; override_total_cents={inv24_override_total}; strategy={inv24_override_strategy}"
             post_inventory_entry(
                 conn,
                 je_id=je_id,
@@ -238,22 +334,24 @@ def main() -> int:
                     "fy": fy2024.fy,
                     "entry_date": fy2024.end_date,
                     "entry_kind": "CLOSE",
-                    "inventory_total": cents_to_dollars(inv24_total),
+                    "inventory_total": cents_to_dollars(inv24_used_total),
                     "journal_entry_id": je_id,
                 }
             )
 
         # FY2025 opening inventory reversal (COGS up / asset down)
-        if inv24_total > 0:
+        if inv24_used_total > 0:
             lines = []
-            for inv_acct, cents in sorted(inv24_by_inv.items()):
+            for inv_acct, cents in sorted(inv24_used_by_inv.items()):
                 cogs = inventory_account_to_cogs_account(inv_acct)
                 if cents > 0:
                     lines.append((cogs, cents, 0, "Opening inventory (FY2025)"))
                     lines.append((inv_acct, 0, cents, "Reverse prior closing inventory (FY2025 opening)"))
 
             je_id = "INVENTORY_OPEN_FY2025"
-            notes = f"source_opening={inv24_path}; opening_inventory_total_cents={inv24_total}"
+            notes = f"source_opening={inv24_path}; opening_inventory_total_cents={inv24_used_total}"
+            if inv24_override_enabled:
+                notes += f"; override_total_cents={inv24_override_total}; strategy={inv24_override_strategy}"
             post_inventory_entry(
                 conn,
                 je_id=je_id,
@@ -272,7 +370,7 @@ def main() -> int:
                     "fy": fy2025.fy,
                     "entry_date": fy2025.start_date,
                     "entry_kind": "OPEN",
-                    "inventory_total": cents_to_dollars(inv24_total),
+                    "inventory_total": cents_to_dollars(inv24_used_total),
                     "journal_entry_id": je_id,
                 }
             )
@@ -317,13 +415,66 @@ def main() -> int:
             w.writeheader()
             w.writerows(detail_rows)
 
+        # Inventory override audit (always emit, even if overrides are disabled)
+        with out_override_audit_csv.open("w", encoding="utf-8", newline="") as f:
+            fieldnames = [
+                "fy",
+                "source_path",
+                "source_total",
+                "used_total",
+                "override_enabled",
+                "override_total",
+                "allocation_strategy",
+                "scaling_factor",
+                "inventory_account",
+                "source_bucket_total",
+                "used_bucket_total",
+                "bucket_delta",
+            ]
+            w = csv.DictWriter(f, fieldnames=fieldnames)
+            w.writeheader()
+
+            source_total = int(inv24_total)
+            used_total = int(inv24_used_total)
+            scaling_factor = (used_total / source_total) if source_total else 0.0
+
+            accounts = set(inv24_by_inv.keys()) | set(inv24_used_by_inv.keys())
+            for inv_acct in sorted(accounts):
+                src = int(inv24_by_inv.get(inv_acct, 0))
+                used = int(inv24_used_by_inv.get(inv_acct, 0))
+                w.writerow(
+                    {
+                        "fy": fy2024.fy,
+                        "source_path": str(inv24_path),
+                        "source_total": cents_to_dollars(source_total),
+                        "used_total": cents_to_dollars(used_total),
+                        "override_enabled": "true" if inv24_override_enabled else "false",
+                        "override_total": cents_to_dollars(int(inv24_override_total or 0))
+                        if inv24_override_enabled
+                        else "",
+                        "allocation_strategy": inv24_override_strategy if inv24_override_enabled else "",
+                        "scaling_factor": f"{scaling_factor:.6f}" if source_total else "",
+                        "inventory_account": inv_acct,
+                        "source_bucket_total": cents_to_dollars(src),
+                        "used_bucket_total": cents_to_dollars(used),
+                        "bucket_delta": cents_to_dollars(used - src),
+                    }
+                )
+
         with out_summary_md.open("w", encoding="utf-8") as f:
             f.write("# Inventory journals\n\n")
             f.write(f"- FY2024 closing inventory source: `{inv24_path}`\n")
             f.write(f"- FY2025 closing inventory source: `{inv25_path}`\n")
             f.write(f"- Journal entries posted: {posted}\n")
-            f.write(f"- FY2024 closing inventory total: ${cents_to_dollars(inv24_total)}\n")
+            if inv24_override_enabled:
+                f.write(
+                    f"- FY2024 closing inventory total: ${cents_to_dollars(inv24_used_total)} "
+                    f"(override enabled; source total was ${cents_to_dollars(inv24_total)})\n"
+                )
+            else:
+                f.write(f"- FY2024 closing inventory total: ${cents_to_dollars(inv24_total)}\n")
             f.write(f"- FY2025 closing inventory total: ${cents_to_dollars(inv25_total)}\n")
+            f.write(f"- Override audit: `{out_override_audit_csv}`\n")
 
         conn.commit()
 
@@ -339,4 +490,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

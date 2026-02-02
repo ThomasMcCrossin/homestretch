@@ -1,0 +1,4 @@
+fy,source_path,source_total,used_total,override_enabled,override_total,allocation_strategy,scaling_factor,inventory_account,source_bucket_total,used_bucket_total,bucket_delta
+FY2024,/home/clarencehub/curlys-books/t2-filing-fy2024-fy2025/data/Canteen Inventory May 31 2024 - Estimated.csv,2847.23,2847.23,false,,,1.000000,1200,1718.73,1718.73,0.00
+FY2024,/home/clarencehub/curlys-books/t2-filing-fy2024-fy2025/data/Canteen Inventory May 31 2024 - Estimated.csv,2847.23,2847.23,false,,,1.000000,1210,312.50,312.50,0.00
+FY2024,/home/clarencehub/curlys-books/t2-filing-fy2024-fy2025/data/Canteen Inventory May 31 2024 - Estimated.csv,2847.23,2847.23,false,,,1.000000,1230,816.00,816.00,0.00

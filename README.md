@@ -79,12 +79,17 @@ Everything else should be generated from those files.
 
 Run order (FY2024/FY2025):
 1) `python3 UfileToFill/ufile_packet/tools/refresh_packet_from_current_state.py`
+   - Rebuilds inventory journals + trial balance + readiness report
    - Rebuilds Schedule 8 + book overlay + schedule exports
    - Creates a fresh project snapshot under `output/snapshots/<stamp>/`
    - Rebuilds `UfileToFill/ufile_packet/packet.json` from that snapshot
    - Validates the packet and regenerates per-year fill guides
 
 Manual (equivalent) steps:
+0) (If needed) inventory journals + TB:
+   - `python3 scripts/90_build_inventory_journals.py --reset`
+   - `python3 scripts/80_build_trial_balance.py`
+   - `python3 scripts/82_build_readiness_report.py`
 1) `python3 scripts/91b_build_cca_schedule_8.py`
 2) `python3 scripts/91c_build_book_fixed_asset_overlay.py`
 3) `python3 scripts/91_build_t2_schedule_exports.py --book-fixed-assets overlay`
@@ -100,3 +105,17 @@ Outputs:
 Mode toggle:
 - `--book-fixed-assets off` (default) keeps Option 2 behavior (tax-only CCA; capital items remain expensed in books)
 - `--book-fixed-assets overlay` applies the book fixed-asset overlay (Option 1)
+
+## Optional: FY2024 inventory total override (without editing external CSVs)
+
+FY2024 inventory is sourced from an external CSV (see `manifest/sources.yml`). If you need to restate the **total**
+while keeping this repo self-contained and auditable:
+
+1) Edit `overrides/inventory_overrides.yml` and set:
+   - `fiscal_years.FY2024.enabled: true`
+   - `fiscal_years.FY2024.closing_inventory_total_cents: <your cents>`
+
+2) Run `python3 UfileToFill/ufile_packet/tools/refresh_packet_from_current_state.py`
+
+Evidence:
+- `output/inventory_override_audit.csv` (and the snapshot copy) documents source totals vs used totals + allocation deltas.
