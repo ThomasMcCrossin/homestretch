@@ -14,3 +14,14 @@ __pycache__/
 
 # Local / ad-hoc filing attempt exports (do not commit duplicates of CRA packages)
 taxattemps/
+
+# UFile attempts / exports / parses / artifacts (keep local, never commit)
+UfileToFill/ufile_packet/years/*/attempts/
+T2Analysis/t2_attempts/**/exports/
+T2Analysis/t2_attempts/**/parses/
+T2Analysis/t2_attempts/**/attempt_*/
+T2Analysis/diffs/*attempt*
+
+# Large binary artifacts
+*.pdf
+!Asset Info/**
