@@ -1,0 +1,103 @@
+Product,Category,Quantity,Unit Cost,Total,Notes
+,,,,5129.04,"ESTIMATE: FY2024 ending inventory derived from FY2025 physical count item list, scaled down; target_center=$5137.00 band=[5087.00,5187.00]."
+,Beverages,,,475.38,Scaled from FY2025 item list; quantities rounded where applicable.
+Alani Energy,Beverages,1,1.666667,1.67,rounded qty
+Alani Protein,Beverages,8,2,16.00,rounded qty
+Big 8 Water,Beverages,13,0.291667,3.79,rounded qty
+Biosteel,Beverages,32,1.458333,46.67,rounded qty
+Bottles of Pop,Beverages,94,1.375,129.25,rounded qty
+Cans of Pop,Beverages,226,0.666667,150.67,rounded qty
+Gatorade,Beverages,37,1.333333,49.33,rounded qty
+Oasis Juice,Beverages,10,0.5,5.00,rounded qty
+Premier Protein,Beverages,18,1.666667,30.00,rounded qty
+Redbull,Beverages,12,1.75,21.00,rounded qty
+Starburst Drinks,Beverages,4,0.5,2.00,rounded qty
+Sunny D,Beverages,20,1,20.00,rounded qty
+,Condiments,,,329.26,Scaled from FY2025 item list; quantities rounded where applicable.
+4L Bottles of Sauce,Condiments,4,28,112.00,rounded qty
+Bottles of Ranch,Condiments,6,6,36.00,rounded qty
+Bottles of Salt,Condiments,5,1.666667,8.33,rounded qty
+Can of Ketchup,Condiments,1,9,9.00,rounded qty
+Cranberry Sauce,Condiments,91,0.28505,25.94,rounded qty
+Ketchup Large Bottle,Condiments,2,5,10.00,rounded qty
+Malt Vinegar,Condiments,103,0.0597,6.15,rounded qty
+Mustard Packets,Condiments,214,0.040258,8.62,rounded qty
+Pepper Portion,Condiments,2359,0.00667,15.73,rounded qty
+Raw Sugar,Condiments,513,0.0347,17.80,rounded qty
+Relish,Condiments,260,0.07802,20.29,rounded qty
+Salt,Condiments,4360,0.004647,20.26,rounded qty
+Sour Cream,Condiments,16,0.427396,6.84,rounded qty
+Splenda,Condiments,46,0.04102,1.89,rounded qty
+Sugar Portion,Condiments,205,0.017195,3.52,rounded qty
+Sweet and Sour Packs,Condiments,68,0.2405,16.35,rounded qty
+White Vinegar,Condiments,256,0.04116,10.54,rounded qty
+,Disposables,,,1030.83,Scaled from FY2025 item list; quantities rounded where applicable.
+10 oz Containers,Disposables,51,0.1,5.10,rounded qty
+2oz Portion Plastic Cups,Disposables,256,0.019668,5.04,rounded qty
+2Oz Portion Plastic Lids,Disposables,333,0.0174,5.79,rounded qty
+3oz disposable cups,Disposables,256,0.049153,12.58,rounded qty
+3oz lids,Disposables,641,0.049865,31.96,rounded qty
+5lb bags,Disposables,1026,0.03796,38.95,rounded qty
+6x6 containers,Disposables,641,0.26974,172.90,rounded qty
+8oz cups,Disposables,308,0.11403,35.12,rounded qty
+8oz lids,Disposables,308,0.07048,21.71,rounded qty
+8x8 Containers,Disposables,385,0.5378,207.05,rounded qty
+Coffee Cups,Disposables,436,0.12705,55.39,rounded qty
+Coffee Lids,Disposables,256,0.10882,27.86,rounded qty
+Coffee Stirrers,Disposables,2565,0.007206,18.48,rounded qty
+Drink Trays,Disposables,123,0.146667,18.04,rounded qty
+hot dog holders,Disposables,1128,0.048,54.14,rounded qty
+Jr Napkins,Disposables,769,0.025,19.23,rounded qty
+Nacho Trays,Disposables,154,0.37246,57.36,rounded qty
+Oil Filters,Disposables,180,0.35754,64.36,rounded qty
+Paper Portion Cup,Disposables,2308,0.035146,81.12,rounded qty
+Plates,Disposables,64,0.8,51.20,rounded qty
+US Forks,Disposables,1026,0.03,30.78,rounded qty
+Ziploc Bags,Disposables,5,3.333333,16.67,rounded qty
+,Dry Food,,,367.24,Scaled from FY2025 item list; quantities rounded where applicable.
+Canola Oil,Dry Food,2,48,96.00,rounded qty
+Chilli,Dry Food,2,2,4.00,rounded qty
+Costco Chicken,Dry Food,12,3.165,37.98,rounded qty
+Fry Powder,Dry Food,0.13,100,13.00,rounded qty
+Gravy,Dry Food,11,5.60875,61.70,rounded qty
+Green Tea,Dry Food,5,1.2,6.00,rounded qty
+House Blend Coffee,Dry Food,3,18,54.00,rounded qty
+Kirkland K-Cups,Dry Food,66,0.36,23.76,rounded qty
+Lemon Juice,Dry Food,2,3,6.00,rounded qty
+Spices,Dry Food,1,40,40.00,rounded qty
+Sugar (2kg),Dry Food,1,4,4.00,rounded qty
+Tallow,Dry Food,0.26,80,20.80,rounded qty
+,Frozen,,,655.27,Scaled from FY2025 item list; quantities rounded where applicable.
+Breakfast Wraps,Frozen,1,17.99,17.99,rounded qty
+Chicken Strips,Frozen,13,8.9975,116.97,rounded qty
+Crinkle Cut Fries,Frozen,6,8.611667,51.67,rounded qty
+Fries,Frozen,5,6.673333,33.37,rounded qty
+Hashbrowns,Frozen,1,7.99,7.99,rounded qty
+Mozza Bites,Frozen,13,18.99,246.87,rounded qty
+Onion Rings,Frozen,3,22.52,67.56,rounded qty
+Pepperoni (Large),Frozen,6,16.99,101.94,rounded qty
+Sweet Potato Fries,Frozen,1,10.912,10.91,rounded qty
+,Snacks,,,2271.06,Scaled from FY2025 item list; quantities rounded where applicable.
+$1 bin,Snacks,41,0.4,16.40,rounded qty
+50 cent bin,Snacks,77,0.2,15.40,rounded qty
+Bags of Candy (Kg),Snacks,109,12,1308.00,rounded qty
+Caramel Apple Suckers,Snacks,40,0.833333,33.33,rounded qty
+Chocolate Bars,Snacks,359,1,359.00,rounded qty
+Chupa Suckers,Snacks,31,0.15,4.65,rounded qty
+Cutie Roller,Snacks,15,1.466667,22.00,rounded qty
+Double Rocket Loli,Snacks,37,0.384615,14.23,rounded qty
+Excel Gum,Snacks,21,0.740741,15.56,rounded qty
+Go go Squeeze,Snacks,51,0.4,20.40,rounded qty
+Goldfish,Snacks,12,0.583333,7.00,rounded qty
+Halls,Snacks,31,1.3,40.30,rounded qty
+Haribo Bags,Snacks,31,2.4,74.40,rounded qty
+Hot Rods,Snacks,18,0.333333,6.00,rounded qty
+Large Bag Hichew,Snacks,2,12,24.00,rounded qty
+Liquid IV,Snacks,21,1,21.00,rounded qty
+Mega Sour Spray,Snacks,49,1.333333,65.33,rounded qty
+Nerd Ropes,Snacks,12,1.166667,14.00,rounded qty
+Pickles in Pouch,Snacks,37,1.5,55.50,rounded qty
+Pushpop,Snacks,26,1,26.00,rounded qty
+ring pops,Snacks,37,0.533333,19.73,rounded qty
+Skittles,Snacks,37,1.833333,67.83,rounded qty
+Yoohoo bars,Snacks,205,0.2,41.00,rounded qty

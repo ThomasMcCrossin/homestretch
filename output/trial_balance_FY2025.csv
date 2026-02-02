@@ -16,20 +16,20 @@ FY2025,2700,Payroll Liabilities - CPP,liability,2620,,202.07,0.00,20207
 FY2025,2710,Payroll Liabilities - EI,liability,2620,,20.86,0.00,2086
 FY2025,2720,Payroll Liabilities - Income Tax,liability,2620,,0.00,272.64,-27264
 FY2025,3000,Share Capital (Corp only),equity,3500,,0.00,100.00,-10000
-FY2025,3100,Retained Earnings,equity,3600,,0.00,16665.62,-1666562
+FY2025,3100,Retained Earnings,equity,3600,,0.00,18947.43,-1894743
 FY2025,3400,Dividends Declared,equity,3600,,36900.00,0.00,3690000
 FY2025,4000,Sales - Food,revenue,8000,8000,0.00,80379.30,-8037930
 FY2025,4030,Sales - Retail Goods,revenue,8000,8000,0.00,275.60,-27560
 FY2025,4090,Income - To Be Reviewed,revenue,8000,,0.00,5.00,-500
 FY2025,4100,Sales - Online (Shopify),revenue,8000,8000,0.00,151676.17,-15167617
 FY2025,4900,Sales Returns & Allowances,revenue,8000,,1429.50,0.00,142950
-FY2025,5000,COGS - Food,expense,8518,8518,55139.55,0.00,5513955
+FY2025,5000,COGS - Food,expense,8518,8518,55803.42,0.00,5580342
 FY2025,5002,COGS - Food - Sandwiches,expense,8518,8518,706.44,0.00,70644
 FY2025,5004,COGS - Food - Frozen,expense,8518,8518,15685.16,0.00,1568516
 FY2025,5005,COGS - Food - Bakery,expense,8518,8518,596.23,0.00,59623
 FY2025,5006,COGS - Food - Dairy,expense,8518,8518,269.55,0.00,26955
 FY2025,5007,COGS - Food - Meat/Deli,expense,8518,8518,1817.53,0.00,181753
-FY2025,5010,COGS - Beverage,expense,8518,8518,0.00,536.89,-53689
+FY2025,5010,COGS - Beverage,expense,8518,8518,0.00,374.01,-37401
 FY2025,5011,COGS - Beverage - Soda,expense,8518,8518,1833.58,0.00,183358
 FY2025,5012,COGS - Beverage - Water,expense,8518,8518,782.72,0.00,78272
 FY2025,5013,COGS - Beverage - Energy Drinks,expense,8518,8518,931.13,0.00,93113
@@ -37,7 +37,7 @@ FY2025,5014,COGS - Beverage - Sports Drinks,expense,8518,8518,7683.38,0.00,76833
 FY2025,5016,COGS - Beverage - Coffee/Tea,expense,8518,8518,584.26,0.00,58426
 FY2025,5017,COGS - Beverage - Milk Products,expense,8518,8518,63.54,0.00,6354
 FY2025,5021,COGS - Supplements - Protein,expense,8518,8518,476.86,0.00,47686
-FY2025,5030,COGS - Retail Goods,expense,8518,8518,0.00,3595.06,-359506
+FY2025,5030,COGS - Retail Goods,expense,8518,8518,0.00,2140.00,-214000
 FY2025,5031,COGS - Retail - Snacks/Chips,expense,8518,8518,117.62,0.00,11762
 FY2025,5032,COGS - Retail - Candy/Chocolate,expense,8518,8518,9166.92,0.00,916692
 FY2025,5033,COGS - Retail - Health Products,expense,8518,8518,190.72,0.00,19072

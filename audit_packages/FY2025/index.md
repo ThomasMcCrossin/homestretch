@@ -2,8 +2,8 @@
 Entity: **14587430 Canada Inc. (Curly's Canteen)**
 BN: **748003142RC0001**
 Period: **2024-06-01 to 2025-05-31**
-Snapshot source: `output/snapshots/20260202-213000/output/`
-Packet generated at: `2026-02-02T21:07:00Z`
+Snapshot source: `output/snapshots/20260202-231500/output/`
+Packet generated at: `2026-02-02T21:38:17Z`
 This folder is **working-paper support**. It is not necessarily entered into UFile unless a screen explicitly asks.
 ## Year-end highlights
 | Item | Amount (dollars) |

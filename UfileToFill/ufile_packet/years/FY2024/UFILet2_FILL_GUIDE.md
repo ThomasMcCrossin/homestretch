@@ -194,7 +194,7 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 | GIFI | Description | Amount | Note |
 |---|---|---|---|
 | 1001 | Cash | 26,292 |  |
-| 1121 | Inventory of goods for sale | 2,847 |  |
+| 1121 | Inventory of goods for sale | 5,129 |  |
 | 1484 | Prepaid expenses | 649 |  |
 | 1740 | Machinery, equipment, furniture and fixtures | 2,298 |  |
 | 1741 | Accum amort - machinery/equip/furn/fixtures | -508 |  |
@@ -214,10 +214,10 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 | GIFI | Description | Amount | Entry rule |
 |---|---|---|---|
 | 3660 | Retained earnings/deficit - Start | 0 | Enter (opening RE) |
-| 3680 | Net income/loss | 18,456 | Enter (net income/loss) |
+| 3680 | Net income/loss | 20,738 | Enter (net income/loss) |
 | 3700 |  | 0 | Enter (dividends declared) |
 | 3740 |  | 0 | Enter only if needed (rounding/other) |
-| 3849 | Retained earnings/deficit - End | 18,456 | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
+| 3849 | Retained earnings/deficit - End | 20,738 | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
 
 ### Shareholder loans / balances support (working papers)
 CRA frequently asks for support for any due-from-shareholder / due-to-shareholder amounts. Keep the continuity below with your filing package.
@@ -258,16 +258,16 @@ UFile entry tip: do not enter both `2780` and `2781` for the same payable; that 
 ### Tie-check (display-only totals)
 | GIFI | Description | Amount |
 |---|---|---|
-| 1599 | Total current assets (expected) | 31,578 |
-| 2599 | Total assets | 31,578 |
-| 3640 | Total liabilities and shareholder equity | 31,578 |
+| 1599 | Total current assets (expected) | 33,860 |
+| 2599 | Total assets | 33,860 |
+| 3640 | Total liabilities and shareholder equity | 33,860 |
 
 ## Income statement (GIFI Schedule 125)
 | GIFI | Description | Amount | Note |
 |---|---|---|---|
 | 8300 | Opening inventory | 0 |  |
 | 8320 | Purchases / cost of materials | 111,220 | If UFile auto-calculates 8320, do NOT type it; use as a tie-check only. Otherwise enter it. Computation: purchases = 8518 - 8300 + 8500. |
-| 8500 | Closing inventory | 2,847 |  |
+| 8500 | Closing inventory | 5,129 |  |
 | 8000 | Trade sales of goods and services | 181,235 |  |
 | 8520 | Advertising and promotion | 1,606 |  |
 | 8523 | Meals and entertainment | 518 | 50% add-back = $259 |
@@ -306,8 +306,8 @@ This is informational only (UFile entry is the whole-dollar amount shown on Sche
 ### Cost of sales tie-check (display-only)
 | GIFI | Description | Amount |
 |---|---|---|
-| 8518 | Cost of sales (expected) | 108,373 |
-| 8519 | Gross profit/loss (expected) | 72,862 |
+| 8518 | Cost of sales (expected) | 106,091 |
+| 8519 | Gross profit/loss (expected) | 75,144 |
 
 ## Notes checklist (UFile screen)
 ### Checklist (recommended minimal)
@@ -357,7 +357,7 @@ There have been no subsequent events requiring adjustment to these financial sta
 ## Net income (UFile screen)
 | Field | Value | Note |
 |---|---|---|
-| Net income as per financial statements | 18,456 | Should auto-fill from GIFI; otherwise enter from Schedule 1 code A. |
+| Net income as per financial statements | 20,738 | Should auto-fill from GIFI; otherwise enter from Schedule 1 code A. |
 | Total sales of corporation during this taxation year | 181,235 | Use total revenue (sum of revenue lines; typically matches trade sales 8000). |
 | Total gross revenues | 181,235 | Usually same as total sales for your file. |
 
@@ -367,8 +367,8 @@ If UFile auto-populates these from GIFI, do not add manual “additions/deductio
 | Field | Value | Note |
 |---|---|---|
 | Eligible for capital tax exemption? | Yes | For your file, expect capital tax exemption; confirm if UFile still requests fields. |
-| Total assets at year-end date from financial statements | 31,578 | If required, use Schedule 100 total assets (GIFI 2599). |
-| Retained earnings/deficit at year-end (if required) | 18,456 | If UFile forces a retained earnings element, use Schedule 100 GIFI 3600. |
+| Total assets at year-end date from financial statements | 33,860 | If required, use Schedule 100 total assets (GIFI 2599). |
+| Retained earnings/deficit at year-end (if required) | 20,738 | If UFile forces a retained earnings element, use Schedule 100 GIFI 3600. |
 
 ## Status change for the corporation (UFile screen)
 No status change; leave blank.
@@ -392,7 +392,7 @@ Expected source for this file: **active business income only** (canteen operatio
 ### Schedule 1 (tax purposes)
 | Code | Description | Amount | Calculation |
 |---|---|---|---|
-| A | Net income (loss) per financial statements | 18,456 |  |
+| A | Net income (loss) per financial statements | 20,738 |  |
 | 104 | Accounting amortization | 508 |  |
 | 121 | Non-deductible meals and entertainment (50%) | 259 |  |
 | 128 | Non-deductible fines and penalties | 71 |  |
@@ -400,7 +400,7 @@ Expected source for this file: **active business income only** (canteen operatio
 | 403 | Capital cost allowance (Schedule 8) | 508 |  |
 | 500 | Total additions | 838 |  |
 | 510 | Total deductions | 508 |  |
-| C | Net income (loss) for tax purposes | 18,786 |  |
+| C | Net income (loss) for tax purposes | 21,068 |  |
 Note: If UFile auto-populates Schedule 1 line 403 from Schedule 8, do **not** manually enter 403 in the Schedule 1 grid.
 CCA is entered on the **Capital cost allowance** screen from Schedule 8 (total CCA claimed: 508).
 

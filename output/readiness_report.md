@@ -12,7 +12,7 @@ This is a snapshot-style status report intended to highlight what is complete, a
 
 ### FY2024 (2023-06-01 → 2024-05-31)
 
-- Net income: $16665.62
+- Net income: $18947.43
 - Cash (1000+1070): $26291.52
 - Accounts payable (2000): $3198.24 (CR)
 - Due to shareholder Thomas (2400): $2669.99 (CR)
@@ -21,7 +21,7 @@ This is a snapshot-style status report intended to highlight what is complete, a
 
 ### FY2025 (2024-06-01 → 2025-05-31)
 
-- Net income: $31084.90
+- Net income: $28803.09
 - Cash (1000+1070): $12471.83
 - Accounts payable (2000): $7135.87 (CR)
 - Due to shareholder Thomas (2400): $3403.90 (CR)
@@ -73,5 +73,5 @@ Non-bank adjustments impacting `2500` (review as needed):
 
 - Credit card purchases are intentionally NOT journalized (Wave bills remain the expense source-of-truth).
 - CC payments clear `2410` (due-to Dwayne); any debit balance in `2410` represents net owed back to the corp (optionally reclass to `2500`).
-- Inventory balances posted (1200, 1210, 1220, 1230): FY2024 $2847.23, FY2025 $10015.47.
+- Inventory balances posted (1200, 1210, 1220, 1230): FY2024 $5129.04, FY2025 $10015.47.
 - No fixed-asset balances detected on Schedule 100, but CCA must be assessed separately via the tax asset register (`overrides/cca_assets.yml`) and Schedule 8 outputs.

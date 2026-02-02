@@ -1,9 +1,9 @@
 fy,account_code,account_name,account_type,gifi_code,t2125_line,debit,credit,net_cents
 FY2024,1000,Business Bank - CIBC Chequing,asset,1001,,25991.52,0.00,2599152
 FY2024,1070,Cash on Hand,asset,1001,,300.00,0.00,30000
-FY2024,1200,Inventory - Food,asset,1121,,1718.73,0.00,171873
-FY2024,1210,Inventory - Beverage,asset,1121,,312.50,0.00,31250
-FY2024,1230,Inventory - Retail Goods,asset,1121,,816.00,0.00,81600
+FY2024,1200,Inventory - Food,asset,1121,,2382.60,0.00,238260
+FY2024,1210,Inventory - Beverage,asset,1121,,475.38,0.00,47538
+FY2024,1230,Inventory - Retail Goods,asset,1121,,2271.06,0.00,227106
 FY2024,1300,Prepaid Expenses,asset,1484,,649.16,0.00,64916
 FY2024,2000,Accounts Payable,liability,2620,,0.00,3198.24,-319824
 FY2024,2200,HST Payable,liability,2680,,0.00,9060.18,-906018
@@ -18,13 +18,13 @@ FY2024,4000,Sales - Food,revenue,8000,8000,0.00,66970.60,-6697060
 FY2024,4090,Income - To Be Reviewed,revenue,8000,,0.00,0.14,-14
 FY2024,4100,Sales - Online (Shopify),revenue,8000,8000,0.00,114419.12,-11441912
 FY2024,4900,Sales Returns & Allowances,revenue,8000,,154.99,0.00,15499
-FY2024,5000,COGS - Food,expense,8518,8518,50351.24,0.00,5035124
+FY2024,5000,COGS - Food,expense,8518,8518,49687.37,0.00,4968737
 FY2024,5002,COGS - Food - Sandwiches,expense,8518,8518,734.39,0.00,73439
 FY2024,5004,COGS - Food - Frozen,expense,8518,8518,18496.19,0.00,1849619
 FY2024,5005,COGS - Food - Bakery,expense,8518,8518,619.83,0.00,61983
 FY2024,5006,COGS - Food - Dairy,expense,8518,8518,237.95,0.00,23795
 FY2024,5007,COGS - Food - Meat/Deli,expense,8518,8518,1662.31,0.00,166231
-FY2024,5010,COGS - Beverage,expense,8518,8518,0.00,636.97,-63697
+FY2024,5010,COGS - Beverage,expense,8518,8518,0.00,799.85,-79985
 FY2024,5011,COGS - Beverage - Soda,expense,8518,8518,652.51,0.00,65251
 FY2024,5012,COGS - Beverage - Water,expense,8518,8518,579.06,0.00,57906
 FY2024,5013,COGS - Beverage - Energy Drinks,expense,8518,8518,967.95,0.00,96795
@@ -32,7 +32,7 @@ FY2024,5014,COGS - Beverage - Sports Drinks,expense,8518,8518,2819.29,0.00,28192
 FY2024,5016,COGS - Beverage - Coffee/Tea,expense,8518,8518,607.39,0.00,60739
 FY2024,5017,COGS - Beverage - Milk Products,expense,8518,8518,47.00,0.00,4700
 FY2024,5021,COGS - Supplements - Protein,expense,8518,8518,495.72,0.00,49572
-FY2024,5030,COGS - Retail Goods,expense,8518,8518,0.00,936.00,-93600
+FY2024,5030,COGS - Retail Goods,expense,8518,8518,0.00,2391.06,-239106
 FY2024,5031,COGS - Retail - Snacks/Chips,expense,8518,8518,110.26,0.00,11026
 FY2024,5032,COGS - Retail - Candy/Chocolate,expense,8518,8518,10515.53,0.00,1051553
 FY2024,5033,COGS - Retail - Health Products,expense,8518,8518,198.23,0.00,19823

@@ -16,8 +16,8 @@ GIFI_Code,Description,Amount
 3640,Total liabilities and shareholder equity,27731
 8000,Trade sales of goods and services,230907
 8299,Total revenue,230907
-8518,Cost of sales,110174
-8519,Gross profit / loss,120733
+8518,Cost of sales,112456
+8519,Gross profit / loss,118451
 8520,Advertising and promotion,798
 8523,Meals and entertainment,408
 8622,Employers portion of employee benefits,3610
@@ -37,10 +37,10 @@ GIFI_Code,Description,Amount
 9275,"Delivery, freight and express",96
 9281,Vehicle expenses,3510
 9367,Total operating expenses,89726
-9368,Total expenses,199900
-9999,Net income / loss after taxes/extraord item,31007
-3660,Retained earnings / deficit - start,18456
-3680,Net income / loss,31007
+9368,Total expenses,202182
+9999,Net income / loss after taxes/extraord item,28725
+3660,Retained earnings / deficit - start,20738
+3680,Net income / loss,28725
 3700,Dividends declared,36900
 3740,Other items affecting retained earnings (rounding),-1
 3849,Retained earnings / deficit - end,12562

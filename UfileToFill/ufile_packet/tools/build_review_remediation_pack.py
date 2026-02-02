@@ -252,7 +252,7 @@ def main() -> int:
         write_text(out_dir / "inventory_margin_memo.md", inv_md)
         write_text(out_dir / "inventory_margin_memo.html", render_year_guide_html(packet, fy, md_guide=inv_md))
 
-        # --- FY2024 only: plausibility note for "inventory feels higher than sheet total" ---
+        # --- FY2024 only: inventory estimate method note (FY2025-item-based) ---
         if fy == "FY2024":
             src = get_source(manifest, "inventory_count_fy2024_may31_estimated_csv")
             sheet_path = Path(str(src.get("path") or "")).expanduser()
@@ -261,46 +261,33 @@ def main() -> int:
             if sheet_path.exists():
                 sheet_total, by_cat = parse_inventory_sheet_total_and_categories(sheet_path)
 
-            # Explore what would have to be missing to reach the user's mental range.
-            low_target = Decimal("4500")
-            high_target = Decimal("5500")
-            low_gap = (low_target - sheet_total) if sheet_total else Decimal("0")
-            high_gap = (high_target - sheet_total) if sheet_total else Decimal("0")
-
             plaus = []
-            plaus.append("# FY2024 inventory estimate plausibility note (exploration only)")
+            plaus.append("# FY2024 ending inventory estimate note (FY2025-item-based)")
             plaus.append("")
-            plaus.append("Purpose: document reasonable explanations for why management believes FY2024 ending inventory could be higher than the recorded estimate.")
-            plaus.append("This note does **not** change any filed numbers by itself.")
+            plaus.append("Purpose: document how FY2024 ending inventory was estimated for this filing.")
             plaus.append("")
             plaus.append(f"Period: **{ctx.filing_start} to {ctx.end}**")
             plaus.append(f"Snapshot source: `{snapshot_source}`")
             plaus.append("")
-            plaus.append("## What is currently used in the filing package")
+            plaus.append("## What this file does (in plain English)")
+            plaus.append("- FY2024 did not have a physical inventory count.")
+            plaus.append(
+                "- Management estimated FY2024 ending inventory using the FY2025 physical-count item list as a basis, scaled down to a target band."
+            )
+            plaus.append(
+                "- Quantities were rounded to whole numbers for most items (decimals only where the FY2025 source uses decimals)."
+            )
+            plaus.append("")
+            plaus.append("## What is used in the filing package")
             plaus.append(f"- FY2024 closing inventory used: **${closing_inv:,.0f}** (GIFI 1121; journal `INVENTORY_CLOSE_FY2024`).")
             if sheet_total:
-                plaus.append(f"- Source estimate sheet total: **${sheet_total:,.2f}** (`{sheet_path}`).")
+                plaus.append(f"- FY2024 estimate CSV total: **${sheet_total:,.2f}** (`{sheet_path}`).")
             plaus.append("")
             if by_cat:
                 rows = [[k, f"${v:,.2f}"] for k, v in sorted(by_cat.items(), key=lambda kv: kv[0].lower())]
                 plaus.append("### Category totals in the FY2024 estimate sheet")
                 plaus.append(md_table(["Category", "Total"], rows))
                 plaus.append("")
-
-            plaus.append("## How could the true on-hand inventory be ~$4.5k–$5.5k?")
-            if sheet_total:
-                plaus.append(
-                    f"- To reach **$4,500**, the estimate would need to be understated by about **${low_gap:,.2f}**."
-                )
-                plaus.append(
-                    f"- To reach **$5,500**, the estimate would need to be understated by about **${high_gap:,.2f}**."
-                )
-            plaus.append("")
-            plaus.append("Plausible mechanisms (non-exclusive):")
-            plaus.append("- **Missing stock location**: inventory held in a satellite canteen / offsite storage not fully included in the estimate sheet.")
-            plaus.append("- **Conservative scaling**: the estimate sheet notes indicate it was \"scaled down\" vs later year; broad conservatism can understate materially.")
-            plaus.append("- **Omitted categories**: entire buckets (e.g., additional disposables, snacks, frozen, beverages) may not have been captured in the estimate.")
-            plaus.append("")
 
             # A more concrete, CRA-defensible way to think about the number is "days of cost-of-sales on hand".
             # This doesn't prove the exact amount, but it provides a coherent framework for a management estimate.
@@ -313,22 +300,19 @@ def main() -> int:
             if period_days and cogs:
                 daily_cogs = (Decimal(cogs) / Decimal(period_days)).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
 
-            plaus.append("## A defensible estimation framework (days of COGS on hand)")
+            plaus.append("## Estimation framework (days of COGS on hand)")
             if daily_cogs:
                 plaus.append(f"- FY2024 cost of sales (GIFI 8518): **${cogs:,.0f}** across **{period_days}** days.")
                 plaus.append(f"- Average daily COGS: **${daily_cogs:,.2f}/day**.")
                 plaus.append("")
-                plaus.append("If ending inventory is estimated as a certain number of days of typical cost of sales:")
+                plaus.append("For context, the implied days-on-hand at a few inventory totals is:")
                 rows = []
-                for tgt in (Decimal("4500"), Decimal("5000"), Decimal("5500")):
+                for tgt in (Decimal("4500"), Decimal("5000"), Decimal("5137"), Decimal("5500")):
                     days_on_hand = (tgt / daily_cogs).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP) if daily_cogs else Decimal("0")
                     rows.append([f"${tgt:,.0f}", f"{days_on_hand} days"])
                 plaus.append(md_table(["Target ending inventory", "Implied days of COGS on hand"], rows))
                 plaus.append("")
-                plaus.append(
-                    "- For a canteen/concession operation, **~15–18 days of stock** is a coherent management-estimate range, "
-                    "especially if ordering is done in bulk and there is some seasonality."
-                )
+                plaus.append("- The selected FY2024 estimate is intended to be in a coherent management-estimate range (roughly ~15–18 days of stock).")
                 plaus.append("")
                 plaus.append("### Impact on FY2024 profit (pure inventory re-estimate)")
                 plaus.append(
@@ -397,18 +381,13 @@ def main() -> int:
             plaus.append("")
             plaus.append("## Evidence pointers")
             plaus.append(f"- Estimate sheet: `{sheet_path}`")
+            plaus.append(f"- Generator script: `scripts/90a_generate_inventory_estimate_fy2024_from_fy2025.py`")
+            plaus.append(f"- Generator audit: `{PROJECT_ROOT / 'output' / 'inventory_estimate_fy2024_from_fy2025_audit.csv'}`")
             plaus.append(f"- Inventory JE evidence: `{snapshot_source}inventory_journal_detail.csv` and `{snapshot_source}inventory_journal_detail.csv`")
             plaus.append(f"- Override audit (if/when used): `{snapshot_source}inventory_override_audit.csv`")
             plaus.append("")
             plaus.append("## If you choose to restate later (operator-controlled)")
-            plaus.append(
-                "- Prefer the repo-local override mechanism (no edits to external CSVs): set `enabled: true` and "
-                "`closing_inventory_total_cents` in `overrides/inventory_overrides.yml`, then rerun the refresh workflow."
-            )
-            plaus.append(
-                "- The inventory journal builder will scale bucket allocations deterministically and emit an audit file "
-                "showing source totals vs used totals."
-            )
+            plaus.append("- Re-run the generator with a different target center/tolerance, update the manifest sha256, and refresh.")
             plaus.append("- This will cascade deterministically into FY2025 opening inventory (carryforward consistency).")
             plaus.append("")
 

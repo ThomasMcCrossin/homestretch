@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FY2024 inventory estimate plausibility note (exploration only)</title>
+  <title>FY2024 ending inventory estimate note (FY2025-item-based)</title>
   <style>
     :root {
       --paper: #fbf6ea;
@@ -377,9 +377,9 @@
         <input class="search" id="search" type="search" placeholder="Search sections…  (press /)" />
       </div>
       <div class="nav-body" id="nav">
-        <a class="nav-item" href="#what-is-currently-used-in-the-filing-package" data-title="what is currently used in the filing package">What is currently used in the filing package</a>
-<a class="nav-item" href="#how-could-the-true-on-hand-inventory-be-4-5k-5-5k" data-title="how could the true on-hand inventory be ~$4.5k–$5.5k?">How could the true on-hand inventory be ~$4.5k–$5.5k?</a>
-<a class="nav-item" href="#a-defensible-estimation-framework-days-of-cogs-on-hand" data-title="a defensible estimation framework (days of cogs on hand)">A defensible estimation framework (days of COGS on hand)</a>
+        <a class="nav-item" href="#what-this-file-does-in-plain-english" data-title="what this file does (in plain english)">What this file does (in plain English)</a>
+<a class="nav-item" href="#what-is-used-in-the-filing-package" data-title="what is used in the filing package">What is used in the filing package</a>
+<a class="nav-item" href="#estimation-framework-days-of-cogs-on-hand" data-title="estimation framework (days of cogs on hand)">Estimation framework (days of COGS on hand)</a>
 <a class="nav-item" href="#fy2025-physical-count-context-sanity-check" data-title="fy2025 physical count context (sanity check)">FY2025 physical count context (sanity check)</a>
 <a class="nav-item" href="#disposables-policy-note-why-this-matters" data-title="disposables policy note (why this matters)">Disposables policy note (why this matters)</a>
 <a class="nav-item" href="#evidence-pointers" data-title="evidence pointers">Evidence pointers</a>
@@ -390,13 +390,19 @@
     <main class="doc">
       <div class="doc-inner" id="doc">
         <article>
-          <h1>FY2024 inventory estimate plausibility note (exploration only)</h1>
-<p>Purpose: document reasonable explanations for why management believes FY2024 ending inventory could be higher than the recorded estimate. This note does <strong>not</strong> change any filed numbers by itself.</p>
-<p>Period: <strong>2023-06-10 to 2024-05-31</strong> Snapshot source: <code>output/snapshots/20260202-213000/output/</code></p>
-          <section class="sec" id="what-is-currently-used-in-the-filing-package"><h2>What is currently used in the filing package</h2>
+          <h1>FY2024 ending inventory estimate note (FY2025-item-based)</h1>
+<p>Purpose: document how FY2024 ending inventory was estimated for this filing.</p>
+<p>Period: <strong>2023-06-10 to 2024-05-31</strong> Snapshot source: <code>output/snapshots/20260202-231500/output/</code></p>
+          <section class="sec" id="what-this-file-does-in-plain-english"><h2>What this file does (in plain English)</h2>
 <ul>
-<li>FY2024 closing inventory used: <strong>$2,847</strong> (GIFI 1121; journal <code>INVENTORY_CLOSE_FY2024</code>).</li>
-<li>Source estimate sheet total: <strong>$2,847.23</strong> (<code>/home/clarencehub/curlys-books/t2-filing-fy2024-fy2025/data/Canteen Inventory May 31 2024 - Estimated.csv</code>).</li>
+<li>FY2024 did not have a physical inventory count.</li>
+<li>Management estimated FY2024 ending inventory using the FY2025 physical-count item list as a basis, scaled down to a target band.</li>
+<li>Quantities were rounded to whole numbers for most items (decimals only where the FY2025 source uses decimals).</li>
+</ul>
+</section><section class="sec" id="what-is-used-in-the-filing-package"><h2>What is used in the filing package</h2>
+<ul>
+<li>FY2024 closing inventory used: <strong>$5,129</strong> (GIFI 1121; journal <code>INVENTORY_CLOSE_FY2024</code>).</li>
+<li>FY2024 estimate CSV total: <strong>$5,129.04</strong> (<code>/home/clarencehub/t2-final-fy2024-fy2025/data/inventory/Canteen Inventory May 31 2024 - Estimate from FY2025 Items.csv</code>).</li>
 </ul>
 <h3>Category totals in the FY2024 estimate sheet</h3>
 <div class="table-wrap">
@@ -408,48 +414,37 @@
 <tbody>
 <tr>
 <td>Beverages</td>
-<td>$312.50</td>
+<td>$475.38</td>
 </tr>
 <tr>
 <td>Condiments</td>
-<td>$142.18</td>
+<td>$329.26</td>
 </tr>
 <tr>
 <td>Disposables</td>
-<td>$891.38</td>
+<td>$1,030.83</td>
 </tr>
 <tr>
 <td>Dry Food</td>
-<td>$198.45</td>
+<td>$367.24</td>
 </tr>
 <tr>
 <td>Frozen</td>
-<td>$486.72</td>
+<td>$655.27</td>
 </tr>
 <tr>
 <td>Snacks</td>
-<td>$816.00</td>
+<td>$2,271.06</td>
 </tr>
 </tbody>
 </table>
 </div>
-</section><section class="sec" id="how-could-the-true-on-hand-inventory-be-4-5k-5-5k"><h2>How could the true on-hand inventory be ~$4.5k–$5.5k?</h2>
+</section><section class="sec" id="estimation-framework-days-of-cogs-on-hand"><h2>Estimation framework (days of COGS on hand)</h2>
 <ul>
-<li>To reach <strong>$4,500</strong>, the estimate would need to be understated by about <strong>$1,652.77</strong>.</li>
-<li>To reach <strong>$5,500</strong>, the estimate would need to be understated by about <strong>$2,652.77</strong>.</li>
+<li>FY2024 cost of sales (GIFI 8518): <strong>$106,091</strong> across <strong>357</strong> days.</li>
+<li>Average daily COGS: <strong>$297.17/day</strong>.</li>
 </ul>
-<p>Plausible mechanisms (non-exclusive):</p>
-<ul>
-<li><strong>Missing stock location</strong>: inventory held in a satellite canteen / offsite storage not fully included in the estimate sheet.</li>
-<li><strong>Conservative scaling</strong>: the estimate sheet notes indicate it was &quot;scaled down&quot; vs later year; broad conservatism can understate materially.</li>
-<li><strong>Omitted categories</strong>: entire buckets (e.g., additional disposables, snacks, frozen, beverages) may not have been captured in the estimate.</li>
-</ul>
-</section><section class="sec" id="a-defensible-estimation-framework-days-of-cogs-on-hand"><h2>A defensible estimation framework (days of COGS on hand)</h2>
-<ul>
-<li>FY2024 cost of sales (GIFI 8518): <strong>$108,373</strong> across <strong>357</strong> days.</li>
-<li>Average daily COGS: <strong>$303.57/day</strong>.</li>
-</ul>
-<p>If ending inventory is estimated as a certain number of days of typical cost of sales:</p>
+<p>For context, the implied days-on-hand at a few inventory totals is:</p>
 <div class="table-wrap">
 <table>
 <thead><tr>
@@ -459,21 +454,25 @@
 <tbody>
 <tr>
 <td>$4,500</td>
-<td>14.8 days</td>
+<td>15.1 days</td>
 </tr>
 <tr>
 <td>$5,000</td>
-<td>16.5 days</td>
+<td>16.8 days</td>
+</tr>
+<tr>
+<td>$5,137</td>
+<td>17.3 days</td>
 </tr>
 <tr>
 <td>$5,500</td>
-<td>18.1 days</td>
+<td>18.5 days</td>
 </tr>
 </tbody>
 </table>
 </div>
 <ul>
-<li>For a canteen/concession operation, <strong>~15–18 days of stock</strong> is a coherent management-estimate range, especially if ordering is done in bulk and there is some seasonality.</li>
+<li>The selected FY2024 estimate is intended to be in a coherent management-estimate range (roughly ~15–18 days of stock).</li>
 </ul>
 <h3>Impact on FY2024 profit (pure inventory re-estimate)</h3>
 <ul>
@@ -491,21 +490,21 @@
 <tbody>
 <tr>
 <td>$4,500</td>
-<td>+1,653</td>
+<td>-629</td>
 <td>$106,720</td>
 <td>$74,515</td>
 <td>41.12%</td>
 </tr>
 <tr>
 <td>$5,000</td>
-<td>+2,153</td>
+<td>-129</td>
 <td>$106,220</td>
 <td>$75,015</td>
 <td>41.39%</td>
 </tr>
 <tr>
 <td>$5,500</td>
-<td>+2,653</td>
+<td>+371</td>
 <td>$105,720</td>
 <td>$75,515</td>
 <td>41.67%</td>
@@ -515,8 +514,8 @@
 </div>
 </section><section class="sec" id="fy2025-physical-count-context-sanity-check"><h2>FY2025 physical count context (sanity check)</h2>
 <ul>
-<li>FY2025 ending inventory (physical count based): <strong>$10,015</strong>; FY2025 COGS: <strong>$110,174</strong>.</li>
-<li>Implied FY2025 days of inventory on hand: <strong>33.2 days</strong>.</li>
+<li>FY2025 ending inventory (physical count based): <strong>$10,015</strong>; FY2025 COGS: <strong>$112,456</strong>.</li>
+<li>Implied FY2025 days of inventory on hand: <strong>32.5 days</strong>.</li>
 <li>FY2025 was impacted by a known overbuy scenario; therefore a lower FY2024 days-on-hand assumption (e.g., roughly half of FY2025) can still be coherent.</li>
 </ul>
 </section><section class="sec" id="disposables-policy-note-why-this-matters"><h2>Disposables policy note (why this matters)</h2>
@@ -527,14 +526,15 @@
 </ul>
 </section><section class="sec" id="evidence-pointers"><h2>Evidence pointers</h2>
 <ul>
-<li>Estimate sheet: <code>/home/clarencehub/curlys-books/t2-filing-fy2024-fy2025/data/Canteen Inventory May 31 2024 - Estimated.csv</code></li>
-<li>Inventory JE evidence: <code>output/snapshots/20260202-213000/output/inventory_journal_detail.csv</code> and <code>output/snapshots/20260202-213000/output/inventory_journal_detail.csv</code></li>
-<li>Override audit (if/when used): <code>output/snapshots/20260202-213000/output/inventory_override_audit.csv</code></li>
+<li>Estimate sheet: <code>/home/clarencehub/t2-final-fy2024-fy2025/data/inventory/Canteen Inventory May 31 2024 - Estimate from FY2025 Items.csv</code></li>
+<li>Generator script: <code>scripts/90a_generate_inventory_estimate_fy2024_from_fy2025.py</code></li>
+<li>Generator audit: <code>/home/clarencehub/t2-final-fy2024-fy2025/output/inventory_estimate_fy2024_from_fy2025_audit.csv</code></li>
+<li>Inventory JE evidence: <code>output/snapshots/20260202-231500/output/inventory_journal_detail.csv</code> and <code>output/snapshots/20260202-231500/output/inventory_journal_detail.csv</code></li>
+<li>Override audit (if/when used): <code>output/snapshots/20260202-231500/output/inventory_override_audit.csv</code></li>
 </ul>
 </section><section class="sec" id="if-you-choose-to-restate-later-operator-controlled"><h2>If you choose to restate later (operator-controlled)</h2>
 <ul>
-<li>Prefer the repo-local override mechanism (no edits to external CSVs): set <code>enabled: true</code> and <code>closing_inventory_total_cents</code> in <code>overrides/inventory_overrides.yml</code>, then rerun the refresh workflow.</li>
-<li>The inventory journal builder will scale bucket allocations deterministically and emit an audit file showing source totals vs used totals.</li>
+<li>Re-run the generator with a different target center/tolerance, update the manifest sha256, and refresh.</li>
 <li>This will cascade deterministically into FY2025 opening inventory (carryforward consistency).</li>
 </ul>
 </section>

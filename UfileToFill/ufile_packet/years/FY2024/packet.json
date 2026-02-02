@@ -1,10 +1,10 @@
 {
   "meta": {
     "schema_version": "1.2.0",
-    "generated_at": "2026-02-02T21:07:00.581418+00:00",
+    "generated_at": "2026-02-02T21:38:18.067917+00:00",
     "generator": "tools/build_year_artifacts.py",
     "source_packet": "UfileToFill/ufile_packet/packet.json",
-    "snapshot_source": "output/snapshots/20260202-213000/output/",
+    "snapshot_source": "output/snapshots/20260202-231500/output/",
     "fiscal_year": "FY2024"
   },
   "entity": {
@@ -280,7 +280,7 @@
           "label": "Cash"
         },
         "1121": {
-          "amount": 2847,
+          "amount": 5129,
           "label": "Inventory of goods for sale"
         },
         "1484": {
@@ -296,7 +296,7 @@
           "label": "Accum amort - machinery/equip/furn/fixtures"
         },
         "2599": {
-          "amount": 31578,
+          "amount": 33860,
           "label": "Total assets"
         },
         "2781": {
@@ -321,15 +321,15 @@
           "label": "Common shares"
         },
         "3600": {
-          "amount": 18456,
+          "amount": 20738,
           "label": "Retained earnings/deficit"
         },
         "3620": {
-          "amount": 18556,
+          "amount": 20838,
           "label": "Total shareholder equity"
         },
         "3640": {
-          "amount": 31578,
+          "amount": 33860,
           "label": "Total liabilities and shareholder equity"
         }
       },
@@ -343,12 +343,12 @@
           "label": "Total revenue"
         },
         "8518": {
-          "amount": 108373,
+          "amount": 106091,
           "label": "Cost of sales",
           "note": "Includes inventory shrinkage $1,370"
         },
         "8519": {
-          "amount": 72862,
+          "amount": 75144,
           "label": "Gross profit/loss"
         },
         "8520": {
@@ -428,11 +428,11 @@
           "label": "Total operating expenses"
         },
         "9368": {
-          "amount": 162779,
+          "amount": 160497,
           "label": "Total expenses"
         },
         "9999": {
-          "amount": 18456,
+          "amount": 20738,
           "label": "Net income/loss after taxes"
         }
       },
@@ -442,17 +442,17 @@
           "label": "Retained earnings/deficit - Start"
         },
         "3680": {
-          "amount": 18456,
+          "amount": 20738,
           "label": "Net income/loss"
         },
         "3849": {
-          "amount": 18456,
+          "amount": 20738,
           "label": "Retained earnings/deficit - End"
         }
       },
       "schedule_1": {
         "A": {
-          "amount": 18456,
+          "amount": 20738,
           "label": "Net income (loss) per financial statements"
         },
         "104": {
@@ -484,7 +484,7 @@
           "label": "Total deductions"
         },
         "C": {
-          "amount": 18786,
+          "amount": 21068,
           "label": "Net income (loss) for tax purposes"
         }
       },
@@ -688,61 +688,61 @@
   "evidence_index": [
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260202-213000/output/gifi_schedule_100_FY2024.csv",
+      "path": "output/snapshots/20260202-231500/output/gifi_schedule_100_FY2024.csv",
       "description": "Balance sheet GIFI codes for FY2024",
       "fiscal_year": "FY2024"
     },
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260202-213000/output/gifi_schedule_100_FY2025.csv",
+      "path": "output/snapshots/20260202-231500/output/gifi_schedule_100_FY2025.csv",
       "description": "Balance sheet GIFI codes for FY2025",
       "fiscal_year": "FY2025"
     },
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260202-213000/output/gifi_schedule_125_FY2024.csv",
+      "path": "output/snapshots/20260202-231500/output/gifi_schedule_125_FY2024.csv",
       "description": "Income statement GIFI codes for FY2024",
       "fiscal_year": "FY2024"
     },
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260202-213000/output/gifi_schedule_125_FY2025.csv",
+      "path": "output/snapshots/20260202-231500/output/gifi_schedule_125_FY2025.csv",
       "description": "Income statement GIFI codes for FY2025",
       "fiscal_year": "FY2025"
     },
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260202-213000/output/gifi_retained_earnings_FY2024.csv",
+      "path": "output/snapshots/20260202-231500/output/gifi_retained_earnings_FY2024.csv",
       "description": "Retained earnings schedule for FY2024",
       "fiscal_year": "FY2024"
     },
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260202-213000/output/gifi_retained_earnings_FY2025.csv",
+      "path": "output/snapshots/20260202-231500/output/gifi_retained_earnings_FY2025.csv",
       "description": "Retained earnings schedule for FY2025",
       "fiscal_year": "FY2025"
     },
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260202-213000/output/schedule_1_FY2024.csv",
+      "path": "output/snapshots/20260202-231500/output/schedule_1_FY2024.csv",
       "description": "Schedule 1 net income reconciliation for FY2024",
       "fiscal_year": "FY2024"
     },
     {
       "category": "GIFI",
-      "path": "output/snapshots/20260202-213000/output/schedule_1_FY2025.csv",
+      "path": "output/snapshots/20260202-231500/output/schedule_1_FY2025.csv",
       "description": "Schedule 1 net income reconciliation for FY2025",
       "fiscal_year": "FY2025"
     },
     {
       "category": "payroll",
-      "path": "output/snapshots/20260202-213000/output/payroll_summary.md",
+      "path": "output/snapshots/20260202-231500/output/payroll_summary.md",
       "description": "Payroll summary with T4 amounts and bank overrides",
       "fiscal_year": null
     },
     {
       "category": "HST",
-      "path": "output/snapshots/20260202-213000/output/shopify_sales_tax_journal_detail.csv",
+      "path": "output/snapshots/20260202-231500/output/shopify_sales_tax_journal_detail.csv",
       "description": "HST collected on Shopify sales",
       "fiscal_year": null
     },
@@ -760,19 +760,19 @@
     },
     {
       "category": "shareholder",
-      "path": "output/snapshots/20260202-213000/output/shareholder_mileage_fuel_summary.md",
+      "path": "output/snapshots/20260202-231500/output/shareholder_mileage_fuel_summary.md",
       "description": "Mileage and fuel reimbursements to shareholders",
       "fiscal_year": null
     },
     {
       "category": "shareholder",
-      "path": "output/snapshots/20260202-213000/output/shareholder_meals_estimate_summary.md",
+      "path": "output/snapshots/20260202-231500/output/shareholder_meals_estimate_summary.md",
       "description": "Meals estimates for Moncton trips",
       "fiscal_year": null
     },
     {
       "category": "bank",
-      "path": "output/snapshots/20260202-213000/output/readiness_report.md",
+      "path": "output/snapshots/20260202-231500/output/readiness_report.md",
       "description": "Bank reconciliation and readiness status",
       "fiscal_year": null
     },
@@ -838,21 +838,21 @@
       "area": "meals_add_back",
       "description": "50% meals and entertainment add-back for Schedule 1",
       "approach": "Standard ITA 67.1 treatment. Full expense deducted on books; 50% added back for tax.",
-      "evidence": "output/snapshots/20260202-213000/output/schedule_1_FY2024.csv",
+      "evidence": "output/snapshots/20260202-231500/output/schedule_1_FY2024.csv",
       "risk_level": "low"
     },
     {
       "area": "cra_penalties",
       "description": "CRA penalties included in Other expenses but non-deductible",
       "approach": "Penalties recorded on books ($71 FY2024, $274 FY2025) and added back on Schedule 1 line 311.",
-      "evidence": "output/snapshots/20260202-213000/output/schedule_1_FY2024.csv",
+      "evidence": "output/snapshots/20260202-231500/output/schedule_1_FY2024.csv",
       "risk_level": "low"
     },
     {
       "area": "shareholder_meals_estimate",
       "description": "Moncton trip meals for shareholders estimated (not all receipts)",
       "approach": "Conservative per-diem estimate based on trip frequency. FY2024 $465, FY2025 $390.",
-      "evidence": "output/snapshots/20260202-213000/output/shareholder_meals_estimate_summary.md",
+      "evidence": "output/snapshots/20260202-231500/output/shareholder_meals_estimate_summary.md",
       "risk_level": "medium"
     },
     {
@@ -873,7 +873,7 @@
       "area": "gross_margin_swing",
       "description": "Gross margin increased from 43% to 54% between FY2024 and FY2025",
       "approach": "Review point: compute from Schedule 125 (Gross profit / Revenue). Drivers include inventory increase and seasonality/purchasing differences.",
-      "evidence": "output/snapshots/20260202-213000/output/gifi_schedule_125_FY2024.csv",
+      "evidence": "output/snapshots/20260202-231500/output/gifi_schedule_125_FY2024.csv",
       "risk_level": "medium"
     }
   ]

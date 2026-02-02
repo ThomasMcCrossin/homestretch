@@ -218,8 +218,8 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 ### Retained earnings (whole dollars)
 | GIFI | Description | Amount | Entry rule |
 |---|---|---|---|
-| 3660 | Retained earnings/deficit - Start | 18,456 | Enter (opening RE) |
-| 3680 | Net income/loss | 31,007 | Enter (net income/loss) |
+| 3660 | Retained earnings/deficit - Start | 20,738 | Enter (opening RE) |
+| 3680 | Net income/loss | 28,725 | Enter (net income/loss) |
 | 3700 | Dividends declared | 36,900 | Enter (dividends declared) |
 | 3740 | Other items affecting retained earnings (rounding) | -1 | Enter only if needed (rounding/other) |
 | 3849 | Retained earnings/deficit - End | 12,562 | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
@@ -282,7 +282,7 @@ UFile entry tip: do not enter both `2780` and `2781` for the same payable; that 
 ## Income statement (GIFI Schedule 125)
 | GIFI | Description | Amount | Note |
 |---|---|---|---|
-| 8300 | Opening inventory | 2,847 |  |
+| 8300 | Opening inventory | 5,129 |  |
 | 8320 | Purchases / cost of materials | 117,342 | If UFile auto-calculates 8320, do NOT type it; use as a tie-check only. Otherwise enter it. Computation: purchases = 8518 - 8300 + 8500. |
 | 8500 | Closing inventory | 10,015 |  |
 | 8000 | Trade sales of goods and services | 230,907 |  |
@@ -331,8 +331,8 @@ Overlay adjustments affecting 8710 (capitalized items removed from expense):
 ### Cost of sales tie-check (display-only)
 | GIFI | Description | Amount |
 |---|---|---|
-| 8518 | Cost of sales (expected) | 110,174 |
-| 8519 | Gross profit/loss (expected) | 120,733 |
+| 8518 | Cost of sales (expected) | 112,456 |
+| 8519 | Gross profit/loss (expected) | 118,451 |
 
 ## Notes checklist (UFile screen)
 ### Checklist (recommended minimal)
@@ -382,7 +382,7 @@ There have been no subsequent events requiring adjustment to these financial sta
 ## Net income (UFile screen)
 | Field | Value | Note |
 |---|---|---|
-| Net income as per financial statements | 31,007 | Should auto-fill from GIFI; otherwise enter from Schedule 1 code A. |
+| Net income as per financial statements | 28,725 | Should auto-fill from GIFI; otherwise enter from Schedule 1 code A. |
 | Total sales of corporation during this taxation year | 230,907 | Use total revenue (sum of revenue lines; typically matches trade sales 8000). |
 | Total gross revenues | 230,907 | Usually same as total sales for your file. |
 
@@ -417,7 +417,7 @@ Expected source for this file: **active business income only** (canteen operatio
 ### Schedule 1 (tax purposes)
 | Code | Description | Amount | Calculation |
 |---|---|---|---|
-| A | Net income (loss) per financial statements | 31,007 |  |
+| A | Net income (loss) per financial statements | 28,725 |  |
 | 104 | Accounting amortization | 1,297 |  |
 | 121 | Non-deductible meals and entertainment (50%) | 204 |  |
 | 128 | Non-deductible fines and penalties | 274 |  |
@@ -425,7 +425,7 @@ Expected source for this file: **active business income only** (canteen operatio
 | 403 | Capital cost allowance (Schedule 8) | 1,297 |  |
 | 500 | Total additions | 1,775 |  |
 | 510 | Total deductions | 1,297 |  |
-| C | Net income (loss) for tax purposes | 31,485 |  |
+| C | Net income (loss) for tax purposes | 29,203 |  |
 Note: If UFile auto-populates Schedule 1 line 403 from Schedule 8, do **not** manually enter 403 in the Schedule 1 grid.
 CCA is entered on the **Capital cost allowance** screen from Schedule 8 (total CCA claimed: 1,297).
 
@@ -537,7 +537,7 @@ No capital dividend account activity.
 | Field | Value | Note |
 |---|---|---|
 | 1st prior year end date | 2024-05-31 | UFile field: End date of prior tax year |
-| 1st prior year taxable income | 18,786 | UFile field: Taxable income (Schedule 1 code C of the prior year) |
+| 1st prior year taxable income | 21,068 | UFile field: Taxable income (Schedule 1 code C of the prior year) |
 | Eligible RDTOH at prior year-end | 0 | Usually $0 for your file unless you have refundable dividend tax on hand |
 | Non-eligible RDTOH at prior year-end | 0 |  |
 | Eligible dividend refund (prior year) | 0 |  |
@@ -545,5 +545,5 @@ No capital dividend account activity.
 | Did the corp claim SBD in the prior year? | Yes | Confirm in UFile if it asks; FY2023 stub was inactive, FY2024 claimed SBD as a CCPC. |
 | Large corporation amount (prior year) | 0 | UFile field: line 415 of Schedule 200 (prior year) |
 | Taxable paid-up capital | 100 | Use share capital unless you have evidence of paid-up capital changes |
-| Total assets at prior year-end | 31,578 | UFile field: Total assets as at previous year-end (Schedule 100 GIFI 2599) |
+| Total assets at prior year-end | 33,860 | UFile field: Total assets as at previous year-end (Schedule 100 GIFI 2599) |
 | Capital gain inclusion rate / amount (prior year) |  | Only needed for carryback purposes; leave blank unless applicable |

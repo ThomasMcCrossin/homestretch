@@ -1,8 +1,8 @@
 GIFI_Code,Description,Amount,Note
 8000,Trade sales of goods and services,181235,
 8299,Total revenue,181235,
-8518,Cost of sales,108373,"Includes inventory shrinkage $1,370"
-8519,Gross profit/loss,72862,
+8518,Cost of sales,106091,"Includes inventory shrinkage $1,370"
+8519,Gross profit/loss,75144,
 8520,Advertising and promotion,1606,
 8523,Meals and entertainment,518,50% add-back = $259
 8622,Employer's portion of employee benefits,1463,
@@ -21,5 +21,5 @@ GIFI_Code,Description,Amount,Note
 9275,"Delivery, freight and express",100,
 9281,Vehicle expenses,4393,
 9367,Total operating expenses,54406,
-9368,Total expenses,162779,
-9999,Net income/loss after taxes,18456,
+9368,Total expenses,160497,
+9999,Net income/loss after taxes,20738,

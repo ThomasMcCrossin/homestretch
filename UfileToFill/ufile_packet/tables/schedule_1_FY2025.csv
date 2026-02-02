@@ -1,5 +1,5 @@
 Code,Description,Amount,Calculation
-A,Net income (loss) per financial statements,31007,
+A,Net income (loss) per financial statements,28725,
 104,Accounting amortization,1297,
 121,Non-deductible meals and entertainment (50%),204,
 128,Non-deductible fines and penalties,274,
@@ -7,4 +7,4 @@ A,Net income (loss) per financial statements,31007,
 403,Capital cost allowance (Schedule 8),1297,
 500,Total additions,1775,
 510,Total deductions,1297,
-C,Net income (loss) for tax purposes,31485,
+C,Net income (loss) for tax purposes,29203,

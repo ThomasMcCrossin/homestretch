@@ -69,9 +69,9 @@ sources:
   # Inventory counts (point-in-time; used for year-end inventory adjustments).
   inventory_count_fy2024_may31_estimated_csv:
     kind: csv
-    path: /home/clarencehub/curlys-books/t2-filing-fy2024-fy2025/data/Canteen Inventory May 31 2024 - Estimated.csv
-    sha256: ae21db163268353d806e949ae51fe69e7b538f163fefa0d2e8fd38d352613f5f
-    semantics: "Estimated inventory count/value for FY2024 year-end (May 31, 2024)."
+    path: /home/clarencehub/t2-final-fy2024-fy2025/data/inventory/Canteen Inventory May 31 2024 - Estimate from FY2025 Items.csv
+    sha256: 058dd02443c437ff2e44524324dff037439cafc8c47da3da61d742be939365af
+    semantics: "FY2024 ending inventory management estimate (May 31, 2024) generated from FY2025 physical count item list, scaled down into a target band; quantities mostly whole-number rounded. See scripts/90a_generate_inventory_estimate_fy2024_from_fy2025.py and output/inventory_estimate_fy2024_from_fy2025_audit.csv."
 
   inventory_count_fy2025_may16_csv:
     kind: csv

@@ -119,3 +119,16 @@ while keeping this repo self-contained and auditable:
 
 Evidence:
 - `output/inventory_override_audit.csv` (and the snapshot copy) documents source totals vs used totals + allocation deltas.
+
+## FY2024 inventory estimate (FY2025-item-based backing)
+
+If you want FY2024 ending inventory to be explicitly backed by the FY2025 physical-count item list, generate a repo-local
+FY2024 estimate CSV and point the manifest source to it:
+
+1) `python3 scripts/90a_generate_inventory_estimate_fy2024_from_fy2025.py`
+   - Writes: `data/inventory/Canteen Inventory May 31 2024 - Estimate from FY2025 Items.csv`
+   - Writes audit: `output/inventory_estimate_fy2024_from_fy2025_audit.csv`
+
+2) Ensure `manifest/sources.yml` `inventory_count_fy2024_may31_estimated_csv` points to the repo-local CSV and has the correct sha256.
+
+3) `python3 UfileToFill/ufile_packet/tools/refresh_packet_from_current_state.py`
