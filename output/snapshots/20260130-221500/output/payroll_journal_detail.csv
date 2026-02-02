@@ -1,3 +1,0 @@
-fy,journal_entry_id,gross_pay_cents,vacation_pay_cents,tips_cents,net_pay_cents,employee_deductions_cents,employer_taxes_cents,variance_cents,cpp_liability_cents,ei_liability_cents,income_tax_liability_cents,tips_payable_cents,net_payable_cents
-FY2024,PAYROLL_SUMMARY_FY2024,2233744,53972,24129,2006049,296651,146300,-9145,188293,89581,165077,0,2006049
-FY2025,PAYROLL_SUMMARY_FY2025,5103660,160295,271446,4751065,738825,360984,-45511,484604,203450,411755,0,4751065

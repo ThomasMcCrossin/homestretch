@@ -155,6 +155,11 @@ def extract_attempt_schedule_1(pages_dir: Path, *, wanted_codes: set[str]) -> di
             picked: tuple[str, int] | None = None
             for i, tok in enumerate(toks):
                 if tok in wanted_codes and re.fullmatch(r"\d{3}", tok):
+                    # Guardrail: UFile sometimes prints phrases like "Amount A plus line 500 ..."
+                    # where "500" is referenced but the line amount is elsewhere.
+                    # Real Schedule 1 line numbers are printed near the end of the line.
+                    if i < max(0, len(toks) - 6):
+                        continue
                     after_amts = [ai for ai in amt_idxs if ai > i]
                     if after_amts:
                         a = _parse_amount_token(toks[after_amts[-1]])

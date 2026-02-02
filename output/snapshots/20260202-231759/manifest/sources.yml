@@ -1,0 +1,209 @@
+version: 1
+
+fiscal_years:
+  FY2024:
+    start_date: "2023-06-01"
+    end_date: "2024-05-31"
+  FY2025:
+    start_date: "2024-06-01"
+    end_date: "2025-05-31"
+
+sources:
+  # Reconciled Wave bills end-state (includes manual adds/edits/deletes from reconciliation work).
+  # Generated from the frozen Fresher snapshot DB (`fresher_debits_db_snapshot`) via:
+  #   python3 scripts/12_export_wave_bills_final_csv.py
+  # Treat as immutable: if reconciliation changes, make a new snapshot and regenerate this file.
+  wave_bills_final_csv:
+    kind: csv
+    path: /home/clarencehub/t2-final-fy2024-fy2025/data/wave/wave_bills_final.csv
+    sha256: 658305b9862d9ecc94400425411c8ba46c8f35eb7c60bae805ee77c167d9adb7
+    semantics: "Final Wave bills ledger exported from Fresher snapshot wave_bills table (amounts in dollars, with provenance columns)."
+
+  curlys_books:
+    kind: docker_compose_project
+    path: /home/clarencehub/curlys-books
+    semantics: "Used read-only to extract receipt line-item account splits (curlys_corp.receipts + curlys_corp.receipt_line_items)."
+
+  curlys_books_chart_of_accounts_snapshot:
+    kind: csv
+    path: /home/clarencehub/t2-final-fy2024-fy2025/data/curlys_books_exports/20260121-210039/chart_of_accounts.csv
+    sha256: ab2d8ec7f389c213c6957be8c0a45a039ffb8a04a2666304d2535262f64853d3
+    semantics: "Frozen export of curlys_corp.chart_of_accounts used for account_code + gifi_code + t2125_line portability."
+
+  # Frozen “reconciliation-as-data” snapshot from Fresher (debits + credits).
+  # This is intended to become the primary source of truth for T2 generation
+  # (instead of re-running Fresher scripts/patches).
+  fresher_snapshot_manifest:
+    kind: yaml
+    path: /home/clarencehub/t2-final-fy2024-fy2025/data/fresher_snapshots/20260122-054642/snapshot_manifest.yml
+    sha256: 2f98f7232eb2931012e019b64e252ba0e3f85ef0d277b9e6f7d0503230d5def2
+    semantics: "Lists every file in the frozen Fresher snapshot with sha256. Verify with: python3 scripts/41_verify_snapshot_manifest.py"
+
+  fresher_debits_db_snapshot:
+    kind: sqlite_db
+    path: /home/clarencehub/t2-final-fy2024-fy2025/data/fresher_snapshots/20260122-054642/db/canteen_reconciliation_v2.db
+    sha256: ca46172b45cbd56709161aea8f9b0dd40b421da614d9352a2777c9baec675709
+    semantics: "Copied from /home/clarencehub/Fresh/Fresher/canteen_reconciliation_v2.db (final debit-side reconciliation state)."
+
+  fresher_credits_db_snapshot:
+    kind: sqlite_db
+    path: /home/clarencehub/t2-final-fy2024-fy2025/data/fresher_snapshots/20260122-054642/db/credits_reconciliation.db
+    sha256: 8bd79e7975925a54217b6b2d15d5fb172e90820861b7f53fad6894d1b78c5cee
+    semantics: "Copied from /home/clarencehub/Fresh/Fresher/credits/credits_reconciliation.db (final credit-side reconciliation state)."
+
+  # Optional: per-bill account allocations produced by the exploratory Fresher/categories pipeline.
+  # Used to backfill document_lines for Wave bills that don't yet have a curlys-books-derived profile.
+  fresher_categories_wave_bill_allocations_csv:
+    kind: csv
+    path: /home/clarencehub/Fresh/Fresher/categories/output/wave_bill_account_allocations_with_vendor_splits_and_export_categories_and_missing_profiles.csv
+    sha256: 0b3db6436f1cf4f57fd46722424db34a046b129daa30647cd8fe7f2d1a41fd52
+    semantics: "Wave bill account allocations (wave_bill_id -> account_code, amount_cents) derived from Wave account exports + vendor profiles; sums to bill net_cents (tax handled separately in t2-final)."
+
+  # Shopify reporting exports (used to split sales vs sales tax deterministically).
+  shopify_sales_by_month_bulk_csv:
+    kind: csv
+    path: /home/clarencehub/Fresh/dump/shopifyexports/Sales by month Bulk - 2023-06-01 - 2025-05-31.csv
+    sha256: eab08c1a8a1017e04c6083d6a694b3bf4119ee9c80ba7d6b727877b927be13c8
+    semantics: "Shopify Sales report by month (gross sales, net sales, taxes, returns). Used to separate sales tax from revenue for FY2024/FY2025."
+
+  # Inventory counts (point-in-time; used for year-end inventory adjustments).
+  inventory_count_fy2024_may31_estimated_csv:
+    kind: csv
+    path: /home/clarencehub/t2-final-fy2024-fy2025/data/inventory/Canteen Inventory May 31 2024 - Estimate from FY2025 Items.csv
+    sha256: 058dd02443c437ff2e44524324dff037439cafc8c47da3da61d742be939365af
+    semantics: "FY2024 ending inventory management estimate (May 31, 2024) generated from FY2025 physical count item list, scaled down into a target band; quantities mostly whole-number rounded. See scripts/90a_generate_inventory_estimate_fy2024_from_fy2025.py and output/inventory_estimate_fy2024_from_fy2025_audit.csv."
+
+  inventory_count_fy2025_may16_csv:
+    kind: csv
+    path: /home/clarencehub/t2-final-fy2024-fy2025/data/inventory/Canteen Inventory May 16 2025 - Physical Count.csv
+    sha256: 53d0732438560d8a958f22d84b6c26a42568580ba316d878c39f4e010a98097b
+    semantics: "Inventory physical count/value near FY2025 year-end (May 16, 2025). Repo-local copy to avoid external dependencies; used as the closing inventory input for FY2025 unless superseded."
+
+  # Shareholder mileage logs (standalone T2 working papers in curlys-books).
+  curlys_books_thomas_mileage_log_csv:
+    kind: csv
+    path: /home/clarencehub/curlys-books/t2-filing-fy2024-fy2025/output/thomas_mileage_log.csv
+    sha256: c0f7a597853c82d7c7af7fc610ad452f0d6e89d17493735f9713691a8f35f2b7
+    semantics: "Thomas business mileage log used for T2 FY2024/FY2025 reimbursement calculations."
+
+  curlys_books_dwayne_mileage_log_csv:
+    kind: csv
+    path: /home/clarencehub/curlys-books/t2-filing-fy2024-fy2025/output/dwayne_mileage_log.csv
+    sha256: 52e8edd5b98be8b6295638090f50e47fd4164269dd83bcbc9a1dcc69f78bc751
+    semantics: "Dwayne business mileage log used for T2 FY2024/FY2025 reimbursement calculations."
+
+  # CRA exports (downloaded 2025-12-06; treated as external authoritative facts).
+  cra_hst_account_transactions_csv:
+    kind: csv
+    path: /home/clarencehub/Fresh/CanteenCRAAsOfDec0625/CanteenHST.csv
+    sha256: 0e312851f12eea3b2e339bb71bd7a2ad0ce724a265501996607dde1d9f9c900f
+    semantics: "CRA GST/HST (RT0001) account transaction export. Used to corroborate HST returns, payments, interest, and penalties."
+
+  cra_payroll_account_transactions_csv:
+    kind: csv
+    path: /home/clarencehub/Fresh/CanteenCRAAsOfDec0625/CanteenPayrollTransactions.csv
+    sha256: 42de67c240c6e8f713066a47f102773090ee22b4ce0372b6fde558a9eea30c3e
+    semantics: "CRA payroll account transaction export. Used to corroborate payroll remittances and assessed interest/penalties."
+
+  cra_arrears_account_transactions_csv:
+    kind: csv
+    path: /home/clarencehub/Fresh/CanteenCRAAsOfDec0625/CanteenArrearsTransactions.csv
+    sha256: c78666948f6906303096ad3019becf6ac09ed6be314ef2344edcc3068a76e19d
+    semantics: "CRA arrears transaction export (penalties/interest adjustments). Used for audit/explanation only unless explicitly journalized."
+
+  # Payroll exports / working papers (used to derive gross wages + employer taxes + remittance totals).
+  payroll_employee_2023_anthony_csv:
+    kind: csv
+    path: /home/clarencehub/Fresh/dump/2023Canteen/Anthony.csv
+    sha256: c6b6a29d4460ec32c413919d7d2e1c98b3dcfb535a8164c79e7eec96db9fadb7
+    semantics: "Per-pay-period payroll breakdown export for employee Anthony (2023)."
+
+  payroll_employee_2023_jesse_goodwin_csv:
+    kind: csv
+    path: /home/clarencehub/Fresh/dump/2023Canteen/Jesse Goodwin.csv
+    sha256: 38479487c876884568e35e90ce9b80fd6ea9597781d61471dbd364a771d44f33
+    semantics: "Per-pay-period payroll breakdown export for employee Jesse Goodwin (2023). Contains some non-row notes and totals near the bottom."
+
+  payroll_employee_2023_maddison_csv:
+    kind: csv
+    path: /home/clarencehub/Fresh/dump/2023Canteen/Maddison.csv
+    sha256: bbf8029d178d3ff0d160dfb12f7e707319f3de472a5224e8a24d0c103a80fe21
+    semantics: "Per-pay-period payroll breakdown export for employee Maddison (2023)."
+
+  payroll_employee_2023_thomas_mccrossin_csv:
+    kind: csv
+    path: /home/clarencehub/Fresh/dump/2023Canteen/Thomas McCrossincanteen2023.csv
+    sha256: ce845c39f55578e6a3eaa4b26b2773d504dee095bef679334f87ac6e011b1416
+    semantics: "Per-pay-period payroll breakdown export for shareholder Thomas (2023). Includes blank rows and summary lines."
+
+  payroll_employee_2023_tyson_csv:
+    kind: csv
+    path: /home/clarencehub/Fresh/dump/2023Canteen/Tyson.csv
+    sha256: dc86d619b26f9663d8f6682d3277a515871e07260ed0cd44b20e5d1c51a880b2
+    semantics: "Per-pay-period payroll breakdown export for employee Tyson (2023)."
+
+  payroll_employee_2024_anthony_24_25_csv:
+    kind: csv
+    path: /home/clarencehub/Fresh/dump/2024Canteen/Anthony (24-25).csv
+    sha256: 1279ffc6a9af220ba51599306cca59916ad67cd94057b7b31e4c2d9e39923421
+    semantics: "Per-pay-period payroll breakdown export for employee Anthony (24-25 season; includes 2024 pay periods)."
+
+  payroll_employee_2024_anthony_2023_24_csv:
+    kind: csv
+    path: /home/clarencehub/Fresh/dump/2024Canteen/Anthony 2023-24.csv
+    sha256: 48ab39c79d0fb33e930cb79b85335673cbf4c7b287f406c304252586b6fcc660
+    semantics: "Per-pay-period payroll breakdown export for employee Anthony (2023-24 season; includes early 2024 pay periods)."
+
+  payroll_employee_2024_jesse_24_25_csv:
+    kind: csv
+    path: /home/clarencehub/Fresh/dump/2024Canteen/Jesse (24-25).csv
+    sha256: 535be9e5daefdc477a8ab81b7f18a8a17a24860595707c44dad99169b550c1f1
+    semantics: "Per-pay-period payroll breakdown export for employee Jesse (24-25 season; includes 2024 pay periods). Header has a non-standard first column name ('4')."
+
+  payroll_employee_2024_jesse_goodwin_2023_24_csv:
+    kind: csv
+    path: /home/clarencehub/Fresh/dump/2024Canteen/Jesse Goodwin (2023-24).csv
+    sha256: 7db9f38cfadf4bdabae42de3e3a0a94f56ccb43cb20c2176e205f56eee8d5bee
+    semantics: "Per-pay-period payroll breakdown export for employee Jesse Goodwin (2023-24 season; includes 2024 pay periods)."
+
+  payroll_employee_2024_kaylee_rink_24_25_csv:
+    kind: csv
+    path: /home/clarencehub/Fresh/dump/2024Canteen/Kaylee Rink (24-25).csv
+    sha256: fabf70d867753bd8651888bf5013abdde4457acc6f18711803ecd47cc618a7ae
+    semantics: "Per-pay-period payroll breakdown export for employee Kaylee Rink (24-25 season; includes 2024 pay periods)."
+
+  payroll_employee_2024_kyler_24_25_csv:
+    kind: csv
+    path: /home/clarencehub/Fresh/dump/2024Canteen/Kyler (24-25).csv
+    sha256: e4c71d5f7ec096fd5c5f5c03f26a386990657bece82d8809989d493180d01c4a
+    semantics: "Per-pay-period payroll breakdown export for employee Kyler (24-25 season; includes 2024 pay periods)."
+
+  payroll_employee_2024_thomas_mccrossin_csv:
+    kind: csv
+    path: /home/clarencehub/Fresh/dump/2024Canteen/Thomas McCrossincanteen2024.csv
+    sha256: bd4eeb0054b615a60ce0f211ec4316c3e374ef9a18f9cab9e9eae744d8300904
+    semantics: "Per-pay-period payroll breakdown export for shareholder Thomas (file contains a 2024-06-17 row; also includes out-of-scope 2025-12-31 summary row)."
+
+  payroll_employee_2024_tyson_24_25_csv:
+    kind: csv
+    path: /home/clarencehub/Fresh/dump/2024Canteen/Tyson (24-25).csv
+    sha256: 9c5ca888c0c5e44645cbc67ff986cce1f2428c57c1a74f2cc7442d4ffc02d19c
+    semantics: "Per-pay-period payroll breakdown export for employee Tyson (24-25 season; includes 2024 pay periods)."
+
+  payroll_employee_2024_tyson_2023_2024_csv:
+    kind: csv
+    path: /home/clarencehub/Fresh/dump/2024Canteen/Tyson(2023-2024).csv
+    sha256: 65359ea0d58d33fdf2329094031fd5fb13f62668cf937586be51b3f242d59815
+    semantics: "Per-pay-period payroll breakdown export for employee Tyson (2023-24 season; includes 2024 pay periods)."
+
+  payroll_monthly_totals_2024_csv:
+    kind: csv
+    path: /home/clarencehub/Fresh/dump/canteenpayrollmonthly/Total Canteen2024.csv
+    sha256: 28f10acee9cf6b819888a61951e9cc08be7f3200e6005f1598c091ee68d02390
+    semantics: "Monthly payroll totals working paper for calendar 2024: gross payroll, total remittance, and total employer taxes."
+
+  payroll_monthly_totals_2025_csv:
+    kind: csv
+    path: /home/clarencehub/Fresh/dump/canteenpayrollmonthly/Monthly Totals2025.csv
+    sha256: 6263dc94d1b8953bb2f9e6067ddeb95450d8f9239064e9e91bf6156e6bf8ccad
+    semantics: "Monthly payroll totals working paper for calendar 2025: remittance, net pay + tips, gross pay, and total employer taxes."

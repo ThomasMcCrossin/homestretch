@@ -1,7 +1,7 @@
 # UFile attempt diff vs current packet — FY2024
 
 - Attempt PDF: `/home/clarencehub/t2-final-fy2024-fy2025/taxattempts/FY2024/1/2024 - 14587430 Canada Inc. - My copy - Tax return (8).pdf`
-- Packet snapshot_source: `output/snapshots/20260202-235500/output/`
+- Packet snapshot_source: `output/snapshots/20260202-231759/output/`
 
 ## Schedule 100 (Balance sheet)
 
@@ -12,19 +12,19 @@
 | 1484 | Prepaid expenses | 649 | 649 | 0 |  |
 | 1599 |  | 32,070 |  |  | extra in attempt |
 | 1740 | Machinery, equipment, furniture and fixtures | 2,298 | 2,298 | 0 |  |
-| 1741 | Accum amort - machinery/equip/furn/fixtures | -508 | -508 | 0 |  |
+| 1741 | Accum amort - machinery/equip/furn/fixtures | -508 | -865 | -357 | mismatch |
 | 2008 |  | 2,298 |  |  | extra in attempt |
 | 2009 |  | -508 |  |  | extra in attempt |
-| 2599 | Total assets | 33,860 | 33,860 | 0 |  |
+| 2599 | Total assets | 33,860 | 33,503 | -357 | mismatch |
 | 2620 | Amounts payable and accrued liabilities | 2,687 | 2,687 | 0 |  |
 | 2680 | Taxes payable (GST/HST, etc.) | 6,757 | 6,757 | 0 |  |
 | 2781 | Due to individual shareholder(s) | 3,578 | 3,578 | 0 |  |
 | 3139 |  | 13,022 |  |  | extra in attempt |
 | 3499 | Total liabilities | 13,022 | 13,022 | 0 |  |
 | 3500 | Common shares | 100 | 100 | 0 |  |
-| 3600 | Retained earnings/deficit | 18,456 | 20,738 | 2,282 | mismatch |
-| 3620 | Total shareholder equity | 18,556 | 20,838 | 2,282 | mismatch |
-| 3640 | Total liabilities and shareholder equity | 31,578 | 33,860 | 2,282 | mismatch |
+| 3600 | Retained earnings/deficit | 18,456 | 20,381 | 1,925 | mismatch |
+| 3620 | Total shareholder equity | 18,556 | 20,481 | 1,925 | mismatch |
+| 3640 | Total liabilities and shareholder equity | 31,578 | 33,503 | 1,925 | mismatch |
 | 3680 | Net income/loss | 18,456 |  |  | extra in attempt |
 | 3849 | Retained earnings/deficit - End | 18,456 |  |  | extra in attempt |
 
@@ -43,7 +43,7 @@
 | 8520 | Advertising and promotion | 1,606 | 1,606 | 0 |  |
 | 8523 | Meals and entertainment | 518 | 518 | 0 |  |
 | 8622 | Employer's portion of employee benefits | 1,463 | 1,463 | 0 |  |
-| 8670 | Amortization of tangible assets | 508 | 508 | 0 |  |
+| 8670 | Amortization of tangible assets | 508 | 865 | 357 | mismatch |
 | 8690 | Insurance | 1,851 | 1,851 | 0 |  |
 | 8710 | Interest and bank charges | 2,218 | 2,218 | 0 |  |
 | 8810 | Office expenses | 1,998 | 1,998 | 0 |  |
@@ -57,40 +57,40 @@
 | 9270 | Other expenses | 71 | 71 | 0 |  |
 | 9275 | Delivery, freight and express | 100 | 100 | 0 |  |
 | 9281 | Vehicle expenses | 4,393 | 4,393 | 0 |  |
-| 9367 | Total operating expenses | 54,406 | 54,406 | 0 |  |
-| 9368 | Total expenses | 162,779 | 160,497 | -2,282 | mismatch |
+| 9367 | Total operating expenses | 54,406 | 54,763 | 357 | mismatch |
+| 9368 | Total expenses | 162,779 | 160,854 | -1,925 | mismatch |
 | 9369 |  | 18,456 |  |  | extra in attempt |
 | 9970 |  | 18,456 |  |  | extra in attempt |
-| 9999 | Net income/loss after taxes | 18,456 | 20,738 | 2,282 | mismatch |
+| 9999 | Net income/loss after taxes | 18,456 | 20,381 | 1,925 | mismatch |
 
 ## Schedule 1 (Net income for tax purposes)
 
 | Code | Description | Attempt | Expected | Delta (expected - attempt) | Notes |
 |---|---|---:|---:|---:|---|
-| A | Net income (loss) per financial statements | 18,456 | 20,738 | 2,282 | mismatch |
-| C | Net income (loss) for tax purposes | 18,358 | 21,068 | 2,710 | mismatch |
-| 104 | Accounting amortization | 508 | 508 | 0 |  |
+| A | Net income (loss) per financial statements | 18,456 | 20,381 | 1,925 | mismatch |
+| C | Net income (loss) for tax purposes | 18,358 | 20,711 | 2,353 | mismatch |
+| 104 | Accounting amortization | 508 | 865 | 357 | mismatch |
 | 121 | Non-deductible meals and entertainment (50%) | 259 | 259 | 0 |  |
 | 128 | Non-deductible fines and penalties |  | 71 |  | missing in attempt |
 | 206 | Capital items expensed |  | 0 |  | missing in attempt |
-| 403 | Capital cost allowance (Schedule 8) | 865 | 508 | -357 | mismatch |
-| 500 | Total additions | 19,223 | 838 | -18,385 | mismatch |
-| 510 | Total deductions | 865 | 508 | -357 | mismatch |
+| 403 | Capital cost allowance (Schedule 8) | 865 | 865 | 0 |  |
+| 500 | Total additions | 767 | 1,195 | 428 | mismatch |
+| 510 | Total deductions | 865 | 865 | 0 |  |
 
 ## Schedule 8 (CCA) — class summary
 
 | Class | Attempt additions | Expected additions | Attempt CCA | Expected CCA | Notes |
 |---:|---:|---:|---:|---:|---|
 | 8 | 1,650 | 1,650 | 330 | 330 |  |
-| 50 | 648 | 648 | 535 | 178 | cca mismatch |
+| 50 | 648 | 648 | 535 | 535 |  |
 
 - Schedule 8 total CCA (attempt): `865`
-- Schedule 8 total CCA (expected): `508`
+- Schedule 8 total CCA (expected): `865`
 
 ## Retained earnings rollforward
 
 | Code | Description | Attempt | Expected | Delta (expected - attempt) | Notes |
 |---|---|---:|---:|---:|---|
 | 3660 | Retained earnings/deficit - Start |  | 0 |  | missing in attempt |
-| 3680 | Net income/loss |  | 20,738 |  | missing in attempt |
-| 3849 | Retained earnings/deficit - End |  | 20,738 |  | missing in attempt |
+| 3680 | Net income/loss |  | 20,381 |  | missing in attempt |
+| 3849 | Retained earnings/deficit - End |  | 20,381 |  | missing in attempt |

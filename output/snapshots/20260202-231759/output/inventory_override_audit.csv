@@ -1,0 +1,4 @@
+fy,source_path,source_total,used_total,override_enabled,override_total,allocation_strategy,scaling_factor,inventory_account,source_bucket_total,used_bucket_total,bucket_delta
+FY2024,/home/clarencehub/t2-final-fy2024-fy2025/data/inventory/Canteen Inventory May 31 2024 - Estimate from FY2025 Items.csv,5129.04,5129.04,false,,,1.000000,1200,2382.60,2382.60,0.00
+FY2024,/home/clarencehub/t2-final-fy2024-fy2025/data/inventory/Canteen Inventory May 31 2024 - Estimate from FY2025 Items.csv,5129.04,5129.04,false,,,1.000000,1210,475.38,475.38,0.00
+FY2024,/home/clarencehub/t2-final-fy2024-fy2025/data/inventory/Canteen Inventory May 31 2024 - Estimate from FY2025 Items.csv,5129.04,5129.04,false,,,1.000000,1230,2271.06,2271.06,0.00

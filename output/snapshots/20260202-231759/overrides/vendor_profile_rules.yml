@@ -1,0 +1,118 @@
+version: 1
+
+# Which vendors we will ever apply estimated splits to.
+# Everything else is left untouched.
+eligible_vendor_keys:
+  - COSTCO
+  - PHARMASAVE
+  - ATLANTIC_SUPERSTORE
+  - WALMART
+  - CANADIAN_TIRE
+
+# How to query curlys-books receipts for sample splits.
+curlys_books_vendor_names:
+  COSTCO:
+    - "Costco Wholesale"
+  PHARMASAVE:
+    - "MacQuarries Pharmasave"
+  ATLANTIC_SUPERSTORE:
+    - "Atlantic Superstore"
+  WALMART:
+    - "Walmart"
+  CANADIAN_TIRE:
+    - "Canadian Tire"
+
+# How to recognize those vendors in the Wave bill ledger ("Vendor / Details" column).
+wave_vendor_matchers:
+  COSTCO:
+    - "costco"
+  PHARMASAVE:
+    - "pharmasave"
+  ATLANTIC_SUPERSTORE:
+    - "atlantic superstore"
+    - "superstore"
+  WALMART:
+    - "walmart"
+    - "wal-mart"
+  # Note: intentionally matches "Canadian Tire - Bill" but NOT "Canadian Tire Gas - Bill".
+  CANADIAN_TIRE:
+    - "canadian tire - bill"
+
+# Do NOT apply profiles to these specific Wave bills.
+# Use invoice_number when present; otherwise you can add a vendor_raw_exact entry.
+exclude_wave_bills:
+  # Prefer excluding by `source_rows` for this dataset because many vendor descriptions
+  # do not include an invoice number (the row index is stable as long as the CSV hash
+  # stays the same).
+  invoice_numbers: []
+  vendor_raw_exact: []
+  source_rows: []
+  # Specific bills to leave untouched (e.g., known assets that should stay in their original Wave category).
+  wave_bill_ids:
+    - 256  # Costco freezer (Office Supplies in Wave export)
+    - 371  # Walmart coffee grinder (Office Supplies in Wave export)
+
+# Tax handling when applying profiles.
+tax:
+  treat_tax_as_hst_itc: true
+  hst_itc_account_code: "2210"
+
+# Filters applied when *building* sample-derived profiles from curlys-books.
+# These prevent FY2026-ish patterns from leaking into FY2024/FY2025 allocations.
+profile_filters:
+  # Always exclude these account codes from sample-derived profiles.
+  # Example: personal expenses were not being tracked for FY2024/FY2025.
+  global_exclude_account_codes:
+    - "9900"
+
+  # Vendor-specific exclusions.
+  # Example: Superstore delivery/freight started later; exclude from FY2024/FY2025 profile.
+  exclude_account_codes_by_vendor_key:
+    ATLANTIC_SUPERSTORE:
+      - "6550"
+    # Costco sample-derived splits sometimes include the internal placeholder
+    # "Pending Receipt - No ITC" (9100). That is an artifact of the
+    # categorization workflow and must be redistributed across the real buckets
+    # by renormalizing weights without 9100.
+    COSTCO:
+      - "9100"
+
+# Optional manual overrides (used when sample-derived splits are not trustworthy).
+# Percentages must sum to 1.0.
+manual_vendor_profiles:
+  WALMART:
+    entity: corp
+    method: MANUAL_OVERRIDE
+    splits:
+      "5039": 0.60  # COGS - Retail - Other
+      "6600": 0.25  # Office Supplies
+      "5204": 0.05  # Supplies - Cleaning (Janitorial)
+      "6300": 0.10  # Repairs & Maintenance
+  CANADIAN_TIRE:
+    entity: corp
+    method: MANUAL_OVERRIDE
+    splits:
+      "5204": 0.40  # Supplies - Cleaning (Janitorial)
+      "6300": 0.25  # Repairs & Maintenance
+      "6350": 0.25  # Small Tools & Equipment (expensed; under capitalization threshold)
+      "6600": 0.10  # Office Supplies
+
+# Guardrail: we only apply these profiles to vendors that were (historically) entered in Wave as pure COGS.
+# There is no Wave account code in the cleaned ledger export, so this is an explicit policy switch.
+policy:
+  assume_wave_is_pure_cogs_for_eligible_vendors: true
+
+# Per-bill component overrides: carve out a known line item to a fixed account_code,
+# then apply the normal vendor profile weights only to the remaining net amount.
+# This is used when we discover a capital asset embedded inside a multi-item receipt.
+bill_component_overrides:
+  COSTCO:
+    # 2023-12-08 Costco receipt total 1212.36 (wave_bill_id=143).
+    # iPad Air 5 64GB net: 768.39 - 120.00 discount = 648.39.
+    "143":
+      label: "iPad Air 5 64GB (AIR 5 64GB less TPD/IPADAIR discount)"
+      fixed_net_allocations:
+        - account_code: "6600" # Office Supplies (will be reclassed to fixed assets via Option 1 overlay)
+          amount_cents: 64839
+          note: "AIR 5 64GB 768.39 - discount 120.00 = 648.39 net"
+      apply_profile_to_remainder: true

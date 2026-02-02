@@ -197,7 +197,7 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 | 1121 | Inventory of goods for sale | 5,129 |  |
 | 1484 | Prepaid expenses | 649 |  |
 | 1740 | Machinery, equipment, furniture and fixtures | 2,298 |  |
-| 1741 | Accum amort - machinery/equip/furn/fixtures | -508 |  |
+| 1741 | Accum amort - machinery/equip/furn/fixtures | -865 |  |
 | 2620 | Amounts payable and accrued liabilities | 2,687 |  |
 | 2680 | Taxes payable (GST/HST, etc.) | 6,757 |  |
 | 2781 | Due to individual shareholder(s) | 3,578 | Tie-out: 2400 $2,669.99 (Thomas) + 2410 $908.16 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead. |
@@ -208,16 +208,16 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 |---|---|---|---|---|---|---|---|
 | ams_lb9_vending_machine_2024_02_20 | AMS-LB9 vending machine (Electric Kitty) | 2024-02-20 | 1,100 | 1,100 | 220 | mirror_tax | account=6600 gifi=8810 amount_cents=110000 vendor=Electric Kitty - Bill invoice_date=2024-02-20 |
 | costco_freezer_2024_03_13 | Hisense freezer (Costco) | 2024-03-13 | 550 | 550 | 110 | mirror_tax | account=6600 gifi=8810 amount_cents=54999 vendor=Costco - Bill invoice_date=2024-03-13 |
-| costco_ipad_air_2023_12_08 | iPad Air 5 64GB (Costco) | 2023-12-08 | 648 | 648 | 178 | mirror_tax | account=6600 gifi=8810 amount_cents=64839 vendor=Costco - Bill 22134500703182312081530 invoice_date=2023-12-08 |
+| costco_ipad_air_2023_12_08 | iPad Air 5 64GB (Costco) | 2023-12-08 | 648 | 648 | 535 | mirror_tax | account=6600 gifi=8810 amount_cents=64839 vendor=Costco - Bill 22134500703182312081530 invoice_date=2023-12-08 |
 
 ### Retained earnings (whole dollars)
 | GIFI | Description | Amount | Entry rule |
 |---|---|---|---|
 | 3660 | Retained earnings/deficit - Start | 0 | Enter (opening RE) |
-| 3680 | Net income/loss | 20,738 | Enter (net income/loss) |
+| 3680 | Net income/loss | 20,381 | Enter (net income/loss) |
 | 3700 |  | 0 | Enter (dividends declared) |
 | 3740 |  | 0 | Enter only if needed (rounding/other) |
-| 3849 | Retained earnings/deficit - End | 20,738 | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
+| 3849 | Retained earnings/deficit - End | 20,381 | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
 
 ### Shareholder loans / balances support (working papers)
 CRA frequently asks for support for any due-from-shareholder / due-to-shareholder amounts. Keep the continuity below with your filing package.
@@ -258,9 +258,9 @@ UFile entry tip: do not enter both `2780` and `2781` for the same payable; that 
 ### Tie-check (display-only totals)
 | GIFI | Description | Amount |
 |---|---|---|
-| 1599 | Total current assets (expected) | 33,860 |
-| 2599 | Total assets | 33,860 |
-| 3640 | Total liabilities and shareholder equity | 33,860 |
+| 1599 | Total current assets (expected) | 33,503 |
+| 2599 | Total assets | 33,503 |
+| 3640 | Total liabilities and shareholder equity | 33,503 |
 
 ## Income statement (GIFI Schedule 125)
 | GIFI | Description | Amount | Note |
@@ -272,7 +272,7 @@ UFile entry tip: do not enter both `2780` and `2781` for the same payable; that 
 | 8520 | Advertising and promotion | 1,606 |  |
 | 8523 | Meals and entertainment | 518 | 50% add-back = $259 |
 | 8622 | Employer's portion of employee benefits | 1,463 |  |
-| 8670 | Amortization of tangible assets | 508 |  |
+| 8670 | Amortization of tangible assets | 865 |  |
 | 8690 | Insurance | 1,851 |  |
 | 8710 | Interest and bank charges | 2,218 | Includes bank charges + payment processing fees. In Option 1 (book fixed assets), capitalized items originally expensed here are removed via the book overlay (see breakdown below). |
 | 8810 | Office expenses | 1,998 |  |
@@ -357,7 +357,7 @@ There have been no subsequent events requiring adjustment to these financial sta
 ## Net income (UFile screen)
 | Field | Value | Note |
 |---|---|---|
-| Net income as per financial statements | 20,738 | Should auto-fill from GIFI; otherwise enter from Schedule 1 code A. |
+| Net income as per financial statements | 20,381 | Should auto-fill from GIFI; otherwise enter from Schedule 1 code A. |
 | Total sales of corporation during this taxation year | 181,235 | Use total revenue (sum of revenue lines; typically matches trade sales 8000). |
 | Total gross revenues | 181,235 | Usually same as total sales for your file. |
 
@@ -367,8 +367,8 @@ If UFile auto-populates these from GIFI, do not add manual “additions/deductio
 | Field | Value | Note |
 |---|---|---|
 | Eligible for capital tax exemption? | Yes | For your file, expect capital tax exemption; confirm if UFile still requests fields. |
-| Total assets at year-end date from financial statements | 33,860 | If required, use Schedule 100 total assets (GIFI 2599). |
-| Retained earnings/deficit at year-end (if required) | 20,738 | If UFile forces a retained earnings element, use Schedule 100 GIFI 3600. |
+| Total assets at year-end date from financial statements | 33,503 | If required, use Schedule 100 total assets (GIFI 2599). |
+| Retained earnings/deficit at year-end (if required) | 20,381 | If UFile forces a retained earnings element, use Schedule 100 GIFI 3600. |
 
 ## Status change for the corporation (UFile screen)
 No status change; leave blank.
@@ -392,17 +392,17 @@ Expected source for this file: **active business income only** (canteen operatio
 ### Schedule 1 (tax purposes)
 | Code | Description | Amount | Calculation |
 |---|---|---|---|
-| A | Net income (loss) per financial statements | 20,738 |  |
-| 104 | Accounting amortization | 508 |  |
+| A | Net income (loss) per financial statements | 20,381 |  |
+| 104 | Accounting amortization | 865 |  |
 | 121 | Non-deductible meals and entertainment (50%) | 259 |  |
 | 128 | Non-deductible fines and penalties | 71 |  |
 | 206 | Capital items expensed | 0 |  |
-| 403 | Capital cost allowance (Schedule 8) | 508 |  |
-| 500 | Total additions | 838 |  |
-| 510 | Total deductions | 508 |  |
-| C | Net income (loss) for tax purposes | 21,068 |  |
+| 403 | Capital cost allowance (Schedule 8) | 865 |  |
+| 500 | Total additions | 1,195 |  |
+| 510 | Total deductions | 865 |  |
+| C | Net income (loss) for tax purposes | 20,711 |  |
 Note: If UFile auto-populates Schedule 1 line 403 from Schedule 8, do **not** manually enter 403 in the Schedule 1 grid.
-CCA is entered on the **Capital cost allowance** screen from Schedule 8 (total CCA claimed: 508).
+CCA is entered on the **Capital cost allowance** screen from Schedule 8 (total CCA claimed: 865).
 
 ### Small business deduction (Schedule 7)
 For a CCPC with active business income and positive taxable income, Schedule 7 is typically expected.
@@ -416,7 +416,7 @@ For a CCPC with active business income and positive taxable income, Schedule 7 i
 | T2 line 070 (first year after incorporation) | No | 2023 stub T2 (2022-12-08 → 2023-05-31) already answered Incorporation=Yes and filed Schedule 24; FY2024 should be No. |
 | T2 line 180 (internet income/websites) | Yes | Shopify sales present; likely Yes for internet income/websites (Schedule 88). Confirm store domains in UFile. |
 | T2 line 201 (book vs tax net income differs) | Yes | Book vs tax differs due to meals 50% add-back and CRA penalties; Schedule 1 is attached. |
-| CCA required / capital assets | Yes | CCA claimed per Schedule 8. Total CCA: 508. Classes: 8, 50. |
+| CCA required / capital assets | Yes | CCA claimed per Schedule 8. Total CCA: 865. Classes: 8, 50. |
 | Book fixed assets present | Yes | Book fixed assets present (capitalized in GIFI). |
 
 ## Dividends paid (UFile screen)
@@ -452,25 +452,25 @@ If this section is missing/empty in the guide, the packet was likely built from 
 | Class | Description | Opening UCC | Additions | CCA claim | Closing UCC |
 |---|---|---|---|---|---|
 | 8 | General equipment | 0 | 1,650 | 330 | 1,320 |
-| 50 | Computer hardware and systems software | 0 | 648 | 178 | 470 |
+| 50 | Computer hardware and systems software | 0 | 648 | 535 | 113 |
 
 ### Schedule 8 asset additions (audit trail)
-| Asset ID | Description | Date | Class | Cost |
-|---|---|---|---|---|
-| costco_freezer_2024_03_13 | Hisense freezer (Costco) | 2024-03-13 | 8 | 550 |
-| ams_lb9_vending_machine_2024_02_20 | AMS-LB9 vending machine (Electric Kitty) | 2024-02-20 | 8 | 1,100 |
-| costco_ipad_air_2023_12_08 | iPad Air 5 64GB (Costco) | 2023-12-08 | 50 | 648 |
+| Asset ID | Description | Date | Class | Cost | AIIP? | AII factor |
+|---|---|---|---|---|---|---|
+| costco_freezer_2024_03_13 | Hisense freezer (Costco) | 2024-03-13 | 8 | 550 | yes | 2.0 |
+| ams_lb9_vending_machine_2024_02_20 | AMS-LB9 vending machine (Electric Kitty) | 2024-02-20 | 8 | 1,100 | yes | 2.0 |
+| costco_ipad_air_2023_12_08 | iPad Air 5 64GB (Costco) | 2023-12-08 | 50 | 648 | yes | 3.0 |
 
 ### UFile Schedule 8 entry lines (per asset)
 UFile fields to use (avoid accidental dispositions):
 - Use **Date acquired** and **Date property became available for use** (these are addition fields).
 - Do **not** enter the date into any *disposition* date fields unless you are actually disposing of property.
 - For additions to show up, enter the cost under the appropriate additions bucket: **AIIP** (default for these assets), or **Non-accelerated**, or **DIEP** if intentionally designated.
-| Class | Addition description | Date acquired | Available for use | Cost | AIIP additions | Non-accelerated additions | DIEP additions | Proceeds (if disposed) | Disposed description (if any) |
-|---|---|---|---|---|---|---|---|---|---|
-| 8 | Hisense freezer (Costco) | 2024-03-13 | 2024-03-13 | 550 | 550 | 0 | 0 | 0 |  |
-| 8 | AMS-LB9 vending machine (Electric Kitty) | 2024-02-20 | 2024-02-20 | 1,100 | 1,100 | 0 | 0 | 0 |  |
-| 50 | iPad Air 5 64GB (Costco) | 2023-12-08 | 2023-12-08 | 648 | 648 | 0 | 0 | 0 |  |
+| Class | Addition description | Date acquired | Available for use | Cost | AIIP additions | Non-accelerated additions | DIEP additions | Proceeds (if disposed) | AII factor | Base factor | Disposed description (if any) |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 8 | Hisense freezer (Costco) | 2024-03-13 | 2024-03-13 | 550 | 550 | 0 | 0 | 0 | 2.0 | 1.00 |  |
+| 8 | AMS-LB9 vending machine (Electric Kitty) | 2024-02-20 | 2024-02-20 | 1,100 | 1,100 | 0 | 0 | 0 | 2.0 | 1.00 |  |
+| 50 | iPad Air 5 64GB (Costco) | 2023-12-08 | 2023-12-08 | 648 | 648 | 0 | 0 | 0 | 3.0 | 1.50 |  |
 
 ## Loss carry forwards and loss carry backs (UFile screen)
 No losses to carry forward/back.

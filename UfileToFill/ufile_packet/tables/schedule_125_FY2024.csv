@@ -6,7 +6,7 @@ GIFI_Code,Description,Amount,Note
 8520,Advertising and promotion,1606,
 8523,Meals and entertainment,518,50% add-back = $259
 8622,Employer's portion of employee benefits,1463,
-8670,Amortization of tangible assets,508,
+8670,Amortization of tangible assets,865,
 8690,Insurance,1851,
 8710,Interest and bank charges,2218,"Includes bank charges + payment processing fees. In Option 1 (book fixed assets), capitalized items originally expensed here are removed via the book overlay (see breakdown below)."
 8810,Office expenses,1998,
@@ -20,6 +20,6 @@ GIFI_Code,Description,Amount,Note
 9270,Other expenses,71,Includes CRA penalties $71 (non-deductible)
 9275,"Delivery, freight and express",100,
 9281,Vehicle expenses,4393,
-9367,Total operating expenses,54406,
-9368,Total expenses,160497,
-9999,Net income/loss after taxes,20738,
+9367,Total operating expenses,54763,
+9368,Total expenses,160854,
+9999,Net income/loss after taxes,20381,

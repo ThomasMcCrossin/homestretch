@@ -199,7 +199,7 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 | 1301 | Due from individual shareholder(s) | 2,041 | Shareholder loan receivable (Thomas). Review s.15(2) repayment/exception within 1 year after 2025-05-31. |
 | 1484 | Prepaid expenses | 1,490 |  |
 | 1740 | Machinery, equipment, furniture and fixtures | 3,518 |  |
-| 1741 | Accum amort - machinery/equip/furn/fixtures | -1,805 |  |
+| 1741 | Accum amort - machinery/equip/furn/fixtures | -1,582 |  |
 | 2620 | Amounts payable and accrued liabilities | 7,405 |  |
 | 2680 | Taxes payable (GST/HST, etc.) | 2,653 |  |
 | 2781 | Due to individual shareholder(s) | 5,011 | Tie-out: 2400 $3,490.67 (Thomas) + 2410 $1,606.68 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead. |
@@ -210,19 +210,19 @@ If using a GIFI import file, import once before manual edits; otherwise skip thi
 |---|---|---|---|---|---|---|---|
 | ams_lb9_vending_machine_2024_02_20 | AMS-LB9 vending machine (Electric Kitty) | 2024-02-20 | 1,100 | 0 | 176 | mirror_tax | account=6600 gifi=8810 amount_cents=110000 vendor=Electric Kitty - Bill invoice_date=2024-02-20 |
 | costco_freezer_2024_03_13 | Hisense freezer (Costco) | 2024-03-13 | 550 | 0 | 88 | mirror_tax | account=6600 gifi=8810 amount_cents=54999 vendor=Costco - Bill invoice_date=2024-03-13 |
-| costco_ipad_air_2023_12_08 | iPad Air 5 64GB (Costco) | 2023-12-08 | 648 | 0 | 259 | mirror_tax | account=6600 gifi=8810 amount_cents=64839 vendor=Costco - Bill 22134500703182312081530 invoice_date=2023-12-08 |
+| costco_ipad_air_2023_12_08 | iPad Air 5 64GB (Costco) | 2023-12-08 | 648 | 0 | 62 | mirror_tax | account=6600 gifi=8810 amount_cents=64839 vendor=Costco - Bill 22134500703182312081530 invoice_date=2023-12-08 |
 | nayax_card_reader_2025_02_24 | Nayax card reader for vending machine | 2025-02-24 | 557 | 557 | 111 | mirror_tax | account=5300 gifi=8710 amount_cents=55743 vendor=Nayax - Bill invoice_date=2025-02-24 |
-| shopify_card_reader_2024_11_12 | Shopify card reader hardware | 2024-11-12 | 479 | 479 | 479 | mirror_tax | account=6600 gifi=8810 amount_cents=45900 vendor=Shopify - Bill invoice_date=2024-11-12 | account=6550 gifi=9275 amount_cents=2000 vendor=Shopify - Bill invoice_date=2024-11-12 |
+| shopify_card_reader_2024_11_12 | Shopify card reader hardware | 2024-11-12 | 479 | 479 | 96 | mirror_tax | account=6600 gifi=8810 amount_cents=45900 vendor=Shopify - Bill invoice_date=2024-11-12 | account=6550 gifi=9275 amount_cents=2000 vendor=Shopify - Bill invoice_date=2024-11-12 |
 | walmart_coffee_grinder_2024_09_17 | Coffee grinder (Walmart) | 2024-09-17 | 184 | 184 | 184 | mirror_tax | account=6600 gifi=8810 amount_cents=18367 vendor=Walmart - Bill invoice_date=2024-09-17 |
 
 ### Retained earnings (whole dollars)
 | GIFI | Description | Amount | Entry rule |
 |---|---|---|---|
-| 3660 | Retained earnings/deficit - Start | 20,738 | Enter (opening RE) |
-| 3680 | Net income/loss | 28,725 | Enter (net income/loss) |
+| 3660 | Retained earnings/deficit - Start | 20,381 | Enter (opening RE) |
+| 3680 | Net income/loss | 29,305 | Enter (net income/loss) |
 | 3700 | Dividends declared | 36,900 | Enter (dividends declared) |
 | 3740 | Other items affecting retained earnings (rounding) | -1 | Enter only if needed (rounding/other) |
-| 3849 | Retained earnings/deficit - End | 12,562 | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
+| 3849 | Retained earnings/deficit - End | 12,785 | Do NOT type if UFile auto-calculates (should equal 3660 + 3680 - 3700 + 3740) |
 
 ### Shareholder loans / balances support (working papers)
 CRA frequently asks for support for any due-from-shareholder / due-to-shareholder amounts. Keep the continuity below with your filing package.
@@ -275,9 +275,9 @@ UFile entry tip: do not enter both `2780` and `2781` for the same payable; that 
 ### Tie-check (display-only totals)
 | GIFI | Description | Amount |
 |---|---|---|
-| 1599 | Total current assets (expected) | 27,731 |
-| 2599 | Total assets | 27,731 |
-| 3640 | Total liabilities and shareholder equity | 27,731 |
+| 1599 | Total current assets (expected) | 27,954 |
+| 2599 | Total assets | 27,954 |
+| 3640 | Total liabilities and shareholder equity | 27,954 |
 
 ## Income statement (GIFI Schedule 125)
 | GIFI | Description | Amount | Note |
@@ -289,7 +289,7 @@ UFile entry tip: do not enter both `2780` and `2781` for the same payable; that 
 | 8520 | Advertising and promotion | 798 |  |
 | 8523 | Meals and entertainment | 408 | 50% add-back = $204 |
 | 8622 | Employer's portion of employee benefits | 3,610 |  |
-| 8670 | Amortization of tangible assets | 1,297 |  |
+| 8670 | Amortization of tangible assets | 717 |  |
 | 8690 | Insurance | 1,951 |  |
 | 8710 | Interest and bank charges | 3,371 | Includes bank charges + payment processing fees. In Option 1 (book fixed assets), capitalized items originally expensed here are removed via the book overlay (see breakdown below). |
 | 8810 | Office expenses | 2,939 |  |
@@ -382,7 +382,7 @@ There have been no subsequent events requiring adjustment to these financial sta
 ## Net income (UFile screen)
 | Field | Value | Note |
 |---|---|---|
-| Net income as per financial statements | 28,725 | Should auto-fill from GIFI; otherwise enter from Schedule 1 code A. |
+| Net income as per financial statements | 29,305 | Should auto-fill from GIFI; otherwise enter from Schedule 1 code A. |
 | Total sales of corporation during this taxation year | 230,907 | Use total revenue (sum of revenue lines; typically matches trade sales 8000). |
 | Total gross revenues | 230,907 | Usually same as total sales for your file. |
 
@@ -392,8 +392,8 @@ If UFile auto-populates these from GIFI, do not add manual “additions/deductio
 | Field | Value | Note |
 |---|---|---|
 | Eligible for capital tax exemption? | Yes | For your file, expect capital tax exemption; confirm if UFile still requests fields. |
-| Total assets at year-end date from financial statements | 27,731 | If required, use Schedule 100 total assets (GIFI 2599). |
-| Retained earnings/deficit at year-end (if required) | 12,562 | If UFile forces a retained earnings element, use Schedule 100 GIFI 3600. |
+| Total assets at year-end date from financial statements | 27,954 | If required, use Schedule 100 total assets (GIFI 2599). |
+| Retained earnings/deficit at year-end (if required) | 12,785 | If UFile forces a retained earnings element, use Schedule 100 GIFI 3600. |
 
 ## Status change for the corporation (UFile screen)
 No status change; leave blank.
@@ -417,17 +417,17 @@ Expected source for this file: **active business income only** (canteen operatio
 ### Schedule 1 (tax purposes)
 | Code | Description | Amount | Calculation |
 |---|---|---|---|
-| A | Net income (loss) per financial statements | 28,725 |  |
-| 104 | Accounting amortization | 1,297 |  |
+| A | Net income (loss) per financial statements | 29,305 |  |
+| 104 | Accounting amortization | 717 |  |
 | 121 | Non-deductible meals and entertainment (50%) | 204 |  |
 | 128 | Non-deductible fines and penalties | 274 |  |
 | 206 | Capital items expensed | 0 |  |
-| 403 | Capital cost allowance (Schedule 8) | 1,297 |  |
-| 500 | Total additions | 1,775 |  |
-| 510 | Total deductions | 1,297 |  |
-| C | Net income (loss) for tax purposes | 29,203 |  |
+| 403 | Capital cost allowance (Schedule 8) | 717 |  |
+| 500 | Total additions | 1,195 |  |
+| 510 | Total deductions | 717 |  |
+| C | Net income (loss) for tax purposes | 29,783 |  |
 Note: If UFile auto-populates Schedule 1 line 403 from Schedule 8, do **not** manually enter 403 in the Schedule 1 grid.
-CCA is entered on the **Capital cost allowance** screen from Schedule 8 (total CCA claimed: 1,297).
+CCA is entered on the **Capital cost allowance** screen from Schedule 8 (total CCA claimed: 717).
 
 ### Small business deduction (Schedule 7)
 For a CCPC with active business income and positive taxable income, Schedule 7 is typically expected.
@@ -441,7 +441,7 @@ For a CCPC with active business income and positive taxable income, Schedule 7 i
 | T2 line 070 (first year after incorporation) | No | 2023 stub T2 already filed as first-year after incorporation (Schedule 24). FY2025 should be No. |
 | T2 line 180 (internet income/websites) | Yes | Shopify sales present; likely Yes for internet income/websites (Schedule 88). Confirm store domains in UFile. |
 | T2 line 201 (book vs tax net income differs) | Yes | Book vs tax differs due to meals 50% add-back and CRA penalties; Schedule 1 is attached. |
-| CCA required / capital assets | Yes | CCA claimed per Schedule 8. Total CCA: 1297. Classes: 8, 12, 50. |
+| CCA required / capital assets | Yes | CCA claimed per Schedule 8. Total CCA: 717. Classes: 8, 12, 50. |
 | Book fixed assets present | Yes | Book fixed assets present (capitalized in GIFI). |
 
 ## Dividends paid (UFile screen)
@@ -488,27 +488,27 @@ If this section is missing/empty in the guide, the packet was likely built from 
 
 | Class | Description | Opening UCC | Additions | CCA claim | Closing UCC |
 |---|---|---|---|---|---|
-| 8 | General equipment | 1,320 | 557 | 375 | 1,502 |
-| 12 | Tools and utensils under $500 | 0 | 663 | 663 | 0 |
-| 50 | Computer hardware and systems software | 470 | 0 | 259 | 211 |
+| 8 | General equipment | 1,320 | 1,036 | 471 | 1,885 |
+| 12 | Tools and utensils under $500 | 0 | 184 | 184 | 0 |
+| 50 | Computer hardware and systems software | 113 | 0 | 62 | 51 |
 
 ### Schedule 8 asset additions (audit trail)
-| Asset ID | Description | Date | Class | Cost |
-|---|---|---|---|---|
-| nayax_card_reader_2025_02_24 | Nayax card reader for vending machine | 2025-02-24 | 8 | 557 |
-| walmart_coffee_grinder_2024_09_17 | Coffee grinder (Walmart) | 2024-09-17 | 12 | 184 |
-| shopify_card_reader_2024_11_12 | Shopify card reader hardware | 2024-11-12 | 12 | 479 |
+| Asset ID | Description | Date | Class | Cost | AIIP? | AII factor |
+|---|---|---|---|---|---|---|
+| nayax_card_reader_2025_02_24 | Nayax card reader for vending machine | 2025-02-24 | 8 | 557 | yes | 2.0 |
+| walmart_coffee_grinder_2024_09_17 | Coffee grinder (Walmart) | 2024-09-17 | 12 | 184 | no | 1.0 |
+| shopify_card_reader_2024_11_12 | Shopify card reader hardware | 2024-11-12 | 8 | 479 | yes | 2.0 |
 
 ### UFile Schedule 8 entry lines (per asset)
 UFile fields to use (avoid accidental dispositions):
 - Use **Date acquired** and **Date property became available for use** (these are addition fields).
 - Do **not** enter the date into any *disposition* date fields unless you are actually disposing of property.
 - For additions to show up, enter the cost under the appropriate additions bucket: **AIIP** (default for these assets), or **Non-accelerated**, or **DIEP** if intentionally designated.
-| Class | Addition description | Date acquired | Available for use | Cost | AIIP additions | Non-accelerated additions | DIEP additions | Proceeds (if disposed) | Disposed description (if any) |
-|---|---|---|---|---|---|---|---|---|---|
-| 8 | Nayax card reader for vending machine | 2025-02-24 | 2025-02-24 | 557 | 557 | 0 | 0 | 0 |  |
-| 12 | Coffee grinder (Walmart) | 2024-09-17 | 2024-09-17 | 184 | 184 | 0 | 0 | 0 |  |
-| 12 | Shopify card reader hardware | 2024-11-12 | 2024-11-12 | 479 | 479 | 0 | 0 | 0 |  |
+| Class | Addition description | Date acquired | Available for use | Cost | AIIP additions | Non-accelerated additions | DIEP additions | Proceeds (if disposed) | AII factor | Base factor | Disposed description (if any) |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 8 | Nayax card reader for vending machine | 2025-02-24 | 2025-02-24 | 557 | 557 | 0 | 0 | 0 | 2.0 | 1.00 |  |
+| 12 | Coffee grinder (Walmart) | 2024-09-17 | 2024-09-17 | 184 | 0 | 184 | 0 | 0 | 1.0 | 1.0 |  |
+| 8 | Shopify card reader hardware | 2024-11-12 | 2024-11-12 | 479 | 479 | 0 | 0 | 0 | 2.0 | 1.00 |  |
 
 ## Loss carry forwards and loss carry backs (UFile screen)
 No losses to carry forward/back.
@@ -541,7 +541,7 @@ No capital dividend account activity.
 | Field | Value | Note |
 |---|---|---|
 | 1st prior year end date | 2024-05-31 | UFile field: End date of prior tax year |
-| 1st prior year taxable income | 21,068 | UFile field: Taxable income (Schedule 1 code C of the prior year) |
+| 1st prior year taxable income | 20,711 | UFile field: Taxable income (Schedule 1 code C of the prior year) |
 | Eligible RDTOH at prior year-end | 0 | Usually $0 for your file unless you have refundable dividend tax on hand |
 | Non-eligible RDTOH at prior year-end | 0 |  |
 | Eligible dividend refund (prior year) | 0 |  |
@@ -549,5 +549,5 @@ No capital dividend account activity.
 | Did the corp claim SBD in the prior year? | Yes | Confirm in UFile if it asks; FY2023 stub was inactive, FY2024 claimed SBD as a CCPC. |
 | Large corporation amount (prior year) | 0 | UFile field: line 415 of Schedule 200 (prior year) |
 | Taxable paid-up capital | 100 | Use share capital unless you have evidence of paid-up capital changes |
-| Total assets at prior year-end | 33,860 | UFile field: Total assets as at previous year-end (Schedule 100 GIFI 2599) |
+| Total assets at prior year-end | 33,503 | UFile field: Total assets as at previous year-end (Schedule 100 GIFI 2599) |
 | Capital gain inclusion rate / amount (prior year) |  | Only needed for carryback purposes; leave blank unless applicable |

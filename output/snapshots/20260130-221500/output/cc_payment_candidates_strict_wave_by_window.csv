@@ -1,2 +1,0 @@
-window_days,bank_txn_id,bank_date,bank_amount,bank_card_last4,cc_txn_id,cc_date,cc_card_last4,merchant,date_diff_days,wave_bill_id,wave_date,wave_vendor,wave_total
-30,1593,2023-10-23,19.54,318,1583,2023-10-04,4337,AMZN MKTP CA*T91TD3Z71,19,76,2023-10-03,Amazon - Bill ,19.54

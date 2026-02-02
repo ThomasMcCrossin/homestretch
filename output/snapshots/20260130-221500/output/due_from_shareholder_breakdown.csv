@@ -1,5 +1,0 @@
-entry_date,journal_entry_id,source_record_type,source_record_id,bank_txn_id,bank_description,bank_txn_category,bank_txn_explanation,shareholder,debit,credit,net,line_description
-2024-06-17,BANK_DEBIT_1086,bank_debits,1086,1086,CHEQUE 72585461 2,LOAN_ISSUED,"Shareholder loan to Dwayne - $9,000",Dwayne,9000.00,0.00,9000.00,"Shareholder loan to Dwayne - $9,000"
-2025-04-29,BANK_DEBIT_362,bank_debits,362,362,Internet Banking E-TRANSFER105434611747 Thomas McCrossin 4506*********695,LOAN_ISSUED,"Shareholder loan to Thomas - $2,000",Thomas,2000.00,0.00,2000.00,"Shareholder loan to Thomas - $2,000"
-2025-05-22,BANK_INFLOW_SHAREHOLDER_LOAN_REPAYMENT_347,bank_inflows,f9b3c1fa-0f0e-5ed2-a07c-eacb05dff592,347,Branch Transaction TRANSFER FROM: 00153/19-23218,LOAN_REPAID,Loan repaid by Dwayne (transfer),Dwayne,0.00,9000.00,-9000.00,Shareholder loan repayment
-2025-05-31,MILEAGE_FUEL_REIMBURSEMENT_FY2025,mileage_fuel_payables,FY2025,,,,,Thomas,41.36,0.00,41.36,Net due from shareholder - Thomas (fuel exceeds mileage) FY2025

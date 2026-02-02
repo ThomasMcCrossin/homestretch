@@ -1,3 +1,0 @@
-invoice_number,wave_bill_id,invoice_date,total,total_cents,tax_cents,net_cents,bank_txn_id,notification_id,weight_basis
-2000800832,777,2023-12-18,-680.34,-68034,-4395,-63639,1405,50ded7c1-f939-5474-8e12-11a9366b588c,NOTICE_WEIGHTS:50ded7c1-f939-5474-8e12-11a9366b588c
-2001292173,778,2024-05-29,-380.89,-38089,-705,-37384,1087,55856c5d-205e-5cb8-b914-59bb6c8982a5,GLOBAL_GFS_WEIGHTS

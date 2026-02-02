@@ -1,1 +1,0 @@
-bank_txn_id,bank_date,bank_amount,cc_txn_id,cc_date,cc_amount,merchant,candidate_wave_bill_id,invoice_date,vendor_raw,vendor_normalized,wave_total,date_diff_days,vendor_match
