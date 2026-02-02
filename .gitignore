@@ -25,3 +25,7 @@ T2Analysis/diffs/*attempt*
 # Large binary artifacts
 *.pdf
 !Asset Info/**
+
+# Legacy archived artifacts (kept local, not committed)
+legacy/**
+!legacy/README.md
