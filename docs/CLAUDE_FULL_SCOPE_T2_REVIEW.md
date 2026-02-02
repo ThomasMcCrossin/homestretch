@@ -73,7 +73,9 @@ The accounting framework is mechanically sound, deterministic, and well-document
 **Evidence:** `manifest/sources.yml:76-80`, `output/inventory_journal_summary.md:4-7`
 
 **Issue:**
-- FY2024 inventory is explicitly labeled "Estimated" (source file: `Canteen Inventory May 31 2024 - Estimated.csv`)
+- FY2024 inventory is an estimate. In this repo, FY2024 is now backed by a repo-local estimate sheet derived from the FY2025 physical-count item list:
+  - `data/inventory/Canteen Inventory May 31 2024 - Estimate from FY2025 Items.csv`
+  - generator audit: `output/inventory_estimate_fy2024_from_fy2025_audit.csv`
 - FY2025 inventory count date is **May 16, 2025** but year-end is **May 31, 2025**
 - Inventory increased from $2,847 to $10,015 (+$7,168), representing 65% of gross margin improvement
 - No documented valuation method (FIFO/average cost) or cutoff adjustment

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from _lib import MANIFEST_PATH, get_source, load_manifest, sha256_file
+from _lib import MANIFEST_PATH, PROJECT_ROOT, get_source, load_manifest, sha256_file
 
 
 def main() -> int:
@@ -50,6 +50,25 @@ def main() -> int:
         for e in errors:
             print(f"- {e}")
         return 1
+
+    # Guardrail: FY2024 inventory should be repo-local so an old external estimate file can't accidentally re-enter the pipeline.
+    try:
+        inv_src = get_source(manifest, "inventory_count_fy2024_may31_estimated_csv")
+        inv_path = Path(str(inv_src.get("path") or "")).expanduser()
+        if inv_path.exists():
+            try:
+                inv_rel = inv_path.resolve().is_relative_to(PROJECT_ROOT.resolve())
+            except Exception:
+                inv_rel = str(inv_path.resolve()).startswith(str(PROJECT_ROOT.resolve()))
+            if not inv_rel:
+                print("MANIFEST WARNING:")
+                print(
+                    f"- inventory_count_fy2024_may31_estimated_csv points outside this repo: {inv_path}"
+                )
+                print("- This is allowed, but increases risk of regressions to deprecated inventory sheets.")
+    except Exception:
+        # Non-fatal; manifest validation should not fail due to missing optional guardrails.
+        pass
 
     print("MANIFEST CHECK PASSED")
     print(f"- manifest: {MANIFEST_PATH}")

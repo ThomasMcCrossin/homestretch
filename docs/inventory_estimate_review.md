@@ -1,5 +1,14 @@
 # Inventory estimate review (senior accountant lens) — FY2024 closing inventory
 
+## Update (2026-02-02)
+FY2024 ending inventory in this repo is now backed by a **repo-local estimate CSV derived from the FY2025 physical-count item list**, scaled down into a management-estimate band.
+
+- Current FY2024 estimate source (repo-local): `data/inventory/Canteen Inventory May 31 2024 - Estimate from FY2025 Items.csv`
+- Generator: `scripts/90a_generate_inventory_estimate_fy2024_from_fy2025.py`
+- Generator audit: `output/inventory_estimate_fy2024_from_fy2025_audit.csv`
+
+The older external CSV in `curlys-books` (\"Canteen Inventory May 31 2024 - Estimated.csv\") is **deprecated** and should not be used for filing from this repo.
+
 Scope:
 - FY2024: 2023-06-01 → 2024-05-31
 - FY2025: 2024-06-01 → 2025-05-31
@@ -14,7 +23,7 @@ Project outputs:
 - `output/inventory_journal_detail.csv`
 
 Inventory count sheets (supporting evidence):
-- `/home/clarencehub/curlys-books/t2-filing-fy2024-fy2025/data/Canteen Inventory May 31 2024 - Estimated.csv`
+- `data/inventory/Canteen Inventory May 31 2024 - Estimate from FY2025 Items.csv` (FY2025-item-based estimate used for filing)
 - `/home/clarencehub/curlys-books/t2-filing-fy2024-fy2025/data/Canteen Inventory May 16 2025 - Sheet1.csv`
 
 SQLite source-of-truth (read-only queries):
@@ -23,7 +32,7 @@ SQLite source-of-truth (read-only queries):
 
 ## Executive summary (recommendation)
 
-**Recommended FY2024 closing inventory (at cost): $2,847.23**
+**Recommended FY2024 closing inventory (at cost): see the repo-local FY2025-item-based estimate sheet.**
 
 Why this is the best number today:
 - It is supported by an **itemized management estimate sheet** dated exactly at FY2024 year-end (2024-05-31), with category subtotals and line items.
@@ -41,11 +50,8 @@ Inventory accounts used:
 - `1230` Inventory – Retail Goods
 
 Per trial balance:
-- FY2024 closing inventory total: **$2,847.23**
-  - Food: $1,718.73
-  - Beverage: $312.50
-  - Retail: $816.00
-  - Supplements: $0.00
+- FY2024 closing inventory total is driven by the FY2024 estimate sheet source in `manifest/sources.yml`.
+- FY2025 closing inventory total is driven by the FY2025 physical count sheet.
 - FY2025 closing inventory total: **$10,015.47**
   - Food: $4,673.66
   - Beverage: $930.75
@@ -108,12 +114,12 @@ FY2025 cutoff note:
 - FY2025 inventory sheet is dated **2025-05-16** but posted as of **2025-05-31**.
 - Purchases posted after 2025-05-16 through 2025-05-31 in the COGS accrual stream are small (≈ **$390.71**), so the dating difference is likely not material for an estimate-level filing.
 
-## Method A (preferred) — Use the FY2024 management estimate sheet, then test reasonableness
+## Method A (preferred) — Use a management estimate backed by the FY2025 physical-count item list
 
-FY2024 source is explicitly an “ESTIMATED TOTAL” but it is **itemized** by:
+FY2024 estimate source is explicitly an estimate but it is **itemized** by:
 - Dry Food, Condiments, Beverages, Frozen, Disposables, Snacks
-- with quantities and unit costs for many SKUs
-- with notes explaining why amounts are scaled down vs FY2025 and “playoff exit stock”
+- with quantities and unit costs derived from the FY2025 item list
+- with rounding notes and an audit CSV documenting the scaling
 
 This is exactly the type of support a CRA reviewer expects if a formal count is unavailable: dated schedule + cost basis + reasonable explanation.
 
@@ -193,4 +199,3 @@ At FY2025 start (2024-06-01), to reverse opening inventory:
 8) Are bottle/container deposits included in inventory counts, and if yes, is that consistent with how deposits are handled in sales/COGS?
 9) Did product mix materially change (more retail goods, fewer food items) from FY2024 to FY2025?
 10) If CRA asked: what is the inventory valuation method (cost basis used per line, and whether any lower-of-cost-or-market adjustments were made)?
-
