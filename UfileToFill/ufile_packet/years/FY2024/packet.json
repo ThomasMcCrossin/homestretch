@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": "1.2.0",
-    "generated_at": "2026-02-02T22:06:27.138908+00:00",
+    "generated_at": "2026-02-02T22:19:36.515588+00:00",
     "generator": "tools/build_year_artifacts.py",
     "source_packet": "UfileToFill/ufile_packet/packet.json",
     "snapshot_source": "output/snapshots/20260202-235500/output/",
@@ -683,6 +683,338 @@
           "notes": "Receipt lines: AIR 5 64GB 768.39 - TPD/IPADAIR discount 120.00 => net 648.39 (Costco 2023-12-08)."
         }
       ]
+    }
+  },
+  "fiscal_period": {
+    "start": "2023-06-01",
+    "end": "2024-05-31",
+    "days": 366,
+    "is_first_year": false
+  },
+  "schedule_100": {
+    "1001": {
+      "amount": 26292,
+      "label": "Cash"
+    },
+    "1121": {
+      "amount": 5129,
+      "label": "Inventory of goods for sale"
+    },
+    "1484": {
+      "amount": 649,
+      "label": "Prepaid expenses"
+    },
+    "1740": {
+      "amount": 2298,
+      "label": "Machinery, equipment, furniture and fixtures"
+    },
+    "1741": {
+      "amount": -508,
+      "label": "Accum amort - machinery/equip/furn/fixtures"
+    },
+    "2599": {
+      "amount": 33860,
+      "label": "Total assets"
+    },
+    "2781": {
+      "amount": 3578,
+      "label": "Due to individual shareholder(s)",
+      "note": "Tie-out: 2400 $2,669.99 (Thomas) + 2410 $908.16 (Dwayne); source: readiness_report.md. If UFile doesn't accept 2781, enter this amount on 2780 instead."
+    },
+    "2680": {
+      "amount": 6757,
+      "label": "Taxes payable (GST/HST, etc.)"
+    },
+    "2620": {
+      "amount": 2687,
+      "label": "Amounts payable and accrued liabilities"
+    },
+    "3499": {
+      "amount": 13022,
+      "label": "Total liabilities"
+    },
+    "3500": {
+      "amount": 100,
+      "label": "Common shares"
+    },
+    "3600": {
+      "amount": 20738,
+      "label": "Retained earnings/deficit"
+    },
+    "3620": {
+      "amount": 20838,
+      "label": "Total shareholder equity"
+    },
+    "3640": {
+      "amount": 33860,
+      "label": "Total liabilities and shareholder equity"
+    }
+  },
+  "schedule_125": {
+    "8000": {
+      "amount": 181235,
+      "label": "Trade sales of goods and services"
+    },
+    "8299": {
+      "amount": 181235,
+      "label": "Total revenue"
+    },
+    "8518": {
+      "amount": 106091,
+      "label": "Cost of sales",
+      "note": "Includes inventory shrinkage $1,370"
+    },
+    "8519": {
+      "amount": 75144,
+      "label": "Gross profit/loss"
+    },
+    "8520": {
+      "amount": 1606,
+      "label": "Advertising and promotion"
+    },
+    "8523": {
+      "amount": 518,
+      "label": "Meals and entertainment",
+      "note": "50% add-back = $259"
+    },
+    "8622": {
+      "amount": 1463,
+      "label": "Employer's portion of employee benefits"
+    },
+    "8670": {
+      "amount": 508,
+      "label": "Amortization of tangible assets"
+    },
+    "8690": {
+      "amount": 1851,
+      "label": "Insurance"
+    },
+    "8710": {
+      "amount": 2218,
+      "label": "Interest and bank charges"
+    },
+    "8810": {
+      "amount": 1998,
+      "label": "Office expenses"
+    },
+    "8813": {
+      "amount": 1135,
+      "label": "Data processing",
+      "note": "Computer hardware + SaaS (under capitalization threshold)"
+    },
+    "8860": {
+      "amount": 879,
+      "label": "Professional fees"
+    },
+    "8911": {
+      "amount": 8235,
+      "label": "Real estate rental"
+    },
+    "8960": {
+      "amount": 429,
+      "label": "Repairs and maintenance"
+    },
+    "9060": {
+      "amount": 23485,
+      "label": "Salaries and wages"
+    },
+    "9130": {
+      "amount": 5494,
+      "label": "Supplies",
+      "note": "Packaging + operating supplies"
+    },
+    "9131": {
+      "amount": 23,
+      "label": "Small tools"
+    },
+    "9270": {
+      "amount": 71,
+      "label": "Other expenses",
+      "note": "Includes CRA penalties $71 (non-deductible)"
+    },
+    "9275": {
+      "amount": 100,
+      "label": "Delivery, freight and express"
+    },
+    "9281": {
+      "amount": 4393,
+      "label": "Vehicle expenses"
+    },
+    "9367": {
+      "amount": 54406,
+      "label": "Total operating expenses"
+    },
+    "9368": {
+      "amount": 160497,
+      "label": "Total expenses"
+    },
+    "9999": {
+      "amount": 20738,
+      "label": "Net income/loss after taxes"
+    }
+  },
+  "schedule_1": {
+    "A": {
+      "amount": 20738,
+      "label": "Net income (loss) per financial statements"
+    },
+    "104": {
+      "amount": 508,
+      "label": "Accounting amortization"
+    },
+    "121": {
+      "amount": 259,
+      "label": "Non-deductible meals and entertainment (50%)"
+    },
+    "128": {
+      "amount": 71,
+      "label": "Non-deductible fines and penalties"
+    },
+    "206": {
+      "amount": 0,
+      "label": "Capital items expensed"
+    },
+    "500": {
+      "amount": 838,
+      "label": "Total additions"
+    },
+    "403": {
+      "amount": 508,
+      "label": "Capital cost allowance (Schedule 8)"
+    },
+    "510": {
+      "amount": 508,
+      "label": "Total deductions"
+    },
+    "C": {
+      "amount": 21068,
+      "label": "Net income (loss) for tax purposes"
+    }
+  },
+  "schedule_8": {
+    "classes": {
+      "8": {
+        "class": "8",
+        "description": "General equipment",
+        "rate": 0.2,
+        "opening_ucc": 0,
+        "additions": 1650,
+        "dispositions": 0,
+        "half_year_base": 1650,
+        "cca_claim": 330,
+        "closing_ucc": 1320
+      },
+      "50": {
+        "class": "50",
+        "description": "Computer hardware and systems software",
+        "rate": 0.55,
+        "opening_ucc": 0,
+        "additions": 648,
+        "dispositions": 0,
+        "half_year_base": 324,
+        "cca_claim": 178,
+        "closing_ucc": 470
+      }
+    },
+    "assets": [
+      {
+        "asset_id": "costco_freezer_2024_03_13",
+        "description": "Hisense freezer (Costco)",
+        "cca_class": "8",
+        "available_for_use_date": "2024-03-13",
+        "total_cost_cents": 54999,
+        "total_cost_dollars": 550,
+        "claim_percent_of_max": "1.0",
+        "half_year_rule": "yes",
+        "source_breakdown": "wave_bill_allocation: bill_id=256 invoice_date=2024-03-13 vendor=Costco - Bill account=6600 amount_cents=54999 alloc_total_cents=54999"
+      },
+      {
+        "asset_id": "ams_lb9_vending_machine_2024_02_20",
+        "description": "AMS-LB9 vending machine (Electric Kitty)",
+        "cca_class": "8",
+        "available_for_use_date": "2024-02-20",
+        "total_cost_cents": 110000,
+        "total_cost_dollars": 1100,
+        "claim_percent_of_max": "1.0",
+        "half_year_rule": "yes",
+        "source_breakdown": "wave_bill_allocation: bill_id=221 invoice_date=2024-02-20 vendor=Electric Kitty - Bill account=6600 amount_cents=110000 alloc_total_cents=110000"
+      },
+      {
+        "asset_id": "costco_ipad_air_2023_12_08",
+        "description": "iPad Air 5 64GB (Costco)",
+        "cca_class": "50",
+        "available_for_use_date": "2023-12-08",
+        "total_cost_cents": 64839,
+        "total_cost_dollars": 648,
+        "claim_percent_of_max": "1.0",
+        "half_year_rule": "yes",
+        "source_breakdown": "wave_bill_allocation: bill_id=143 invoice_date=2023-12-08 vendor=Costco - Bill 22134500703182312081530 account=6600 amount_cents=64839 alloc_total_cents=64839"
+      }
+    ],
+    "summary": {
+      "total_additions": 2298,
+      "total_cca_claim": 508,
+      "classes_used": [
+        "8",
+        "50"
+      ]
+    },
+    "note": "Total CCA claimed: 508. Classes used: 8, 50."
+  },
+  "retained_earnings": {
+    "3660": {
+      "amount": 0,
+      "label": "Retained earnings/deficit - Start"
+    },
+    "3680": {
+      "amount": 20738,
+      "label": "Net income/loss"
+    },
+    "3849": {
+      "amount": 20738,
+      "label": "Retained earnings/deficit - End"
+    }
+  },
+  "positions": {
+    "ifrs": {
+      "value": false,
+      "note": "Financial statements not prepared using IFRS"
+    },
+    "practitioner_involvement": {
+      "value": "none",
+      "note": "Management-prepared, unaudited"
+    },
+    "hst_registered": {
+      "value": true,
+      "note": "HST collection started 2024-02-26 (partial year). Note: some Shopify reports show \u201ctax\u201d amounts before registration; those amounts represent sales/pricing and are not HST collected."
+    },
+    "inventory_method": {
+      "value": "cost",
+      "note": "FY2024 closing inventory is an ESTIMATE"
+    },
+    "cca_required": {
+      "value": true,
+      "note": "CCA claimed per Schedule 8. Total CCA: 508. Classes: 8, 50."
+    },
+    "tips_handling": {
+      "value": "not_applicable",
+      "note": "FY2024 had no explicit tips payouts recorded (tips practice changed in later years)."
+    },
+    "first_time_filer_after_incorp_line_070": {
+      "value": false,
+      "note": "2023 stub T2 (2022-12-08 \u2192 2023-05-31) already answered Incorporation=Yes and filed Schedule 24; FY2024 should be No."
+    },
+    "internet_income_line_180": {
+      "value": true,
+      "note": "Shopify sales present; likely Yes for internet income/websites (Schedule 88). Confirm store domains in UFile."
+    },
+    "net_income_diff_line_201": {
+      "value": true,
+      "note": "Book vs tax differs due to meals 50% add-back and CRA penalties; Schedule 1 is attached."
+    },
+    "book_fixed_assets_present": {
+      "value": true,
+      "note": "Book fixed assets present (capitalized in GIFI)."
     }
   },
   "evidence_index": [

@@ -45,6 +45,9 @@ def schedule_1_sort_key(code: str) -> tuple[int, object]:
 def build_year_packet(packet: dict, fy: str) -> dict:
     entity = packet["entity"]
     year = packet["years"][fy]
+    # Keep year packet shape consistent with what operators/LLMs expect to read:
+    # include schedule blocks at top-level as well as under year[fy].
+    # (Older tools/notes sometimes read years/FYxxxx/packet.json directly.)
     return {
         "meta": {
             "schema_version": packet["meta"]["schema_version"],
@@ -57,6 +60,14 @@ def build_year_packet(packet: dict, fy: str) -> dict:
         "entity": entity,
         "global_positions": packet.get("global_positions", {}),
         "year": {fy: year},
+        # Convenience mirrors (read-only duplicates of year[fy].*)
+        "fiscal_period": year.get("fiscal_period", {}),
+        "schedule_100": year.get("schedule_100", {}),
+        "schedule_125": year.get("schedule_125", {}),
+        "schedule_1": year.get("schedule_1", {}),
+        "schedule_8": year.get("schedule_8", {}),
+        "retained_earnings": year.get("retained_earnings", {}),
+        "positions": year.get("positions", {}),
         "evidence_index": packet.get("evidence_index", []),
         "known_judgments": packet.get("known_judgments", []),
     }

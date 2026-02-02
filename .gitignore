@@ -29,3 +29,6 @@ T2Analysis/diffs/*attempt*
 # Legacy archived artifacts (kept local, not committed)
 legacy/**
 !legacy/README.md
+
+# Local UFile export attempts (keep local)
+taxattempts/
